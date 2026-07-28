@@ -751,7 +751,7 @@
         "text_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 80,
         "padding-block-end": 80,
-        "padding-inline-start": 60,
+        "padding-inline-start": 80,
         "padding-inline-end": 60
       }
     }
