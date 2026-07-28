@@ -452,14 +452,14 @@
       "name": "t:names.category_grid",
       "settings": {
         "heading": "Shop by Category",
-        "heading_color": "{{ settings.color_palette.background }}",
+        "heading_color": "#D4C7B4",
         "button_label": "Shop All",
         "button_link": "",
         "open_in_new_tab": false,
         "style_class": "button-custom",
-        "custom_button_background": "#BF092F",
-        "custom_button_text": "#FFFFFF",
-        "custom_button_border": "#BF092F",
+        "custom_button_background": "#bf092f",
+        "custom_button_text": "#ffffff",
+        "custom_button_border": "#bf092f",
         "width": "fit-content",
         "custom_width": 100,
         "width_mobile": "fit-content",
@@ -479,6 +479,102 @@
         "padding-inline-end": 24
       }
     },
+    "best_sellers_slider_JthhCi": {
+      "type": "best-sellers-slider",
+      "blocks": {
+        "best_sellers_card_YcMdYt": {
+          "type": "_best-sellers-card",
+          "settings": {
+            "badge_text": "Sale",
+            "title": "Product name",
+            "subtitle": "Short product description",
+            "compare_price": "$199",
+            "current_price": "$149",
+            "link": "",
+            "open_in_new_tab": false
+          },
+          "blocks": {}
+        },
+        "best_sellers_card_8VKitK": {
+          "type": "_best-sellers-card",
+          "settings": {
+            "badge_text": "Sale",
+            "title": "Product name",
+            "subtitle": "Short product description",
+            "compare_price": "$199",
+            "current_price": "$149",
+            "link": "",
+            "open_in_new_tab": false
+          },
+          "blocks": {}
+        },
+        "best_sellers_card_yVtwfg": {
+          "type": "_best-sellers-card",
+          "settings": {
+            "badge_text": "Sale",
+            "title": "Product name",
+            "subtitle": "Short product description",
+            "compare_price": "$199",
+            "current_price": "$149",
+            "link": "",
+            "open_in_new_tab": false
+          },
+          "blocks": {}
+        },
+        "best_sellers_card_K8GmEt": {
+          "type": "_best-sellers-card",
+          "settings": {
+            "badge_text": "Sale",
+            "title": "Product name",
+            "subtitle": "Short product description",
+            "compare_price": "$199",
+            "current_price": "$149",
+            "link": "",
+            "open_in_new_tab": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "best_sellers_card_YcMdYt",
+        "best_sellers_card_8VKitK",
+        "best_sellers_card_yVtwfg",
+        "best_sellers_card_K8GmEt"
+      ],
+      "name": "t:names.best_sellers_slider",
+      "settings": {
+        "heading": "Shop Best Sellers",
+        "heading_color": "#BCA588",
+        "heading_font_size": 48,
+        "section_width": "full-width",
+        "slides_per_view": 5,
+        "mobile_card_width": 250,
+        "gap": 16,
+        "image_ratio": "square",
+        "background_color": "#121212",
+        "card_border_color": "#333333",
+        "card_border_width": 2,
+        "card_corner_radius": 24,
+        "card_shadow": true,
+        "badge_background_color": "#BF092F",
+        "badge_text_color": "#FFFFFF",
+        "title_color": "#F6F4F0",
+        "title_font_size": 16,
+        "subtitle_color": "#D4C7B4",
+        "subtitle_font_size": 14,
+        "price_color": "#F6F4F0",
+        "compare_price_color": "#BCA588",
+        "price_font_size": 20,
+        "icons_style": "arrow",
+        "icons_shape": "circle",
+        "arrow_background_color": "#A3835F",
+        "arrow_icon_color": "#121212",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "padding-block-start": 64,
+        "padding-block-end": 80
+      }
+    },
     "benefits_marquee_eCTXMH": {
       "type": "benefits-marquee",
       "blocks": {
@@ -487,7 +583,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_1_438d954c-e905-4307-a3e3-a7e3914450fc.webp",
             "label": "FREE RETURNS",
-            "text_color": "#D4C7B4"
+            "text_color": "#d4c7b4"
           },
           "blocks": {}
         },
@@ -496,7 +592,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_2_81f1545f-5b29-411d-a7c5-55b17c0f0958.png",
             "label": "PFAS-FREE",
-            "text_color": "#D4C7B4"
+            "text_color": "#d4c7b4"
           },
           "blocks": {}
         },
@@ -505,7 +601,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_14.png",
             "label": "ANITBACTERIAL",
-            "text_color": "#D4C7B4"
+            "text_color": "#d4c7b4"
           },
           "blocks": {}
         },
@@ -514,7 +610,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_12.png",
             "label": "100% TOXIN-FREE",
-            "text_color": "#D4C7B4"
+            "text_color": "#d4c7b4"
           },
           "blocks": {}
         },
@@ -523,7 +619,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons.png",
             "label": "SUSTAINABLE",
-            "text_color": "#D4C7B4"
+            "text_color": "#d4c7b4"
           },
           "blocks": {}
         },
@@ -532,7 +628,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_13.png",
             "label": "CERTIFIED",
-            "text_color": "#D4C7B4"
+            "text_color": "#d4c7b4"
           },
           "blocks": {}
         }
@@ -554,7 +650,7 @@
         "icon_height": 40,
         "text_size": 20,
         "background_color": "#002768",
-        "text_color": "#D4C7B4",
+        "text_color": "#d4c7b4",
         "padding-block-start": 32,
         "padding-block-end": 32,
         "padding-inline-start": 0,
@@ -565,6 +661,7 @@
   "order": [
     "hero_video_logos_n9fbJH",
     "category_grid_7xcG8c",
+    "best_sellers_slider_JthhCi",
     "benefits_marquee_eCTXMH"
   ]
 }
