@@ -478,10 +478,87 @@
         "padding-inline-start": 24,
         "padding-inline-end": 24
       }
+    },
+    "benefits_marquee_eCTXMH": {
+      "type": "benefits-marquee",
+      "blocks": {
+        "benefit_chip_DDceGy": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Sustainable",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "benefit_chip_6E7bpC": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Free Returns",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "benefit_chip_rMidD6": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "PFAS-Free",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "benefit_chip_jFi9jx": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "100% Toxin-Free",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "benefit_chip_qf8Axw": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Certified",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "benefit_chip_8AnBC9": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Antibacterial",
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_chip_DDceGy",
+        "benefit_chip_6E7bpC",
+        "benefit_chip_rMidD6",
+        "benefit_chip_jFi9jx",
+        "benefit_chip_qf8Axw",
+        "benefit_chip_8AnBC9"
+      ],
+      "name": "t:names.benefits_marquee",
+      "settings": {
+        "autoplay": true,
+        "direction": "normal",
+        "speed": 20,
+        "gap": 96,
+        "icon_height": 40,
+        "text_size": 20,
+        "background_color": "#002768",
+        "text_color": "#D4C7B4",
+        "padding-block-start": 32,
+        "padding-block-end": 32,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
     }
   },
   "order": [
     "hero_video_logos_n9fbJH",
-    "category_grid_7xcG8c"
+    "category_grid_7xcG8c",
+    "benefits_marquee_eCTXMH"
   ]
 }
