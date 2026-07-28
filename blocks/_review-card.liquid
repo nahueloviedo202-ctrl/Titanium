@@ -91,8 +91,8 @@
     background: rgb(var(--color-foreground-rgb) / var(--opacity-5));
   }
 
-  .review-card__media-square :is(img, .review-card__image),
-  .review-card__media-video :is(img, video, deferred-media, .review-card__video) {
+  .review-card__media-square > *,
+  .review-card__media-video > * {
     position: absolute;
     inset: 0;
     width: 100%;

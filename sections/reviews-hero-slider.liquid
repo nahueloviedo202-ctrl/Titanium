@@ -42,7 +42,11 @@
         {%- if section.settings.heading != blank -%}
           <h2
             class="reviews-hero-slider__heading"
-            style="{% if section.settings.heading_accent_color != blank %}--reviews-hero-heading-accent: {{ section.settings.heading_accent_color }};{% endif %}"
+            style="
+              {% if section.settings.heading_accent_color != blank %}--reviews-hero-heading-accent: {{ section.settings.heading_accent_color }};{% endif %}
+              --reviews-hero-heading-size: {{ section.settings.heading_size }}px;
+              --reviews-hero-heading-size-mobile: {{ section.settings.heading_size_mobile }}px;
+            "
           >
             {{ section.settings.heading }}
           </h2>
@@ -121,15 +125,31 @@
   }
 
   .reviews-hero-slider__inner {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: block;
+  }
+
+  /* The slideshow snippet places our "aside" capture and the actual
+     slideshow-container as siblings inside <slideshow-component>, which
+     defaults to a column flex layout. Override it to a row so the aside
+     sits beside the slider instead of stretching full-width above it. */
+  .reviews-hero-slider__slideshow {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 3rem;
+  }
+
+  .reviews-hero-slider__slideshow > slideshow-container {
+    flex: 1 1 0%;
+    min-width: 0;
   }
 
   .reviews-hero-slider__aside {
     display: flex;
     flex-direction: column;
+    flex: 0 0 auto;
+    width: 16rem;
+    max-width: 40vw;
   }
 
   .reviews-hero-slider__stars {
@@ -154,7 +174,9 @@
 
   .reviews-hero-slider__heading {
     margin: 0 0 1.5rem;
-    font-size: clamp(2rem, 1.4rem + 2.5vw, 3rem);
+    max-width: 100%;
+    overflow-wrap: break-word;
+    font-size: var(--reviews-hero-heading-size, 48px);
     font-weight: 400;
     line-height: 1.3;
     letter-spacing: 0.04em;
@@ -219,13 +241,20 @@
   }
 
   @media screen and (max-width: 749px) {
-    .reviews-hero-slider__inner {
-      grid-template-columns: 1fr;
+    .reviews-hero-slider__slideshow {
+      flex-direction: column;
+      align-items: stretch;
       gap: 1.5rem;
+    }
+
+    .reviews-hero-slider__aside {
+      width: 100%;
+      max-width: 100%;
     }
 
     .reviews-hero-slider__heading {
       margin-bottom: 0;
+      font-size: var(--reviews-hero-heading-size-mobile, 32px);
     }
 
     .reviews-hero-slider__nav {
@@ -290,6 +319,26 @@
       "id": "heading_accent_color",
       "label": "t:settings.color",
       "default": "#BCA588"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "t:settings.size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 32
     },
     {
       "type": "header",
