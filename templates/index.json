@@ -661,12 +661,12 @@
         "direction": "normal",
         "speed": 20,
         "gap": 96,
-        "icon_height": 40,
-        "text_size": 20,
+        "icon_height": 50,
+        "text_size": 30,
         "background_color": "#002768",
         "text_color": "#d4c7b4",
-        "padding-block-start": 32,
-        "padding-block-end": 32,
+        "padding-block-start": 30,
+        "padding-block-end": 30,
         "padding-inline-start": 0,
         "padding-inline-end": 0
       }
