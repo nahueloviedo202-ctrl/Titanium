@@ -1,0 +1,84 @@
+
+
+<div
+  class="benefits-marquee__chip"
+  {{ block.shopify_attributes }}
+>
+  {%- if block.settings.icon != blank -%}
+    <span
+      class="benefits-marquee__chip-icon"
+      aria-hidden="true"
+    >
+      {{
+        block.settings.icon
+        | image_url: width: 128
+        | image_tag: widths: '64, 128', loading: 'lazy', alt: ''
+      }}
+    </span>
+  {%- endif -%}
+  {%- if block.settings.label != blank -%}
+    <span
+      class="benefits-marquee__chip-text"
+      style="{% if block.settings.text_color != blank %}color: {{ block.settings.text_color }};{% endif %}"
+    >
+      {{- block.settings.label -}}
+    </span>
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+  .benefits-marquee__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .benefits-marquee__chip-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    height: var(--benefits-marquee-icon-height, 2.5rem);
+  }
+
+  .benefits-marquee__chip-icon img {
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+
+  .benefits-marquee__chip-text {
+    color: var(--color-foreground);
+    font-size: var(--benefits-marquee-text-size, 1.25rem);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.benefit_chip",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "t:settings.image_icon"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "t:settings.label",
+      "default": "t:text_defaults.benefit_chip_label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    }
+  ]
+}
+{% endschema %}
