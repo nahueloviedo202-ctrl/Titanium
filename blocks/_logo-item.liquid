@@ -1,0 +1,91 @@
+
+
+{% liquid
+  assign image = block.settings.image
+  assign alt = block.settings.label | default: image.alt
+%}
+
+<div
+  class="hero-video-logos__logo-item"
+  {{ block.shopify_attributes }}
+>
+  {%- if block.settings.link != blank -%}
+    <a
+      href="{{ block.settings.link }}"
+      class="hero-video-logos__logo-link"
+      {% if block.settings.open_in_new_tab %}
+        target="_blank" rel="noopener"
+      {% endif %}
+    >
+  {%- endif -%}
+
+  {%- if image -%}
+    {{
+      image
+      | image_url: width: 400
+      | image_tag:
+        widths: '100, 200, 300, 400',
+        alt: alt,
+        loading: 'lazy',
+        class: 'hero-video-logos__logo-image'
+    }}
+  {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'hero-video-logos__logo-image hero-video-logos__logo-image--placeholder' }}
+  {%- endif -%}
+
+  {%- if block.settings.link != blank -%}
+    </a>
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+  .hero-video-logos__logo-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .hero-video-logos__logo-link {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .hero-video-logos__logo-image {
+    display: block;
+    height: var(--hero-video-logos-logo-height, 24px);
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.logo",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "t:settings.label"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:settings.link"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_in_new_tab",
+      "label": "t:settings.open_new_tab",
+      "default": false
+    }
+  ]
+}
+{% endschema %}
