@@ -1,0 +1,477 @@
+
+
+{% liquid
+  if section.settings.background_color != blank or section.settings.text_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, text_color: section.settings.text_color, section_id: section.id, skip_contrast: true
+  endif
+
+  assign rating_value = section.settings.rating_value | at_most: 5 | at_least: 0
+%}
+
+<section
+  id="ReviewsHeroSlider-{{ section.id }}"
+  class="reviews-hero-slider{% if section.settings.background_color != blank or section.settings.text_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="region"
+  aria-label="{{ section.settings.heading | strip_html | default: 'Customer reviews' }}"
+>
+  <div
+    class="reviews-hero-slider__inner spacing-style"
+    style="{% render 'spacing-style', settings: section.settings %}"
+  >
+    {% capture aside %}
+      <div class="reviews-hero-slider__aside">
+        {%- if section.settings.show_rating -%}
+          <div
+            class="reviews-hero-slider__stars"
+            aria-hidden="true"
+            style="--reviews-hero-star-color: {{ section.settings.star_color }};"
+          >
+            {%- for i in (1..5) -%}
+              <span class="reviews-hero-slider__star{% if i <= rating_value %} reviews-hero-slider__star--filled{% endif %}">
+                {% render 'icon-or-image',
+                  icon: 'star',
+                  image_upload: blank,
+                  width: 24,
+                  class_name: 'reviews-hero-slider__star-icon'
+                %}
+              </span>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.heading != blank -%}
+          <h2
+            class="reviews-hero-slider__heading"
+            style="{% if section.settings.heading_accent_color != blank %}--reviews-hero-heading-accent: {{ section.settings.heading_accent_color }};{% endif %}"
+          >
+            {{ section.settings.heading }}
+          </h2>
+        {%- endif -%}
+
+        {%- if section.blocks.size > 1 -%}
+          <div
+            class="reviews-hero-slider__nav"
+            style="
+              --reviews-hero-arrow-bg: {{ section.settings.arrow_background_color }};
+              --reviews-hero-arrow-color: {{ section.settings.arrow_icon_color }};
+            "
+          >
+            <button
+              class="reviews-hero-slider__nav-btn reviews-hero-slider__nav-btn--prev"
+              aria-label="{{ 'accessibility.slideshow_previous' | t }}"
+              on:click="/previous"
+              ref="previous"
+              type="button"
+            >
+              <span class="svg-wrapper flip-x">
+                {{- 'icon-arrow.svg' | inline_asset_content -}}
+              </span>
+            </button>
+            <button
+              class="reviews-hero-slider__nav-btn reviews-hero-slider__nav-btn--next"
+              aria-label="{{ 'accessibility.slideshow_next' | t }}"
+              on:click="/next"
+              ref="next"
+              type="button"
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-arrow.svg' | inline_asset_content -}}
+              </span>
+            </button>
+          </div>
+        {%- endif -%}
+      </div>
+    {% endcapture %}
+
+    {% capture slides %}
+      {% content_for 'blocks' %}
+    {% endcapture %}
+
+    {% capture slideshow_style %}
+      --reviews-hero-card-width: {{ section.settings.card_width }}px;
+      --reviews-hero-card-width-mobile: {{ section.settings.mobile_card_width }}px;
+      --reviews-hero-gap: {{ section.settings.gap }}px;
+      --reviews-hero-card-radius: {{ section.settings.card_radius }}px;
+      --reviews-hero-badge-color: {{ section.settings.badge_color }};
+    {% endcapture %}
+
+    <div class="reviews-hero-slider__carousel-wrapper">
+      {% render 'slideshow',
+        ref: 'reviewsHeroSlider',
+        class: 'reviews-hero-slider__slideshow',
+        style: slideshow_style,
+        header: aside,
+        slides: slides,
+        show_arrows: false,
+        infinite: false,
+        autoplay: section.settings.autoplay,
+        autoplay_speed: section.settings.autoplay_speed,
+        slide_count: section.blocks.size
+      %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .reviews-hero-slider {
+    position: relative;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    overflow-x: clip;
+  }
+
+  .reviews-hero-slider__inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .reviews-hero-slider__aside {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews-hero-slider__stars {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .reviews-hero-slider__star {
+    display: inline-flex;
+    color: rgb(var(--color-foreground-rgb) / 0.3);
+  }
+
+  .reviews-hero-slider__star--filled {
+    color: var(--reviews-hero-star-color, currentColor);
+  }
+
+  .reviews-hero-slider__star-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .reviews-hero-slider__heading {
+    margin: 0 0 1.5rem;
+    font-size: clamp(2rem, 1.4rem + 2.5vw, 3rem);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+  }
+
+  .reviews-hero-slider__heading strong {
+    color: var(--reviews-hero-heading-accent, inherit);
+    font-weight: 400;
+  }
+
+  .reviews-hero-slider__nav {
+    margin-top: auto;
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .reviews-hero-slider__nav-btn {
+    width: 4rem;
+    height: 4rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 0.75rem;
+    cursor: pointer;
+  }
+
+  .reviews-hero-slider__nav-btn .svg-wrapper {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .reviews-hero-slider__nav-btn--prev {
+    background: transparent;
+    border: 1.5px solid rgb(var(--color-foreground-rgb) / 0.4);
+    color: var(--color-foreground);
+  }
+
+  .reviews-hero-slider__nav-btn--next {
+    background: var(--reviews-hero-arrow-bg, var(--color-primary-button-background));
+    border: none;
+    color: var(--reviews-hero-arrow-color, var(--color-primary-button-text));
+  }
+
+  .reviews-hero-slider__nav-btn[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .reviews-hero-slider__carousel-wrapper {
+    min-width: 0;
+  }
+
+  .reviews-hero-slider__slideshow slideshow-slides {
+    --slideshow-gap: var(--reviews-hero-gap, 2rem);
+  }
+
+  .reviews-hero-slider__slideshow slideshow-slides .review-card {
+    scroll-snap-align: start;
+  }
+
+  @media screen and (max-width: 749px) {
+    .reviews-hero-slider__inner {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .reviews-hero-slider__heading {
+      margin-bottom: 0;
+    }
+
+    .reviews-hero-slider__nav {
+      margin-top: 1.5rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.reviews_hero_slider",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_review-card"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.rating"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "t:settings.show_rating",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "rating_value",
+      "label": "t:settings.rating_value",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 5,
+      "visible_if": "{{ section.settings.show_rating }}"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "t:settings.star_color",
+      "default": "#B57C46",
+      "visible_if": "{{ section.settings.show_rating }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:html_defaults.reviews_hero_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_accent_color",
+      "label": "t:settings.color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "card_width",
+      "label": "t:settings.card_width",
+      "min": 280,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "default": 420
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_width",
+      "label": "t:settings.mobile_card_width",
+      "min": 220,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "default": 300
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "t:settings.border_radius",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "t:settings.background_color",
+      "default": "#B57C46",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:settings.autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "t:settings.speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "default": 5,
+      "visible_if": "{{ section.settings.autoplay }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "arrow_background_color",
+      "label": "t:settings.arrow_background_color",
+      "default": "#A3835F"
+    },
+    {
+      "type": "color",
+      "id": "arrow_icon_color",
+      "label": "t:settings.arrow_icon_color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#121212",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.reviews_hero_slider",
+      "category": "t:categories.storytelling",
+      "blocks": {
+        "review_1": {
+          "type": "_review-card",
+          "settings": {
+            "image_label": "Titanium Series",
+            "title": "No Compromise",
+            "quote": "<p>Most pans force you to choose - performance, durability, or convenience. This gives you all 3, without chemicals.</p>",
+            "author": "Antonio C., Chef"
+          }
+        },
+        "review_2": {
+          "type": "_review-card",
+          "settings": {
+            "image_label": "Titanium Board",
+            "title": "I'm Obsessed!",
+            "quote": "<p>It doesn't shed toxins, bacteria can't grow on it, and it's ridiculously easy to clean.</p>",
+            "author": "Amanda R."
+          }
+        },
+        "review_3": {
+          "type": "_review-card",
+          "settings": {
+            "image_label": "Titanium Pan",
+            "title": "Non-Stick Without Chemicals",
+            "quote": "<p>When I cook at home for my family I choose only non-toxic cookware, so I don't have to worry about chemicals.</p>",
+            "author": "Alice B., Chef"
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2", "review_3"]
+    }
+  ]
+}
+{% endschema %}

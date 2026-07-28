@@ -35,7 +35,7 @@
     assign sticky = 'scroll-up'
   endif
 
-  if transparent and sticky
+  if transparent and sticky and section.settings.keep_transparent_header_sticky != true
     assign transparent = 'not-sticky'
   endif
 
@@ -547,8 +547,12 @@
       --closed-underlay-height: 100%;
     }
 
-    /** For transparent header, apply transparent text color to rows when menu is not hovered */
-    &:not([data-sticky-state='active']):not(:has(.menu-list__link:is(:hover, [aria-expanded='true']))) .header__row {
+    /** For transparent header, apply transparent text color to rows when menu is not hovered.
+        [transparent="always"] also matches while sticky-pinned — that combination only occurs
+        when "Stay transparent while sticky" is enabled, so this keeps that opt-in state readable. */
+    &:is([transparent='always'], :not([data-sticky-state='active'])):not(
+        :has(.menu-list__link:is(:hover, [aria-expanded='true']))
+      ) .header__row {
       --color-foreground: var(--color-transparent-text);
       --color-foreground-rgb: var(--color-transparent-text-rgb);
       --color-border: var(--color-transparent-text);
@@ -559,7 +563,7 @@
 
     /* Swap the cart bubble in transparent state only when using the default
        style. Custom bubble colors apply unchanged across header states. */
-    &[data-bubble-style='default']:not([data-sticky-state='active']):not(
+    &[data-bubble-style='default']:is([transparent='always'], :not([data-sticky-state='active'])):not(
         :has(.menu-list__link:is(:hover, [aria-expanded='true']))
       )
       .header__row {
@@ -1472,6 +1476,14 @@
         }
       ],
       "default": "always"
+    },
+    {
+      "type": "checkbox",
+      "id": "keep_transparent_header_sticky",
+      "label": "t:settings.keep_transparent_header_sticky",
+      "info": "t:info.keep_transparent_header_sticky",
+      "default": false,
+      "visible_if": "{{ section.settings.enable_transparent_header_home or section.settings.enable_transparent_header_product or section.settings.enable_transparent_header_collection }}"
     },
     {
       "type": "range",

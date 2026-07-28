@@ -1,0 +1,206 @@
+
+
+{% liquid
+  assign video_poster = block.settings.video_poster | default: block.settings.video.preview_image
+%}
+
+<article
+  class="review-card"
+  {{ block.shopify_attributes }}
+>
+  <div class="review-card__media-row">
+    <div class="review-card__media-col">
+      <div class="review-card__media-square">
+        {%- if block.settings.image != blank -%}
+          {{
+            block.settings.image
+            | image_url: width: 900
+            | image_tag: widths: '352, 832, 900', sizes: '(min-width: 750px) 25vw, 45vw', loading: 'lazy', class: 'review-card__image'
+          }}
+        {%- else -%}
+          {{ 'product-apparel-1' | placeholder_svg_tag: 'review-card__image' }}
+        {%- endif -%}
+      </div>
+      {%- if block.settings.image_label != blank -%}
+        <span
+          class="review-card__pill"
+          style="{% if block.settings.badge_color != blank %}background: {{ block.settings.badge_color }};{% endif %}"
+        >
+          {{- block.settings.image_label -}}
+        </span>
+      {%- endif -%}
+    </div>
+
+    <div class="review-card__media-video">
+      {%- if block.settings.video != blank -%}
+        {% render 'video',
+          video: block.settings.video,
+          video_preview_image: video_poster,
+          video_autoplay: false,
+          video_class: 'review-card__video'
+        %}
+      {%- else -%}
+        {{ 'product-apparel-2' | placeholder_svg_tag: 'review-card__image' }}
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="review-card__content">
+    {%- if block.settings.title != blank -%}
+      <div class="review-card__title">{{ block.settings.title }}</div>
+    {%- endif -%}
+
+    {%- if block.settings.quote != blank -%}
+      <div class="review-card__quote rte">{{ block.settings.quote }}</div>
+    {%- endif -%}
+
+    {%- if block.settings.author != blank -%}
+      <div class="review-card__author">{{ block.settings.author }}</div>
+    {%- endif -%}
+  </div>
+</article>
+
+{% stylesheet %}
+  .review-card {
+    flex: 0 0 auto;
+    width: var(--reviews-hero-card-width, 26rem);
+  }
+
+  .review-card__media-row {
+    display: grid;
+    /* Proportioned so the square image tile and the 40:71 portrait video tile
+       render at the same height side by side. */
+    grid-template-columns: 71fr 40fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .review-card__media-square {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--reviews-hero-card-radius, 1rem);
+    overflow: hidden;
+    background: rgb(var(--color-foreground-rgb) / var(--opacity-5));
+  }
+
+  .review-card__media-video {
+    position: relative;
+    aspect-ratio: 40 / 71;
+    border-radius: var(--reviews-hero-card-radius, 1rem);
+    overflow: hidden;
+    background: rgb(var(--color-foreground-rgb) / var(--opacity-5));
+  }
+
+  .review-card__media-square :is(img, .review-card__image),
+  .review-card__media-video :is(img, video, deferred-media, .review-card__video) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .review-card__pill {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.25rem 0.875rem;
+    border-radius: 999px;
+    background: var(--reviews-hero-badge-color, #b57c46);
+    color: #fff;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .review-card__content {
+    margin-top: 1.25rem;
+  }
+
+  .review-card__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.75rem;
+  }
+
+  .review-card__quote {
+    color: var(--color-foreground-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .review-card__author {
+    font-size: 0.875rem;
+    color: var(--color-foreground-muted);
+  }
+
+  @media screen and (max-width: 749px) {
+    .review-card {
+      width: var(--reviews-hero-card-width-mobile, 18rem);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.review_card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "text",
+      "id": "image_label",
+      "label": "t:settings.label"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:settings.video"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "t:settings.cover_image"
+    },
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:settings.title",
+      "default": "t:text_defaults.review_card_title"
+    },
+    {
+      "type": "richtext",
+      "id": "quote",
+      "label": "t:settings.quote",
+      "default": "t:html_defaults.review_card_quote"
+    },
+    {
+      "type": "text",
+      "id": "author",
+      "label": "t:settings.author",
+      "default": "t:text_defaults.review_card_author"
+    }
+  ]
+}
+{% endschema %}
