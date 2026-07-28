@@ -676,9 +676,13 @@
           "settings": {
             "image_label": "Titanium Series",
             "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
             "title": "No Compromise",
+            "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>Most pans force you to choose - performance, durability, or convenience. This gives you all 3, without chemicals.</p>",
-            "author": "Antonio C., Chef"
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Antonio C., Chef",
+            "author_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
         },
@@ -687,9 +691,13 @@
           "settings": {
             "image_label": "Titanium Board",
             "badge_color": "",
+            "badge_text_color": "",
             "title": "I'm Obsessed!",
+            "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>It doesn't shed toxins, bacteria can't grow on it, and it's ridiculously easy to clean.</p>",
-            "author": "Amanda R."
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Amanda R.",
+            "author_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
         },
@@ -698,9 +706,13 @@
           "settings": {
             "image_label": "Titanium Pan",
             "badge_color": "",
+            "badge_text_color": "",
             "title": "Non-Stick Without Chemicals",
+            "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>When I cook at home for my family I choose only non-toxic cookware, so I don't have to worry about chemicals.</p>",
-            "author": "Alice B., Chef"
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Alice B., Chef",
+            "author_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
         }
@@ -714,17 +726,19 @@
       "settings": {
         "show_rating": true,
         "rating_value": 5,
-        "star_color": "#B57C46",
+        "star_color": "#b57c46",
         "heading": "<p>Trusted By 6<strong>00,000+</strong>Kitchens Worldwide</p>",
-        "heading_accent_color": "#BCA588",
+        "heading_accent_color": "#bca588",
+        "heading_size": 48,
+        "heading_size_mobile": 32,
         "card_width": 420,
         "mobile_card_width": 300,
         "gap": 32,
         "card_radius": 18,
-        "badge_color": "#B57C46",
+        "badge_color": "#b57c46",
         "autoplay": false,
         "autoplay_speed": 5,
-        "arrow_background_color": "#A3835F",
+        "arrow_background_color": "#a3835f",
         "arrow_icon_color": "#121212",
         "background_color": "#121212",
         "text_color": "{{ settings.color_palette.background }}",
