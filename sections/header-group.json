@@ -67,7 +67,7 @@
         "section_width": "page-width",
         "section_height": "standard",
         "enable_sticky_header": "always",
-        "keep_transparent_header_sticky": false,
+        "keep_transparent_header_sticky": true,
         "divider_width": 0,
         "divider_size": "page-width",
         "divider_color": "",
