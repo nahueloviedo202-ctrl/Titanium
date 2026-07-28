@@ -18,7 +18,19 @@
           "type": "menu",
           "settings": {
             "menu": "main-menu",
-            "heading": "Policies"
+            "heading": "Policies",
+            "menu_spacing": 12,
+            "show_as_accordion": false,
+            "accordion_icon": "caret",
+            "accordion_dividers": false,
+            "background_color": "",
+            "text_color": "{{ settings.color_palette.background }}",
+            "heading_preset": "h3",
+            "link_preset": "paragraph",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         },
@@ -26,7 +38,19 @@
           "type": "menu",
           "settings": {
             "menu": "main-menu",
-            "heading": "Products"
+            "heading": "Products",
+            "menu_spacing": 12,
+            "show_as_accordion": false,
+            "accordion_icon": "caret",
+            "accordion_dividers": false,
+            "background_color": "",
+            "text_color": "{{ settings.color_palette.background }}",
+            "heading_preset": "h3",
+            "link_preset": "paragraph",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         },
@@ -34,7 +58,19 @@
           "type": "menu",
           "settings": {
             "menu": "main-menu",
-            "heading": "Company"
+            "heading": "Company",
+            "menu_spacing": 12,
+            "show_as_accordion": false,
+            "accordion_icon": "caret",
+            "accordion_dividers": false,
+            "background_color": "",
+            "text_color": "{{ settings.color_palette.background }}",
+            "heading_preset": "h3",
+            "link_preset": "paragraph",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         }
@@ -47,9 +83,36 @@
       "name": "t:names.footer_advanced",
       "settings": {
         "show_marquee": true,
-        "show_newsletter": true,
-        "show_contact": true,
-        "background_color": "#0B0B0B",
+        "marquee_text": "Proudly designed to last a lifetime.",
+        "marquee_autoplay": true,
+        "marquee_direction": "normal",
+        "marquee_speed": 20,
+        "marquee_background_color": "",
+        "marquee_text_color": "{{ settings.color_palette.background }}",
+        "logo": "shopify://shop_images/taima_logo_png.avif",
+        "blurb": "",
+        "show_newsletter": false,
+        "newsletter_button_label": "Subscribe",
+        "newsletter_note": "We hate spam too.",
+        "show_contact": false,
+        "contact_title": "Got Questions? Call Our 24/7 Support:",
+        "phone_number": "",
+        "contact_button_label": "Go To Contact Form",
+        "contact_button_link": "",
+        "email_note_text": "Or Drop Us an Email:",
+        "email_address": "",
+        "button_style": "gradient",
+        "custom_button_background": "{{ settings.color_palette.foreground }}",
+        "custom_button_text": "{{ settings.color_palette.background }}",
+        "custom_button_border": "{{ settings.color_palette.background }}",
+        "width": "fit-content",
+        "custom_width": 100,
+        "width_mobile": "fit-content",
+        "custom_width_mobile": 100,
+        "background_color": "#0b0b0b",
+        "text_color": "{{ settings.color_palette.background }}",
+        "muted_text_color": "",
+        "show_powered_by": true,
         "padding-block-start": 0,
         "padding-block-end": 0
       }
