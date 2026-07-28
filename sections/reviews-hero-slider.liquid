@@ -24,14 +24,18 @@
           <div
             class="reviews-hero-slider__stars"
             aria-hidden="true"
-            style="--reviews-hero-star-color: {{ section.settings.star_color }};"
+            style="
+              --reviews-hero-star-color: {{ section.settings.star_color }};
+              --reviews-hero-star-size: {{ section.settings.rating_icon_size }}px;
+              --reviews-hero-star-size-mobile: {{ section.settings.rating_icon_size_mobile }}px;
+            "
           >
             {%- for i in (1..5) -%}
               <span class="reviews-hero-slider__star{% if i <= rating_value %} reviews-hero-slider__star--filled{% endif %}">
                 {% render 'icon-or-image',
                   icon: 'star',
-                  image_upload: blank,
-                  width: 24,
+                  image_upload: section.settings.rating_icon,
+                  width: section.settings.rating_icon_size,
                   class_name: 'reviews-hero-slider__star-icon'
                 %}
               </span>
@@ -43,7 +47,8 @@
           <h2
             class="reviews-hero-slider__heading"
             style="
-              {% if section.settings.heading_accent_color != blank %}--reviews-hero-heading-accent: {{ section.settings.heading_accent_color }};{% endif %}
+              {% if section.settings.heading_color != blank %}color: {{ section.settings.heading_color }};{% endif %}
+              {% if section.settings.highlighted_text_color != blank %}--reviews-hero-heading-accent: {{ section.settings.highlighted_text_color }};{% endif %}
               --reviews-hero-heading-size: {{ section.settings.heading_size }}px;
               --reviews-hero-heading-size-mobile: {{ section.settings.heading_size_mobile }}px;
             "
@@ -168,8 +173,8 @@
   }
 
   .reviews-hero-slider__star-icon {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: var(--reviews-hero-star-size, 24px);
+    height: var(--reviews-hero-star-size, 24px);
   }
 
   .reviews-hero-slider__heading {
@@ -257,6 +262,11 @@
       font-size: var(--reviews-hero-heading-size-mobile, 32px);
     }
 
+    .reviews-hero-slider__star-icon {
+      width: var(--reviews-hero-star-size-mobile, 18px);
+      height: var(--reviews-hero-star-size-mobile, 18px);
+    }
+
     .reviews-hero-slider__nav {
       margin-top: 1.5rem;
     }
@@ -305,6 +315,34 @@
       "visible_if": "{{ section.settings.show_rating }}"
     },
     {
+      "type": "image_picker",
+      "id": "rating_icon",
+      "label": "t:settings.image_icon",
+      "visible_if": "{{ section.settings.show_rating }}"
+    },
+    {
+      "type": "range",
+      "id": "rating_icon_size",
+      "label": "t:settings.size",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ section.settings.show_rating }}"
+    },
+    {
+      "type": "range",
+      "id": "rating_icon_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18,
+      "visible_if": "{{ section.settings.show_rating }}"
+    },
+    {
       "type": "header",
       "content": "t:content.heading"
     },
@@ -316,8 +354,14 @@
     },
     {
       "type": "color",
-      "id": "heading_accent_color",
-      "label": "t:settings.color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "highlighted_text_color",
+      "label": "t:settings.highlighted_text_color",
       "default": "#BCA588"
     },
     {
