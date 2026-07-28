@@ -454,6 +454,7 @@
         "heading": "Shop by Category",
         "heading_color": "#bca588",
         "heading_size": 88,
+        "heading_size_mobile": 24,
         "button_label": "Shop All",
         "button_link": "",
         "open_in_new_tab": false,
@@ -468,6 +469,8 @@
         "columns_desktop": 4,
         "columns_mobile": "2",
         "gap": 32,
+        "card_title_size": 32,
+        "card_title_size_mobile": 20,
         "border": "none",
         "border_width": 1,
         "border_opacity": 100,
@@ -486,6 +489,7 @@
         "best_sellers_card_YcMdYt": {
           "type": "_best-sellers-card",
           "settings": {
+            "product": "",
             "badge_text": "Sale",
             "title": "Product name",
             "subtitle": "Short product description",
@@ -499,6 +503,7 @@
         "best_sellers_card_8VKitK": {
           "type": "_best-sellers-card",
           "settings": {
+            "product": "",
             "badge_text": "Sale",
             "title": "Product name",
             "subtitle": "Short product description",
@@ -512,6 +517,7 @@
         "best_sellers_card_yVtwfg": {
           "type": "_best-sellers-card",
           "settings": {
+            "product": "",
             "badge_text": "Sale",
             "title": "Product name",
             "subtitle": "Short product description",
@@ -525,6 +531,7 @@
         "best_sellers_card_K8GmEt": {
           "type": "_best-sellers-card",
           "settings": {
+            "product": "",
             "badge_text": "Sale",
             "title": "Product name",
             "subtitle": "Short product description",
@@ -547,6 +554,7 @@
         "heading": "Shop Best Sellers",
         "heading_color": "#bca588",
         "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
         "section_width": "full-width",
         "slides_per_view": 5,
         "mobile_card_width": 250,
@@ -659,12 +667,79 @@
         "padding-inline-start": 0,
         "padding-inline-end": 0
       }
+    },
+    "reviews_hero_slider_knh3g8": {
+      "type": "reviews-hero-slider",
+      "blocks": {
+        "review_card_qjknjG": {
+          "type": "_review-card",
+          "settings": {
+            "image_label": "Titanium Series",
+            "badge_color": "",
+            "title": "No Compromise",
+            "quote": "<p>Most pans force you to choose - performance, durability, or convenience. This gives you all 3, without chemicals.</p>",
+            "author": "Antonio C., Chef"
+          },
+          "blocks": {}
+        },
+        "review_card_tgpmzR": {
+          "type": "_review-card",
+          "settings": {
+            "image_label": "Titanium Board",
+            "badge_color": "",
+            "title": "I'm Obsessed!",
+            "quote": "<p>It doesn't shed toxins, bacteria can't grow on it, and it's ridiculously easy to clean.</p>",
+            "author": "Amanda R."
+          },
+          "blocks": {}
+        },
+        "review_card_EXwLKV": {
+          "type": "_review-card",
+          "settings": {
+            "image_label": "Titanium Pan",
+            "badge_color": "",
+            "title": "Non-Stick Without Chemicals",
+            "quote": "<p>When I cook at home for my family I choose only non-toxic cookware, so I don't have to worry about chemicals.</p>",
+            "author": "Alice B., Chef"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "review_card_qjknjG",
+        "review_card_tgpmzR",
+        "review_card_EXwLKV"
+      ],
+      "name": "t:names.reviews_hero_slider",
+      "settings": {
+        "show_rating": true,
+        "rating_value": 5,
+        "star_color": "#B57C46",
+        "heading": "<p>Trusted By 6<strong>00,000+</strong>Kitchens Worldwide</p>",
+        "heading_accent_color": "#BCA588",
+        "card_width": 420,
+        "mobile_card_width": 300,
+        "gap": 32,
+        "card_radius": 18,
+        "badge_color": "#B57C46",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrow_background_color": "#A3835F",
+        "arrow_icon_color": "#121212",
+        "background_color": "#121212",
+        "text_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 80,
+        "padding-block-end": 80,
+        "padding-inline-start": 24,
+        "padding-inline-end": 24
+      }
     }
   },
   "order": [
     "hero_video_logos_n9fbJH",
     "category_grid_7xcG8c",
     "best_sellers_slider_JthhCi",
-    "benefits_marquee_eCTXMH"
+    "benefits_marquee_eCTXMH",
+    "reviews_hero_slider_knh3g8"
   ]
 }
