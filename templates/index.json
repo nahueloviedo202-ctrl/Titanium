@@ -452,7 +452,8 @@
       "name": "t:names.category_grid",
       "settings": {
         "heading": "Shop by Category",
-        "heading_color": "#BCA588",
+        "heading_color": "#bca588",
+        "heading_size": 88,
         "button_label": "Shop All",
         "button_link": "",
         "open_in_new_tab": false,
