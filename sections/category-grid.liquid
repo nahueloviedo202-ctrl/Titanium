@@ -23,6 +23,7 @@
           style="
             {% if section.settings.heading_color != blank %}color: {{ section.settings.heading_color }};{% endif %}
             --category-grid-heading-size: {{ section.settings.heading_size }}px;
+            --category-grid-heading-size-mobile: {{ section.settings.heading_size_mobile }}px;
           "
         >
           {{ section.settings.heading }}
@@ -61,6 +62,8 @@
         --category-grid-columns-desktop: {{ section.settings.columns_desktop }};
         --category-grid-columns-mobile: {{ section.settings.columns_mobile }};
         --category-grid-gap: {{ section.settings.gap }}px;
+        --category-grid-card-title-size: {{ section.settings.card_title_size }}px;
+        --category-grid-card-title-size-mobile: {{ section.settings.card_title_size_mobile }}px;
         {% render 'border-override', settings: section.settings %}
       "
     >
@@ -158,6 +161,14 @@
     background-color: rgb(255 255 255 / 0.06);
   }
 
+  /* The reused theme "text" block bakes its font size into an inline
+     --font-size custom property (see snippets/typography-style.liquid), so an
+     !important is the only way to make the card title responsive without
+     modifying that shared block file. */
+  .category-grid__grid .card__inner > .text-block:last-child {
+    --font-size: var(--category-grid-card-title-size, 2rem) !important;
+  }
+
   @media screen and (max-width: 749px) {
     .category-grid__top {
       justify-content: space-between;
@@ -166,6 +177,7 @@
 
     .category-grid__heading {
       margin: 0;
+      font-size: var(--category-grid-heading-size-mobile, 24px);
       text-align: left;
     }
 
@@ -186,6 +198,10 @@
 
     .category-grid__grid {
       grid-template-columns: repeat(var(--category-grid-columns-mobile, 2), minmax(0, 1fr));
+    }
+
+    .category-grid__grid .card__inner > .text-block:last-child {
+      --font-size: var(--category-grid-card-title-size-mobile, 1.25rem) !important;
     }
   }
 {% endstylesheet %}
@@ -229,6 +245,16 @@
       "step": 2,
       "unit": "px",
       "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
     },
     {
       "type": "header",
@@ -397,6 +423,26 @@
       "step": 1,
       "unit": "px",
       "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "label": "t:settings.title_size",
+      "min": 16,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_title_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 20
     },
     {
       "type": "header",
