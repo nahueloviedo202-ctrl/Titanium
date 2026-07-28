@@ -111,7 +111,7 @@
         "custom_width_mobile": 100,
         "background_color": "#0b0b0b",
         "text_color": "{{ settings.color_palette.background }}",
-        "muted_text_color": "",
+        "muted_text_color": "{{ settings.color_palette.background }}",
         "show_powered_by": true,
         "padding-block-start": 0,
         "padding-block-end": 0
