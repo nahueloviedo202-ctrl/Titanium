@@ -486,7 +486,7 @@
           "type": "_benefit-chip",
           "settings": {
             "icon": "shopify://shop_images/icons_1_438d954c-e905-4307-a3e3-a7e3914450fc.webp",
-            "label": "Sustainable",
+            "label": "FREE RETURNS",
             "text_color": ""
           },
           "blocks": {}
@@ -495,7 +495,7 @@
           "type": "_benefit-chip",
           "settings": {
             "icon": "shopify://shop_images/icons_2_81f1545f-5b29-411d-a7c5-55b17c0f0958.png",
-            "label": "Free Returns",
+            "label": "PFAS-FREE",
             "text_color": ""
           },
           "blocks": {}
@@ -503,7 +503,8 @@
         "benefit_chip_rMidD6": {
           "type": "_benefit-chip",
           "settings": {
-            "label": "PFAS-Free",
+            "icon": "shopify://shop_images/icons_14.png",
+            "label": "ANITBACTERIAL",
             "text_color": ""
           },
           "blocks": {}
@@ -511,7 +512,8 @@
         "benefit_chip_jFi9jx": {
           "type": "_benefit-chip",
           "settings": {
-            "label": "100% Toxin-Free",
+            "icon": "shopify://shop_images/icons_12.png",
+            "label": "100% TOXIN-FREE",
             "text_color": ""
           },
           "blocks": {}
@@ -520,7 +522,7 @@
           "type": "_benefit-chip",
           "settings": {
             "icon": "shopify://shop_images/icons.png",
-            "label": "Certified",
+            "label": "SUSTAINABLE",
             "text_color": ""
           },
           "blocks": {}
@@ -528,7 +530,8 @@
         "benefit_chip_8AnBC9": {
           "type": "_benefit-chip",
           "settings": {
-            "label": "Antibacterial",
+            "icon": "shopify://shop_images/icons_13.png",
+            "label": "CERTIFIED",
             "text_color": ""
           },
           "blocks": {}
