@@ -24,7 +24,10 @@
       {%- if block.settings.image_label != blank -%}
         <span
           class="review-card__pill"
-          style="{% if block.settings.badge_color != blank %}background: {{ block.settings.badge_color }};{% endif %}"
+          style="
+            {% if block.settings.badge_color != blank %}background: {{ block.settings.badge_color }};{% endif %}
+            {% if block.settings.badge_text_color != blank %}color: {{ block.settings.badge_text_color }};{% endif %}
+          "
         >
           {{- block.settings.image_label -}}
         </span>
@@ -47,15 +50,30 @@
 
   <div class="review-card__content">
     {%- if block.settings.title != blank -%}
-      <div class="review-card__title">{{ block.settings.title }}</div>
+      <div
+        class="review-card__title"
+        style="{% if block.settings.title_color != blank %}color: {{ block.settings.title_color }};{% endif %}"
+      >
+        {{- block.settings.title -}}
+      </div>
     {%- endif -%}
 
     {%- if block.settings.quote != blank -%}
-      <div class="review-card__quote rte">{{ block.settings.quote }}</div>
+      <div
+        class="review-card__quote rte"
+        style="{% if block.settings.quote_color != blank %}color: {{ block.settings.quote_color }};{% endif %}"
+      >
+        {{ block.settings.quote }}
+      </div>
     {%- endif -%}
 
     {%- if block.settings.author != blank -%}
-      <div class="review-card__author">{{ block.settings.author }}</div>
+      <div
+        class="review-card__author"
+        style="{% if block.settings.author_color != blank %}color: {{ block.settings.author_color }};{% endif %}"
+      >
+        {{- block.settings.author -}}
+      </div>
     {%- endif -%}
   </div>
 </article>
@@ -170,6 +188,12 @@
       "placeholder": "t:settings.default"
     },
     {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
       "type": "video",
       "id": "video",
       "label": "t:settings.video"
@@ -190,16 +214,34 @@
       "default": "t:text_defaults.review_card_title"
     },
     {
+      "type": "color",
+      "id": "title_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
       "type": "richtext",
       "id": "quote",
       "label": "t:settings.quote",
       "default": "t:html_defaults.review_card_quote"
     },
     {
+      "type": "color",
+      "id": "quote_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
       "type": "text",
       "id": "author",
       "label": "t:settings.author",
       "default": "t:text_defaults.review_card_author"
+    },
+    {
+      "type": "color",
+      "id": "author_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
     }
   ]
 }
