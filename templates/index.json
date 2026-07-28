@@ -487,7 +487,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_1_438d954c-e905-4307-a3e3-a7e3914450fc.webp",
             "label": "FREE RETURNS",
-            "text_color": ""
+            "text_color": "#D4C7B4"
           },
           "blocks": {}
         },
@@ -496,7 +496,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_2_81f1545f-5b29-411d-a7c5-55b17c0f0958.png",
             "label": "PFAS-FREE",
-            "text_color": ""
+            "text_color": "#D4C7B4"
           },
           "blocks": {}
         },
@@ -505,7 +505,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_14.png",
             "label": "ANITBACTERIAL",
-            "text_color": ""
+            "text_color": "#D4C7B4"
           },
           "blocks": {}
         },
@@ -514,7 +514,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_12.png",
             "label": "100% TOXIN-FREE",
-            "text_color": ""
+            "text_color": "#D4C7B4"
           },
           "blocks": {}
         },
@@ -523,7 +523,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons.png",
             "label": "SUSTAINABLE",
-            "text_color": ""
+            "text_color": "#D4C7B4"
           },
           "blocks": {}
         },
@@ -532,7 +532,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons_13.png",
             "label": "CERTIFIED",
-            "text_color": ""
+            "text_color": "#D4C7B4"
           },
           "blocks": {}
         }
