@@ -84,6 +84,7 @@
       "settings": {
         "show_marquee": true,
         "marquee_text": "Titanium® is the original brand of certified pure titanium kitchenware.",
+        "marquee_text_size": 50,
         "marquee_autoplay": true,
         "marquee_direction": "normal",
         "marquee_speed": 15,
@@ -114,7 +115,9 @@
         "muted_text_color": "{{ settings.color_palette.background }}",
         "show_powered_by": true,
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "padding-inline-start": 24,
+        "padding-inline-end": 24
       }
     }
   },
