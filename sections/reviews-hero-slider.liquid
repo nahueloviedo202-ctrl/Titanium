@@ -15,8 +15,17 @@
   aria-label="{{ section.settings.heading | strip_html | default: 'Customer reviews' }}"
 >
   <div
-    class="reviews-hero-slider__inner spacing-style"
-    style="{% render 'spacing-style', settings: section.settings %}"
+    class="reviews-hero-slider__inner"
+    style="
+      --reviews-hero-padding-block-start: {{ section.settings.padding_block_start }}px;
+      --reviews-hero-padding-block-end: {{ section.settings.padding_block_end }}px;
+      --reviews-hero-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+      --reviews-hero-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+      --reviews-hero-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+      --reviews-hero-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+      --reviews-hero-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+      --reviews-hero-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+    "
   >
     {% capture aside %}
       <div class="reviews-hero-slider__aside">
@@ -56,40 +65,42 @@
             {{ section.settings.heading }}
           </h2>
         {%- endif -%}
-
-        {%- if section.blocks.size > 1 -%}
-          <div
-            class="reviews-hero-slider__nav"
-            style="
-              --reviews-hero-arrow-bg: {{ section.settings.arrow_background_color }};
-              --reviews-hero-arrow-color: {{ section.settings.arrow_icon_color }};
-            "
-          >
-            <button
-              class="reviews-hero-slider__nav-btn reviews-hero-slider__nav-btn--prev"
-              aria-label="{{ 'accessibility.slideshow_previous' | t }}"
-              on:click="/previous"
-              ref="previous"
-              type="button"
-            >
-              <span class="svg-wrapper flip-x">
-                {{- 'icon-arrow.svg' | inline_asset_content -}}
-              </span>
-            </button>
-            <button
-              class="reviews-hero-slider__nav-btn reviews-hero-slider__nav-btn--next"
-              aria-label="{{ 'accessibility.slideshow_next' | t }}"
-              on:click="/next"
-              ref="next"
-              type="button"
-            >
-              <span class="svg-wrapper">
-                {{- 'icon-arrow.svg' | inline_asset_content -}}
-              </span>
-            </button>
-          </div>
-        {%- endif -%}
       </div>
+    {% endcapture %}
+
+    {% capture nav %}
+      {%- if section.blocks.size > 1 -%}
+        <div
+          class="reviews-hero-slider__nav"
+          style="
+            --reviews-hero-arrow-bg: {{ section.settings.arrow_background_color }};
+            --reviews-hero-arrow-color: {{ section.settings.arrow_icon_color }};
+          "
+        >
+          <button
+            class="reviews-hero-slider__nav-btn reviews-hero-slider__nav-btn--prev"
+            aria-label="{{ 'accessibility.slideshow_previous' | t }}"
+            on:click="/previous"
+            ref="previous"
+            type="button"
+          >
+            <span class="svg-wrapper flip-x">
+              {{- 'icon-arrow.svg' | inline_asset_content -}}
+            </span>
+          </button>
+          <button
+            class="reviews-hero-slider__nav-btn reviews-hero-slider__nav-btn--next"
+            aria-label="{{ 'accessibility.slideshow_next' | t }}"
+            on:click="/next"
+            ref="next"
+            type="button"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-arrow.svg' | inline_asset_content -}}
+            </span>
+          </button>
+        </div>
+      {%- endif -%}
     {% endcapture %}
 
     {% capture slides %}
@@ -110,6 +121,7 @@
         class: 'reviews-hero-slider__slideshow',
         style: slideshow_style,
         header: aside,
+        controls: nav,
         slides: slides,
         show_arrows: false,
         infinite: false,
@@ -131,30 +143,34 @@
 
   .reviews-hero-slider__inner {
     display: block;
+    padding-block: var(--reviews-hero-padding-block-start, 0) var(--reviews-hero-padding-block-end, 0);
+    padding-inline: var(--reviews-hero-padding-inline-start, 0) var(--reviews-hero-padding-inline-end, 0);
   }
 
-  /* The slideshow snippet places our "aside" capture and the actual
-     slideshow-container as siblings inside <slideshow-component>, which
-     defaults to a column flex layout. Override it to a row so the aside
-     sits beside the slider instead of stretching full-width above it. */
+  /* The slideshow snippet places our "aside" (header) and "nav" (controls)
+     captures as siblings of slideshow-container inside <slideshow-component>.
+     Grid areas let the nav sit under the aside on desktop, and under the
+     whole slider on mobile, without needing to duplicate any markup. */
   .reviews-hero-slider__slideshow {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'aside slides' 'nav slides';
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem 3rem;
   }
 
   .reviews-hero-slider__slideshow > slideshow-container {
-    flex: 1 1 0%;
+    grid-area: slides;
     min-width: 0;
   }
 
   .reviews-hero-slider__aside {
+    grid-area: aside;
     display: flex;
     flex-direction: column;
-    flex: 0 0 auto;
-    width: 16rem;
-    max-width: 40vw;
+    max-width: 100%;
+    align-self: start;
   }
 
   .reviews-hero-slider__stars {
@@ -194,12 +210,15 @@
   }
 
   .reviews-hero-slider__nav {
-    margin-top: auto;
+    grid-area: nav;
+    align-self: end;
     display: flex;
     gap: 0.75rem;
   }
 
   .reviews-hero-slider__nav-btn {
+    position: relative;
+    z-index: 2;
     width: 4rem;
     height: 4rem;
     flex-shrink: 0;
@@ -246,15 +265,20 @@
   }
 
   @media screen and (max-width: 749px) {
+    .reviews-hero-slider__inner {
+      padding-block: var(--reviews-hero-padding-block-start-mobile, 0) var(--reviews-hero-padding-block-end-mobile, 0);
+      padding-inline: var(--reviews-hero-padding-inline-start-mobile, 0) var(--reviews-hero-padding-inline-end-mobile, 0);
+    }
+
     .reviews-hero-slider__slideshow {
-      flex-direction: column;
-      align-items: stretch;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: 'aside' 'slides' 'nav';
       gap: 1.5rem;
     }
 
     .reviews-hero-slider__aside {
-      width: 100%;
-      max-width: 100%;
+      align-self: stretch;
     }
 
     .reviews-hero-slider__heading {
@@ -268,7 +292,8 @@
     }
 
     .reviews-hero-slider__nav {
-      margin-top: 1.5rem;
+      justify-content: center;
+      align-self: center;
     }
   }
 {% endstylesheet %}
@@ -487,11 +512,11 @@
     },
     {
       "type": "header",
-      "content": "t:content.padding"
+      "content": "t:content.padding_desktop"
     },
     {
       "type": "range",
-      "id": "padding-block-start",
+      "id": "padding_block_start",
       "label": "t:settings.top",
       "min": 0,
       "max": 100,
@@ -501,7 +526,7 @@
     },
     {
       "type": "range",
-      "id": "padding-block-end",
+      "id": "padding_block_end",
       "label": "t:settings.bottom",
       "min": 0,
       "max": 100,
@@ -511,7 +536,7 @@
     },
     {
       "type": "range",
-      "id": "padding-inline-start",
+      "id": "padding_inline_start",
       "label": "t:settings.left",
       "min": 0,
       "max": 100,
@@ -521,13 +546,57 @@
     },
     {
       "type": "range",
-      "id": "padding-inline-end",
+      "id": "padding_inline_end",
       "label": "t:settings.right",
       "min": 0,
       "max": 100,
       "step": 1,
       "unit": "px",
       "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
     }
   ],
   "presets": [

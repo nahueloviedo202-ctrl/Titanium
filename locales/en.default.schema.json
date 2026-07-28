@@ -115,6 +115,7 @@
     "mobile_width": "Mobile width",
     "padding": "Padding",
     "padding_desktop": "Desktop padding",
+    "padding_mobile": "Mobile padding",
     "paragraph": "Paragraph",
     // Footer component section header for legal policy links
     "policies": "Policies",
