@@ -1,0 +1,957 @@
+
+
+{% liquid
+  assign logo = section.settings.logo | default: settings.logo
+  assign link_column_count = section.blocks.size | at_least: 1
+
+  if section.settings.background_color != blank or section.settings.text_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, text_color: section.settings.text_color, section_id: section.id, skip_contrast: true
+  endif
+
+  assign phone_href = section.settings.phone_number | remove: ' ' | remove: '(' | remove: ')' | remove: '-'
+%}
+
+<section
+  id="FooterAdvanced-{{ section.id }}"
+  class="footer-advanced{% if section.settings.background_color != blank or section.settings.text_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="contentinfo"
+  style="
+    {% if section.settings.muted_text_color != blank %}
+      --footer-advanced-muted-color: {{ section.settings.muted_text_color }};
+    {% endif %}
+  "
+>
+  {%- if section.settings.show_marquee -%}
+    <script
+      src="{{ 'marquee.js' | asset_url }}"
+      type="module"
+      fetchpriority="low"
+    ></script>
+    <div
+      class="footer-advanced__marquee"
+      aria-label="{{ section.settings.marquee_text | strip_html }}"
+      style="
+        {% if section.settings.marquee_background_color != blank %}
+          --footer-advanced-marquee-bg: {{ section.settings.marquee_background_color }};
+        {% endif %}
+        {% if section.settings.marquee_text_color != blank %}
+          --footer-advanced-marquee-color: {{ section.settings.marquee_text_color }};
+        {% endif %}
+      "
+    >
+      <marquee-component
+        class="footer-advanced__marquee-el"
+        style="--footer-advanced-marquee-direction: {{ section.settings.marquee_direction }};"
+        data-speed-factor="{{ section.settings.marquee_speed }}"
+        {% unless section.settings.marquee_autoplay %}
+          data-disabled
+        {% endunless %}
+      >
+        <div
+          class="footer-advanced__marquee-wrapper"
+          ref="wrapper"
+        >
+          <div
+            class="footer-advanced__marquee-content"
+            ref="content"
+          >
+            <div
+              class="footer-advanced__marquee-items"
+              ref="marqueeItems[]"
+            >
+              <span
+                class="footer-advanced__marquee-icon"
+                aria-hidden="true"
+              >
+                {%- if section.settings.marquee_icon != blank -%}
+                  {{
+                    section.settings.marquee_icon
+                    | image_url: width: 96
+                    | image_tag: widths: '48, 96', loading: 'lazy', alt: ''
+                  }}
+                {%- else -%}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    focusable="false"
+                  >
+                    <path
+                      d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4 24H44M24 4C18.8645 9.39231 16 16.5535 16 24C16 31.4465 18.8645 38.6077 24 44C29.1355 38.6077 32 31.4465 32 24C32 16.5535 29.1355 9.39231 24 4Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                {%- endif -%}
+              </span>
+              {%- if section.settings.marquee_text != blank -%}
+                <span class="footer-advanced__marquee-text">{{ section.settings.marquee_text }}</span>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </marquee-component>
+    </div>
+  {%- endif -%}
+
+  <div
+    class="footer-advanced__inner spacing-style"
+    style="{% render 'spacing-style', settings: section.settings %}"
+  >
+    <div class="footer-advanced__grid">
+      <div class="footer-advanced__brand">
+        {%- if logo -%}
+          <div class="footer-advanced__logo">
+            {{
+              logo
+              | image_url: width: 720
+              | image_tag: widths: '180, 360, 720', alt: shop.name, loading: 'lazy'
+            }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.blurb != blank -%}
+          <div class="footer-advanced__blurb rte">{{ section.settings.blurb }}</div>
+        {%- endif -%}
+
+        {%- if section.settings.show_newsletter -%}
+          {% render 'button-custom-styles', block_settings: section.settings, block_id: section.id %}
+          <div class="footer-advanced__newsletter">
+            {%- form 'customer', class: 'footer-advanced__nl-form' -%}
+              <input
+                type="hidden"
+                name="contact[tags]"
+                value="newsletter"
+              >
+              <label
+                for="FooterNewsletterEmail-{{ section.id }}"
+                class="visually-hidden"
+              >
+                {{- 'blocks.email_signup.label' | t -}}
+              </label>
+              <div class="footer-advanced__nl-row">
+                <input
+                  id="FooterNewsletterEmail-{{ section.id }}"
+                  class="footer-advanced__nl-input"
+                  type="email"
+                  name="contact[email]"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autocomplete="email"
+                  placeholder="{{ 'blocks.email_signup.placeholder' | t }}"
+                  required
+                  {%- if form.errors -%}
+                    aria-invalid="true"
+                    aria-describedby="FooterNewsletterMessage-{{ section.id }}"
+                  {%- endif -%}
+                >
+                <button
+                  type="submit"
+                  class="
+                    footer-advanced__nl-button
+                    footer-advanced__button
+                    size-style
+                    {{ section.settings.button_style }}
+                    {% if section.settings.button_style == 'custom' %}button-custom--{{ section.id }}{% endif %}
+                  "
+                  style="{% render 'size-style', settings: section.settings %}"
+                >
+                  {{- section.settings.newsletter_button_label -}}
+                </button>
+              </div>
+              {%- if form.errors -%}
+                <p
+                  id="FooterNewsletterMessage-{{ section.id }}"
+                  class="footer-advanced__nl-message footer-advanced__nl-message--err"
+                >
+                  {{- form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email -}}
+                </p>
+              {%- elsif form.posted_successfully? -%}
+                <p
+                  id="FooterNewsletterMessage-{{ section.id }}"
+                  class="footer-advanced__nl-message footer-advanced__nl-message--ok"
+                >
+                  {{- 'blocks.email_signup.success' | t -}}
+                </p>
+              {%- elsif section.settings.newsletter_note != blank -%}
+                <p class="footer-advanced__nl-note">{{ section.settings.newsletter_note }}</p>
+              {%- endif -%}
+            {%- endform -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div
+        class="footer-advanced__links"
+        style="--footer-advanced-link-columns: {{ link_column_count }};"
+      >
+        {% content_for 'blocks' %}
+      </div>
+
+      {%- if section.settings.show_contact -%}
+        <div class="footer-advanced__contact">
+          {%- if section.settings.contact_title != blank -%}
+            <h4 class="footer-advanced__contact-title">{{ section.settings.contact_title }}</h4>
+          {%- endif -%}
+
+          {%- if section.settings.phone_number != blank -%}
+            <div class="footer-advanced__contact-row">
+              {%- if section.settings.phone_icon != blank -%}
+                <span
+                  class="footer-advanced__contact-icon"
+                  aria-hidden="true"
+                >
+                  {{
+                    section.settings.phone_icon
+                    | image_url: width: 40
+                    | image_tag: widths: '20, 40', loading: 'lazy', alt: ''
+                  }}
+                </span>
+              {%- endif -%}
+              <p class="footer-advanced__contact-text">
+                <a href="tel:{{ phone_href }}">{{ section.settings.phone_number }}</a>
+              </p>
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.contact_button_label != blank -%}
+            <a
+              {% if section.settings.contact_button_link == blank %}
+                role="link"
+                aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.contact_button_link }}"
+              {% endif %}
+              class="
+                footer-advanced__contact-btn
+                footer-advanced__button
+                size-style
+                {{ section.settings.button_style }}
+                {% if section.settings.button_style == 'custom' %}button-custom--{{ section.id }}{% endif %}
+              "
+              style="{% render 'size-style', settings: section.settings %}"
+            >
+              {{ section.settings.contact_button_label }}
+            </a>
+          {%- endif -%}
+
+          {%- if section.settings.email_note_text != blank -%}
+            <p class="footer-advanced__contact-note">{{ section.settings.email_note_text }}</p>
+          {%- endif -%}
+
+          {%- if section.settings.email_address != blank -%}
+            <a
+              class="footer-advanced__contact-email"
+              href="mailto:{{ section.settings.email_address }}"
+            >
+              <svg
+                class="footer-advanced__contact-email-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 17 18"
+                fill="none"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="currentColor"
+                  d="M0.805622 2.5166H15.1945C15.2943 2.5166 15.3943 2.53223 15.4942 2.56347C15.5941 2.59473 15.6815 2.6416 15.7565 2.7041C15.8314 2.7666 15.8908 2.83952 15.9344 2.92285C15.9782 3.00618 16 3.09473 16 3.18848V13.8447C16 13.9384 15.9782 14.027 15.9344 14.1104C15.8908 14.1937 15.8314 14.2666 15.7565 14.3291C15.6815 14.3916 15.5941 14.4385 15.4942 14.4697C15.3943 14.501 15.2943 14.5166 15.1945 14.5166H0.805622C0.705701 14.5166 0.605778 14.501 0.505856 14.4697C0.405934 14.4385 0.318502 14.3916 0.24356 14.3291C0.168619 14.2666 0.10929 14.1937 0.065574 14.1104C0.021858 14.027 0 13.9384 0 13.8447V3.18848C0 3.09473 0.021858 3.00618 0.065574 2.92285C0.10929 2.83952 0.168619 2.7666 0.24356 2.7041C0.318502 2.6416 0.405934 2.59473 0.505856 2.56347C0.605778 2.53223 0.705701 2.5166 0.805622 2.5166ZM14.3888 5.34472L8.05622 10.0791L1.61124 5.3291V13.1885H14.3888V5.34472ZM2.00469 3.84472L8.05622 8.29785L13.9954 3.84472H2.00469Z"
+                />
+              </svg>
+              <span>{{ section.settings.email_address }}</span>
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="footer-advanced__copyright">
+    <div class="footer-advanced__copyright-inner">
+      <p class="footer-advanced__copyright-text">
+        &copy; {{ 'now' | date: '%Y' }}
+        {{ shop.name | link_to: routes.root_url -}}
+        {%- if section.settings.show_powered_by -%}
+          , {{ powered_by_link }}
+        {%- endif %}
+      </p>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .footer-advanced {
+    position: relative;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+  }
+
+  .footer-advanced__marquee {
+    overflow: hidden;
+    border-bottom: 1px solid rgb(var(--color-foreground-rgb) / var(--opacity-10));
+    color: var(--footer-advanced-marquee-color, var(--color-foreground));
+    background-color: var(--footer-advanced-marquee-bg, transparent);
+  }
+
+  .footer-advanced__marquee-el {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .footer-advanced__marquee-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20vw;
+    padding: 2rem 1rem;
+    width: max-content;
+  }
+
+  .footer-advanced__marquee-content,
+  .footer-advanced__marquee-items {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: max-content;
+  }
+
+  .footer-advanced__marquee-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: clamp(2rem, 1.6rem + 1vw, 3rem);
+    height: clamp(2rem, 1.6rem + 1vw, 3rem);
+  }
+
+  .footer-advanced__marquee-icon :is(img, svg) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-advanced__marquee-text {
+    white-space: nowrap;
+    font-size: clamp(2rem, 1.4rem + 3vw, 4rem);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .footer-advanced__marquee-el:not([data-disabled]) .footer-advanced__marquee-wrapper {
+      animation: footer-advanced-marquee var(--marquee-speed, 30s) linear infinite
+        var(--footer-advanced-marquee-direction, normal);
+    }
+  }
+
+  @keyframes footer-advanced-marquee {
+    to {
+      transform: translate3d(calc(-50% - 10vw), 0, 0);
+    }
+  }
+
+  .footer-advanced__inner {
+    max-width: 120rem;
+    margin-inline: auto;
+  }
+
+  .footer-advanced__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1.2fr 0.3fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .footer-advanced__logo img {
+    height: auto;
+    width: auto;
+    max-width: 16.25rem;
+  }
+
+  .footer-advanced__blurb {
+    margin: 2rem 0;
+    max-width: 22.8rem;
+    color: var(--footer-advanced-muted-color, var(--color-foreground-muted));
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+
+  .footer-advanced__nl-form {
+    margin: 0;
+  }
+
+  .footer-advanced__nl-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 22.8rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-foreground);
+  }
+
+  .footer-advanced__nl-input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 0.625rem 0.75rem;
+    color: var(--footer-advanced-muted-color, var(--color-foreground-muted));
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .footer-advanced__nl-input::placeholder {
+    color: var(--footer-advanced-muted-color, var(--color-foreground-muted));
+  }
+
+  .footer-advanced__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 1.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  .footer-advanced__button.gradient {
+    background: linear-gradient(
+      87deg,
+      #fff -96.92%,
+      #999 -88.86%,
+      #bfbfbf -84.16%,
+      #ebebeb -71.32%,
+      #ababab -50.9%,
+      #ebebeb -40%,
+      #fff -27.43%
+    );
+    color: var(--palette-darkest);
+  }
+
+  .footer-advanced__nl-message {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .footer-advanced__nl-note {
+    margin-top: 0.75rem;
+    color: var(--footer-advanced-muted-color, var(--color-foreground-muted));
+    font-size: 0.875rem;
+  }
+
+  .footer-advanced__links {
+    display: grid;
+    grid-template-columns: repeat(var(--footer-advanced-link-columns, 1), 1fr);
+    gap: 2rem;
+  }
+
+  .footer-advanced__links :is(.menu__heading, .menu__item) {
+    color: inherit;
+  }
+
+  .footer-advanced__links .menu__item a {
+    color: var(--footer-advanced-muted-color, var(--color-foreground-muted));
+    text-decoration: none;
+  }
+
+  .footer-advanced__links .menu__item a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-advanced__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .footer-advanced__contact-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .footer-advanced__contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  .footer-advanced__contact-icon {
+    display: inline-flex;
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .footer-advanced__contact-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .footer-advanced__contact-text {
+    margin: 0;
+  }
+
+  .footer-advanced__contact-text a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .footer-advanced__contact-note {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .footer-advanced__contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--footer-advanced-muted-color, var(--color-foreground-muted));
+    font-size: 0.875rem;
+  }
+
+  .footer-advanced__contact-email-icon {
+    width: 1.0625rem;
+    height: 1.125rem;
+    flex-shrink: 0;
+  }
+
+  .footer-advanced__copyright {
+    border-top: 1px solid rgb(var(--color-foreground-rgb) / var(--opacity-10));
+  }
+
+  .footer-advanced__copyright-inner {
+    max-width: 105rem;
+    margin-inline: auto;
+    padding: 2rem 1rem;
+  }
+
+  .footer-advanced__copyright-text {
+    margin: 0;
+    color: var(--footer-advanced-muted-color, var(--color-foreground-subdued));
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 989px) {
+    .footer-advanced__grid {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      text-align: center;
+    }
+
+    .footer-advanced__logo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-advanced__blurb {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .footer-advanced__nl-row {
+      margin-inline: auto;
+    }
+
+    .footer-advanced__links {
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+      justify-items: center;
+    }
+
+    .footer-advanced__contact {
+      align-items: center;
+    }
+
+    .footer-advanced__contact-row {
+      margin-bottom: 1rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.footer_advanced",
+  "tag": "section",
+  "class": "section-wrapper",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "blocks": [
+    {
+      "type": "menu"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.marquee"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_marquee",
+      "label": "t:settings.show_marquee",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "marquee_text",
+      "label": "t:settings.message",
+      "default": "t:text_defaults.footer_advanced_marquee_text",
+      "visible_if": "{{ section.settings.show_marquee }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "marquee_icon",
+      "label": "t:settings.image_icon",
+      "visible_if": "{{ section.settings.show_marquee }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "marquee_autoplay",
+      "label": "t:settings.autoplay",
+      "default": true,
+      "visible_if": "{{ section.settings.show_marquee }}"
+    },
+    {
+      "type": "select",
+      "id": "marquee_direction",
+      "label": "t:settings.motion_direction",
+      "options": [
+        {
+          "value": "reverse",
+          "label": "t:options.forward"
+        },
+        {
+          "value": "normal",
+          "label": "t:options.reverse"
+        }
+      ],
+      "default": "normal",
+      "visible_if": "{{ section.settings.show_marquee and section.settings.marquee_autoplay }}"
+    },
+    {
+      "type": "range",
+      "id": "marquee_speed",
+      "label": "t:settings.speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "visible_if": "{{ section.settings.show_marquee and section.settings.marquee_autoplay }}"
+    },
+    {
+      "type": "color",
+      "id": "marquee_background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default",
+      "visible_if": "{{ section.settings.show_marquee }}"
+    },
+    {
+      "type": "color",
+      "id": "marquee_text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default",
+      "visible_if": "{{ section.settings.show_marquee }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:settings.logo"
+    },
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "richtext",
+      "id": "blurb",
+      "label": "t:settings.text",
+      "default": "t:html_defaults.footer_advanced_blurb"
+    },
+    {
+      "type": "header",
+      "content": "t:content.newsletter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "t:settings.show_newsletter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "newsletter_button_label",
+      "label": "t:settings.label",
+      "default": "t:text_defaults.email_signup_button_label",
+      "visible_if": "{{ section.settings.show_newsletter }}"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_note",
+      "label": "t:settings.note",
+      "default": "t:text_defaults.footer_advanced_newsletter_note",
+      "visible_if": "{{ section.settings.show_newsletter }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.contact"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact",
+      "label": "t:settings.show_contact",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.footer_advanced_contact_title",
+      "visible_if": "{{ section.settings.show_contact }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "phone_icon",
+      "label": "t:settings.image_icon",
+      "visible_if": "{{ section.settings.show_contact }}"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "t:settings.phone_number",
+      "visible_if": "{{ section.settings.show_contact }}"
+    },
+    {
+      "type": "text",
+      "id": "contact_button_label",
+      "label": "t:settings.label",
+      "default": "t:text_defaults.footer_advanced_contact_button_label",
+      "visible_if": "{{ section.settings.show_contact }}"
+    },
+    {
+      "type": "url",
+      "id": "contact_button_link",
+      "label": "t:settings.link",
+      "visible_if": "{{ section.settings.show_contact }}"
+    },
+    {
+      "type": "text",
+      "id": "email_note_text",
+      "label": "t:settings.note",
+      "default": "t:text_defaults.footer_advanced_email_note",
+      "visible_if": "{{ section.settings.show_contact }}"
+    },
+    {
+      "type": "text",
+      "id": "email_address",
+      "label": "t:settings.email_address",
+      "visible_if": "{{ section.settings.show_contact }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.button_colors"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "t:settings.style",
+      "options": [
+        {
+          "value": "gradient",
+          "label": "t:options.default"
+        },
+        {
+          "value": "custom",
+          "label": "t:options.custom"
+        }
+      ],
+      "default": "gradient"
+    },
+    {
+      "type": "color",
+      "id": "custom_button_background",
+      "label": "t:settings.background",
+      "default": "{{ settings.color_palette.foreground }}",
+      "alpha": true,
+      "visible_if": "{{ section.settings.button_style == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "custom_button_text",
+      "label": "t:settings.text",
+      "default": "{{ settings.color_palette.background }}",
+      "alpha": true,
+      "visible_if": "{{ section.settings.button_style == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "custom_button_border",
+      "label": "t:settings.borders",
+      "default": "{{ settings.color_palette.background }}",
+      "alpha": true,
+      "visible_if": "{{ section.settings.button_style == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:settings.width_desktop",
+      "options": [
+        {
+          "value": "fit-content",
+          "label": "t:options.fit_content"
+        },
+        {
+          "value": "custom",
+          "label": "t:options.custom"
+        }
+      ],
+      "default": "fit-content"
+    },
+    {
+      "type": "range",
+      "id": "custom_width",
+      "label": "t:settings.custom_width",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100,
+      "visible_if": "{{ section.settings.width == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "width_mobile",
+      "label": "t:settings.width_mobile",
+      "options": [
+        {
+          "value": "fit-content",
+          "label": "t:options.fit_content"
+        },
+        {
+          "value": "custom",
+          "label": "t:options.custom"
+        }
+      ],
+      "default": "fit-content"
+    },
+    {
+      "type": "range",
+      "id": "custom_width_mobile",
+      "label": "t:settings.custom_width",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100,
+      "visible_if": "{{ section.settings.width_mobile == 'custom' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#0B0B0B",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "muted_text_color",
+      "label": "t:settings.muted_text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.copyright"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_powered_by",
+      "label": "t:settings.show_powered_by_shopify",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.footer_advanced",
+      "category": "t:categories.footer",
+      "blocks": {
+        "policies": {
+          "type": "menu",
+          "settings": {
+            "heading": "Policies"
+          }
+        },
+        "products": {
+          "type": "menu",
+          "settings": {
+            "heading": "Products"
+          }
+        },
+        "company": {
+          "type": "menu",
+          "settings": {
+            "heading": "Company"
+          }
+        }
+      },
+      "block_order": ["policies", "products", "company"]
+    }
+  ]
+}
+{% endschema %}
