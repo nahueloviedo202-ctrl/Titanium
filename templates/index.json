@@ -718,12 +718,29 @@
             "author_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
+        },
+        "review_card_PmykM3": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image_label": "",
+            "badge_color": "",
+            "badge_text_color": "",
+            "title": "Absolutely Love It",
+            "title_color": "",
+            "quote": "<p>This completely changed the way I cook. Simple, effective, and built to last.</p>",
+            "quote_color": "",
+            "author": "Happy Customer",
+            "author_color": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "review_card_qjknjG",
         "review_card_tgpmzR",
-        "review_card_EXwLKV"
+        "review_card_EXwLKV",
+        "review_card_PmykM3"
       ],
       "name": "t:names.reviews_hero_slider",
       "settings": {
