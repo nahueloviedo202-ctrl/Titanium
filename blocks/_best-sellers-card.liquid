@@ -2,14 +2,55 @@
 
 {%- liquid
   assign card = block.settings
+  assign product = card.product
   assign block_index = section.blocks | find_index: 'id', block.id
-  assign card_title = card.title | default: 'placeholders.product_title' | t
+
+  assign card_image = card.image
+  if card_image == blank and product != blank
+    assign card_image = product.featured_image
+  endif
+
+  assign card_title_text = card.title
+  if card_title_text == blank and product != blank
+    assign card_title_text = product.title
+  endif
+  assign card_title = card_title_text | default: 'placeholders.product_title' | t
+
+  assign card_link = card.link
+  if card_link == blank and product != blank
+    assign card_link = product.url
+  endif
   assign has_link = false
-  if card.link != blank
+  if card_link != blank
     assign has_link = true
   endif
+
+  assign product_on_sale = false
+  if product != blank and product.compare_at_price > product.price
+    assign product_on_sale = true
+  endif
+
+  assign card_badge = card.badge_text
+  if card_badge == blank and product_on_sale
+    assign card_badge = 'content.product_badge_sale' | t
+  endif
+
+  assign card_compare_price = card.compare_price
+  if card_compare_price == blank and product_on_sale
+    capture card_compare_price
+      render 'format-price', price: product.compare_at_price
+    endcapture
+  endif
+
+  assign card_current_price = card.current_price
+  if card_current_price == blank and product != blank
+    capture card_current_price
+      render 'format-price', price: product.price
+    endcapture
+  endif
+
   assign has_price = false
-  if card.compare_price != blank or card.current_price != blank
+  if card_compare_price != blank or card_current_price != blank
     assign has_price = true
   endif
 -%}
@@ -38,13 +79,13 @@
       --best-sellers-price-size: {{ section.settings.price_font_size }}px;
     "
   >
-    {%- if card.badge_text != blank -%}
-      <div class="best-sellers-slider__badge">{{ card.badge_text }}</div>
+    {%- if card_badge != blank -%}
+      <div class="best-sellers-slider__badge">{{ card_badge }}</div>
     {%- endif -%}
 
     {%- if has_link -%}
       <a
-        href="{{ card.link }}"
+        href="{{ card_link }}"
         class="best-sellers-slider__media best-sellers-slider__media--{{ section.settings.image_ratio }}"
         aria-hidden="true"
         tabindex="-1"
@@ -56,9 +97,9 @@
       <div class="best-sellers-slider__media best-sellers-slider__media--{{ section.settings.image_ratio }}">
     {%- endif -%}
 
-      {%- if card.image != blank -%}
+      {%- if card_image != blank -%}
         {{
-          card.image
+          card_image
           | image_url: width: 1200
           | image_tag:
             loading: 'lazy',
@@ -80,7 +121,7 @@
     <div class="best-sellers-slider__content">
       {%- if has_link -%}
         <a
-          href="{{ card.link }}"
+          href="{{ card_link }}"
           class="best-sellers-slider__title"
           {% if card.open_in_new_tab %}
             target="_blank" rel="noopener"
@@ -98,11 +139,11 @@
 
       {%- if has_price -%}
         <div class="best-sellers-slider__price">
-          {%- if card.compare_price != blank -%}
-            <span class="best-sellers-slider__price-compare">{{ card.compare_price }}</span>
+          {%- if card_compare_price != blank -%}
+            <span class="best-sellers-slider__price-compare">{{ card_compare_price }}</span>
           {%- endif -%}
-          {%- if card.current_price != blank -%}
-            <span class="best-sellers-slider__price-current">{{ card.current_price }}</span>
+          {%- if card_current_price != blank -%}
+            <span class="best-sellers-slider__price-current">{{ card_current_price }}</span>
           {%- endif -%}
         </div>
       {%- endif -%}
@@ -236,6 +277,12 @@
   "tag": null,
   "settings": [
     {
+      "type": "product",
+      "id": "product",
+      "label": "t:settings.product",
+      "info": "t:info.best_sellers_card_product"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "t:settings.image"
@@ -243,14 +290,12 @@
     {
       "type": "text",
       "id": "badge_text",
-      "label": "t:settings.badge_text",
-      "default": "t:text_defaults.best_sellers_card_badge"
+      "label": "t:settings.badge_text"
     },
     {
       "type": "text",
       "id": "title",
-      "label": "t:settings.title",
-      "default": "t:text_defaults.best_sellers_card_title"
+      "label": "t:settings.title"
     },
     {
       "type": "text",
@@ -261,14 +306,12 @@
     {
       "type": "text",
       "id": "compare_price",
-      "label": "t:settings.compare_price",
-      "default": "t:text_defaults.best_sellers_card_compare_price"
+      "label": "t:settings.compare_price"
     },
     {
       "type": "text",
       "id": "current_price",
-      "label": "t:settings.current_price",
-      "default": "t:text_defaults.best_sellers_card_current_price"
+      "label": "t:settings.current_price"
     },
     {
       "type": "header",

@@ -256,7 +256,8 @@
     "video_autoplay": "Videos will be muted by default",
     "video_external": "Use a YouTube or Vimeo URL",
     "pills_usage": "Used for applied filters, discount codes, and search suggestions",
-    "media_type_info": "Features are populated from your menu links"
+    "media_type_info": "Features are populated from your menu links",
+    "best_sellers_card_product": "Connects this card to a real product. Image, title, price, and link below are auto-filled from the product, but stay in this card's styling. Fill in any field manually to override the product's value."
   },
   "names": {
     "column": "Column",
