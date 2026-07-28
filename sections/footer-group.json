@@ -83,10 +83,10 @@
       "name": "t:names.footer_advanced",
       "settings": {
         "show_marquee": true,
-        "marquee_text": "Proudly designed to last a lifetime.",
+        "marquee_text": "Titanium® is the original brand of certified pure titanium kitchenware.",
         "marquee_autoplay": true,
         "marquee_direction": "normal",
-        "marquee_speed": 20,
+        "marquee_speed": 15,
         "marquee_background_color": "",
         "marquee_text_color": "{{ settings.color_palette.background }}",
         "logo": "shopify://shop_images/taima_logo_png.avif",
