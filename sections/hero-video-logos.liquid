@@ -158,13 +158,17 @@
           <div
             class="hero-video-logos__stars"
             aria-hidden="true"
+            style="
+              --hero-video-logos-star-size: {{ section.settings.rating_icon_size }}px;
+              --hero-video-logos-star-size-mobile: {{ section.settings.rating_icon_size_mobile }}px;
+            "
           >
             {%- for i in (1..5) -%}
               <span class="hero-video-logos__star{% if i <= rating_value %} hero-video-logos__star--filled{% endif %}">
                 {% render 'icon-or-image',
                   icon: 'star',
-                  image_upload: blank,
-                  width: 14,
+                  image_upload: section.settings.rating_icon,
+                  width: section.settings.rating_icon_size,
                   class_name: 'hero-video-logos__star-icon'
                 %}
               </span>
@@ -269,6 +273,11 @@
     .hero-video-logos__media-item--mobile {
       display: block;
     }
+
+    .hero-video-logos__star-icon {
+      width: var(--hero-video-logos-star-size-mobile, 12px);
+      height: var(--hero-video-logos-star-size-mobile, 12px);
+    }
   }
 
   .hero-video-logos__inner {
@@ -342,6 +351,11 @@
 
   .hero-video-logos__star--filled {
     color: var(--hero-video-logos-star-color, currentColor);
+  }
+
+  .hero-video-logos__star-icon {
+    width: var(--hero-video-logos-star-size, 14px);
+    height: var(--hero-video-logos-star-size, 14px);
   }
 
   .hero-video-logos__rating-text {
@@ -679,6 +693,34 @@
       "id": "star_color",
       "label": "t:settings.star_color",
       "default": "#B57C46",
+      "visible_if": "{{ section.settings.show_rating }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "rating_icon",
+      "label": "t:settings.image_icon",
+      "visible_if": "{{ section.settings.show_rating }}"
+    },
+    {
+      "type": "range",
+      "id": "rating_icon_size",
+      "label": "t:settings.size",
+      "min": 8,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 14,
+      "visible_if": "{{ section.settings.show_rating }}"
+    },
+    {
+      "type": "range",
+      "id": "rating_icon_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 8,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 12,
       "visible_if": "{{ section.settings.show_rating }}"
     },
     {
