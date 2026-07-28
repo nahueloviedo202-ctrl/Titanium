@@ -485,6 +485,7 @@
         "benefit_chip_DDceGy": {
           "type": "_benefit-chip",
           "settings": {
+            "icon": "shopify://shop_images/icons_1_438d954c-e905-4307-a3e3-a7e3914450fc.webp",
             "label": "Sustainable",
             "text_color": ""
           },
@@ -493,6 +494,7 @@
         "benefit_chip_6E7bpC": {
           "type": "_benefit-chip",
           "settings": {
+            "icon": "shopify://shop_images/icons_2_81f1545f-5b29-411d-a7c5-55b17c0f0958.png",
             "label": "Free Returns",
             "text_color": ""
           },
@@ -517,6 +519,7 @@
         "benefit_chip_qf8Axw": {
           "type": "_benefit-chip",
           "settings": {
+            "icon": "shopify://shop_images/icons.png",
             "label": "Certified",
             "text_color": ""
           },
