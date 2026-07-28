@@ -37,6 +37,7 @@
         {% if section.settings.marquee_text_color != blank %}
           --footer-advanced-marquee-color: {{ section.settings.marquee_text_color }};
         {% endif %}
+        --footer-advanced-marquee-text-size: {{ section.settings.marquee_text_size | default: 64 }}px;
       "
     >
       <marquee-component
@@ -337,7 +338,7 @@
 
   .footer-advanced__marquee-text {
     white-space: nowrap;
-    font-size: clamp(2rem, 1.4rem + 3vw, 4rem);
+    font-size: clamp(1.5rem, calc(var(--footer-advanced-marquee-text-size, 64px) * 0.55), var(--footer-advanced-marquee-text-size, 64px));
     line-height: 1.5;
     letter-spacing: 0.04em;
   }
@@ -365,6 +366,13 @@
     grid-template-columns: 1.1fr 1.2fr 0.3fr;
     gap: 3rem;
     align-items: start;
+  }
+
+  .footer-advanced__grid > * {
+    /* Grid items default to min-width: auto, which lets long unbreakable
+       content (emails, phone numbers) force the track wider than available
+       space. Resetting it lets these columns actually shrink and wrap. */
+    min-width: 0;
   }
 
   .footer-advanced__logo img {
@@ -415,6 +423,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
     border: 0;
     cursor: pointer;
     text-decoration: none;
@@ -426,6 +435,14 @@
     letter-spacing: 0.04em;
     text-transform: capitalize;
     white-space: nowrap;
+  }
+
+  @media screen and (max-width: 359px) {
+    .footer-advanced__button {
+      white-space: normal;
+      height: auto;
+      padding: 0.625rem 1rem;
+    }
   }
 
   .footer-advanced__button.gradient {
@@ -477,6 +494,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+    max-width: 100%;
   }
 
   .footer-advanced__contact-title {
@@ -489,7 +507,9 @@
   .footer-advanced__contact-row {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 0.625rem;
+    max-width: 100%;
   }
 
   .footer-advanced__contact-icon {
@@ -507,6 +527,8 @@
 
   .footer-advanced__contact-text {
     margin: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .footer-advanced__contact-text a {
@@ -524,9 +546,11 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    max-width: 100%;
     text-decoration: none;
     color: var(--footer-advanced-muted-color, var(--color-foreground-muted));
     font-size: 0.875rem;
+    overflow-wrap: anywhere;
   }
 
   .footer-advanced__contact-email-icon {
@@ -622,6 +646,17 @@
       "type": "image_picker",
       "id": "marquee_icon",
       "label": "t:settings.image_icon",
+      "visible_if": "{{ section.settings.show_marquee }}"
+    },
+    {
+      "type": "range",
+      "id": "marquee_text_size",
+      "label": "t:settings.size",
+      "min": 16,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 64,
       "visible_if": "{{ section.settings.show_marquee }}"
     },
     {
@@ -924,6 +959,26 @@
       "step": 1,
       "unit": "px",
       "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
     }
   ],
   "presets": [
