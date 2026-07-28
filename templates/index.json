@@ -116,7 +116,7 @@
         "autoplay": true,
         "marquee_direction": "normal",
         "marquee_speed": 25,
-        "logo_height": 64,
+        "logo_height": 40,
         "logo_gap": 64,
         "logo_opacity": 100,
         "section_height": "large",
