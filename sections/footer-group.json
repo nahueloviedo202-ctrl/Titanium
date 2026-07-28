@@ -100,7 +100,7 @@
         "contact_button_label": "Go To Contact Form",
         "contact_button_link": "",
         "email_note_text": "Or Drop Us an Email:",
-        "email_address": "",
+        "email_address": "titanium@gmail.com",
         "button_style": "gradient",
         "custom_button_background": "{{ settings.color_palette.foreground }}",
         "custom_button_text": "{{ settings.color_palette.background }}",
