@@ -674,23 +674,6 @@
     "reviews_hero_slider_knh3g8": {
       "type": "reviews-hero-slider",
       "blocks": {
-        "review_card_JEmzwn": {
-          "type": "_review-card",
-          "name": "t:names.review_card",
-          "settings": {
-            "image": "shopify://shop_images/steak_2-min.webp",
-            "image_label": "TITANIUM BORAD",
-            "badge_color": "",
-            "badge_text_color": "{{ settings.color_palette.background }}",
-            "title": "Naturally Antibacterial & Sterile",
-            "title_color": "{{ settings.color_palette.background }}",
-            "quote": "<p>\"It's increidibly easy to clean, no smell, no mess just a quick rinse & it's ready to go again\"</p>",
-            "quote_color": "{{ settings.color_palette.color2 }}",
-            "author": "JAMIOE C.",
-            "author_color": "{{ settings.color_palette.background }}"
-          },
-          "blocks": {}
-        },
         "review_card_qjknjG": {
           "type": "_review-card",
           "settings": {
@@ -755,14 +738,85 @@
             "author_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
+        },
+        "review_card_JEmzwn": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/steak_2-min.webp",
+            "image_label": "TITANIUM BORAD",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "Naturally Antibacterial & Sterile",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"It's increidibly easy to clean, no smell, no mess just a quick rinse & it's ready to go again\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "JAMIOE C.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_Lb7dnR": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/macaron_2-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "Once You Go Titanium, You Won't Go Back",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"The special surface pattern also helps food naturally stick less, so you don't have to worry about chemicals getting into your food\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Happy Customer",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_UWWEzA": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/macaron-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "",
+            "title": "Best Non-Toxic Coockware On The Planet",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"With taima its easy to make our favorite comfort meals because i can prepare them with complete peace of mind that no toxins are near\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Mateo P.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_YmUUcW": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/salmon-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "Perfect For Health Conscious People",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"I love it. I love it. I love it\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Lisa A.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "review_card_JEmzwn",
         "review_card_qjknjG",
         "review_card_tgpmzR",
         "review_card_EXwLKV",
-        "review_card_PmykM3"
+        "review_card_PmykM3",
+        "review_card_JEmzwn",
+        "review_card_Lb7dnR",
+        "review_card_UWWEzA",
+        "review_card_YmUUcW"
       ],
       "name": "t:names.reviews_hero_slider",
       "settings": {
