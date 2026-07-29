@@ -1,0 +1,467 @@
+
+
+{% liquid
+  if section.settings.background_color != blank or section.settings.text_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, text_color: section.settings.text_color, section_id: section.id, skip_contrast: true
+  endif
+%}
+
+<section
+  id="ScrollTextFade-{{ section.id }}"
+  class="scroll-text-fade{% if section.settings.background_color != blank or section.settings.text_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="region"
+  aria-label="{{ 'accessibility.scroll_text_fade_region' | t }}"
+>
+  {%- if section.blocks.size > 0 -%}
+    <script
+      src="{{ 'scroll-text-fade.js' | asset_url }}"
+      type="module"
+      fetchpriority="low"
+    ></script>
+    <scroll-text-fade-component
+      class="scroll-text-fade__inner"
+      style="
+        --scroll-text-fade-padding-block-start: {{ section.settings.padding_block_start }}px;
+        --scroll-text-fade-padding-block-end: {{ section.settings.padding_block_end }}px;
+        --scroll-text-fade-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+        --scroll-text-fade-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+        --scroll-text-fade-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+        --scroll-text-fade-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+        --scroll-text-fade-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+        --scroll-text-fade-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+        --scroll-text-fade-gap: {{ section.settings.line_gap }}px;
+        --scroll-text-fade-font: {{ section.settings.font }};
+        --scroll-text-fade-line-height: var(--line-height--display-{{ section.settings.line_height }});
+        --scroll-text-fade-letter-spacing: var(--letter-spacing--display-{{ section.settings.letter_spacing }});
+        --scroll-text-fade-case: {{ section.settings.case }};
+        --scroll-text-fade-align: {{ section.settings.alignment }};
+        --scroll-text-fade-focused-size: {{ section.settings.focused_font_size }}px;
+        --scroll-text-fade-focused-size-mobile: {{ section.settings.focused_font_size_mobile }}px;
+        --scroll-text-fade-transition-speed: {{ section.settings.transition_speed }}ms;
+      "
+    >
+      {% content_for 'blocks' %}
+    </scroll-text-fade-component>
+  {%- endif -%}
+</section>
+
+{% stylesheet %}
+  .scroll-text-fade {
+    position: relative;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+  }
+
+  .scroll-text-fade__inner {
+    display: block;
+    padding-block: var(--scroll-text-fade-padding-block-start, 0) var(--scroll-text-fade-padding-block-end, 0);
+    padding-inline: var(--scroll-text-fade-padding-inline-start, 0) var(--scroll-text-fade-padding-inline-end, 0);
+    text-align: var(--scroll-text-fade-align, center);
+  }
+
+  .scroll-text-fade__line {
+    margin: var(--scroll-text-fade-gap, 24px) 0;
+    font-family: var(--scroll-text-fade-font, var(--font-body--family));
+    line-height: var(--scroll-text-fade-line-height, 1.2);
+    letter-spacing: var(--scroll-text-fade-letter-spacing, normal);
+    text-transform: var(--scroll-text-fade-case, capitalize);
+    color: var(--scroll-text-fade-line-color, currentColor);
+    font-size: var(--scroll-text-fade-line-size, 3rem);
+    opacity: var(--scroll-text-fade-line-opacity, 0.3);
+    overflow-wrap: break-word;
+    transition:
+      opacity var(--scroll-text-fade-transition-speed, 0.4s) ease,
+      font-size var(--scroll-text-fade-transition-speed, 0.4s) ease;
+  }
+
+  .scroll-text-fade__inner > .scroll-text-fade__line:first-child {
+    margin-top: 0;
+  }
+
+  .scroll-text-fade__inner > .scroll-text-fade__line:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Declared after the base rule so it wins on equal specificity without !important. */
+  .scroll-text-fade__line--focused {
+    font-size: var(--scroll-text-fade-focused-size, 4rem);
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 750px) {
+    .scroll-text-fade__line--hide-desktop {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .scroll-text-fade__inner {
+      padding-block: var(--scroll-text-fade-padding-block-start-mobile, 0) var(--scroll-text-fade-padding-block-end-mobile, 0);
+      padding-inline: var(--scroll-text-fade-padding-inline-start-mobile, 0) var(--scroll-text-fade-padding-inline-end-mobile, 0);
+    }
+
+    .scroll-text-fade__line--hide-mobile {
+      display: none;
+    }
+
+    .scroll-text-fade__line {
+      font-size: var(--scroll-text-fade-line-size-mobile, var(--scroll-text-fade-line-size));
+    }
+
+    .scroll-text-fade__line--focused {
+      font-size: var(--scroll-text-fade-focused-size-mobile, var(--scroll-text-fade-focused-size));
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.scroll_text_fade",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_scroll-fade-line"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#00221c"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "header",
+      "content": "t:content.typography"
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "t:settings.font",
+      "options": [
+        {
+          "value": "var(--font-body--family)",
+          "label": "t:options.body"
+        },
+        {
+          "value": "var(--font-subheading--family)",
+          "label": "t:options.subheading"
+        },
+        {
+          "value": "var(--font-heading--family)",
+          "label": "t:options.heading"
+        },
+        {
+          "value": "var(--font-accent--family)",
+          "label": "t:options.accent"
+        }
+      ],
+      "default": "var(--font-body--family)"
+    },
+    {
+      "type": "select",
+      "id": "line_height",
+      "label": "t:settings.line_height",
+      "options": [
+        {
+          "value": "tight",
+          "label": "t:options.tight"
+        },
+        {
+          "value": "normal",
+          "label": "t:options.normal"
+        },
+        {
+          "value": "loose",
+          "label": "t:options.loose"
+        }
+      ],
+      "default": "loose"
+    },
+    {
+      "type": "select",
+      "id": "letter_spacing",
+      "label": "t:settings.letter_spacing",
+      "options": [
+        {
+          "value": "tight",
+          "label": "t:options.tight"
+        },
+        {
+          "value": "normal",
+          "label": "t:options.normal"
+        },
+        {
+          "value": "loose",
+          "label": "t:options.loose"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "select",
+      "id": "case",
+      "label": "t:settings.case",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.default"
+        },
+        {
+          "value": "capitalize",
+          "label": "t:options.capitalize"
+        },
+        {
+          "value": "uppercase",
+          "label": "t:options.uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "t:options.lowercase"
+        }
+      ],
+      "default": "capitalize"
+    },
+    {
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "range",
+      "id": "focused_font_size",
+      "label": "t:settings.size",
+      "min": 24,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "focused_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "transition_speed",
+      "label": "t:settings.speed",
+      "min": 100,
+      "max": 1000,
+      "step": 50,
+      "unit": "ms",
+      "default": 400
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "line_gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "unit": "px",
+      "default": 240
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "unit": "px",
+      "default": 240
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 300,
+      "step": 4,
+      "unit": "px",
+      "default": 148
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 300,
+      "step": 4,
+      "unit": "px",
+      "default": 148
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.scroll_text_fade",
+      "category": "t:categories.text",
+      "blocks": {
+        "line_1": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "At Taima®, Non-Toxic Isn’t A Feature.",
+            "font_size": 64,
+            "font_size_mobile": 32,
+            "opacity": 40,
+            "hide_on_mobile": true
+          }
+        },
+        "line_1_mobile_a": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "At Taima®",
+            "font_size": 64,
+            "font_size_mobile": 32,
+            "opacity": 40,
+            "hide_on_desktop": true
+          }
+        },
+        "line_1_mobile_b": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "Non-Toxic",
+            "font_size": 64,
+            "font_size_mobile": 30,
+            "opacity": 40,
+            "hide_on_desktop": true
+          }
+        },
+        "line_1_mobile_c": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "Isn’t A Feature.",
+            "font_size": 64,
+            "font_size_mobile": 28,
+            "opacity": 40,
+            "hide_on_desktop": true
+          }
+        },
+        "line_2": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "It’s The Foundation.",
+            "font_size": 48,
+            "font_size_mobile": 24,
+            "opacity": 30
+          }
+        },
+        "line_3": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "Perfection Isn't a Goal.",
+            "font_size": 48,
+            "font_size_mobile": 24,
+            "opacity": 20
+          }
+        },
+        "line_4": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "It's Where We Begin.",
+            "font_size": 32,
+            "font_size_mobile": 16,
+            "opacity": 10
+          }
+        }
+      },
+      "block_order": [
+        "line_1",
+        "line_1_mobile_a",
+        "line_1_mobile_b",
+        "line_1_mobile_c",
+        "line_2",
+        "line_3",
+        "line_4"
+      ]
+    }
+  ]
+}
+{% endschema %}

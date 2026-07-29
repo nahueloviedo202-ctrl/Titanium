@@ -2,11 +2,18 @@
 
 {% liquid
   assign video_poster = block.settings.video_poster | default: block.settings.video.preview_image
+  assign block_index = section.blocks | find_index: 'id', block.id
 %}
 
+<slideshow-slide
+  ref="slides[]"
+  aria-hidden="{% if block_index == 0 %}false{% else %}true{% endif %}"
+  style="--slideshow-timeline: --slide-{{ block_index }};"
+  class="review-card__slide"
+  {{ block.shopify_attributes }}
+>
 <article
   class="review-card"
-  {{ block.shopify_attributes }}
 >
   <div class="review-card__media-row">
     <div class="review-card__media-col">
@@ -77,10 +84,19 @@
     {%- endif -%}
   </div>
 </article>
+</slideshow-slide>
 
 {% stylesheet %}
-  .review-card {
+  .review-card__slide {
+    /* Native slideshow-slide sets width: 100% and overflow: hidden; this slider
+       sizes cards explicitly via --reviews-hero-card-width instead. */
+    width: auto;
     flex: 0 0 auto;
+    overflow: visible;
+    scroll-snap-align: start;
+  }
+
+  .review-card {
     width: var(--reviews-hero-card-width, 26rem);
   }
 

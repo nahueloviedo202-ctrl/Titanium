@@ -1,0 +1,541 @@
+
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+
+  assign video = section.settings.video
+  assign video_poster = section.settings.video_poster | default: video.preview_image
+%}
+
+<section
+  id="BehindTheScenes-{{ section.id }}"
+  class="
+    behind-the-scenes
+    spacing-style
+    {% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}
+    {% if section.settings.media_position == 'right' %} behind-the-scenes--media-right{% endif %}
+  "
+  role="region"
+  aria-label="{{ section.settings.heading | default: 'Behind the scenes' }}"
+  style="
+    {%- render 'spacing-style', settings: section.settings %}
+    --behind-the-scenes-content-padding-inline: {{ section.settings.content_horizontal_padding }}px;
+    --behind-the-scenes-column-gap: {{ section.settings.column_gap }}px;
+    {%- if section.settings.text_color != blank %}--behind-the-scenes-text-color: {{ section.settings.text_color }};{% endif %}
+  "
+>
+  <div class="behind-the-scenes__grid">
+    <div class="behind-the-scenes__intro">
+      {%- if section.settings.heading != blank -%}
+        <h2
+          class="behind-the-scenes__heading"
+          style="
+            {% if section.settings.heading_color != blank %}color: {{ section.settings.heading_color }};{% endif %}
+            --behind-the-scenes-heading-size: {{ section.settings.heading_size }}px;
+            --behind-the-scenes-heading-size-mobile: {{ section.settings.heading_size_mobile }}px;
+          "
+        >
+          {{ section.settings.heading }}
+        </h2>
+      {%- endif -%}
+
+      {%- if section.settings.body_text != blank -%}
+        <div
+          class="behind-the-scenes__body rte"
+          style="
+            {% if section.settings.body_text_color != blank %}color: {{ section.settings.body_text_color }};{% endif %}
+            --behind-the-scenes-body-size: {{ section.settings.body_font_size }}px;
+            --behind-the-scenes-body-size-mobile: {{ section.settings.body_font_size_mobile }}px;
+          "
+        >
+          {{ section.settings.body_text }}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div
+      class="behind-the-scenes__media"
+      style="{% if section.settings.video_corner_radius %}border-radius: {{ section.settings.video_corner_radius }}px;{% endif %}"
+    >
+      {%- if video != blank -%}
+        {% capture video_tag_markup %}
+          {{
+            video
+            | video_tag:
+              image_size: '2000x',
+              autoplay: true,
+              loop: false,
+              muted: false,
+              controls: true,
+              class: 'behind-the-scenes__video-el'
+          }}
+        {% endcapture %}
+
+        <deferred-media
+          class="behind-the-scenes__video-wrapper"
+          style="
+            --behind-the-scenes-overlay-color: {{ section.settings.overlay_color }};
+            --behind-the-scenes-play-size: {{ section.settings.play_button_size }}px;
+            --behind-the-scenes-play-color: {{ section.settings.play_button_color }};
+            --behind-the-scenes-play-background: {{ section.settings.play_button_background_color }};
+          "
+        >
+          {%- if video_poster != blank -%}
+            <button
+              class="behind-the-scenes__poster deferred-media__poster-button button button-unstyled"
+              ref="deferredMediaPlayButton"
+              type="button"
+              aria-label="{{ 'accessibility.play_video' | t }}"
+              on:click="/showDeferredMedia"
+            >
+              {{
+                video_poster
+                | image_url: width: 1600
+                | image_tag: widths: '375, 550, 750, 1100, 1600', loading: 'lazy', alt: '', class: 'behind-the-scenes__poster-image'
+              }}
+              <span
+                class="behind-the-scenes__play-icon"
+                aria-hidden="true"
+              >
+                {{- 'icon-play.svg' | inline_asset_content -}}
+              </span>
+            </button>
+
+            <template>
+              {{ video_tag_markup }}
+            </template>
+          {%- else -%}
+            {{ video_tag_markup }}
+          {%- endif -%}
+        </deferred-media>
+      {%- else -%}
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'behind-the-scenes__placeholder' }}
+      {%- endif -%}
+    </div>
+
+    <div class="behind-the-scenes__quotes">
+      {% content_for 'blocks' %}
+    </div>
+  </div>
+</section>
+
+{% render 'video-placeholder-styles' %}
+{% render 'deferred-media-video-styles' %}
+
+{% stylesheet %}
+  .behind-the-scenes {
+    position: relative;
+    overflow: clip;
+    background-color: var(--color-background, #121212);
+    color: var(--behind-the-scenes-text-color, #fff);
+  }
+
+  .behind-the-scenes__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'intro' 'media' 'quotes';
+    row-gap: 2.5rem;
+  }
+
+  .behind-the-scenes__intro {
+    grid-area: intro;
+  }
+
+  .behind-the-scenes__media {
+    grid-area: media;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .behind-the-scenes__quotes {
+    grid-area: quotes;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .behind-the-scenes__heading {
+    margin: 0 0 1rem;
+    font-size: var(--behind-the-scenes-heading-size-mobile, 1.5rem);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    max-width: 20rem;
+  }
+
+  .behind-the-scenes__body {
+    margin: 0;
+    font-size: var(--behind-the-scenes-body-size-mobile, 0.875rem);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+
+  .behind-the-scenes__body :is(p) {
+    margin: 0;
+  }
+
+  .behind-the-scenes__video-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #0f0f0f;
+  }
+
+  .behind-the-scenes__video-wrapper .behind-the-scenes__video-el {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .behind-the-scenes__poster {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .behind-the-scenes__poster-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: var(--layer-base);
+  }
+
+  .behind-the-scenes__poster::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--behind-the-scenes-overlay-color, rgb(0 0 0 / 0.3));
+    z-index: var(--layer-raised);
+  }
+
+  .behind-the-scenes__play-icon {
+    position: relative;
+    z-index: var(--layer-heightened);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--behind-the-scenes-play-size, 5rem);
+    height: var(--behind-the-scenes-play-size, 5rem);
+    border-radius: 50%;
+    background: var(--behind-the-scenes-play-background, rgb(255 255 255 / 0.2));
+    color: var(--behind-the-scenes-play-color, #fff);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .behind-the-scenes__play-icon svg {
+    width: 38%;
+    height: 38%;
+  }
+
+  .behind-the-scenes__placeholder {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  @media screen and (min-width: 1100px) {
+    .behind-the-scenes__grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-areas: 'media intro' 'media quotes';
+      grid-template-rows: auto 1fr;
+      align-items: center;
+      column-gap: var(--behind-the-scenes-column-gap, 4rem);
+      row-gap: 2rem;
+    }
+
+    .behind-the-scenes--media-right .behind-the-scenes__grid {
+      grid-template-areas: 'intro media' 'quotes media';
+    }
+
+    .behind-the-scenes__intro,
+    .behind-the-scenes__quotes {
+      padding-inline: var(--behind-the-scenes-content-padding-inline, 0);
+    }
+
+    .behind-the-scenes__heading {
+      font-size: var(--behind-the-scenes-heading-size, 3rem);
+      max-width: none;
+    }
+
+    .behind-the-scenes__body {
+      font-size: var(--behind-the-scenes-body-size, 1rem);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.behind_the_scenes",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_behind-the-scenes-quote"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.media"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:settings.video"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "t:settings.cover_image"
+    },
+    {
+      "type": "range",
+      "id": "video_corner_radius",
+      "label": "t:settings.corner_radius",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:settings.overlay_color",
+      "alpha": true,
+      "default": "#0000004D"
+    },
+    {
+      "type": "range",
+      "id": "play_button_size",
+      "label": "t:settings.size",
+      "min": 40,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "color",
+      "id": "play_button_color",
+      "label": "t:settings.color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "play_button_background_color",
+      "label": "t:settings.background_color",
+      "alpha": true,
+      "default": "#FFFFFF33"
+    },
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.behind_the_scenes_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:content.paragraph"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "t:settings.text",
+      "default": "t:html_defaults.behind_the_scenes_body"
+    },
+    {
+      "type": "color",
+      "id": "body_text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "t:settings.size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "body_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "t:settings.media_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "content_horizontal_padding",
+      "label": "t:settings.horizontal_padding",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.behind_the_scenes",
+      "category": "t:categories.storytelling",
+      "blocks": {
+        "quote": {
+          "type": "_behind-the-scenes-quote"
+        }
+      },
+      "block_order": ["quote"]
+    }
+  ]
+}
+{% endschema %}
