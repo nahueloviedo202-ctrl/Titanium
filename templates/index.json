@@ -947,6 +947,275 @@
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
       }
+    },
+    "materials_comparison_7d3JJc": {
+      "type": "materials-comparison",
+      "blocks": {
+        "material_category_WyBcpf": {
+          "type": "_material-category",
+          "settings": {
+            "label": "Pans"
+          },
+          "blocks": {
+            "material_card_WDcrJM": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "FOREVER CHEMICALS",
+                "title": "Non-Stick Coated / Teflon",
+                "text": "Worst type of pan surface there is. Teflon / majority of non-stick pans release toxic PFAS chemicals, known as \"forever chemicals\" which have been linked to cancer and liver damage. The coating easily shaves off over time and can't handle the heat exposing your food to toxins."
+              },
+              "blocks": {}
+            },
+            "material_card_HQJWNp": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Stainless Steel",
+                "text": "Requires lots of oil to prevent sticking, and reacts with acidic foods - altering taste and potentially leaching metals in lower-quality pans. Tougher to clean, high effort to maintain."
+              },
+              "blocks": {}
+            },
+            "material_card_CYCgWQ": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "ALUMINUM BASE",
+                "title": "Ceramic",
+                "text": "Ceramic coatings are very fragile, once chipped, they expose toxic aluminum base. Most only last 1-2 years before losing their non-stick. Expensive to replace, unreliable long-term."
+              },
+              "blocks": {}
+            },
+            "material_card_6zJBcx": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Cast Iron",
+                "text": "Incredibly heavy and high-maintenance - cast iron rusts easily without regular seasoning and struggles with acidic foods, which can degrade the surface and alter flavor."
+              },
+              "blocks": {}
+            },
+            "material_card_89UHNT": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Carbon Steel",
+                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "material_card_WDcrJM",
+            "material_card_HQJWNp",
+            "material_card_CYCgWQ",
+            "material_card_6zJBcx",
+            "material_card_89UHNT"
+          ]
+        },
+        "material_category_bdQzRt": {
+          "type": "_material-category",
+          "settings": {
+            "label": "Cutting Boards"
+          },
+          "blocks": {
+            "material_card_tLABzy": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "MICROPLASTICS",
+                "title": "Plastic",
+                "text": "Contains BPA's or other harmful chemicals that shave off into food during cutting, posing a risk to hormone, gut & brain health."
+              },
+              "blocks": {}
+            },
+            "material_card_gwjeEV": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | MOLD",
+                "title": "Solid Wood",
+                "text": "Not hygienic. Wood is porous, it absorbs raw food juices & moisture. Cut grooves trap bacteria, making it nearly impossible to sterilize. Mold and contamination are almost guaranteed over time. They also absorb odors, stain easily."
+              },
+              "blocks": {}
+            },
+            "material_card_cCawkt": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "FORMALDEHYDE",
+                "title": "Bamboo & End-Grain",
+                "text": "Same risks as solid wood, plus they're pieced together from small blocks using industrial glue that contains carcinogenic formaldehyde chemicals. Not just unhygienic - unsafe."
+              },
+              "blocks": {}
+            },
+            "material_card_X7QQzy": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "INCONVENIENT",
+                "title": "Glass / Stone / Steel",
+                "text": "These materials are very hard & dull knives quickly. Very heavy as well."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "material_card_tLABzy",
+            "material_card_gwjeEV",
+            "material_card_cCawkt",
+            "material_card_X7QQzy"
+          ]
+        },
+        "material_category_eTtHeA": {
+          "type": "_material-category",
+          "settings": {
+            "label": "Utensils"
+          },
+          "blocks": {
+            "material_card_cADMme": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Plastic",
+                "text": "Plastic spatulas have a very low melting temperature, releasing toxic chemicals each time they're used, causing serious health risks like gut, hormone disruption & cancer."
+              },
+              "blocks": {}
+            },
+            "material_card_fCwn6J": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Silicone",
+                "text": "While high-end silicone spatulas are heat-resistant, most found on Amazon or in regular stores degrade over time and release toxic chemicals. Cheaper silicone spatulas often contain dangerous fillers like BPA and phthalates, becoming toxic when heated."
+              },
+              "blocks": {}
+            },
+            "material_card_kEgKrP": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | MOLD",
+                "title": "Wood",
+                "text": "Not hygienic. It lets bacteria grow in grooves and cracks, even if invisible, which can contaminate your food over time. They also absorb odors, stain easily."
+              },
+              "blocks": {}
+            },
+            "material_card_iiBFk6": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Steel",
+                "text": "Most are made from low-grade alloys that release heavy metals like chromium and nickel into your food when heated. They're also heavy, destroying your cookware's surface."
+              },
+              "blocks": {}
+            },
+            "material_card_7Dr7Rn": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Carbon Steel",
+                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "material_card_cADMme",
+            "material_card_fCwn6J",
+            "material_card_kEgKrP",
+            "material_card_iiBFk6",
+            "material_card_7Dr7Rn"
+          ]
+        },
+        "material_category_NDmwUP": {
+          "type": "_material-category",
+          "settings": {
+            "label": "Water Bottles"
+          },
+          "blocks": {
+            "material_card_CWrKrQ": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Plastic",
+                "text": "Worst type of water bottle. Even BPA-free plastic bottles leach hormone-disrupting chemicals, especially when exposed to heat. The moist environment around the mouthpiece quickly breeds bacteria and mold."
+              },
+              "blocks": {}
+            },
+            "material_card_pffMkz": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Steel",
+                "text": "Though durable, stainless steel isn't antibacterial like titanium, allowing bacteria from your mouth to thrive inside. Frequent cleaning is essential, as studies show 87% of these bottles contain harmful bacteria like E. coli."
+              },
+              "blocks": {}
+            },
+            "material_card_CTBy93": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "CHEMICALS",
+                "title": "Aluminum",
+                "text": "Aluminum bottles are often lined with synthetic coatings to prevent the metal from reacting with liquids, but these coatings can break down and leach chemicals into your water. Like other bottles, bacteria and fungi easily grow in aluminum bottles, making them unsanitary."
+              },
+              "blocks": {}
+            },
+            "material_card_49BGjE": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | FRAGILE",
+                "title": "Glass",
+                "text": "While glass doesn't leach chemicals, it offers no antibacterial protection. Bacteria from your mouth still multiply in the bottle. Additionally, glass is fragile, making it more prone to breakage and less practical for daily use."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "material_card_CWrKrQ",
+            "material_card_pffMkz",
+            "material_card_CTBy93",
+            "material_card_49BGjE"
+          ]
+        }
+      },
+      "block_order": [
+        "material_category_WyBcpf",
+        "material_category_bdQzRt",
+        "material_category_eTtHeA",
+        "material_category_NDmwUP"
+      ],
+      "name": "t:names.materials_comparison",
+      "settings": {
+        "heading": "Titanium Isn't Competing. It's Replacing.",
+        "heading_color": "#BCA588",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
+        "subheading": "From toxin & bacteria risks to high maintenance, these \"outdated\" kitchenware materials just don't measure up.",
+        "subheading_color": "#B0B0B0",
+        "subheading_font_size": 16,
+        "subheading_font_size_mobile": 14,
+        "tab_text_color": "#B0B0B0",
+        "tab_border_color": "#454545",
+        "tab_active_background_color": "#A3835F",
+        "tab_active_text_color": "#121212",
+        "card_border_color": "#333333",
+        "card_corner_radius": 24,
+        "card_title_color": "#FFFFFF",
+        "card_text_color": "#B0B0B0",
+        "badge_background_color": "#C20C25",
+        "badge_text_color": "#FFFFFF",
+        "columns": 4,
+        "mobile_card_width": 240,
+        "gap": 16,
+        "icons_style": "none",
+        "icons_shape": "circle",
+        "arrow_background_color": "#A3835F",
+        "arrow_icon_color": "#121212",
+        "background_color": "#121212",
+        "content_max_width": 1920,
+        "padding_block_start": 120,
+        "padding_block_end": 120,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 64,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
     }
   },
   "order": [
@@ -956,6 +1225,7 @@
     "benefits_marquee_eCTXMH",
     "reviews_hero_slider_knh3g8",
     "behind_the_scenes_9DxQ97",
-    "scroll_text_fade_Bkfit9"
+    "scroll_text_fade_Bkfit9",
+    "materials_comparison_7d3JJc"
   ]
 }
