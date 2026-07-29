@@ -674,9 +674,27 @@
     "reviews_hero_slider_knh3g8": {
       "type": "reviews-hero-slider",
       "blocks": {
+        "review_card_JEmzwn": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/steak_2-min.webp",
+            "image_label": "TITANIUM BORAD",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "Naturally Antibacterial & Sterile",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"It's increidibly easy to clean, no smell, no mess just a quick rinse & it's ready to go again\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "JAMIOE C.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
         "review_card_qjknjG": {
           "type": "_review-card",
           "settings": {
+            "image": "shopify://shop_images/fixed_yellow_2-min_471af5f2-a950-418a-b66a-d33e445051e1.jpg",
             "image_label": "Titanium Series",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
@@ -692,6 +710,7 @@
         "review_card_tgpmzR": {
           "type": "_review-card",
           "settings": {
+            "image": "shopify://shop_images/board_cold-min.webp",
             "image_label": "Titanium Board",
             "badge_color": "",
             "badge_text_color": "",
@@ -707,6 +726,7 @@
         "review_card_EXwLKV": {
           "type": "_review-card",
           "settings": {
+            "image": "shopify://shop_images/pan-min.webp",
             "image_label": "Titanium Pan",
             "badge_color": "",
             "badge_text_color": "",
@@ -723,20 +743,22 @@
           "type": "_review-card",
           "name": "t:names.review_card",
           "settings": {
-            "image_label": "",
+            "image": "shopify://shop_images/steak-min.webp",
+            "image_label": "TITANIUM PAN",
             "badge_color": "",
-            "badge_text_color": "",
-            "title": "Absolutely Love It",
-            "title_color": "",
-            "quote": "<p>This completely changed the way I cook. Simple, effective, and built to last.</p>",
-            "quote_color": "",
-            "author": "Happy Customer",
-            "author_color": ""
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "It Looks Fantastic!",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>Taima pan heats up very quickly and evenly, the sear you can achieve with this is amazing.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "RIVERA GOURMET",
+            "author_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
         }
       },
       "block_order": [
+        "review_card_JEmzwn",
         "review_card_qjknjG",
         "review_card_tgpmzR",
         "review_card_EXwLKV",
@@ -816,9 +838,18 @@
         "body_font_size_mobile": 14,
         "media_position": "left",
         "content_horizontal_padding": 120,
+        "content_horizontal_padding_mobile": 0,
         "column_gap": 0,
         "background_color": "#121212",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "padding_block_start": 80,
+        "padding_block_end": 80,
+        "padding_inline_start": 80,
+        "padding_inline_end": 0,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 64,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
       }
     },
     "scroll_text_fade_Bkfit9": {
@@ -1181,29 +1212,29 @@
       "name": "t:names.materials_comparison",
       "settings": {
         "heading": "Titanium Isn't Competing. It's Replacing.",
-        "heading_color": "#BCA588",
+        "heading_color": "#bca588",
         "heading_font_size": 48,
         "heading_font_size_mobile": 24,
         "subheading": "From toxin & bacteria risks to high maintenance, these \"outdated\" kitchenware materials just don't measure up.",
-        "subheading_color": "#B0B0B0",
+        "subheading_color": "#b0b0b0",
         "subheading_font_size": 16,
         "subheading_font_size_mobile": 14,
         "tab_text_color": "{{ settings.color_palette.background }}",
         "tab_border_color": "#454545",
-        "tab_active_background_color": "#A3835F",
+        "tab_active_background_color": "#a3835f",
         "tab_active_text_color": "{{ settings.color_palette.background }}",
         "card_border_color": "#333333",
         "card_corner_radius": 24,
-        "card_title_color": "#FFFFFF",
+        "card_title_color": "#ffffff",
         "card_text_color": "{{ settings.color_palette.color2 }}",
-        "badge_background_color": "#C20C25",
+        "badge_background_color": "#c20c25",
         "badge_text_color": "{{ settings.color_palette.background }}",
         "columns": 4,
         "mobile_card_width": 240,
         "gap": 16,
         "icons_style": "none",
         "icons_shape": "circle",
-        "arrow_background_color": "#A3835F",
+        "arrow_background_color": "#a3835f",
         "arrow_icon_color": "#121212",
         "background_color": "{{ settings.color_palette.foreground }}",
         "content_max_width": 1920,
