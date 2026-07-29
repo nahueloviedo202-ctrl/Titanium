@@ -776,6 +776,55 @@
         "padding_inline_end_mobile": 16
       }
     },
+    "behind_the_scenes_9DxQ97": {
+      "type": "behind-the-scenes",
+      "blocks": {
+        "behind_the_scenes_quote_mRRgKW": {
+          "type": "_behind-the-scenes-quote",
+          "settings": {
+            "quote": "<p>“Health Is The Most Valuable Thing We Have. I Created Taima To Protect It”</p>",
+            "quote_color": "#D4C7B4",
+            "quote_size": 24,
+            "quote_size_mobile": 16,
+            "founder_name": "Paul S., Founder",
+            "founder_color": "#D4C7B4",
+            "founder_size": 20,
+            "signature_width": 120,
+            "signature_height": 80
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "behind_the_scenes_quote_mRRgKW"
+      ],
+      "name": "t:names.behind_the_scenes",
+      "settings": {
+        "video": "shopify://files/videos/6e9be4e664144348ae17e080e893a6c4.mp4",
+        "video_corner_radius": 0,
+        "overlay_color": "#0000004D",
+        "play_button_size": 80,
+        "play_button_color": "#FFFFFF",
+        "play_button_background_color": "#FFFFFF33",
+        "heading": "Prioritizing Your Health In Everything We Create.",
+        "heading_color": "{{ settings.color_palette.background }}",
+        "heading_size": 48,
+        "heading_size_mobile": 24,
+        "body_text": "<p>Titanium has long been used in medical & aerospace industries - but until recently, it was too difficult and expensive to shape into everyday products. At Taima®, we've changed that. Thanks to advanced engineering, we've made the world's most biocompatible & safe metal practical for your kitchen.</p>",
+        "body_text_color": "{{ settings.color_palette.background }}",
+        "body_font_size": 16,
+        "body_font_size_mobile": 14,
+        "media_position": "left",
+        "content_horizontal_padding": 120,
+        "column_gap": 0,
+        "background_color": "#121212",
+        "text_color": "#FFFFFF",
+        "padding-block-start": 80,
+        "padding-block-end": 80,
+        "padding-inline-start": 80,
+        "padding-inline-end": 0
+      }
+    },
     "scroll_text_fade_Bkfit9": {
       "type": "scroll-text-fade",
       "blocks": {
@@ -910,6 +959,7 @@
     "best_sellers_slider_JthhCi",
     "benefits_marquee_eCTXMH",
     "reviews_hero_slider_knh3g8",
+    "behind_the_scenes_9DxQ97",
     "scroll_text_fade_Bkfit9"
   ]
 }
