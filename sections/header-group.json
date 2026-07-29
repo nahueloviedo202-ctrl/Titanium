@@ -14,47 +14,6 @@
     "header_section": {
       "type": "header",
       "blocks": {
-        "header_category_nav_TMABGY": {
-          "type": "_header-category-nav",
-          "name": "t:names.header_category_nav",
-          "settings": {
-            "background_color": "#121212",
-            "border_color": "#454545",
-            "heading_color": "#FFFFFF",
-            "text_color": "#B0B0B0",
-            "accent_color": "#BCA588",
-            "star_color": "#B57C46",
-            "price_color": "#F6F4F0",
-            "card_background_color": "#252525",
-            "card_corner_radius": 12,
-            "badge_background_color": "#BF092F",
-            "badge_text_color": "#FFFFFF",
-            "save_badge_background_color": "#BCA588",
-            "save_badge_text_color": "#252525",
-            "tab_font_size": 16,
-            "panel_title_font_size": 32
-          },
-          "blocks": {
-            "header_category_nav_tab_jBPPnc": {
-              "type": "_header-category-nav-tab",
-              "settings": {
-                "label": "Best Sellers",
-                "title": "Best Sellers",
-                "description": "<p>Taima's Cookware is a true kitchen workhorse. You get deep sear, caramelization &amp; flawless food release consistently, without the chemicals.</p>",
-                "shop_all_label": "Shop All",
-                "shop_all_link": "",
-                "show_endorsement": true,
-                "endorse_name": "Happy Customer",
-                "endorse_verified": true,
-                "endorse_rating": 5
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "header_category_nav_tab_jBPPnc"
-          ]
-        },
         "header-logo": {
           "type": "_header-logo",
           "static": true,
@@ -90,9 +49,6 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "header_category_nav_TMABGY"
-      ],
       "settings": {
         "logo_position": "center",
         "menu_position": "left",
@@ -107,21 +63,21 @@
         "localization_font": "heading",
         "localization_font_size": "1.125rem",
         "localization_position": "right",
-        "localization_row": "top",
+        "localization_row": "bottom",
         "section_width": "page-width",
         "section_height": "standard",
         "enable_sticky_header": "always",
         "keep_transparent_header_sticky": true,
-        "divider_width": 0,
+        "divider_width": 2,
         "divider_size": "page-width",
-        "divider_color": "",
+        "divider_color": "{{ settings.color_palette.color1 }}",
         "border_width": 0,
         "bottom_border_color": "",
         "actions_display_style": "icon",
         "actions_font_size": "0.875rem",
         "actions_font": "body",
         "actions_text_case": "none",
-        "background_color_top": "{{ settings.color_palette.background }}",
+        "background_color_top": "",
         "text_color_top": "",
         "background_color_bottom": "",
         "text_color_bottom": "",
@@ -131,7 +87,7 @@
         "enable_transparent_header_home": true,
         "home_inverse_logo": false,
         "text_color_transparent_home": "{{ settings.color_palette.background }}",
-        "transparent_opacity_home": 10,
+        "transparent_opacity_home": 25,
         "enable_transparent_header_product": false,
         "product_inverse_logo": false,
         "text_color_transparent_product": "",
