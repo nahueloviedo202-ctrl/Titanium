@@ -1,0 +1,610 @@
+
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+
+  assign desktop_image = section.settings.image
+  assign mobile_image = section.settings.image_mobile | default: desktop_image
+  assign swap_image = section.settings.image_swap_mobile | default: mobile_image
+  assign initial_image = desktop_image | default: mobile_image
+%}
+
+<section
+  id="HealthFeatures-{{ section.id }}"
+  class="health-features{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="region"
+  aria-label="{% if section.settings.heading != blank %}{{ section.settings.heading | strip_html }}{% else %}{{ 'accessibility.health_features_region' | t }}{% endif %}"
+>
+  <div
+    class="health-features__inner"
+    style="
+      max-width: {{ section.settings.content_max_width }}px;
+      --health-features-padding-block-start: {{ section.settings.padding_block_start }}px;
+      --health-features-padding-block-end: {{ section.settings.padding_block_end }}px;
+      --health-features-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+      --health-features-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+      --health-features-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+      --health-features-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+      --health-features-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+      --health-features-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+    "
+  >
+    {%- if section.settings.heading != blank -%}
+      <h2
+        class="health-features__title"
+        style="
+          color: {{ section.settings.heading_color }};
+          --health-features-heading-size: {{ section.settings.heading_font_size }}px;
+          --health-features-heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+        "
+      >
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <script
+        src="{{ 'health-features.js' | asset_url }}"
+        type="module"
+        fetchpriority="low"
+      ></script>
+      <health-features-component
+        class="health-features__grid"
+        style="
+          --health-features-gap: {{ section.settings.items_gap }}px;
+          --health-features-gap-mobile: {{ section.settings.items_gap_mobile }}px;
+          --health-features-item-text-color: {{ section.settings.item_text_color }};
+          --health-features-item-active-color: {{ section.settings.item_active_text_color }};
+        "
+      >
+        <ul
+          class="health-features__list health-features__list--left"
+          aria-label="{{ 'accessibility.health_features_list_left' | t }}"
+        >
+          {%- for block in section.blocks -%}
+            {%- if block.settings.side == 'left' -%}
+              {% content_for 'block', type: block.type, id: block.id %}
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+
+        <div class="health-features__media">
+          {%- if initial_image != blank -%}
+            <img
+              ref="image"
+              class="health-features__image"
+              src="{{ initial_image | image_url: width: 1200 }}"
+              srcset="
+                {{- initial_image | image_url: width: 700 }} 700w,
+                {{ initial_image | image_url: width: 1200 }} 1200w,
+                {{ initial_image | image_url: width: 1600 }} 1600w
+              "
+              sizes="(min-width: 750px) 45vw, 80vw"
+              alt="{{ initial_image.alt | default: section.settings.heading | escape }}"
+              loading="lazy"
+              data-desktop="{{ desktop_image | image_url: width: 1200 }}"
+              data-mobile="{{ mobile_image | image_url: width: 900 }}"
+              data-swap-mobile="{{ swap_image | image_url: width: 900 }}"
+            >
+          {%- else -%}
+            {{ 'hero-apparel-1' | placeholder_svg_tag: 'health-features__image' }}
+          {%- endif -%}
+        </div>
+
+        <ul
+          class="health-features__list health-features__list--right"
+          aria-label="{{ 'accessibility.health_features_list_right' | t }}"
+        >
+          {%- for block in section.blocks -%}
+            {%- if block.settings.side == 'right' -%}
+              {% content_for 'block', type: block.type, id: block.id %}
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </health-features-component>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .health-features {
+    position: relative;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .health-features__inner {
+    position: relative;
+    margin-inline: auto;
+    padding-block: var(--health-features-padding-block-start, 0) var(--health-features-padding-block-end, 0);
+    padding-inline: var(--health-features-padding-inline-start, 0) var(--health-features-padding-inline-end, 0);
+  }
+
+  .health-features__title {
+    margin: 0 0 3rem;
+    text-align: center;
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: var(--line-height--display-loose);
+    letter-spacing: var(--letter-spacing--display-loose);
+    text-transform: capitalize;
+    font-size: var(--health-features-heading-size, 48px);
+  }
+
+  .health-features__grid {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .health-features__list {
+    display: grid;
+    gap: var(--health-features-gap, 40px);
+    list-style: none;
+    margin: 0;
+    padding: 4.5rem 0;
+  }
+
+  .health-features__list--left {
+    justify-items: end;
+  }
+
+  .health-features__item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--health-features-item-text-color, inherit);
+    transition: color 0.2s ease;
+  }
+
+  .health-features__item-text {
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: var(--letter-spacing--display-normal);
+    text-transform: capitalize;
+    font-size: 24px;
+  }
+
+  .health-features__item-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+  }
+
+  .health-features__item-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .health-features__media {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+  }
+
+  .health-features__image {
+    display: block;
+    width: 100%;
+    max-width: 864px;
+    height: auto;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .health-features__inner {
+      padding-block: var(--health-features-padding-block-start-mobile, 0) var(--health-features-padding-block-end-mobile, 0);
+      padding-inline: var(--health-features-padding-inline-start-mobile, 0) var(--health-features-padding-inline-end-mobile, 0);
+    }
+
+    .health-features__title {
+      max-width: 22.4rem;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      font-size: var(--health-features-heading-size-mobile, 24px);
+    }
+
+    .health-features__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .health-features__list {
+      gap: var(--health-features-gap-mobile, 16px);
+      padding: 0;
+    }
+
+    .health-features__list--left {
+      order: 3;
+      justify-items: center;
+    }
+
+    .health-features__list--right {
+      order: 1;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .health-features__media {
+      order: 2;
+      position: static;
+      transform: none;
+    }
+
+    .health-features__image {
+      margin-inline: auto;
+    }
+
+    .health-features__item {
+      justify-content: center;
+      opacity: 0.5;
+      transition:
+        color 0.18s ease,
+        opacity 0.18s ease;
+    }
+
+    .health-features__item-text {
+      font-size: 14px;
+    }
+
+    .health-features__item-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .health-features__item--active {
+      color: var(--health-features-item-active-color, inherit);
+      opacity: 1;
+    }
+
+    .health-features__item--active .health-features__item-text {
+      font-size: 20px;
+    }
+
+    .health-features__item--active .health-features__item-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.health_features",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_health-feature"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.health_features_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:content.media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "header",
+      "content": "t:content.mobile_media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_swap_mobile",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#03231A"
+    },
+    {
+      "type": "color",
+      "id": "item_text_color",
+      "label": "t:settings.text_color",
+      "default": "#B9B2A8"
+    },
+    {
+      "type": "color",
+      "id": "item_active_text_color",
+      "label": "t:settings.highlighted_text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "t:settings.width",
+      "min": 1200,
+      "max": 2400,
+      "step": 20,
+      "unit": "px",
+      "default": 1920
+    },
+    {
+      "type": "range",
+      "id": "items_gap",
+      "label": "t:settings.gap",
+      "min": 8,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "items_gap_mobile",
+      "label": "t:settings.gap",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 160
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 160
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.health_features",
+      "category": "t:categories.storytelling",
+      "blocks": {
+        "feat_1": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "No Toxins",
+            "side": "left"
+          }
+        },
+        "feat_2": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "Biocompatible",
+            "side": "left"
+          }
+        },
+        "feat_3": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "Extremely Hygienic",
+            "side": "left"
+          }
+        },
+        "feat_4": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "Naturally Antibacterial",
+            "side": "left"
+          }
+        },
+        "feat_5": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "Mold & Fungi Resistant",
+            "side": "left"
+          }
+        },
+        "feat_6": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "No Cross-Contamination",
+            "side": "left"
+          }
+        },
+        "feat_7": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "No Heavy Metals",
+            "side": "right"
+          }
+        },
+        "feat_8": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "Effortless To Clean",
+            "side": "right"
+          }
+        },
+        "feat_9": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "Never Breaks Down",
+            "side": "right"
+          }
+        },
+        "feat_10": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "Sustainable By Design",
+            "side": "right"
+          }
+        },
+        "feat_11": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "Safe At Any Temperature",
+            "side": "right"
+          }
+        },
+        "feat_12": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "PFAS-Free. Microplastic-Free.",
+            "side": "right"
+          }
+        }
+      },
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6",
+        "feat_7",
+        "feat_8",
+        "feat_9",
+        "feat_10",
+        "feat_11",
+        "feat_12"
+      ]
+    }
+  ]
+}
+{% endschema %}

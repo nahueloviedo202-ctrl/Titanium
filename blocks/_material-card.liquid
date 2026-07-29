@@ -1,0 +1,167 @@
+
+
+<article
+  class="materials-comparison__card"
+  {{ block.shopify_attributes }}
+>
+  <div class="materials-comparison__card-media">
+    {%- if block.settings.image != blank -%}
+      {{
+        block.settings.image
+        | image_url: width: 700
+        | image_tag:
+          widths: '352, 700',
+          sizes: '(min-width: 750px) 25vw, 45vw',
+          loading: 'lazy',
+          alt: block.settings.image.alt
+      }}
+    {%- else -%}
+      {{ 'product-apparel-1' | placeholder_svg_tag: 'materials-comparison__card-image' }}
+    {%- endif -%}
+    {%- if block.settings.badge_text != blank -%}
+      <span class="materials-comparison__badge">{{ block.settings.badge_text }}</span>
+    {%- endif -%}
+  </div>
+  {%- if block.settings.title != blank or block.settings.text != blank -%}
+    <div class="materials-comparison__card-body">
+      {%- if block.settings.title != blank -%}
+        <h3 class="materials-comparison__card-title">{{ block.settings.title }}</h3>
+      {%- endif -%}
+      {%- if block.settings.text != blank -%}
+        <p class="materials-comparison__card-text">{{ block.settings.text }}</p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</article>
+
+{% stylesheet %}
+  .materials-comparison__card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: var(--materials-comparison-mobile-card-width, 240px);
+    border: 1.5px solid var(--materials-comparison-card-border-color, #333);
+    border-radius: var(--materials-comparison-card-radius, 24px);
+  }
+
+  @media screen and (min-width: 750px) {
+    .materials-comparison__card {
+      width: calc(
+        (100% - (var(--materials-comparison-gap, 16px) * (var(--materials-comparison-columns, 4) - 1))) /
+          var(--materials-comparison-columns, 4)
+      );
+    }
+  }
+
+  .materials-comparison__card-media {
+    position: relative;
+    display: flex;
+  }
+
+  .materials-comparison__card-image,
+  .materials-comparison__card-media img,
+  .materials-comparison__card-media svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .materials-comparison__badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    max-width: calc(100% - 16px);
+    overflow: hidden;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: var(--materials-comparison-badge-bg, #c20c25);
+    color: var(--materials-comparison-badge-color, #fff);
+    font-family: var(--font-body--family);
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    pointer-events: none;
+  }
+
+  .materials-comparison__card-body {
+    padding: 24px;
+    border-block-start: 1.5px solid var(--materials-comparison-card-border-color, #333);
+  }
+
+  .materials-comparison__card-title {
+    margin: 0 0 1rem;
+    color: var(--materials-comparison-card-title-color, #fff);
+    font-family: var(--font-body--family);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: var(--letter-spacing--display-normal);
+    text-transform: capitalize;
+  }
+
+  .materials-comparison__card-text {
+    margin: 0;
+    color: var(--materials-comparison-card-text-color, #b0b0b0);
+    font-family: var(--font-body--family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 749px) {
+    .materials-comparison__card-title {
+      font-size: 20px;
+    }
+
+    .materials-comparison__card-text {
+      font-size: 12px;
+    }
+
+    .materials-comparison__badge {
+      padding: 5px 8px;
+      font-size: 10.5px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.material_card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "t:settings.badge_text"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:settings.title",
+      "default": "t:text_defaults.material_card_title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:settings.text",
+      "default": "t:text_defaults.material_card_text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.material_card",
+      "category": "t:categories.text"
+    }
+  ]
+}
+{% endschema %}

@@ -13,15 +13,22 @@
   id="BehindTheScenes-{{ section.id }}"
   class="
     behind-the-scenes
-    spacing-style
     {% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}
     {% if section.settings.media_position == 'right' %} behind-the-scenes--media-right{% endif %}
   "
   role="region"
   aria-label="{{ section.settings.heading | default: 'Behind the scenes' }}"
   style="
-    {%- render 'spacing-style', settings: section.settings %}
+    --behind-the-scenes-padding-block-start: {{ section.settings.padding_block_start }}px;
+    --behind-the-scenes-padding-block-end: {{ section.settings.padding_block_end }}px;
+    --behind-the-scenes-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+    --behind-the-scenes-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+    --behind-the-scenes-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+    --behind-the-scenes-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+    --behind-the-scenes-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+    --behind-the-scenes-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
     --behind-the-scenes-content-padding-inline: {{ section.settings.content_horizontal_padding }}px;
+    --behind-the-scenes-content-padding-inline-mobile: {{ section.settings.content_horizontal_padding_mobile }}px;
     --behind-the-scenes-column-gap: {{ section.settings.column_gap }}px;
     {%- if section.settings.text_color != blank %}--behind-the-scenes-text-color: {{ section.settings.text_color }};{% endif %}
   "
@@ -130,6 +137,8 @@
     overflow: clip;
     background-color: var(--color-background, #121212);
     color: var(--behind-the-scenes-text-color, #fff);
+    padding-block: var(--behind-the-scenes-padding-block-start-mobile, 0) var(--behind-the-scenes-padding-block-end-mobile, 0);
+    padding-inline: var(--behind-the-scenes-padding-inline-start-mobile, 0) var(--behind-the-scenes-padding-inline-end-mobile, 0);
   }
 
   .behind-the-scenes__grid {
@@ -137,6 +146,11 @@
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: 'intro' 'media' 'quotes';
     row-gap: 2.5rem;
+  }
+
+  .behind-the-scenes__intro,
+  .behind-the-scenes__quotes {
+    padding-inline: var(--behind-the-scenes-content-padding-inline-mobile, 0);
   }
 
   .behind-the-scenes__intro {
@@ -251,6 +265,11 @@
   }
 
   @media screen and (min-width: 1100px) {
+    .behind-the-scenes {
+      padding-block: var(--behind-the-scenes-padding-block-start, 0) var(--behind-the-scenes-padding-block-end, 0);
+      padding-inline: var(--behind-the-scenes-padding-inline-start, 0) var(--behind-the-scenes-padding-inline-end, 0);
+    }
+
     .behind-the-scenes__grid {
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       grid-template-areas: 'media intro' 'media quotes';
@@ -456,6 +475,16 @@
     },
     {
       "type": "range",
+      "id": "content_horizontal_padding_mobile",
+      "label": "t:settings.horizontal_padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
       "id": "column_gap",
       "label": "t:settings.gap",
       "min": 0,
@@ -482,11 +511,11 @@
     },
     {
       "type": "header",
-      "content": "t:content.padding"
+      "content": "t:content.padding_desktop"
     },
     {
       "type": "range",
-      "id": "padding-block-start",
+      "id": "padding_block_start",
       "label": "t:settings.top",
       "min": 0,
       "max": 100,
@@ -496,7 +525,7 @@
     },
     {
       "type": "range",
-      "id": "padding-block-end",
+      "id": "padding_block_end",
       "label": "t:settings.bottom",
       "min": 0,
       "max": 100,
@@ -506,7 +535,7 @@
     },
     {
       "type": "range",
-      "id": "padding-inline-start",
+      "id": "padding_inline_start",
       "label": "t:settings.left",
       "min": 0,
       "max": 100,
@@ -516,13 +545,57 @@
     },
     {
       "type": "range",
-      "id": "padding-inline-end",
+      "id": "padding_inline_end",
       "label": "t:settings.right",
       "min": 0,
       "max": 100,
       "step": 1,
       "unit": "px",
       "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
     }
   ],
   "presets": [

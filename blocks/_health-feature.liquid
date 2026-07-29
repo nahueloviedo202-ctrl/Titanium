@@ -1,0 +1,73 @@
+
+
+<li
+  ref="items[]"
+  class="health-features__item"
+  data-side="{{ block.settings.side }}"
+  {{ block.shopify_attributes }}
+>
+  {%- liquid
+    capture icon
+      if block.settings.icon != blank
+        echo block.settings.icon | image_url: width: 96 | image_tag: widths: '48, 96', loading: 'lazy', alt: '', class: 'health-features__item-icon-image'
+      endif
+    endcapture
+  -%}
+  {%- if block.settings.side == 'right' -%}
+    {%- if icon != blank -%}
+      <span class="health-features__item-icon" aria-hidden="true">{{ icon }}</span>
+    {%- endif -%}
+    {%- if block.settings.text != blank -%}
+      <span class="health-features__item-text">{{ block.settings.text }}</span>
+    {%- endif -%}
+  {%- else -%}
+    {%- if block.settings.text != blank -%}
+      <span class="health-features__item-text">{{ block.settings.text }}</span>
+    {%- endif -%}
+    {%- if icon != blank -%}
+      <span class="health-features__item-icon" aria-hidden="true">{{ icon }}</span>
+    {%- endif -%}
+  {%- endif -%}
+</li>
+
+{% schema %}
+{
+  "name": "t:names.health_feature",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "t:settings.image_icon"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "t:settings.text",
+      "default": "t:text_defaults.health_feature_text"
+    },
+    {
+      "type": "select",
+      "id": "side",
+      "label": "t:settings.side",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.health_feature",
+      "category": "t:categories.text"
+    }
+  ]
+}
+{% endschema %}

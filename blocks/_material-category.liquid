@@ -1,0 +1,65 @@
+
+
+{%- liquid
+  assign block_index = section.blocks | find_index: 'id', block.id
+  assign show_arrows = true
+  if section.settings.icons_style == 'none'
+    assign show_arrows = false
+  endif
+-%}
+
+{% capture cards %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+<div
+  ref="panels[]"
+  class="materials-comparison__panel"
+  id="MaterialsPanel-{{ block.id }}"
+  role="tabpanel"
+  aria-labelledby="MaterialsTab-{{ block.id }}"
+  {% if block_index > 0 %}
+    hidden
+  {% endif %}
+  {{ block.shopify_attributes }}
+>
+  {%- if block.blocks.size > 0 -%}
+    <div class="materials-comparison__carousel-wrapper">
+      {% render 'slideshow',
+        class: 'materials-comparison__slideshow',
+        slides: cards,
+        show_arrows: show_arrows,
+        icon_style: section.settings.icons_style,
+        icon_shape: section.settings.icons_shape,
+        infinite: false,
+        slide_count: block.blocks.size
+      %}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:names.material_category",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_material-card"
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "t:settings.label",
+      "default": "t:text_defaults.material_category_label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.material_category",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}

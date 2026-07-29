@@ -1,0 +1,445 @@
+
+
+{%- liquid
+  assign card = block.settings
+  assign product = card.product
+
+  assign card_image = card.image
+  if card_image == blank and product != blank
+    assign card_image = product.featured_image
+  endif
+
+  assign card_title_text = card.title
+  if card_title_text == blank and product != blank
+    assign card_title_text = product.title
+  endif
+  assign card_title = card_title_text | default: 'placeholders.product_title' | t
+
+  assign card_link = card.link
+  if card_link == blank and product != blank
+    assign card_link = product.url
+  endif
+
+  assign product_on_sale = false
+  if product != blank and product.compare_at_price > product.price
+    assign product_on_sale = true
+  endif
+
+  assign card_compare_price = card.compare_price
+  if card_compare_price == blank and product_on_sale
+    capture card_compare_price
+      render 'format-price', price: product.compare_at_price
+    endcapture
+  endif
+
+  assign card_price = card.price
+  if card_price == blank and product != blank
+    capture card_price
+      render 'format-price', price: product.price
+    endcapture
+  endif
+
+  assign rating_value = card.rating_value | at_most: 5 | at_least: 0
+-%}
+
+<article
+  class="category-nav__product"
+  {{ block.shopify_attributes }}
+>
+  {%- if card_link != blank -%}
+    <a
+      class="category-nav__product-media"
+      href="{{ card_link }}"
+      {% if card.open_in_new_tab %}
+        target="_blank" rel="noopener"
+      {% endif %}
+    >
+  {%- else -%}
+    <span class="category-nav__product-media">
+  {%- endif -%}
+
+    {%- if card_image != blank -%}
+      {{
+        card_image
+        | image_url: width: 480
+        | image_tag: widths: '240, 352, 480', sizes: '240px', loading: 'lazy', alt: '', class: 'category-nav__product-image'
+      }}
+    {%- else -%}
+      {{ 'product-apparel-1' | placeholder_svg_tag: 'category-nav__product-image' }}
+    {%- endif -%}
+
+    {%- if card.sale_badge_text != blank -%}
+      <span class="category-nav__product-badge">{{ card.sale_badge_text }}</span>
+    {%- endif -%}
+
+  {%- if card_link != blank -%}
+    </a>
+  {%- else -%}
+    </span>
+  {%- endif -%}
+
+  <div class="category-nav__product-body">
+    {%- if card.show_rating -%}
+      <div
+        class="category-nav__product-rating"
+        aria-label="{{ 'accessibility.rating' | t: rating: rating_value }}"
+      >
+        <div
+          class="category-nav__product-stars"
+          aria-hidden="true"
+        >
+          {%- for i in (1..5) -%}
+            <span class="category-nav__star{% if i <= rating_value %} category-nav__star--filled{% endif %}">
+              <svg
+                class="icon-default"
+                aria-hidden="true"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                {%- render 'icon', icon: 'star' -%}
+              </svg>
+            </span>
+          {%- endfor -%}
+        </div>
+        {%- if card.review_count != blank -%}
+          <span class="category-nav__product-review-count">{{ card.review_count }}</span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if card_link != blank -%}
+      <a
+        class="category-nav__product-title"
+        href="{{ card_link }}"
+        {% if card.open_in_new_tab %}
+          target="_blank" rel="noopener"
+        {% endif %}
+      >
+        {{- card_title -}}
+      </a>
+    {%- else -%}
+      <span class="category-nav__product-title">{{ card_title }}</span>
+    {%- endif -%}
+
+    {%- if card.bullet_1_label != blank or card.bullet_2_label != blank -%}
+      <ul class="category-nav__product-bullets">
+        {%- if card.bullet_1_label != blank -%}
+          <li class="category-nav__product-bullet">
+            {%- if card.bullet_1_icon != blank -%}
+              {{
+                card.bullet_1_icon
+                | image_url: width: 28
+                | image_tag: widths: '14, 28', loading: 'lazy', alt: '', class: 'category-nav__product-bullet-icon'
+              }}
+            {%- endif -%}
+            {{- card.bullet_1_label -}}
+          </li>
+        {%- endif -%}
+        {%- if card.bullet_2_label != blank -%}
+          <li class="category-nav__product-bullet">
+            {%- if card.bullet_2_icon != blank -%}
+              {{
+                card.bullet_2_icon
+                | image_url: width: 28
+                | image_tag: widths: '14, 28', loading: 'lazy', alt: '', class: 'category-nav__product-bullet-icon'
+              }}
+            {%- endif -%}
+            {{- card.bullet_2_label -}}
+          </li>
+        {%- endif -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if card_compare_price != blank or card_price != blank -%}
+      <div class="category-nav__product-price">
+        {%- if card_compare_price != blank -%}
+          <span class="category-nav__product-compare-price">{{ card_compare_price }}</span>
+        {%- endif -%}
+        {%- if card_price != blank -%}
+          <span class="category-nav__product-current-price">{{ card_price }}</span>
+        {%- endif -%}
+        {%- if card.save_badge_text != blank -%}
+          <span class="category-nav__product-save-badge">{{ card.save_badge_text }}</span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</article>
+
+{% stylesheet %}
+  .category-nav__product {
+    flex: 1 1 150px;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--category-nav-card-background, #252525);
+    border-radius: var(--category-nav-card-radius, 0.75rem);
+  }
+
+  .category-nav__product-media {
+    position: relative;
+    display: block;
+    background: #181818;
+  }
+
+  .category-nav__product-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .category-nav__product-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    display: inline-flex;
+    padding: 0.375rem 0.625rem;
+    border-radius: 0.375rem;
+    background: var(--category-nav-badge-background, #bf092f);
+    color: var(--category-nav-badge-text, #fff);
+    font-size: 0.75rem;
+    line-height: 1;
+    letter-spacing: 0.015em;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .category-nav__product-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0.875rem 0.875rem 1rem;
+    border-top: 1.5px solid #333;
+  }
+
+  .category-nav__product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-nav__product-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+  }
+
+  .category-nav__star {
+    display: inline-flex;
+    width: 0.625rem;
+    height: 0.625rem;
+    color: rgb(255 255 255 / 0.3);
+  }
+
+  .category-nav__star svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .category-nav__star--filled {
+    color: var(--category-nav-star-color, #b57c46);
+  }
+
+  .category-nav__product-review-count {
+    color: var(--category-nav-accent-color, #bca588);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .category-nav__product-title {
+    display: block;
+    margin: 0 0 0.75rem;
+    color: var(--category-nav-price-color, #f6f4f0);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-decoration: none;
+  }
+
+  a.category-nav__product-title:hover {
+    opacity: 0.95;
+  }
+
+  .category-nav__product-bullets {
+    margin: 0 0 0.75rem;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .category-nav__product-bullet {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--category-nav-accent-color, #bca588);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .category-nav__product-bullet-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  .category-nav__product-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    margin-top: auto;
+  }
+
+  .category-nav__product-compare-price {
+    color: var(--category-nav-accent-color, #a3835f);
+    font-size: 1rem;
+    line-height: 1.5;
+    text-decoration-line: line-through;
+  }
+
+  .category-nav__product-current-price {
+    color: var(--category-nav-price-color, #f6f4f0);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .category-nav__product-save-badge {
+    display: inline-flex;
+    padding: 0.375rem 0.75rem;
+    border-radius: 999px;
+    background: var(--category-nav-save-badge-background, #bca588);
+    color: var(--category-nav-save-badge-text, #252525);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.header_category_nav_product",
+  "tag": null,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:settings.product",
+      "info": "t:info.best_sellers_card_product"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:settings.title"
+    },
+    {
+      "type": "header",
+      "content": "t:content.block_link"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:settings.link"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_in_new_tab",
+      "label": "t:settings.open_new_tab",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:content.badges"
+    },
+    {
+      "type": "text",
+      "id": "sale_badge_text",
+      "label": "t:settings.badge_text"
+    },
+    {
+      "type": "text",
+      "id": "save_badge_text",
+      "label": "t:settings.badge_text"
+    },
+    {
+      "type": "header",
+      "content": "t:content.rating"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "t:settings.show_rating",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "rating_value",
+      "label": "t:settings.rating_value",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "default": 5,
+      "visible_if": "{{ block.settings.show_rating }}"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "t:settings.review_count",
+      "default": "t:text_defaults.header_category_nav_review_count",
+      "visible_if": "{{ block.settings.show_rating }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.icons"
+    },
+    {
+      "type": "image_picker",
+      "id": "bullet_1_icon",
+      "label": "t:settings.image_icon"
+    },
+    {
+      "type": "text",
+      "id": "bullet_1_label",
+      "label": "t:settings.label",
+      "default": "t:text_defaults.header_category_nav_bullet_1"
+    },
+    {
+      "type": "image_picker",
+      "id": "bullet_2_icon",
+      "label": "t:settings.image_icon"
+    },
+    {
+      "type": "text",
+      "id": "bullet_2_label",
+      "label": "t:settings.label"
+    },
+    {
+      "type": "header",
+      "content": "t:content.pricing"
+    },
+    {
+      "type": "text",
+      "id": "compare_price",
+      "label": "t:settings.compare_price"
+    },
+    {
+      "type": "text",
+      "id": "price",
+      "label": "t:settings.current_price"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.header_category_nav_product"
+    }
+  ]
+}
+{% endschema %}
