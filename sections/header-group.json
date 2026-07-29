@@ -14,6 +14,47 @@
     "header_section": {
       "type": "header",
       "blocks": {
+        "header_category_nav_TMABGY": {
+          "type": "_header-category-nav",
+          "name": "t:names.header_category_nav",
+          "settings": {
+            "background_color": "#121212",
+            "border_color": "#454545",
+            "heading_color": "#FFFFFF",
+            "text_color": "#B0B0B0",
+            "accent_color": "#BCA588",
+            "star_color": "#B57C46",
+            "price_color": "#F6F4F0",
+            "card_background_color": "#252525",
+            "card_corner_radius": 12,
+            "badge_background_color": "#BF092F",
+            "badge_text_color": "#FFFFFF",
+            "save_badge_background_color": "#BCA588",
+            "save_badge_text_color": "#252525",
+            "tab_font_size": 16,
+            "panel_title_font_size": 32
+          },
+          "blocks": {
+            "header_category_nav_tab_jBPPnc": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "label": "Best Sellers",
+                "title": "Best Sellers",
+                "description": "<p>Taima's Cookware is a true kitchen workhorse. You get deep sear, caramelization &amp; flawless food release consistently, without the chemicals.</p>",
+                "shop_all_label": "Shop All",
+                "shop_all_link": "",
+                "show_endorsement": true,
+                "endorse_name": "Happy Customer",
+                "endorse_verified": true,
+                "endorse_rating": 5
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "header_category_nav_tab_jBPPnc"
+          ]
+        },
         "header-logo": {
           "type": "_header-logo",
           "static": true,
@@ -49,6 +90,9 @@
           "blocks": {}
         }
       },
+      "block_order": [
+        "header_category_nav_TMABGY"
+      ],
       "settings": {
         "logo_position": "center",
         "menu_position": "left",
