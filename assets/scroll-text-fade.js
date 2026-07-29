@@ -1,4 +1,5 @@
 import { Component } from '@theme/component';
+import { getScrollEventTarget, scrollContainerMediaQuery } from '@theme/scroll-container';
 
 /**
  * Highlights whichever line block is closest to the vertical center of the
@@ -17,15 +18,21 @@ class ScrollTextFadeComponent extends Component {
 
     this.#update();
 
-    window.addEventListener('scroll', this.#handleChange, { passive: true });
+    this.#scrollTarget = getScrollEventTarget();
+    this.#scrollTarget.addEventListener('scroll', this.#handleChange, { passive: true });
     window.addEventListener('resize', this.#handleChange, { passive: true });
+    // The scroll container itself switches between `.page-wrapper` (desktop) and
+    // `document` (mobile) when crossing the 990px breakpoint, so the listener bound
+    // above goes stale and must be rebound to the new target.
+    scrollContainerMediaQuery.addEventListener('change', this.#handleBreakpointChange);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
 
-    window.removeEventListener('scroll', this.#handleChange);
+    this.#scrollTarget?.removeEventListener('scroll', this.#handleChange);
     window.removeEventListener('resize', this.#handleChange);
+    scrollContainerMediaQuery.removeEventListener('change', this.#handleBreakpointChange);
 
     if (this.#rafId !== null) {
       cancelAnimationFrame(this.#rafId);
@@ -33,8 +40,18 @@ class ScrollTextFadeComponent extends Component {
     }
   }
 
+  /** @type {EventTarget | null} */
+  #scrollTarget = null;
+
   /** @type {number | null} */
   #rafId = null;
+
+  #handleBreakpointChange = () => {
+    this.#scrollTarget?.removeEventListener('scroll', this.#handleChange);
+    this.#scrollTarget = getScrollEventTarget();
+    this.#scrollTarget.addEventListener('scroll', this.#handleChange, { passive: true });
+    this.#update();
+  };
 
   #handleChange = () => {
     if (this.#rafId !== null) return;

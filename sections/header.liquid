@@ -21,12 +21,15 @@
   if section.settings.enable_transparent_header_home and template.name == 'index'
     assign transparent = 'always'
     assign transparent_text_color_setting = section.settings.text_color_transparent_home
+    assign transparent_opacity = section.settings.transparent_opacity_home
   elsif section.settings.enable_transparent_header_product and template.name == 'product'
     assign transparent = 'always'
     assign transparent_text_color_setting = section.settings.text_color_transparent_product
+    assign transparent_opacity = section.settings.transparent_opacity_product
   elsif section.settings.enable_transparent_header_collection and template.name == 'collection'
     assign transparent = 'always'
     assign transparent_text_color_setting = section.settings.text_color_transparent_collection
+    assign transparent_opacity = section.settings.transparent_opacity_collection
   endif
 
   if section.settings.enable_sticky_header == 'always'
@@ -350,6 +353,9 @@
       --color-transparent-text-rgb: {{ text_color_transparent.rgb }};
       --color-transparent-text-contrast: {{ transparent_text_contrast }};
     {% endif %}
+    {% if transparent %}
+      --header-transparent-opacity: {{ transparent_opacity | default: 0 | divided_by: 100.0 }};
+    {% endif %}
     {% if cart_bubble_color_override %}
       --cart-bubble-background: {{ cart_bubble_background }};
       --cart-bubble-text: {{ cart_bubble_text }};
@@ -521,7 +527,7 @@
     --header-content-transition-timing: calc(var(--submenu-animation-speed) - var(--animation-speed-fast))
       var(--animation-speed-fast) var(--ease-out-cubic);
 
-    --closed-underlay-height: 0px;
+    --header-transparent-opacity: 0;
 
     /* used to display the appropriate logo based on transparency state */
     --header-logo-display: none;
@@ -534,8 +540,11 @@
 
     z-index: var(--layer-overlay);
 
+    /* Only links that open a submenu/mega menu should force the header solid on hover —
+       a plain link with no dropdown has no panel that needs an opaque backdrop, so hovering
+       it must not undo the merchant's transparent header setting. */
     &[transparent='not-sticky'][data-sticky-state='active'],
-    &:has(.menu-list__link:not([aria-haspopup]):hover) {
+    &:has(.menu-list__link[aria-haspopup]:hover) {
       --header-logo-display: unset;
       --header-logo-inverse-display: unset;
       --color-foreground: inherit;
@@ -544,14 +553,14 @@
       --color-background-rgb: inherit;
       --color-border: inherit;
       --color-border-rgb: inherit;
-      --closed-underlay-height: 100%;
+      --header-transparent-opacity: 1;
     }
 
     /** For transparent header, apply transparent text color to rows when menu is not hovered.
         [transparent="always"] also matches while sticky-pinned — that combination only occurs
         when "Stay transparent while sticky" is enabled, so this keeps that opt-in state readable. */
     &:is([transparent='always'], :not([data-sticky-state='active'])):not(
-        :has(.menu-list__link:is(:hover, [aria-expanded='true']))
+        :has(.menu-list__link[aria-haspopup]:is(:hover, [aria-expanded='true']))
       ) .header__row {
       --color-foreground: var(--color-transparent-text);
       --color-foreground-rgb: var(--color-transparent-text-rgb);
@@ -564,7 +573,7 @@
     /* Swap the cart bubble in transparent state only when using the default
        style. Custom bubble colors apply unchanged across header states. */
     &[data-bubble-style='default']:is([transparent='always'], :not([data-sticky-state='active'])):not(
-        :has(.menu-list__link:is(:hover, [aria-expanded='true']))
+        :has(.menu-list__link[aria-haspopup]:is(:hover, [aria-expanded='true']))
       )
       .header__row {
       --cart-bubble-background: var(--color-transparent-text, var(--cart-bubble-background-fallback));
@@ -573,8 +582,8 @@
 
     /* Multiple selectors for performance: each simple :has() check is faster than one complex selector with multiple conditions */
     &:has(.mega-menu__list:hover),
-    &:has(.menu-list__link:is(:hover, [aria-expanded='true'])),
-    &:has(.menu-list__list-item[slot='overflow'] .menu-list__link:is(:hover, [aria-expanded='true'])) {
+    &:has(.menu-list__link[aria-haspopup]:is(:hover, [aria-expanded='true'])),
+    &:has(.menu-list__list-item[slot='overflow'] .menu-list__link[aria-haspopup]:is(:hover, [aria-expanded='true'])) {
       --header-logo-display: unset;
       --header-logo-inverse-display: unset;
       --color-foreground: inherit;
@@ -665,13 +674,15 @@
   }
 
   .header__underlay-closed {
-    height: var(--closed-underlay-height, 100%);
+    height: 100%;
     z-index: var(--layer-lowest);
+    /* Non-transparent headers have no --header-transparent-opacity in scope, so they stay fully solid. */
+    opacity: var(--header-transparent-opacity, 1);
     background: linear-gradient(
       var(--color-background-top-row) 0 var(--top-row-height),
       var(--color-background-bottom-row) var(--top-row-height) var(--header-height)
     );
-    transition: height var(--animation-speed-slow) var(--ease-out-cubic);
+    transition: opacity var(--animation-speed-slow) var(--ease-out-cubic);
   }
 
   .header__underlay-open {
@@ -1713,6 +1724,17 @@
       "visible_if": "{{ section.settings.enable_transparent_header_home }}"
     },
     {
+      "type": "range",
+      "id": "transparent_opacity_home",
+      "label": "t:settings.opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 0,
+      "visible_if": "{{ section.settings.enable_transparent_header_home }}"
+    },
+    {
       "type": "header",
       "content": "t:content.product_page"
     },
@@ -1737,6 +1759,17 @@
       "visible_if": "{{ section.settings.enable_transparent_header_product }}"
     },
     {
+      "type": "range",
+      "id": "transparent_opacity_product",
+      "label": "t:settings.opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 0,
+      "visible_if": "{{ section.settings.enable_transparent_header_product }}"
+    },
+    {
       "type": "header",
       "content": "t:content.collection_page"
     },
@@ -1758,6 +1791,17 @@
       "id": "text_color_transparent_collection",
       "label": "t:settings.text_color_transparent",
       "placeholder": "t:settings.default",
+      "visible_if": "{{ section.settings.enable_transparent_header_collection }}"
+    },
+    {
+      "type": "range",
+      "id": "transparent_opacity_collection",
+      "label": "t:settings.opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 0,
       "visible_if": "{{ section.settings.enable_transparent_header_collection }}"
     }
   ],
