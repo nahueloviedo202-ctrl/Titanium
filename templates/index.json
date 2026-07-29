@@ -773,23 +773,6 @@
           },
           "blocks": {}
         },
-        "review_card_UWWEzA": {
-          "type": "_review-card",
-          "name": "t:names.review_card",
-          "settings": {
-            "image": "shopify://shop_images/macaron-min.webp",
-            "image_label": "TITANIUM PAN",
-            "badge_color": "",
-            "badge_text_color": "",
-            "title": "Best Non-Toxic Coockware On The Planet",
-            "title_color": "{{ settings.color_palette.background }}",
-            "quote": "<p>\"With taima its easy to make our favorite comfort meals because i can prepare them with complete peace of mind that no toxins are near\"</p>",
-            "quote_color": "{{ settings.color_palette.color2 }}",
-            "author": "Mateo P.",
-            "author_color": "{{ settings.color_palette.background }}"
-          },
-          "blocks": {}
-        },
         "review_card_YmUUcW": {
           "type": "_review-card",
           "name": "t:names.review_card",
@@ -806,6 +789,23 @@
             "author_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
+        },
+        "review_card_UWWEzA": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/macaron-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "",
+            "title": "Best Non-Toxic Coockware On The Planet",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"With taima its easy to make our favorite comfort meals because i can prepare them with complete peace of mind that no toxins are near\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Mateo P.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -815,8 +815,8 @@
         "review_card_PmykM3",
         "review_card_JEmzwn",
         "review_card_Lb7dnR",
-        "review_card_UWWEzA",
-        "review_card_YmUUcW"
+        "review_card_YmUUcW",
+        "review_card_UWWEzA"
       ],
       "name": "t:names.reviews_hero_slider",
       "settings": {
