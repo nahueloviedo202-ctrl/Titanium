@@ -87,12 +87,15 @@
         "enable_transparent_header_home": true,
         "home_inverse_logo": false,
         "text_color_transparent_home": "{{ settings.color_palette.background }}",
+        "transparent_opacity_home": 10,
         "enable_transparent_header_product": false,
         "product_inverse_logo": false,
         "text_color_transparent_product": "",
+        "transparent_opacity_product": 0,
         "enable_transparent_header_collection": false,
         "collection_inverse_logo": false,
-        "text_color_transparent_collection": ""
+        "text_color_transparent_collection": "",
+        "transparent_opacity_collection": 0
       }
     }
   },

@@ -783,11 +783,11 @@
           "type": "_behind-the-scenes-quote",
           "settings": {
             "quote": "<p>“Health Is The Most Valuable Thing We Have. I Created Taima To Protect It”</p>",
-            "quote_color": "#D4C7B4",
+            "quote_color": "#d4c7b4",
             "quote_size": 24,
             "quote_size_mobile": 16,
             "founder_name": "Paul S., Founder",
-            "founder_color": "#D4C7B4",
+            "founder_color": "#d4c7b4",
             "founder_size": 20,
             "signature_width": 120,
             "signature_height": 80
@@ -802,27 +802,23 @@
       "settings": {
         "video": "shopify://files/videos/6e9be4e664144348ae17e080e893a6c4.mp4",
         "video_corner_radius": 0,
-        "overlay_color": "#0000004D",
+        "overlay_color": "#0000004d",
         "play_button_size": 80,
-        "play_button_color": "#FFFFFF",
-        "play_button_background_color": "#FFFFFF33",
+        "play_button_color": "#ffffff",
+        "play_button_background_color": "#ffffff33",
         "heading": "Prioritizing Your Health In Everything We Create.",
         "heading_color": "{{ settings.color_palette.background }}",
         "heading_size": 48,
         "heading_size_mobile": 24,
         "body_text": "<p>Titanium has long been used in medical & aerospace industries - but until recently, it was too difficult and expensive to shape into everyday products. At Taima®, we've changed that. Thanks to advanced engineering, we've made the world's most biocompatible & safe metal practical for your kitchen.</p>",
-        "body_text_color": "{{ settings.color_palette.background }}",
+        "body_text_color": "{{ settings.color_palette.color2 }}",
         "body_font_size": 16,
         "body_font_size_mobile": 14,
         "media_position": "left",
         "content_horizontal_padding": 120,
         "column_gap": 0,
         "background_color": "#121212",
-        "text_color": "#FFFFFF",
-        "padding-block-start": 80,
-        "padding-block-end": 80,
-        "padding-inline-start": 80,
-        "padding-inline-end": 0
+        "text_color": "#ffffff"
       }
     },
     "scroll_text_fade_Bkfit9": {
@@ -848,7 +844,7 @@
             "font_size": 64,
             "font_size_mobile": 32,
             "opacity": 40,
-            "text_color": "#BCA588",
+            "text_color": "#bca588",
             "hide_on_desktop": true,
             "hide_on_mobile": false
           },
@@ -861,7 +857,7 @@
             "font_size": 64,
             "font_size_mobile": 30,
             "opacity": 40,
-            "text_color": "#BCA588",
+            "text_color": "#bca588",
             "hide_on_desktop": true,
             "hide_on_mobile": false
           },
@@ -874,7 +870,7 @@
             "font_size": 64,
             "font_size_mobile": 28,
             "opacity": 40,
-            "text_color": "#BCA588",
+            "text_color": "#bca588",
             "hide_on_desktop": true,
             "hide_on_mobile": false
           },
