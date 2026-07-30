@@ -1,0 +1,29 @@
+{%- liquid
+  capture icon
+    if block.settings.icon != blank
+      echo block.settings.icon | image_url: width: 96 | image_tag: widths: '48, 96', loading: 'lazy', alt: '', class: 'health-features__item-icon-image'
+    endif
+  endcapture
+-%}
+<li
+  ref="items[]"
+  class="health-features__item"
+  data-side="{{ block.settings.side }}"
+  {{ block.shopify_attributes }}
+>
+  {%- if block.settings.side == 'right' -%}
+    {%- if icon != blank -%}
+      <span class="health-features__item-icon" aria-hidden="true">{{ icon }}</span>
+    {%- endif -%}
+    {%- if block.settings.text != blank -%}
+      <span class="health-features__item-text">{{ block.settings.text }}</span>
+    {%- endif -%}
+  {%- else -%}
+    {%- if block.settings.text != blank -%}
+      <span class="health-features__item-text">{{ block.settings.text }}</span>
+    {%- endif -%}
+    {%- if icon != blank -%}
+      <span class="health-features__item-icon" aria-hidden="true">{{ icon }}</span>
+    {%- endif -%}
+  {%- endif -%}
+</li>

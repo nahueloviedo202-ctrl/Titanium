@@ -14,6 +14,32 @@ import { Component } from '@theme/component';
 class MaterialsComparisonComponent extends Component {
   requiredRefs = ['tabs', 'panels'];
 
+  connectedCallback() {
+    super.connectedCallback();
+    this.#relocatePanels();
+  }
+
+  updatedCallback() {
+    super.updatedCallback();
+    this.#relocatePanels();
+  }
+
+  /**
+   * Category blocks render their tab button and panel together (so
+   * `block.settings` resolves correctly through `content_for`), both landing
+   * inside `.materials-comparison__tablist`. Relocate each panel into its own
+   * container so the tablist keeps its grid layout independent of panel
+   * content.
+   */
+  #relocatePanels() {
+    const panelsContainer = this.querySelector('.materials-comparison__panels');
+    if (!panelsContainer) return;
+
+    for (const panel of this.refs.panels ?? []) {
+      panelsContainer.append(panel);
+    }
+  }
+
   /**
    * @param {number} index
    */

@@ -47,8 +47,119 @@
             "drawer_dividers": false
           },
           "blocks": {}
+        },
+        "category_nav": {
+          "type": "_header-category-nav",
+          "settings": {
+            "background_color": "#121212",
+            "border_color": "#454545",
+            "heading_color": "#FFFFFF",
+            "text_color": "#B0B0B0",
+            "accent_color": "#BCA588",
+            "star_color": "#B57C46",
+            "price_color": "#F6F4F0",
+            "card_background_color": "#252525",
+            "card_corner_radius": 12,
+            "badge_background_color": "#BF092F",
+            "badge_text_color": "#FFFFFF",
+            "save_badge_background_color": "#BCA588",
+            "save_badge_text_color": "#252525",
+            "tab_font_size": 16,
+            "panel_title_font_size": 32
+          },
+          "blocks": {
+            "tab_best_sellers": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "label": "Best Sellers",
+                "title": "Best Sellers",
+                "description": "",
+                "shop_all_label": "Shop All",
+                "shop_all_link": "/collections/best-sellers",
+                "show_endorsement": false
+              },
+              "blocks": {},
+              "block_order": []
+            },
+            "tab_bundle_save": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "label": "Bundle & Save",
+                "title": "Bundle & Save",
+                "description": "",
+                "shop_all_label": "Shop All",
+                "shop_all_link": "/collections/bundles",
+                "show_endorsement": false
+              },
+              "blocks": {},
+              "block_order": []
+            },
+            "tab_cookware": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "label": "Titanium Cookware",
+                "title": "Titanium Cookware",
+                "description": "",
+                "shop_all_label": "Shop All",
+                "shop_all_link": "/collections/titanium-cookware",
+                "show_endorsement": false
+              },
+              "blocks": {},
+              "block_order": []
+            },
+            "tab_cutting_boards": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "label": "Titanium Cutting Boards",
+                "title": "Titanium Cutting Boards",
+                "description": "",
+                "shop_all_label": "Shop All",
+                "shop_all_link": "/collections/pure-titanium-certified-cutting-boards",
+                "show_endorsement": false
+              },
+              "blocks": {},
+              "block_order": []
+            },
+            "tab_utensils": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "label": "Titanium Utensils",
+                "title": "Titanium Utensils",
+                "description": "",
+                "shop_all_label": "Shop All",
+                "shop_all_link": "/collections/pure-titanium-utensils",
+                "show_endorsement": false
+              },
+              "blocks": {},
+              "block_order": []
+            },
+            "tab_drinkware": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "label": "Titanium Drinkware",
+                "title": "Titanium Drinkware",
+                "description": "",
+                "shop_all_label": "Shop All",
+                "shop_all_link": "/collections/pure-titanium-drinkware",
+                "show_endorsement": false
+              },
+              "blocks": {},
+              "block_order": []
+            }
+          },
+          "block_order": [
+            "tab_best_sellers",
+            "tab_bundle_save",
+            "tab_cookware",
+            "tab_cutting_boards",
+            "tab_utensils",
+            "tab_drinkware"
+          ]
         }
       },
+      "block_order": [
+        "category_nav"
+      ],
       "settings": {
         "logo_position": "center",
         "menu_position": "left",

@@ -87,25 +87,10 @@
           role="tablist"
           aria-label="{{ 'accessibility.materials_comparison_categories' | t }}"
         >
-          {%- for category_block in section.blocks -%}
-            <button
-              ref="tabs[]"
-              type="button"
-              role="tab"
-              id="MaterialsTab-{{ category_block.id }}"
-              aria-controls="MaterialsPanel-{{ category_block.id }}"
-              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-              class="materials-comparison__tab{% if forloop.first %} materials-comparison__tab--active{% endif %}"
-              on:click="/selectCategory/{{ forloop.index0 }}"
-            >
-              {{- category_block.settings.label -}}
-            </button>
-          {%- endfor -%}
-        </div>
-
-        <div class="materials-comparison__panels">
           {% content_for 'blocks' %}
         </div>
+
+        <div class="materials-comparison__panels"></div>
       </materials-comparison-component>
     {%- endif -%}
   </div>

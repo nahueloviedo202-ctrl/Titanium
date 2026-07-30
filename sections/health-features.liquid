@@ -65,7 +65,7 @@
         >
           {%- for block in section.blocks -%}
             {%- if block.settings.side == 'left' -%}
-              {% content_for 'block', type: block.type, id: block.id %}
+              {%- render '_health-feature-item', block: block -%}
             {%- endif -%}
           {%- endfor -%}
         </ul>
@@ -99,7 +99,7 @@
         >
           {%- for block in section.blocks -%}
             {%- if block.settings.side == 'right' -%}
-              {% content_for 'block', type: block.type, id: block.id %}
+              {%- render '_health-feature-item', block: block -%}
             {%- endif -%}
           {%- endfor -%}
         </ul>

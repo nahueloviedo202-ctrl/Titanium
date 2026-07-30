@@ -8,6 +8,20 @@
   endif
 -%}
 
+<button
+  ref="tabs[]"
+  type="button"
+  role="tab"
+  id="MaterialsTab-{{ block.id }}"
+  aria-controls="MaterialsPanel-{{ block.id }}"
+  aria-selected="{% if block_index == 0 %}true{% else %}false{% endif %}"
+  class="materials-comparison__tab{% if block_index == 0 %} materials-comparison__tab--active{% endif %}"
+  on:click="/selectCategory/{{ block_index }}"
+  {{ block.shopify_attributes }}
+>
+  {{- block.settings.label -}}
+</button>
+
 {% capture cards %}
   {% content_for 'blocks' %}
 {% endcapture %}
@@ -21,7 +35,6 @@
   {% if block_index > 0 %}
     hidden
   {% endif %}
-  {{ block.shopify_attributes }}
 >
   {%- if block.blocks.size > 0 -%}
     <div class="materials-comparison__carousel-wrapper">

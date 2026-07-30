@@ -468,9 +468,19 @@
       {{ navigation_bar }}
     </div>
   {% endif %}
-</header-component>
 
-{% content_for 'blocks' %}
+  {% liquid
+    assign category_nav_block = section.blocks | where: 'type', '_header-category-nav' | first
+  %}
+  {% if category_nav_block %}
+    <div
+      class="header__row header__category-nav-row section section--full-width-margin section--{{ section.settings.section_width }}"
+      style="--color-background-category-nav: {{ category_nav_block.settings.background_color }};"
+    >
+      {% content_for 'blocks' %}
+    </div>
+  {% endif %}
+</header-component>
 
 <script
   src="{{ 'header.js' | asset_url }}"
@@ -738,6 +748,13 @@
     .header__row--bottom {
       z-index: var(--layer-lowest);
     }
+  }
+
+  /* Frosted-glass blur behind the underlay while the header is transparent,
+     so store content scrolling underneath reads as soft/out-of-focus instead of sharp. */
+  .header[transparent] :is(.header__underlay-closed, .header__underlay-open) {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   /* End Underlays ================ */
@@ -1009,6 +1026,20 @@
 
     .header__row--bottom .header__columns {
       --padding-block-start: 0px;
+    }
+  }
+
+  /* Secondary category-nav row (_header-category-nav block), full-width bar below the main header rows.
+     .header__row forces a transparent background (the shared underlay paints behind top/bottom instead);
+     this row paints its own opaque background, so it opts back in with matching specificity. */
+  .header__category-nav-row.header__row {
+    /* stylelint-disable-next-line declaration-no-important */
+    background-color: var(--color-background-category-nav, #121212) !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header__category-nav-row {
+      display: none;
     }
   }
 
