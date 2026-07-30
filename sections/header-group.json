@@ -78,8 +78,7 @@
                 "shop_all_link": "/collections/best-sellers",
                 "show_endorsement": false
               },
-              "blocks": {},
-              "block_order": []
+              "blocks": {}
             },
             "tab_bundle_save": {
               "type": "_header-category-nav-tab",
@@ -91,8 +90,7 @@
                 "shop_all_link": "/collections/bundles",
                 "show_endorsement": false
               },
-              "blocks": {},
-              "block_order": []
+              "blocks": {}
             },
             "tab_cookware": {
               "type": "_header-category-nav-tab",
@@ -104,8 +102,7 @@
                 "shop_all_link": "/collections/titanium-cookware",
                 "show_endorsement": false
               },
-              "blocks": {},
-              "block_order": []
+              "blocks": {}
             },
             "tab_cutting_boards": {
               "type": "_header-category-nav-tab",
@@ -117,8 +114,7 @@
                 "shop_all_link": "/collections/pure-titanium-certified-cutting-boards",
                 "show_endorsement": false
               },
-              "blocks": {},
-              "block_order": []
+              "blocks": {}
             },
             "tab_utensils": {
               "type": "_header-category-nav-tab",
@@ -130,8 +126,7 @@
                 "shop_all_link": "/collections/pure-titanium-utensils",
                 "show_endorsement": false
               },
-              "blocks": {},
-              "block_order": []
+              "blocks": {}
             },
             "tab_drinkware": {
               "type": "_header-category-nav-tab",
@@ -143,8 +138,7 @@
                 "shop_all_link": "/collections/pure-titanium-drinkware",
                 "show_endorsement": false
               },
-              "blocks": {},
-              "block_order": []
+              "blocks": {}
             }
           },
           "block_order": [
