@@ -1046,6 +1046,7 @@
             "material_card_WDcrJM": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/non_stick-min_374f3d34-196a-4768-a3e3-47e6f117a97b.jpg",
                 "badge_text": "FOREVER CHEMICALS",
                 "title": "Non-Stick Coated / Teflon",
                 "text": "Worst type of pan surface there is. Teflon / majority of non-stick pans release toxic PFAS chemicals, known as \"forever chemicals\" which have been linked to cancer and liver damage. The coating easily shaves off over time and can't handle the heat exposing your food to toxins."
@@ -1055,6 +1056,7 @@
             "material_card_HQJWNp": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/steel-min_ffa0915f-a72e-44ed-84d6-12d76921a216.webp",
                 "badge_text": "HEAVY METALS",
                 "title": "Stainless Steel",
                 "text": "Requires lots of oil to prevent sticking, and reacts with acidic foods - altering taste and potentially leaching metals in lower-quality pans. Tougher to clean, high effort to maintain."
@@ -1064,6 +1066,7 @@
             "material_card_CYCgWQ": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/ceramic-min_c6855de1-b4bc-4ad4-8545-880b3ec41164.webp",
                 "badge_text": "ALUMINUM BASE",
                 "title": "Ceramic",
                 "text": "Ceramic coatings are very fragile, once chipped, they expose toxic aluminum base. Most only last 1-2 years before losing their non-stick. Expensive to replace, unreliable long-term."
@@ -1073,6 +1076,7 @@
             "material_card_6zJBcx": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/cast_iron-min_ccb7b927-75cd-4303-89d7-fe8a2dde8ff3.webp",
                 "badge_text": "RUST | HEAVY METALS",
                 "title": "Cast Iron",
                 "text": "Incredibly heavy and high-maintenance - cast iron rusts easily without regular seasoning and struggles with acidic foods, which can degrade the surface and alter flavor."
