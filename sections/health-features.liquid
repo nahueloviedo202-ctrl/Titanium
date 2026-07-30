@@ -125,9 +125,9 @@
 
   .health-features__grid {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: end;
   }
 
   .health-features__list {
@@ -176,13 +176,10 @@
   }
 
   .health-features__media {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(-50%);
+    min-width: 0;
   }
 
   .health-features__image {
@@ -231,8 +228,6 @@
 
     .health-features__media {
       order: 2;
-      position: static;
-      transform: none;
     }
 
     .health-features__image {

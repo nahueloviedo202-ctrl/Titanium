@@ -141,6 +141,10 @@ class HealthFeaturesComponent extends Component {
   #setImage(src) {
     const { image } = this.refs;
     if (image && src && image.src !== src) {
+      // `srcset` wins the browser's image-selection algorithm over a plain `src`
+      // mutation, so it has to go before a JS-driven swap can actually show up.
+      image.removeAttribute('srcset');
+      image.removeAttribute('sizes');
       image.src = src;
     }
   }

@@ -267,7 +267,9 @@
     "pills_usage": "Used for applied filters, discount codes, and search suggestions",
     "media_type_info": "Features are populated from your menu links",
     "best_sellers_card_product": "Connects this card to a real product. Image, title, price, and link below are auto-filled from the product, but stay in this card's styling. Fill in any field manually to override the product's value.",
-    "keep_transparent_header_sticky": "The header keeps its see-through background even when pinned to the top on scroll. Make sure your transparent header text color has enough contrast over every section this header can overlap."
+    "keep_transparent_header_sticky": "The header keeps its see-through background even when pinned to the top on scroll. Make sure your transparent header text color has enough contrast over every section this header can overlap.",
+    "category_nav_image_badge": "Shown as a small overlay on the top-left corner of the product image, e.g. \"Low stock\"",
+    "category_nav_price_badge": "Shown next to the price, e.g. \"Save 50%\""
   },
   "names": {
     "column": "Column",
@@ -947,6 +949,7 @@
     "image": "Image",
     "image_1": "Image 1",
     "image_2": "Image 2",
+    "image_badge_text": "Image badge text",
     "image_border_radius": "Image corner radius",
     "image_gap": "Image gap",
     // Image picker setting to upload custom image as icon
@@ -1054,6 +1057,7 @@
     "primary_button_text": "Primary button text",
     // Color setting for clickable hyperlinks throughout the theme
     "price_color": "Price color",
+    "price_badge_text": "Price badge text",
     "compare_price": "Compare-at price",
     "compare_price_color": "Compare-at price color",
     "current_price": "Price",

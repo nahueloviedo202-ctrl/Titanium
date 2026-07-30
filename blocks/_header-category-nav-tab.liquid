@@ -120,10 +120,25 @@
     background: var(--category-nav-background, #121212);
     border-top: 1px solid var(--category-nav-border-color, #2b2b2b);
     box-shadow: 0 0.5rem 1rem rgb(10 10 10 / 0.3);
+    opacity: 0;
+    translate: 0 -0.625rem;
+    transition-property: display, opacity, translate;
+    transition-duration: var(--animation-speed-slow);
+    transition-timing-function: var(--ease-out-quad);
+    transition-behavior: allow-discrete;
   }
 
   .category-nav__panel[aria-hidden='false'] {
     display: grid;
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  @starting-style {
+    .category-nav__panel[aria-hidden='false'] {
+      opacity: 0;
+      translate: 0 -0.625rem;
+    }
   }
 
   .category-nav__panel-left {
