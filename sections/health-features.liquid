@@ -63,11 +63,7 @@
           class="health-features__list health-features__list--left"
           aria-label="{{ 'accessibility.health_features_list_left' | t }}"
         >
-          {%- for block in section.blocks -%}
-            {%- if block.settings.side == 'left' -%}
-              {%- render '_health-feature-item', block: block -%}
-            {%- endif -%}
-          {%- endfor -%}
+          {% content_for 'blocks' %}
         </ul>
 
         <div class="health-features__media">
@@ -96,13 +92,7 @@
         <ul
           class="health-features__list health-features__list--right"
           aria-label="{{ 'accessibility.health_features_list_right' | t }}"
-        >
-          {%- for block in section.blocks -%}
-            {%- if block.settings.side == 'right' -%}
-              {%- render '_health-feature-item', block: block -%}
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
+        ></ul>
       </health-features-component>
     {%- endif -%}
   </div>

@@ -21,6 +21,8 @@ class HealthFeaturesComponent extends Component {
   connectedCallback() {
     super.connectedCallback();
 
+    this.#relocateItems();
+
     this.#scrollTarget = getScrollEventTarget();
     this.#scrollTarget.addEventListener('scroll', this.#handleChange, { passive: true });
     window.addEventListener('resize', this.#handleChange, { passive: true });
@@ -28,6 +30,29 @@ class HealthFeaturesComponent extends Component {
     MOBILE_QUERY.addEventListener('change', this.#handleChange);
 
     this.#update();
+  }
+
+  updatedCallback() {
+    super.updatedCallback();
+    this.#relocateItems();
+    this.#update();
+  }
+
+  /**
+   * Blocks all render into `.health-features__list--left` (so `block.settings`
+   * resolves correctly through `content_for`), then right-side items get
+   * moved into their own list here so the left/right split layout (and the
+   * mobile column-reverse order) still works.
+   */
+  #relocateItems() {
+    const rightList = this.querySelector('.health-features__list--right');
+    if (!rightList) return;
+
+    for (const item of this.refs.items ?? []) {
+      if (item.dataset.side === 'right' && item.parentElement !== rightList) {
+        rightList.append(item);
+      }
+    }
   }
 
   disconnectedCallback() {
