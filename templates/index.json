@@ -1431,7 +1431,7 @@
         "item_active_text_color": "#FFFFFF",
         "content_max_width": 1920,
         "items_gap": 40,
-        "items_gap_mobile": 16,
+        "items_gap_mobile": 40,
         "padding_block_start": 80,
         "padding_block_end": 80,
         "padding_inline_start": 160,
