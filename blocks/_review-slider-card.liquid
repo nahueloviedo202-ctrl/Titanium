@@ -1,0 +1,166 @@
+
+
+{%- liquid
+  assign rating_value = block.settings.rating | at_most: 5 | at_least: 0
+-%}
+
+<article
+  ref="slides[]"
+  class="review-slider-card"
+  {{ block.shopify_attributes }}
+>
+  <div class="review-slider-card__top">
+    <div class="review-slider-card__avatar">
+      {%- if block.settings.image != blank -%}
+        {{
+          block.settings.image
+          | image_url: width: 96
+          | image_tag: widths: '48, 96', sizes: '48px', loading: 'lazy', alt: block.settings.author
+        }}
+      {%- else -%}
+        {{ 'person' | placeholder_svg_tag: 'review-slider-card__avatar-placeholder' }}
+      {%- endif -%}
+    </div>
+    <div class="review-slider-card__meta">
+      {%- if block.settings.author != blank -%}
+        <p class="review-slider-card__author">{{ block.settings.author }}</p>
+      {%- endif -%}
+      {%- if rating_value > 0 -%}
+        <div
+          class="review-slider-card__stars"
+          aria-hidden="true"
+        >
+          {%- for i in (1..5) -%}
+            <span class="review-slider-card__star{% if i <= rating_value %} review-slider-card__star--filled{% endif %}">
+              {% render 'icon-or-image', icon: 'star', width: 14, class_name: 'review-slider-card__star-icon' %}
+            </span>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- if block.settings.quote != blank -%}
+    <p class="review-slider-card__quote">{{ block.settings.quote }}</p>
+  {%- endif -%}
+</article>
+
+{% stylesheet %}
+  .review-slider-card {
+    flex: 0 0 auto;
+    width: var(--review-slider-mobile-card-width, 240px);
+    min-height: 238px;
+    box-sizing: border-box;
+    padding: 20px;
+    background: var(--review-slider-card-background, #f6f4f0);
+    color: var(--review-slider-card-text-color, #0f0f0f);
+    border-radius: 16px;
+  }
+
+  .review-slider-card__top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .review-slider-card__avatar {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .review-slider-card__avatar img,
+  .review-slider-card__avatar-placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .review-slider-card__author {
+    margin: 0 0 8px;
+    font-family: var(--font-body--family);
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--review-slider-name-color, #2c1f1c);
+  }
+
+  .review-slider-card__stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  .review-slider-card__star {
+    display: flex;
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-20));
+  }
+
+  .review-slider-card__star--filled {
+    color: var(--review-slider-star-color, #b57c46);
+  }
+
+  .review-slider-card__star-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .review-slider-card__quote {
+    margin: 24px 0 0;
+    font-family: var(--font-body--family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--review-slider-quote-color, #252525);
+  }
+
+  @media screen and (min-width: 750px) {
+    .review-slider-card {
+      width: var(--review-slider-card-width, 323.2px);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.review_slider_card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "text",
+      "id": "author",
+      "label": "t:settings.author",
+      "default": "t:text_defaults.review_card_author"
+    },
+    {
+      "type": "range",
+      "id": "rating",
+      "label": "t:settings.rating_value",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "t:settings.quote",
+      "default": "t:text_defaults.review_slider_card_quote"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.review_slider_card",
+      "category": "t:categories.text"
+    }
+  ]
+}
+{% endschema %}
