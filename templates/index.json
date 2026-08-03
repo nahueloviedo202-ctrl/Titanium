@@ -128,6 +128,29 @@
         "padding-block-end": 96
       }
     },
+    "promo_inline_link_pR8fXq": {
+      "type": "promo-inline-link",
+      "name": "t:names.promo_inline_link",
+      "settings": {
+        "prefix": "Save $200 On Our",
+        "link_label": "Best Selling Titanium Pan",
+        "link_url": "",
+        "open_in_new_tab": false,
+        "text_size": 24,
+        "text_size_mobile": 12,
+        "background_color": "#002768",
+        "text_color": "#B0B0B0",
+        "link_color": "#FFFFFF",
+        "padding_block_start": 24,
+        "padding_block_end": 24,
+        "padding_inline_start": 16,
+        "padding_inline_end": 16,
+        "padding_block_start_mobile": 16,
+        "padding_block_end_mobile": 16,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    },
     "category_grid_7xcG8c": {
       "type": "category-grid",
       "blocks": {
@@ -1445,10 +1468,395 @@
         "padding_inline_start_mobile": 0,
         "padding_inline_end_mobile": 0
       }
+    },
+    "reviews_slider_custom_qT4nZw": {
+      "type": "reviews-slider-custom",
+      "blocks": {
+        "cat_boards": {
+          "type": "_review-slider-category",
+          "settings": {
+            "label": "Boards"
+          },
+          "blocks": {
+            "board_1": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Dominique, Dec 2024",
+                "rating": 5,
+                "quote": "In my kitchen, hygiene and precision are everything. This board is not just functional, it's flawless. No bacteria, no toxins, no hassle. I recommend it to every chef I train."
+              }
+            },
+            "board_2": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Sabrina, Mar 2024",
+                "rating": 5,
+                "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
+              }
+            },
+            "board_3": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Tyler, Jan 2025",
+                "rating": 5,
+                "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This board was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
+              }
+            },
+            "board_4": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Jenna, Jul 2025",
+                "rating": 5,
+                "quote": "I make everything from baby food to dinner on this board. It's reassuring to know my kids aren't getting microplastic flakes with their meals."
+              }
+            }
+          },
+          "block_order": [
+            "board_1",
+            "board_2",
+            "board_3",
+            "board_4"
+          ]
+        },
+        "cat_pans": {
+          "type": "_review-slider-category",
+          "settings": {
+            "label": "Pans"
+          },
+          "blocks": {
+            "pan_1": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Jen, Apr 2025",
+                "rating": 5,
+                "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded. Taima products just makes sense."
+              }
+            },
+            "pan_2": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Jason, Jun 2025",
+                "rating": 5,
+                "quote": "Crusty steaks, perfect eggs. No hot spots, no sticking. My new go-to."
+              }
+            },
+            "pan_3": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Tyler, Jan 2025",
+                "rating": 5,
+                "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This pan was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
+              }
+            }
+          },
+          "block_order": [
+            "pan_1",
+            "pan_2",
+            "pan_3"
+          ]
+        }
+      },
+      "block_order": [
+        "cat_boards",
+        "cat_pans"
+      ],
+      "name": "t:names.reviews_slider_custom",
+      "settings": {
+        "heading": "5,000+ 5-Star Reviews",
+        "heading_color": "#BCA588",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
+        "tab_text_color": "#B0B0B0",
+        "tab_border_color": "#454545",
+        "tab_active_background_color": "#A3835F",
+        "tab_active_text_color": "#121212",
+        "card_background_color": "#F6F4F0",
+        "name_color": "#2C1F1C",
+        "quote_color": "#252525",
+        "star_color": "#B57C46",
+        "card_width": 324,
+        "mobile_card_width": 240,
+        "gap": 16,
+        "icons_style": "chevron_large",
+        "icons_shape": "square",
+        "arrow_background_color": "#121212",
+        "arrow_icon_color": "#FFFFFF",
+        "background_color": "#121212",
+        "content_max_width": 1680,
+        "padding_block_start": 120,
+        "padding_block_end": 120,
+        "padding_inline_start": 0,
+        "padding_inline_end": 16,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 16,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    },
+    "heritage_text_mK7vLp": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
+          "settings": {
+            "media_type": "image",
+            "image_position": "cover"
+          }
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Rooted In Tradition.<br>Designed To Outlast You.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "3rem",
+                "line_height": "tight",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#FFFFFF"
+              }
+            },
+            "body": {
+              "type": "text",
+              "settings": {
+                "text": "<p>At Taima®, We Don't Just Make Kitchenware. We Uphold A Standard.</p><p>Shaped by the legacy of Japanese craftsmanship, where perfection isn't a choice, it's a duty. And durability isn't a feature - it's expected. We chose titanium not because it was easy, but because it was right.</p><p>We chose Integrity over shortcuts.<br>Purpose over profit.<br>Excellence over mass production.</p><p>That's why everything we create is built with obsession, backed for life, and made to earn your trust, not your attention. Because when something is made right… It never needs to be replaced.</p><p>All of our products are crafted from 100% sustainable pure titanium. Not just for unmatched hygiene and durability. But as part of our promise to protect your health & the planet.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "loose",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#B0B0B0"
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "body"
+          ]
+        }
+      },
+      "name": "t:names.editorial",
+      "settings": {
+        "media_position": "left",
+        "media_width": "medium",
+        "media_height": "auto",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "story_right_hero_wY3dHb": {
+      "type": "section",
+      "blocks": {
+        "group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "gap": 32
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Our Mission Is Simple.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "4.5rem",
+                "line_height": "tight",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#FFFFFF"
+              }
+            },
+            "body": {
+              "type": "text",
+              "settings": {
+                "text": "<p>To Create Kitchenware So Safe, So Durable, And So Effortless… You'd Never Have To Think About It Again.</p><p>That's It.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "1.5rem",
+                "line_height": "loose",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#B0B0B0"
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "body"
+          ]
+        }
+      },
+      "block_order": [
+        "group"
+      ],
+      "name": "t:names.section",
+      "settings": {
+        "section_width": "full-width",
+        "background_color": "#121212",
+        "padding-block-start": 100,
+        "padding-block-end": 100
+      }
+    },
+    "newsletter_hero_zN5cQe": {
+      "type": "section",
+      "blocks": {
+        "group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 24
+          },
+          "blocks": {
+            "heading": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "gap": 8
+              },
+              "blocks": {
+                "kicker": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>You Deserve Better</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "2.5rem",
+                    "line_height": "tight",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#BCA588"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Than Random Emails.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "2.5rem",
+                    "line_height": "tight",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#F6F4F0"
+                  }
+                }
+              },
+              "block_order": [
+                "kicker",
+                "title"
+              ]
+            },
+            "body": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We only send you things worth opening. Breakthroughs, exclusive launches, toxin-free living tips, and the latest in innovation - before the rest of the world catches on.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "loose",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#B0B0B0"
+              }
+            },
+            "signup": {
+              "type": "email-signup",
+              "settings": {
+                "width": "custom",
+                "custom_width": 60,
+                "border_style": "all",
+                "input_style": "default",
+                "style_class": "button",
+                "display_type": "text",
+                "label": "Subscribe",
+                "integrated_button": true
+              }
+            },
+            "disclaimer": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We hate spam too.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.75rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#B0B0B0"
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "body",
+            "signup",
+            "disclaimer"
+          ]
+        }
+      },
+      "block_order": [
+        "group"
+      ],
+      "name": "t:names.section",
+      "settings": {
+        "section_width": "full-width",
+        "background_color": "#03231A",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
     }
   },
   "order": [
     "hero_video_logos_n9fbJH",
+    "promo_inline_link_pR8fXq",
     "category_grid_7xcG8c",
     "best_sellers_slider_JthhCi",
     "benefits_marquee_eCTXMH",
@@ -1456,6 +1864,10 @@
     "behind_the_scenes_9DxQ97",
     "scroll_text_fade_Bkfit9",
     "materials_comparison_7d3JJc",
-    "health_features_GTYCxq"
+    "health_features_GTYCxq",
+    "reviews_slider_custom_qT4nZw",
+    "heritage_text_mK7vLp",
+    "story_right_hero_wY3dHb",
+    "newsletter_hero_zN5cQe"
   ]
 }
