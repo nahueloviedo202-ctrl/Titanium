@@ -1,0 +1,533 @@
+
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+%}
+
+<section
+  id="ReviewsSliderCustom-{{ section.id }}"
+  class="reviews-slider-custom{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="region"
+  aria-label="{{ 'accessibility.reviews_slider_custom_region' | t }}"
+>
+  <div
+    class="reviews-slider-custom__inner"
+    style="
+      max-width: {{ section.settings.content_max_width }}px;
+      --review-slider-padding-block-start: {{ section.settings.padding_block_start }}px;
+      --review-slider-padding-block-end: {{ section.settings.padding_block_end }}px;
+      --review-slider-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+      --review-slider-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+      --review-slider-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+      --review-slider-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+      --review-slider-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+      --review-slider-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+    "
+  >
+    {%- if section.settings.heading != blank -%}
+      <h2
+        class="reviews-slider-custom__heading"
+        style="
+          color: {{ section.settings.heading_color }};
+          --review-slider-heading-size: {{ section.settings.heading_font_size }}px;
+          --review-slider-heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+        "
+      >
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <script
+        src="{{ 'materials-comparison.js' | asset_url }}"
+        type="module"
+        fetchpriority="low"
+      ></script>
+      <materials-comparison-component
+        class="reviews-slider-custom__component"
+        style="
+          --review-slider-tab-text-color: {{ section.settings.tab_text_color }};
+          --review-slider-tab-border-color: {{ section.settings.tab_border_color }};
+          --review-slider-tab-active-background: {{ section.settings.tab_active_background_color }};
+          --review-slider-tab-active-text-color: {{ section.settings.tab_active_text_color }};
+          --review-slider-card-background: {{ section.settings.card_background_color }};
+          --review-slider-card-text-color: {{ section.settings.card_text_color }};
+          --review-slider-name-color: {{ section.settings.name_color }};
+          --review-slider-quote-color: {{ section.settings.quote_color }};
+          --review-slider-star-color: {{ section.settings.star_color }};
+          --review-slider-card-width: {{ section.settings.card_width }}px;
+          --review-slider-mobile-card-width: {{ section.settings.mobile_card_width }}px;
+          --review-slider-gap: {{ section.settings.gap }}px;
+          --review-slider-arrow-background: {{ section.settings.arrow_background_color }};
+          --review-slider-arrow-color: {{ section.settings.arrow_icon_color }};
+        "
+      >
+        <div
+          class="reviews-slider-custom__tablist"
+          role="tablist"
+          aria-label="{{ 'accessibility.reviews_slider_custom_categories' | t }}"
+        >
+          {% content_for 'blocks' %}
+        </div>
+      </materials-comparison-component>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .reviews-slider-custom {
+    position: relative;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .reviews-slider-custom__inner {
+    margin-inline: auto;
+    padding-block: var(--review-slider-padding-block-start-mobile, 0) var(--review-slider-padding-block-end-mobile, 0);
+    padding-inline: var(--review-slider-padding-inline-start-mobile, 0) var(--review-slider-padding-inline-end-mobile, 0);
+  }
+
+  .reviews-slider-custom__heading {
+    margin: 0 0 3rem;
+    color: var(--review-slider-heading-color, #bca588);
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: var(--line-height--display-loose);
+    letter-spacing: var(--letter-spacing--display-loose);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: var(--review-slider-heading-size-mobile, 24px);
+  }
+
+  .reviews-slider-custom__component {
+    display: block;
+  }
+
+  .reviews-slider-custom__tablist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    row-gap: 3rem;
+    margin-block-end: 3rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .reviews-slider-custom__inner {
+      padding-block: var(--review-slider-padding-block-start, 0) var(--review-slider-padding-block-end, 0);
+      padding-inline: var(--review-slider-padding-inline-start, 0) var(--review-slider-padding-inline-end, 0);
+    }
+
+    .reviews-slider-custom__heading {
+      text-align: left;
+      font-size: var(--review-slider-heading-size, 48px);
+    }
+
+    .reviews-slider-custom__tablist {
+      flex-wrap: nowrap;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.reviews_slider_custom",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_review-slider-category"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "5,000+ 5-Star Reviews"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "tab_text_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "color",
+      "id": "tab_border_color",
+      "label": "t:settings.border_color",
+      "default": "#454545"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_background_color",
+      "label": "t:settings.background_color",
+      "default": "#A3835F"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_text_color",
+      "label": "t:settings.text_color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "t:content.cards_layout"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "t:settings.background_color",
+      "default": "#F6F4F0"
+    },
+    {
+      "type": "color",
+      "id": "name_color",
+      "label": "t:settings.text_color",
+      "default": "#2C1F1C"
+    },
+    {
+      "type": "color",
+      "id": "quote_color",
+      "label": "t:settings.text_color",
+      "default": "#252525"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "t:settings.star_color",
+      "default": "#B57C46"
+    },
+    {
+      "type": "header",
+      "content": "t:content.carousel_navigation"
+    },
+    {
+      "type": "range",
+      "id": "card_width",
+      "label": "t:settings.width",
+      "min": 240,
+      "max": 480,
+      "step": 4,
+      "unit": "px",
+      "default": 324
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_width",
+      "label": "t:settings.mobile_card_width",
+      "min": 160,
+      "max": 320,
+      "step": 10,
+      "unit": "px",
+      "default": 240
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "icons_style",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "arrow",
+          "label": "t:options.arrows"
+        },
+        {
+          "value": "chevron",
+          "label": "t:options.chevrons"
+        },
+        {
+          "value": "arrows_large",
+          "label": "t:options.arrows_large"
+        },
+        {
+          "value": "chevron_large",
+          "label": "t:options.chevron_large"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "chevron_large"
+    },
+    {
+      "type": "select",
+      "id": "icons_shape",
+      "label": "t:settings.icon_background",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "circle",
+          "label": "t:options.circle"
+        },
+        {
+          "value": "square",
+          "label": "t:options.square"
+        }
+      ],
+      "default": "square",
+      "visible_if": "{{ section.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_background_color",
+      "label": "t:settings.arrow_background_color",
+      "default": "#121212",
+      "visible_if": "{{ section.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_icon_color",
+      "label": "t:settings.arrow_icon_color",
+      "default": "#FFFFFF",
+      "visible_if": "{{ section.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "t:settings.width",
+      "min": 1200,
+      "max": 2400,
+      "step": 20,
+      "unit": "px",
+      "default": 1680
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.reviews_slider_custom",
+      "category": "t:categories.storytelling",
+      "blocks": {
+        "cat_boards": {
+          "type": "_review-slider-category",
+          "settings": {
+            "label": "Boards"
+          },
+          "blocks": {
+            "board_1": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Dominique, Dec 2024",
+                "rating": 5,
+                "quote": "In my kitchen, hygiene and precision are everything. This board is not just functional, it's flawless. No bacteria, no toxins, no hassle. I recommend it to every chef I train."
+              }
+            },
+            "board_2": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Sabrina, Mar 2024",
+                "rating": 5,
+                "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
+              }
+            },
+            "board_3": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Tyler, Jan 2025",
+                "rating": 5,
+                "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This board was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
+              }
+            },
+            "board_4": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Jenna, Jul 2025",
+                "rating": 5,
+                "quote": "I make everything from baby food to dinner on this board. It's reassuring to know my kids aren't getting microplastic flakes with their meals."
+              }
+            }
+          },
+          "block_order": ["board_1", "board_2", "board_3", "board_4"]
+        },
+        "cat_pans": {
+          "type": "_review-slider-category",
+          "settings": {
+            "label": "Pans"
+          },
+          "blocks": {
+            "pan_1": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Jen, Apr 2025",
+                "rating": 5,
+                "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded. Taima products just makes sense."
+              }
+            },
+            "pan_2": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Jason, Jun 2025",
+                "rating": 5,
+                "quote": "Crusty steaks, perfect eggs. No hot spots, no sticking. My new go-to."
+              }
+            },
+            "pan_3": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Tyler, Jan 2025",
+                "rating": 5,
+                "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This pan was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
+              }
+            }
+          },
+          "block_order": ["pan_1", "pan_2", "pan_3"]
+        }
+      },
+      "block_order": ["cat_boards", "cat_pans"]
+    }
+  ]
+}
+{% endschema %}
