@@ -138,9 +138,9 @@
         "open_in_new_tab": false,
         "text_size": 24,
         "text_size_mobile": 12,
-        "background_color": "#002768",
-        "text_color": "#B0B0B0",
-        "link_color": "#FFFFFF",
+        "background_color": "#00221C",
+        "text_color": "#b0b0b0",
+        "link_color": "#ffffff",
         "padding_block_start": 24,
         "padding_block_end": 24,
         "padding_inline_start": 16,
@@ -624,7 +624,7 @@
         "gap": 96,
         "icon_height": 50,
         "text_size": 30,
-        "background_color": "#002768",
+        "background_color": "#00221C",
         "text_color": "#d4c7b4",
         "padding-block-start": 30,
         "padding-block-end": 30,
@@ -1275,6 +1275,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "No Toxins",
+            "body": "",
             "side": "left"
           },
           "blocks": {}
@@ -1283,6 +1284,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "Biocompatible",
+            "body": "",
             "side": "left"
           },
           "blocks": {}
@@ -1291,6 +1293,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "Extremely Hygienic",
+            "body": "",
             "side": "left"
           },
           "blocks": {}
@@ -1299,6 +1302,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "Naturally Antibacterial",
+            "body": "",
             "side": "left"
           },
           "blocks": {}
@@ -1307,6 +1311,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "Mold & Fungi Resistant",
+            "body": "",
             "side": "left"
           },
           "blocks": {}
@@ -1315,6 +1320,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "No Cross-Contamination",
+            "body": "",
             "side": "left"
           },
           "blocks": {}
@@ -1323,6 +1329,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "No Heavy Metals",
+            "body": "",
             "side": "right"
           },
           "blocks": {}
@@ -1331,6 +1338,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "Effortless To Clean",
+            "body": "",
             "side": "right"
           },
           "blocks": {}
@@ -1339,6 +1347,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "Never Breaks Down",
+            "body": "",
             "side": "right"
           },
           "blocks": {}
@@ -1347,6 +1356,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "Sustainable By Design",
+            "body": "",
             "side": "right"
           },
           "blocks": {}
@@ -1355,6 +1365,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "Safe At Any Temperature",
+            "body": "",
             "side": "right"
           },
           "blocks": {}
@@ -1363,6 +1374,7 @@
           "type": "_health-feature",
           "settings": {
             "text": "PFAS-Free. Microplastic-Free.",
+            "body": "",
             "side": "right"
           },
           "blocks": {}
@@ -1385,15 +1397,16 @@
       "name": "t:names.health_features",
       "settings": {
         "heading": "The Kitchenware Your Body Deserves",
-        "heading_color": "#BCA588",
+        "heading_color": "#bca588",
         "heading_font_size": 48,
         "heading_font_size_mobile": 24,
+        "subheading": "",
         "image": "shopify://shop_images/homepage_new_pan-min.webp",
         "image_mobile": "shopify://shop_images/to_compress_mobile_homepage-min_1.webp",
         "image_swap_mobile": "shopify://shop_images/board_homepage_smaller-min_1.webp",
-        "background_color": "#03231A",
-        "item_text_color": "#B9B2A8",
-        "item_active_text_color": "#FFFFFF",
+        "background_color": "#03231a",
+        "item_text_color": "#b9b2a8",
+        "item_active_text_color": "#ffffff",
         "content_max_width": 1920,
         "items_gap": 40,
         "items_gap_mobile": 16,
@@ -1422,7 +1435,8 @@
                 "author": "Dominique, Dec 2024",
                 "rating": 5,
                 "quote": "In my kitchen, hygiene and precision are everything. This board is not just functional, it's flawless. No bacteria, no toxins, no hassle. I recommend it to every chef I train."
-              }
+              },
+              "blocks": {}
             },
             "board_2": {
               "type": "_review-slider-card",
@@ -1430,7 +1444,8 @@
                 "author": "Sabrina, Mar 2024",
                 "rating": 5,
                 "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
-              }
+              },
+              "blocks": {}
             },
             "board_3": {
               "type": "_review-slider-card",
@@ -1438,7 +1453,8 @@
                 "author": "Tyler, Jan 2025",
                 "rating": 5,
                 "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This board was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
-              }
+              },
+              "blocks": {}
             },
             "board_4": {
               "type": "_review-slider-card",
@@ -1446,7 +1462,8 @@
                 "author": "Jenna, Jul 2025",
                 "rating": 5,
                 "quote": "I make everything from baby food to dinner on this board. It's reassuring to know my kids aren't getting microplastic flakes with their meals."
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -1468,7 +1485,8 @@
                 "author": "Jen, Apr 2025",
                 "rating": 5,
                 "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded. Taima products just makes sense."
-              }
+              },
+              "blocks": {}
             },
             "pan_2": {
               "type": "_review-slider-card",
@@ -1476,7 +1494,8 @@
                 "author": "Jason, Jun 2025",
                 "rating": 5,
                 "quote": "Crusty steaks, perfect eggs. No hot spots, no sticking. My new go-to."
-              }
+              },
+              "blocks": {}
             },
             "pan_3": {
               "type": "_review-slider-card",
@@ -1484,7 +1503,8 @@
                 "author": "Tyler, Jan 2025",
                 "rating": 5,
                 "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This pan was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -1501,24 +1521,24 @@
       "name": "t:names.reviews_slider_custom",
       "settings": {
         "heading": "5,000+ 5-Star Reviews",
-        "heading_color": "#BCA588",
+        "heading_color": "#bca588",
         "heading_font_size": 48,
         "heading_font_size_mobile": 24,
-        "tab_text_color": "#B0B0B0",
+        "tab_text_color": "#b0b0b0",
         "tab_border_color": "#454545",
-        "tab_active_background_color": "#A3835F",
+        "tab_active_background_color": "#a3835f",
         "tab_active_text_color": "#121212",
-        "card_background_color": "#F6F4F0",
-        "name_color": "#2C1F1C",
+        "card_background_color": "#f6f4f0",
+        "name_color": "#2c1f1c",
         "quote_color": "#252525",
-        "star_color": "#B57C46",
+        "star_color": "#b57c46",
         "card_width": 324,
         "mobile_card_width": 240,
         "gap": 16,
         "icons_style": "chevron_large",
         "icons_shape": "square",
         "arrow_background_color": "#121212",
-        "arrow_icon_color": "#FFFFFF",
+        "arrow_icon_color": "#ffffff",
         "background_color": "#121212",
         "content_max_width": 1680,
         "padding_block_start": 120,
@@ -1539,15 +1559,21 @@
           "static": true,
           "settings": {
             "media_type": "image",
-            "image_position": "cover"
-          }
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
+          },
+          "blocks": {}
         },
         "content": {
           "type": "_content-without-appearance",
           "static": true,
           "settings": {
             "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center"
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24
           },
           "blocks": {
             "heading": {
@@ -1564,8 +1590,16 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#FFFFFF"
-              }
+                "text_color": "#ffffff",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "body": {
               "type": "text",
@@ -1581,8 +1615,16 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#B0B0B0"
-              }
+                "text_color": "#b0b0b0",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -1597,6 +1639,8 @@
         "media_width": "medium",
         "media_height": "auto",
         "section_width": "full-width",
+        "extend_media": true,
+        "background_color": "",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -1608,8 +1652,39 @@
           "type": "group",
           "settings": {
             "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
-            "gap": 32
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 32,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "heading": {
@@ -1626,8 +1701,16 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#FFFFFF"
-              }
+                "text_color": "#ffffff",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "body": {
               "type": "text",
@@ -1643,8 +1726,16 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#B0B0B0"
-              }
+                "text_color": "#b0b0b0",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -1658,8 +1749,30 @@
       ],
       "name": "t:names.section",
       "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
         "section_width": "full-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
         "background_color": "#121212",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 100,
         "padding-block-end": 100
       }
@@ -1671,17 +1784,78 @@
           "type": "group",
           "settings": {
             "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
-            "gap": 24
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "heading": {
               "type": "group",
               "settings": {
                 "content_direction": "row",
+                "vertical_on_mobile": true,
                 "horizontal_alignment": "center",
                 "vertical_alignment": "center",
-                "gap": 8
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "kicker": {
@@ -1698,8 +1872,16 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#BCA588"
-                  }
+                    "text_color": "#bca588",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "title": {
                   "type": "text",
@@ -1715,8 +1897,16 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#F6F4F0"
-                  }
+                    "text_color": "#f6f4f0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1738,21 +1928,48 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#B0B0B0"
-              }
+                "text_color": "#b0b0b0",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "signup": {
               "type": "email-signup",
               "settings": {
                 "width": "custom",
                 "custom_width": 60,
+                "heading": "",
+                "heading_text_color": "",
+                "heading_preset": "h3",
                 "border_style": "all",
                 "input_style": "default",
+                "border_width": 1,
+                "border_radius": 100,
+                "input_background_color": "",
+                "input_text_color": "",
+                "input_border_color": "",
+                "input_type_preset": "paragraph",
                 "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
                 "display_type": "text",
                 "label": "Subscribe",
-                "integrated_button": true
-              }
+                "integrated_button": true,
+                "button_type_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "disclaimer": {
               "type": "text",
@@ -1768,8 +1985,16 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#B0B0B0"
-              }
+                "text_color": "#b0b0b0",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -1785,8 +2010,30 @@
       ],
       "name": "t:names.section",
       "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
         "section_width": "full-width",
-        "background_color": "#03231A",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#03231a",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 96,
         "padding-block-end": 96
       }
