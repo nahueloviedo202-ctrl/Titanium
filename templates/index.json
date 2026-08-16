@@ -134,7 +134,7 @@
       "settings": {
         "prefix": "Save $200 On Our",
         "link_label": "Best Selling Titanium Pan",
-        "link_url": "",
+        "link_url": "shopify://collections/best-sellers",
         "open_in_new_tab": false,
         "text_size": 24,
         "text_size_mobile": 12,
