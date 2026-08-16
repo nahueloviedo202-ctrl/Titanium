@@ -1,0 +1,1316 @@
+{
+  "sections": {
+    "sticky_scroll_hero": {
+      "type": "sticky-scroll-story",
+      "settings": {
+        "media_position": "right",
+        "background_color": "#121212",
+        "content_max_width": 1600,
+        "padding_block_start": 64,
+        "padding_block_end": 64,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 40,
+        "padding_block_end_mobile": 40,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      },
+      "blocks": {
+        "line_1": {
+          "type": "_sticky-scroll-line",
+          "settings": {
+            "heading": "The Science Behind Titanium",
+            "heading_size": "xl",
+            "body": "<p><strong>Why We Chose The World's Most Trusted Metal For Your Kitchen</strong></p><p>Few metals in human history have earned the level of trust titanium holds. And when you see the science behind it, you'll understand why no other material comes close.</p>",
+            "body_size": "large"
+          }
+        },
+        "line_2": {
+          "type": "_sticky-scroll-line",
+          "settings": {
+            "heading": "Let's Break It Down.",
+            "heading_size": "small"
+          }
+        },
+        "line_3": {
+          "type": "_sticky-scroll-line",
+          "settings": {
+            "heading": "What Is Titanium & Why Is It Important For Your Safety",
+            "heading_size": "large",
+            "body": "<p>Titanium is not just another metal. It's one of the strongest, most resilient, and most biocompatible materials known to man.</p><p>The name itself comes from the Titans of Greek mythology - ancient gods of immense power and endurance. And ever since, titanium has lived up to its name.</p>",
+            "body_size": "medium"
+          }
+        }
+      },
+      "block_order": ["line_1", "line_2", "line_3"]
+    },
+    "section_trusted_failure": {
+      "type": "section",
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 56,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_media": "none",
+        "background_color": "#121212",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      },
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Trusted Where Failure Isn't An Option</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "text_color": "#BCA588",
+            "font": "var(--font-body--family)",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty"
+          }
+        },
+        "intro": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Because of its extreme durability, resistance to corrosion, and complete biocompatibility, titanium is the material of choice in the fields where failure is not an option.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty"
+          }
+        },
+        "row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-start",
+            "gap": 32,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "background_media": "none",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "card_1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "background_media": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "image": {
+                  "type": "image",
+                  "settings": { "image_ratio": "square", "width": "fill", "height": "fit" }
+                },
+                "heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Medicine & Surgery</h3>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Since the 1960s, surgeons have relied on titanium implants for hip replacements and dental posts, prized for how safely it integrates with living bone and tissue.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                }
+              },
+              "block_order": ["image", "heading", "text"]
+            },
+            "card_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "background_media": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "image": {
+                  "type": "image",
+                  "settings": { "image_ratio": "square", "width": "fill", "height": "fit" }
+                },
+                "heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Aerospace & Engineering</h3>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>When the SR-71 Blackbird flew three times the speed of sound, its titanium body endured temperatures over 800°F for decades without failure.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                }
+              },
+              "block_order": ["image", "heading", "text"]
+            },
+            "card_3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "background_media": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "image": {
+                  "type": "image",
+                  "settings": { "image_ratio": "square", "width": "fill", "height": "fit" }
+                },
+                "heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Military & Defense</h3>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Militaries around the world rely on titanium for armor, aircraft, and naval vessels because of its unmatched strength-to-weight ratio.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                }
+              },
+              "block_order": ["image", "heading", "text"]
+            },
+            "card_4": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "background_media": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "image": {
+                  "type": "image",
+                  "settings": { "image_ratio": "square", "width": "fill", "height": "fit" }
+                },
+                "heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Everyday Technology</h3>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>From high-performance bicycles and watches to deep-sea submarines, titanium quietly proves itself everywhere reliability matters.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                }
+              },
+              "block_order": ["image", "heading", "text"]
+            }
+          },
+          "block_order": ["card_1", "card_2", "card_3", "card_4"]
+        }
+      },
+      "block_order": ["heading", "intro", "row"]
+    },
+    "best_sellers_slider_science": {
+      "type": "best-sellers-slider",
+      "settings": {
+        "collection": "",
+        "max_products": 8,
+        "heading": "So Why Titanium Kitchenware?",
+        "heading_color": "#bca588",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
+        "section_width": "full-width",
+        "slides_per_view": 5,
+        "mobile_card_width": 250,
+        "gap": 16,
+        "image_ratio": "square",
+        "background_color": "#121212",
+        "card_border_color": "#333333",
+        "card_border_width": 2,
+        "card_corner_radius": 24,
+        "card_shadow": true,
+        "badge_background_color": "#bf092f",
+        "badge_text_color": "#ffffff",
+        "title_color": "#f6f4f0",
+        "title_font_size": 16,
+        "subtitle_color": "#d4c7b4",
+        "subtitle_font_size": 14,
+        "price_color": "#f6f4f0",
+        "compare_price_color": "#bca588",
+        "price_font_size": 20,
+        "icons_style": "arrow",
+        "icons_shape": "square",
+        "arrow_background_color": "#a3835f",
+        "arrow_icon_color": "#121212",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "padding-block-start": 80,
+        "padding-block-end": 80,
+        "padding-inline-start": 120,
+        "padding-inline-end": 120
+      }
+    },
+    "sticky_scroll_benefit": {
+      "type": "sticky-scroll-story",
+      "settings": {
+        "media_position": "left",
+        "background_color": "#121212",
+        "content_max_width": 1600,
+        "padding_block_start": 64,
+        "padding_block_end": 64,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 40,
+        "padding_block_end_mobile": 40,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      },
+      "blocks": {
+        "line_1": {
+          "type": "_sticky-scroll-line",
+          "settings": {
+            "heading": "What's The Real Benefit?",
+            "heading_size": "xl",
+            "body": "<p>To understand the value of titanium, you first need to look at the alternatives.</p>",
+            "body_size": "large"
+          }
+        },
+        "line_2": {
+          "type": "_sticky-scroll-line",
+          "settings": {
+            "body": "<p>For decades, cookware companies have cut corners - using cheap materials, chemical coatings, and short-term fixes. Convenience came first. Safety never did.</p>",
+            "body_size": "medium"
+          }
+        },
+        "line_3": {
+          "type": "_sticky-scroll-line",
+          "settings": {
+            "body": "<p>The result? A kitchen full of tools that look fine on the surface, but quietly expose you to toxins, heavy metals, and bacteria with every meal.</p>",
+            "body_size": "medium"
+          }
+        },
+        "line_4": {
+          "type": "_sticky-scroll-line",
+          "settings": {
+            "body": "<p>That's exactly why we built Taima® on titanium. It's the only material that gives you absolute safety, durability, and purity, and thanks to our patented engineering, it's just as convenient to use every day. Now, let's take a closer look at how every other material falls short.</p>",
+            "body_size": "medium"
+          }
+        }
+      },
+      "block_order": ["line_1", "line_2", "line_3", "line_4"]
+    },
+    "materials_comparison_science": {
+      "type": "materials-comparison",
+      "blocks": {
+        "material_category_1": {
+          "type": "_material-category",
+          "settings": { "label": "Pans" },
+          "blocks": {
+            "material_card_1": {
+              "type": "_material-card",
+              "settings": {
+                "image": "shopify://shop_images/non_stick-min_374f3d34-196a-4768-a3e3-47e6f117a97b.jpg",
+                "badge_text": "FOREVER CHEMICALS",
+                "title": "Non-Stick Coated / Teflon",
+                "text": "Worst type of pan surface there is. Teflon / majority of non-stick pans release toxic PFAS chemicals, known as \"forever chemicals\" which have been linked to cancer and liver damage. The coating easily shaves off over time and can't handle the heat exposing your food to toxins."
+              }
+            },
+            "material_card_2": {
+              "type": "_material-card",
+              "settings": {
+                "image": "shopify://shop_images/steel-min_ffa0915f-a72e-44ed-84d6-12d76921a216.webp",
+                "badge_text": "HEAVY METALS",
+                "title": "Stainless Steel",
+                "text": "Requires lots of oil to prevent sticking, and reacts with acidic foods - altering taste and potentially leaching metals in lower-quality pans. Tougher to clean, high effort to maintain."
+              }
+            },
+            "material_card_3": {
+              "type": "_material-card",
+              "settings": {
+                "image": "shopify://shop_images/ceramic-min_c6855de1-b4bc-4ad4-8545-880b3ec41164.webp",
+                "badge_text": "ALUMINUM BASE",
+                "title": "Ceramic",
+                "text": "Ceramic coatings are very fragile, once chipped, they expose toxic aluminum base. Most only last 1-2 years before losing their non-stick. Expensive to replace, unreliable long-term."
+              }
+            },
+            "material_card_4": {
+              "type": "_material-card",
+              "settings": {
+                "image": "shopify://shop_images/cast_iron-min_ccb7b927-75cd-4303-89d7-fe8a2dde8ff3.webp",
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Cast Iron",
+                "text": "Incredibly heavy and high-maintenance - cast iron rusts easily without regular seasoning and struggles with acidic foods, which can degrade the surface and alter flavor."
+              }
+            },
+            "material_card_5": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Carbon Steel",
+                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
+              }
+            }
+          },
+          "block_order": ["material_card_1", "material_card_2", "material_card_3", "material_card_4", "material_card_5"]
+        },
+        "material_category_2": {
+          "type": "_material-category",
+          "settings": { "label": "Cutting Boards" },
+          "blocks": {
+            "material_card_1": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "MICROPLASTICS",
+                "title": "Plastic",
+                "text": "Contains BPA's or other harmful chemicals that shave off into food during cutting, posing a risk to hormone, gut & brain health."
+              }
+            },
+            "material_card_2": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | MOLD",
+                "title": "Solid Wood",
+                "text": "Not hygienic. Wood is porous, it absorbs raw food juices & moisture. Cut grooves trap bacteria, making it nearly impossible to sterilize. Mold and contamination are almost guaranteed over time. They also absorb odors, stain easily."
+              }
+            },
+            "material_card_3": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "FORMALDEHYDE",
+                "title": "Bamboo & End-Grain",
+                "text": "Same risks as solid wood, plus they're pieced together from small blocks using industrial glue that contains carcinogenic formaldehyde chemicals. Not just unhygienic - unsafe."
+              }
+            },
+            "material_card_4": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "INCONVENIENT",
+                "title": "Glass / Stone / Steel",
+                "text": "These materials are very hard & dull knives quickly. Very heavy as well."
+              }
+            }
+          },
+          "block_order": ["material_card_1", "material_card_2", "material_card_3", "material_card_4"]
+        },
+        "material_category_3": {
+          "type": "_material-category",
+          "settings": { "label": "Utensils" },
+          "blocks": {
+            "material_card_1": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Plastic",
+                "text": "Plastic spatulas have a very low melting temperature, releasing toxic chemicals each time they're used, causing serious health risks like gut, hormone disruption & cancer."
+              }
+            },
+            "material_card_2": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Silicone",
+                "text": "While high-end silicone spatulas are heat-resistant, most found on Amazon or in regular stores degrade over time and release toxic chemicals. Cheaper silicone spatulas often contain dangerous fillers like BPA and phthalates, becoming toxic when heated."
+              }
+            },
+            "material_card_3": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | MOLD",
+                "title": "Wood",
+                "text": "Not hygienic. It lets bacteria grow in grooves and cracks, even if invisible, which can contaminate your food over time. They also absorb odors, stain easily."
+              }
+            },
+            "material_card_4": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Steel",
+                "text": "Most are made from low-grade alloys that release heavy metals like chromium and nickel into your food when heated. They're also heavy, destroying your cookware's surface."
+              }
+            },
+            "material_card_5": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Carbon Steel",
+                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
+              }
+            }
+          },
+          "block_order": ["material_card_1", "material_card_2", "material_card_3", "material_card_4", "material_card_5"]
+        },
+        "material_category_4": {
+          "type": "_material-category",
+          "settings": { "label": "Water Bottles" },
+          "blocks": {
+            "material_card_1": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Plastic",
+                "text": "Worst type of water bottle. Even BPA-free plastic bottles leach hormone-disrupting chemicals, especially when exposed to heat. The moist environment around the mouthpiece quickly breeds bacteria and mold."
+              }
+            },
+            "material_card_2": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Steel",
+                "text": "Though durable, stainless steel isn't antibacterial like titanium, allowing bacteria from your mouth to thrive inside. Frequent cleaning is essential, as studies show 87% of these bottles contain harmful bacteria like E. coli."
+              }
+            },
+            "material_card_3": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "CHEMICALS",
+                "title": "Aluminum",
+                "text": "Aluminum bottles are often lined with synthetic coatings to prevent the metal from reacting with liquids, but these coatings can break down and leach chemicals into your water. Like other bottles, bacteria and fungi easily grow in aluminum bottles, making them unsanitary."
+              }
+            },
+            "material_card_4": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | FRAGILE",
+                "title": "Glass",
+                "text": "While glass doesn't leach chemicals, it offers no antibacterial protection. Bacteria from your mouth still multiply in the bottle. Additionally, glass is fragile, making it more prone to breakage and less practical for daily use."
+              }
+            }
+          },
+          "block_order": ["material_card_1", "material_card_2", "material_card_3", "material_card_4"]
+        }
+      },
+      "block_order": ["material_category_1", "material_category_2", "material_category_3", "material_category_4"],
+      "settings": {
+        "heading": "Titanium Isn't Competing. It's Replacing.",
+        "heading_color": "#bca588",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
+        "subheading": "From toxin & bacteria risks to high maintenance, these \"outdated\" kitchenware materials just don't measure up.",
+        "subheading_color": "#b0b0b0",
+        "subheading_font_size": 16,
+        "subheading_font_size_mobile": 14,
+        "tab_text_color": "{{ settings.color_palette.background }}",
+        "tab_border_color": "#454545",
+        "tab_active_background_color": "#a3835f",
+        "tab_active_text_color": "{{ settings.color_palette.background }}",
+        "card_border_color": "#333333",
+        "card_corner_radius": 24,
+        "card_title_color": "#ffffff",
+        "card_text_color": "{{ settings.color_palette.color2 }}",
+        "badge_background_color": "#c20c25",
+        "badge_text_color": "{{ settings.color_palette.background }}",
+        "columns": 4,
+        "mobile_card_width": 240,
+        "gap": 16,
+        "icons_style": "none",
+        "icons_shape": "circle",
+        "arrow_background_color": "#a3835f",
+        "arrow_icon_color": "#121212",
+        "background_color": "{{ settings.color_palette.foreground }}",
+        "content_max_width": 1920,
+        "padding_block_start": 120,
+        "padding_block_end": 120,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 64,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    },
+    "section_molecular": {
+      "type": "section",
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_media": "none",
+        "background_color": "#03231A",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      },
+      "blocks": {
+        "row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-start",
+            "gap": 48,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "background_media": "none",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "col_intro": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 20,
+                "width": "custom",
+                "custom_width": 30,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "background_media": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "eyebrow": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>Titanium's Secret Advantage:</h2>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h3",
+                    "text_color": "#BCA588",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "subheading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>A Molecular Structure Unlike Any Other</h3>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Every material breaks down in its own way - wood absorbs and cracks, plastic shaves into microplastics, and steel corrodes under heat and acids - but titanium's crystal structure resists all of it.</p><p>Its atoms arrange in what's called a Hexagonal Close-Packed (HCP) crystal structure - think of it like an interlocking 3D puzzle where every piece supports the others. There are no weak links.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Here's Why That Matters In Your Kitchen:</strong></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                }
+              },
+              "block_order": ["eyebrow", "subheading", "body", "label"]
+            },
+            "col_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "background_media": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "icon": { "type": "icon", "settings": { "icon": "lightning_bolt", "width": 32, "link": "" } },
+                "heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h4>Stress Doesn't Concentrate, It Disperses.</h4>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>When your knife hits titanium, the force doesn't crack or splinter like wood. Instead, it spreads evenly across thousands of tightly packed crystal boundaries. The result? Small, shallow surface marks that wipe clean.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                }
+              },
+              "block_order": ["icon", "heading", "text"]
+            },
+            "col_3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "background_media": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "icon": { "type": "icon", "settings": { "icon": "recycle", "width": 32, "link": "" } },
+                "heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h4>It Gets Tougher The More You Use It.</h4>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium has a rare property called work-hardening. Every time pressure is applied, the atoms actually shift and rearrange to make that exact spot more resistant next time. Most materials degrade under stress. Titanium improves.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                }
+              },
+              "block_order": ["icon", "heading", "text"]
+            },
+            "col_4": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "background_media": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "icon": { "type": "icon", "settings": { "icon": "lock", "width": 32, "link": "" } },
+                "heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h4>Durability Without Compromise.</h4>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>This unique structure explains why titanium doesn't fatigue, doesn't corrode, and doesn't fracture the way other kitchen materials do. It simply endures - getting stronger, cleaner, and safer with every cut.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty"
+                  }
+                }
+              },
+              "block_order": ["icon", "heading", "text"]
+            }
+          },
+          "block_order": ["col_intro", "col_2", "col_3", "col_4"]
+        }
+      },
+      "block_order": ["row"]
+    },
+    "health_features_science": {
+      "type": "health-features",
+      "settings": {
+        "heading": "Real Pure Titanium. Real Benefits.",
+        "heading_color": "#BCA588",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
+        "subheading": "<p>Not all titanium is created equal. Most cut costs by using titanium coatings, blends, or lower grades that compromise purity and safety.</p><p>At Taima®, we only use Grade 1 Certified Medical Titanium - the purest form possible, the same titanium trusted inside the human body for decades. No mixing. No coating. Just uncompromising purity engineered for your kitchen and your safety.</p>",
+        "background_color": "#03231A",
+        "item_text_color": "#B9B2A8",
+        "item_active_text_color": "#FFFFFF",
+        "content_max_width": 1920,
+        "items_gap": 40,
+        "items_gap_mobile": 16,
+        "padding_block_start": 80,
+        "padding_block_end": 80,
+        "padding_inline_start": 160,
+        "padding_inline_end": 160,
+        "padding_block_start_mobile": 56,
+        "padding_block_end_mobile": 56,
+        "padding_inline_start_mobile": 0,
+        "padding_inline_end_mobile": 0
+      },
+      "blocks": {
+        "feat_1": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "It's The Most Biocompatible Metal For The Human Body.",
+            "body": "<p>Pure titanium is chemically stable in cooking and prep conditions. It won't leach into food, disrupt hormones, or trigger allergic reactions.</p>",
+            "side": "left"
+          }
+        },
+        "feat_2": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "Completely Toxin-Free (By Design).",
+            "body": "<p>That's why surgeons trust it in the body. It doesn't break down, flake, or release particles - what goes in your food stays food.</p>",
+            "side": "right"
+          }
+        },
+        "feat_3": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "It Naturally Kills Bacteria (Extremely Hygienic).",
+            "body": "<p>Titanium's dense, non-porous surface leaves nowhere for bacteria to hide, grow, or spread between uses.</p>",
+            "side": "left"
+          }
+        },
+        "feat_4": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "It Never Rusts Or Degrades.",
+            "body": "<p>Steel corrodes because oxygen turns it into rust. Titanium reacts differently, forming a stable oxide layer that protects it forever.</p>",
+            "side": "right"
+          }
+        },
+        "feat_5": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "It's Completely Non-Reactive & Acid-Resistant.",
+            "body": "<p>Tomatoes, citrus, vinegar, oils - all harmless against titanium. While other metals react and alter flavor, titanium stays neutral.</p>",
+            "side": "left"
+          }
+        },
+        "feat_6": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "It Withstands Extreme Heat Day After Day.",
+            "body": "<p>Titanium doesn't warp, crack, or fatigue under extreme temperature changes, even after years of daily use.</p>",
+            "side": "right"
+          }
+        },
+        "feat_7": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "It Preserves Nutrients.",
+            "body": "<p>Reactive metals can strip vitamins like Vitamin C from food through oxidation. Titanium keeps nutrients intact, so your meals deliver what nature intended.</p>",
+            "side": "left"
+          }
+        },
+        "feat_8": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "It Endures Stress.",
+            "body": "<p>Thanks to its unique crystal structure, titanium becomes more resistant with every cut, impact, or use. Instead of weakening, it hardens.</p>",
+            "side": "right"
+          }
+        },
+        "feat_9": {
+          "type": "_health-feature",
+          "settings": {
+            "text": "It Outlasts Generations.",
+            "body": "<p>One titanium board or pan replaces dozens of wood, plastic, or coated alternatives. It's not just long-lasting, it's heirloom quality.</p>",
+            "side": "left"
+          }
+        }
+      },
+      "block_order": ["feat_1", "feat_2", "feat_3", "feat_4", "feat_5", "feat_6", "feat_7", "feat_8", "feat_9"]
+    },
+    "hero_cta": {
+      "type": "hero",
+      "settings": {
+        "media_type_1": "image",
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "full-width",
+        "section_height": "large",
+        "toggle_overlay": true,
+        "overlay_color": "#000000B3",
+        "overlay_style": "solid",
+        "background_color": "#121212"
+      },
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Titanium Was Never Meant For The Kitchen, Until Now</h2>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty"
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For centuries, titanium was reserved for places where lives and missions depended on it. Surgeons. Astronauts. Engineers. Soldiers.</p><p>Nobody dared to bring it into the kitchen, because it was too difficult and too expensive. But that's exactly why we did it.</p><p>Taima® exists because your health deserves the same uncompromising standard as a spacecraft, a life-changing implant, or a jet that defies gravity. You'll never look at a pan, board, or utensil the same way again.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Taima®",
+            "link": "shopify://collections/all",
+            "style_class": "button"
+          }
+        }
+      },
+      "block_order": ["heading", "body", "button"]
+    },
+    "reviews_hero_slider_science": {
+      "type": "reviews-hero-slider",
+      "blocks": {
+        "review_card_1": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/fixed_yellow_2-min_471af5f2-a950-418a-b66a-d33e445051e1.jpg",
+            "image_label": "Titanium Series",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "No Compromise",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>Most pans force you to choose - performance, durability, or convenience. This gives you all 3, without chemicals.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Antonio C., Chef",
+            "author_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "review_card_2": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/board_cold-min.webp",
+            "image_label": "Titanium Board",
+            "badge_color": "",
+            "badge_text_color": "",
+            "title": "I'm Obsessed!",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>It doesn't shed toxins, bacteria can't grow on it, and it's ridiculously easy to clean.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Amanda R.",
+            "author_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "review_card_3": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/pan-min.webp",
+            "image_label": "Titanium Pan",
+            "badge_color": "",
+            "badge_text_color": "",
+            "title": "Non-Stick Without Chemicals",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>When I cook at home for my family I choose only non-toxic cookware, so I don't have to worry about chemicals.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Alice B., Chef",
+            "author_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "review_card_4": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/steak-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "It Looks Fantastic!",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>Taima pan heats up very quickly and evenly, the sear you can achieve with this is amazing.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "RIVERA GOURMET",
+            "author_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "review_card_5": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/steak_2-min.webp",
+            "image_label": "TITANIUM BOARD",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "Naturally Antibacterial & Sterile",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"It's incredibly easy to clean, no smell, no mess just a quick rinse & it's ready to go again\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Jamie C.",
+            "author_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "review_card_6": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/macaron_2-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "Once You Go Titanium, You Won't Go Back",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"The special surface pattern also helps food naturally stick less, so you don't have to worry about chemicals getting into your food\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Happy Customer",
+            "author_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "review_card_7": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/salmon-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "title": "Perfect For Health Conscious People",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"I love it. I love it. I love it\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Lisa A.",
+            "author_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "review_card_8": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/macaron-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "",
+            "title": "Best Non-Toxic Cookware On The Planet",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"With Taima it's easy to make our favorite comfort meals because I can prepare them with complete peace of mind that no toxins are near\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Mateo P.",
+            "author_color": "{{ settings.color_palette.background }}"
+          }
+        }
+      },
+      "block_order": [
+        "review_card_1",
+        "review_card_2",
+        "review_card_3",
+        "review_card_4",
+        "review_card_5",
+        "review_card_6",
+        "review_card_7",
+        "review_card_8"
+      ],
+      "settings": {
+        "show_rating": true,
+        "rating_value": 5,
+        "star_color": "#b57c46",
+        "rating_icon": "shopify://shop_images/star.svg",
+        "rating_icon_size": 24,
+        "rating_icon_size_mobile": 18,
+        "heading": "<p>Trusted By<strong> 500,000+</strong>Kitchens Worldwide</p>",
+        "heading_color": "{{ settings.color_palette.background }}",
+        "highlighted_text_color": "#bca588",
+        "heading_size": 48,
+        "heading_size_mobile": 32,
+        "card_width": 420,
+        "mobile_card_width": 300,
+        "gap": 32,
+        "card_radius": 18,
+        "badge_color": "#b57c46",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrow_background_color": "#a3835f",
+        "arrow_icon_color": "#121212",
+        "background_color": "#121212",
+        "text_color": "{{ settings.color_palette.background }}",
+        "padding_block_start": 80,
+        "padding_block_end": 80,
+        "padding_inline_start": 80,
+        "padding_inline_end": 60,
+        "padding_block_start_mobile": 48,
+        "padding_block_end_mobile": 48,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    }
+  },
+  "order": [
+    "sticky_scroll_hero",
+    "section_trusted_failure",
+    "best_sellers_slider_science",
+    "sticky_scroll_benefit",
+    "materials_comparison_science",
+    "section_molecular",
+    "health_features_science",
+    "hero_cta",
+    "reviews_hero_slider_science"
+  ]
+}

@@ -1,0 +1,140 @@
+{%- doc -%}
+  Renders the collection page banner: the collection title and description
+  alongside a collection-specific image sourced from the
+  `custom.collection_banner` metafield, with a theme editor image as fallback.
+
+  @param {object} section - The section object; reads settings prefixed with `banner_` plus `enable_banner`
+
+  @example
+  {% render 'collection-banner', section: section %}
+{%- enddoc -%}
+
+{%- liquid
+  assign banner_settings = section.settings
+  assign banner_media = collection.metafields.custom.collection_banner
+  if banner_media == blank
+    assign banner_media = banner_settings.banner_image
+  endif
+  assign banner_alt = collection.title | escape
+-%}
+
+{%- if banner_settings.enable_banner and collection != blank -%}
+  <div
+    class="collection-banner"
+    style="--collection-banner-background: {{ banner_settings.banner_background_color }};"
+  >
+    <div class="collection-banner__text">
+      {%- if collection.title != blank -%}
+        <h1
+          class="collection-banner__title"
+          style="color: {{ banner_settings.banner_title_color }};"
+        >
+          {{- collection.title -}}
+        </h1>
+      {%- endif -%}
+      {%- if collection.description != blank -%}
+        <div
+          class="collection-banner__description rte"
+          style="color: {{ banner_settings.banner_description_color }};"
+        >
+          {{- collection.description -}}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if banner_media != blank -%}
+      <div class="collection-banner__media">
+        {{
+          banner_media
+          | image_url: width: 1600
+          | image_tag:
+            widths: '460, 690, 918, 1200, 1600',
+            sizes: '(min-width: 990px) 45vw, 100vw',
+            loading: 'lazy',
+            alt: banner_alt,
+            class: 'collection-banner__image'
+        }}
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .collection-banner {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background: var(--collection-banner-background, #181818);
+  }
+
+  .collection-banner__text {
+    padding: 32px 24px;
+  }
+
+  .collection-banner__title {
+    margin: 0 0 12px;
+    font-family: var(--font-heading--family, var(--font-body--family));
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+  }
+
+  .collection-banner__description {
+    margin: 0;
+    font-family: var(--font-body--family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .collection-banner__description :is(p) {
+    margin: 0;
+  }
+
+  .collection-banner__media {
+    overflow: hidden;
+  }
+
+  .collection-banner__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 750px) {
+    .collection-banner__title {
+      font-size: 28.8px;
+      letter-spacing: 1.152px;
+      margin-bottom: 14.4px;
+    }
+
+    .collection-banner__description {
+      font-size: 14.4px;
+      letter-spacing: 0.576px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .collection-banner {
+      grid-template-columns: 1fr min(918px, 45vw);
+      gap: 0;
+    }
+
+    .collection-banner:not(:has(.collection-banner__media)) {
+      grid-template-columns: 1fr;
+    }
+
+    .collection-banner__text {
+      padding: 48px 72px;
+    }
+
+    .collection-banner__media {
+      align-self: stretch;
+      min-height: 260px;
+    }
+  }
+{% endstylesheet %}

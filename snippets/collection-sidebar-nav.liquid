@@ -1,0 +1,118 @@
+{%- doc -%}
+  Renders the vertical collection navigation rail used on collection pages.
+  On desktop it renders as a stacked list of links; on smaller viewports it
+  becomes a horizontally scrollable pill list. Highlights the link that
+  matches the current page.
+
+  @param {object} menu - Linklist object, e.g. from a `link_list` setting
+
+  @example
+  {% render 'collection-sidebar-nav', menu: section.settings.sidebar_menu %}
+{%- enddoc -%}
+
+{%- if menu != blank and menu.links.size > 0 -%}
+  <nav
+    class="collection-sidebar-nav"
+    aria-label="{{ 'accessibility.collection_navigation' | t }}"
+  >
+    <ul
+      class="collection-sidebar-nav__list"
+      role="list"
+    >
+      {%- for link in menu.links -%}
+        <li class="collection-sidebar-nav__item">
+          <a
+            href="{{ link.url }}"
+            class="collection-sidebar-nav__link{% if link.active %} is-active{% endif %}"
+            {% if link.active %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{- link.title -}}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+{%- endif -%}
+
+{% stylesheet %}
+  .collection-sidebar-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .collection-sidebar-nav__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .collection-sidebar-nav__item {
+    flex: 0 0 auto;
+  }
+
+  .collection-sidebar-nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 1px solid var(--collection-sidebar-border-color, #454545);
+    border-radius: var(--style-border-radius-50, 999px);
+    color: var(--collection-sidebar-text-color, #888888);
+    font-family: var(--font-body--family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.58px;
+    text-transform: capitalize;
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0.85;
+    transition: opacity var(--animation-speed, 0.15s) ease, color var(--animation-speed, 0.15s) ease,
+      border-color var(--animation-speed, 0.15s) ease;
+  }
+
+  .collection-sidebar-nav__link:hover {
+    opacity: 1;
+  }
+
+  .collection-sidebar-nav__link.is-active {
+    opacity: 1;
+    color: var(--collection-sidebar-active-text-color, #ffffff);
+    border-color: var(--collection-sidebar-active-text-color, #ffffff);
+  }
+
+  @media screen and (min-width: 990px) {
+    .collection-sidebar-nav__list {
+      flex-direction: column;
+      align-items: stretch;
+      overflow: visible;
+    }
+
+    .collection-sidebar-nav__item {
+      flex: none;
+      border-top: 1px solid var(--collection-sidebar-border-color, #454545);
+    }
+
+    .collection-sidebar-nav__item:last-child {
+      border-bottom: 1px solid var(--collection-sidebar-border-color, #454545);
+    }
+
+    .collection-sidebar-nav__link {
+      padding: 18px 43px;
+      border: none;
+      border-radius: 0;
+    }
+
+    .collection-sidebar-nav__link.is-active {
+      border: none;
+    }
+  }
+{% endstylesheet %}

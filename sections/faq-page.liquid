@@ -1,0 +1,294 @@
+
+
+{% liquid
+  if section.settings.background_color != blank or section.settings.text_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, text_color: section.settings.text_color, section_id: section.id
+  endif
+
+  assign category_blocks = section.blocks | where: 'type', '_faq-category'
+%}
+
+<div
+  class="section-background{% if section.settings.background_color != blank or section.settings.text_color != blank %} color-custom-{{ section.id }}{% endif %}"
+></div>
+<section
+  id="FaqPage-{{ section.id }}"
+  class="faq-page{% if section.settings.background_color != blank or section.settings.text_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="region"
+  aria-label="{{ 'accessibility.faq_page_navigation' | t }}"
+>
+  <div
+    class="faq-page__inner page-width-content spacing-style"
+    style="{% render 'spacing-style', settings: section.settings %}"
+  >
+    <div class="faq-page__layout">
+      {% if category_blocks.size > 0 %}
+        <nav
+          class="faq-page__nav"
+          aria-label="{{ 'accessibility.faq_page_navigation' | t }}"
+        >
+          <ul
+            class="faq-page__nav-list"
+            role="list"
+          >
+            {% for category in category_blocks %}
+              <li class="faq-page__nav-item">
+                <a
+                  href="#faq-category-{{ category.id }}"
+                  class="faq-page__nav-link"
+                  data-faq-nav-link
+                >
+                  {{- category.settings.heading -}}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+
+      <div class="faq-page__content">
+        {% content_for 'blocks' %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .faq-page {
+    position: relative;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+  }
+
+  .faq-page:has(.faq-category) {
+    scroll-behavior: smooth;
+  }
+
+  .faq-page__layout {
+    display: flex;
+    align-items: flex-start;
+    gap: max(24px, calc(var(--spacing-scale) * 64px));
+  }
+
+  .faq-page__nav {
+    position: sticky;
+    top: max(16px, calc(var(--spacing-scale) * 32px));
+    flex: 0 0 280px;
+    max-width: 280px;
+    align-self: flex-start;
+    border-inline-end: 1px solid var(--color-border);
+  }
+
+  .faq-page__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .faq-page__nav-link {
+    display: block;
+    padding-block: max(12px, calc(var(--spacing-scale) * 20px));
+    padding-inline-end: max(12px, calc(var(--spacing-scale) * 20px));
+    border-block-end: 1px solid var(--color-border);
+    color: var(--color-foreground-muted);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: color var(--animation-speed, 0.2s) ease;
+  }
+
+  .faq-page__nav-link:hover,
+  .faq-page__nav-link:focus-visible,
+  .faq-page__nav-link.is-active {
+    color: var(--color-foreground);
+  }
+
+  .faq-page__content {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  @media screen and (max-width: 989px) {
+    .faq-page__layout {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .faq-page__nav {
+      position: static;
+      flex-basis: auto;
+      width: 100%;
+      max-width: none;
+      border-inline-end: none;
+      border-block-end: 1px solid var(--color-border);
+    }
+
+    .faq-page__nav-list {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-block-end: 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .faq-page__nav-item {
+      flex: 0 0 auto;
+    }
+
+    .faq-page__nav-link {
+      padding: 10px 16px;
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  document.querySelectorAll('.faq-page').forEach((root) => {
+    const links = root.querySelectorAll('[data-faq-nav-link]');
+    const categories = root.querySelectorAll('.faq-category[id]');
+    if (!links.length || !categories.length || !('IntersectionObserver' in window)) return;
+
+    const setActive = (id) => {
+      links.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+      });
+    };
+
+    setActive(categories[0].id);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+        if (visible.length) {
+          setActive(visible[0].target.id);
+        }
+      },
+      { rootMargin: '-15% 0px -70% 0px' }
+    );
+
+    categories.forEach((category) => observer.observe(category));
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "t:names.faq_page",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_faq-category"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#121212",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.faq_page",
+      "category": "t:categories.text",
+      "blocks": {
+        "category_1": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "t:text_defaults.faq_category_heading"
+          },
+          "blocks": {
+            "row-1": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "t:text_defaults.when_will_order_arrive"
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "t:html_defaults.work_quickly_to_ship",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["text-1"]
+            }
+          },
+          "block_order": ["row-1"]
+        }
+      },
+      "block_order": ["category_1"]
+    }
+  ]
+}
+{% endschema %}

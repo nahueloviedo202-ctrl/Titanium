@@ -44,6 +44,12 @@
       </h2>
     {%- endif -%}
 
+    {%- if section.settings.subheading != blank -%}
+      <div class="health-features__subheading">
+        {{ section.settings.subheading }}
+      </div>
+    {%- endif -%}
+
     {%- if section.blocks.size > 0 -%}
       <script
         src="{{ 'health-features.js' | asset_url }}"
@@ -123,6 +129,23 @@
     font-size: var(--health-features-heading-size, 48px);
   }
 
+  .health-features__subheading {
+    max-width: 44rem;
+    margin: -2rem auto 3rem;
+    text-align: center;
+    font-family: var(--font-body--family);
+    line-height: 1.5;
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text, 0.7));
+  }
+
+  .health-features__subheading p {
+    margin: 0 0 1em;
+  }
+
+  .health-features__subheading p:last-child {
+    margin-bottom: 0;
+  }
+
   .health-features__grid {
     position: relative;
     display: grid;
@@ -173,6 +196,37 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  .health-features__item--detailed {
+    max-width: 26rem;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  .health-features__list--left .health-features__item--detailed {
+    justify-self: end;
+  }
+
+  .health-features__list--right .health-features__item--detailed {
+    justify-self: start;
+  }
+
+  .health-features__item-body {
+    flex-basis: 100%;
+    margin: 0.5rem 0 0;
+    font-family: var(--font-body--family);
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text, 0.7));
+  }
+
+  .health-features__item-body p {
+    margin: 0 0 1em;
+  }
+
+  .health-features__item-body p:last-child {
+    margin-bottom: 0;
   }
 
   .health-features__media {
@@ -264,6 +318,25 @@
       width: 32px;
       height: 32px;
     }
+
+    .health-features__subheading {
+      max-width: 22.4rem;
+      margin-top: -1rem;
+    }
+
+    .health-features__item--detailed {
+      max-width: none;
+      text-align: center;
+    }
+
+    .health-features__list--left .health-features__item--detailed,
+    .health-features__list--right .health-features__item--detailed {
+      justify-self: center;
+    }
+
+    .health-features__item--detailed .health-features__item-body {
+      font-size: 13px;
+    }
   }
 {% endstylesheet %}
 
@@ -316,6 +389,11 @@
       "step": 1,
       "unit": "px",
       "default": 24
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:settings.subheading"
     },
     {
       "type": "header",
