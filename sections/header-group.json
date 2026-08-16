@@ -11,9 +11,625 @@
   "type": "header",
   "name": "t:names.header",
   "sections": {
+    "announcement_bar": {
+      "type": "header-announcements",
+      "blocks": {
+        "announcement_1": {
+          "type": "_announcement",
+          "settings": {
+            "text": "SAVE 55% BEST-SELLER COOKWARE SET",
+            "link": "",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
+            "weight": "",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "announcement_1"
+      ],
+      "settings": {
+        "speed": 5,
+        "show_arrows": false,
+        "section_width": "page-width",
+        "background_color": "#bf092f",
+        "divider_width": 0,
+        "divider_color": "",
+        "padding-block-start": 10,
+        "padding-block-end": 10
+      }
+    },
     "header_section": {
       "type": "header",
       "blocks": {
+        "category_nav": {
+          "type": "_header-category-nav",
+          "settings": {
+            "background_color": "#121212",
+            "border_color": "#454545",
+            "heading_color": "#ffffff",
+            "text_color": "#b0b0b0",
+            "accent_color": "#bca588",
+            "star_color": "#b57c46",
+            "price_color": "#f6f4f0",
+            "card_background_color": "#252525",
+            "card_corner_radius": 12,
+            "badge_background_color": "#bf092f",
+            "badge_text_color": "#ffffff",
+            "save_badge_background_color": "#bca588",
+            "save_badge_text_color": "#252525",
+            "tab_font_size": 16,
+            "panel_title_font_size": 32
+          },
+          "blocks": {
+            "tab_best_sellers": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "collection": "",
+                "label": "Best Sellers",
+                "title": "Best Sellers",
+                "description": "<p>Taima’s Cookware is a true kitchen workhorse. You get deep sear, caramelization & flawless food release consistently, without the chemicals.</p>",
+                "shop_all_label": "Shop All Bestsellers",
+                "shop_all_link": "/collections/best-sellers",
+                "show_endorsement": true,
+                "endorse_name": "Dominique K. (Michelin-Chef)",
+                "endorse_verified": true,
+                "endorse_rating": 5
+              },
+              "blocks": {
+                "tab_best_sellers_product_1": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Certified Pure Titanium Cutting Board V2",
+                    "link": "/products/certified-taima%E2%84%A2-pure-titanium-cutting-board-v2-updated-design",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "LOW STOCK!",
+                    "save_badge_text": "SAVE 50%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(3481)",
+                    "bullet_1_label": "100% Toxin-Free",
+                    "bullet_2_label": "Antibacterial",
+                    "compare_price": "$199",
+                    "price": "$99"
+                  },
+                  "blocks": {}
+                },
+                "tab_best_sellers_product_2": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Certified Pure Titanium Classic Pan Pro",
+                    "link": "/products/taima-titanium-nutri-pan-pro-2-0",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 50%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(2967)",
+                    "bullet_1_label": "Non-Stick",
+                    "bullet_2_label": "Chemical-Free",
+                    "compare_price": "$349",
+                    "price": "$174"
+                  },
+                  "blocks": {}
+                },
+                "tab_best_sellers_product_3": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Signature Pan Complete Set (8 Piece)",
+                    "link": "/products/pure-titanium-signature-pan-complete-set-8-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(2315)",
+                    "bullet_1_label": "3 Style Pans + 3 lids + 2 Utensils (8 Piece)",
+                    "bullet_2_label": "",
+                    "compare_price": "$1299",
+                    "price": "$599"
+                  },
+                  "blocks": {}
+                },
+                "tab_best_sellers_product_4": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Complete Signature Titanium Cookware Set (14 Piece)",
+                    "link": "/products/complete-signature-titanium-cookware-set-14-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "Limited-4th-of-July-Sale-Bundle!",
+                    "save_badge_text": "SAVE 55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(2189)",
+                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
+                    "bullet_2_label": "",
+                    "compare_price": "$1999",
+                    "price": "$899"
+                  },
+                  "blocks": {}
+                },
+                "tab_best_sellers_product_5": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Complete Classic Titanium Cookware Set (14 Piece)",
+                    "link": "/products/complete-classic-titanium-cookware-set-14-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "-55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(1329)",
+                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
+                    "bullet_2_label": "",
+                    "compare_price": "$1999",
+                    "price": "$899"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "tab_best_sellers_product_1",
+                "tab_best_sellers_product_2",
+                "tab_best_sellers_product_3",
+                "tab_best_sellers_product_4",
+                "tab_best_sellers_product_5"
+              ]
+            },
+            "tab_bundle_save": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "collection": "",
+                "label": "Bundle & Save",
+                "title": "Bundle & Save",
+                "description": "<p>Quality is unreal. From the pans, utensils to the board, every piece feels extremely well made, and better than imagined. Worth every cent!</p>",
+                "shop_all_label": "Shop All Bundles",
+                "shop_all_link": "/collections/bundles",
+                "show_endorsement": true,
+                "endorse_name": "Elen K.",
+                "endorse_verified": true,
+                "endorse_rating": 5
+              },
+              "blocks": {
+                "tab_bundle_save_product_1": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Signature Pan Complete Set (8 Piece)",
+                    "link": "/products/pure-titanium-signature-pan-complete-set-8-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(2315)",
+                    "bullet_1_label": "3 Style Pans + 3 lids + 2 Utensils (8 Piece)",
+                    "bullet_2_label": "",
+                    "compare_price": "$1299",
+                    "price": "$599"
+                  },
+                  "blocks": {}
+                },
+                "tab_bundle_save_product_2": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Cutting Board Set (3 Piece)",
+                    "link": "/products/pure-titanium-cutting-board-set-3-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "LOW STOCK!",
+                    "save_badge_text": "SAVE 55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(952)",
+                    "bullet_1_label": "S+M+L for every kitchen task",
+                    "bullet_2_label": "",
+                    "compare_price": "$699",
+                    "price": "$299"
+                  },
+                  "blocks": {}
+                },
+                "tab_bundle_save_product_3": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Pan Everyday Duo Set (6 Piece)",
+                    "link": "/products/pure-titanium-pan-everyday-duo-set-6-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(857)",
+                    "bullet_1_label": "Two sizes, endless possibilities.",
+                    "bullet_2_label": "",
+                    "compare_price": "$899",
+                    "price": "$399"
+                  },
+                  "blocks": {}
+                },
+                "tab_bundle_save_product_4": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Complete Classic Titanium Cookware Set (14 Piece)",
+                    "link": "/products/complete-classic-titanium-cookware-set-14-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "Ultimate Savings!",
+                    "save_badge_text": "SAVE 55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(1329)",
+                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
+                    "bullet_2_label": "",
+                    "compare_price": "$1999",
+                    "price": "$899"
+                  },
+                  "blocks": {}
+                },
+                "tab_bundle_save_product_5": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Complete Signature Titanium Cookware Set (14 Piece)",
+                    "link": "/products/complete-signature-titanium-cookware-set-14-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "Ultimate Savings!",
+                    "save_badge_text": "SAVE 55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(2189)",
+                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
+                    "bullet_2_label": "",
+                    "compare_price": "$1999",
+                    "price": "$899"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "tab_bundle_save_product_1",
+                "tab_bundle_save_product_2",
+                "tab_bundle_save_product_3",
+                "tab_bundle_save_product_4",
+                "tab_bundle_save_product_5"
+              ]
+            },
+            "tab_cookware": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "collection": "",
+                "label": "Titanium Cookware",
+                "title": "Titanium Cookware",
+                "description": "<p>I can always count on this. It’s far better than the stainless and carbon steel we used before. It sticks significantly less, needs less oil, and makes the final dish noticeably less greasy. That’s always a bonus, especially when cooking for health-focused clients. </p>",
+                "shop_all_label": "Shop All Cookware",
+                "shop_all_link": "/collections/signature-cookware",
+                "show_endorsement": true,
+                "endorse_name": "Marco. (Michelin-Chef)",
+                "endorse_verified": true,
+                "endorse_rating": 5
+              },
+              "blocks": {
+                "tab_cookware_product_1": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Classic Pan Pro",
+                    "link": "/products/taima-titanium-nutri-pan-pro-2-0",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 50%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(2967)",
+                    "bullet_1_label": "The gold standard for everyday cooking",
+                    "bullet_2_label": "",
+                    "compare_price": "$349",
+                    "price": "$174"
+                  },
+                  "blocks": {}
+                },
+                "tab_cookware_product_2": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Wok Pan Pro",
+                    "link": "/products/taima-certified-pure-titanium-wok-pan-pro",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 50%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(1905)",
+                    "bullet_1_label": "High-heat cooking with room to toss, sear & fry",
+                    "bullet_2_label": "",
+                    "compare_price": "$399",
+                    "price": "$199"
+                  },
+                  "blocks": {}
+                },
+                "tab_cookware_product_3": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Deep Pan Pro",
+                    "link": "/products/pure-titanium-deep-pan-pro",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 50%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(1760)",
+                    "bullet_1_label": "Extra depth for hearty stews & saucy pastas",
+                    "bullet_2_label": "",
+                    "compare_price": "$399",
+                    "price": "$199"
+                  },
+                  "blocks": {}
+                },
+                "tab_cookware_product_4": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Signature Pan Set (6 piece)",
+                    "link": "/products/pure-titanium-signature-pan-set-6-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "-54%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(1283)",
+                    "bullet_1_label": "Three pan styles for every cooking style",
+                    "bullet_2_label": "",
+                    "compare_price": "$1199",
+                    "price": "$549"
+                  },
+                  "blocks": {}
+                },
+                "tab_cookware_product_5": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Complete Signature Titanium Cookware Set (14 Piece)",
+                    "link": "/products/complete-signature-titanium-cookware-set-14-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "Limited-4th-of-July-Sale-Bundle!",
+                    "save_badge_text": "-55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(2189)",
+                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
+                    "bullet_2_label": "",
+                    "compare_price": "$1999",
+                    "price": "$899"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "tab_cookware_product_1",
+                "tab_cookware_product_2",
+                "tab_cookware_product_3",
+                "tab_cookware_product_4",
+                "tab_cookware_product_5"
+              ]
+            },
+            "tab_cutting_boards": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "collection": "",
+                "label": "Titanium Cutting Boards",
+                "title": "Titanium Cutting Boards",
+                "description": "<p>\"I’ve ordered a few “titanium” cutting boards online just to test them. Used a spark test & XRF scanner, only Taima actually registered as pure titanium. The rest? steel alloys. Don’t get scammed by fakes. Taima is the real deal!\"</p>",
+                "shop_all_label": "Shop All Cutting Boards",
+                "shop_all_link": "/collections/pure-titanium-certified-cutting-boards",
+                "show_endorsement": true,
+                "endorse_name": "Marcus M. (Engineer)",
+                "endorse_verified": true,
+                "endorse_rating": 5
+              },
+              "blocks": {
+                "tab_cutting_boards_product_1": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Certified Pure Titanium Cutting Board V2",
+                    "link": "/products/certified-taima%E2%84%A2-pure-titanium-cutting-board-v2-updated-design",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "LOW STOCK!",
+                    "save_badge_text": "SAVE 50%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(3481)",
+                    "bullet_1_label": "The First & Only Certified purity. 100% toxin-free",
+                    "bullet_2_label": "",
+                    "compare_price": "$199",
+                    "price": "$99"
+                  },
+                  "blocks": {}
+                },
+                "tab_cutting_boards_product_2": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Must-Have Non-Slip Mat For Titanium Board",
+                    "link": "/products/taima%E2%84%A2-silicone-mat-for-board-non-slip",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 40%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(463)",
+                    "bullet_1_label": "Keeps board stable & protects countertop",
+                    "bullet_2_label": "",
+                    "compare_price": "$59",
+                    "price": "$29"
+                  },
+                  "blocks": {}
+                },
+                "tab_cutting_boards_product_3": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Cutting Board Set",
+                    "link": "/products/pure-titanium-cutting-board-set-3-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "LOW STOCK!",
+                    "save_badge_text": "SAVE 55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(952)",
+                    "bullet_1_label": "S+M+L for every kitchen task",
+                    "bullet_2_label": "",
+                    "compare_price": "$699",
+                    "price": "$299"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "tab_cutting_boards_product_1",
+                "tab_cutting_boards_product_2",
+                "tab_cutting_boards_product_3"
+              ]
+            },
+            "tab_utensils": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "collection": "",
+                "label": "Titanium Utensils",
+                "title": "Titanium Utensils",
+                "description": "<p>“I always used silicone and wooden spatulas, but after discovering the bacteria and mold in wood and the toxic chemicals in silicone, I decided to try the Taima Titanium Spatula. I’d never use any other now!”</p>",
+                "shop_all_label": "Shop All Utensils",
+                "shop_all_link": "/collections/pure-titanium-utensils",
+                "show_endorsement": true,
+                "endorse_name": "Dominique K. (Michelin-Chef)",
+                "endorse_verified": true,
+                "endorse_rating": 5
+              },
+              "blocks": {
+                "tab_utensils_product_1": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Utensils",
+                    "link": "/products/taima%E2%84%A2-100-pure-titanium-spatula",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 50%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(711)",
+                    "bullet_1_label": "Heat-Safe, Toxin-Free, Antibacterial.",
+                    "bullet_2_label": "",
+                    "compare_price": "$89",
+                    "price": "$49"
+                  },
+                  "blocks": {}
+                },
+                "tab_utensils_product_2": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Utensils Set",
+                    "link": "/products/pure-titanium-utensils-set-4-piece",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "MOST POPULAR",
+                    "save_badge_text": "SAVE 55%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(734)",
+                    "bullet_1_label": "Every tool you need for any dish",
+                    "bullet_2_label": "",
+                    "compare_price": "$299",
+                    "price": "$149"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "tab_utensils_product_1",
+                "tab_utensils_product_2"
+              ]
+            },
+            "tab_drinkware": {
+              "type": "_header-category-nav-tab",
+              "settings": {
+                "collection": "",
+                "label": "Titanium Drinkware",
+                "title": "Titanium Drinkware",
+                "description": "<p>\"I used a stainless steel water bottle, but then I read research about how they can grow bacteria and fungi that I was unknowingly ingesting. I started looking for a safer option and found the Taima Titanium Bottle. Now, my bottles don’t smell! \" </p>",
+                "shop_all_label": "Shop All Drinkware",
+                "shop_all_link": "/collections/pure-titanium-drinkware",
+                "show_endorsement": true,
+                "endorse_name": "Alison B.",
+                "endorse_verified": true,
+                "endorse_rating": 5
+              },
+              "blocks": {
+                "tab_drinkware_product_1": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Water Bottle",
+                    "link": "/products/taima%C2%AE-pure-titanium-water-bottle-copy",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 40%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(584)",
+                    "bullet_1_label": "Bacteria resistant. BPA & toxin-free.",
+                    "bullet_2_label": "",
+                    "compare_price": "$179",
+                    "price": "$99"
+                  },
+                  "blocks": {}
+                },
+                "tab_drinkware_product_2": {
+                  "type": "_header-category-nav-product",
+                  "settings": {
+                    "product": "",
+                    "title": "Pure Titanium Ice Cubes",
+                    "link": "/products/taima%C2%AE-pure-titanium-ice-cubes",
+                    "open_in_new_tab": false,
+                    "sale_badge_text": "",
+                    "save_badge_text": "SAVE 40%",
+                    "show_rating": true,
+                    "rating_value": 5,
+                    "review_count": "(409)",
+                    "bullet_1_label": "Reusable for life. BPA & toxin-free.",
+                    "bullet_2_label": "",
+                    "compare_price": "$119",
+                    "price": "$69"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "tab_drinkware_product_1",
+                "tab_drinkware_product_2"
+              ]
+            }
+          },
+          "block_order": [
+            "tab_best_sellers",
+            "tab_bundle_save",
+            "tab_cookware",
+            "tab_cutting_boards",
+            "tab_utensils",
+            "tab_drinkware"
+          ]
+        },
         "header-logo": {
           "type": "_header-logo",
           "static": true,
@@ -47,561 +663,6 @@
             "drawer_dividers": false
           },
           "blocks": {}
-        },
-        "category_nav": {
-          "type": "_header-category-nav",
-          "settings": {
-            "background_color": "#121212",
-            "border_color": "#454545",
-            "heading_color": "#FFFFFF",
-            "text_color": "#B0B0B0",
-            "accent_color": "#BCA588",
-            "star_color": "#B57C46",
-            "price_color": "#F6F4F0",
-            "card_background_color": "#252525",
-            "card_corner_radius": 12,
-            "badge_background_color": "#BF092F",
-            "badge_text_color": "#FFFFFF",
-            "save_badge_background_color": "#BCA588",
-            "save_badge_text_color": "#252525",
-            "tab_font_size": 16,
-            "panel_title_font_size": 32
-          },
-          "blocks": {
-            "tab_best_sellers": {
-              "type": "_header-category-nav-tab",
-              "settings": {
-                "label": "Best Sellers",
-                "title": "Best Sellers",
-                "description": "<p>Taima’s Cookware is a true kitchen workhorse. You get deep sear, caramelization & flawless food release consistently, without the chemicals.</p>",
-                "shop_all_label": "Shop All Bestsellers",
-                "shop_all_link": "/collections/best-sellers",
-                "show_endorsement": true,
-                "endorse_avatar": "shopify://shop_images/Jason_1_b4bf5377-4b6c-436e-81a0-1b4976a23359.png",
-                "endorse_name": "Dominique K. (Michelin-Chef)",
-                "endorse_verified": true,
-                "endorse_rating": 5
-              },
-              "blocks": {
-                "tab_best_sellers_product_1": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/collection_board-min.jpg",
-                    "title": "Certified Pure Titanium Cutting Board V2",
-                    "link": "/products/certified-taima%E2%84%A2-pure-titanium-cutting-board-v2-updated-design",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "LOW STOCK!",
-                    "save_badge_text": "SAVE 50%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(3481)",
-                    "bullet_1_icon": "shopify://shop_images/icons_18.png",
-                    "bullet_1_label": "100% Toxin-Free",
-                    "bullet_2_icon": "shopify://shop_images/icons_19.png",
-                    "bullet_2_label": "Antibacterial",
-                    "compare_price": "$199",
-                    "price": "$99"
-                  },
-                  "blocks": {}
-                },
-                "tab_best_sellers_product_2": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/classic_pan_4th_of_july_product_1500x1500_1.jpg",
-                    "title": "Certified Pure Titanium Classic Pan Pro",
-                    "link": "/products/taima-titanium-nutri-pan-pro-2-0",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 50%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(2967)",
-                    "bullet_1_icon": "shopify://shop_images/icons_6_d31a4aeb-85d9-4ed1-9b3e-284ed03153b0.svg",
-                    "bullet_1_label": "Non-Stick",
-                    "bullet_2_icon": "shopify://shop_images/icons_7_2005a4ef-be69-4e94-96d0-272f49cc8753.svg",
-                    "bullet_2_label": "Chemical-Free",
-                    "compare_price": "$349",
-                    "price": "$174"
-                  },
-                  "blocks": {}
-                },
-                "tab_best_sellers_product_3": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/6-min_c1b0af1c-f8b9-4818-be3c-41201718ede7.jpg",
-                    "title": "Pure Titanium Signature Pan Complete Set (8 Piece)",
-                    "link": "/products/pure-titanium-signature-pan-complete-set-8-piece",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(2315)",
-                    "bullet_1_label": "3 Style Pans + 3 lids + 2 Utensils (8 Piece)",
-                    "compare_price": "$1299",
-                    "price": "$599"
-                  },
-                  "blocks": {}
-                },
-                "tab_best_sellers_product_4": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/11-min_433e6793-5c92-40bc-ab56-733ded9c5378.jpg",
-                    "title": "Complete Signature Titanium Cookware Set (14 Piece)",
-                    "link": "/products/complete-signature-titanium-cookware-set-14-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "Limited-4th-of-July-Sale-Bundle!",
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(2189)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "compare_price": "$1999",
-                    "price": "$899"
-                  },
-                  "blocks": {}
-                },
-                "tab_best_sellers_product_5": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/12-min_a5dc389b-54a1-4cd6-bd5c-6a8de3ac4b12.jpg",
-                    "title": "Complete Classic Titanium Cookware Set (14 Piece)",
-                    "link": "/products/complete-classic-titanium-cookware-set-14-piece",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "-55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(1329)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "compare_price": "$1999",
-                    "price": "$899"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "tab_best_sellers_product_1",
-                "tab_best_sellers_product_2",
-                "tab_best_sellers_product_3",
-                "tab_best_sellers_product_4",
-                "tab_best_sellers_product_5"
-              ]
-            },
-            "tab_bundle_save": {
-              "type": "_header-category-nav-tab",
-              "settings": {
-                "label": "Bundle & Save",
-                "title": "Bundle & Save",
-                "description": "<p>Quality is unreal. From the pans, utensils to the board, every piece feels extremely well made, and better than imagined. Worth every cent!</p>",
-                "shop_all_label": "Shop All Bundles",
-                "shop_all_link": "/collections/bundles",
-                "show_endorsement": true,
-                "endorse_avatar": "shopify://shop_images/kitchen_pans-min.jpg",
-                "endorse_name": "Elen K.",
-                "endorse_verified": true,
-                "endorse_rating": 5
-              },
-              "blocks": {
-                "tab_bundle_save_product_1": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/6-min_c1b0af1c-f8b9-4818-be3c-41201718ede7.jpg",
-                    "title": "Pure Titanium Signature Pan Complete Set (8 Piece)",
-                    "link": "/products/pure-titanium-signature-pan-complete-set-8-piece",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(2315)",
-                    "bullet_1_label": "3 Style Pans + 3 lids + 2 Utensils (8 Piece)",
-                    "compare_price": "$1299",
-                    "price": "$599"
-                  },
-                  "blocks": {}
-                },
-                "tab_bundle_save_product_2": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/7_cold-min.jpg",
-                    "title": "Pure Titanium Cutting Board Set (3 Piece)",
-                    "link": "/products/pure-titanium-cutting-board-set-3-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "LOW STOCK!",
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(952)",
-                    "bullet_1_label": "S+M+L for every kitchen task",
-                    "compare_price": "$699",
-                    "price": "$299"
-                  },
-                  "blocks": {}
-                },
-                "tab_bundle_save_product_3": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/14-min_6017f7dd-d7e4-4c3d-bda4-ae1f63af4b8f.jpg",
-                    "title": "Pure Titanium Pan Everyday Duo Set (6 Piece)",
-                    "link": "/products/pure-titanium-pan-everyday-duo-set-6-piece",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(857)",
-                    "bullet_1_label": "Two sizes, endless possibilities.",
-                    "compare_price": "$899",
-                    "price": "$399"
-                  },
-                  "blocks": {}
-                },
-                "tab_bundle_save_product_4": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/12-min_a5dc389b-54a1-4cd6-bd5c-6a8de3ac4b12.jpg",
-                    "title": "Complete Classic Titanium Cookware Set (14 Piece)",
-                    "link": "/products/complete-classic-titanium-cookware-set-14-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "Ultimate Savings!",
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(1329)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "compare_price": "$1999",
-                    "price": "$899"
-                  },
-                  "blocks": {}
-                },
-                "tab_bundle_save_product_5": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/11-min_433e6793-5c92-40bc-ab56-733ded9c5378.jpg",
-                    "title": "Complete Signature Titanium Cookware Set (14 Piece)",
-                    "link": "/products/complete-signature-titanium-cookware-set-14-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "Ultimate Savings!",
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(2189)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "compare_price": "$1999",
-                    "price": "$899"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "tab_bundle_save_product_1",
-                "tab_bundle_save_product_2",
-                "tab_bundle_save_product_3",
-                "tab_bundle_save_product_4",
-                "tab_bundle_save_product_5"
-              ]
-            },
-            "tab_cookware": {
-              "type": "_header-category-nav-tab",
-              "settings": {
-                "label": "Titanium Cookware",
-                "title": "Titanium Cookware",
-                "description": "<p>I can always count on this. It’s far better than the stainless and carbon steel we used before. It sticks significantly less, needs less oil, and makes the final dish noticeably less greasy. That’s always a bonus, especially when cooking for health-focused clients. </p>",
-                "shop_all_label": "Shop All Cookware",
-                "shop_all_link": "/collections/signature-cookware",
-                "show_endorsement": true,
-                "endorse_avatar": "shopify://shop_images/chef_review.jpg",
-                "endorse_name": "Marco. (Michelin-Chef)",
-                "endorse_verified": true,
-                "endorse_rating": 5
-              },
-              "blocks": {
-                "tab_cookware_product_1": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/classic_pan_4th_of_july_product_1500x1500_1.jpg",
-                    "title": "Pure Titanium Classic Pan Pro",
-                    "link": "/products/taima-titanium-nutri-pan-pro-2-0",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 50%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(2967)",
-                    "bullet_1_label": "The gold standard for everyday cooking",
-                    "compare_price": "$349",
-                    "price": "$174"
-                  },
-                  "blocks": {}
-                },
-                "tab_cookware_product_2": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/WOK_pan_4th_of_july_product_1500x1500_1.jpg",
-                    "title": "Pure Titanium Wok Pan Pro",
-                    "link": "/products/taima-certified-pure-titanium-wok-pan-pro",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 50%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(1905)",
-                    "bullet_1_label": "High-heat cooking with room to toss, sear & fry",
-                    "compare_price": "$399",
-                    "price": "$199"
-                  },
-                  "blocks": {}
-                },
-                "tab_cookware_product_3": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/DEEP_pan_4th_of_july_product_1500x1500_1.jpg",
-                    "title": "Pure Titanium Deep Pan Pro",
-                    "link": "/products/pure-titanium-deep-pan-pro",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 50%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(1760)",
-                    "bullet_1_label": "Extra depth for hearty stews & saucy pastas",
-                    "compare_price": "$399",
-                    "price": "$199"
-                  },
-                  "blocks": {}
-                },
-                "tab_cookware_product_4": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/15-min_0e089c9e-9da0-4907-b920-2e2af1a943c8.jpg",
-                    "title": "Pure Titanium Signature Pan Set (6 piece)",
-                    "link": "/products/pure-titanium-signature-pan-set-6-piece",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "-54%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(1283)",
-                    "bullet_1_label": "Three pan styles for every cooking style",
-                    "compare_price": "$1199",
-                    "price": "$549"
-                  },
-                  "blocks": {}
-                },
-                "tab_cookware_product_5": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/11-min_433e6793-5c92-40bc-ab56-733ded9c5378.jpg",
-                    "title": "Complete Signature Titanium Cookware Set (14 Piece)",
-                    "link": "/products/complete-signature-titanium-cookware-set-14-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "Limited-4th-of-July-Sale-Bundle!",
-                    "save_badge_text": "-55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(2189)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "compare_price": "$1999",
-                    "price": "$899"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "tab_cookware_product_1",
-                "tab_cookware_product_2",
-                "tab_cookware_product_3",
-                "tab_cookware_product_4",
-                "tab_cookware_product_5"
-              ]
-            },
-            "tab_cutting_boards": {
-              "type": "_header-category-nav-tab",
-              "settings": {
-                "label": "Titanium Cutting Boards",
-                "title": "Titanium Cutting Boards",
-                "description": "<p>\"I’ve ordered a few “titanium” cutting boards online just to test them. Used a spark test & XRF scanner, only Taima actually registered as pure titanium. The rest? steel alloys. Don’t get scammed by fakes. Taima is the real deal!\"</p>",
-                "shop_all_label": "Shop All Cutting Boards",
-                "shop_all_link": "/collections/pure-titanium-certified-cutting-boards",
-                "show_endorsement": true,
-                "endorse_avatar": "shopify://shop_images/board_with_steak-min_18b37f57-968a-4823-9e02-4f74933702ec.jpg",
-                "endorse_name": "Marcus M. (Engineer)",
-                "endorse_verified": true,
-                "endorse_rating": 5
-              },
-              "blocks": {
-                "tab_cutting_boards_product_1": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/collection_board-min.jpg",
-                    "title": "Certified Pure Titanium Cutting Board V2",
-                    "link": "/products/certified-taima%E2%84%A2-pure-titanium-cutting-board-v2-updated-design",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "LOW STOCK!",
-                    "save_badge_text": "SAVE 50%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(3481)",
-                    "bullet_1_label": "The First & Only Certified purity. 100% toxin-free",
-                    "compare_price": "$199",
-                    "price": "$99"
-                  },
-                  "blocks": {}
-                },
-                "tab_cutting_boards_product_2": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/1-min_fc733b49-1d36-4791-a715-bd24fde6f11c.jpg",
-                    "title": "Must-Have Non-Slip Mat For Titanium Board",
-                    "link": "/products/taima%E2%84%A2-silicone-mat-for-board-non-slip",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 40%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(463)",
-                    "bullet_1_label": "Keeps board stable & protects countertop",
-                    "compare_price": "$59",
-                    "price": "$29"
-                  },
-                  "blocks": {}
-                },
-                "tab_cutting_boards_product_3": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/7_cold-min.jpg",
-                    "title": "Pure Titanium Cutting Board Set",
-                    "link": "/products/pure-titanium-cutting-board-set-3-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "LOW STOCK!",
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(952)",
-                    "bullet_1_label": "S+M+L for every kitchen task",
-                    "compare_price": "$699",
-                    "price": "$299"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "tab_cutting_boards_product_1",
-                "tab_cutting_boards_product_2",
-                "tab_cutting_boards_product_3"
-              ]
-            },
-            "tab_utensils": {
-              "type": "_header-category-nav-tab",
-              "settings": {
-                "label": "Titanium Utensils",
-                "title": "Titanium Utensils",
-                "description": "<p>“I always used silicone and wooden spatulas, but after discovering the bacteria and mold in wood and the toxic chemicals in silicone, I decided to try the Taima Titanium Spatula. I’d never use any other now!”</p>",
-                "shop_all_label": "Shop All Utensils",
-                "shop_all_link": "/collections/pure-titanium-utensils",
-                "show_endorsement": true,
-                "endorse_avatar": "shopify://shop_images/taima_titanium_spatula_review_186cf3f3-5353-4245-8f28-d22339e6f6f1.jpg",
-                "endorse_name": "Dominique K. (Michelin-Chef)",
-                "endorse_verified": true,
-                "endorse_rating": 5
-              },
-              "blocks": {
-                "tab_utensils_product_1": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/SPATULA_FIXED-min.jpg",
-                    "title": "Pure Titanium Utensils",
-                    "link": "/products/taima%E2%84%A2-100-pure-titanium-spatula",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 50%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(711)",
-                    "bullet_1_label": "Heat-Safe, Toxin-Free, Antibacterial.",
-                    "compare_price": "$89",
-                    "price": "$49"
-                  },
-                  "blocks": {}
-                },
-                "tab_utensils_product_2": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/3-min_ca4cfbd1-ec4b-4131-bc76-388afafad0b5.jpg",
-                    "title": "Pure Titanium Utensils Set",
-                    "link": "/products/pure-titanium-utensils-set-4-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "MOST POPULAR",
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(734)",
-                    "bullet_1_label": "Every tool you need for any dish",
-                    "compare_price": "$299",
-                    "price": "$149"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "tab_utensils_product_1",
-                "tab_utensils_product_2"
-              ]
-            },
-            "tab_drinkware": {
-              "type": "_header-category-nav-tab",
-              "settings": {
-                "label": "Titanium Drinkware",
-                "title": "Titanium Drinkware",
-                "description": "<p>\"I used a stainless steel water bottle, but then I read research about how they can grow bacteria and fungi that I was unknowingly ingesting. I started looking for a safer option and found the Taima Titanium Bottle. Now, my bottles don’t smell! \" </p>",
-                "shop_all_label": "Shop All Drinkware",
-                "shop_all_link": "/collections/pure-titanium-drinkware",
-                "show_endorsement": true,
-                "endorse_avatar": "shopify://shop_images/bottle-min_9512d7d6-c951-4f71-ae20-43821b42add3.jpg",
-                "endorse_name": "Alison B.",
-                "endorse_verified": true,
-                "endorse_rating": 5
-              },
-              "blocks": {
-                "tab_drinkware_product_1": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/16-min_a0acd7a3-a71c-431f-a9db-318482027191.jpg",
-                    "title": "Pure Titanium Water Bottle",
-                    "link": "/products/taima%C2%AE-pure-titanium-water-bottle-copy",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 40%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(584)",
-                    "bullet_1_label": "Bacteria resistant. BPA & toxin-free.",
-                    "compare_price": "$179",
-                    "price": "$99"
-                  },
-                  "blocks": {}
-                },
-                "tab_drinkware_product_2": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "image": "shopify://shop_images/18-min_9f5bd79c-d8db-4f38-a901-0adb3344b5f6.jpg",
-                    "title": "Pure Titanium Ice Cubes",
-                    "link": "/products/taima%C2%AE-pure-titanium-ice-cubes",
-                    "open_in_new_tab": false,
-                    "save_badge_text": "SAVE 40%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(409)",
-                    "bullet_1_label": "Reusable for life. BPA & toxin-free.",
-                    "compare_price": "$119",
-                    "price": "$69"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "tab_drinkware_product_1",
-                "tab_drinkware_product_2"
-              ]
-            }
-          },
-          "block_order": [
-            "tab_best_sellers",
-            "tab_bundle_save",
-            "tab_cookware",
-            "tab_cutting_boards",
-            "tab_utensils",
-            "tab_drinkware"
-          ]
         }
       },
       "block_order": [
@@ -654,39 +715,6 @@
         "collection_inverse_logo": false,
         "text_color_transparent_collection": "",
         "transparent_opacity_collection": 0
-      }
-    },
-    "announcement_bar": {
-      "type": "header-announcements",
-      "blocks": {
-        "announcement_1": {
-          "type": "_announcement",
-          "settings": {
-            "text": "New Season Sale"
-          },
-          "blocks": {}
-        },
-        "announcement_2": {
-          "type": "_announcement",
-          "settings": {
-            "text": "Free Shipping On All Orders"
-          },
-          "blocks": {}
-        },
-        "announcement_3": {
-          "type": "_announcement",
-          "settings": {
-            "text": "Lifetime Warranty Included"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": ["announcement_1", "announcement_2", "announcement_3"],
-      "settings": {
-        "background_color": "#BF092F",
-        "padding-block-start": 10,
-        "padding-block-end": 10,
-        "show_arrows": false
       }
     }
   },
