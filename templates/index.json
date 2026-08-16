@@ -513,7 +513,7 @@
       "type": "best-sellers-slider",
       "name": "t:names.best_sellers_slider",
       "settings": {
-        "collection": "",
+        "collection": "best-sellers",
         "max_products": 8,
         "heading": "Shop Best Sellers",
         "heading_color": "#bca588",
