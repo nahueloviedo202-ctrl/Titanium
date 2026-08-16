@@ -1471,7 +1471,6 @@
     },
     "reviews_slider_custom_qT4nZw": {
       "type": "reviews-slider-custom",
-      "name": "t:names.reviews_slider_custom",
       "blocks": {
         "cat_boards": {
           "type": "_review-slider-category",
@@ -1512,7 +1511,12 @@
               }
             }
           },
-          "block_order": ["board_1", "board_2", "board_3", "board_4"]
+          "block_order": [
+            "board_1",
+            "board_2",
+            "board_3",
+            "board_4"
+          ]
         },
         "cat_pans": {
           "type": "_review-slider-category",
@@ -1545,10 +1549,18 @@
               }
             }
           },
-          "block_order": ["pan_1", "pan_2", "pan_3"]
+          "block_order": [
+            "pan_1",
+            "pan_2",
+            "pan_3"
+          ]
         }
       },
-      "block_order": ["cat_boards", "cat_pans"],
+      "block_order": [
+        "cat_boards",
+        "cat_pans"
+      ],
+      "name": "t:names.reviews_slider_custom",
       "settings": {
         "heading": "5,000+ 5-Star Reviews",
         "heading_color": "#BCA588",
@@ -1583,15 +1595,6 @@
     },
     "heritage_text_mK7vLp": {
       "type": "media-with-content",
-      "name": "t:names.editorial",
-      "settings": {
-        "media_position": "left",
-        "media_width": "medium",
-        "media_height": "auto",
-        "section_width": "full-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      },
       "blocks": {
         "media": {
           "type": "_media-without-appearance",
@@ -1613,7 +1616,7 @@
               "type": "text",
               "settings": {
                 "text": "<p>Rooted In Tradition.<br>Designed To Outlast You.</p>",
-                "width": "fill",
+                "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
@@ -1630,7 +1633,7 @@
               "type": "text",
               "settings": {
                 "text": "<p>At Taima®, We Don't Just Make Kitchenware. We Uphold A Standard.</p><p>Shaped by the legacy of Japanese craftsmanship, where perfection isn't a choice, it's a duty. And durability isn't a feature - it's expected. We chose titanium not because it was easy, but because it was right.</p><p>We chose Integrity over shortcuts.<br>Purpose over profit.<br>Excellence over mass production.</p><p>That's why everything we create is built with obsession, backed for life, and made to earn your trust, not your attention. Because when something is made right… It never needs to be replaced.</p><p>All of our products are crafted from 100% sustainable pure titanium. Not just for unmatched hygiene and durability. But as part of our promise to protect your health & the planet.</p>",
-                "width": "fill",
+                "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
@@ -1644,20 +1647,24 @@
               }
             }
           },
-          "block_order": ["heading", "body"]
+          "block_order": [
+            "heading",
+            "body"
+          ]
         }
       },
-      "block_order": ["media", "content"]
+      "name": "t:names.editorial",
+      "settings": {
+        "media_position": "left",
+        "media_width": "medium",
+        "media_height": "auto",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     },
     "story_right_hero_wY3dHb": {
       "type": "section",
-      "name": "t:names.section",
-      "settings": {
-        "section_width": "full-width",
-        "background_color": "#121212",
-        "padding-block-start": 120,
-        "padding-block-end": 120
-      },
       "blocks": {
         "group": {
           "type": "group",
@@ -1671,12 +1678,12 @@
               "type": "text",
               "settings": {
                 "text": "<p>Our Mission Is Simple.</p>",
-                "width": "fill",
+                "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "4rem",
+                "font_size": "4.5rem",
                 "line_height": "tight",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -1688,7 +1695,7 @@
               "type": "text",
               "settings": {
                 "text": "<p>To Create Kitchenware So Safe, So Durable, And So Effortless… You'd Never Have To Think About It Again.</p><p>That's It.</p>",
-                "width": "fill",
+                "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
@@ -1702,20 +1709,25 @@
               }
             }
           },
-          "block_order": ["heading", "body"]
+          "block_order": [
+            "heading",
+            "body"
+          ]
         }
       },
-      "block_order": ["group"]
-    },
-    "newsletter_hero_zN5cQe": {
-      "type": "section",
+      "block_order": [
+        "group"
+      ],
       "name": "t:names.section",
       "settings": {
         "section_width": "full-width",
-        "background_color": "#03231A",
-        "padding-block-start": 96,
-        "padding-block-end": 96
-      },
+        "background_color": "#121212",
+        "padding-block-start": 100,
+        "padding-block-end": 100
+      }
+    },
+    "newsletter_hero_zN5cQe": {
+      "type": "section",
       "blocks": {
         "group": {
           "type": "group",
@@ -1726,27 +1738,59 @@
           },
           "blocks": {
             "heading": {
-              "type": "text",
+              "type": "group",
               "settings": {
-                "text": "<p><span style=\"color: #BCA588\">You Deserve Better</span> Than Random Emails.</p>",
-                "width": "fill",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "custom",
-                "font": "var(--font-body--family)",
-                "font_size": "2.5rem",
-                "line_height": "tight",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "#F6F4F0"
-              }
+                "content_direction": "row",
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "gap": 8
+              },
+              "blocks": {
+                "kicker": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>You Deserve Better</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "2.5rem",
+                    "line_height": "tight",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#BCA588"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Than Random Emails.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "2.5rem",
+                    "line_height": "tight",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#F6F4F0"
+                  }
+                }
+              },
+              "block_order": [
+                "kicker",
+                "title"
+              ]
             },
             "body": {
               "type": "text",
               "settings": {
                 "text": "<p>We only send you things worth opening. Breakthroughs, exclusive launches, toxin-free living tips, and the latest in innovation - before the rest of the world catches on.</p>",
-                "width": "fill",
+                "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
                 "type_preset": "custom",
@@ -1776,7 +1820,7 @@
               "type": "text",
               "settings": {
                 "text": "<p>We hate spam too.</p>",
-                "width": "fill",
+                "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
                 "type_preset": "custom",
@@ -1790,10 +1834,24 @@
               }
             }
           },
-          "block_order": ["heading", "body", "signup", "disclaimer"]
+          "block_order": [
+            "heading",
+            "body",
+            "signup",
+            "disclaimer"
+          ]
         }
       },
-      "block_order": ["group"]
+      "block_order": [
+        "group"
+      ],
+      "name": "t:names.section",
+      "settings": {
+        "section_width": "full-width",
+        "background_color": "#03231A",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
     }
   },
   "order": [
