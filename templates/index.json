@@ -138,7 +138,7 @@
         "open_in_new_tab": false,
         "text_size": 24,
         "text_size_mobile": 12,
-        "background_color": "#00221C",
+        "background_color": "#00221c",
         "text_color": "#b0b0b0",
         "link_color": "#ffffff",
         "padding_block_start": 24,
@@ -624,7 +624,7 @@
         "gap": 96,
         "icon_height": 50,
         "text_size": 30,
-        "background_color": "#00221C",
+        "background_color": "#00221c",
         "text_color": "#d4c7b4",
         "padding-block-start": 30,
         "padding-block-end": 30,
@@ -836,6 +836,7 @@
       "block_order": [
         "behind_the_scenes_quote_mRRgKW"
       ],
+      "disabled": true,
       "name": "t:names.behind_the_scenes",
       "settings": {
         "video": "shopify://files/videos/6e9be4e664144348ae17e080e893a6c4.mp4",
