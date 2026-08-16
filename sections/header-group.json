@@ -655,9 +655,43 @@
         "text_color_transparent_collection": "",
         "transparent_opacity_collection": 0
       }
+    },
+    "announcement_bar": {
+      "type": "header-announcements",
+      "blocks": {
+        "announcement_1": {
+          "type": "_announcement",
+          "settings": {
+            "text": "New Season Sale"
+          },
+          "blocks": {}
+        },
+        "announcement_2": {
+          "type": "_announcement",
+          "settings": {
+            "text": "Free Shipping On All Orders"
+          },
+          "blocks": {}
+        },
+        "announcement_3": {
+          "type": "_announcement",
+          "settings": {
+            "text": "Lifetime Warranty Included"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["announcement_1", "announcement_2", "announcement_3"],
+      "settings": {
+        "background_color": "#BF092F",
+        "padding-block-start": 10,
+        "padding-block-end": 10,
+        "show_arrows": false
+      }
     }
   },
   "order": [
+    "announcement_bar",
     "header_section"
   ]
 }
