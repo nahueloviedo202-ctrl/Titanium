@@ -153,11 +153,11 @@
      whole slider on mobile, without needing to duplicate any markup. */
   .reviews-hero-slider__slideshow {
     display: grid;
-    grid-template-columns: 16rem 1fr;
+    grid-template-columns: 20.5rem 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 'aside slides' 'nav slides';
     align-items: center;
-    gap: 1.5rem 3rem;
+    gap: 3.9rem;
   }
 
   .reviews-hero-slider__slideshow > slideshow-container {
@@ -175,8 +175,8 @@
 
   .reviews-hero-slider__stars {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: 0.65rem;
+    margin-bottom: 1.95rem;
   }
 
   .reviews-hero-slider__star {
@@ -213,26 +213,26 @@
     grid-area: nav;
     align-self: end;
     display: flex;
-    gap: 0.75rem;
+    gap: 0.975rem;
   }
 
   .reviews-hero-slider__nav-btn {
     position: relative;
     z-index: 2;
-    width: 4rem;
-    height: 4rem;
+    width: 5.2rem;
+    height: 5.2rem;
     flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0;
-    border-radius: 0.75rem;
+    border-radius: 0.95rem;
     cursor: pointer;
   }
 
   .reviews-hero-slider__nav-btn .svg-wrapper {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.95rem;
+    height: 1.95rem;
   }
 
   .reviews-hero-slider__nav-btn--prev {
@@ -290,6 +290,17 @@
     .reviews-hero-slider__nav {
       justify-content: center;
       align-self: center;
+    }
+
+    .reviews-hero-slider__nav-btn {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 0.75rem;
+    }
+
+    .reviews-hero-slider__nav-btn .svg-wrapper {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 {% endstylesheet %}
@@ -349,7 +360,7 @@
       "max": 40,
       "step": 1,
       "unit": "px",
-      "default": 24,
+      "default": 32,
       "visible_if": "{{ section.settings.show_rating }}"
     },
     {
@@ -393,7 +404,7 @@
       "max": 72,
       "step": 2,
       "unit": "px",
-      "default": 48
+      "default": 62
     },
     {
       "type": "range",
@@ -403,7 +414,7 @@
       "max": 48,
       "step": 1,
       "unit": "px",
-      "default": 32
+      "default": 41
     },
     {
       "type": "header",
@@ -417,7 +428,7 @@
       "max": 600,
       "step": 10,
       "unit": "px",
-      "default": 420
+      "default": 500
     },
     {
       "type": "range",
@@ -427,7 +438,7 @@
       "max": 400,
       "step": 10,
       "unit": "px",
-      "default": 300
+      "default": 360
     },
     {
       "type": "range",
@@ -437,7 +448,7 @@
       "max": 80,
       "step": 2,
       "unit": "px",
-      "default": 32
+      "default": 42
     },
     {
       "type": "range",
@@ -447,7 +458,7 @@
       "max": 48,
       "step": 2,
       "unit": "px",
-      "default": 18
+      "default": 24
     },
     {
       "type": "color",
@@ -515,40 +526,40 @@
       "id": "padding_block_start",
       "label": "t:settings.top",
       "min": 0,
-      "max": 100,
-      "step": 1,
+      "max": 200,
+      "step": 2,
       "unit": "px",
-      "default": 80
+      "default": 156
     },
     {
       "type": "range",
       "id": "padding_block_end",
       "label": "t:settings.bottom",
       "min": 0,
-      "max": 100,
-      "step": 1,
+      "max": 200,
+      "step": 2,
       "unit": "px",
-      "default": 80
+      "default": 156
     },
     {
       "type": "range",
       "id": "padding_inline_start",
       "label": "t:settings.left",
       "min": 0,
-      "max": 100,
-      "step": 1,
+      "max": 200,
+      "step": 2,
       "unit": "px",
-      "default": 24
+      "default": 156
     },
     {
       "type": "range",
       "id": "padding_inline_end",
       "label": "t:settings.right",
       "min": 0,
-      "max": 100,
-      "step": 1,
+      "max": 200,
+      "step": 2,
       "unit": "px",
-      "default": 24
+      "default": 156
     },
     {
       "type": "header",
