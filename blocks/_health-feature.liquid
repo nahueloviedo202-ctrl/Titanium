@@ -2,7 +2,7 @@
 
 <li
   ref="items[]"
-  class="health-features__item"
+  class="health-features__item{% if block.settings.body != blank %} health-features__item--detailed{% endif %}"
   data-side="{{ block.settings.side }}"
   {{ block.shopify_attributes }}
 >
@@ -12,21 +12,26 @@
         echo block.settings.icon | image_url: width: 96 | image_tag: widths: '48, 96', loading: 'lazy', alt: '', class: 'health-features__item-icon-image'
       endif
     endcapture
+
+    capture label
+      if block.settings.text != blank
+        echo '<span class="health-features__item-text">' | append: block.settings.text | append: '</span>'
+      endif
+    endcapture
   -%}
-  {%- if block.settings.side == 'right' -%}
+  {%- if block.settings.side == 'right' and block.settings.body == blank -%}
     {%- if icon != blank -%}
       <span class="health-features__item-icon" aria-hidden="true">{{ icon }}</span>
     {%- endif -%}
-    {%- if block.settings.text != blank -%}
-      <span class="health-features__item-text">{{ block.settings.text }}</span>
-    {%- endif -%}
+    {{ label }}
   {%- else -%}
-    {%- if block.settings.text != blank -%}
-      <span class="health-features__item-text">{{ block.settings.text }}</span>
-    {%- endif -%}
+    {{ label }}
     {%- if icon != blank -%}
       <span class="health-features__item-icon" aria-hidden="true">{{ icon }}</span>
     {%- endif -%}
+  {%- endif -%}
+  {%- if block.settings.body != blank -%}
+    <div class="health-features__item-body">{{ block.settings.body }}</div>
   {%- endif -%}
 </li>
 
@@ -45,6 +50,11 @@
       "id": "text",
       "label": "t:settings.text",
       "default": "t:text_defaults.health_feature_text"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "t:settings.description"
     },
     {
       "type": "select",

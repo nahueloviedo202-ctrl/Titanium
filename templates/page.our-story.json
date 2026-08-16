@@ -1,0 +1,791 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-video-logos",
+      "settings": {
+        "media_type_desktop": "image",
+        "kicker": "Nuestra Historia",
+        "heading": "Cocina Segura, Sin Compromisos",
+        "subheading": "<p>Diseñamos utensilios de cocina pensados para el bienestar de tu familia, sin tóxicos ni atajos.</p>",
+        "button_label": "Ver Productos",
+        "button_link": "shopify://collections/all",
+        "style_class": "button-custom",
+        "show_rating": false,
+        "toggle_overlay": true,
+        "show_logos": false,
+        "section_height": "large"
+      }
+    },
+    "copy_band": {
+      "type": "section",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Creemos que las herramientas con las que cocinás nunca deberían poner en riesgo tu salud. Nuestra misión es simple: crear utensilios de cocina 100% libres de tóxicos, pensados para acompañarte durante años.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "2rem",
+            "line_height": "loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#BCA588"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "background_color": "#03231A",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "story_slider": {
+      "type": "story-slider",
+      "blocks": {
+        "slide_1": {
+          "type": "_story-slide",
+          "settings": {
+            "heading": "Cómo Empezó Todo",
+            "body": "<p>Todo comenzó con una pregunta simple: ¿por qué los utensilios de cocina que usamos todos los días no son tan seguros como deberían? Esa inquietud fue el punto de partida de todo lo que hacemos hoy.</p>"
+          }
+        },
+        "slide_2": {
+          "type": "_story-slide",
+          "settings": {
+            "heading": "Un Punto De Quiebre",
+            "body": "<p>Después de investigar en profundidad, entendimos que gran parte de los materiales tradicionales podían representar un riesgo silencioso para la salud de las familias.</p>"
+          }
+        },
+        "slide_3": {
+          "type": "_story-slide",
+          "settings": {
+            "heading": "El Descubrimiento",
+            "body": "<p>Encontramos en el titanio puro un material capaz de combinar seguridad, durabilidad y un rendimiento excepcional en la cocina.</p>"
+          }
+        },
+        "slide_4": {
+          "type": "_story-slide",
+          "settings": {
+            "heading": "El Gran Cambio",
+            "body": "<p>Empezamos a diseñar y desarrollar nuestra primera línea de productos, priorizando siempre la salud por sobre cualquier atajo de producción.</p>"
+          }
+        },
+        "slide_5": {
+          "type": "_story-slide",
+          "settings": {
+            "heading": "De Una Idea A Un Movimiento",
+            "body": "<p>Lo que empezó como un proyecto pequeño se transformó en una comunidad de personas que eligen cocinar de forma más consciente.</p>"
+          }
+        },
+        "slide_6": {
+          "type": "_story-slide",
+          "settings": {
+            "heading": "Nuestro Compromiso",
+            "body": "<p>Seguimos trabajando cada día para ofrecer productos honestos, seguros y hechos para durar.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1",
+        "slide_2",
+        "slide_3",
+        "slide_4",
+        "slide_5",
+        "slide_6"
+      ],
+      "settings": {}
+    },
+    "behind_the_scenes": {
+      "type": "behind-the-scenes",
+      "blocks": {
+        "quote": {
+          "type": "_behind-the-scenes-quote",
+          "settings": {
+            "quote": "<p>Creemos que cuidar tu salud empieza por elegir bien lo que usás en tu cocina.</p>",
+            "founder_name": "Equipo Fundador"
+          }
+        }
+      },
+      "block_order": [
+        "quote"
+      ],
+      "settings": {
+        "heading": "Calidad Que Se Nota En Cada Detalle",
+        "body_text": "<p>Elegimos materiales de calidad médica y procesos de fabricación exigentes para asegurarnos de que cada producto cumpla con los más altos estándares de seguridad y desempeño.</p>",
+        "media_position": "left"
+      }
+    },
+    "core_values": {
+      "type": "section",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Nuestros Valores</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "text_color": "#BCA588"
+          }
+        },
+        "row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 32,
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "card_1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "image": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h4>Sin Tóxicos</h4>",
+                    "width": "100%",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)"
+                  }
+                },
+                "desc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Materiales seguros que no liberan sustancias nocivas en tus alimentos.</p>",
+                    "width": "100%",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "image",
+                "title",
+                "desc"
+              ]
+            },
+            "card_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "image": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h4>Fácil De Mantener</h4>",
+                    "width": "100%",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)"
+                  }
+                },
+                "desc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Superficies simples de limpiar, sin necesidad de cuidados especiales.</p>",
+                    "width": "100%",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "image",
+                "title",
+                "desc"
+              ]
+            },
+            "card_3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "image": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h4>Hecho Para Durar</h4>",
+                    "width": "100%",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)"
+                  }
+                },
+                "desc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Productos resistentes, pensados para acompañarte durante años.</p>",
+                    "width": "100%",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "image",
+                "title",
+                "desc"
+              ]
+            },
+            "card_4": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "image": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h4>Salud Que Se Siente</h4>",
+                    "width": "100%",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)"
+                  }
+                },
+                "desc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Cocinar sin preocupaciones, sabiendo que cuidás a los tuyos.</p>",
+                    "width": "100%",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "image",
+                "title",
+                "desc"
+              ]
+            }
+          },
+          "block_order": [
+            "card_1",
+            "card_2",
+            "card_3",
+            "card_4"
+          ]
+        }
+      },
+      "block_order": [
+        "heading",
+        "row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 48,
+        "section_width": "page-width",
+        "background_color": "#121212",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "responsibility": {
+      "type": "section",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Nuestro Compromiso: Personas Y Planeta Más Sanos</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "text_color": "#BCA588"
+          }
+        },
+        "row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 32,
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "item_1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "leaf",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Producción responsable, con menor impacto ambiental.</p>",
+                    "width": "100%",
+                    "alignment": "center",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "icon",
+                "text"
+              ]
+            },
+            "item_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "heart",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Cuidado real por la salud de quienes usan nuestros productos.</p>",
+                    "width": "100%",
+                    "alignment": "center",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "icon",
+                "text"
+              ]
+            },
+            "item_3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "plant",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Materiales pensados para durar, sin desperdicio innecesario.</p>",
+                    "width": "100%",
+                    "alignment": "center",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "icon",
+                "text"
+              ]
+            },
+            "item_4": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "box",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Packaging consciente, con la menor cantidad de plástico posible.</p>",
+                    "width": "100%",
+                    "alignment": "center",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "icon",
+                "text"
+              ]
+            },
+            "item_5": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "recycle",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Menos residuos frente a las alternativas descartables del mercado.</p>",
+                    "width": "100%",
+                    "alignment": "center",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "icon",
+                "text"
+              ]
+            },
+            "item_6": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "check_box",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Calidad duradera, diseñada para no terminar en la basura al poco tiempo.</p>",
+                    "width": "100%",
+                    "alignment": "center",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "text_color": "#B0B0B0"
+                  }
+                }
+              },
+              "block_order": [
+                "icon",
+                "text"
+              ]
+            }
+          },
+          "block_order": [
+            "item_1",
+            "item_2",
+            "item_3",
+            "item_4",
+            "item_5",
+            "item_6"
+          ]
+        }
+      },
+      "block_order": [
+        "heading",
+        "row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 48,
+        "section_width": "page-width",
+        "background_color": "#03231A",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "cta_banner": {
+      "type": "hero-video-logos",
+      "settings": {
+        "media_type_desktop": "image",
+        "heading": "Vive La Diferencia Hoy",
+        "subheading": "<p>Miles de personas ya eligieron una cocina más consciente. Sumate vos también.</p>",
+        "button_label": "Cuidar Mi Salud",
+        "button_link": "shopify://collections/all",
+        "style_class": "button-custom",
+        "custom_button_background": "#FFFFFF",
+        "custom_button_text": "#121212",
+        "custom_button_border": "#FFFFFF",
+        "show_rating": false,
+        "toggle_overlay": true,
+        "show_logos": false,
+        "section_height": "medium"
+      }
+    },
+    "link_buttons": {
+      "type": "section",
+      "blocks": {
+        "btn_1": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "width": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "button": {
+              "type": "button",
+              "settings": {
+                "label": "Conocé La Ciencia",
+                "style_class": "button-custom",
+                "custom_button_background": "#00000000",
+                "custom_button_text": "#FFFFFF",
+                "custom_button_border": "#333333",
+                "width": "custom",
+                "custom_width": 100
+              }
+            }
+          },
+          "block_order": [
+            "button"
+          ]
+        },
+        "btn_2": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "width": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "button": {
+              "type": "button",
+              "settings": {
+                "label": "Preguntas Frecuentes",
+                "style_class": "button-custom",
+                "custom_button_background": "#00000000",
+                "custom_button_text": "#FFFFFF",
+                "custom_button_border": "#333333",
+                "width": "custom",
+                "custom_width": 100
+              }
+            }
+          },
+          "block_order": [
+            "button"
+          ]
+        },
+        "btn_3": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "width": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "button": {
+              "type": "button",
+              "settings": {
+                "label": "Ver Más Vendidos",
+                "link": "shopify://collections/all",
+                "style_class": "button-custom",
+                "custom_button_background": "#00000000",
+                "custom_button_text": "#FFFFFF",
+                "custom_button_border": "#333333",
+                "width": "custom",
+                "custom_width": 100
+              }
+            }
+          },
+          "block_order": [
+            "button"
+          ]
+        },
+        "btn_4": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "width": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "button": {
+              "type": "button",
+              "settings": {
+                "label": "Ver Todos Los Productos",
+                "link": "shopify://collections/all",
+                "style_class": "button-custom",
+                "custom_button_background": "#00000000",
+                "custom_button_text": "#FFFFFF",
+                "custom_button_border": "#333333",
+                "width": "custom",
+                "custom_width": 100
+              }
+            }
+          },
+          "block_order": [
+            "button"
+          ]
+        }
+      },
+      "block_order": [
+        "btn_1",
+        "btn_2",
+        "btn_3",
+        "btn_4"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "gap": 24,
+        "section_width": "page-width",
+        "background_color": "#121212",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "copy_band",
+    "story_slider",
+    "behind_the_scenes",
+    "core_values",
+    "responsibility",
+    "cta_banner",
+    "link_buttons"
+  ]
+}

@@ -97,22 +97,22 @@
   }
 
   .review-card {
-    width: var(--reviews-hero-card-width, 26rem);
+    width: var(--reviews-hero-card-width, 31.5rem);
   }
 
   .review-card__media-row {
     display: grid;
-    /* Proportioned so the square image tile and the 40:71 portrait video tile
-       render at the same height side by side. */
-    grid-template-columns: 71fr 40fr;
-    gap: 1rem;
+    /* Equal-width columns: the square image tile and the 40:71 portrait
+       video tile share the same width, the video simply runs taller. */
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3rem;
     align-items: start;
   }
 
   .review-card__media-square {
     position: relative;
     aspect-ratio: 1 / 1;
-    border-radius: var(--reviews-hero-card-radius, 1rem);
+    border-radius: var(--reviews-hero-card-radius, 1.5rem);
     overflow: hidden;
     background: rgb(var(--color-foreground-rgb) / var(--opacity-5));
   }
@@ -120,7 +120,7 @@
   .review-card__media-video {
     position: relative;
     aspect-ratio: 40 / 71;
-    border-radius: var(--reviews-hero-card-radius, 1rem);
+    border-radius: var(--reviews-hero-card-radius, 1.5rem);
     overflow: hidden;
     background: rgb(var(--color-foreground-rgb) / var(--opacity-5));
   }
@@ -137,43 +137,45 @@
 
   .review-card__pill {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.25rem 0.875rem;
+    margin-top: 1.4rem;
+    padding: 0.25rem 1rem;
     border-radius: 999px;
     background: var(--reviews-hero-badge-color, #b57c46);
     color: #fff;
-    font-size: 0.75rem;
-    letter-spacing: 0.02em;
+    font-size: 0.975rem;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     white-space: nowrap;
   }
 
   .review-card__content {
-    margin-top: 1.25rem;
+    margin-top: 1.3rem;
   }
 
   .review-card__title {
-    font-size: 1.25rem;
+    font-size: 1.625rem;
     font-weight: 500;
+    line-height: 1.4;
     letter-spacing: 0.02em;
     margin-bottom: 0.75rem;
   }
 
   .review-card__quote {
     color: var(--color-foreground-muted);
-    font-size: 1rem;
+    font-size: 1.1375rem;
     line-height: 1.5;
     margin-bottom: 0.75rem;
   }
 
   .review-card__author {
-    font-size: 0.875rem;
+    font-size: 0.975rem;
+    letter-spacing: 0.04em;
     color: var(--color-foreground-muted);
   }
 
   @media screen and (max-width: 749px) {
     .review-card {
-      width: var(--reviews-hero-card-width-mobile, 18rem);
+      width: var(--reviews-hero-card-width-mobile, 22.5rem);
     }
   }
 {% endstylesheet %}

@@ -1,0 +1,411 @@
+
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+%}
+
+<section
+  id="StorySlider-{{ section.id }}"
+  class="story-slider{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}{% if section.settings.media_position == 'right' %} story-slider--media-right{% endif %}"
+  role="region"
+  aria-label="{{ 'accessibility.story_slider_region' | t }}"
+>
+  <div
+    class="story-slider__inner spacing-style"
+    style="
+      max-width: {{ section.settings.content_max_width }}px;
+      {% render 'spacing-style', settings: section.settings %}
+      --story-slider-heading-color: {{ section.settings.heading_color }};
+      --story-slider-heading-size: {{ section.settings.heading_size }}px;
+      --story-slider-heading-size-mobile: {{ section.settings.heading_size_mobile }}px;
+      --story-slider-body-color: {{ section.settings.body_color }};
+      --story-slider-body-size: {{ section.settings.body_font_size }}px;
+      --story-slider-body-size-mobile: {{ section.settings.body_font_size_mobile }}px;
+      --story-slider-media-size: {{ section.settings.media_size }}px;
+      --story-slider-media-size-mobile: {{ section.settings.media_size_mobile }}px;
+      --story-slider-gap: {{ section.settings.gap }}px;
+      --story-slider-content-padding-inline: {{ section.settings.content_horizontal_padding }}px;
+      --story-slider-content-padding-inline-mobile: {{ section.settings.content_horizontal_padding_mobile }}px;
+    "
+  >
+    {% capture nav %}
+      {%- if section.blocks.size > 1 -%}
+        <div
+          class="story-slider__nav"
+          style="
+            --story-slider-arrow-bg: {{ section.settings.arrow_background_color }};
+            --story-slider-arrow-border: {{ section.settings.arrow_border_color }};
+            --story-slider-arrow-color: {{ section.settings.arrow_icon_color }};
+          "
+        >
+          <button
+            class="story-slider__nav-btn story-slider__nav-btn--prev"
+            aria-label="{{ 'accessibility.slideshow_previous' | t }}"
+            on:click="/previous"
+            ref="previous"
+            type="button"
+          >
+            <span class="svg-wrapper flip-x">
+              {{- 'icon-arrow.svg' | inline_asset_content -}}
+            </span>
+          </button>
+          <button
+            class="story-slider__nav-btn story-slider__nav-btn--next"
+            aria-label="{{ 'accessibility.slideshow_next' | t }}"
+            on:click="/next"
+            ref="next"
+            type="button"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-arrow.svg' | inline_asset_content -}}
+            </span>
+          </button>
+        </div>
+      {%- endif -%}
+    {% endcapture %}
+
+    {% capture slides %}
+      {% content_for 'blocks' %}
+    {% endcapture %}
+
+    <div class="story-slider__carousel-wrapper">
+      {% render 'slideshow',
+        ref: 'storySlider',
+        class: 'story-slider__slideshow',
+        controls: nav,
+        slides: slides,
+        show_arrows: false,
+        infinite: true,
+        autoplay: section.settings.autoplay,
+        autoplay_speed: section.settings.autoplay_speed,
+        slide_count: section.blocks.size
+      %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .story-slider {
+    position: relative;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    overflow-x: clip;
+  }
+
+  .story-slider__inner {
+    margin-inline: auto;
+  }
+
+  .story-slider__carousel-wrapper {
+    min-width: 0;
+  }
+
+  .story-slider__nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .story-slider__nav-btn {
+    position: relative;
+    z-index: 2;
+    width: 3.4rem;
+    height: 3.4rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    background: var(--story-slider-arrow-bg, transparent);
+    border: 1.5px solid var(--story-slider-arrow-border, rgb(var(--color-foreground-rgb) / 0.4));
+    color: var(--story-slider-arrow-color, var(--color-foreground));
+  }
+
+  .story-slider__nav-btn .svg-wrapper {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .story-slider__nav-btn[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .story-slider__nav {
+      margin-top: 3rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.story_slider",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_story-slide"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#A3835F"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:content.paragraph"
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "t:settings.size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "body_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "t:settings.media_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "media_size",
+      "label": "t:settings.width",
+      "min": 240,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "default": 420
+    },
+    {
+      "type": "range",
+      "id": "media_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 160,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "default": 260
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 16,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "t:settings.width",
+      "min": 1200,
+      "max": 2400,
+      "step": 20,
+      "unit": "px",
+      "default": 1920
+    },
+    {
+      "type": "range",
+      "id": "content_horizontal_padding",
+      "label": "t:settings.horizontal_padding",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "content_horizontal_padding_mobile",
+      "label": "t:settings.horizontal_padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.navigation"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:settings.autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "t:settings.speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "default": 5,
+      "visible_if": "{{ section.settings.autoplay }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_background_color",
+      "label": "t:settings.arrow_background_color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "arrow_border_color",
+      "label": "t:settings.border_color",
+      "default": "#454545"
+    },
+    {
+      "type": "color",
+      "id": "arrow_icon_color",
+      "label": "t:settings.arrow_icon_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#121212",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.story_slider",
+      "category": "t:categories.storytelling",
+      "blocks": {
+        "slide_1": {
+          "type": "_story-slide"
+        },
+        "slide_2": {
+          "type": "_story-slide"
+        }
+      },
+      "block_order": ["slide_1", "slide_2"]
+    }
+  ]
+}
+{% endschema %}

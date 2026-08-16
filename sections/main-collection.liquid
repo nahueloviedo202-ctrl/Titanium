@@ -34,63 +34,116 @@
 <div
   class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
 ></div>
-{% # theme-check-disable-next-line UnknownFilter %}
-<collection-component view-event-payload="{{ collection | standard_event_data: 'view' | escape }}">
-  <results-list
-    class="section product-grid-container{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
-    style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px;"
-    section-id="{{ section.id }}"
-    infinite-scroll="{{ section.settings.enable_infinite_scroll }}"
-  >
-    {% render 'skip-to-content-link', href: '#ResultsList', text: 'accessibility.skip_to_results_list' %}
 
-    <div
-      class="collection-wrapper grid gap-style{% if section.settings.product_grid_width == 'full-width' %} collection-wrapper--grid-full-width{% endif %}"
-    >
-      {% content_for 'block',
-        type: 'filters',
-        id: 'filters',
-        results: collection,
-        results_size: collection.products_count
-      %}
-
-      {% assign products_per_page = 24 %}
-
-      {% if section.settings.enable_infinite_scroll == false %}
-        {% assign products_per_page = section.settings.products_per_page %}
-      {% endif %}
-
-      {% paginate collection.products by products_per_page %}
-        {% capture children %}
-          {% for product in collection.products %}
-            <li
-              id="{{ section.id }}-{{ product.id }}"
-              class="product-grid__item product-grid__item--{{ forloop.index0 }}"
-              data-page="{{ paginate.current_page }}"
-              data-product-id="{{ product.id }}"
-              ref="cards[]"
-            >
-              {% content_for 'block',
-                type: '_product-card',
-                id: 'product-card',
-                closest.product: product,
-                product_view_context: 'collection'
-              %}
-            </li>
-          {% endfor %}
-        {% endcapture %}
-
-        {% render 'product-grid',
-          section: section,
-          children: children,
-          products: collection.products,
-          paginate: paginate,
-          enable_infinite_scroll: section.settings.enable_infinite_scroll
-        %}
-      {% endpaginate %}
+<div
+  class="collection-layout{% if section.settings.enable_sidebar == false %} collection-layout--no-sidebar{% endif %}"
+  style="
+    --collection-sidebar-border-color: {{ section.settings.sidebar_border_color }};
+    --collection-sidebar-text-color: {{ section.settings.sidebar_text_color }};
+    --collection-sidebar-active-text-color: {{ section.settings.sidebar_active_text_color }};
+  "
+>
+  {% if section.settings.enable_sidebar %}
+    <div class="collection-layout__sidebar">
+      {% render 'collection-sidebar-nav', menu: section.settings.sidebar_menu %}
     </div>
-  </results-list>
-</collection-component>
+  {% endif %}
+
+  <div class="collection-layout__main">
+    {% render 'collection-banner', section: section %}
+
+    {% # theme-check-disable-next-line UnknownFilter %}
+    <collection-component view-event-payload="{{ collection | standard_event_data: 'view' | escape }}">
+      <results-list
+        class="section product-grid-container{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+        style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px;"
+        section-id="{{ section.id }}"
+        infinite-scroll="{{ section.settings.enable_infinite_scroll }}"
+      >
+        {% render 'skip-to-content-link', href: '#ResultsList', text: 'accessibility.skip_to_results_list' %}
+
+        <div
+          class="collection-wrapper grid gap-style{% if section.settings.product_grid_width == 'full-width' %} collection-wrapper--grid-full-width{% endif %}"
+        >
+          {% content_for 'block',
+            type: 'filters',
+            id: 'filters',
+            results: collection,
+            results_size: collection.products_count
+          %}
+
+          {% assign products_per_page = 24 %}
+
+          {% if section.settings.enable_infinite_scroll == false %}
+            {% assign products_per_page = section.settings.products_per_page %}
+          {% endif %}
+
+          {% paginate collection.products by products_per_page %}
+            {% capture children %}
+              {% for product in collection.products %}
+                <li
+                  id="{{ section.id }}-{{ product.id }}"
+                  class="product-grid__item product-grid__item--{{ forloop.index0 }}"
+                  data-page="{{ paginate.current_page }}"
+                  data-product-id="{{ product.id }}"
+                  ref="cards[]"
+                >
+                  {% content_for 'block',
+                    type: '_product-card',
+                    id: 'product-card',
+                    closest.product: product,
+                    product_view_context: 'collection'
+                  %}
+                </li>
+              {% endfor %}
+            {% endcapture %}
+
+            {% render 'product-grid',
+              section: section,
+              children: children,
+              products: collection.products,
+              paginate: paginate,
+              enable_infinite_scroll: section.settings.enable_infinite_scroll
+            %}
+          {% endpaginate %}
+        </div>
+      </results-list>
+    </collection-component>
+  </div>
+</div>
+
+{% stylesheet %}
+  .collection-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collection-layout__main {
+    min-width: 0;
+  }
+
+  @media screen and (min-width: 990px) {
+    .collection-layout:not(.collection-layout--no-sidebar) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .collection-layout__sidebar {
+      flex: 0 0 270px;
+      align-self: stretch;
+      position: sticky;
+      top: var(--header-height, 0px);
+      max-height: 100vh;
+      overflow-y: auto;
+      padding-top: 86.4px;
+      border-right: 1px solid var(--collection-sidebar-border-color, #454545);
+    }
+
+    .collection-layout__main {
+      flex: 1 1 auto;
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -171,6 +224,87 @@
       "step": 4,
       "default": 24,
       "visible_if": "{{ section.settings.enable_infinite_scroll == false }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.sidebar"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sidebar",
+      "label": "t:settings.show_sidebar",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "sidebar_menu",
+      "label": "t:settings.menu",
+      "default": "main-menu",
+      "visible_if": "{{ section.settings.enable_sidebar }}"
+    },
+    {
+      "type": "color",
+      "id": "sidebar_border_color",
+      "label": "t:settings.border_color",
+      "default": "#454545",
+      "visible_if": "{{ section.settings.enable_sidebar }}"
+    },
+    {
+      "type": "color",
+      "id": "sidebar_text_color",
+      "label": "t:settings.text_color",
+      "default": "#888888",
+      "visible_if": "{{ section.settings.enable_sidebar }}"
+    },
+    {
+      "type": "color",
+      "id": "sidebar_active_text_color",
+      "label": "t:settings.active_text_color",
+      "default": "#FFFFFF",
+      "visible_if": "{{ section.settings.enable_sidebar }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.collection_banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_banner",
+      "label": "t:settings.show_banner",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "t:content.collection_banner_metafield_help",
+      "visible_if": "{{ section.settings.enable_banner }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "t:settings.image",
+      "info": "t:info.collection_banner_fallback",
+      "visible_if": "{{ section.settings.enable_banner }}"
+    },
+    {
+      "type": "color",
+      "id": "banner_background_color",
+      "label": "t:settings.background_color",
+      "default": "#181818",
+      "visible_if": "{{ section.settings.enable_banner }}"
+    },
+    {
+      "type": "color",
+      "id": "banner_title_color",
+      "label": "t:settings.title_color",
+      "default": "#BCA588",
+      "visible_if": "{{ section.settings.enable_banner }}"
+    },
+    {
+      "type": "color",
+      "id": "banner_description_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0",
+      "visible_if": "{{ section.settings.enable_banner }}"
     },
     {
       "type": "header",

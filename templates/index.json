@@ -511,72 +511,10 @@
     },
     "best_sellers_slider_JthhCi": {
       "type": "best-sellers-slider",
-      "blocks": {
-        "best_sellers_card_YcMdYt": {
-          "type": "_best-sellers-card",
-          "settings": {
-            "product": "",
-            "badge_text": "Sale",
-            "title": "Product name",
-            "subtitle": "Short product description",
-            "compare_price": "$199",
-            "current_price": "$149",
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        },
-        "best_sellers_card_8VKitK": {
-          "type": "_best-sellers-card",
-          "settings": {
-            "product": "",
-            "badge_text": "Sale",
-            "title": "Product name",
-            "subtitle": "Short product description",
-            "compare_price": "$199",
-            "current_price": "$149",
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        },
-        "best_sellers_card_yVtwfg": {
-          "type": "_best-sellers-card",
-          "settings": {
-            "product": "",
-            "badge_text": "Sale",
-            "title": "Product name",
-            "subtitle": "Short product description",
-            "compare_price": "$199",
-            "current_price": "$149",
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        },
-        "best_sellers_card_K8GmEt": {
-          "type": "_best-sellers-card",
-          "settings": {
-            "product": "",
-            "badge_text": "Sale",
-            "title": "Product name",
-            "subtitle": "Short product description",
-            "compare_price": "$199",
-            "current_price": "$149",
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "best_sellers_card_YcMdYt",
-        "best_sellers_card_8VKitK",
-        "best_sellers_card_yVtwfg",
-        "best_sellers_card_K8GmEt"
-      ],
       "name": "t:names.best_sellers_slider",
       "settings": {
+        "collection": "",
+        "max_products": 8,
         "heading": "Shop Best Sellers",
         "heading_color": "#bca588",
         "heading_font_size": 48,
@@ -601,15 +539,15 @@
         "compare_price_color": "#bca588",
         "price_font_size": 20,
         "icons_style": "arrow",
-        "icons_shape": "circle",
+        "icons_shape": "square",
         "arrow_background_color": "#a3835f",
         "arrow_icon_color": "#121212",
         "autoplay": false,
         "autoplay_speed": 5,
-        "padding-block-start": 64,
+        "padding-block-start": 0,
         "padding-block-end": 80,
-        "padding-inline-start": 80,
-        "padding-inline-end": 80
+        "padding-inline-start": 120,
+        "padding-inline-end": 120
       }
     },
     "benefits_marquee_eCTXMH": {

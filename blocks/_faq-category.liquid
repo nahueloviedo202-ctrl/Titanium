@@ -1,0 +1,168 @@
+
+
+{% liquid
+  assign block_settings = block.settings
+%}
+
+<div
+  class="faq-category"
+  id="faq-category-{{ block.id }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block_settings.heading != blank %}
+    <h2
+      class="faq-category__heading"
+      style="{% if block_settings.heading_color != blank %}color: {{ block_settings.heading_color }};{% endif %}"
+    >
+      {{- block_settings.heading -}}
+    </h2>
+  {% endif %}
+
+  <div
+    class="accordion accordion--{{ block_settings.icon }} faq-category__accordion{% if block_settings.dividers %} accordion--dividers{% endif %}"
+    style="
+      --summary-font-family: var(--font-{{ block_settings.type_preset }}--family);
+      --summary-font-style: var(--font-{{ block_settings.type_preset }}--style);
+      --summary-font-weight: var(--font-{{ block_settings.type_preset }}--weight);
+      --summary-font-size: var(--font-{{ block_settings.type_preset }}--size);
+      --summary-font-line-height: var(--font-{{ block_settings.type_preset }}--line-height);
+      --summary-font-case: var(--font-{{ block_settings.type_preset }}--case);
+    "
+  >
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% render 'accordion-styles' %}
+
+{% stylesheet %}
+  .faq-category {
+    scroll-margin-top: max(16px, calc(var(--spacing-scale) * 32px));
+  }
+
+  .faq-category + .faq-category {
+    margin-top: max(32px, calc(var(--spacing-scale) * 64px));
+  }
+
+  .faq-category__heading {
+    margin: 0 0 max(20px, calc(var(--spacing-scale) * 32px));
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.faq_category",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_accordion-row"
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.faq_category_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "caret",
+          "label": "t:options.caret"
+        },
+        {
+          "value": "plus",
+          "label": "t:options.plus"
+        }
+      ],
+      "default": "caret"
+    },
+    {
+      "type": "checkbox",
+      "id": "dividers",
+      "label": "t:settings.dividers",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "type_preset",
+      "label": "t:settings.heading_preset",
+      "options": [
+        {
+          "value": "paragraph",
+          "label": "t:options.paragraph"
+        },
+        {
+          "value": "h1",
+          "label": "t:options.h1"
+        },
+        {
+          "value": "h2",
+          "label": "t:options.h2"
+        },
+        {
+          "value": "h3",
+          "label": "t:options.h3"
+        },
+        {
+          "value": "h4",
+          "label": "t:options.h4"
+        },
+        {
+          "value": "h5",
+          "label": "t:options.h5"
+        },
+        {
+          "value": "h6",
+          "label": "t:options.h6"
+        }
+      ],
+      "default": "h6",
+      "info": "t:info.edit_presets_in_theme_settings"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.faq_category",
+      "settings": {
+        "heading": "t:text_defaults.faq_category_heading"
+      },
+      "blocks": {
+        "row-1": {
+          "type": "_accordion-row",
+          "settings": {
+            "heading": "t:text_defaults.when_will_order_arrive"
+          },
+          "blocks": {
+            "text-1": {
+              "type": "text",
+              "settings": {
+                "text": "t:html_defaults.work_quickly_to_ship",
+                "width": "100%"
+              }
+            }
+          },
+          "block_order": ["text-1"]
+        }
+      },
+      "block_order": ["row-1"]
+    }
+  ]
+}
+{% endschema %}
