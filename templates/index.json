@@ -1291,6 +1291,7 @@
         "health_feature_MjqiLT": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-1.svg",
             "text": "No Toxins",
             "body": "",
             "side": "left"
@@ -1300,6 +1301,7 @@
         "health_feature_LwFc37": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-1.svg",
             "text": "Biocompatible",
             "body": "",
             "side": "left"
@@ -1309,6 +1311,7 @@
         "health_feature_6CHhLz": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-2.svg",
             "text": "Extremely Hygienic",
             "body": "",
             "side": "left"
@@ -1318,6 +1321,7 @@
         "health_feature_Pzr48f": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-3.svg",
             "text": "Naturally Antibacterial",
             "body": "",
             "side": "left"
@@ -1327,6 +1331,7 @@
         "health_feature_LpxLLm": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-6.svg",
             "text": "Mold & Fungi Resistant",
             "body": "",
             "side": "left"
@@ -1336,6 +1341,7 @@
         "health_feature_ECczLf": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-7.svg",
             "text": "No Cross-Contamination",
             "body": "",
             "side": "left"
@@ -1345,6 +1351,7 @@
         "health_feature_jrBLjN": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-8.svg",
             "text": "No Heavy Metals",
             "body": "",
             "side": "right"
@@ -1354,6 +1361,7 @@
         "health_feature_TUPELp": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-9.svg",
             "text": "Effortless To Clean",
             "body": "",
             "side": "right"
@@ -1363,6 +1371,7 @@
         "health_feature_CcGUJH": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-10.svg",
             "text": "Never Breaks Down",
             "body": "",
             "side": "right"
@@ -1372,6 +1381,7 @@
         "health_feature_8EKNjq": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-11.svg",
             "text": "Sustainable By Design",
             "body": "",
             "side": "right"
@@ -1381,6 +1391,7 @@
         "health_feature_PHRXMM": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-12.svg",
             "text": "Safe At Any Temperature",
             "body": "",
             "side": "right"
@@ -1390,6 +1401,7 @@
         "health_feature_EBzVWD": {
           "type": "_health-feature",
           "settings": {
+            "icon": "shopify://shop_images/icon-13.svg",
             "text": "PFAS-Free. Microplastic-Free.",
             "body": "",
             "side": "right"
