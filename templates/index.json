@@ -92,7 +92,7 @@
         "subheading": "<p>Thoughtfully designed products built for everyday life. <strong>Save up to 50% for a limited time.</strong></p>",
         "text_color": "{{ settings.color_palette.background }}",
         "button_label": "Shop now",
-        "button_link": "",
+        "button_link": "/collections/all",
         "open_in_new_tab": false,
         "style_class": "button-custom",
         "custom_button_background": "#bf092f",
