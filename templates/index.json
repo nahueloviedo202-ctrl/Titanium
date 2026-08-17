@@ -1437,14 +1437,14 @@
         "item_text_color": "#b9b2a8",
         "item_active_text_color": "#ffffff",
         "content_max_width": 1920,
-        "items_gap": 40,
-        "items_gap_mobile": 16,
+        "items_gap": 8,
+        "items_gap_mobile": 4,
         "padding_block_start": 80,
-        "padding_block_end": 80,
+        "padding_block_end": 0,
         "padding_inline_start": 160,
         "padding_inline_end": 160,
         "padding_block_start_mobile": 56,
-        "padding_block_end_mobile": 56,
+        "padding_block_end_mobile": 0,
         "padding_inline_start_mobile": 0,
         "padding_inline_end_mobile": 0
       }
