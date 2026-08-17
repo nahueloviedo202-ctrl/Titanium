@@ -98,9 +98,7 @@
               class="materials-comparison__tab{% if forloop.first %} materials-comparison__tab--active{% endif %}"
               on:click="/selectCategory/{{ forloop.index0 }}"
               {{ block.shopify_attributes }}
-            >
-              {{- block.settings.label -}}
-            </button>
+            ></button>
           {%- endfor -%}
         </div>
         <div class="materials-comparison__panels">

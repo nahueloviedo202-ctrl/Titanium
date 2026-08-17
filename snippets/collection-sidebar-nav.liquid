@@ -1,40 +1,57 @@
 {%- doc -%}
   Renders the vertical collection navigation rail used on collection pages.
   On desktop it renders as a stacked list of links; on smaller viewports it
-  becomes a horizontally scrollable pill list. Highlights the link that
+  becomes a horizontally scrollable pill list. Lists every collection in the
+  store, plus a link to the full catalog, and highlights whichever one
   matches the current page.
 
-  @param {object} menu - Linklist object, e.g. from a `link_list` setting
-
   @example
-  {% render 'collection-sidebar-nav', menu: section.settings.sidebar_menu %}
+  {% render 'collection-sidebar-nav' %}
 {%- enddoc -%}
 
-{%- if menu != blank and menu.links.size > 0 -%}
-  <nav
-    class="collection-sidebar-nav"
-    aria-label="{{ 'accessibility.collection_navigation' | t }}"
+{%- liquid
+  assign is_all_active = false
+  if collection == blank or collection.handle == 'all'
+    assign is_all_active = true
+  endif
+-%}
+
+<nav
+  class="collection-sidebar-nav"
+  aria-label="{{ 'accessibility.collection_navigation' | t }}"
+>
+  <ul
+    class="collection-sidebar-nav__list"
+    role="list"
   >
-    <ul
-      class="collection-sidebar-nav__list"
-      role="list"
-    >
-      {%- for link in menu.links -%}
+    <li class="collection-sidebar-nav__item">
+      <a
+        href="{{ routes.all_products_collection_url }}"
+        class="collection-sidebar-nav__link{% if is_all_active %} is-active{% endif %}"
+        {% if is_all_active %}
+          aria-current="page"
+        {% endif %}
+      >
+        {{- 'actions.view_all' | t -}}
+      </a>
+    </li>
+    {%- for coll in collections -%}
+      {%- unless coll.handle == 'all' -%}
         <li class="collection-sidebar-nav__item">
           <a
-            href="{{ link.url }}"
-            class="collection-sidebar-nav__link{% if link.active %} is-active{% endif %}"
-            {% if link.active %}
+            href="{{ coll.url }}"
+            class="collection-sidebar-nav__link{% if coll.handle == collection.handle %} is-active{% endif %}"
+            {% if coll.handle == collection.handle %}
               aria-current="page"
             {% endif %}
           >
-            {{- link.title -}}
+            {{- coll.title -}}
           </a>
         </li>
-      {%- endfor -%}
-    </ul>
-  </nav>
-{%- endif -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+</nav>
 
 {% stylesheet %}
   .collection-sidebar-nav__list {

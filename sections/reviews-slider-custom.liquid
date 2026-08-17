@@ -70,28 +70,8 @@
           --review-slider-arrow-border-color: {{ section.settings.arrow_border_color }};
         "
       >
-        <div class="reviews-slider-custom__header-row">
-          <div
-            class="reviews-slider-custom__tablist"
-            role="tablist"
-            aria-label="{{ 'accessibility.reviews_slider_custom_categories' | t }}"
-          >
-            {%- for block in section.blocks -%}
-              <button
-                ref="tabs[]"
-                type="button"
-                role="tab"
-                id="ReviewSliderTab-{{ block.id }}"
-                aria-controls="ReviewSliderPanel-{{ block.id }}"
-                aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-                class="review-slider-custom__tab"
-                on:click="/selectCategory/{{ forloop.index0 }}"
-                {{ block.shopify_attributes }}
-              >
-                {{- block.settings.label -}}
-              </button>
-            {%- endfor -%}
-          </div>
+        <div class="reviews-slider-custom__layout">
+          {% content_for 'blocks' %}
 
           {%- if show_arrows -%}
             <div class="reviews-slider-custom__arrows reviews-slider-custom__arrows--desktop">
@@ -99,10 +79,6 @@
               {% render 'slideshow-arrow', action: 'next', icon_style: section.settings.icons_style, icon_shape: section.settings.icons_shape %}
             </div>
           {%- endif -%}
-        </div>
-
-        <div class="reviews-slider-custom__panels">
-          {% content_for 'blocks' %}
         </div>
 
         {%- if show_arrows -%}
@@ -124,7 +100,7 @@
   }
 
   .reviews-slider-custom__inner {
-    margin-inline: 0 auto;
+    margin-inline: auto;
     padding-block: var(--review-slider-padding-block-start-mobile, 0) var(--review-slider-padding-block-end-mobile, 0);
     padding-inline: var(--review-slider-padding-inline-start-mobile, 0) var(--review-slider-padding-inline-end-mobile, 0);
   }
@@ -145,30 +121,23 @@
     display: block;
   }
 
-  .reviews-slider-custom__header-row {
+  .reviews-slider-custom__layout {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 12px;
-  }
-
-  .reviews-slider-custom__tablist {
-    display: flex;
-    flex-wrap: nowrap;
-    flex: 1;
-    min-width: 0;
-    gap: 0;
+    column-gap: 12px;
+    row-gap: 0;
   }
 
   .review-slider-custom__tab {
+    order: 1;
     appearance: none;
     padding: 10px 20px;
     background: transparent;
     color: var(--review-slider-tab-text-color, #b0b0b0);
     border: 1.5px solid var(--review-slider-tab-border-color, #454545);
     border-inline-start: 0;
-    max-width: 343px;
-    width: 100%;
+    flex: 0 1 343px;
     font-family: var(--font-body--family);
     font-size: 20px;
     font-weight: 500;
@@ -198,11 +167,6 @@
     color: var(--review-slider-tab-active-text-color, #121212);
   }
 
-  .reviews-slider-custom__panels {
-    width: 100%;
-    margin-block-start: 3rem;
-  }
-
   .reviews-slider-custom__arrows {
     display: flex;
     gap: 12px;
@@ -211,6 +175,8 @@
 
   .reviews-slider-custom__arrows--desktop {
     display: none;
+    order: 2;
+    margin-inline-start: auto;
   }
 
   .reviews-slider-custom__arrows--mobile {
@@ -245,13 +211,8 @@
   }
 
   @media screen and (max-width: 749px) {
-    .reviews-slider-custom__tablist {
-      flex-wrap: wrap;
-    }
-
     .review-slider-custom__tab {
-      max-width: none;
-      width: 50%;
+      flex: 0 1 50%;
       font-size: 14px;
     }
   }

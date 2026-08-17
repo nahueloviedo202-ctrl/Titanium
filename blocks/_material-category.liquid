@@ -18,6 +18,7 @@
   id="MaterialsPanel-{{ block.id }}"
   role="tabpanel"
   aria-labelledby="MaterialsTab-{{ block.id }}"
+  data-tab-label="{{ block.settings.label | escape }}"
   {% if block_index > 0 %}
     hidden
   {% endif %}

@@ -45,7 +45,7 @@
 >
   {% if section.settings.enable_sidebar %}
     <div class="collection-layout__sidebar">
-      {% render 'collection-sidebar-nav', menu: section.settings.sidebar_menu %}
+      {% render 'collection-sidebar-nav' %}
     </div>
   {% endif %}
 
@@ -234,13 +234,6 @@
       "id": "enable_sidebar",
       "label": "t:settings.show_sidebar",
       "default": true
-    },
-    {
-      "type": "link_list",
-      "id": "sidebar_menu",
-      "label": "t:settings.menu",
-      "default": "main-menu",
-      "visible_if": "{{ section.settings.enable_sidebar }}"
     },
     {
       "type": "color",
