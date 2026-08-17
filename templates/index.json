@@ -1559,7 +1559,7 @@
     "heritage_text_mK7vLp": {
       "type": "heritage-text",
       "settings": {
-        "heading": "<p>Rooted In <strong>Tradition</strong>.<br>Designed To Outlast You.</p>",
+        "heading": "<p>Rooted In <strong>Tradition</strong>.<br/>Designed To Outlast You.</p>",
         "heading_color": "#ffffff",
         "accent_color": "#bca588",
         "heading_font_size": 48,
@@ -1568,11 +1568,12 @@
         "kicker_color": "#e9e2d8",
         "kicker_font_size": 24,
         "kicker_font_size_mobile": 20,
-        "body": "<p>Shaped by the legacy of Japanese craftsmanship, where perfection isn't a choice, it's a duty. And durability isn't a feature - it's expected. We chose titanium not because it was easy, but <strong>because it was right.</strong></p><p>We chose <strong>Integrity</strong> over shortcuts.<br><strong>Purpose</strong> over profit.<br><strong>Excellence</strong> over mass production.</p><p>That's why everything we create is built with obsession, backed for life, and made to earn your trust, not your attention. Because when something is made right…It never needs to be replaced.</p><p>All of our products are crafted from 100% sustainable pure titanium. Not just for unmatched hygiene and durability. But as part of our promise to protect your health & the planet.</p>",
+        "body": "<p>Shaped by the legacy of Japanese craftsmanship, where perfection isn't a choice, it's a duty. And durability isn't a feature - it's expected. We chose titanium not because it was easy, but <strong>because it was right.</strong></p><p>We chose <strong>Integrity</strong> over shortcuts.<br/><strong>Purpose</strong> over profit.<br/><strong>Excellence</strong> over mass production.</p><p>That's why everything we create is built with obsession, backed for life, and made to earn your trust, not your attention. Because when something is made right…It never needs to be replaced.</p><p>All of our products are crafted from 100% sustainable pure titanium. Not just for unmatched hygiene and durability. But as part of our promise to protect your health & the planet.</p>",
         "body_text_color": "#d1d1d1",
         "body_accent_color": "#ffffff",
         "body_font_size": 16,
         "body_font_size_mobile": 14,
+        "image": "shopify://shop_images/desktop_1-min_2000x_b490c496-509f-4349-bded-5b6cd5e28a74.webp",
         "background_color": "#121212",
         "content_alignment": "right",
         "section_height": 980,
