@@ -260,9 +260,11 @@
 
   .health-features__image {
     display: block;
-    width: auto;
+    width: 100%;
     height: 100%;
     max-width: 100%;
+    object-fit: contain;
+    object-position: bottom center;
     user-select: none;
     pointer-events: none;
   }
@@ -371,6 +373,16 @@
   @media screen and (min-width: 750px) and (max-width: 1799px) {
     .health-features {
       --hf-scale: 0.9;
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1024px) {
+    .health-features__inner {
+      padding-inline: calc(var(--health-features-padding-inline-start, 0px) * 0.35) calc(var(--health-features-padding-inline-end, 0px) * 0.35);
+    }
+
+    .health-features__grid {
+      --health-features-media-width: min(46%, calc(700px * var(--hf-scale, 1)));
     }
   }
 

@@ -1,0 +1,385 @@
+
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+
+  assign desktop_image = section.settings.image
+  assign mobile_image = section.settings.image_mobile | default: desktop_image
+  assign main_image = desktop_image | default: mobile_image
+
+  assign has_distinct_mobile = false
+  if desktop_image != blank and section.settings.image_mobile != blank and section.settings.image_mobile != desktop_image
+    assign has_distinct_mobile = true
+  endif
+
+  assign fetch_priority = 'auto'
+  assign loading = 'lazy'
+  if section.index == 1
+    assign fetch_priority = 'high'
+    assign loading = 'eager'
+  endif
+%}
+
+<section
+  id="Mission-{{ section.id }}"
+  class="mission{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %} spacing-style"
+  role="region"
+  aria-label="{% if section.settings.heading != blank %}{{ section.settings.heading | strip_html }}{% else %}{{ 'accessibility.mission_region' | t }}{% endif %}"
+  style="
+    {%- render 'spacing-style', settings: section.settings %}
+    --mission-height: {{ section.settings.section_height }}px;
+    --mission-content-max-width: {{ section.settings.content_max_width }}px;
+    --mission-content-padding: {{ section.settings.content_padding }}px;
+    --mission-heading-color: {{ section.settings.heading_color }};
+    --mission-heading-size: {{ section.settings.heading_font_size }}px;
+    --mission-heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+    --mission-text-color: {{ section.settings.text_color }};
+    --mission-text-size: {{ section.settings.text_font_size }}px;
+    --mission-text-size-mobile: {{ section.settings.text_font_size_mobile }}px;
+  "
+>
+  <div
+    class="mission__media"
+    aria-hidden="true"
+  >
+    {%- if main_image != blank -%}
+      <picture class="mission__media-picture">
+        {%- if has_distinct_mobile -%}
+          <source
+            media="(max-width: 749px)"
+            srcset="
+              {{ mobile_image | image_url: width: 750 }} 750w,
+              {{ mobile_image | image_url: width: 1100 }} 1100w,
+              {{ mobile_image | image_url: width: 1500 }} 1500w
+            "
+            sizes="100vw"
+            width="{{ mobile_image.width }}"
+            height="{{ mobile_image.height }}"
+          >
+        {%- endif -%}
+        {{
+          main_image
+          | image_url: width: 3840
+          | image_tag:
+            width: main_image.width,
+            height: main_image.height,
+            widths: '750, 1100, 1500, 1780, 2000, 3000, 3840',
+            sizes: '100vw',
+            class: 'mission__image',
+            loading: loading,
+            fetchpriority: fetch_priority,
+            alt: ''
+        }}
+      </picture>
+    {%- else -%}
+      {{ 'hero-apparel-1' | placeholder_svg_tag: 'mission__image' }}
+    {%- endif -%}
+  </div>
+
+  <div class="mission__inner">
+    <div class="mission__content">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="mission__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.subheading != blank -%}
+        <div class="mission__subheading rte">{{ section.settings.subheading }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.kicker != blank -%}
+        <p class="mission__kicker">{{ section.settings.kicker }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .mission {
+    --mission-scale: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-background, #121212);
+    color: var(--mission-heading-color, #fff);
+  }
+
+  .mission__media {
+    position: absolute;
+    inset: 0;
+    z-index: var(--layer-base);
+    overflow: hidden;
+  }
+
+  .mission__media-picture,
+  .mission__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mission__image {
+    object-fit: cover;
+    object-position: center calc(150px * var(--mission-scale));
+  }
+
+  .mission__inner {
+    position: relative;
+    z-index: var(--layer-raised);
+    min-height: calc(var(--mission-height, 736px) * var(--mission-scale));
+    padding: calc(var(--mission-content-padding, 120px) * var(--mission-scale));
+  }
+
+  .mission__content {
+    max-width: calc(var(--mission-content-max-width, 760px) * var(--mission-scale));
+  }
+
+  .mission__heading {
+    margin: 0 0 calc(32px * var(--mission-scale));
+    color: var(--mission-heading-color, #fff);
+    font-family: var(--font-heading--family);
+    font-size: calc(var(--mission-heading-size, 64px) * var(--mission-scale));
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: calc(1.28px * var(--mission-scale));
+    text-transform: capitalize;
+  }
+
+  .mission__subheading,
+  .mission__kicker {
+    color: var(--mission-text-color, #b0b0b0);
+    font-family: var(--font-body--family);
+    font-size: calc(var(--mission-text-size, 24px) * var(--mission-scale));
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: calc(0.96px * var(--mission-scale));
+    text-transform: capitalize;
+  }
+
+  .mission__subheading {
+    margin: 0 0 16px;
+  }
+
+  .mission__kicker {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .mission__image {
+      object-position: right bottom;
+    }
+
+    .mission__inner {
+      min-height: 0;
+      padding: 64px 16px 106px;
+    }
+
+    .mission__heading {
+      font-size: var(--mission-heading-size-mobile, 48px);
+      letter-spacing: 1.92px;
+    }
+
+    .mission__subheading,
+    .mission__kicker {
+      font-size: var(--mission-text-size-mobile, 16px);
+      letter-spacing: 0.32px;
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1799px) {
+    .mission {
+      --mission-scale: 0.9;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .mission {
+      --mission-scale: 1.3;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.mission",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.mission_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "t:content.paragraph"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:settings.subheading",
+      "default": "t:html_defaults.mission_subheading"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "t:settings.kicker",
+      "default": "t:text_defaults.mission_kicker"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "label": "t:settings.size",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "t:content.media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "header",
+      "content": "t:content.mobile_media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "section_height",
+      "label": "t:settings.height",
+      "min": 400,
+      "max": 1400,
+      "step": 10,
+      "unit": "px",
+      "default": 736
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "t:settings.width",
+      "min": 400,
+      "max": 1200,
+      "step": 10,
+      "unit": "px",
+      "default": 760
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "label": "t:settings.padding",
+      "min": 0,
+      "max": 300,
+      "step": 2,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.mission",
+      "category": "t:categories.storytelling"
+    }
+  ]
+}
+{% endschema %}

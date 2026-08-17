@@ -1539,13 +1539,13 @@
         "gap": 16,
         "icons_style": "chevron_large",
         "icons_shape": "square",
-        "arrow_background_color": "#121212",
-        "arrow_icon_color": "#ffffff",
+        "arrow_background_color": "#a3835f",
+        "arrow_icon_color": "#121212",
         "background_color": "#121212",
         "content_max_width": 1680,
         "padding_block_start": 120,
         "padding_block_end": 120,
-        "padding_inline_start": 0,
+        "padding_inline_start": 120,
         "padding_inline_end": 16,
         "padding_block_start_mobile": 64,
         "padding_block_end_mobile": 16,
@@ -1554,97 +1554,18 @@
       }
     },
     "heritage_text_mK7vLp": {
-      "type": "media-with-content",
-      "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "static": true,
-          "settings": {
-            "media_type": "image",
-            "link": "",
-            "video_loop": true,
-            "video_autoplay": false,
-            "image_position": "cover",
-            "video_position": "cover"
-          },
-          "blocks": {}
-        },
-        "content": {
-          "type": "_content-without-appearance",
-          "static": true,
-          "settings": {
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 24
-          },
-          "blocks": {
-            "heading": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Rooted In Tradition.<br>Designed To Outlast You.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "custom",
-                "font": "var(--font-body--family)",
-                "font_size": "3rem",
-                "line_height": "tight",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "#ffffff",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "body": {
-              "type": "text",
-              "settings": {
-                "text": "<p>At Taima®, We Don't Just Make Kitchenware. We Uphold A Standard.</p><p>Shaped by the legacy of Japanese craftsmanship, where perfection isn't a choice, it's a duty. And durability isn't a feature - it's expected. We chose titanium not because it was easy, but because it was right.</p><p>We chose Integrity over shortcuts.<br>Purpose over profit.<br>Excellence over mass production.</p><p>That's why everything we create is built with obsession, backed for life, and made to earn your trust, not your attention. Because when something is made right… It never needs to be replaced.</p><p>All of our products are crafted from 100% sustainable pure titanium. Not just for unmatched hygiene and durability. But as part of our promise to protect your health & the planet.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "custom",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "loose",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "#b0b0b0",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading",
-            "body"
-          ]
-        }
-      },
-      "name": "t:names.editorial",
+      "type": "heritage-text",
       "settings": {
-        "media_position": "left",
-        "media_width": "medium",
-        "media_height": "auto",
-        "section_width": "full-width",
-        "extend_media": true,
-        "background_color": "",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "heading": "<p>Rooted In <strong>Tradition</strong>.<br>Designed To Outlast You.</p>",
+        "heading_color": "#ffffff",
+        "accent_color": "#bca588",
+        "kicker": "At Taima®, We Don’t Just Make Kitchenware. We Uphold A Standard.",
+        "kicker_color": "#e9e2d8",
+        "body": "<p>Shaped by the legacy of Japanese craftsmanship, where perfection isn't a choice, it's a duty. And durability isn't a feature - it's expected. We chose titanium not because it was easy, but <strong>because it was right.</strong></p><p>We chose <strong>Integrity</strong> over shortcuts.<br><strong>Purpose</strong> over profit.<br><strong>Excellence</strong> over mass production.</p><p>That's why everything we create is built with obsession, backed for life, and made to earn your trust, not your attention. Because when something is made right…It never needs to be replaced.</p><p>All of our products are crafted from 100% sustainable pure titanium. Not just for unmatched hygiene and durability. But as part of our promise to protect your health & the planet.</p>",
+        "body_text_color": "#d1d1d1",
+        "body_accent_color": "#ffffff",
+        "background_color": "#121212",
+        "content_alignment": "right"
       }
     },
     "story_right_hero_wY3dHb": {

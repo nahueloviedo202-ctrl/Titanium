@@ -154,7 +154,7 @@
 
   .reviews-slider-custom__tablist {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex: 1;
     min-width: 0;
     gap: 0;
@@ -245,6 +245,10 @@
   }
 
   @media screen and (max-width: 749px) {
+    .reviews-slider-custom__tablist {
+      flex-wrap: wrap;
+    }
+
     .review-slider-custom__tab {
       max-width: none;
       width: 50%;

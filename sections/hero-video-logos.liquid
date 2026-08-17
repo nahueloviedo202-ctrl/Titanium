@@ -299,6 +299,19 @@
     padding-top: calc(var(--hero-height-offset, 0px) + 1.5rem);
   }
 
+  @media screen and (min-width: 750px) {
+    .hero-video-logos {
+      /* Reserved bottom space = the logos wrap's real height (logo + its own 2.5rem padding-block), no extra buffer,
+         so it matches the 2.5rem used above for --hero-height-offset. Keeps the gap above the heading and the gap
+         above the logo row visually equal, since both then resolve to "flex-centering remainder + 2.5rem". */
+      padding-bottom: max(0px, calc(var(--hero-video-logos-ticker-space, 0px) - 1.5rem));
+    }
+
+    .hero-video-logos__inner {
+      padding-top: calc(var(--hero-height-offset, 0px) + 2.5rem);
+    }
+  }
+
   @media screen and (max-width: 749px) {
     .hero-video-logos__inner {
       padding-top: calc(var(--hero-height-offset, 0px) + 2.5rem);
