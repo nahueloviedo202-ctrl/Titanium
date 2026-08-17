@@ -1129,6 +1129,7 @@
             "material_card_cADMme": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/plastic_spatula-min.webp",
                 "badge_text": "BPA | PHTHALATES",
                 "title": "Plastic",
                 "text": "Plastic spatulas have a very low melting temperature, releasing toxic chemicals each time they're used, causing serious health risks like gut, hormone disruption & cancer."
@@ -1138,6 +1139,7 @@
             "material_card_fCwn6J": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/silicone_spatula-min.webp",
                 "badge_text": "BPA | PHTHALATES",
                 "title": "Silicone",
                 "text": "While high-end silicone spatulas are heat-resistant, most found on Amazon or in regular stores degrade over time and release toxic chemicals. Cheaper silicone spatulas often contain dangerous fillers like BPA and phthalates, becoming toxic when heated."
@@ -1147,6 +1149,7 @@
             "material_card_kEgKrP": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/wooden_spatula-min.webp",
                 "badge_text": "BACTERIA | MOLD",
                 "title": "Wood",
                 "text": "Not hygienic. It lets bacteria grow in grooves and cracks, even if invisible, which can contaminate your food over time. They also absorb odors, stain easily."
@@ -1156,6 +1159,7 @@
             "material_card_iiBFk6": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/steel_spatula-min.webp",
                 "badge_text": "HEAVY METALS",
                 "title": "Steel",
                 "text": "Most are made from low-grade alloys that release heavy metals like chromium and nickel into your food when heated. They're also heavy, destroying your cookware's surface."
@@ -1165,6 +1169,7 @@
             "material_card_7Dr7Rn": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/carbon_steel_spatula-min.webp",
                 "badge_text": "RUST | HEAVY METALS",
                 "title": "Carbon Steel",
                 "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
@@ -1189,6 +1194,7 @@
             "material_card_CWrKrQ": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/plastric_bottle-min.webp",
                 "badge_text": "BPA | PHTHALATES",
                 "title": "Plastic",
                 "text": "Worst type of water bottle. Even BPA-free plastic bottles leach hormone-disrupting chemicals, especially when exposed to heat. The moist environment around the mouthpiece quickly breeds bacteria and mold."
@@ -1198,6 +1204,7 @@
             "material_card_pffMkz": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/steel_bottle-min.webp",
                 "badge_text": "HEAVY METALS",
                 "title": "Steel",
                 "text": "Though durable, stainless steel isn't antibacterial like titanium, allowing bacteria from your mouth to thrive inside. Frequent cleaning is essential, as studies show 87% of these bottles contain harmful bacteria like E. coli."
@@ -1207,6 +1214,7 @@
             "material_card_CTBy93": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/aluminum_bottle-min.webp",
                 "badge_text": "CHEMICALS",
                 "title": "Aluminum",
                 "text": "Aluminum bottles are often lined with synthetic coatings to prevent the metal from reacting with liquids, but these coatings can break down and leach chemicals into your water. Like other bottles, bacteria and fungi easily grow in aluminum bottles, making them unsanitary."
@@ -1216,6 +1224,7 @@
             "material_card_49BGjE": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/glass_bottle-min.webp",
                 "badge_text": "BACTERIA | FRAGILE",
                 "title": "Glass",
                 "text": "While glass doesn't leach chemicals, it offers no antibacterial protection. Bacteria from your mouth still multiply in the bottle. Additionally, glass is fragile, making it more prone to breakage and less practical for daily use."
