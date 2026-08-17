@@ -124,7 +124,7 @@
         "logo_opacity": 100,
         "section_height": "large",
         "section_height_custom": 90,
-        "padding-block-start": 0,
+        "padding-block-start": 100,
         "padding-block-end": 96
       }
     },
@@ -792,7 +792,7 @@
         "highlighted_text_color": "#bca588",
         "heading_size": 48,
         "heading_size_mobile": 32,
-        "card_width": 420,
+        "slides_per_view": 3,
         "mobile_card_width": 300,
         "gap": 32,
         "card_radius": 18,
@@ -801,6 +801,7 @@
         "autoplay_speed": 5,
         "arrow_background_color": "#a3835f",
         "arrow_icon_color": "#121212",
+        "arrow_border_color": "#d4c7b4",
         "background_color": "#121212",
         "text_color": "{{ settings.color_palette.background }}",
         "padding_block_start": 80,
@@ -1406,7 +1407,7 @@
         "image_mobile": "shopify://shop_images/to_compress_mobile_homepage-min_1.webp",
         "image_swap_mobile": "shopify://shop_images/board_homepage_smaller-min_1.webp",
         "background_color": "#03231a",
-        "item_text_color": "#d4c7b4",
+        "item_text_color": "#b9b2a8",
         "item_active_text_color": "#ffffff",
         "content_max_width": 1920,
         "items_gap": 40,
@@ -1433,18 +1434,18 @@
             "board_1": {
               "type": "_review-slider-card",
               "settings": {
-                "author": "Sabrina, Mar 2024",
+                "author": "Dominique, Dec 2024",
                 "rating": 5,
-                "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
+                "quote": "In my kitchen, hygiene and precision are everything. This board is not just functional, it's flawless. No bacteria, no toxins, no hassle. I recommend it to every chef I train."
               },
               "blocks": {}
             },
             "board_2": {
               "type": "_review-slider-card",
               "settings": {
-                "author": "Jason, Jun 2025",
+                "author": "Sabrina, Mar 2024",
                 "rating": 5,
-                "quote": "The client's (a well-known name you'd definitely recognize) assistant handed me this board on my first day and said, \"They don't allow anything toxic, use this instead\". It's completely hygienic, so I haven't used plastic or wood ever since."
+                "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
               },
               "blocks": {}
             },
@@ -1465,73 +1466,13 @@
                 "quote": "I make everything from baby food to dinner on this board. It's reassuring to know my kids aren't getting microplastic flakes with their meals."
               },
               "blocks": {}
-            },
-            "board_5": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Darren, Jan 2025",
-                "rating": 5,
-                "quote": "For someone deeply into detoxing and gut health, this board is a no-brainer. Titanium means no hidden chemicals or bacteria"
-              },
-              "blocks": {}
-            },
-            "board_6": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Asako, Feb 2024",
-                "rating": 5,
-                "quote": "Precision and cleanliness are sacred to me. Taima honors both."
-              },
-              "blocks": {}
-            },
-            "board_7": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Ethan, Sep 2024",
-                "rating": 5,
-                "quote": "Why would I track calories and macros… and then cook on a plastic board or pfas pan, that stuff WRECKS your hormones!! Titanium or nothing."
-              },
-              "blocks": {}
-            },
-            "board_8": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Claire, Feb 2025",
-                "rating": 5,
-                "quote": "Safety is my priority so I care about what goes in and around my family. Taima's board is beautiful, but more importantly, it's clean. No microplastics, no germs, no stress."
-              },
-              "blocks": {}
-            },
-            "board_9": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Jen, Apr 2025",
-                "rating": 5,
-                "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded"
-              },
-              "blocks": {}
-            },
-            "board_10": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Dominique, Dec 2024",
-                "rating": 5,
-                "quote": "In my kitchen, hygiene and precision are everything. This board is not just functional, it's flawless. No bacteria, no toxins, no hassle. I recommend it to every chef I train."
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "board_1",
             "board_2",
             "board_3",
-            "board_4",
-            "board_5",
-            "board_6",
-            "board_7",
-            "board_8",
-            "board_9",
-            "board_10"
+            "board_4"
           ]
         },
         "cat_pans": {
@@ -1543,18 +1484,18 @@
             "pan_1": {
               "type": "_review-slider-card",
               "settings": {
-                "author": "Jason, Jun 2025",
+                "author": "Jen, Apr 2025",
                 "rating": 5,
-                "quote": "The client's (a well-known name you'd definitely recognize) assistant handed me this pan on my first day and said, \"They don't allow anything toxic, use this instead\". Crusty steaks, perfect eggs. No hot spots, no sticking. My new go-to."
+                "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded. Taima products just makes sense."
               },
               "blocks": {}
             },
             "pan_2": {
               "type": "_review-slider-card",
               "settings": {
-                "author": "Sabrina, Mar 2024",
+                "author": "Jason, Jun 2025",
                 "rating": 5,
-                "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
+                "quote": "Crusty steaks, perfect eggs. No hot spots, no sticking. My new go-to."
               },
               "blocks": {}
             },
@@ -1563,70 +1504,7 @@
               "settings": {
                 "author": "Tyler, Jan 2025",
                 "rating": 5,
-                "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This pan was the missing piece. Titanium is unmatched, I know exactly what touches my food now. and it shows in my energy and recovery."
-              },
-              "blocks": {}
-            },
-            "pan_4": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Jenna, Jul 2025",
-                "rating": 5,
-                "quote": "I make everything from baby food to dinner with this pan. It's reassuring to know my kids aren't getting forever chemicals or heavy metals with their meals."
-              },
-              "blocks": {}
-            },
-            "pan_5": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Omar, Feb 2025",
-                "rating": 5,
-                "quote": "I enjoy this pan. I've used cast iron for years but hated how heavy it was and the upkeep. Taima's pan is lightweight, durable, and heats evenly."
-              },
-              "blocks": {}
-            },
-            "pan_6": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Darren, Jan 2025",
-                "rating": 5,
-                "quote": "For someone deeply into detoxing and gut health, this pan is a no-brainer. Titanium means no hidden chemicals or metals"
-              },
-              "blocks": {}
-            },
-            "pan_7": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Ethan, Sep 2024",
-                "rating": 5,
-                "quote": "Why would I track calories and macros... and then cut on a plastic board or PFAS-coated pan, that stuff WRECKS your hormones!! Titanium or nothing."
-              },
-              "blocks": {}
-            },
-            "pan_8": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Claire, Feb 2025",
-                "rating": 5,
-                "quote": "Safety is my priority so I care about what goes in and around my family. Taima's pan is beautiful, but more importantly, it's non-toxic. I am relieved knowing every meal I make won't come with risks."
-              },
-              "blocks": {}
-            },
-            "pan_9": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Dominique, Dec 2024",
-                "rating": 5,
-                "quote": "This is a true kitchen workhorse. You get deep sear, caramelisation & flawless food release consistently."
-              },
-              "blocks": {}
-            },
-            "pan_10": {
-              "type": "_review-slider-card",
-              "settings": {
-                "author": "Jen, Apr 2025",
-                "rating": 5,
-                "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded. Taima products just makes sense"
+                "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This pan was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
               },
               "blocks": {}
             }
@@ -1634,14 +1512,7 @@
           "block_order": [
             "pan_1",
             "pan_2",
-            "pan_3",
-            "pan_4",
-            "pan_5",
-            "pan_6",
-            "pan_7",
-            "pan_8",
-            "pan_9",
-            "pan_10"
+            "pan_3"
           ]
         }
       },
@@ -1663,22 +1534,21 @@
         "name_color": "#2c1f1c",
         "quote_color": "#252525",
         "star_color": "#b57c46",
-        "card_width": 291,
+        "card_width": 324,
         "mobile_card_width": 240,
         "gap": 16,
         "icons_style": "chevron_large",
         "icons_shape": "square",
-        "arrow_background_color": "#a3835f",
-        "arrow_icon_color": "#121212",
-        "arrow_border_color": "#454545",
+        "arrow_background_color": "#121212",
+        "arrow_icon_color": "#ffffff",
         "background_color": "#121212",
         "content_max_width": 1680,
         "padding_block_start": 120,
         "padding_block_end": 120,
-        "padding_inline_start": 120,
-        "padding_inline_end": 0,
+        "padding_inline_start": 0,
+        "padding_inline_end": 16,
         "padding_block_start_mobile": 64,
-        "padding_block_end_mobile": 2,
+        "padding_block_end_mobile": 16,
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
       }

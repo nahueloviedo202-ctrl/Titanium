@@ -1,20 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "sticky_scroll_hero": {
       "type": "sticky-scroll-story",
-      "settings": {
-        "media_position": "right",
-        "background_color": "#121212",
-        "content_max_width": 1600,
-        "padding_block_start": 64,
-        "padding_block_end": 64,
-        "padding_inline_start": 120,
-        "padding_inline_end": 120,
-        "padding_block_start_mobile": 40,
-        "padding_block_end_mobile": 40,
-        "padding_inline_start_mobile": 16,
-        "padding_inline_end_mobile": 16
-      },
       "blocks": {
         "line_1": {
           "type": "_sticky-scroll-line",
@@ -42,26 +38,27 @@
           }
         }
       },
-      "block_order": ["line_1", "line_2", "line_3"]
+      "block_order": [
+        "line_1",
+        "line_2",
+        "line_3"
+      ],
+      "settings": {
+        "media_position": "right",
+        "background_color": "#121212",
+        "content_max_width": 1600,
+        "padding_block_start": 64,
+        "padding_block_end": 64,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 40,
+        "padding_block_end_mobile": 40,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
     },
     "section_trusted_failure": {
       "type": "section",
-      "settings": {
-        "content_direction": "column",
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 56,
-        "section_width": "page-width",
-        "section_height": "",
-        "background_media": "none",
-        "background_color": "#121212",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "padding-block-start": 96,
-        "padding-block-end": 96
-      },
       "blocks": {
         "heading": {
           "type": "text",
@@ -71,12 +68,12 @@
             "max_width": "normal",
             "alignment": "center",
             "type_preset": "h2",
-            "text_color": "#BCA588",
             "font": "var(--font-body--family)",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
-            "wrap": "pretty"
+            "wrap": "pretty",
+            "text_color": "#BCA588"
           }
         },
         "intro": {
@@ -143,7 +140,11 @@
               "blocks": {
                 "image": {
                   "type": "image",
-                  "settings": { "image_ratio": "square", "width": "fill", "height": "fit" }
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "height": "fit"
+                  }
                 },
                 "heading": {
                   "type": "text",
@@ -176,7 +177,11 @@
                   }
                 }
               },
-              "block_order": ["image", "heading", "text"]
+              "block_order": [
+                "image",
+                "heading",
+                "text"
+              ]
             },
             "card_2": {
               "type": "group",
@@ -203,7 +208,11 @@
               "blocks": {
                 "image": {
                   "type": "image",
-                  "settings": { "image_ratio": "square", "width": "fill", "height": "fit" }
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "height": "fit"
+                  }
                 },
                 "heading": {
                   "type": "text",
@@ -236,7 +245,11 @@
                   }
                 }
               },
-              "block_order": ["image", "heading", "text"]
+              "block_order": [
+                "image",
+                "heading",
+                "text"
+              ]
             },
             "card_3": {
               "type": "group",
@@ -263,7 +276,11 @@
               "blocks": {
                 "image": {
                   "type": "image",
-                  "settings": { "image_ratio": "square", "width": "fill", "height": "fit" }
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "height": "fit"
+                  }
                 },
                 "heading": {
                   "type": "text",
@@ -296,7 +313,11 @@
                   }
                 }
               },
-              "block_order": ["image", "heading", "text"]
+              "block_order": [
+                "image",
+                "heading",
+                "text"
+              ]
             },
             "card_4": {
               "type": "group",
@@ -323,7 +344,11 @@
               "blocks": {
                 "image": {
                   "type": "image",
-                  "settings": { "image_ratio": "square", "width": "fill", "height": "fit" }
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "height": "fit"
+                  }
                 },
                 "heading": {
                   "type": "text",
@@ -356,13 +381,42 @@
                   }
                 }
               },
-              "block_order": ["image", "heading", "text"]
+              "block_order": [
+                "image",
+                "heading",
+                "text"
+              ]
             }
           },
-          "block_order": ["card_1", "card_2", "card_3", "card_4"]
+          "block_order": [
+            "card_1",
+            "card_2",
+            "card_3",
+            "card_4"
+          ]
         }
       },
-      "block_order": ["heading", "intro", "row"]
+      "block_order": [
+        "heading",
+        "intro",
+        "row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 56,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_media": "none",
+        "background_color": "#121212",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
     },
     "best_sellers_slider_science": {
       "type": "best-sellers-slider",
@@ -406,19 +460,6 @@
     },
     "sticky_scroll_benefit": {
       "type": "sticky-scroll-story",
-      "settings": {
-        "media_position": "left",
-        "background_color": "#121212",
-        "content_max_width": 1600,
-        "padding_block_start": 64,
-        "padding_block_end": 64,
-        "padding_inline_start": 120,
-        "padding_inline_end": 120,
-        "padding_block_start_mobile": 40,
-        "padding_block_end_mobile": 40,
-        "padding_inline_start_mobile": 16,
-        "padding_inline_end_mobile": 16
-      },
       "blocks": {
         "line_1": {
           "type": "_sticky-scroll-line",
@@ -451,14 +492,34 @@
           }
         }
       },
-      "block_order": ["line_1", "line_2", "line_3", "line_4"]
+      "block_order": [
+        "line_1",
+        "line_2",
+        "line_3",
+        "line_4"
+      ],
+      "settings": {
+        "media_position": "left",
+        "background_color": "#121212",
+        "content_max_width": 1600,
+        "padding_block_start": 64,
+        "padding_block_end": 64,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 40,
+        "padding_block_end_mobile": 40,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
     },
     "materials_comparison_science": {
       "type": "materials-comparison",
       "blocks": {
         "material_category_1": {
           "type": "_material-category",
-          "settings": { "label": "Pans" },
+          "settings": {
+            "label": "Pans"
+          },
           "blocks": {
             "material_card_1": {
               "type": "_material-card",
@@ -505,11 +566,19 @@
               }
             }
           },
-          "block_order": ["material_card_1", "material_card_2", "material_card_3", "material_card_4", "material_card_5"]
+          "block_order": [
+            "material_card_1",
+            "material_card_2",
+            "material_card_3",
+            "material_card_4",
+            "material_card_5"
+          ]
         },
         "material_category_2": {
           "type": "_material-category",
-          "settings": { "label": "Cutting Boards" },
+          "settings": {
+            "label": "Cutting Boards"
+          },
           "blocks": {
             "material_card_1": {
               "type": "_material-card",
@@ -544,11 +613,18 @@
               }
             }
           },
-          "block_order": ["material_card_1", "material_card_2", "material_card_3", "material_card_4"]
+          "block_order": [
+            "material_card_1",
+            "material_card_2",
+            "material_card_3",
+            "material_card_4"
+          ]
         },
         "material_category_3": {
           "type": "_material-category",
-          "settings": { "label": "Utensils" },
+          "settings": {
+            "label": "Utensils"
+          },
           "blocks": {
             "material_card_1": {
               "type": "_material-card",
@@ -591,11 +667,19 @@
               }
             }
           },
-          "block_order": ["material_card_1", "material_card_2", "material_card_3", "material_card_4", "material_card_5"]
+          "block_order": [
+            "material_card_1",
+            "material_card_2",
+            "material_card_3",
+            "material_card_4",
+            "material_card_5"
+          ]
         },
         "material_category_4": {
           "type": "_material-category",
-          "settings": { "label": "Water Bottles" },
+          "settings": {
+            "label": "Water Bottles"
+          },
           "blocks": {
             "material_card_1": {
               "type": "_material-card",
@@ -630,10 +714,20 @@
               }
             }
           },
-          "block_order": ["material_card_1", "material_card_2", "material_card_3", "material_card_4"]
+          "block_order": [
+            "material_card_1",
+            "material_card_2",
+            "material_card_3",
+            "material_card_4"
+          ]
         }
       },
-      "block_order": ["material_category_1", "material_category_2", "material_category_3", "material_category_4"],
+      "block_order": [
+        "material_category_1",
+        "material_category_2",
+        "material_category_3",
+        "material_category_4"
+      ],
       "settings": {
         "heading": "Titanium Isn't Competing. It's Replacing.",
         "heading_color": "#bca588",
@@ -674,21 +768,6 @@
     },
     "section_molecular": {
       "type": "section",
-      "settings": {
-        "content_direction": "column",
-        "horizontal_alignment_flex_direction_column": "center",
-        "gap": 0,
-        "section_width": "page-width",
-        "section_height": "",
-        "background_media": "none",
-        "background_color": "#03231A",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "padding-block-start": 96,
-        "padding-block-end": 96
-      },
       "blocks": {
         "row": {
           "type": "group",
@@ -745,12 +824,12 @@
                     "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "h3",
-                    "text_color": "#BCA588",
                     "font": "var(--font-body--family)",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
-                    "wrap": "pretty"
+                    "wrap": "pretty",
+                    "text_color": "#BCA588"
                   }
                 },
                 "subheading": {
@@ -799,7 +878,12 @@
                   }
                 }
               },
-              "block_order": ["eyebrow", "subheading", "body", "label"]
+              "block_order": [
+                "eyebrow",
+                "subheading",
+                "body",
+                "label"
+              ]
             },
             "col_2": {
               "type": "group",
@@ -824,7 +908,14 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "icon": { "type": "icon", "settings": { "icon": "lightning_bolt", "width": 32, "link": "" } },
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "lightning_bolt",
+                    "width": 32,
+                    "link": ""
+                  }
+                },
                 "heading": {
                   "type": "text",
                   "settings": {
@@ -856,7 +947,11 @@
                   }
                 }
               },
-              "block_order": ["icon", "heading", "text"]
+              "block_order": [
+                "icon",
+                "heading",
+                "text"
+              ]
             },
             "col_3": {
               "type": "group",
@@ -881,7 +976,14 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "icon": { "type": "icon", "settings": { "icon": "recycle", "width": 32, "link": "" } },
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "recycle",
+                    "width": 32,
+                    "link": ""
+                  }
+                },
                 "heading": {
                   "type": "text",
                   "settings": {
@@ -913,7 +1015,11 @@
                   }
                 }
               },
-              "block_order": ["icon", "heading", "text"]
+              "block_order": [
+                "icon",
+                "heading",
+                "text"
+              ]
             },
             "col_4": {
               "type": "group",
@@ -938,7 +1044,14 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "icon": { "type": "icon", "settings": { "icon": "lock", "width": 32, "link": "" } },
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "lock",
+                    "width": 32,
+                    "link": ""
+                  }
+                },
                 "heading": {
                   "type": "text",
                   "settings": {
@@ -970,37 +1083,42 @@
                   }
                 }
               },
-              "block_order": ["icon", "heading", "text"]
+              "block_order": [
+                "icon",
+                "heading",
+                "text"
+              ]
             }
           },
-          "block_order": ["col_intro", "col_2", "col_3", "col_4"]
+          "block_order": [
+            "col_intro",
+            "col_2",
+            "col_3",
+            "col_4"
+          ]
         }
       },
-      "block_order": ["row"]
+      "block_order": [
+        "row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_media": "none",
+        "background_color": "#03231A",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
     },
     "health_features_science": {
       "type": "health-features",
-      "settings": {
-        "heading": "Real Pure Titanium. Real Benefits.",
-        "heading_color": "#BCA588",
-        "heading_font_size": 48,
-        "heading_font_size_mobile": 24,
-        "subheading": "<p>Not all titanium is created equal. Most cut costs by using titanium coatings, blends, or lower grades that compromise purity and safety.</p><p>At Taima®, we only use Grade 1 Certified Medical Titanium - the purest form possible, the same titanium trusted inside the human body for decades. No mixing. No coating. Just uncompromising purity engineered for your kitchen and your safety.</p>",
-        "background_color": "#03231A",
-        "item_text_color": "#D4C7B4",
-        "item_active_text_color": "#FFFFFF",
-        "content_max_width": 1920,
-        "items_gap": 40,
-        "items_gap_mobile": 16,
-        "padding_block_start": 80,
-        "padding_block_end": 80,
-        "padding_inline_start": 160,
-        "padding_inline_end": 160,
-        "padding_block_start_mobile": 56,
-        "padding_block_end_mobile": 56,
-        "padding_inline_start_mobile": 0,
-        "padding_inline_end_mobile": 0
-      },
       "blocks": {
         "feat_1": {
           "type": "_health-feature",
@@ -1075,23 +1193,41 @@
           }
         }
       },
-      "block_order": ["feat_1", "feat_2", "feat_3", "feat_4", "feat_5", "feat_6", "feat_7", "feat_8", "feat_9"]
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6",
+        "feat_7",
+        "feat_8",
+        "feat_9"
+      ],
+      "settings": {
+        "heading": "Real Pure Titanium. Real Benefits.",
+        "heading_color": "#BCA588",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
+        "subheading": "<p>Not all titanium is created equal. Most cut costs by using titanium coatings, blends, or lower grades that compromise purity and safety.</p><p>At Taima®, we only use Grade 1 Certified Medical Titanium - the purest form possible, the same titanium trusted inside the human body for decades. No mixing. No coating. Just uncompromising purity engineered for your kitchen and your safety.</p>",
+        "background_color": "#03231A",
+        "item_text_color": "#D4C7B4",
+        "item_active_text_color": "#FFFFFF",
+        "content_max_width": 1920,
+        "items_gap": 40,
+        "items_gap_mobile": 16,
+        "padding_block_start": 80,
+        "padding_block_end": 80,
+        "padding_inline_start": 160,
+        "padding_inline_end": 160,
+        "padding_block_start_mobile": 56,
+        "padding_block_end_mobile": 56,
+        "padding_inline_start_mobile": 0,
+        "padding_inline_end_mobile": 0
+      }
     },
     "hero_cta": {
       "type": "hero",
-      "settings": {
-        "media_type_1": "image",
-        "content_direction": "column",
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 20,
-        "section_width": "full-width",
-        "section_height": "large",
-        "toggle_overlay": true,
-        "overlay_color": "#000000B3",
-        "overlay_style": "solid",
-        "background_color": "#121212"
-      },
       "blocks": {
         "heading": {
           "type": "text",
@@ -1132,7 +1268,24 @@
           }
         }
       },
-      "block_order": ["heading", "body", "button"]
+      "block_order": [
+        "heading",
+        "body",
+        "button"
+      ],
+      "settings": {
+        "media_type_1": "image",
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "full-width",
+        "section_height": "large",
+        "background_color": "#121212",
+        "toggle_overlay": true,
+        "overlay_color": "#000000B3",
+        "overlay_style": "solid"
+      }
     },
     "reviews_hero_slider_science": {
       "type": "reviews-hero-slider",
@@ -1280,7 +1433,6 @@
         "highlighted_text_color": "#bca588",
         "heading_size": 48,
         "heading_size_mobile": 32,
-        "card_width": 420,
         "mobile_card_width": 300,
         "gap": 32,
         "card_radius": 18,
