@@ -14,6 +14,30 @@ import { Component } from '@theme/component';
 class MaterialsComparisonComponent extends Component {
   requiredRefs = ['tabs', 'panels'];
 
+  connectedCallback() {
+    super.connectedCallback();
+    this.#syncTabLabels();
+  }
+
+  updatedCallback() {
+    super.updatedCallback();
+    this.#syncTabLabels();
+  }
+
+  /**
+   * Tab buttons can't read their category's `label` setting directly (theme
+   * blocks only resolve `block.settings` inside their own render scope), so
+   * each panel carries the label in `data-tab-label` and we copy it across.
+   */
+  #syncTabLabels() {
+    const { tabs, panels } = this.refs;
+
+    tabs.forEach((tab, i) => {
+      const label = panels[i]?.dataset.tabLabel;
+      if (label) tab.textContent = label;
+    });
+  }
+
   /**
    * @param {number} index
    */
