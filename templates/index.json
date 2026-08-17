@@ -1574,6 +1574,7 @@
         "body_font_size": 16,
         "body_font_size_mobile": 14,
         "image": "shopify://shop_images/desktop_1-min_2000x_b490c496-509f-4349-bded-5b6cd5e28a74.webp",
+        "image_mobile": "shopify://shop_images/mobile.webp",
         "background_color": "#121212",
         "content_alignment": "right",
         "section_height": 980,
