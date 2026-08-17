@@ -69,7 +69,7 @@
             "tab_best_sellers": {
               "type": "_header-category-nav-tab",
               "settings": {
-                "collection": "",
+                "collection": "best-sellers",
                 "label": "Best Sellers",
                 "title": "Best Sellers",
                 "description": "<p>Taima’s Cookware is a true kitchen workhorse. You get deep sear, caramelization & flawless food release consistently, without the chemicals.</p>",
@@ -188,7 +188,7 @@
             "tab_bundle_save": {
               "type": "_header-category-nav-tab",
               "settings": {
-                "collection": "",
+                "collection": "bundle-save",
                 "label": "Bundle & Save",
                 "title": "Bundle & Save",
                 "description": "<p>Quality is unreal. From the pans, utensils to the board, every piece feels extremely well made, and better than imagined. Worth every cent!</p>",
@@ -307,7 +307,7 @@
             "tab_cookware": {
               "type": "_header-category-nav-tab",
               "settings": {
-                "collection": "",
+                "collection": "titanium-cookware",
                 "label": "Titanium Cookware",
                 "title": "Titanium Cookware",
                 "description": "<p>I can always count on this. It’s far better than the stainless and carbon steel we used before. It sticks significantly less, needs less oil, and makes the final dish noticeably less greasy. That’s always a bonus, especially when cooking for health-focused clients. </p>",
@@ -426,7 +426,7 @@
             "tab_cutting_boards": {
               "type": "_header-category-nav-tab",
               "settings": {
-                "collection": "",
+                "collection": "pure-titanium-cutting-boards",
                 "label": "Titanium Cutting Boards",
                 "title": "Titanium Cutting Boards",
                 "description": "<p>\"I’ve ordered a few “titanium” cutting boards online just to test them. Used a spark test & XRF scanner, only Taima actually registered as pure titanium. The rest? steel alloys. Don’t get scammed by fakes. Taima is the real deal!\"</p>",
@@ -505,7 +505,7 @@
             "tab_utensils": {
               "type": "_header-category-nav-tab",
               "settings": {
-                "collection": "",
+                "collection": "titanium-utensils",
                 "label": "Titanium Utensils",
                 "title": "Titanium Utensils",
                 "description": "<p>“I always used silicone and wooden spatulas, but after discovering the bacteria and mold in wood and the toxic chemicals in silicone, I decided to try the Taima Titanium Spatula. I’d never use any other now!”</p>",
@@ -564,7 +564,7 @@
             "tab_drinkware": {
               "type": "_header-category-nav-tab",
               "settings": {
-                "collection": "",
+                "collection": "titanium-drinkware",
                 "label": "Titanium Drinkware",
                 "title": "Titanium Drinkware",
                 "description": "<p>\"I used a stainless steel water bottle, but then I read research about how they can grow bacteria and fungi that I was unknowingly ingesting. I started looking for a safer option and found the Taima Titanium Bottle. Now, my bottles don’t smell! \" </p>",
