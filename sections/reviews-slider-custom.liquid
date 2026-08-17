@@ -76,7 +76,21 @@
             role="tablist"
             aria-label="{{ 'accessibility.reviews_slider_custom_categories' | t }}"
           >
-            {% content_for 'blocks' %}
+            {%- for block in section.blocks -%}
+              <button
+                ref="tabs[]"
+                type="button"
+                role="tab"
+                id="ReviewSliderTab-{{ block.id }}"
+                aria-controls="ReviewSliderPanel-{{ block.id }}"
+                aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                class="review-slider-custom__tab"
+                on:click="/selectCategory/{{ forloop.index0 }}"
+                {{ block.shopify_attributes }}
+              >
+                {{- block.settings.label -}}
+              </button>
+            {%- endfor -%}
           </div>
 
           {%- if show_arrows -%}
@@ -85,6 +99,10 @@
               {% render 'slideshow-arrow', action: 'next', icon_style: section.settings.icons_style, icon_shape: section.settings.icons_shape %}
             </div>
           {%- endif -%}
+        </div>
+
+        <div class="reviews-slider-custom__panels">
+          {% content_for 'blocks' %}
         </div>
 
         {%- if show_arrows -%}
@@ -140,7 +158,49 @@
     flex: 1;
     min-width: 0;
     gap: 0;
-    row-gap: 3rem;
+  }
+
+  .review-slider-custom__tab {
+    appearance: none;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--review-slider-tab-text-color, #b0b0b0);
+    border: 1.5px solid var(--review-slider-tab-border-color, #454545);
+    border-inline-start: 0;
+    max-width: 343px;
+    width: 100%;
+    font-family: var(--font-body--family);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .review-slider-custom__tab:first-of-type {
+    border-inline-start: 1.5px solid var(--review-slider-tab-border-color, #454545);
+    border-start-start-radius: 12px;
+    border-end-start-radius: 12px;
+  }
+
+  .review-slider-custom__tab:last-of-type {
+    border-start-end-radius: 12px;
+    border-end-end-radius: 12px;
+  }
+
+  .review-slider-custom__tab[aria-selected='true'] {
+    background: var(--review-slider-tab-active-background, #a3835f);
+    color: var(--review-slider-tab-active-text-color, #121212);
+  }
+
+  .reviews-slider-custom__panels {
+    width: 100%;
+    margin-block-start: 3rem;
   }
 
   .reviews-slider-custom__arrows {
@@ -182,6 +242,14 @@
   .reviews-slider-custom__arrows .slideshow-control.slideshow-control--next {
     background: var(--review-slider-arrow-next-background, #a3835f);
     color: var(--review-slider-arrow-next-color, #121212);
+  }
+
+  @media screen and (max-width: 749px) {
+    .review-slider-custom__tab {
+      max-width: none;
+      width: 50%;
+      font-size: 14px;
+    }
   }
 
   @media screen and (min-width: 750px) {
@@ -321,7 +389,7 @@
       "label": "t:settings.width",
       "min": 240,
       "max": 480,
-      "step": 4,
+      "step": 3,
       "unit": "px",
       "default": 291
     },

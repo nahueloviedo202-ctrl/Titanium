@@ -154,7 +154,7 @@
 
   .materials-comparison__tablist {
     display: grid;
-    grid-template-columns: repeat(var(--materials-comparison-tab-count, 4), 1fr);
+    grid-template-columns: repeat(var(--materials-comparison-tab-count, 4), minmax(0, 1fr));
     border: 1.5px solid var(--materials-comparison-tab-border-color, #454545);
     border-radius: 12px;
     overflow: hidden;
@@ -162,6 +162,7 @@
 
   .materials-comparison__tab {
     appearance: none;
+    min-width: 0;
     border: 0;
     border-inline-end: 1.5px solid var(--materials-comparison-tab-border-color, #454545);
     background: transparent;
@@ -174,6 +175,7 @@
     line-height: 1.4;
     letter-spacing: var(--letter-spacing--display-normal);
     text-transform: capitalize;
+    overflow-wrap: break-word;
     transition:
       background-color 0.2s ease,
       color 0.2s ease;
@@ -222,7 +224,7 @@
     }
 
     .materials-comparison__tablist {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .materials-comparison__tab {
@@ -233,6 +235,30 @@
     .materials-comparison__tablist .materials-comparison__tab:nth-of-type(1),
     .materials-comparison__tablist .materials-comparison__tab:nth-of-type(2) {
       border-block-end: 1.5px solid var(--materials-comparison-tab-border-color, #454545);
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1799px) {
+    .materials-comparison__inner {
+      padding-block: calc(var(--materials-comparison-padding-block-start, 0) * 0.9) calc(var(--materials-comparison-padding-block-end, 0) * 0.9);
+      padding-inline: calc(var(--materials-comparison-padding-inline-start, 0) * 0.9) calc(var(--materials-comparison-padding-inline-end, 0) * 0.9);
+    }
+
+    .materials-comparison__heading {
+      font-size: calc(var(--materials-comparison-heading-size, 48px) * 0.9);
+    }
+
+    .materials-comparison__subheading {
+      font-size: calc(var(--materials-comparison-subheading-size, 16px) * 0.9);
+    }
+
+    .materials-comparison__tablist {
+      border-radius: 10.8px;
+    }
+
+    .materials-comparison__tab {
+      padding: 9px 10.8px;
+      font-size: 18px;
     }
   }
 {% endstylesheet %}

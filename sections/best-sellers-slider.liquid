@@ -46,7 +46,7 @@
       {%- endif -%}
 
       {%- if show_nav -%}
-        <div class="best-sellers-slider__nav">
+        <div class="best-sellers-slider__nav best-sellers-slider__nav--desktop">
           {%- render 'slideshow-arrow',
             action: 'previous',
             icon_style: section.settings.icons_style,
@@ -59,6 +59,23 @@
           -%}
         </div>
       {%- endif -%}
+    </div>
+  {%- endif -%}
+{% endcapture %}
+
+{% capture mobile_nav_content %}
+  {%- if show_nav -%}
+    <div class="best-sellers-slider__nav best-sellers-slider__nav--mobile">
+      {%- render 'slideshow-arrow',
+        action: 'previous',
+        icon_style: section.settings.icons_style,
+        icon_shape: section.settings.icons_shape
+      -%}
+      {%- render 'slideshow-arrow',
+        action: 'next',
+        icon_style: section.settings.icons_style,
+        icon_shape: section.settings.icons_shape
+      -%}
     </div>
   {%- endif -%}
 {% endcapture %}
@@ -89,6 +106,7 @@
   style="
     {% render 'spacing-style', settings: section.settings %};
     --best-sellers-slider-gap: {{ section.settings.gap }}px;
+    --slideshow-gap: var(--best-sellers-slider-gap);
     --best-sellers-slider-columns: {{ section.settings.slides_per_view }};
     --best-sellers-slider-mobile-width: {{ section.settings.mobile_card_width }}px;
     --best-sellers-slider-arrow-bg: {{ section.settings.arrow_background_color }};
@@ -113,6 +131,7 @@
       slideshow_gutters: slideshow_gutters
     %}
   </div>
+  {{ mobile_nav_content }}
 </div>
 
 {% stylesheet %}
@@ -148,6 +167,25 @@
     display: flex;
     flex: 0 0 auto;
     gap: 0.75rem;
+  }
+
+  .best-sellers-slider__nav--mobile {
+    display: flex;
+    margin-block-start: clamp(1rem, 4vw, 2rem);
+  }
+
+  .best-sellers-slider__nav--desktop {
+    display: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .best-sellers-slider__nav--mobile {
+      display: none;
+    }
+
+    .best-sellers-slider__nav--desktop {
+      display: flex;
+    }
   }
 
   .best-sellers-slider__carousel {

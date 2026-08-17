@@ -9,6 +9,12 @@
   assign mobile_image = section.settings.image_mobile | default: desktop_image
   assign swap_image = section.settings.image_swap_mobile | default: mobile_image
   assign initial_image = desktop_image | default: mobile_image
+
+  assign image_render_width = 1200
+  assign image_render_height = 1200
+  if initial_image.aspect_ratio
+    assign image_render_height = image_render_width | divided_by: initial_image.aspect_ratio | round
+  endif
 %}
 
 <section
@@ -84,6 +90,8 @@
                 {{ initial_image | image_url: width: 1600 }} 1600w
               "
               sizes="(min-width: 750px) 45vw, 80vw"
+              width="{{ image_render_width }}"
+              height="{{ image_render_height }}"
               alt="{{ initial_image.alt | default: section.settings.heading | escape }}"
               loading="lazy"
               data-desktop="{{ desktop_image | image_url: width: 1200 }}"
@@ -149,6 +157,7 @@
   }
 
   .health-features__grid {
+    --health-features-media-width: min(54%, calc(864px * var(--hf-scale, 1)));
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -156,7 +165,10 @@
 
   .health-features__list {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: calc(var(--health-features-gap, 40px) * var(--hf-scale, 1));
+    min-width: 0;
+    max-width: calc((100% - var(--health-features-media-width)) / 2 - (24px * var(--hf-scale, 1)));
     list-style: none;
     margin: 0;
     padding: calc(73px * var(--hf-scale, 1)) 0;
@@ -168,13 +180,16 @@
 
   .health-features__item {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    min-width: 0;
     gap: calc(12px * var(--hf-scale, 1));
     color: var(--health-features-item-text-color, inherit);
     transition: color 0.2s ease;
   }
 
   .health-features__item-text {
+    min-width: 0;
     font-family: var(--font-body--family);
     font-weight: 500;
     line-height: 1.4;
@@ -237,13 +252,13 @@
     position: absolute;
     bottom: 0;
     left: 50%;
+    max-width: var(--health-features-media-width, calc(864px * var(--hf-scale, 1)));
     transform: translateX(-50%);
   }
 
   .health-features__image {
     display: block;
     width: 100%;
-    max-width: calc(864px * var(--hf-scale, 1));
     height: auto;
     user-select: none;
     pointer-events: none;
@@ -270,6 +285,7 @@
 
     .health-features__list {
       gap: var(--health-features-gap-mobile, 16px);
+      max-width: none;
       padding: 0;
     }
 
@@ -287,6 +303,7 @@
     .health-features__media {
       order: 2;
       position: static;
+      max-width: none;
       transform: none;
     }
 

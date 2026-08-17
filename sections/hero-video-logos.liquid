@@ -45,6 +45,9 @@
     --hero-video-logos-logo-height: {{ section.settings.logo_height }}px;
     --hero-video-logos-logo-gap: {{ section.settings.logo_gap }}px;
     --hero-video-logos-logo-opacity: {{ section.settings.logo_opacity | divided_by: 100.0 }};
+    {% if section.settings.show_logos and section.blocks.size > 0 %}
+      --hero-video-logos-ticker-space: calc({{ section.settings.logo_height }}px + 5rem + 1.5rem);
+    {% endif %}
   "
 >
   <div
@@ -236,6 +239,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Reserves room so centered content never renders under the ticker pinned at the bottom. */
+    padding-bottom: var(--hero-video-logos-ticker-space, 0px);
   }
 
   .hero-video-logos__media {
@@ -268,6 +273,7 @@
   @media screen and (max-width: 749px) {
     .hero-video-logos {
       align-items: flex-start;
+      min-height: min(calc(var(--hero-video-logos-min-height) - var(--hero-height-offset, 0px)), 42.5rem);
     }
 
     .hero-video-logos__media-item--desktop.hero-video-logos__media-item--has-mobile-override {
@@ -916,7 +922,7 @@
           "label": "t:options.custom"
         }
       ],
-      "default": "custom"
+      "default": "full-screen"
     },
     {
       "type": "range",
