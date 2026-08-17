@@ -112,6 +112,8 @@
     --best-sellers-slider-arrow-bg: {{ section.settings.arrow_background_color }};
     --best-sellers-slider-arrow-color: {{ section.settings.arrow_icon_color }};
     --best-sellers-slider-arrow-outline: {{ section.settings.subtitle_color }};
+    --best-sellers-slider-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+    --best-sellers-slider-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
   "
 >
   <div
@@ -160,6 +162,13 @@
   @media screen and (max-width: 749px) {
     .best-sellers-slider__heading {
       font-size: var(--best-sellers-slider-heading-size-mobile, 24px);
+    }
+
+    /* Desktop's page-margin-sized inline padding only ever scales down to 70%, which is still
+       far too wide on phones and leaves no room for the carousel to peek the next card. */
+    .best-sellers-slider.spacing-style {
+      padding-inline: var(--best-sellers-slider-padding-inline-start-mobile, 16px)
+        var(--best-sellers-slider-padding-inline-end-mobile, 16px);
     }
   }
 
@@ -573,7 +582,7 @@
     },
     {
       "type": "header",
-      "content": "t:content.padding"
+      "content": "t:content.padding_desktop"
     },
     {
       "type": "range",
@@ -614,6 +623,30 @@
       "step": 2,
       "unit": "px",
       "default": 120
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
     }
   ],
   "presets": [

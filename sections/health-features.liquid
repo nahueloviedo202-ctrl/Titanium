@@ -158,6 +158,7 @@
 
   .health-features__grid {
     --health-features-media-width: min(54%, calc(864px * var(--hf-scale, 1)));
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -247,9 +248,10 @@
 
   .health-features__media {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     position: absolute;
+    top: 0;
     bottom: 0;
     left: 50%;
     max-width: var(--health-features-media-width, calc(864px * var(--hf-scale, 1)));
@@ -258,8 +260,9 @@
 
   .health-features__image {
     display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
     user-select: none;
     pointer-events: none;
   }
@@ -308,6 +311,9 @@
     }
 
     .health-features__image {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
       margin-inline: auto;
     }
 

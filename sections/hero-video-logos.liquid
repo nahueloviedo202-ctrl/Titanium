@@ -295,6 +295,8 @@
     z-index: var(--layer-raised);
     width: 100%;
     padding-inline: 1rem;
+    /* Offsets the flex-centering so content clears the transparent header instead of centering behind it. */
+    padding-top: calc(var(--hero-height-offset, 0px) + 1.5rem);
   }
 
   @media screen and (max-width: 749px) {
