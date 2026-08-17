@@ -1616,11 +1616,11 @@
       "type": "mission",
       "name": "t:names.mission",
       "settings": {
-        "heading": "Built With Purpose.",
+        "heading": "Our Mission Is Simple.",
         "heading_color": "#ffffff",
         "heading_font_size": 64,
         "heading_font_size_mobile": 48,
-        "subheading": "<p>We design every product to be safe, reliable, and made to last, so it simply works, every time.</p>",
+        "subheading": "<p>To create kitchenware so safe, so durable, and so effortless... you’d never have to think about it again.</p>",
         "kicker": "Simple as that.",
         "text_color": "#b0b0b0",
         "text_font_size": 24,
