@@ -88,16 +88,15 @@
 
 {% stylesheet %}
   .review-card__slide {
-    /* Native slideshow-slide sets width: 100% and overflow: hidden; this slider
-       sizes cards explicitly via --reviews-hero-card-width instead. */
-    width: auto;
+    /* Width comes from --slide-width (native slideshow-slide var), set by the
+       section's container queries so exactly N cards fit at any page width. */
     flex: 0 0 auto;
     overflow: visible;
     scroll-snap-align: start;
   }
 
   .review-card {
-    width: var(--reviews-hero-card-width, 31.5rem);
+    width: 100%;
   }
 
   .review-card__media-row {
@@ -171,12 +170,6 @@
     font-size: 0.975rem;
     letter-spacing: 0.04em;
     color: var(--color-foreground-muted);
-  }
-
-  @media screen and (max-width: 749px) {
-    .review-card {
-      width: var(--reviews-hero-card-width-mobile, 22.5rem);
-    }
   }
 {% endstylesheet %}
 

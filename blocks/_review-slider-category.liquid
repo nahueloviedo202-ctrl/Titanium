@@ -2,10 +2,6 @@
 
 {%- liquid
   assign block_index = section.blocks | find_index: 'id', block.id
-  assign show_arrows = true
-  if section.settings.icons_style == 'none'
-    assign show_arrows = false
-  endif
 -%}
 
 <button
@@ -40,9 +36,7 @@
     {% render 'slideshow',
       class: 'review-slider-custom__slideshow',
       slides: cards,
-      show_arrows: show_arrows,
-      icon_style: section.settings.icons_style,
-      icon_shape: section.settings.icons_shape,
+      show_arrows: false,
       infinite: false,
       slide_count: block.blocks.size,
       style: '--slideshow-gap: var(--review-slider-gap);'
@@ -90,17 +84,7 @@
   }
 
   .review-slider-custom__panel {
-    grid-column: 1 / -1;
-  }
-
-  .review-slider-custom__slideshow .slideshow-control[disabled] {
-    display: none;
-  }
-
-  .review-slider-custom__slideshow .slideshow-control--shape-circle,
-  .review-slider-custom__slideshow .slideshow-control--shape-square {
-    background-color: var(--review-slider-arrow-background, #a3835f);
-    color: var(--review-slider-arrow-color, #121212);
+    width: 100%;
   }
 
   @media screen and (max-width: 749px) {

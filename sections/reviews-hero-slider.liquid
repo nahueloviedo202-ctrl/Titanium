@@ -75,6 +75,7 @@
           style="
             --reviews-hero-arrow-bg: {{ section.settings.arrow_background_color }};
             --reviews-hero-arrow-color: {{ section.settings.arrow_icon_color }};
+            --reviews-hero-arrow-border: {{ section.settings.arrow_border_color }};
           "
         >
           <button
@@ -108,7 +109,7 @@
     {% endcapture %}
 
     {% capture slideshow_style %}
-      --reviews-hero-card-width: {{ section.settings.card_width }}px;
+      --reviews-hero-columns: {{ section.settings.slides_per_view }};
       --reviews-hero-card-width-mobile: {{ section.settings.mobile_card_width }}px;
       --reviews-hero-gap: {{ section.settings.gap }}px;
       --reviews-hero-card-radius: {{ section.settings.card_radius }}px;
@@ -163,6 +164,7 @@
   .reviews-hero-slider__slideshow > slideshow-container {
     grid-area: slides;
     min-width: 0;
+    container-name: reviews-hero-slider;
   }
 
   .reviews-hero-slider__aside {
@@ -226,7 +228,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    border-radius: 0.95rem;
+    border-radius: 0.975rem;
     cursor: pointer;
   }
 
@@ -237,8 +239,8 @@
 
   .reviews-hero-slider__nav-btn--prev {
     background: transparent;
-    border: 1.5px solid rgb(var(--color-foreground-rgb) / 0.4);
-    color: var(--color-foreground);
+    border: 1.5px solid var(--reviews-hero-arrow-border, #d4c7b4);
+    color: var(--reviews-hero-arrow-border, #d4c7b4);
   }
 
   .reviews-hero-slider__nav-btn--next {
@@ -258,6 +260,24 @@
 
   .reviews-hero-slider__slideshow slideshow-slides {
     --slideshow-gap: var(--reviews-hero-gap, 2rem);
+  }
+
+  /* Cards are sized off the slideshow-container's own inline size (not the
+     viewport), so exactly --reviews-hero-columns cards always fit, matching
+     the reference site's fixed slides-per-view carousel at any page width. */
+  @container reviews-hero-slider (min-width: 750px) {
+    .review-card__slide {
+      --slide-width: calc(
+        (100% - (var(--reviews-hero-gap, 42px) * (var(--reviews-hero-columns, 3) - 1))) /
+          var(--reviews-hero-columns, 3)
+      );
+    }
+  }
+
+  @container reviews-hero-slider (max-width: 749px) {
+    .review-card__slide {
+      --slide-width: var(--reviews-hero-card-width-mobile, 360px);
+    }
   }
 
   @media screen and (max-width: 749px) {
@@ -422,13 +442,12 @@
     },
     {
       "type": "range",
-      "id": "card_width",
-      "label": "t:settings.card_width",
-      "min": 280,
-      "max": 600,
-      "step": 10,
-      "unit": "px",
-      "default": 500
+      "id": "slides_per_view",
+      "label": "t:settings.items_to_show",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3
     },
     {
       "type": "range",
@@ -499,6 +518,12 @@
       "id": "arrow_icon_color",
       "label": "t:settings.arrow_icon_color",
       "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "arrow_border_color",
+      "label": "t:settings.border_color",
+      "default": "#D4C7B4"
     },
     {
       "type": "header",

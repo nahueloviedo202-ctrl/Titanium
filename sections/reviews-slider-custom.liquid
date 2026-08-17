@@ -4,6 +4,11 @@
   if section.settings.background_color != blank
     render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
   endif
+
+  assign show_arrows = true
+  if section.settings.icons_style == 'none'
+    assign show_arrows = false
+  endif
 %}
 
 <section
@@ -60,17 +65,34 @@
           --review-slider-card-width: {{ section.settings.card_width }}px;
           --review-slider-mobile-card-width: {{ section.settings.mobile_card_width }}px;
           --review-slider-gap: {{ section.settings.gap }}px;
-          --review-slider-arrow-background: {{ section.settings.arrow_background_color }};
-          --review-slider-arrow-color: {{ section.settings.arrow_icon_color }};
+          --review-slider-arrow-next-background: {{ section.settings.arrow_background_color }};
+          --review-slider-arrow-next-color: {{ section.settings.arrow_icon_color }};
+          --review-slider-arrow-border-color: {{ section.settings.arrow_border_color }};
         "
       >
-        <div
-          class="reviews-slider-custom__tablist"
-          role="tablist"
-          aria-label="{{ 'accessibility.reviews_slider_custom_categories' | t }}"
-        >
-          {% content_for 'blocks' %}
+        <div class="reviews-slider-custom__header-row">
+          <div
+            class="reviews-slider-custom__tablist"
+            role="tablist"
+            aria-label="{{ 'accessibility.reviews_slider_custom_categories' | t }}"
+          >
+            {% content_for 'blocks' %}
+          </div>
+
+          {%- if show_arrows -%}
+            <div class="reviews-slider-custom__arrows reviews-slider-custom__arrows--desktop">
+              {% render 'slideshow-arrow', action: 'previous', icon_style: section.settings.icons_style, icon_shape: section.settings.icons_shape %}
+              {% render 'slideshow-arrow', action: 'next', icon_style: section.settings.icons_style, icon_shape: section.settings.icons_shape %}
+            </div>
+          {%- endif -%}
         </div>
+
+        {%- if show_arrows -%}
+          <div class="reviews-slider-custom__arrows reviews-slider-custom__arrows--mobile">
+            {% render 'slideshow-arrow', action: 'previous', icon_style: section.settings.icons_style, icon_shape: section.settings.icons_shape %}
+            {% render 'slideshow-arrow', action: 'next', icon_style: section.settings.icons_style, icon_shape: section.settings.icons_shape %}
+          </div>
+        {%- endif -%}
       </materials-comparison-component>
     {%- endif -%}
   </div>
@@ -84,7 +106,7 @@
   }
 
   .reviews-slider-custom__inner {
-    margin-inline: auto;
+    margin-inline: 0 auto;
     padding-block: var(--review-slider-padding-block-start-mobile, 0) var(--review-slider-padding-block-end-mobile, 0);
     padding-inline: var(--review-slider-padding-inline-start-mobile, 0) var(--review-slider-padding-inline-end-mobile, 0);
   }
@@ -105,12 +127,61 @@
     display: block;
   }
 
+  .reviews-slider-custom__header-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
   .reviews-slider-custom__tablist {
     display: flex;
     flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
     gap: 0;
     row-gap: 3rem;
-    margin-block-end: 3rem;
+  }
+
+  .reviews-slider-custom__arrows {
+    display: flex;
+    gap: 12px;
+    flex: 0 0 auto;
+  }
+
+  .reviews-slider-custom__arrows--desktop {
+    display: none;
+  }
+
+  .reviews-slider-custom__arrows--mobile {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .reviews-slider-custom__arrows .slideshow-control {
+    opacity: 1;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .reviews-slider-custom__arrows .slideshow-control.slideshow-control--shape-circle,
+  .reviews-slider-custom__arrows .slideshow-control.slideshow-control--shape-square {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .reviews-slider-custom__arrows .slideshow-control.slideshow-control--previous {
+    background: transparent;
+    border: 1.5px solid var(--review-slider-arrow-border-color, #454545);
+    color: var(--review-slider-arrow-border-color, #454545);
+  }
+
+  .reviews-slider-custom__arrows .slideshow-control.slideshow-control--next {
+    background: var(--review-slider-arrow-next-background, #a3835f);
+    color: var(--review-slider-arrow-next-color, #121212);
   }
 
   @media screen and (min-width: 750px) {
@@ -124,8 +195,12 @@
       font-size: var(--review-slider-heading-size, 48px);
     }
 
-    .reviews-slider-custom__tablist {
-      flex-wrap: nowrap;
+    .reviews-slider-custom__arrows--desktop {
+      display: flex;
+    }
+
+    .reviews-slider-custom__arrows--mobile {
+      display: none;
     }
   }
 {% endstylesheet %}
@@ -248,7 +323,7 @@
       "max": 480,
       "step": 4,
       "unit": "px",
-      "default": 324
+      "default": 291
     },
     {
       "type": "range",
@@ -323,14 +398,21 @@
       "type": "color",
       "id": "arrow_background_color",
       "label": "t:settings.arrow_background_color",
-      "default": "#121212",
+      "default": "#A3835F",
       "visible_if": "{{ section.settings.icons_style != 'none' }}"
     },
     {
       "type": "color",
       "id": "arrow_icon_color",
       "label": "t:settings.arrow_icon_color",
-      "default": "#FFFFFF",
+      "default": "#121212",
+      "visible_if": "{{ section.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_border_color",
+      "label": "t:settings.border_color",
+      "default": "#454545",
       "visible_if": "{{ section.settings.icons_style != 'none' }}"
     },
     {
@@ -389,7 +471,7 @@
       "max": 200,
       "step": 4,
       "unit": "px",
-      "default": 0
+      "default": 120
     },
     {
       "type": "range",
@@ -399,7 +481,7 @@
       "max": 200,
       "step": 4,
       "unit": "px",
-      "default": 16
+      "default": 0
     },
     {
       "type": "header",
@@ -423,7 +505,7 @@
       "max": 150,
       "step": 2,
       "unit": "px",
-      "default": 16
+      "default": 2
     },
     {
       "type": "range",
@@ -460,17 +542,17 @@
             "board_1": {
               "type": "_review-slider-card",
               "settings": {
-                "author": "Dominique, Dec 2024",
+                "author": "Sabrina, Mar 2024",
                 "rating": 5,
-                "quote": "In my kitchen, hygiene and precision are everything. This board is not just functional, it's flawless. No bacteria, no toxins, no hassle. I recommend it to every chef I train."
+                "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
               }
             },
             "board_2": {
               "type": "_review-slider-card",
               "settings": {
-                "author": "Sabrina, Mar 2024",
+                "author": "Jason, Jun 2025",
                 "rating": 5,
-                "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
+                "quote": "The client's (a well-known name you'd definitely recognize) assistant handed me this board on my first day and said, \"They don't allow anything toxic, use this instead\". It's completely hygienic, so I haven't used plastic or wood ever since."
               }
             },
             "board_3": {
@@ -488,9 +570,57 @@
                 "rating": 5,
                 "quote": "I make everything from baby food to dinner on this board. It's reassuring to know my kids aren't getting microplastic flakes with their meals."
               }
+            },
+            "board_5": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Darren, Jan 2025",
+                "rating": 5,
+                "quote": "For someone deeply into detoxing and gut health, this board is a no-brainer. Titanium means no hidden chemicals or bacteria"
+              }
+            },
+            "board_6": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Asako, Feb 2024",
+                "rating": 5,
+                "quote": "Precision and cleanliness are sacred to me. Taima honors both."
+              }
+            },
+            "board_7": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Ethan, Sep 2024",
+                "rating": 5,
+                "quote": "Why would I track calories and macros… and then cook on a plastic board or pfas pan, that stuff WRECKS your hormones!! Titanium or nothing."
+              }
+            },
+            "board_8": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Claire, Feb 2025",
+                "rating": 5,
+                "quote": "Safety is my priority so I care about what goes in and around my family. Taima's board is beautiful, but more importantly, it's clean. No microplastics, no germs, no stress."
+              }
+            },
+            "board_9": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Jen, Apr 2025",
+                "rating": 5,
+                "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded"
+              }
+            },
+            "board_10": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Dominique, Dec 2024",
+                "rating": 5,
+                "quote": "In my kitchen, hygiene and precision are everything. This board is not just functional, it's flawless. No bacteria, no toxins, no hassle. I recommend it to every chef I train."
+              }
             }
           },
-          "block_order": ["board_1", "board_2", "board_3", "board_4"]
+          "block_order": ["board_1", "board_2", "board_3", "board_4", "board_5", "board_6", "board_7", "board_8", "board_9", "board_10"]
         },
         "cat_pans": {
           "type": "_review-slider-category",
@@ -501,17 +631,17 @@
             "pan_1": {
               "type": "_review-slider-card",
               "settings": {
-                "author": "Jen, Apr 2025",
+                "author": "Jason, Jun 2025",
                 "rating": 5,
-                "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded. Taima products just makes sense."
+                "quote": "The client's (a well-known name you'd definitely recognize) assistant handed me this pan on my first day and said, \"They don't allow anything toxic, use this instead\". Crusty steaks, perfect eggs. No hot spots, no sticking. My new go-to."
               }
             },
             "pan_2": {
               "type": "_review-slider-card",
               "settings": {
-                "author": "Jason, Jun 2025",
+                "author": "Sabrina, Mar 2024",
                 "rating": 5,
-                "quote": "Crusty steaks, perfect eggs. No hot spots, no sticking. My new go-to."
+                "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
               }
             },
             "pan_3": {
@@ -521,9 +651,65 @@
                 "rating": 5,
                 "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This pan was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
               }
+            },
+            "pan_4": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Jenna, Jul 2025",
+                "rating": 5,
+                "quote": "I make everything from baby food to dinner with this pan. It's reassuring to know my kids aren't getting forever chemicals or heavy metals with their meals."
+              }
+            },
+            "pan_5": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Omar, Feb 2025",
+                "rating": 5,
+                "quote": "I enjoy this pan. I've used cast iron for years but hated how heavy it was and the upkeep. Taima's pan is lightweight, durable, and heats evenly."
+              }
+            },
+            "pan_6": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Darren, Jan 2025",
+                "rating": 5,
+                "quote": "For someone deeply into detoxing and gut health, this pan is a no-brainer. Titanium means no hidden chemicals or metals"
+              }
+            },
+            "pan_7": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Ethan, Sep 2024",
+                "rating": 5,
+                "quote": "Why would I track calories and macros... and then cut on a plastic board or PFAS-coated pan, that stuff WRECKS your hormones!! Titanium or nothing."
+              }
+            },
+            "pan_8": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Claire, Feb 2025",
+                "rating": 5,
+                "quote": "Safety is my priority so I care about what goes in and around my family. Taima's pan is beautiful, but more importantly, it's non-toxic. I am relieved knowing every meal I make won't come with risks."
+              }
+            },
+            "pan_9": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Dominique, Dec 2024",
+                "rating": 5,
+                "quote": "This is a true kitchen workhorse. You get deep sear, caramelisation & flawless food release consistently."
+              }
+            },
+            "pan_10": {
+              "type": "_review-slider-card",
+              "settings": {
+                "author": "Jen, Apr 2025",
+                "rating": 5,
+                "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded. Taima products just makes sense"
+              }
             }
           },
-          "block_order": ["pan_1", "pan_2", "pan_3"]
+          "block_order": ["pan_1", "pan_2", "pan_3", "pan_4", "pan_5", "pan_6", "pan_7", "pan_8", "pan_9", "pan_10"]
         }
       },
       "block_order": ["cat_boards", "cat_pans"]

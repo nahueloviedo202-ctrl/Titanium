@@ -33,6 +33,7 @@
   endif
 
   assign desktop_sizes_vw = 100.0 | divided_by: section.settings.slides_per_view
+  assign card_sizes = '(max-width: 749px) ' | append: section.settings.mobile_card_width | append: 'px, ' | append: desktop_sizes_vw | append: 'vw'
 -%}
 
 <slideshow-slide
@@ -79,7 +80,7 @@
           | image_url: width: 1200
           | image_tag:
             loading: 'lazy',
-            sizes: '(max-width: 749px) ' | append: section.settings.mobile_card_width | append: 'px, ' | append: desktop_sizes_vw | append: 'vw',
+            sizes: card_sizes,
             widths: '352, 832, 1200',
             alt: '',
             class: 'best-sellers-slider__image'

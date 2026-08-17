@@ -266,6 +266,10 @@
   }
 
   @media screen and (max-width: 749px) {
+    .hero-video-logos {
+      align-items: flex-start;
+    }
+
     .hero-video-logos__media-item--desktop.hero-video-logos__media-item--has-mobile-override {
       display: none;
     }
@@ -285,6 +289,12 @@
     z-index: var(--layer-raised);
     width: 100%;
     padding-inline: 1rem;
+  }
+
+  @media screen and (max-width: 749px) {
+    .hero-video-logos__inner {
+      padding-top: calc(var(--hero-height-offset, 0px) + 2.5rem);
+    }
   }
 
   .hero-video-logos__content {
@@ -906,7 +916,7 @@
           "label": "t:options.custom"
         }
       ],
-      "default": "full-screen"
+      "default": "custom"
     },
     {
       "type": "range",

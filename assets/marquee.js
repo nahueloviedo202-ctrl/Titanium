@@ -21,21 +21,24 @@ class MarqueeComponent extends Component {
   async connectedCallback() {
     super.connectedCallback();
 
-    const { marqueeItems } = this.refs;
-    if (marqueeItems.length === 0) return;
-
-    const { numberOfCopies } = await this.#queryNumberOfCopies();
-
-    const speed = this.#calculateSpeed(numberOfCopies);
-
-    this.#addRepeatedItems(numberOfCopies);
-    this.#duplicateContent();
-
-    this.#setSpeed(speed);
+    await this.#setup();
 
     window.addEventListener('resize', this.#handleResize);
     this.addEventListener('pointerenter', this.#slowDown);
     this.addEventListener('pointerleave', this.#speedUp);
+  }
+
+  /**
+   * Re-runs setup when the Section Rendering API morphs this component's subtree
+   * (eg. editing a setting in the theme editor). Morph reconciles the live DOM
+   * against the freshly rendered (un-duplicated) markup, which strips the clones
+   * this component injects — without this, the marquee reverts to a single,
+   * un-duplicated copy while the CSS animation keeps running, producing a visible
+   * jump/cut once per loop instead of a seamless scroll.
+   */
+  updatedCallback() {
+    super.updatedCallback();
+    this.#setup();
   }
 
   disconnectedCallback() {
@@ -43,6 +46,38 @@ class MarqueeComponent extends Component {
     window.removeEventListener('resize', this.#handleResize);
     this.removeEventListener('pointerenter', this.#slowDown);
     this.removeEventListener('pointerleave', this.#speedUp);
+  }
+
+  async #setup() {
+    const { marqueeItems } = this.refs;
+    if (marqueeItems.length === 0) return;
+
+    this.#resetToBaseContent();
+
+    const { numberOfCopies } = await this.#queryNumberOfCopies();
+    const speed = this.#calculateSpeed(numberOfCopies);
+
+    this.#addRepeatedItems(numberOfCopies);
+    this.#duplicateContent();
+
+    this.#setSpeed(speed);
+  }
+
+  /**
+   * Removes any previously injected clones/repeated items so `#setup` can
+   * recompute from a clean, single copy of the original content.
+   */
+  #resetToBaseContent() {
+    const { content, marqueeItems } = this.refs;
+    const [baseItems] = marqueeItems;
+
+    this.clonedContent?.remove();
+
+    if (!baseItems) return;
+
+    for (const child of Array.from(content.children)) {
+      if (child !== baseItems) child.remove();
+    }
   }
 
   /**

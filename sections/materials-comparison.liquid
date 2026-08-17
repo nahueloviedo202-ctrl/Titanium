@@ -87,6 +87,23 @@
           role="tablist"
           aria-label="{{ 'accessibility.materials_comparison_categories' | t }}"
         >
+          {%- for block in section.blocks -%}
+            <button
+              ref="tabs[]"
+              type="button"
+              role="tab"
+              id="MaterialsTab-{{ block.id }}"
+              aria-controls="MaterialsPanel-{{ block.id }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              class="materials-comparison__tab{% if forloop.first %} materials-comparison__tab--active{% endif %}"
+              on:click="/selectCategory/{{ forloop.index0 }}"
+              {{ block.shopify_attributes }}
+            >
+              {{- block.settings.label -}}
+            </button>
+          {%- endfor -%}
+        </div>
+        <div class="materials-comparison__panels">
           {% content_for 'blocks' %}
         </div>
       </materials-comparison-component>
@@ -138,13 +155,14 @@
   .materials-comparison__tablist {
     display: grid;
     grid-template-columns: repeat(var(--materials-comparison-tab-count, 4), 1fr);
-    row-gap: 3rem;
+    border: 1.5px solid var(--materials-comparison-tab-border-color, #454545);
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   .materials-comparison__tab {
     appearance: none;
     border: 0;
-    border-block: 1.5px solid var(--materials-comparison-tab-border-color, #454545);
     border-inline-end: 1.5px solid var(--materials-comparison-tab-border-color, #454545);
     background: transparent;
     color: var(--materials-comparison-tab-text-color, inherit);
@@ -161,14 +179,7 @@
       color 0.2s ease;
   }
 
-  .materials-comparison__tab:first-of-type {
-    border-start-start-radius: 12px;
-    border-end-start-radius: 12px;
-  }
-
   .materials-comparison__tab:last-of-type {
-    border-start-end-radius: 12px;
-    border-end-end-radius: 12px;
     border-inline-end: 0;
   }
 
@@ -177,8 +188,8 @@
     color: var(--materials-comparison-tab-active-color, inherit);
   }
 
-  .materials-comparison__panel {
-    grid-column: 1 / -1;
+  .materials-comparison__panels {
+    margin-block-start: 3rem;
   }
 
   .materials-comparison__carousel-wrapper {

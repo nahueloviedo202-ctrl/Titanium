@@ -31,6 +31,25 @@ class MaterialsComparisonComponent extends Component {
       panel.hidden = i !== targetIndex;
     });
   }
+
+  /**
+   * Advances the active category's carousel to its next slide.
+   */
+  next() {
+    this.#activeSlideshow()?.next();
+  }
+
+  /**
+   * Moves the active category's carousel back to its previous slide.
+   */
+  previous() {
+    this.#activeSlideshow()?.previous();
+  }
+
+  #activeSlideshow() {
+    const panel = this.refs.panels.find((panel) => !panel.hidden);
+    return panel?.querySelector('slideshow-component');
+  }
 }
 
 if (!customElements.get('materials-comparison-component')) {
