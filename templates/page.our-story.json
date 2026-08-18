@@ -1651,9 +1651,9 @@
             "button": {
               "type": "button",
               "settings": {
-                "label": "Ver Más Vendidos",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
+                "label": "Shop Best Seller Pan",
+                "link": "shopify://products/zentitanium-titanium-pan",
+                "open_in_new_tab": true,
                 "style_class": "button-custom",
                 "custom_button_background": "rgba(0,0,0,0)",
                 "custom_button_text": "#ffffff",
@@ -1713,8 +1713,8 @@
             "button": {
               "type": "button",
               "settings": {
-                "label": "Ver Todos Los Productos",
-                "link": "shopify://collections/all",
+                "label": "Shop Best Seller Board",
+                "link": "shopify://collections/titanium-cutting-boards",
                 "open_in_new_tab": false,
                 "style_class": "button-custom",
                 "custom_button_background": "rgba(0,0,0,0)",
