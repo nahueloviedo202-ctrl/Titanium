@@ -122,6 +122,7 @@
         "slide_1": {
           "type": "_story-slide",
           "settings": {
+            "image": "shopify://shop_images/progress-1.webp",
             "heading": "Cómo Empezó Todo",
             "body": "<p>Todo comenzó con una pregunta simple: ¿por qué los utensilios de cocina que usamos todos los días no son tan seguros como deberían? Esa inquietud fue el punto de partida de todo lo que hacemos hoy.</p>"
           },
@@ -130,6 +131,7 @@
         "slide_2": {
           "type": "_story-slide",
           "settings": {
+            "image": "shopify://shop_images/progress-2.webp",
             "heading": "Un Punto De Quiebre",
             "body": "<p>Después de investigar en profundidad, entendimos que gran parte de los materiales tradicionales podían representar un riesgo silencioso para la salud de las familias.</p>"
           },
@@ -138,6 +140,7 @@
         "slide_3": {
           "type": "_story-slide",
           "settings": {
+            "image": "shopify://shop_images/progress-3.webp",
             "heading": "El Descubrimiento",
             "body": "<p>Encontramos en el titanio puro un material capaz de combinar seguridad, durabilidad y un rendimiento excepcional en la cocina.</p>"
           },
@@ -146,6 +149,7 @@
         "slide_4": {
           "type": "_story-slide",
           "settings": {
+            "image": "shopify://shop_images/progress-4.webp",
             "heading": "El Gran Cambio",
             "body": "<p>Empezamos a diseñar y desarrollar nuestra primera línea de productos, priorizando siempre la salud por sobre cualquier atajo de producción.</p>"
           },
@@ -154,24 +158,9 @@
         "slide_5": {
           "type": "_story-slide",
           "settings": {
+            "image": "shopify://shop_images/progress-6.webp",
             "heading": "De Una Idea A Un Movimiento",
             "body": "<p>Lo que empezó como un proyecto pequeño se transformó en una comunidad de personas que eligen cocinar de forma más consciente.</p>"
-          },
-          "blocks": {}
-        },
-        "slide_6": {
-          "type": "_story-slide",
-          "settings": {
-            "heading": "Nuestro Compromiso",
-            "body": "<p>Seguimos trabajando cada día para ofrecer productos honestos, seguros y hechos para durar.</p>"
-          },
-          "blocks": {}
-        },
-        "slide_7": {
-          "type": "_story-slide",
-          "settings": {
-            "heading": "Beware of Copycats",
-            "body": "<p>Today, plenty of companies are trying to copy what we do. The problem? They’re fake.</p><p>Some sell steel and call it “titanium”. Others sell cheap steel-titanium alloys and call them “pure.” None of them deliver the safety, durability, or health benefits that only real titanium provides.</p><p><strong>At Taima®, every product is independently lab-certified for purity.</strong> Backed by lifetime durability, full transparency, and the guarantee that what touches your food is 100% toxin-free.</p><p>So if you want the real thing, the original - make sure it says <strong>Taima®.</strong></p>"
           },
           "blocks": {}
         }
@@ -181,9 +170,7 @@
         "slide_2",
         "slide_3",
         "slide_4",
-        "slide_5",
-        "slide_6",
-        "slide_7"
+        "slide_5"
       ],
       "settings": {
         "heading_color": "#a3835f",
