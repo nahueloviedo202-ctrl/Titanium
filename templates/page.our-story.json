@@ -221,6 +221,7 @@
       "block_order": [
         "quote"
       ],
+      "disabled": true,
       "settings": {
         "video_poster": "shopify://shop_images/Background-3_2000x_3f0183e7-4cf1-4657-9fac-f274781a59dd.webp",
         "video_corner_radius": 0,
