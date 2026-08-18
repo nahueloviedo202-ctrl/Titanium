@@ -13,16 +13,46 @@
       "type": "hero-video-logos",
       "settings": {
         "media_type_desktop": "image",
+        "custom_mobile_media": false,
+        "media_type_mobile": "video",
         "kicker": "Nuestra Historia",
         "heading": "Cocina Segura, Sin Compromisos",
         "subheading": "<p>Diseñamos utensilios de cocina pensados para el bienestar de tu familia, sin tóxicos ni atajos.</p>",
+        "text_color": "",
         "button_label": "Ver Productos",
         "button_link": "shopify://collections/all",
+        "open_in_new_tab": false,
         "style_class": "button-custom",
+        "custom_button_background": "#bf092f",
+        "custom_button_text": "#ffffff",
+        "custom_button_border": "#bf092f",
+        "link_text_color": "",
+        "width": "fit-content",
+        "custom_width": 100,
+        "width_mobile": "fit-content",
+        "custom_width_mobile": 100,
         "show_rating": false,
+        "rating_value": 5,
+        "rating_text": "4.9 (10,000+ Customers)",
+        "star_color": "#b57c46",
+        "rating_icon_size": 14,
+        "rating_icon_size_mobile": 12,
         "toggle_overlay": true,
+        "overlay_color": "#0000004d",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "background_color": "",
         "show_logos": false,
-        "section_height": "large"
+        "autoplay": true,
+        "marquee_direction": "normal",
+        "marquee_speed": 25,
+        "logo_height": 24,
+        "logo_gap": 120,
+        "logo_opacity": 90,
+        "section_height": "large",
+        "section_height_custom": 90,
+        "padding-block-start": 0,
+        "padding-block-end": 96
       }
     },
     "copy_band": {
@@ -42,8 +72,16 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "text_color": "#BCA588"
-          }
+            "text_color": "#bca588",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -51,10 +89,29 @@
       ],
       "settings": {
         "content_direction": "column",
+        "vertical_on_mobile": true,
         "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 0,
         "section_width": "page-width",
-        "background_color": "#03231A",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#03231a",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 64,
         "padding-block-end": 64
       }
@@ -67,52 +124,58 @@
           "settings": {
             "heading": "Cómo Empezó Todo",
             "body": "<p>Todo comenzó con una pregunta simple: ¿por qué los utensilios de cocina que usamos todos los días no son tan seguros como deberían? Esa inquietud fue el punto de partida de todo lo que hacemos hoy.</p>"
-          }
+          },
+          "blocks": {}
         },
         "slide_2": {
           "type": "_story-slide",
           "settings": {
             "heading": "Un Punto De Quiebre",
             "body": "<p>Después de investigar en profundidad, entendimos que gran parte de los materiales tradicionales podían representar un riesgo silencioso para la salud de las familias.</p>"
-          }
+          },
+          "blocks": {}
         },
         "slide_3": {
           "type": "_story-slide",
           "settings": {
             "heading": "El Descubrimiento",
             "body": "<p>Encontramos en el titanio puro un material capaz de combinar seguridad, durabilidad y un rendimiento excepcional en la cocina.</p>"
-          }
+          },
+          "blocks": {}
         },
         "slide_4": {
           "type": "_story-slide",
           "settings": {
             "heading": "El Gran Cambio",
             "body": "<p>Empezamos a diseñar y desarrollar nuestra primera línea de productos, priorizando siempre la salud por sobre cualquier atajo de producción.</p>"
-          }
+          },
+          "blocks": {}
         },
         "slide_5": {
           "type": "_story-slide",
           "settings": {
             "heading": "De Una Idea A Un Movimiento",
             "body": "<p>Lo que empezó como un proyecto pequeño se transformó en una comunidad de personas que eligen cocinar de forma más consciente.</p>"
-          }
+          },
+          "blocks": {}
         },
         "slide_6": {
           "type": "_story-slide",
           "settings": {
             "heading": "Nuestro Compromiso",
             "body": "<p>Seguimos trabajando cada día para ofrecer productos honestos, seguros y hechos para durar.</p>"
-          }
+          },
+          "blocks": {}
         },
         "slide_7": {
           "type": "_story-slide",
           "settings": {
             "heading": "Beware of Copycats",
             "body": "<p>Today, plenty of companies are trying to copy what we do. The problem? They’re fake.</p><p>Some sell steel and call it “titanium”. Others sell cheap steel-titanium alloys and call them “pure.” None of them deliver the safety, durability, or health benefits that only real titanium provides.</p><p><strong>At Taima®, every product is independently lab-certified for purity.</strong> Backed by lifetime durability, full transparency, and the guarantee that what touches your food is 100% toxin-free.</p><p>So if you want the real thing, the original - make sure it says <strong>Taima®.</strong></p>"
-          }
+          },
+          "blocks": {}
         }
       },
-<<<<<<< Updated upstream
       "block_order": [
         "slide_1",
         "slide_2",
@@ -122,10 +185,31 @@
         "slide_6",
         "slide_7"
       ],
-=======
-      "block_order": ["slide_1", "slide_2", "slide_3", "slide_4", "slide_5", "slide_6", "slide_7"],
->>>>>>> Stashed changes
-      "settings": {}
+      "settings": {
+        "heading_color": "#a3835f",
+        "heading_size": 48,
+        "heading_size_mobile": 24,
+        "body_color": "#b0b0b0",
+        "body_font_size": 16,
+        "body_font_size_mobile": 14,
+        "media_position": "left",
+        "media_size": 420,
+        "media_size_mobile": 260,
+        "gap": 64,
+        "content_max_width": 1920,
+        "content_horizontal_padding": 120,
+        "content_horizontal_padding_mobile": 0,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrow_background_color": "#121212",
+        "arrow_border_color": "#454545",
+        "arrow_icon_color": "#ffffff",
+        "background_color": "#121212",
+        "padding-block-start": 96,
+        "padding-block-end": 96,
+        "padding-inline-start": 24,
+        "padding-inline-end": 24
+      }
     },
     "behind_the_scenes": {
       "type": "behind-the-scenes",
@@ -134,17 +218,49 @@
           "type": "_behind-the-scenes-quote",
           "settings": {
             "quote": "<p>Creemos que cuidar tu salud empieza por elegir bien lo que usás en tu cocina.</p>",
-            "founder_name": "Equipo Fundador"
-          }
+            "quote_color": "{{ settings.color_palette.background }}",
+            "quote_size": 24,
+            "quote_size_mobile": 16,
+            "founder_name": "Equipo Fundador",
+            "founder_color": "{{ settings.color_palette.background }}",
+            "founder_size": 20,
+            "signature_width": 120,
+            "signature_height": 80
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "quote"
       ],
       "settings": {
+        "video_corner_radius": 0,
+        "overlay_color": "#0000004d",
+        "play_button_size": 80,
+        "play_button_color": "#ffffff",
+        "play_button_background_color": "#ffffff33",
         "heading": "Calidad Que Se Nota En Cada Detalle",
+        "heading_color": "",
+        "heading_size": 48,
+        "heading_size_mobile": 24,
         "body_text": "<p>Elegimos materiales de calidad médica y procesos de fabricación exigentes para asegurarnos de que cada producto cumpla con los más altos estándares de seguridad y desempeño.</p>",
-        "media_position": "left"
+        "body_text_color": "{{ settings.color_palette.background }}",
+        "body_font_size": 16,
+        "body_font_size_mobile": 14,
+        "media_position": "left",
+        "content_horizontal_padding": 120,
+        "content_horizontal_padding_mobile": 0,
+        "column_gap": 0,
+        "background_color": "#121212",
+        "text_color": "#ffffff",
+        "padding_block_start": 80,
+        "padding_block_end": 80,
+        "padding_inline_start": 80,
+        "padding_inline_end": 0,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 64,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
       }
     },
     "core_values": {
@@ -159,8 +275,21 @@
             "alignment": "center",
             "type_preset": "h2",
             "font": "var(--font-body--family)",
-            "text_color": "#BCA588"
-          }
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#bca588",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "row": {
           "type": "group",
@@ -169,49 +298,148 @@
             "vertical_on_mobile": true,
             "horizontal_alignment": "center",
             "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 32,
             "width": "fill",
+            "custom_width": 100,
             "width_mobile": "fill",
-            "height": "fit"
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "card_1": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 16,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
-                "height": "fit"
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "image": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
-                    "width": "fill"
-                  }
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "title": {
                   "type": "text",
                   "settings": {
                     "text": "<h4>Sin Tóxicos</h4>",
                     "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "h4",
-                    "font": "var(--font-body--family)"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "desc": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Materiales seguros que no liberan sustancias nocivas en tus alimentos.</p>",
                     "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -224,39 +452,112 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 16,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
-                "height": "fit"
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "image": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
-                    "width": "fill"
-                  }
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "title": {
                   "type": "text",
                   "settings": {
                     "text": "<h4>Fácil De Mantener</h4>",
                     "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "h4",
-                    "font": "var(--font-body--family)"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "desc": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Superficies simples de limpiar, sin necesidad de cuidados especiales.</p>",
                     "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -269,39 +570,112 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 16,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
-                "height": "fit"
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "image": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
-                    "width": "fill"
-                  }
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "title": {
                   "type": "text",
                   "settings": {
                     "text": "<h4>Hecho Para Durar</h4>",
                     "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "h4",
-                    "font": "var(--font-body--family)"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "desc": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Productos resistentes, pensados para acompañarte durante años.</p>",
                     "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -314,39 +688,112 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 16,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
-                "height": "fit"
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "image": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
-                    "width": "fill"
-                  }
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "title": {
                   "type": "text",
                   "settings": {
                     "text": "<h4>Salud Que Se Siente</h4>",
                     "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "h4",
-                    "font": "var(--font-body--family)"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "desc": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Cocinar sin preocupaciones, sabiendo que cuidás a los tuyos.</p>",
                     "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -370,10 +817,29 @@
       ],
       "settings": {
         "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 48,
         "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
         "background_color": "#121212",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 96,
         "padding-block-end": 96
       }
@@ -390,8 +856,21 @@
             "alignment": "center",
             "type_preset": "h2",
             "font": "var(--font-body--family)",
-            "text_color": "#BCA588"
-          }
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#bca588",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "row": {
           "type": "group",
@@ -400,21 +879,75 @@
             "vertical_on_mobile": true,
             "horizontal_alignment": "center",
             "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 32,
             "width": "fill",
+            "custom_width": 100,
             "width_mobile": "fill",
-            "height": "fit"
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "item_1": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 12,
                 "width": "fill",
-                "height": "fit"
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "icon": {
@@ -422,19 +955,36 @@
                   "settings": {
                     "icon": "leaf",
                     "width": 56,
-                    "icon_color": "#BCA588"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bca588"
+                  },
+                  "blocks": {}
                 },
                 "text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Producción responsable, con menor impacto ambiental.</p>",
                     "width": "100%",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -446,11 +996,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 12,
                 "width": "fill",
-                "height": "fit"
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "icon": {
@@ -458,19 +1036,36 @@
                   "settings": {
                     "icon": "heart",
                     "width": 56,
-                    "icon_color": "#BCA588"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bca588"
+                  },
+                  "blocks": {}
                 },
                 "text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Cuidado real por la salud de quienes usan nuestros productos.</p>",
                     "width": "100%",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -482,11 +1077,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 12,
                 "width": "fill",
-                "height": "fit"
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "icon": {
@@ -494,19 +1117,36 @@
                   "settings": {
                     "icon": "plant",
                     "width": 56,
-                    "icon_color": "#BCA588"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bca588"
+                  },
+                  "blocks": {}
                 },
                 "text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Materiales pensados para durar, sin desperdicio innecesario.</p>",
                     "width": "100%",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -518,11 +1158,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 12,
                 "width": "fill",
-                "height": "fit"
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "icon": {
@@ -530,19 +1198,36 @@
                   "settings": {
                     "icon": "box",
                     "width": 56,
-                    "icon_color": "#BCA588"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bca588"
+                  },
+                  "blocks": {}
                 },
                 "text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Packaging consciente, con la menor cantidad de plástico posible.</p>",
                     "width": "100%",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -554,11 +1239,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 12,
                 "width": "fill",
-                "height": "fit"
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "icon": {
@@ -566,19 +1279,36 @@
                   "settings": {
                     "icon": "recycle",
                     "width": 56,
-                    "icon_color": "#BCA588"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bca588"
+                  },
+                  "blocks": {}
                 },
                 "text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Menos residuos frente a las alternativas descartables del mercado.</p>",
                     "width": "100%",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -590,11 +1320,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 12,
                 "width": "fill",
-                "height": "fit"
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "icon": {
@@ -602,19 +1360,36 @@
                   "settings": {
                     "icon": "check_box",
                     "width": 56,
-                    "icon_color": "#BCA588"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bca588"
+                  },
+                  "blocks": {}
                 },
                 "text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Calidad duradera, diseñada para no terminar en la basura al poco tiempo.</p>",
                     "width": "100%",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
-                    "text_color": "#B0B0B0"
-                  }
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#b0b0b0",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -639,10 +1414,29 @@
       ],
       "settings": {
         "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 48,
         "section_width": "page-width",
-        "background_color": "#03231A",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#03231a",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 96,
         "padding-block-end": 96
       }
@@ -651,18 +1445,46 @@
       "type": "hero-video-logos",
       "settings": {
         "media_type_desktop": "image",
+        "custom_mobile_media": false,
+        "media_type_mobile": "video",
+        "kicker": "Limited Time Offer",
         "heading": "Vive La Diferencia Hoy",
         "subheading": "<p>Miles de personas ya eligieron una cocina más consciente. Sumate vos también.</p>",
+        "text_color": "",
         "button_label": "Cuidar Mi Salud",
         "button_link": "shopify://collections/all",
+        "open_in_new_tab": false,
         "style_class": "button-custom",
-        "custom_button_background": "#FFFFFF",
+        "custom_button_background": "#ffffff",
         "custom_button_text": "#121212",
-        "custom_button_border": "#FFFFFF",
+        "custom_button_border": "#ffffff",
+        "link_text_color": "",
+        "width": "fit-content",
+        "custom_width": 100,
+        "width_mobile": "fit-content",
+        "custom_width_mobile": 100,
         "show_rating": false,
+        "rating_value": 5,
+        "rating_text": "4.9 (10,000+ Customers)",
+        "star_color": "#b57c46",
+        "rating_icon_size": 14,
+        "rating_icon_size_mobile": 12,
         "toggle_overlay": true,
+        "overlay_color": "#0000004d",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "background_color": "",
         "show_logos": false,
-        "section_height": "medium"
+        "autoplay": true,
+        "marquee_direction": "normal",
+        "marquee_speed": 25,
+        "logo_height": 24,
+        "logo_gap": 120,
+        "logo_opacity": 90,
+        "section_height": "medium",
+        "section_height_custom": 90,
+        "padding-block-start": 0,
+        "padding-block-end": 96
       }
     },
     "link_buttons": {
@@ -672,21 +1494,58 @@
           "type": "group",
           "settings": {
             "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
             "width": "fill",
-            "height": "fit"
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "button": {
               "type": "button",
               "settings": {
                 "label": "Conocé La Ciencia",
+                "link": "",
+                "open_in_new_tab": false,
                 "style_class": "button-custom",
-                "custom_button_background": "#00000000",
-                "custom_button_text": "#FFFFFF",
+                "custom_button_background": "rgba(0,0,0,0)",
+                "custom_button_text": "#ffffff",
                 "custom_button_border": "#333333",
+                "link_text_color": "",
                 "width": "custom",
-                "custom_width": 100
-              }
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -697,21 +1556,58 @@
           "type": "group",
           "settings": {
             "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
             "width": "fill",
-            "height": "fit"
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "button": {
               "type": "button",
               "settings": {
                 "label": "Preguntas Frecuentes",
+                "link": "",
+                "open_in_new_tab": false,
                 "style_class": "button-custom",
-                "custom_button_background": "#00000000",
-                "custom_button_text": "#FFFFFF",
+                "custom_button_background": "rgba(0,0,0,0)",
+                "custom_button_text": "#ffffff",
                 "custom_button_border": "#333333",
+                "link_text_color": "",
                 "width": "custom",
-                "custom_width": 100
-              }
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -722,8 +1618,39 @@
           "type": "group",
           "settings": {
             "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
             "width": "fill",
-            "height": "fit"
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "button": {
@@ -731,13 +1658,18 @@
               "settings": {
                 "label": "Ver Más Vendidos",
                 "link": "shopify://collections/all",
+                "open_in_new_tab": false,
                 "style_class": "button-custom",
-                "custom_button_background": "#00000000",
-                "custom_button_text": "#FFFFFF",
+                "custom_button_background": "rgba(0,0,0,0)",
+                "custom_button_text": "#ffffff",
                 "custom_button_border": "#333333",
+                "link_text_color": "",
                 "width": "custom",
-                "custom_width": 100
-              }
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -748,8 +1680,39 @@
           "type": "group",
           "settings": {
             "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
             "width": "fill",
-            "height": "fit"
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "button": {
@@ -757,13 +1720,18 @@
               "settings": {
                 "label": "Ver Todos Los Productos",
                 "link": "shopify://collections/all",
+                "open_in_new_tab": false,
                 "style_class": "button-custom",
-                "custom_button_background": "#00000000",
-                "custom_button_text": "#FFFFFF",
+                "custom_button_background": "rgba(0,0,0,0)",
+                "custom_button_text": "#ffffff",
                 "custom_button_border": "#333333",
+                "link_text_color": "",
                 "width": "custom",
-                "custom_width": 100
-              }
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -782,9 +1750,26 @@
         "vertical_on_mobile": true,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 24,
         "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
         "background_color": "#121212",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 48,
         "padding-block-end": 48
       }
