@@ -1,0 +1,214 @@
+
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+%}
+
+<section
+  id="CopyBand-{{ section.id }}"
+  class="copy-band{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %} spacing-style"
+  role="region"
+  aria-label="{{ 'accessibility.copy_band_region' | t }}"
+  style="
+    {%- render 'spacing-style', settings: section.settings %}
+    --copy-band-text-color: {{ section.settings.text_color }};
+    --copy-band-max-width: {{ section.settings.content_max_width }}px;
+    --copy-band-padding: {{ section.settings.content_padding }}px;
+    --copy-band-gap: {{ section.settings.gap }}px;
+    --copy-band-font-size: {{ section.settings.font_size }}px;
+    --copy-band-font-size-mobile: {{ section.settings.font_size_mobile }}px;
+  "
+>
+  <div class="copy-band__content">
+    {% content_for 'blocks' %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .copy-band {
+    --copy-band-scale: 1;
+    position: relative;
+    background-color: var(--color-background, #03231A);
+    color: var(--copy-band-text-color, #BCA588);
+  }
+
+  .copy-band__content {
+    max-width: calc(var(--copy-band-max-width, 1320px) * var(--copy-band-scale));
+    margin-inline: auto;
+    padding: calc(var(--copy-band-padding, 120px) * var(--copy-band-scale));
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--copy-band-gap, 32px) * var(--copy-band-scale));
+    text-align: center;
+  }
+
+  .copy-band__paragraph {
+    font-family: var(--font-body--family);
+    font-size: calc(var(--copy-band-font-size, 24px) * var(--copy-band-scale));
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+  }
+
+  .copy-band__paragraph p {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1799px) {
+    .copy-band {
+      --copy-band-scale: 0.9;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .copy-band {
+      --copy-band-scale: 1.3;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .copy-band__content {
+      padding: 80px 16px;
+    }
+
+    .copy-band__paragraph {
+      font-size: var(--copy-band-font-size-mobile, 16px);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.copy_band",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#03231A"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "t:settings.width",
+      "min": 600,
+      "max": 1600,
+      "step": 10,
+      "unit": "px",
+      "default": 1320
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "label": "t:settings.padding",
+      "min": 0,
+      "max": 300,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "t:settings.size",
+      "min": 16,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_copy-band-paragraph"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.copy_band",
+      "category": "t:categories.storytelling",
+      "blocks": {
+        "paragraph_1": {
+          "type": "_copy-band-paragraph",
+          "settings": {
+            "text": "<p>At Taima®, we believe the tools you cook with should never harm you or ones you love. For too long, cookware companies have put profit before people - filling kitchens with toxins &amp; materials that quietly poison food &amp; body.</p>"
+          }
+        },
+        "paragraph_2": {
+          "type": "_copy-band-paragraph",
+          "settings": {
+            "text": "<p>Our mission is simple: to create 100% toxin-free kitchenware, crafted from the same pure titanium trusted in medicine, so you can prepare every meal with complete peace of mind.</p>"
+          }
+        }
+      },
+      "block_order": ["paragraph_1", "paragraph_2"]
+    }
+  ]
+}
+{% endschema %}
