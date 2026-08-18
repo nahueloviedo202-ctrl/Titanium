@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,293 +15,636 @@
         "about-us": {
           "type": "_faq-category",
           "settings": {
-            "heading": "About Us"
+            "heading": "About Us",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "When will I get my order?"
+                "heading": "When will I get my order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         },
         "about-pure-titanium": {
           "type": "_faq-category",
           "settings": {
-            "heading": "About Pure Titanium"
+            "heading": "About Pure Titanium",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Where are your products manufactured?"
+                "heading": "Where are your products manufactured?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         },
         "orders-shipping": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Orders & Shipping"
+            "heading": "Orders & Shipping",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How much does shipping cost?"
+                "heading": "How much does shipping cost?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Shipping is calculated based on your location and the items in your order. You will always know the shipping price before you purchase.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             },
             "row-2": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Are any purchases final sale?"
+                "heading": "Are any purchases final sale?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>We are unable to accept returns on certain items. These will be carefully marked before purchase.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1", "row-2"]
+          "block_order": [
+            "row-1",
+            "row-2"
+          ]
         },
         "regular-cookware": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Regular Cookware"
+            "heading": "Regular Cookware",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?"
+                "heading": "What is the return policy?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         },
         "titanium-cookware": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Pure Titanium Cookware"
+            "heading": "Pure Titanium Cookware",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "When will I get my order?"
+                "heading": "When will I get my order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         },
         "regular-cutting-boards": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Regular Cutting Boards"
+            "heading": "Regular Cutting Boards",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Where are your products manufactured?"
+                "heading": "Where are your products manufactured?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         },
         "titanium-cutting-boards": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Pure Titanium Cutting Boards"
+            "heading": "Pure Titanium Cutting Boards",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?"
+                "heading": "What is the return policy?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         },
         "regular-utensils": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Regular Utensils"
+            "heading": "Regular Utensils",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How much does shipping cost?"
+                "heading": "How much does shipping cost?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Shipping is calculated based on your location and the items in your order. You will always know the shipping price before you purchase.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         },
         "titanium-utensils": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Pure Titanium Utensils"
+            "heading": "Pure Titanium Utensils",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Are any purchases final sale?"
+                "heading": "Are any purchases final sale?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>We are unable to accept returns on certain items. These will be carefully marked before purchase.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         },
         "regular-drinkware": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Regular Drinkware"
+            "heading": "Regular Drinkware",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "When will I get my order?"
+                "heading": "When will I get my order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         },
         "titanium-drinkware": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Pure Titanium Drinkware"
+            "heading": "Pure Titanium Drinkware",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
           },
           "blocks": {
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?"
+                "heading": "What is the return policy?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "text-1": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
-                    "width": "100%"
-                  }
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["text-1"]
+              "block_order": [
+                "text-1"
+              ]
             }
           },
-          "block_order": ["row-1"]
+          "block_order": [
+            "row-1"
+          ]
         }
       },
       "block_order": [
@@ -310,10 +662,15 @@
       ],
       "settings": {
         "background_color": "#121212",
+        "text_color": "",
         "padding-block-start": 96,
-        "padding-block-end": 96
+        "padding-block-end": 96,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
       }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
