@@ -1439,6 +1439,7 @@
       "type": "hero-video-logos",
       "settings": {
         "media_type_desktop": "image",
+        "image_desktop": "shopify://shop_images/Background-3_2000x_3f0183e7-4cf1-4657-9fac-f274781a59dd.webp",
         "custom_mobile_media": false,
         "media_type_mobile": "video",
         "kicker": "Limited Time Offer",
