@@ -25,7 +25,7 @@
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "When will I get my order?",
+                "heading": "What makes Taima® unique?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -34,115 +34,7 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text-1"
-              ]
-            }
-          },
-          "block_order": [
-            "row-1"
-          ]
-        },
-        "about-pure-titanium": {
-          "type": "_faq-category",
-          "settings": {
-            "heading": "About Pure Titanium",
-            "heading_color": "#bca588",
-            "icon": "plus",
-            "dividers": true,
-            "type_preset": "h6"
-          },
-          "blocks": {
-            "row-1": {
-              "type": "_accordion-row",
-              "settings": {
-                "heading": "Where are your products manufactured?",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text-1": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text-1"
-              ]
-            }
-          },
-          "block_order": [
-            "row-1"
-          ]
-        },
-        "orders-shipping": {
-          "type": "_faq-category",
-          "settings": {
-            "heading": "Orders & Shipping",
-            "heading_color": "#bca588",
-            "icon": "plus",
-            "dividers": true,
-            "type_preset": "h6"
-          },
-          "blocks": {
-            "row-1": {
-              "type": "_accordion-row",
-              "settings": {
-                "heading": "How much does shipping cost?",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text-1": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Shipping is calculated based on your location and the items in your order. You will always know the shipping price before you purchase.</p>",
+                    "text": "<p>At Taima®, we don’t follow the path of traditional cookware companies...First, we craft every product exclusively from certified pure titanium - the same rare metal trusted in surgery, aerospace, and defense, where durability and safety are non-negotiable.Second, we’re 100% transparent. With Taima®, you always know exactly what touches your food: no coatings, no hidden chemicals, no heavy metals. Just pure, non-toxic titanium.Third, unlike disposable cookware designed to chip, warp, or wear out, every Taima® piece is built to last a lifetime.Finally, we’re not for everyone. If you’re fine with toxin-filled boards, chemical-coated pans, and frozen dinners - we’re not for you. But if you care about what touches your food and your body, welcome to Taima®. Here, your health, longevity always come first, because your body deserves only the best.Want to learn more Taima? Read more on our About Us page</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -172,7 +64,7 @@
             "row-2": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Are any purchases final sale?",
+                "heading": "Where does the Taima name come from?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -181,7 +73,202 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We are unable to accept returns on certain items. These will be carefully marked before purchase.</p>",
+                    "text": "<p>The name Taima® comes from combining two principles at the heart of Japanese design: 耐 (Tai) = endurance, resilience, strength. 間 (Ma) = the philosophy of minimalism - the beauty of “less is more.” Together, they represent our belief that true strength lies in simplicity: kitchenware that endures a lifetime, without clutter, toxins, or compromise. Taima is about creating space for what matters - health, purity, and peace of mind.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Where are Taima® products made?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our products are designed in California, then crafted in world-class titanium factories in China - the global leader in titanium production (where most of the world’s pure titanium is sourced).As much as we’d love to make everything in the U.S., producing titanium domestically would raise prices 3-4x for our customers due to taxes & high production costs. Instead, we partnered with the very best ethical facilities abroad - facilities that adhere to strict international standards (BSCI, SMETA) and undergo constant audits.Every piece is tested and certified for purity, so you know exactly what touches your food. No shortcuts. Ever. That’s why we back all of our products by lifetime warranty.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do Taima® products come with a warranty?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Every Taima® product is backed with a Lifetime Warranty against manufacturing defects. If it’s not flawless, it doesn’t leave our workshop, and if anything ever goes wrong, we’ll make it right.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why do 500,000+ people love Taima®?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Because people are done being lied to. For years, cookware brands slapped “non-toxic” labels on chemical-coated pans, only for those same coatings to end up in lawsuits for poisoning families. Others pushed “healthy” wood or bamboo boards that hid glue, bacteria, and mold.We’re the original and only brand that crafts cookware and boards from certified pure titanium, no coatings, no hidden trade-offs. Just the safest metal on Earth, designed to protect your health and last for life.And it’s not just about safety, it’s about status and trust. When someone sees Taima in your kitchen, they know you’re serious about your health, your family, and your standards. We deliver exactly what we promise: non-toxic, heirloom-quality tools that finally live up to the word safe.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is all titanium the same?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No, and that’s where most people get tricked.Today, copycats (especially on Amazon) are slapping the word “titanium” on stainless steel, alloys, or coated products to leech off our success. They look similar on the surface but have none of the benefits of real pure titanium.Taima® is the only brand on the market with certified pure titanium kitchenware. Every product we sell is independently tested, backed by certifications, and guaranteed to be 100% pure. If it doesn’t say Taima®, it isn’t the real thing.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What impact does my purchase have?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A portion of every sale is reinvested directly into research and development of the next generation of pure titanium kitchenware.Our goal? To make toxin-filled kitchenware a thing of the past. By 2030, we’re aiming to replace at least 20% of the global cookware market with safe, certified titanium alternatives - eliminating billions of plastic, coated, and disposable products that poison both bodies and the planet.When you invest in Taima®, you’re not just upgrading your kitchen. You’re joining a movement against toxins.Your purchase helps to create a healthier world.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -211,7 +298,960 @@
           },
           "block_order": [
             "row-1",
-            "row-2"
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5",
+            "row-6",
+            "row-7"
+          ]
+        },
+        "about-pure-titanium": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "About Pure Titanium",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "row-1": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What is titanium & why does it matter for my safety?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium is simply one of the strongest, non-toxic and most biocompatible metals on Earth. Want the full breakdown of titanium’s science and unique benefits? Read more on our Science Page</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why titanium instead of wood, plastic or non-stick?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Because every other option comes with long-term health risks. Plastics shed hormone-disrupting microplastics, wood is full of germs & bacteria that impact your gut, Steel leaches heavy metals, and non-stick coatings release cancer causing PFAS “forever chemicals.” Where’s Titanium: No forever chemicals, no microplastics, no germs. The cleanest, safest & most hygienic surface for cooking & prepping. Resistant to corrosion & lasts a lifetime. 100% recyclable & made for long-term use, reducing waste.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is titanium safe for food contact?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium never leaches, corrodes, or reacts with your food, at any temperature. It’s so safe that surgeons trust it inside the human body as implants to last a lifetime.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is titanium completely toxin-free?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Pure titanium is 100% toxin-free. It never leaches, reacts, or contaminates your food - no matter the heat. Unlike other metals, it contains no harmful additives like nickel, chromium, or aluminum, and it’s FDA-compliant for food contact, proven free from extractable lead and other contaminants. With Taima®, you always know what’s touching your food is completely safe.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Titanium antibacterial properties explained",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes - naturally. Its dense, non-porous surface gives bacteria nowhere to hide. With our advanced Tita-Nano™ surface texture, it even disrupts bacteria on contact, making titanium the most hygienic surface in your kitchen.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What does “biocompatible” mean?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pure titanium is the most biocompatible metal on Earth, which is why it’s trusted in devices placed directly inside the human body. Biocompatibility means your body doesn’t react negatively to it. It’s stable, non-reactive, and safe to come into contact with your food every single day. Unlike other materials, it won’t leach heavy metals.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does it have heavy metals? Does it corrode?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No. Pure titanium is the most corrosion-resistant metal in the world. Unlike cast iron, carbon steel, or steel, it never rusts and never reacts with acidic foods. That means no chromium, nickel, or other heavy metals leaching into your meals - ever.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-8": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How long do Taima pure titanium products last?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Unlike wood, plastic, or coated cookware, pure titanium products don’t degrade with time. They can last for decades, making them a perfect one-time investment.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-9": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are titanium products dishwasher safe?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Absolutely. Unlike non-stick coated pans or wood & plastic boards All of our pure titanium products are dishwasher safe & highly resistant to heat, water, and detergents.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-10": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Will titanium damage my knives or cooking tools?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No - titanium is softer than the hardened steel used in 99% of kitchen knives. On the hardness scale, steel blades are about 3x harder than titanium, meaning the board can’t grind down or chip your edge.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-11": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are there any downsides to pure titanium kitchenware?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Only one: the upfront cost, titanium is a premium metal. But that price reflects its safety, durability & quality. Over time, it pays for itself by replacing many lower-quality tools & cookware.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-12": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is titanium environmentally friendly?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium is fully recyclable, and our products are intentionally designed to last a lifetime. That means no need to keep rebuying. Every piece reduces waste by replacing dozens of disposable alternatives - sustainability built in by design.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-13": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does Taima® titanium meet FDA food-contact safety standards?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Every Taima® product is rigorously tested and certified to comply with FDA food-contact regulations. That means it passes strict limits for extractable heavy metals like lead, cadmium, nickel, and chromium. Independent lab testing confirms our titanium is pure, Grade 1 medical quality, and completely safe for daily use in your kitchen.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-14": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is titanium hypoallergenic?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Unlike stainless steel (which can leach nickel and chromium, two common skin irritants and allergens), titanium is chemically stable and non-reactive. Titanium doesn’t trigger allergic reactions, inflammation, or irritation. In the kitchen, that means it’s safe not only for your food, but for you and your family’s health, even with lifelong daily use.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-15": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is titanium magnetic?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pure titanium itself is not magnetic - so our cutting boards, for example, will not attract a magnet. However, to make our cookware compatible with induction stoves, we use an outer base layer of stainless steel. That bottom layer allows the magnetism needed for induction, while the entire cooking surface that touches your food remains 100% pure titanium. In short: your food only ever contacts pure titanium, and the induction-ready base just makes it more versatile in your kitchen.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            }
+          },
+          "block_order": [
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5",
+            "row-6",
+            "row-7",
+            "row-8",
+            "row-9",
+            "row-10",
+            "row-11",
+            "row-12",
+            "row-13",
+            "row-14",
+            "row-15"
+          ]
+        },
+        "orders-shipping": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Orders & Shipping",
+            "heading_color": "#bca588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "row-1": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Where Do You Ship From?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Most Taima® orders ship from our fulfillment center in San Diego, California.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Where do you ship to?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We proudly ship worldwide. Wherever you are, we’ll get your Taima® products to your door.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How long does it take to process an order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>All orders are processed within 1-4 business days (up to 2 days longer during the holiday season). During this time, our team carefully prepares and packages your items to ensure they arrive in perfect condition.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "When will I receive my order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Delivery times vary by country and region. For exact timelines, please refer to our Shipping Policy</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Will I receive tracking details?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. As soon as your order is processed, you’ll get a confirmation email with your tracking number so you can monitor your delivery in real time.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What if my order is delayed or lost?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>If your order hasn’t been processed yet, we can update your details. Email us immediately at hello@taimatitanium.com, and we’ll do our best to make the change in time.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How can I contact you about my order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our support team is always here to help. Reach out to hello@taimatitanium.com for any questions about your order or delivery.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-8": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "The product I want is out of stock. What now?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Restocks can’t always be guaranteed, but you can join our email list for priority updates when products become available again.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            }
+          },
+          "block_order": [
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5",
+            "row-6",
+            "row-7",
+            "row-8"
           ]
         },
         "regular-cookware": {
@@ -227,7 +1267,7 @@
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?",
+                "heading": "Downsides of non-stick coated pans",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -236,7 +1276,163 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                    "text": "<p>The most toxic pan surface there is. Teflon / majority of non-stick pans release toxic PFAS chemicals, known as \"forever chemicals\" which have been linked to cancer and liver damage. The coating easily shaves off over time and can’t handle the heat exposing your food to toxins.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of stainless steel pans",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Requires lots of oil to prevent sticking, and reacts with acidic foods - altering taste and leaching heavy metals (nickel, chromium). Tougher to clean, high effort to maintain.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of ceramic pans",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ceramic coatings are very fragile, once chipped, they expose toxic aluminum base. Most only last 1-2 years before losing their non-stick. Expensive to replace, unreliable long-term.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of cast iron pans",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Incredibly heavy and high-maintenance - cast iron rusts easily without regular seasoning and struggles with acidic foods, which can degrade the surface and alter flavor.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How does titanium compare to regular cookware?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pure titanium never leaches chemicals or heavy metals, resists corrosion completely, and is engineered with our SlipScale™ non-stick surface - giving you the release of coated pans without the toxins, and the durability of steel without the weight or maintenance.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -265,7 +1461,11 @@
             }
           },
           "block_order": [
-            "row-1"
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5"
           ]
         },
         "titanium-cookware": {
@@ -281,7 +1481,7 @@
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "When will I get my order?",
+                "heading": "How does SlipScale™ non-stick surface work?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -290,7 +1490,514 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "text": "<p>This technology is the very first of its kind, setting a new standard in cookware. SlipScale™ is our engineered, no-coating imprinted surface pattern that increases food release by up to 3x. The micro-ridges minimize contact points and help distribute oil evenly inside, creating a layer between food & the pan, so food glides off, not sticks.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How does titanium cookware help food retain more nutrients?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pure Titanium’s superior thermal conductivity allows you to cook evenly at lower temperatures. Studies show that lower-temp cooking helps retain up to 30% more nutrients (especially vitamin C) in your food compared to traditional cookware.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What studies show that Pure Titanium cookware retains more nutrients?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A study published in the Journal of Food Science and Technology investigated how different cookware materials affect nutrient retention. The research revealed that titanium cookware offers the best protection of micronutrients, far outperforming other materials like stainless steel.This superior nutrient retention is attributed to titanium's excellent heat conductivity, which allows for cooking at lower temperatures. Lower cooking temperatures help preserve essential vitamins and minerals that are often lost during high-heat cooking methods.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why should I switch from my existing pan?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Because no other pan protects your health, keeps nutrients intact, and lasts for decades like this one.Health: Unlike non-stick, stainless, or ceramic coatings, titanium never leaches chemicals or metals. It’s completely toxin-free.Nutrients: Cooking at lower heat on titanium preserves up to 30% more nutrients. Your food doesn’t just taste better - it’s healthier.Longevity: Traditional pans warp, chip, or lose their coatings. A Taima® titanium pan will outlast them all.Ease of use: Lightweight, versatile, oven-safe, and compatible with every cooktop.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is titanium safe for food contact?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium never leaches, corrodes, or reacts with your food, at any temperature. It’s so safe that surgeons trust it inside the human body as implants to last a lifetime.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why do acidic foods cause problems in other pans?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Acids from pepper, lemon or tomato can react with steel or non-stick coatings, breaking them down and causing heavy metals or chemicals to leach into your food. Titanium is the most corrosion-resistant metal on Earth, so it stays completely stable, no matter what you’re cooking.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is it safe to use on all stovetops and ovens?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. The Taima® Titanium cookware works on every cooking surface - gas, electric, ceramic, induction, open flame & oven. No limitations.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-8": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Can I cook at very high temperatures with titanium?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Absolutely. Pure titanium can withstand extreme heat without warping, breaking down, or releasing anything harmful. Just use oil with the right smoke point for your recipe, and you can safely cook at any temperature.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-9": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does titanium discolor with heat?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes, pure titanium can show color changes when exposed to very high heat (from light brown to blue to rainbow). This isn’t damage, it’s proof of purity. The discoloration is only cosmetic and doesn’t affect performance, safety, or durability.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-10": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do I need to hand wash or can I use the dishwasher?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Unlike coated pans that get ruined in dishwashers, pure titanium doesn’t care. It’s non-porous, doesn’t absorb grease, odors, or detergent, and won’t degrade. Hand wash or dishwasher - both are completely safe.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-11": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How hot do my pans need to be to start cooking?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium heats evenly and fast, so you don’t need high heat. Low to medium is enough for most meals, saving nutrients and preventing food from sticking. Reserve high heat for searing - the pan can handle it.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-12": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do I need butter, oil, or cooking spray when cooking?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>With our SlipScale™ non-stick surface, you’ll use far less oil than with traditional pans. A touch of butter or oil enhances flavor, but food won’t bond to the surface the way it does with stainless or cast iron.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-13": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What is 5-ply titanium construction?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our pans are engineered with 5 bonded layers for unmatched performance: Inner surface: certified pure titanium with SlipScale™ non-stick pattern. Core: 3 layers of high-conductivity aluminum for fast, even heating. Exterior: Stainless steel shell for durability, induction compatibility, and warp resistance. This combination delivers safety, speed, and strength in one pan.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-14": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What can I cook with it?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Anything you love. The Taima® Titanium Pan excels at searing steaks, flipping omelets, frying crispy potatoes, deglazing sauces, shallow or deep frying, baking, roasting, or even open-flame cooking. From delicate fish to hearty pastas - this pan adapts.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -319,7 +2026,20 @@
             }
           },
           "block_order": [
-            "row-1"
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5",
+            "row-6",
+            "row-7",
+            "row-8",
+            "row-9",
+            "row-10",
+            "row-11",
+            "row-12",
+            "row-13",
+            "row-14"
           ]
         },
         "regular-cutting-boards": {
@@ -335,7 +2055,7 @@
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Where are your products manufactured?",
+                "heading": "Downsides of plastic cutting boards",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -344,7 +2064,241 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                    "text": "<p>Plastic boards contain BPA’s & other harmful chemicals that shave off as microplastics with every cut. Those particles end up in your food, and eventually in your body: Thousands of scientific studies confirm that plastic contamination in our bodies leads to serious health risks, yet most people don’t realize their cutting board is a major source. Microplastics don’t just pass through your body, they accumulate. Once inside, they enter your bloodstream, disrupt hormones, weaken your immune system, and trigger chronic inflammation. Studies have linked microplastic exposure to: Hormone imbalances (due to estrogenic chemicals that interfere with testosterone and thyroid function), Metabolism issues & weight gain (plastics alter fat storage and disrupt hunger regulation), Cognitive decline & brain fog (microplastics have been found in human brains, causing neuroinflammation), Increased risk of cancer (plastic particles leach toxic chemicals like BPA and phthalates, both linked to serious disease). Plastic cutting boards are one of the most direct ways these toxins enter your body. Every meal prepared on plastic increases exposure - making it one of the most dangerous kitchen tools still in use today.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of wooden cutting boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>(Made from single piece) - Absorbs liquids like a sponge, creating the perfect breeding ground for mold and bacteria. Once mold sets in, it contaminates every piece of food that touches the board. Deep knife grooves trap bacteria, making it impossible to sanitize fully. If you’re not oiling and disinfecting it constantly, it’s a hidden health risk.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of endgrain wood cutting boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>They carry the same risks as solid wood, but worse: end-grain boards are pieced together with industrial glues that often contain formaldehyde - a known carcinogen. That means unsafe chemicals near your food, along with the usual hygiene problems of wood.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of bamboo cutting boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Like end-grain wood, bamboo boards are glued together from small strips. Those adhesives usually contain formaldehyde or similar toxic chemicals. Add in bamboo’s porous surface, and you’ve got a board that’s unsafe and impossible to keep truly clean.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of glass cutting boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Glass boards are brutally hard on knives - dulling edges almost immediately. They’re heavy, clunky, and offer no hygienic benefit. Style aside, they’re impractical for real cooking.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of stone cutting boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Stone boards share the same problem as glass: they’re extremely heavy and dull knives fast. They’re also awkward to move around, and the hard surface isn’t friendly for daily prep.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How does titanium compare to regular boards?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pure titanium is non-porous and naturally antibacterial, so it never absorbs bacteria, moisture, or odors like wood or plastic. It’s gentle on knife edges, corrosion-proof, and built to outlast every alternative on this list.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -373,13 +2327,19 @@
             }
           },
           "block_order": [
-            "row-1"
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5",
+            "row-6",
+            "row-7"
           ]
         },
         "titanium-cutting-boards": {
           "type": "_faq-category",
           "settings": {
-            "heading": "Pure Titanium Cutting Boards",
+            "heading": "Pure Titanium Cutting Board",
             "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
@@ -389,7 +2349,7 @@
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?",
+                "heading": "How do I know this is real titanium and not a fake?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -398,7 +2358,358 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                    "text": "<p>If you’ve seen cheaper “titanium” boards online, or even been tricked by one - it’s not your fault. Most are just industrial steel alloys with a sprinkle of titanium (if any), slapped with the name to sell. They don’t have the safety, antibacterial properties, or durability of true titanium.Taima® is the original. The only board made from certified 99.89% pure Grade 1 titanium - verified by independent labs. Real titanium is expensive and incredibly hard to work with, which is why nobody else does it at this level. We back ours with proof, transparency, and lifetime durability.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why is titanium the safest food preparation material?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium is a rare metal known for its incredible durability. It’s so safe and biocompatible that it’s used in the medical field for surgical implants, ensuring zero toxicity inside the human body. Unlike other materials titanium doesn’t react with food, release harmful particles, or degrade over time. This makes it the ultimate choice for food preparation. Taima’s cutting board is crafted from medical-grade, antibacterial titanium - naturally self-sanitizing and 100% toxin-free. While plastic boards shed microplastics and wooden boards absorb bacteria, titanium remains completely sterile, ensuring no contamination reaches your food. No other cutting board material offers this level of hygiene, safety, and durability.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Will titanium dull my knives?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No. Kitchen knives are made from hardened steel, which is about 3x harder than titanium. That means your blade edge always wins, and the board won’t grind it down or chip it. You get sharp knives and a board that still lasts a lifetime.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do I need to sterilize it like a wooden board?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No. With wood, you’re told to use boiling water, bleach, or harsh chemicals after every use to stay safe. Nobody has time for that. Titanium doesn’t absorb or trap bacteria in the first place - just rinse, wipe, and you’re done.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is the titanium board easy to clean?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium is non-porous, so nothing sticks or seeps in. Just rinse or wipe, and it’s spotless, no soaking, no scrubbing, no lingering odors.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is the Taima cutting board third-party certified to be pure titanium?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>SGS is the world’s leading inspection, verification, testing, and certification company - ensuring products meet the highest safety and quality standards.Taima’s Titanium Cutting Board has been Lab tested, meaning it has been professionally tested for purity, durability, and food safety.Unlike uncertified “titanium” boards on the market (which are often just coated steel), Taima’s certification guarantees that it is made from 100% pure, medical-grade titanium-completely toxin-free and naturally antibacterial.If a board isn’t Taima, there’s no proof it’s real titanium. Taima is the only brand that provides this level of transparency and trust.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What’s it like to cut on this titanium board?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Cutting on the Taima Titanium Cutting Board is smooth, stable, and satisfying. Unlike flimsy plastic boards that slide around this board stays firmly in place - giving you total control. Yes, the sound of cutting on titanium has a slight metallic ring at first, but you’ll get used to it quickly. In fact, most people enjoy the sound - it gives a clean, precise & professional feel.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-8": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is the titanium cutting board really antibacterial?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Pure titanium naturally resists bacterial growth - it’s trusted in surgical settings for that exact reason. We’ve taken it further with our Tita-Nano™ surface technology, which disrupts bacterial membranes on contact, stopping them from sticking or multiplying. The result? A board that stays cleaner and safer by design.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-9": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does it eliminate cross-contamination risk?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Absolutely. Unlike wood, titanium doesn’t hold onto raw juices or bacteria. Slice raw chicken, rinse it clean, and you can immediately chop vegetables on the same surface - no cross-contamination, no hassle.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-10": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why big kitchen brands won’t sell titanium cutting boards?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ever wonder why plastic and wooden boards dominate the market despite all their health risks?The answer is simple: profit.Big brands know that plastic and wooden boards wear out quickly, forcing customers to replace them over and over again.A titanium board lasts forever, which means no repeat sales for them.That’s why you’ll never see major retailers push titanium - they want you stuck in the cycle of replacing cheap, toxic boards year after year.Taima offers you a one-time investment that saves you money and protects your health for life.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -427,7 +2738,16 @@
             }
           },
           "block_order": [
-            "row-1"
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5",
+            "row-6",
+            "row-7",
+            "row-8",
+            "row-9",
+            "row-10"
           ]
         },
         "regular-utensils": {
@@ -443,7 +2763,7 @@
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How much does shipping cost?",
+                "heading": "Downsides of plastic utensils",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -452,7 +2772,163 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Shipping is calculated based on your location and the items in your order. You will always know the shipping price before you purchase.</p>",
+                    "text": "<p>Plastic spatulas have a very low melting temperature, releasing toxic chemicals each time they're used, causing serious health risks like gut, hormone disruption & cancer.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of silicone utensils",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>While high-end silicone spatulas are heat-resistant, most found online or in regular stores degrade over time and release toxic chemicals. Cheaper silicone spatulas often contain dangerous fillers like BPA and phthalates, becoming toxic when heated.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of wooden utensils",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Not hygienic. It lets bacteria grow in grooves and cracks, even if invisible, which can contaminate your food over time. They also absorb odors, stain easily.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of steel utensils",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Most are made from low-grade alloys that release heavy metals like chromium and nickel into your food when heated. They're also heavy, destroying your cookware’s surface.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of carbon steel utensils",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -481,7 +2957,11 @@
             }
           },
           "block_order": [
-            "row-1"
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5"
           ]
         },
         "titanium-utensils": {
@@ -497,7 +2977,7 @@
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Are any purchases final sale?",
+                "heading": "Why switch from wood, plastic, or silicone utensils?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -506,7 +2986,163 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We are unable to accept returns on certain items. These will be carefully marked before purchase.</p>",
+                    "text": "<p>Because they all come with hidden risks:Plastic & silicone: release microplastics and toxins under heat.Wood & bamboo: absorb moisture, harbor bacteria, and crack.Steel: scratches cookware and can leach heavy metals. Titanium avoids all of it. One set of Taima® utensils is safer, cleaner, and built for life.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Can I leave Taima utensils in the pan or pot while cooking?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Unlike silicone or plastic utensils that melt into your food, or wooden utensils that burn and crack, pure titanium withstands any cooking temperature. Taima® utensils don’t warp, release toxins, or absorb heat dangerously. Safe to leave in the pan as long as you need.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are Taima® utensils completely toxin-free?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>100%. Titanium is chemically stable and non-reactive, even at boiling or searing temperatures. That means no BPA, no PFAS, no microplastics, no nickel, no leaching - just pure, clean performance every time you cook.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How heavy are they compared to steel utensils?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>They’re extremely lightweight. Titanium has one of the best strength-to-weight ratios of any metal, so you get solid, indestructible utensils that feel comfortable in your hand without the clunky weight of stainless steel. Especially beneficial for elderly with arthritis.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are Taima® utensils dishwasher safe?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium doesn’t degrade in the dishwasher, unlike wood or plastic. You can throw them in without worry or just give them a quick rinse, since food slides right off.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -535,7 +3171,11 @@
             }
           },
           "block_order": [
-            "row-1"
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5"
           ]
         },
         "regular-drinkware": {
@@ -551,7 +3191,7 @@
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "When will I get my order?",
+                "heading": "Downsides of plastic water bottles",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -560,7 +3200,280 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "text": "<p>Worst type of water bottle. Even BPA-free plastic bottles leach hormone-disrupting chemicals, especially when exposed to heat. The moist environment around the mouthpiece quickly breeds bacteria and mold.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of steel water bottles",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Though durable, stainless steel isn’t antibacterial like titanium, allowing bacteria from your mouth to thrive inside. Frequent cleaning is essential, as studies show 87% of these bottles contain harmful bacteria like E. coli.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of aluminum water bottles",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Aluminum bottles are often lined with synthetic coatings to prevent the metal from reacting with liquids, but these coatings can break down and leach chemicals into your water. Like other bottles, bacteria and fungi easily grow in aluminum bottles, making them unsanitary.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of glass water bottles",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>While glass doesn’t leach chemicals, it offers no antibacterial protection. Bacteria from your mouth still multiply in the bottle. Additionally, glass is fragile, making it more prone to breakage and less practical for daily use.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of plastic ice cubes",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>The worst type of chilling cube there is. They are notorious for releasing harmful chemicals, even BPA-free options. These toxins leach into your water when exposed to acidic drinks, like alcohol or lemon, heat, disrupting hormones and causing long-term health issues like hormone imbalance and digestive problems.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of steel ice cubes",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Many steel cubes are made from mixed metals that can corrode, rust, or leave a harsh aftertaste in more delicate drinks like wine or cocktails. They’re also heavier and are not food-safe.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of regular ice cubes",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Regular ice cubes melt fast, diluting your drink and ruining the taste. Most are frozen in plastic trays that can leach BPA and other toxins directly into the ice.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-8": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides of stone & granite ice cubes",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Porous by nature, stone cubes trap smells and flavors from past use. That means your next gin & tonic might still carry a hint of last week’s whiskey. Worse - bacteria can linger inside the micro-cracks.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -589,7 +3502,14 @@
             }
           },
           "block_order": [
-            "row-1"
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5",
+            "row-6",
+            "row-7",
+            "row-8"
           ]
         },
         "titanium-drinkware": {
@@ -605,7 +3525,7 @@
             "row-1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?",
+                "heading": "Why is a titanium water bottle better than any other?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -614,7 +3534,280 @@
                 "text-1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                    "text": "<p>The Taima Titanium Water Bottle is crafted from pure titanium, which is naturally antibacterial, sterile, and completely non-toxic. Unlike plastic bottles that can leach harmful chemicals, or stainless steel bottles that can harbor bacteria, our titanium bottle ensures that your water remains pure and clean. It's lightweight, durable, and built to last, making it a superior choice for health-conscious individuals.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is it safe for both hot and cold drinks?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Absolutely. Titanium doesn’t react with heat, cold, or acids. You can pour in boiling tea, ice-cold water, lemon water, coffee, or even electrolyte drinks without worrying about leaching or metallic aftertaste.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How heavy is it compared to steel bottles?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>About 50% lighter. Titanium has one of the best strength-to-weight ratios in the world, so you get a bottle that’s stronger than steel but easier to carry everywhere.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is it really 100% toxin-free?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. There are no coatings, no BPA, no PFAS, no nickel, and no aluminum. Titanium is chemically stable. You’re drinking from the purest surface possible.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does the bottle retain heat or cold well?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>While the Taima Titanium Water Bottle does not have insulation like a double-walled thermos, it does retain the temperature of your beverages for a decent amount of time. For extended hot or cold retention, pairing it with an insulated sleeve or using it for shorter-term hydration needs is ideal.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What are Taima® Titanium Ice Cubes made of?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>The outer shell is crafted from 100% pure titanium, trusted for its non-toxic, antibacterial, and flavor-neutral properties. Inside is a safe glycerin-water cooling gel, the same non-toxic blend commonly used in medical-grade cold packs and premium wine chillers - allowing for maximum cold retention without dilution.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are titanium ice cubes corrosion-resistant?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Absolutely. Titanium is the most corrosion-resistant metal on Earth, outperforming stainless steel and other alloys - even when exposed to acidic drinks like lemon water or cocktails. That means no rust, no heavy metal leaching, and no risk of contamination, just clean, safe chilling you can trust for life.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text-1"
+              ]
+            },
+            "row-8": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How long do titanium ice cubes keep drinks cold?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text-1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Special cooling gel inside allows drinks to stay colder up to 2x longer compared to other types.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -643,7 +3836,14 @@
             }
           },
           "block_order": [
-            "row-1"
+            "row-1",
+            "row-2",
+            "row-3",
+            "row-4",
+            "row-5",
+            "row-6",
+            "row-7",
+            "row-8"
           ]
         }
       },

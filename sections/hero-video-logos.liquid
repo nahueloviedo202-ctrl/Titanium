@@ -120,7 +120,15 @@
       {%- endif -%}
 
       {%- if section.settings.heading != blank -%}
-        <h1 class="hero-video-logos__heading">{{ section.settings.heading }}</h1>
+        <h1
+          class="hero-video-logos__heading"
+          style="
+            {% if section.settings.heading_color != blank %}color: {{ section.settings.heading_color }};{% endif %}
+            {% if section.settings.highlighted_text_color != blank %}--hero-video-logos-heading-accent: {{ section.settings.highlighted_text_color }};{% endif %}
+          "
+        >
+          {{ section.settings.heading }}
+        </h1>
       {%- endif -%}
 
       {%- if section.settings.subheading != blank -%}
@@ -344,6 +352,15 @@
     text-transform: capitalize;
   }
 
+  .hero-video-logos__heading p {
+    margin: 0;
+  }
+
+  .hero-video-logos__heading strong {
+    color: var(--hero-video-logos-heading-accent, inherit);
+    font-weight: inherit;
+  }
+
   @media screen and (min-width: 750px) {
     .hero-video-logos__heading {
       letter-spacing: 0.02em;
@@ -557,10 +574,23 @@
       "default": "t:text_defaults.hero_video_logos_kicker"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "heading",
       "label": "t:settings.heading",
-      "default": "t:text_defaults.hero_video_logos_heading"
+      "default": "t:html_defaults.hero_video_logos_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "highlighted_text_color",
+      "label": "t:settings.highlighted_text_color",
+      "default": "#B57C46",
+      "info": "t:info.heritage_text_accent_color"
     },
     {
       "type": "richtext",
@@ -787,7 +817,7 @@
       "id": "overlay_color",
       "label": "t:settings.overlay_color",
       "alpha": true,
-      "default": "#0000004D",
+      "default": "#00000066",
       "visible_if": "{{ section.settings.toggle_overlay }}"
     },
     {

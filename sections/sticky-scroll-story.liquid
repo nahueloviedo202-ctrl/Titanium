@@ -2,7 +2,7 @@
 
 {% liquid
   if section.settings.background_color != blank
-    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
   endif
 
   assign show_video = false
@@ -65,14 +65,9 @@
   </div>
 
   {%- if section.blocks.size > 0 -%}
-    <script
-      src="{{ 'sticky-scroll-story.js' | asset_url }}"
-      type="module"
-      fetchpriority="low"
-    ></script>
-    <sticky-scroll-story-component class="sticky-scroll-story__content">
+    <div class="sticky-scroll-story__content">
       {% content_for 'blocks' %}
-    </sticky-scroll-story-component>
+    </div>
   {%- endif -%}
 </section>
 
@@ -90,7 +85,7 @@
 
   @media screen and (min-width: 750px) {
     .sticky-scroll-story {
-      grid-template-columns: minmax(0, 1fr) minmax(0, min(var(--sticky-scroll-story-media-width, 760px), 45%));
+      grid-template-columns: minmax(0, 1fr) minmax(0, min(var(--sticky-scroll-story-media-width, 760px), 50%));
       align-items: start;
       gap: 4rem;
       padding-block: var(--sticky-scroll-story-padding-block-start, 0) var(--sticky-scroll-story-padding-block-end, 0);
@@ -105,13 +100,12 @@
   .sticky-scroll-story__media {
     position: relative;
     overflow: hidden;
-    border-radius: 1rem;
   }
 
   @media screen and (min-width: 750px) {
     .sticky-scroll-story__media {
       position: sticky;
-      top: calc(var(--header-group-height, 0px) + 2rem);
+      top: calc(var(--header-group-height, 0px) + 50px);
       max-height: calc(100svh - var(--header-group-height, 0px) - 4rem);
     }
   }
@@ -126,13 +120,13 @@
   .sticky-scroll-story__content {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 8rem;
     padding-block: 2rem;
   }
 
   @media screen and (max-width: 749px) {
     .sticky-scroll-story__content {
-      gap: 3rem;
+      gap: 2rem;
       padding-block-top: 2rem;
     }
   }
@@ -183,7 +177,7 @@
       "id": "media_width",
       "label": "t:settings.media_width",
       "min": 400,
-      "max": 1000,
+      "max": 1200,
       "step": 20,
       "unit": "px",
       "default": 760

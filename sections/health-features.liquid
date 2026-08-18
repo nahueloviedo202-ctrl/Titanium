@@ -157,7 +157,7 @@
   }
 
   .health-features__grid {
-    --health-features-media-width: min(54%, calc(864px * var(--hf-scale, 1)));
+    --health-features-media-width: min(48%, calc(760px * var(--hf-scale, 1)));
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -169,7 +169,7 @@
     grid-template-columns: minmax(0, 1fr);
     gap: calc(var(--health-features-gap, 40px) * var(--hf-scale, 1));
     min-width: 0;
-    max-width: calc((100% - var(--health-features-media-width)) / 2 - (24px * var(--hf-scale, 1)));
+    max-width: calc((100% - var(--health-features-media-width)) / 2 - (14px * var(--hf-scale, 1)));
     list-style: none;
     margin: 0;
     padding: calc(73px * var(--hf-scale, 1)) 0;
@@ -197,6 +197,7 @@
     letter-spacing: 0.02em;
     text-transform: capitalize;
     font-size: calc(24px * var(--hf-scale, 1));
+    white-space: nowrap;
   }
 
   .health-features__item-icon {
@@ -382,7 +383,7 @@
     }
 
     .health-features__grid {
-      --health-features-media-width: min(46%, calc(700px * var(--hf-scale, 1)));
+      --health-features-media-width: min(40%, calc(620px * var(--hf-scale, 1)));
     }
   }
 

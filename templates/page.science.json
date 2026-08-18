@@ -25,7 +25,8 @@
           "type": "_sticky-scroll-line",
           "settings": {
             "heading": "Let's Break It Down.",
-            "heading_size": "small"
+            "heading_size": "small",
+            "heading_color": "#E7E7E7"
           }
         },
         "line_3": {
@@ -33,6 +34,7 @@
           "settings": {
             "heading": "What Is Titanium & Why Is It Important For Your Safety",
             "heading_size": "large",
+            "heading_color": "#BCA588",
             "body": "<p>Titanium is not just another metal. It's one of the strongest, most resilient, and most biocompatible materials known to man.</p><p>The name itself comes from the Titans of Greek mythology - ancient gods of immense power and endurance. And ever since, titanium has lived up to its name.</p>",
             "body_size": "medium"
           }
@@ -45,12 +47,13 @@
       ],
       "settings": {
         "media_position": "right",
-        "background_color": "#121212",
-        "content_max_width": 1600,
+        "background_color": "#000000",
+        "content_max_width": 2400,
+        "media_width": 893,
         "padding_block_start": 64,
         "padding_block_end": 64,
         "padding_inline_start": 120,
-        "padding_inline_end": 120,
+        "padding_inline_end": 80,
         "padding_block_start_mobile": 40,
         "padding_block_end_mobile": 40,
         "padding_inline_start_mobile": 16,

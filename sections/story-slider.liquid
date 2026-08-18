@@ -51,6 +51,30 @@
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             </span>
           </button>
+
+          <div
+            class="story-slider__progress"
+            style="
+              --story-slider-progress-fill: {{ section.settings.progress_fill_color }};
+              --story-slider-progress-track: {{ section.settings.progress_track_color }};
+            "
+          >
+            <ol class="story-slider__track" role="presentation" aria-hidden="true">
+              {%- for block in section.blocks -%}
+                <li
+                  class="story-slider__dot"
+                  ref="dots[]"
+                  {% if forloop.first %}
+                    aria-selected="true"
+                  {% endif %}
+                ></li>
+                {%- unless forloop.last -%}
+                  <li class="story-slider__segment"></li>
+                {%- endunless -%}
+              {%- endfor -%}
+            </ol>
+          </div>
+
           <button
             class="story-slider__nav-btn story-slider__nav-btn--next"
             aria-label="{{ 'accessibility.slideshow_next' | t }}"
@@ -104,9 +128,47 @@
 
   .story-slider__nav {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 1.25rem;
     margin-top: 2rem;
+  }
+
+  .story-slider__progress {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 36rem;
+  }
+
+  .story-slider__track {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .story-slider__dot {
+    width: 0.85rem;
+    height: 0.85rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--story-slider-progress-fill, #a3835f);
+    transition: background-color 0.25s ease;
+  }
+
+  .story-slider__segment {
+    flex: 1 1 auto;
+    height: 0.25rem;
+    margin-inline: -0.05rem;
+    border-radius: 999px;
+    background: var(--story-slider-progress-fill, #a3835f);
+    transition: background-color 0.25s ease;
+  }
+
+  .story-slider__dot[aria-selected='true'] ~ li {
+    background: var(--story-slider-progress-track, #252525);
   }
 
   .story-slider__nav-btn {
@@ -335,6 +397,18 @@
       "id": "arrow_icon_color",
       "label": "t:settings.arrow_icon_color",
       "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "progress_fill_color",
+      "label": "t:settings.accent_color",
+      "default": "#A3835F"
+    },
+    {
+      "type": "color",
+      "id": "progress_track_color",
+      "label": "t:settings.divider_color",
+      "default": "#252525"
     },
     {
       "type": "header",

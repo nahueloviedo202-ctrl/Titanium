@@ -1,7 +1,6 @@
 
 
 <div
-  ref="lines[]"
   class="sticky-scroll-story__line sticky-scroll-story__line--heading-{{ block.settings.heading_size }} sticky-scroll-story__line--body-{{ block.settings.body_size }}"
   {%- if block.settings.heading_color != blank -%}
     style="--sticky-scroll-story-line-heading-color: {{ block.settings.heading_color }};"
@@ -22,14 +21,6 @@
 {% stylesheet %}
   .sticky-scroll-story__line {
     max-width: 42rem;
-    opacity: 0.35;
-    transition:
-      opacity 0.4s ease,
-      transform 0.4s ease;
-  }
-
-  .sticky-scroll-story__line--focused {
-    opacity: 1;
   }
 
   .sticky-scroll-story__line-kicker {
@@ -68,6 +59,11 @@
     margin-bottom: 0;
   }
 
+  .sticky-scroll-story__line-body strong {
+    color: var(--sticky-scroll-story-line-heading-color, var(--color-foreground));
+    font-weight: 500;
+  }
+
   .sticky-scroll-story__line--heading-xl .sticky-scroll-story__line-heading {
     font-size: 2.4rem;
   }
@@ -81,9 +77,8 @@
   }
 
   .sticky-scroll-story__line--heading-small .sticky-scroll-story__line-heading {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    font-size: 1.25rem;
+    font-weight: 500;
   }
 
   .sticky-scroll-story__line--body-large .sticky-scroll-story__line-body {
@@ -114,7 +109,6 @@
 
   @media screen and (max-width: 749px) {
     .sticky-scroll-story__line {
-      opacity: 1;
       max-width: none;
     }
   }
