@@ -1527,8 +1527,8 @@
             "button": {
               "type": "button",
               "settings": {
-                "label": "Conocé La Ciencia",
-                "link": "",
+                "label": "See Science Behind Titanium",
+                "link": "shopify://pages/science",
                 "open_in_new_tab": false,
                 "style_class": "button-custom",
                 "custom_button_background": "rgba(0,0,0,0)",
@@ -1589,8 +1589,8 @@
             "button": {
               "type": "button",
               "settings": {
-                "label": "Preguntas Frecuentes",
-                "link": "",
+                "label": "Read FAQ’s",
+                "link": "shopify://pages/faq",
                 "open_in_new_tab": false,
                 "style_class": "button-custom",
                 "custom_button_background": "rgba(0,0,0,0)",
