@@ -12,13 +12,14 @@
     "hero": {
       "type": "hero-video-logos",
       "settings": {
-        "media_type_desktop": "image",
+        "media_type_desktop": "video",
+        "video_desktop": "shopify://files/videos/1babc7fb06554e9d8da1129320300533.SD-480p-1.5Mbps-64973793.mp4",
         "custom_mobile_media": false,
         "media_type_mobile": "video",
         "kicker": "",
         "heading": "Cocina Segura, Sin Compromisos",
         "subheading": "",
-        "text_color": "",
+        "text_color": "{{ settings.color_palette.background }}",
         "button_label": "",
         "button_link": "shopify://collections/all",
         "open_in_new_tab": false,
