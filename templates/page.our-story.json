@@ -844,7 +844,7 @@
         "heading": {
           "type": "text",
           "settings": {
-            "text": "<h2>Nuestro Compromiso: Personas Y Planeta Más Sanos</h2>",
+            "text": "<p>Our Responsibility: Healthier People, Healthier Planet.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
