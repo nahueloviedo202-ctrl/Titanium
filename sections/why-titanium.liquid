@@ -1,0 +1,559 @@
+
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+
+  assign image = section.settings.image
+  assign image_width_wide = section.settings.image_width | times: 1.3 | round
+  assign image_width_desktop = section.settings.image_width | times: 0.9 | round
+  assign sizes_attribute = '(min-width: 2200px) [wide]px, (min-width: 750px) [desktop]px, [mobile]px'
+  assign sizes_attribute = sizes_attribute | replace: '[wide]', image_width_wide
+  assign sizes_attribute = sizes_attribute | replace: '[desktop]', image_width_desktop
+  assign sizes_attribute = sizes_attribute | replace: '[mobile]', section.settings.image_width_mobile
+%}
+
+<section
+  id="WhyTitanium-{{ section.id }}"
+  class="
+    why-titanium
+    {% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}
+    {% if section.settings.media_position == 'right' %} why-titanium--media-right{% endif %}
+  "
+  role="region"
+  aria-label="{% if section.settings.heading != blank %}{{ section.settings.heading | strip_html }}{% else %}{{ 'accessibility.why_titanium_region' | t }}{% endif %}"
+>
+  <div
+    class="why-titanium__wrap"
+    style="
+      --why-titanium-img-w: {{ section.settings.image_width }}px;
+      --why-titanium-img-h: {{ section.settings.image_height }}px;
+      --why-titanium-img-w-mobile: {{ section.settings.image_width_mobile }}px;
+      --why-titanium-img-h-mobile: {{ section.settings.image_height_mobile }}px;
+      --why-titanium-gap: {{ section.settings.gap }}px;
+      --why-titanium-gap-mobile: {{ section.settings.gap_mobile }}px;
+      --why-titanium-copy-max-width: {{ section.settings.content_max_width }}px;
+      --why-titanium-heading-color: {{ section.settings.heading_color }};
+      --why-titanium-heading-size: {{ section.settings.heading_font_size }}px;
+      --why-titanium-heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+      --why-titanium-kicker-color: {{ section.settings.kicker_color }};
+      --why-titanium-kicker-size: {{ section.settings.kicker_font_size }}px;
+      --why-titanium-kicker-size-mobile: {{ section.settings.kicker_font_size_mobile }}px;
+      --why-titanium-body-color: {{ section.settings.body_color }};
+      --why-titanium-body-size: {{ section.settings.body_font_size }}px;
+      --why-titanium-body-size-mobile: {{ section.settings.body_font_size_mobile }}px;
+      --why-titanium-padding-block-start: {{ section.settings.padding_block_start }}px;
+      --why-titanium-padding-block-end: {{ section.settings.padding_block_end }}px;
+      --why-titanium-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+      --why-titanium-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+      --why-titanium-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+      --why-titanium-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+      --why-titanium-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+      --why-titanium-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+    "
+  >
+    <div class="why-titanium__inner">
+      <div class="why-titanium__media">
+        {%- if image != blank -%}
+          {{
+            image
+            | image_url: width: 1600
+            | image_tag:
+              widths: '400, 600, 800, 1200, 1600',
+              sizes: sizes_attribute,
+              loading: 'lazy',
+              class: 'why-titanium__image',
+              alt: image.alt | default: section.settings.heading | escape
+          }}
+        {%- else -%}
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'why-titanium__image placeholder-svg' }}
+        {%- endif -%}
+      </div>
+
+      <div class="why-titanium__copy">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="why-titanium__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.kicker != blank -%}
+          <p class="why-titanium__kicker">{{ section.settings.kicker }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.body_text != blank -%}
+          <div class="why-titanium__body rte">{{ section.settings.body_text }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .why-titanium {
+    --why-titanium-scale: 1;
+    position: relative;
+    background-color: var(--color-background, #0e2e24);
+    color: var(--why-titanium-body-color, #b0b0b0);
+  }
+
+  .why-titanium__wrap {
+    padding-block: calc(var(--why-titanium-padding-block-start, 0px) * var(--why-titanium-scale)) calc(var(--why-titanium-padding-block-end, 0px) * var(--why-titanium-scale));
+    padding-inline: calc(var(--why-titanium-padding-inline-start, 120px) * var(--why-titanium-scale)) calc(var(--why-titanium-padding-inline-end, 120px) * var(--why-titanium-scale));
+  }
+
+  .why-titanium__inner {
+    display: grid;
+    grid-template-columns: calc((var(--why-titanium-img-w, 593px) + 106px) * var(--why-titanium-scale)) 1fr;
+    grid-template-areas: 'media copy';
+    align-items: stretch;
+    gap: calc(var(--why-titanium-gap, 200px) * var(--why-titanium-scale));
+  }
+
+  .why-titanium--media-right .why-titanium__inner {
+    grid-template-columns: 1fr calc((var(--why-titanium-img-w, 593px) + 106px) * var(--why-titanium-scale));
+    grid-template-areas: 'copy media';
+  }
+
+  .why-titanium__media {
+    grid-area: media;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: calc(80px * var(--why-titanium-scale)) calc(53px * var(--why-titanium-scale)) 0;
+    box-sizing: border-box;
+  }
+
+  .why-titanium__media img,
+  .why-titanium__media svg {
+    display: block;
+    width: calc(var(--why-titanium-img-w, 593px) * var(--why-titanium-scale));
+    height: calc(var(--why-titanium-img-h, 693px) * var(--why-titanium-scale));
+    object-fit: cover;
+  }
+
+  .why-titanium__copy {
+    grid-area: copy;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: calc(var(--why-titanium-copy-max-width, 700px) * var(--why-titanium-scale));
+  }
+
+  .why-titanium__heading {
+    margin: 0 0 calc(16px * var(--why-titanium-scale));
+    color: var(--why-titanium-heading-color, #bca588);
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-size: calc(var(--why-titanium-heading-size, 48px) * var(--why-titanium-scale));
+  }
+
+  .why-titanium__kicker {
+    margin: 0 0 calc(32px * var(--why-titanium-scale));
+    color: var(--why-titanium-kicker-color, #e7e7e7);
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    font-size: calc(var(--why-titanium-kicker-size, 20px) * var(--why-titanium-scale));
+  }
+
+  .why-titanium__body {
+    color: var(--why-titanium-body-color, #b0b0b0);
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-size: calc(var(--why-titanium-body-size, 16px) * var(--why-titanium-scale));
+  }
+
+  .why-titanium__body p {
+    margin: 0 0 0.75em;
+  }
+
+  .why-titanium__body p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1799px) {
+    .why-titanium {
+      --why-titanium-scale: 0.9;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .why-titanium {
+      --why-titanium-scale: 1.3;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .why-titanium__wrap {
+      padding-block: var(--why-titanium-padding-block-start-mobile, 64px) var(--why-titanium-padding-block-end-mobile, 0px);
+      padding-inline: var(--why-titanium-padding-inline-start-mobile, 16px) var(--why-titanium-padding-inline-end-mobile, 16px);
+    }
+
+    .why-titanium__inner,
+    .why-titanium--media-right .why-titanium__inner {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'copy' 'media';
+      gap: var(--why-titanium-gap-mobile, 45px);
+    }
+
+    .why-titanium__media {
+      justify-content: center;
+      padding: 0;
+    }
+
+    .why-titanium__media img,
+    .why-titanium__media svg {
+      width: var(--why-titanium-img-w-mobile, 330px);
+      height: var(--why-titanium-img-h-mobile, 386px);
+    }
+
+    .why-titanium__copy {
+      max-width: none;
+    }
+
+    .why-titanium__heading {
+      margin-bottom: 12px;
+      font-size: var(--why-titanium-heading-size-mobile, 24px);
+    }
+
+    .why-titanium__kicker {
+      margin-bottom: 24px;
+      font-size: var(--why-titanium-kicker-size-mobile, 16px);
+    }
+
+    .why-titanium__body {
+      font-size: var(--why-titanium-body-size-mobile, 14px);
+    }
+
+    .why-titanium__body p {
+      margin-bottom: 8px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.why_titanium",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.why_titanium_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:content.paragraph"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "t:settings.kicker",
+      "default": "t:text_defaults.why_titanium_kicker"
+    },
+    {
+      "type": "color",
+      "id": "kicker_color",
+      "label": "t:settings.color",
+      "default": "#E7E7E7"
+    },
+    {
+      "type": "range",
+      "id": "kicker_font_size",
+      "label": "t:settings.size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "kicker_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "t:settings.text",
+      "default": "t:html_defaults.why_titanium_body"
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "t:settings.size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "body_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "t:content.media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "t:settings.image_width",
+      "min": 300,
+      "max": 800,
+      "step": 10,
+      "unit": "px",
+      "default": 590
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "t:settings.image_height",
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "default": 690
+    },
+    {
+      "type": "range",
+      "id": "image_width_mobile",
+      "label": "t:settings.image_width_mobile",
+      "min": 200,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "default": 330
+    },
+    {
+      "type": "range",
+      "id": "image_height_mobile",
+      "label": "t:settings.image_height_mobile",
+      "min": 200,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "default": 390
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "t:settings.media_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "t:settings.width",
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "unit": "px",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 40,
+      "max": 320,
+      "step": 4,
+      "unit": "px",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "label": "t:settings.gap",
+      "min": 16,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 45
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#0E2E24"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 240,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 240,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.why_titanium",
+      "category": "t:categories.storytelling"
+    }
+  ]
+}
+{% endschema %}
