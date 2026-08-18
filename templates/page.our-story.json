@@ -1,9 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "hero-video-logos",
-      "blocks": {},
-      "block_order": [],
       "settings": {
         "media_type_desktop": "image",
         "kicker": "Nuestra Historia",
@@ -39,7 +46,9 @@
           }
         }
       },
-      "block_order": ["text"],
+      "block_order": [
+        "text"
+      ],
       "settings": {
         "content_direction": "column",
         "horizontal_alignment": "center",
@@ -47,9 +56,7 @@
         "section_width": "page-width",
         "background_color": "#03231A",
         "padding-block-start": 64,
-        "padding-block-end": 64,
-        "padding-inline-start": 24,
-        "padding-inline-end": 24
+        "padding-block-end": 64
       }
     },
     "story_slider": {
@@ -96,9 +103,24 @@
             "heading": "Nuestro Compromiso",
             "body": "<p>Seguimos trabajando cada día para ofrecer productos honestos, seguros y hechos para durar.</p>"
           }
+        },
+        "slide_7": {
+          "type": "_story-slide",
+          "settings": {
+            "heading": "Beware of Copycats",
+            "body": "<p>Today, plenty of companies are trying to copy what we do. The problem? They’re fake.</p><p>Some sell steel and call it “titanium”. Others sell cheap steel-titanium alloys and call them “pure.” None of them deliver the safety, durability, or health benefits that only real titanium provides.</p><p><strong>At Taima®, every product is independently lab-certified for purity.</strong> Backed by lifetime durability, full transparency, and the guarantee that what touches your food is 100% toxin-free.</p><p>So if you want the real thing, the original - make sure it says <strong>Taima®.</strong></p>"
+          }
         }
       },
-      "block_order": ["slide_1", "slide_2", "slide_3", "slide_4", "slide_5", "slide_6"],
+      "block_order": [
+        "slide_1",
+        "slide_2",
+        "slide_3",
+        "slide_4",
+        "slide_5",
+        "slide_6",
+        "slide_7"
+      ],
       "settings": {}
     },
     "behind_the_scenes": {
@@ -112,7 +134,9 @@
           }
         }
       },
-      "block_order": ["quote"],
+      "block_order": [
+        "quote"
+      ],
       "settings": {
         "heading": "Calidad Que Se Nota En Cada Detalle",
         "body_text": "<p>Elegimos materiales de calidad médica y procesos de fabricación exigentes para asegurarnos de que cada producto cumpla con los más altos estándares de seguridad y desempeño.</p>",
@@ -161,7 +185,10 @@
               "blocks": {
                 "image": {
                   "type": "image",
-                  "settings": { "image_ratio": "square", "width": "fill" }
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill"
+                  }
                 },
                 "title": {
                   "type": "text",
@@ -183,7 +210,11 @@
                   }
                 }
               },
-              "block_order": ["image", "title", "desc"]
+              "block_order": [
+                "image",
+                "title",
+                "desc"
+              ]
             },
             "card_2": {
               "type": "group",
@@ -199,7 +230,10 @@
               "blocks": {
                 "image": {
                   "type": "image",
-                  "settings": { "image_ratio": "square", "width": "fill" }
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill"
+                  }
                 },
                 "title": {
                   "type": "text",
@@ -221,7 +255,11 @@
                   }
                 }
               },
-              "block_order": ["image", "title", "desc"]
+              "block_order": [
+                "image",
+                "title",
+                "desc"
+              ]
             },
             "card_3": {
               "type": "group",
@@ -237,7 +275,10 @@
               "blocks": {
                 "image": {
                   "type": "image",
-                  "settings": { "image_ratio": "square", "width": "fill" }
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill"
+                  }
                 },
                 "title": {
                   "type": "text",
@@ -259,7 +300,11 @@
                   }
                 }
               },
-              "block_order": ["image", "title", "desc"]
+              "block_order": [
+                "image",
+                "title",
+                "desc"
+              ]
             },
             "card_4": {
               "type": "group",
@@ -275,7 +320,10 @@
               "blocks": {
                 "image": {
                   "type": "image",
-                  "settings": { "image_ratio": "square", "width": "fill" }
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill"
+                  }
                 },
                 "title": {
                   "type": "text",
@@ -297,13 +345,25 @@
                   }
                 }
               },
-              "block_order": ["image", "title", "desc"]
+              "block_order": [
+                "image",
+                "title",
+                "desc"
+              ]
             }
           },
-          "block_order": ["card_1", "card_2", "card_3", "card_4"]
+          "block_order": [
+            "card_1",
+            "card_2",
+            "card_3",
+            "card_4"
+          ]
         }
       },
-      "block_order": ["heading", "row"],
+      "block_order": [
+        "heading",
+        "row"
+      ],
       "settings": {
         "content_direction": "column",
         "horizontal_alignment_flex_direction_column": "center",
@@ -311,9 +371,7 @@
         "section_width": "page-width",
         "background_color": "#121212",
         "padding-block-start": 96,
-        "padding-block-end": 96,
-        "padding-inline-start": 24,
-        "padding-inline-end": 24
+        "padding-block-end": 96
       }
     },
     "responsibility": {
@@ -355,7 +413,14 @@
                 "height": "fit"
               },
               "blocks": {
-                "icon": { "type": "icon", "settings": { "icon": "leaf", "width": 56, "icon_color": "#BCA588" } },
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "leaf",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
                 "text": {
                   "type": "text",
                   "settings": {
@@ -368,7 +433,10 @@
                   }
                 }
               },
-              "block_order": ["icon", "text"]
+              "block_order": [
+                "icon",
+                "text"
+              ]
             },
             "item_2": {
               "type": "group",
@@ -381,7 +449,14 @@
                 "height": "fit"
               },
               "blocks": {
-                "icon": { "type": "icon", "settings": { "icon": "heart", "width": 56, "icon_color": "#BCA588" } },
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "heart",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
                 "text": {
                   "type": "text",
                   "settings": {
@@ -394,7 +469,10 @@
                   }
                 }
               },
-              "block_order": ["icon", "text"]
+              "block_order": [
+                "icon",
+                "text"
+              ]
             },
             "item_3": {
               "type": "group",
@@ -407,7 +485,14 @@
                 "height": "fit"
               },
               "blocks": {
-                "icon": { "type": "icon", "settings": { "icon": "plant", "width": 56, "icon_color": "#BCA588" } },
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "plant",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
                 "text": {
                   "type": "text",
                   "settings": {
@@ -420,7 +505,10 @@
                   }
                 }
               },
-              "block_order": ["icon", "text"]
+              "block_order": [
+                "icon",
+                "text"
+              ]
             },
             "item_4": {
               "type": "group",
@@ -433,7 +521,14 @@
                 "height": "fit"
               },
               "blocks": {
-                "icon": { "type": "icon", "settings": { "icon": "box", "width": 56, "icon_color": "#BCA588" } },
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "box",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
                 "text": {
                   "type": "text",
                   "settings": {
@@ -446,7 +541,10 @@
                   }
                 }
               },
-              "block_order": ["icon", "text"]
+              "block_order": [
+                "icon",
+                "text"
+              ]
             },
             "item_5": {
               "type": "group",
@@ -459,7 +557,14 @@
                 "height": "fit"
               },
               "blocks": {
-                "icon": { "type": "icon", "settings": { "icon": "recycle", "width": 56, "icon_color": "#BCA588" } },
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "recycle",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
                 "text": {
                   "type": "text",
                   "settings": {
@@ -472,7 +577,10 @@
                   }
                 }
               },
-              "block_order": ["icon", "text"]
+              "block_order": [
+                "icon",
+                "text"
+              ]
             },
             "item_6": {
               "type": "group",
@@ -485,7 +593,14 @@
                 "height": "fit"
               },
               "blocks": {
-                "icon": { "type": "icon", "settings": { "icon": "check_box", "width": 56, "icon_color": "#BCA588" } },
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "check_box",
+                    "width": 56,
+                    "icon_color": "#BCA588"
+                  }
+                },
                 "text": {
                   "type": "text",
                   "settings": {
@@ -498,13 +613,26 @@
                   }
                 }
               },
-              "block_order": ["icon", "text"]
+              "block_order": [
+                "icon",
+                "text"
+              ]
             }
           },
-          "block_order": ["item_1", "item_2", "item_3", "item_4", "item_5", "item_6"]
+          "block_order": [
+            "item_1",
+            "item_2",
+            "item_3",
+            "item_4",
+            "item_5",
+            "item_6"
+          ]
         }
       },
-      "block_order": ["heading", "row"],
+      "block_order": [
+        "heading",
+        "row"
+      ],
       "settings": {
         "content_direction": "column",
         "horizontal_alignment_flex_direction_column": "center",
@@ -512,15 +640,11 @@
         "section_width": "page-width",
         "background_color": "#03231A",
         "padding-block-start": 96,
-        "padding-block-end": 96,
-        "padding-inline-start": 24,
-        "padding-inline-end": 24
+        "padding-block-end": 96
       }
     },
     "cta_banner": {
       "type": "hero-video-logos",
-      "blocks": {},
-      "block_order": [],
       "settings": {
         "media_type_desktop": "image",
         "heading": "Vive La Diferencia Hoy",
@@ -542,7 +666,11 @@
       "blocks": {
         "btn_1": {
           "type": "group",
-          "settings": { "content_direction": "column", "width": "fill", "height": "fit" },
+          "settings": {
+            "content_direction": "column",
+            "width": "fill",
+            "height": "fit"
+          },
           "blocks": {
             "button": {
               "type": "button",
@@ -557,11 +685,17 @@
               }
             }
           },
-          "block_order": ["button"]
+          "block_order": [
+            "button"
+          ]
         },
         "btn_2": {
           "type": "group",
-          "settings": { "content_direction": "column", "width": "fill", "height": "fit" },
+          "settings": {
+            "content_direction": "column",
+            "width": "fill",
+            "height": "fit"
+          },
           "blocks": {
             "button": {
               "type": "button",
@@ -576,11 +710,17 @@
               }
             }
           },
-          "block_order": ["button"]
+          "block_order": [
+            "button"
+          ]
         },
         "btn_3": {
           "type": "group",
-          "settings": { "content_direction": "column", "width": "fill", "height": "fit" },
+          "settings": {
+            "content_direction": "column",
+            "width": "fill",
+            "height": "fit"
+          },
           "blocks": {
             "button": {
               "type": "button",
@@ -596,11 +736,17 @@
               }
             }
           },
-          "block_order": ["button"]
+          "block_order": [
+            "button"
+          ]
         },
         "btn_4": {
           "type": "group",
-          "settings": { "content_direction": "column", "width": "fill", "height": "fit" },
+          "settings": {
+            "content_direction": "column",
+            "width": "fill",
+            "height": "fit"
+          },
           "blocks": {
             "button": {
               "type": "button",
@@ -616,10 +762,17 @@
               }
             }
           },
-          "block_order": ["button"]
+          "block_order": [
+            "button"
+          ]
         }
       },
-      "block_order": ["btn_1", "btn_2", "btn_3", "btn_4"],
+      "block_order": [
+        "btn_1",
+        "btn_2",
+        "btn_3",
+        "btn_4"
+      ],
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
@@ -629,9 +782,7 @@
         "section_width": "page-width",
         "background_color": "#121212",
         "padding-block-start": 48,
-        "padding-block-end": 48,
-        "padding-inline-start": 24,
-        "padding-inline-end": 24
+        "padding-block-end": 48
       }
     }
   },

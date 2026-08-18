@@ -1,0 +1,467 @@
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+%}
+
+<section
+  id="Responsibility-{{ section.id }}"
+  class="responsibility{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="region"
+  aria-label="{% if section.settings.heading != blank %}{{ section.settings.heading | strip_html }}{% else %}{{ 'accessibility.responsibility_region' | t }}{% endif %}"
+>
+  <div
+    class="responsibility__wrap"
+    style="
+      --responsibility-padding-block-start: {{ section.settings.padding_block_start }}px;
+      --responsibility-padding-block-end: {{ section.settings.padding_block_end }}px;
+      --responsibility-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+      --responsibility-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+      --responsibility-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+      --responsibility-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+      --responsibility-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+      --responsibility-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+      --responsibility-heading-color: {{ section.settings.heading_color }};
+      --responsibility-heading-size: {{ section.settings.heading_font_size }}px;
+      --responsibility-heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+      --responsibility-icon-color: {{ section.settings.icon_color }};
+      --responsibility-title-color: {{ section.settings.title_color }};
+      --responsibility-text-color: {{ section.settings.text_color }};
+      --responsibility-text-size-mobile: {{ section.settings.text_font_size_mobile }}px;
+      --responsibility-icon-size: {{ section.settings.icon_size }}px;
+      --responsibility-icon-size-mobile: {{ section.settings.icon_size_mobile }}px;
+      --responsibility-gap: {{ section.settings.items_gap }}px;
+      --responsibility-gap-mobile: {{ section.settings.items_gap_mobile }}px;
+    "
+  >
+    {%- if section.settings.heading != blank -%}
+      <h2 class="responsibility__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="responsibility__grid">
+        {% content_for 'blocks' %}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .responsibility {
+    --responsibility-scale: 1;
+    position: relative;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .responsibility__wrap {
+    padding-block: calc(var(--responsibility-padding-block-start, 80px) * var(--responsibility-scale, 1)) calc(var(--responsibility-padding-block-end, 80px) * var(--responsibility-scale, 1));
+    padding-inline: var(--responsibility-padding-inline-start, 120px) var(--responsibility-padding-inline-end, 120px);
+  }
+
+  .responsibility__heading {
+    margin: 0 0 calc(64px * var(--responsibility-scale, 1));
+    color: var(--responsibility-heading-color, #BCA588);
+    text-align: center;
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: calc(0.04em * var(--responsibility-scale, 1));
+    text-transform: capitalize;
+    font-size: calc(var(--responsibility-heading-size, 48px) * var(--responsibility-scale, 1));
+  }
+
+  .responsibility__grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: start;
+    gap: calc(var(--responsibility-gap, 64px) * var(--responsibility-scale, 1));
+    text-align: center;
+  }
+
+  .responsibility-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .responsibility-item__icon {
+    display: block;
+    width: calc(var(--responsibility-icon-size, 100px) * var(--responsibility-scale, 1));
+    height: calc(var(--responsibility-icon-size, 100px) * var(--responsibility-scale, 1));
+    margin: 0 auto;
+    color: var(--responsibility-icon-color, #BCA588);
+  }
+
+  .responsibility-item__icon-media {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .responsibility-item__title {
+    margin: calc(32px * var(--responsibility-scale, 1)) 0 calc(12px * var(--responsibility-scale, 1));
+    color: var(--responsibility-title-color, #FFFFFF);
+    text-align: center;
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: calc(0.02em * var(--responsibility-scale, 1));
+    text-transform: capitalize;
+    font-size: calc(20px * var(--responsibility-scale, 1));
+  }
+
+  .responsibility-item__text {
+    color: var(--responsibility-text-color, #B0B0B0);
+    text-align: center;
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: calc(0.04em * var(--responsibility-scale, 1));
+    font-size: calc(16px * var(--responsibility-scale, 1));
+  }
+
+  .responsibility-item__text p {
+    margin: 0 0 1em;
+  }
+
+  .responsibility-item__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1799px) {
+    .responsibility {
+      --responsibility-scale: 0.9;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .responsibility {
+      --responsibility-scale: 1.3;
+    }
+
+    .responsibility__wrap {
+      padding-block: calc(var(--responsibility-padding-block-start, 80px) * 1.3) calc(var(--responsibility-padding-block-end, 80px) * 1.3);
+      padding-inline: calc(var(--responsibility-padding-inline-start, 120px) * 1.3) calc(var(--responsibility-padding-inline-end, 120px) * 1.3);
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .responsibility__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .responsibility__wrap {
+      padding-block: var(--responsibility-padding-block-start-mobile, 80px) var(--responsibility-padding-block-end-mobile, 80px);
+      padding-inline: var(--responsibility-padding-inline-start-mobile, 16px) var(--responsibility-padding-inline-end-mobile, 16px);
+    }
+
+    .responsibility__heading {
+      font-size: var(--responsibility-heading-size-mobile, 24px);
+      letter-spacing: 0.04em;
+    }
+
+    .responsibility__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--responsibility-gap-mobile, 24px);
+    }
+
+    .responsibility-item__icon {
+      width: var(--responsibility-icon-size-mobile, 56px);
+      height: var(--responsibility-icon-size-mobile, 56px);
+    }
+
+    .responsibility-item__title {
+      margin-top: 12px;
+      font-size: 20px;
+    }
+
+    .responsibility-item__text {
+      font-size: var(--responsibility-text-size-mobile, 14px);
+      letter-spacing: 0.04em;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.responsibility",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_responsibility-item"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.responsibility_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#03231A"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "t:settings.color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "t:settings.highlighted_text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "t:settings.width",
+      "min": 40,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "label": "t:settings.width_mobile",
+      "min": 24,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "items_gap",
+      "label": "t:settings.gap",
+      "min": 8,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "items_gap_mobile",
+      "label": "t:settings.gap",
+      "min": 4,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 240,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 240,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.responsibility",
+      "category": "t:categories.storytelling",
+      "blocks": {
+        "item_1": {
+          "type": "_responsibility-item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Eco-Friendly Manufacturing",
+            "text": "<p>Titanium production avoids the toxic chemical emissions of non-stick coatings that poison the planet.</p>"
+          }
+        },
+        "item_2": {
+          "type": "_responsibility-item",
+          "settings": {
+            "icon": "heart",
+            "title": "Ethically Made",
+            "text": "<p>Our partners follow strict standards for fair wages, safe conditions, and responsible practices.</p>"
+          }
+        },
+        "item_3": {
+          "type": "_responsibility-item",
+          "settings": {
+            "icon": "box",
+            "title": "Sustainable Packaging",
+            "text": "<p>100% recycled, plastic-free packaging.</p>"
+          }
+        },
+        "item_4": {
+          "type": "_responsibility-item",
+          "settings": {
+            "icon": "lightning_bolt",
+            "title": "Energy Efficiency",
+            "text": "<p>Our titanium processing requires more expertise, but we've invested in cleaner, more efficient methods that minimize CO₂ compared to mass-market cookware factories.</p>"
+          }
+        },
+        "item_5": {
+          "type": "_responsibility-item",
+          "settings": {
+            "icon": "recycle",
+            "title": "100% Recyclable",
+            "text": "<p>Titanium is infinitely recyclable without losing quality. Every piece of cookware can be repurposed into something new - unlike other cookware and alloys that end up as toxic waste.</p>"
+          }
+        },
+        "item_6": {
+          "type": "_responsibility-item",
+          "settings": {
+            "icon": "star",
+            "title": "Lifetime Sustainability",
+            "text": "<p>Most cookware today is designed to be replaced every few years. That waste piles up in landfills and pollutes the planet. Ours is designed to last a lifetime - one purchase, for life.</p>"
+          }
+        }
+      },
+      "block_order": ["item_1", "item_2", "item_3", "item_4", "item_5", "item_6"]
+    }
+  ]
+}
+{% endschema %}

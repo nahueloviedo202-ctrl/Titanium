@@ -38,15 +38,24 @@
 {% stylesheet %}
   .faq-category {
     scroll-margin-top: max(16px, calc(var(--spacing-scale) * 32px));
+    padding-block-end: max(24px, calc(var(--spacing-scale) * 48px));
+    border-block-end: 1px solid var(--color-border);
+  }
+
+  .faq-category:last-child {
+    border-block-end: none;
   }
 
   .faq-category + .faq-category {
-    margin-top: max(32px, calc(var(--spacing-scale) * 64px));
+    margin-top: max(32px, calc(var(--spacing-scale) * 48px));
   }
 
   .faq-category__heading {
-    margin: 0 0 max(20px, calc(var(--spacing-scale) * 32px));
-    letter-spacing: 0.04em;
+    margin: 0 0 max(24px, calc(var(--spacing-scale) * 48px));
+    font-size: max(28px, calc(var(--spacing-scale) * 48px));
+    font-weight: 400;
+    letter-spacing: 0.027em;
+    text-align: center;
     text-transform: capitalize;
   }
 {% endstylesheet %}
@@ -91,7 +100,7 @@
           "label": "t:options.plus"
         }
       ],
-      "default": "caret"
+      "default": "plus"
     },
     {
       "type": "checkbox",

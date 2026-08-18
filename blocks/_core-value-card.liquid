@@ -1,0 +1,139 @@
+
+
+{% liquid
+  assign viewport_width = 100.0 | divided_by: section.settings.columns_desktop
+  assign sizes_attribute = '(min-width: 750px) [viewport_width]vw, 100vw' | replace: '[viewport_width]', viewport_width
+%}
+
+<article
+  class="core-values__card"
+  {{ block.shopify_attributes }}
+>
+  <div class="core-values__card-media">
+    {%- if block.settings.image != blank -%}
+      {{
+        block.settings.image
+        | image_url: width: 1000
+        | image_tag:
+          widths: '500, 750, 1000',
+          sizes: sizes_attribute,
+          loading: 'lazy',
+          alt: block.settings.image.alt | default: block.settings.title | escape
+      }}
+    {%- else -%}
+      {{ 'product-apparel-1' | placeholder_svg_tag: 'core-values__card-image' }}
+    {%- endif -%}
+  </div>
+  {%- if block.settings.title != blank or block.settings.text != blank -%}
+    <div class="core-values__card-body">
+      {%- if block.settings.title != blank -%}
+        <h3 class="core-values__card-title">{{ block.settings.title }}</h3>
+      {%- endif -%}
+      {%- if block.settings.text != blank -%}
+        <p class="core-values__card-text">{{ block.settings.text }}</p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</article>
+
+{% stylesheet %}
+  .core-values__card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+    border: calc(1.5px * var(--cv-scale, 1)) solid var(--core-values-card-border-color, #333);
+    border-radius: calc(var(--core-values-card-radius, 24px) * var(--cv-scale, 1));
+  }
+
+  .core-values__card-media {
+    width: 100%;
+    height: calc(var(--core-values-media-height, 310px) * var(--cv-scale, 1));
+    overflow: hidden;
+  }
+
+  .core-values__card-media img,
+  .core-values__card-media svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .core-values__card-body {
+    padding: calc(24px * var(--cv-scale, 1));
+    border-block-start: calc(1.5px * var(--cv-scale, 1)) solid var(--core-values-card-border-color, #333);
+  }
+
+  .core-values__card-title {
+    margin: 0 0 calc(16px * var(--cv-scale, 1));
+    color: var(--core-values-card-title-color, #fff);
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    font-size: calc(24px * var(--cv-scale, 1));
+  }
+
+  .core-values__card-text {
+    margin: 0;
+    color: var(--core-values-card-text-color, #b0b0b0);
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-size: calc(16px * var(--cv-scale, 1));
+  }
+
+  @media screen and (max-width: 749px) {
+    .core-values__card-media {
+      height: var(--core-values-media-height-mobile, 240px);
+    }
+
+    .core-values__card-body {
+      padding: 16px;
+    }
+
+    .core-values__card-title {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .core-values__card-text {
+      font-size: 14px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.core_value_card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:settings.title",
+      "default": "t:text_defaults.core_value_card_title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:settings.text",
+      "default": "t:text_defaults.core_value_card_text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.core_value_card",
+      "category": "t:categories.text"
+    }
+  ]
+}
+{% endschema %}

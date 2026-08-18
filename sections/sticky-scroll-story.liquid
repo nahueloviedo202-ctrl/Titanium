@@ -4,6 +4,12 @@
   if section.settings.background_color != blank
     render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
   endif
+
+  assign show_video = false
+  if section.settings.media_type == 'video' and section.settings.video != blank
+    assign show_video = true
+    assign video_style = 'aspect-ratio: ' | append: section.settings.video.aspect_ratio
+  endif
 %}
 
 <section
@@ -21,10 +27,24 @@
     --sticky-scroll-story-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
     --sticky-scroll-story-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
     --sticky-scroll-story-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+    --sticky-scroll-story-media-width: {{ section.settings.media_width }}px;
   "
 >
   <div class="sticky-scroll-story__media">
-    {%- if section.settings.image != blank -%}
+    {%- if show_video -%}
+      {{
+        section.settings.video
+        | video_tag:
+          poster: nil,
+          autoplay: true,
+          loop: true,
+          controls: false,
+          muted: true,
+          image_size: '1600x',
+          class: 'sticky-scroll-story__image',
+          style: video_style
+      }}
+    {%- elsif section.settings.image != blank -%}
       <img
         class="sticky-scroll-story__image"
         src="{{ section.settings.image | image_url: width: 1600 }}"
@@ -70,7 +90,7 @@
 
   @media screen and (min-width: 750px) {
     .sticky-scroll-story {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, min(var(--sticky-scroll-story-media-width, 760px), 45%));
       align-items: start;
       gap: 4rem;
       padding-block: var(--sticky-scroll-story-padding-block-start, 0) var(--sticky-scroll-story-padding-block-end, 0);
@@ -137,9 +157,36 @@
       "content": "t:content.media"
     },
     {
+      "type": "select",
+      "id": "media_type",
+      "label": "t:settings.type",
+      "options": [
+        { "value": "image", "label": "t:options.image" },
+        { "value": "video", "label": "t:options.video" }
+      ],
+      "default": "image"
+    },
+    {
       "type": "image_picker",
       "id": "image",
-      "label": "t:settings.image"
+      "label": "t:settings.image",
+      "visible_if": "{{ section.settings.media_type == 'image' }}"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:settings.video",
+      "visible_if": "{{ section.settings.media_type == 'video' }}"
+    },
+    {
+      "type": "range",
+      "id": "media_width",
+      "label": "t:settings.media_width",
+      "min": 400,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "default": 760
     },
     {
       "type": "select",

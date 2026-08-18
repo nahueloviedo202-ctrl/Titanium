@@ -1,0 +1,78 @@
+{% liquid
+  assign icon_class = 'responsibility-item__icon-media'
+%}
+
+<article
+  class="responsibility-item"
+  {{ block.shopify_attributes }}
+>
+  <div class="responsibility-item__icon" aria-hidden="true">
+    {% render 'icon-or-image',
+      icon: block.settings.icon,
+      image_upload: block.settings.image,
+      width: 100,
+      class_name: icon_class
+    %}
+  </div>
+
+  {%- if block.settings.title != blank -%}
+    <h3 class="responsibility-item__title">{{ block.settings.title }}</h3>
+  {%- endif -%}
+
+  {%- if block.settings.text != blank -%}
+    <div class="responsibility-item__text rte">{{ block.settings.text }}</div>
+  {%- endif -%}
+</article>
+
+{% schema %}
+{
+  "name": "t:names.responsibility_item",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "t:settings.icon",
+      "options": [
+        { "value": "none", "label": "t:options.none" },
+        { "value": "leaf", "label": "t:options.leaf" },
+        { "value": "heart", "label": "t:options.heart" },
+        { "value": "plant", "label": "t:options.plant" },
+        { "value": "lightning_bolt", "label": "t:options.lightning_bolt" },
+        { "value": "recycle", "label": "t:options.recycle" },
+        { "value": "box", "label": "t:options.box" },
+        { "value": "star", "label": "t:options.star" },
+        { "value": "check_box", "label": "t:options.check_box" },
+        { "value": "clipboard", "label": "t:options.clipboard" },
+        { "value": "lock", "label": "t:options.lock" },
+        { "value": "return", "label": "t:options.return" },
+        { "value": "truck", "label": "t:options.truck" }
+      ],
+      "default": "leaf"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image_icon"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:settings.title",
+      "default": "t:text_defaults.responsibility_item_title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "t:settings.text",
+      "default": "t:html_defaults.responsibility_item_text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.responsibility_item",
+      "category": "t:categories.storytelling"
+    }
+  ]
+}
+{% endschema %}

@@ -1288,6 +1288,52 @@
       }
     },
     {
+      "name": "CTA Banner",
+      "category": "t:categories.banners",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<p>Experience The Difference Today!</p>",
+            "type_preset": "h1",
+            "max_width": "narrow",
+            "text_color": "#FFFFFF"
+          }
+        },
+        "subheading": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Thousands of health-conscious people already trust us in their kitchen, will you be next?</p>",
+            "type_preset": "rte",
+            "max_width": "narrow",
+            "text_color": "#F2EFE8",
+            "padding-block-end": 32
+          }
+        },
+        "button": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "t:text_defaults.shop_now_button_label",
+            "link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": ["heading", "subheading", "button"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "full-width",
+        "section_height": "large",
+        "toggle_overlay": true,
+        "overlay_color": "#00000040",
+        "overlay_style": "solid"
+      }
+    },
+    {
       "name": "t:names.hero_marquee",
       "category": "t:categories.banners",
       "blocks": {
