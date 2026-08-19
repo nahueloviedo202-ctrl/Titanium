@@ -90,7 +90,6 @@
         "marquee_speed": 15,
         "marquee_background_color": "",
         "marquee_text_color": "{{ settings.color_palette.background }}",
-        "logo": "shopify://shop_images/taima_logo_png.avif",
         "blurb": "<p>We only send you things worth opening. Breakthroughs, exclusive launches, toxin-free living tips, and the latest in innovation.</p>",
         "show_newsletter": true,
         "newsletter_button_label": "Subscribe",
