@@ -8,10 +8,9 @@
   assign image = section.settings.image
   assign image_width_wide = section.settings.image_width | times: 1.3 | round
   assign image_width_desktop = section.settings.image_width | times: 0.9 | round
-  assign sizes_attribute = '(min-width: 2200px) [wide]px, (min-width: 750px) [desktop]px, [mobile]px'
+  assign sizes_attribute = '(min-width: 2200px) [wide]px, (min-width: 750px) [desktop]px, 100vw'
   assign sizes_attribute = sizes_attribute | replace: '[wide]', image_width_wide
   assign sizes_attribute = sizes_attribute | replace: '[desktop]', image_width_desktop
-  assign sizes_attribute = sizes_attribute | replace: '[mobile]', section.settings.image_width_mobile
 %}
 
 <section
@@ -29,7 +28,6 @@
     style="
       --why-titanium-img-w: {{ section.settings.image_width }}px;
       --why-titanium-img-h: {{ section.settings.image_height }}px;
-      --why-titanium-img-w-mobile: {{ section.settings.image_width_mobile }}px;
       --why-titanium-img-h-mobile: {{ section.settings.image_height_mobile }}px;
       --why-titanium-gap: {{ section.settings.gap }}px;
       --why-titanium-gap-mobile: {{ section.settings.gap_mobile }}px;
@@ -43,6 +41,7 @@
       --why-titanium-body-color: {{ section.settings.body_color }};
       --why-titanium-body-size: {{ section.settings.body_font_size }}px;
       --why-titanium-body-size-mobile: {{ section.settings.body_font_size_mobile }}px;
+      --why-titanium-accent-color: {{ section.settings.body_accent_color }};
       --why-titanium-padding-block-start: {{ section.settings.padding_block_start }}px;
       --why-titanium-padding-block-end: {{ section.settings.padding_block_end }}px;
       --why-titanium-padding-inline-start: {{ section.settings.padding_inline_start }}px;
@@ -98,36 +97,32 @@
 
   .why-titanium__wrap {
     padding-block: calc(var(--why-titanium-padding-block-start, 0px) * var(--why-titanium-scale)) calc(var(--why-titanium-padding-block-end, 0px) * var(--why-titanium-scale));
-    padding-inline: calc(var(--why-titanium-padding-inline-start, 120px) * var(--why-titanium-scale)) calc(var(--why-titanium-padding-inline-end, 120px) * var(--why-titanium-scale));
+    padding-inline: calc(var(--why-titanium-padding-inline-start, 120px) * var(--why-titanium-scale)) calc(var(--why-titanium-padding-inline-end, 80px) * var(--why-titanium-scale));
   }
 
   .why-titanium__inner {
     display: grid;
-    grid-template-columns: calc((var(--why-titanium-img-w, 593px) + 106px) * var(--why-titanium-scale)) 1fr;
+    grid-template-columns: calc(var(--why-titanium-img-w, 893px) * var(--why-titanium-scale)) 1fr;
     grid-template-areas: 'media copy';
-    align-items: stretch;
-    gap: calc(var(--why-titanium-gap, 200px) * var(--why-titanium-scale));
+    align-items: center;
+    gap: calc(var(--why-titanium-gap, 0px) * var(--why-titanium-scale));
   }
 
   .why-titanium--media-right .why-titanium__inner {
-    grid-template-columns: 1fr calc((var(--why-titanium-img-w, 593px) + 106px) * var(--why-titanium-scale));
+    grid-template-columns: 1fr calc(var(--why-titanium-img-w, 893px) * var(--why-titanium-scale));
     grid-template-areas: 'copy media';
   }
 
   .why-titanium__media {
     grid-area: media;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: calc(80px * var(--why-titanium-scale)) calc(53px * var(--why-titanium-scale)) 0;
-    box-sizing: border-box;
+    display: block;
   }
 
   .why-titanium__media img,
   .why-titanium__media svg {
     display: block;
-    width: calc(var(--why-titanium-img-w, 593px) * var(--why-titanium-scale));
-    height: calc(var(--why-titanium-img-h, 693px) * var(--why-titanium-scale));
+    width: 100%;
+    height: calc(var(--why-titanium-img-h, 740px) * var(--why-titanium-scale));
     object-fit: cover;
   }
 
@@ -135,24 +130,23 @@
     grid-area: copy;
     display: flex;
     flex-direction: column;
-    align-self: center;
     max-width: calc(var(--why-titanium-copy-max-width, 700px) * var(--why-titanium-scale));
   }
 
   .why-titanium__heading {
     margin: 0 0 calc(16px * var(--why-titanium-scale));
-    color: var(--why-titanium-heading-color, #bca588);
+    color: var(--why-titanium-heading-color, #ffffff);
     font-family: var(--font-body--family);
     font-weight: 400;
     line-height: 1.3;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
     text-transform: capitalize;
-    font-size: calc(var(--why-titanium-heading-size, 48px) * var(--why-titanium-scale));
+    font-size: calc(var(--why-titanium-heading-size, 64px) * var(--why-titanium-scale));
   }
 
   .why-titanium__kicker {
     margin: 0 0 calc(32px * var(--why-titanium-scale));
-    color: var(--why-titanium-kicker-color, #e7e7e7);
+    color: var(--why-titanium-kicker-color, #ffffff);
     font-family: var(--font-body--family);
     font-weight: 500;
     line-height: 1.4;
@@ -174,8 +168,18 @@
     margin: 0 0 0.75em;
   }
 
+  .why-titanium__body p:first-child {
+    margin-bottom: calc(32px * var(--why-titanium-scale));
+  }
+
   .why-titanium__body p:last-child {
     margin-bottom: 0;
+    color: var(--why-titanium-accent-color, #e7e7e7);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    font-size: calc(var(--why-titanium-kicker-size, 20px) * var(--why-titanium-scale));
   }
 
   @media screen and (min-width: 750px) and (max-width: 1799px) {
@@ -192,26 +196,20 @@
 
   @media screen and (max-width: 749px) {
     .why-titanium__wrap {
-      padding-block: var(--why-titanium-padding-block-start-mobile, 64px) var(--why-titanium-padding-block-end-mobile, 0px);
+      padding-block: var(--why-titanium-padding-block-start-mobile, 32px) var(--why-titanium-padding-block-end-mobile, 64px);
       padding-inline: var(--why-titanium-padding-inline-start-mobile, 16px) var(--why-titanium-padding-inline-end-mobile, 16px);
     }
 
     .why-titanium__inner,
     .why-titanium--media-right .why-titanium__inner {
       grid-template-columns: 1fr;
-      grid-template-areas: 'copy' 'media';
-      gap: var(--why-titanium-gap-mobile, 45px);
-    }
-
-    .why-titanium__media {
-      justify-content: center;
-      padding: 0;
+      grid-template-areas: 'media' 'copy';
+      gap: var(--why-titanium-gap-mobile, 32px);
     }
 
     .why-titanium__media img,
     .why-titanium__media svg {
-      width: var(--why-titanium-img-w-mobile, 330px);
-      height: var(--why-titanium-img-h-mobile, 386px);
+      height: var(--why-titanium-img-h-mobile, 323px);
     }
 
     .why-titanium__copy {
@@ -219,12 +217,12 @@
     }
 
     .why-titanium__heading {
-      margin-bottom: 12px;
-      font-size: var(--why-titanium-heading-size-mobile, 24px);
+      font-size: var(--why-titanium-heading-size-mobile, 48px);
+      letter-spacing: 1.82px;
     }
 
     .why-titanium__kicker {
-      margin-bottom: 24px;
+      margin-bottom: 12px;
       font-size: var(--why-titanium-kicker-size-mobile, 16px);
     }
 
@@ -232,8 +230,12 @@
       font-size: var(--why-titanium-body-size-mobile, 14px);
     }
 
-    .why-titanium__body p {
-      margin-bottom: 8px;
+    .why-titanium__body p:first-child {
+      margin-bottom: 12px;
+    }
+
+    .why-titanium__body p:last-child {
+      margin-bottom: 32px;
     }
   }
 {% endstylesheet %}
@@ -261,27 +263,27 @@
       "type": "color",
       "id": "heading_color",
       "label": "t:settings.heading_color",
-      "default": "#BCA588"
+      "default": "#FFFFFF"
     },
     {
       "type": "range",
       "id": "heading_font_size",
       "label": "t:settings.heading_size",
       "min": 24,
-      "max": 72,
+      "max": 96,
       "step": 2,
       "unit": "px",
-      "default": 48
+      "default": 64
     },
     {
       "type": "range",
       "id": "heading_font_size_mobile",
       "label": "t:settings.size_mobile",
       "min": 16,
-      "max": 48,
+      "max": 64,
       "step": 1,
       "unit": "px",
-      "default": 24
+      "default": 48
     },
     {
       "type": "header",
@@ -297,7 +299,7 @@
       "type": "color",
       "id": "kicker_color",
       "label": "t:settings.color",
-      "default": "#E7E7E7"
+      "default": "#FFFFFF"
     },
     {
       "type": "range",
@@ -352,6 +354,12 @@
       "default": 14
     },
     {
+      "type": "color",
+      "id": "body_accent_color",
+      "label": "t:settings.accent_color",
+      "default": "#E7E7E7"
+    },
+    {
       "type": "header",
       "content": "t:content.media"
     },
@@ -365,10 +373,10 @@
       "id": "image_width",
       "label": "t:settings.image_width",
       "min": 300,
-      "max": 800,
+      "max": 1000,
       "step": 10,
       "unit": "px",
-      "default": 590
+      "default": 890
     },
     {
       "type": "range",
@@ -378,27 +386,17 @@
       "max": 900,
       "step": 10,
       "unit": "px",
-      "default": 690
-    },
-    {
-      "type": "range",
-      "id": "image_width_mobile",
-      "label": "t:settings.image_width_mobile",
-      "min": 200,
-      "max": 500,
-      "step": 10,
-      "unit": "px",
-      "default": 330
+      "default": 740
     },
     {
       "type": "range",
       "id": "image_height_mobile",
       "label": "t:settings.image_height_mobile",
       "min": 200,
-      "max": 600,
+      "max": 500,
       "step": 10,
       "unit": "px",
-      "default": 390
+      "default": 320
     },
     {
       "type": "header",
@@ -418,7 +416,7 @@
           "label": "t:options.right"
         }
       ],
-      "default": "left"
+      "default": "right"
     },
     {
       "type": "range",
@@ -434,21 +432,21 @@
       "type": "range",
       "id": "gap",
       "label": "t:settings.gap",
-      "min": 40,
-      "max": 320,
+      "min": 0,
+      "max": 200,
       "step": 4,
       "unit": "px",
-      "default": 200
+      "default": 0
     },
     {
       "type": "range",
       "id": "gap_mobile",
       "label": "t:settings.gap",
-      "min": 16,
+      "min": 0,
       "max": 80,
-      "step": 1,
+      "step": 2,
       "unit": "px",
-      "default": 45
+      "default": 32
     },
     {
       "type": "header",
@@ -502,7 +500,7 @@
       "max": 240,
       "step": 4,
       "unit": "px",
-      "default": 120
+      "default": 80
     },
     {
       "type": "header",
@@ -516,7 +514,7 @@
       "max": 150,
       "step": 2,
       "unit": "px",
-      "default": 64
+      "default": 32
     },
     {
       "type": "range",
@@ -526,7 +524,7 @@
       "max": 150,
       "step": 2,
       "unit": "px",
-      "default": 0
+      "default": 64
     },
     {
       "type": "range",
