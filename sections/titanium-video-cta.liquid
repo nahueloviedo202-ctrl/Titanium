@@ -1,0 +1,449 @@
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+
+  assign media_mode = 'image'
+  if section.settings.video != blank
+    assign media_mode = 'video'
+  endif
+%}
+
+<section
+  id="TitaniumVideoCta-{{ section.id }}"
+  class="titanium-video-cta{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="region"
+  aria-label="{% if section.settings.heading != blank %}{{ section.settings.heading | strip_html }}{% else %}Video call to action{% endif %}"
+  style="
+    --tvc-media-width: {{ section.settings.media_width }}px;
+    --tvc-gap: {{ section.settings.gap }}px;
+    --tvc-gap-mobile: {{ section.settings.gap_mobile }}px;
+    --tvc-padding-block: {{ section.settings.padding_block }}px;
+    --tvc-padding-block-mobile: {{ section.settings.padding_block_mobile }}px;
+    --tvc-padding-inline: {{ section.settings.padding_inline }}px;
+    --tvc-padding-inline-mobile: {{ section.settings.padding_inline_mobile }}px;
+    --tvc-heading-color: {{ section.settings.heading_color }};
+    --tvc-heading-size: {{ section.settings.heading_font_size }}px;
+    --tvc-heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+    --tvc-text-color: {{ section.settings.text_color }};
+    --tvc-text-size: {{ section.settings.text_font_size }}px;
+    --tvc-text-size-mobile: {{ section.settings.text_font_size_mobile }}px;
+    --tvc-button-bg: {{ section.settings.button_background_color }};
+    --tvc-button-text: {{ section.settings.button_text_color }};
+  "
+>
+  <div class="titanium-video-cta__inner">
+    <div class="titanium-video-cta__media">
+      {%- render 'background-media',
+        background_media: media_mode,
+        background_video: section.settings.video,
+        background_video_position: 'cover',
+        background_image: section.settings.placeholder_image,
+        background_image_position: 'cover',
+        placeholder: 'lifestyle-1',
+        section: section
+      -%}
+    </div>
+
+    <div class="titanium-video-cta__copy">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="titanium-video-cta__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <div class="titanium-video-cta__text rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.button_label != blank -%}
+        <a
+          {% if section.settings.button_link != blank %}
+            href="{{ section.settings.button_link }}"
+          {% else %}
+            role="link"
+            aria-disabled="true"
+          {% endif %}
+          class="titanium-video-cta__button"
+        >
+          {{ section.settings.button_label | escape }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .titanium-video-cta {
+    --tvc-scale: 1;
+    position: relative;
+    background-color: var(--color-background, #121212);
+  }
+
+  .titanium-video-cta__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: var(--tvc-gap-mobile, 48px);
+    padding-block: var(--tvc-padding-block-mobile, 64px);
+    padding-inline: var(--tvc-padding-inline-mobile, 16px);
+  }
+
+  .titanium-video-cta__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.544;
+    overflow: hidden;
+    border-radius: calc(16px * var(--tvc-scale));
+  }
+
+  .titanium-video-cta__copy {
+    min-width: 0;
+  }
+
+  .titanium-video-cta__heading {
+    margin: 0 0 16px;
+    color: var(--tvc-heading-color, #BCA588);
+    font-family: var(--font-heading--family);
+    font-weight: 400;
+    font-size: var(--tvc-heading-size-mobile, 24px);
+    line-height: 130%;
+    letter-spacing: 0.96px;
+    text-transform: capitalize;
+  }
+
+  .titanium-video-cta__text {
+    margin: 0 0 32px;
+    color: var(--tvc-text-color, #B0B0B0);
+    font-family: var(--font-body--family);
+    font-size: var(--tvc-text-size-mobile, 14px);
+    line-height: 150%;
+    letter-spacing: 0.56px;
+  }
+
+  .titanium-video-cta__text p {
+    margin: 0 0 8px;
+  }
+
+  .titanium-video-cta__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .titanium-video-cta__button {
+    display: inline-flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 260px;
+    padding: 18px 20px;
+    border: 0;
+    border-radius: 16px;
+    background: var(--tvc-button-bg, #FFFFFF);
+    color: var(--tvc-button-text, #121212);
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.8px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: opacity 100ms ease;
+  }
+
+  .titanium-video-cta__button:hover {
+    opacity: 0.85;
+  }
+
+  /* Tablet and up: base type scale, still single column */
+  @media screen and (min-width: 750px) {
+    .titanium-video-cta__inner {
+      gap: 24px;
+      padding-block: var(--tvc-padding-block, 80px);
+      padding-inline: var(--tvc-padding-inline, 120px);
+    }
+
+    .titanium-video-cta__media {
+      border-radius: calc(24px * var(--tvc-scale));
+    }
+
+    .titanium-video-cta__heading {
+      margin-bottom: 32px;
+      font-size: var(--tvc-heading-size, 48px);
+      letter-spacing: 1.92px;
+    }
+
+    .titanium-video-cta__text {
+      font-size: var(--tvc-text-size, 16px);
+      letter-spacing: 0.64px;
+    }
+
+    .titanium-video-cta__text p {
+      margin-bottom: 12px;
+    }
+
+    .titanium-video-cta__button {
+      width: auto;
+      padding: 18px 24px;
+    }
+  }
+
+  /* Two-column layout begins */
+  @media screen and (min-width: 1200px) {
+    .titanium-video-cta__inner {
+      grid-template-columns: var(--tvc-media-width, 840px) 1fr;
+      gap: calc(var(--tvc-gap, 200px) * var(--tvc-scale));
+    }
+
+    .titanium-video-cta__media {
+      width: calc(var(--tvc-media-width, 840px) * var(--tvc-scale));
+    }
+
+    .titanium-video-cta__heading {
+      margin-bottom: calc(32px * var(--tvc-scale));
+      font-size: calc(var(--tvc-heading-size, 48px) * var(--tvc-scale));
+      letter-spacing: calc(1.92px * var(--tvc-scale));
+    }
+
+    .titanium-video-cta__text {
+      margin-bottom: calc(32px * var(--tvc-scale));
+      font-size: calc(var(--tvc-text-size, 16px) * var(--tvc-scale));
+      letter-spacing: calc(0.64px * var(--tvc-scale));
+    }
+
+    .titanium-video-cta__button {
+      padding: calc(18px * var(--tvc-scale)) calc(24px * var(--tvc-scale));
+      border-radius: calc(16px * var(--tvc-scale));
+      min-width: calc(260px * var(--tvc-scale));
+      font-size: calc(20px * var(--tvc-scale));
+      letter-spacing: calc(0.8px * var(--tvc-scale));
+    }
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1799px) {
+    .titanium-video-cta {
+      --tvc-scale: 0.9;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .titanium-video-cta {
+      --tvc-scale: 1.3;
+    }
+
+    .titanium-video-cta__inner {
+      padding-block: calc(var(--tvc-padding-block, 80px) * 1.3);
+      padding-inline: calc(var(--tvc-padding-inline, 120px) * 1.3);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Titanium video CTA",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Precision Engineered, Proven By Science"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "Heading size (mobile)",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Add a short paragraph that builds trust and explains what makes your product different.</p><p>Use this space to speak to the craftsmanship and standards behind what you make.</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "label": "Text size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_font_size_mobile",
+      "label": "Text size (mobile)",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video upload",
+      "info": "Hosted by Shopify. Loops as a silent background video."
+    },
+    {
+      "type": "image_picker",
+      "id": "placeholder_image",
+      "label": "Fallback image",
+      "info": "Shown if no video is uploaded."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "media_width",
+      "label": "Media width (desktop)",
+      "min": 400,
+      "max": 1400,
+      "step": 10,
+      "unit": "px",
+      "default": 840
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap (desktop)",
+      "min": 0,
+      "max": 300,
+      "step": 4,
+      "unit": "px",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "label": "Gap (mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_block",
+      "label": "Padding top/bottom (desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_block_mobile",
+      "label": "Padding top/bottom (mobile)",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_inline",
+      "label": "Padding left/right (desktop)",
+      "min": 0,
+      "max": 300,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_mobile",
+      "label": "Padding left/right (mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#121212"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Titanium video CTA",
+      "category": "Video"
+    }
+  ]
+}
+{% endschema %}

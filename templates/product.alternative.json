@@ -158,31 +158,12 @@
         "show_vendor": true,
         "grid": 4
       }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "color_scheme": "2"
-      }
-    },
-    "featured_blog": {
-      "type": "featured-blog",
-      "settings": {
-        "post_limit": 3,
-        "show_author": false,
-        "show_date": false,
-        "show_excerpts": true,
-        "crop_ratio": "1.78",
-        "color_scheme": "default"
-      }
     }
   },
   "order": [
     "breadcrumbs",
     "main",
     "background_video",
-    "recommendations",
-    "newsletter",
-    "featured_blog"
+    "recommendations"
   ]
 }

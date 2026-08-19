@@ -1,0 +1,139 @@
+
+
+{% liquid
+  assign viewport_width = 100.0 | divided_by: section.settings.columns_desktop
+  assign sizes_attribute = '(min-width: 750px) [viewport_width]vw, 100vw' | replace: '[viewport_width]', viewport_width
+%}
+
+<article
+  class="cvg__card"
+  {{ block.shopify_attributes }}
+>
+  <div class="cvg__card-media">
+    {%- if block.settings.image != blank -%}
+      {{
+        block.settings.image
+        | image_url: width: 1000
+        | image_tag:
+          widths: '500, 750, 1000',
+          sizes: sizes_attribute,
+          loading: 'lazy',
+          alt: block.settings.image.alt | default: block.settings.title | escape
+      }}
+    {%- else -%}
+      {{ 'product-apparel-1' | placeholder_svg_tag: 'cvg__card-image' }}
+    {%- endif -%}
+  </div>
+  {%- if block.settings.title != blank or block.settings.text != blank -%}
+    <div class="cvg__card-body">
+      {%- if block.settings.title != blank -%}
+        <h3 class="cvg__card-title">{{ block.settings.title }}</h3>
+      {%- endif -%}
+      {%- if block.settings.text != blank -%}
+        <p class="cvg__card-text">{{ block.settings.text }}</p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</article>
+
+{% stylesheet %}
+  .cvg__card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+    border: calc(1.5px * var(--cvg-scale, 1)) solid var(--cvg-card-border-color, #333);
+    border-radius: calc(var(--cvg-card-radius, 24px) * var(--cvg-scale, 1));
+  }
+
+  .cvg__card-media {
+    width: 100%;
+    height: calc(var(--cvg-media-height, 310px) * var(--cvg-scale, 1));
+    overflow: hidden;
+  }
+
+  .cvg__card-media img,
+  .cvg__card-media svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cvg__card-body {
+    padding: calc(24px * var(--cvg-scale, 1));
+    border-block-start: calc(1.5px * var(--cvg-scale, 1)) solid var(--cvg-card-border-color, #333);
+  }
+
+  .cvg__card-title {
+    margin: 0 0 calc(16px * var(--cvg-scale, 1));
+    color: var(--cvg-card-title-color, #fff);
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    font-size: calc(24px * var(--cvg-scale, 1));
+  }
+
+  .cvg__card-text {
+    margin: 0;
+    color: var(--cvg-card-text-color, #b0b0b0);
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-size: calc(16px * var(--cvg-scale, 1));
+  }
+
+  @media screen and (max-width: 749px) {
+    .cvg__card-media {
+      height: var(--cvg-media-height-mobile, 240px);
+    }
+
+    .cvg__card-body {
+      padding: 16px;
+    }
+
+    .cvg__card-title {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .cvg__card-text {
+      font-size: 14px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.core_values_grid_card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:settings.title",
+      "default": "t:text_defaults.core_values_grid_card_title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:settings.text",
+      "default": "t:text_defaults.core_values_grid_card_text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.core_values_grid_card",
+      "category": "t:categories.text"
+    }
+  ]
+}
+{% endschema %}

@@ -18,7 +18,7 @@
   aria-label="{{ 'accessibility.faq_page_navigation' | t }}"
 >
   <div
-    class="faq-page__inner page-width-content spacing-style"
+    class="faq-page__inner spacing-style"
     style="{% render 'spacing-style', settings: section.settings %}"
   >
     <div class="faq-page__layout">
@@ -66,16 +66,13 @@
 
   .faq-page__layout {
     display: flex;
-    align-items: flex-start;
-    gap: max(24px, calc(var(--spacing-scale) * 64px));
+    align-items: stretch;
+    gap: 0;
   }
 
   .faq-page__nav {
-    position: sticky;
-    top: max(16px, calc(var(--spacing-scale) * 32px));
     flex: 0 0 300px;
     max-width: 300px;
-    align-self: flex-start;
     border-inline-end: 1px solid var(--color-border);
   }
 
@@ -87,12 +84,13 @@
 
   .faq-page__nav-link {
     display: block;
-    padding-block: max(16px, calc(var(--spacing-scale) * 20px));
-    padding-inline: max(16px, calc(var(--spacing-scale) * 48px));
+    padding-block: 20px;
+    padding-inline: 48px;
     border-block-end: 1px solid var(--color-border);
     color: var(--color-foreground-muted);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
+    line-height: 1;
     letter-spacing: 0.04em;
     text-decoration: none;
     text-transform: capitalize;
@@ -108,16 +106,18 @@
   .faq-page__content {
     flex: 1 1 auto;
     min-width: 0;
+    max-width: 1420px;
+    margin-inline: auto;
+    padding-inline: 120px;
   }
 
   @media screen and (max-width: 989px) {
     .faq-page__layout {
       flex-direction: column;
-      gap: 24px;
+      gap: 0;
     }
 
     .faq-page__nav {
-      position: static;
       flex-basis: auto;
       width: 100%;
       max-width: none;
@@ -138,10 +138,21 @@
     }
 
     .faq-page__nav-link {
-      padding: 10px 16px;
+      padding: 14px 20px;
       border: 1px solid var(--color-border);
       border-radius: 999px;
+      font-size: 14px;
+      letter-spacing: 0.02em;
       white-space: nowrap;
+    }
+
+    .faq-page__nav-link.is-active {
+      border-color: var(--color-foreground);
+    }
+
+    .faq-page__content {
+      max-width: none;
+      padding-inline: 20px;
     }
   }
 {% endstylesheet %}

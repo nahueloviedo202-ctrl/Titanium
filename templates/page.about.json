@@ -99,96 +99,6 @@
       "settings": {
         "color_scheme": "default"
       }
-    },
-    "collection_story_TXrXhE": {
-      "type": "collection-story",
-      "name": "Collection story",
-      "settings": {
-        "image": "shopify://shop_images/IMG_4179_2.png",
-        "image_link": "",
-        "heading": "Behind the Design",
-        "use_h1": false,
-        "text": "<p>In my journey through the world of jewelry and design, I've come to understand that true luxury lies in the freedom to script your own story. THIRTY1 isn't just about showcasing my designs; it's about inspiring you to curate a narrative that extends from your finger-stacked rings to your wrist-adorned arm stacks. This brand is designed to evoke a sense of empowerment and confidence, allowing you to feel good in every piece you choose.<br/><br/>Rings have always been my forte, my second skin, almost like a personal armor. Having grown up in my father's jewelry store, experimenting with various combinations and designs has been a lifelong passion. My style, like my stacks of “armor,\" has evolved over the years, encompassing not only my designs but also a mix of vintage, one-of-a-kind pieces, and watches sourced from around the globe.Jewelry is meant to be fun, a form of self-expression that defies boundaries. I'm not here to dictate the perfect combination of pieces; I'm here to share the feeling of liberation, chaos, and creativity that designing and curating these pieces has given me.<br/><br/>This is more than a brand; it's an invitation to dive headfirst into your individuality, amplify your style of self-expression, and deck yourself out in some badass shit. Welcome to the unapologetic life of THIRTY1. Luxury for the nonconformist.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "link",
-        "image_position": "right",
-        "full_width": true,
-        "color_scheme": "default"
-      }
-    },
-    "instagram_gallery_Gn3yjb": {
-      "type": "instagram-gallery",
-      "blocks": {
-        "image_eAQn79": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-1.webp",
-            "link": ""
-          }
-        },
-        "image_Gydcgm": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-2.webp",
-            "link": ""
-          }
-        },
-        "image_pkwrrk": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-3.webp",
-            "link": ""
-          }
-        },
-        "image_7f3MdN": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-4.webp",
-            "link": ""
-          }
-        },
-        "image_YfkXr3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-5.webp",
-            "link": ""
-          }
-        },
-        "image_AimGWK": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-6.webp",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_eAQn79",
-        "image_Gydcgm",
-        "image_pkwrrk",
-        "image_7f3MdN",
-        "image_YfkXr3",
-        "image_AimGWK"
-      ],
-      "name": "Instagram gallery",
-      "settings": {
-        "title": "Inside THIRTY1",
-        "button_label": "Follow @thirty1",
-        "button_link": "https://www.instagram.com/thirty1jewelry/",
-        "padding_top_desktop": 60,
-        "padding_top_mobile": 32,
-        "title_gap_desktop": 28,
-        "title_gap_mobile": 20,
-        "button_gap_desktop": 40,
-        "button_gap_mobile": 24,
-        "padding_bottom_desktop": 60,
-        "padding_bottom_mobile": 32,
-        "item_gap": 10,
-        "side_padding_desktop": 40,
-        "side_padding_mobile": 16,
-        "color_scheme": "default"
-      }
     }
   },
   "order": [
@@ -196,8 +106,6 @@
     "breadcrumbs_7ymTFF",
     "brand_story_4KGJY3",
     "brand_statement_7Wjg4t",
-    "brand_story_dLMywC",
-    "collection_story_TXrXhE",
-    "instagram_gallery_Gn3yjb"
+    "brand_story_dLMywC"
   ]
 }

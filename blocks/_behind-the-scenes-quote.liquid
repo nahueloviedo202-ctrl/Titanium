@@ -1,0 +1,153 @@
+<div class="behind-the-scenes__quote" {{ block.shopify_attributes }}>
+  {%- if block.settings.quote != blank -%}
+    <div
+      class="behind-the-scenes__quote-text rte"
+      style="color: {{ block.settings.quote_color }}; font-size: {{ block.settings.quote_size }}px;"
+    >
+      {{ block.settings.quote }}
+    </div>
+  {%- endif -%}
+
+  <div class="behind-the-scenes__quote-footer">
+    {%- if block.settings.signature != blank -%}
+      {{
+        block.settings.signature
+        | image_url: width: block.settings.signature_width
+        | image_tag:
+          loading: 'lazy',
+          class: 'behind-the-scenes__quote-signature',
+          alt: block.settings.founder_name | escape,
+          width: block.settings.signature_width,
+          height: block.settings.signature_height
+      }}
+    {%- endif -%}
+    {%- if block.settings.founder_name != blank -%}
+      <p
+        class="behind-the-scenes__quote-founder"
+        style="color: {{ block.settings.founder_color }}; font-size: {{ block.settings.founder_size }}px;"
+      >
+        {{ block.settings.founder_name }}
+      </p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% stylesheet %}
+  .behind-the-scenes__quote {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .behind-the-scenes__quote-text {
+    margin: 0;
+  }
+
+  .behind-the-scenes__quote-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .behind-the-scenes__quote-signature {
+    display: block;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .behind-the-scenes__quote-founder {
+    margin: 0;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.behind_the_scenes_quote",
+  "tag": null,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "quote",
+      "label": "t:settings.text"
+    },
+    {
+      "type": "color",
+      "id": "quote_color",
+      "label": "t:settings.text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "quote_size",
+      "label": "t:settings.size",
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "quote_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "text",
+      "id": "founder_name",
+      "label": "t:settings.author"
+    },
+    {
+      "type": "color",
+      "id": "founder_color",
+      "label": "t:settings.text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "founder_size",
+      "label": "t:settings.size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "image_picker",
+      "id": "signature",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "range",
+      "id": "signature_width",
+      "label": "t:settings.width",
+      "min": 40,
+      "max": 240,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "signature_height",
+      "label": "t:settings.height",
+      "min": 20,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.behind_the_scenes_quote",
+      "category": "t:categories.storytelling"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,35 @@
+<div class="science-sticky-video__block" {{ block.shopify_attributes }}>
+  {%- if block.settings.title != blank -%}
+    <h3 class="science-sticky-video__block-title">{{ block.settings.title }}</h3>
+  {%- endif -%}
+  {%- if block.settings.text != blank -%}
+    <div class="science-sticky-video__block-text rte">{{ block.settings.text }}</div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:names.science_sticky_video_block",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.science_sticky_video_block_title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "t:settings.text",
+      "default": "t:html_defaults.science_sticky_video_block_text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.science_sticky_video_block",
+      "category": "t:categories.storytelling"
+    }
+  ]
+}
+{% endschema %}

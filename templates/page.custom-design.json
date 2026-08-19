@@ -271,102 +271,12 @@
         "header_gap_desktop": 28,
         "header_gap_mobile": 24
       }
-    },
-    "newsletter_eJtN6T": {
-      "type": "newsletter",
-      "name": "Newsletter",
-      "settings": {
-        "image": "shopify://shop_images/newsletter_1.webp",
-        "overlay_color": "#000000",
-        "overlay_opacity": 65,
-        "height_desktop": 450,
-        "height_mobile": 380,
-        "title": "Subscribe to Our Newsletter",
-        "subheading": "<p>Exclusive access to unreleased designs, one-of-one pieces, and first access to new releases</p>",
-        "button_label": "Join",
-        "color_scheme": "default"
-      }
-    },
-    "instagram_gallery_NUzChB": {
-      "type": "instagram-gallery",
-      "blocks": {
-        "image_X3fNyn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-1.webp",
-            "link": ""
-          }
-        },
-        "image_e6FiGz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-2.webp",
-            "link": ""
-          }
-        },
-        "image_fHpTwj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-3.webp",
-            "link": ""
-          }
-        },
-        "image_JgdBmT": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-4.webp",
-            "link": ""
-          }
-        },
-        "image_xDX7LG": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-5.webp",
-            "link": ""
-          }
-        },
-        "image_RR9d6W": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ig-6.webp",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_X3fNyn",
-        "image_e6FiGz",
-        "image_fHpTwj",
-        "image_JgdBmT",
-        "image_xDX7LG",
-        "image_RR9d6W"
-      ],
-      "name": "Instagram gallery",
-      "settings": {
-        "title": "Inside THIRTY1",
-        "button_label": "Follow @thirty1",
-        "button_link": "https://www.instagram.com/thirty1jewelry/",
-        "padding_top_desktop": 60,
-        "padding_top_mobile": 32,
-        "title_gap_desktop": 28,
-        "title_gap_mobile": 20,
-        "button_gap_desktop": 40,
-        "button_gap_mobile": 24,
-        "padding_bottom_desktop": 60,
-        "padding_bottom_mobile": 32,
-        "item_gap": 10,
-        "side_padding_desktop": 40,
-        "side_padding_mobile": 16,
-        "color_scheme": "default"
-      }
     }
   },
   "order": [
     "main",
     "slideshow_AF7hNY",
     "design_request_form_NadPL9",
-    "as_seen_LCfR6U",
-    "newsletter_eJtN6T",
-    "instagram_gallery_NUzChB"
+    "as_seen_LCfR6U"
   ]
 }
