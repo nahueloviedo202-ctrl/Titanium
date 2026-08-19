@@ -26,9 +26,9 @@
         class="benefits-marquee__marquee"
         style="
           --benefits-marquee-direction: {{ section.settings.direction }};
-          --benefits-marquee-gap-base: {{ section.settings.gap }}px;
-          --benefits-marquee-icon-height-base: {{ section.settings.icon_height }}px;
-          --benefits-marquee-text-size-base: {{ section.settings.text_size }}px;
+          --benefits-marquee-gap: {{ section.settings.gap }}px;
+          --benefits-marquee-icon-height: clamp(1.5rem, calc({{ section.settings.icon_height }}px * 0.6), {{ section.settings.icon_height }}px);
+          --benefits-marquee-text-size: clamp(0.875rem, calc({{ section.settings.text_size }}px * 0.55), {{ section.settings.text_size }}px);
         "
         data-speed-factor="{{ section.settings.speed }}"
         {% unless section.settings.autoplay %}
@@ -68,9 +68,6 @@
     display: block;
     width: 100%;
     overflow: hidden;
-    --benefits-marquee-gap: var(--benefits-marquee-gap-base);
-    --benefits-marquee-icon-height: var(--benefits-marquee-icon-height-base);
-    --benefits-marquee-text-size: var(--benefits-marquee-text-size-base);
   }
 
   .benefits-marquee__wrapper {
@@ -101,13 +98,9 @@
     }
   }
 
-  /* Mobile scale ratios (gap 0.48, icon 0.6, text 0.7) match the mobile/desktop
-     proportions measured on the reference marquee, not a theme-wide token. */
   @media screen and (max-width: 749px) {
-    .benefits-marquee__marquee {
-      --benefits-marquee-gap: calc(var(--benefits-marquee-gap-base) * 0.48);
-      --benefits-marquee-icon-height: max(16px, calc(var(--benefits-marquee-icon-height-base) * 0.6));
-      --benefits-marquee-text-size: max(12px, calc(var(--benefits-marquee-text-size-base) * 0.7));
+    .benefits-marquee {
+      --benefits-marquee-gap: calc(var(--benefits-marquee-gap, 6rem) * 0.5);
     }
   }
 {% endstylesheet %}

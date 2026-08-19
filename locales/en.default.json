@@ -14,9 +14,6 @@
     "cart": "Cart",
     "cart_count": "Total items in cart",
     "close_dialog": "Close dialog",
-    "collection_navigation": "Collection navigation",
-    "copy_band_region": "Copy band",
-    "core_values_region": "Core values",
     "country_region": "Country/Region",
     "country_results_count": "{{ count }} results",
     "product_details": "Product details",
@@ -25,7 +22,6 @@
     "discount": "Apply a discount code",
     "discount_menu": "Discount Codes",
     "discount_applied": "Applied discount code: {{ code }}",
-    "faq_page_navigation": "FAQ categories",
     "featured_product": "Featured product",
     "filters": "Filters",
     "filter_count": {
@@ -35,7 +31,6 @@
     "health_features_list_left": "Left features",
     "health_features_list_right": "Right features",
     "health_features_region": "Health features",
-    "heritage_text_region": "Our heritage",
     "home_logo_alt": "{{ store_name }} - Home",
     "increase_quantity": "Increase quantity",
     "inventory_status": "Inventory status",
@@ -43,13 +38,9 @@
     "materials_comparison_categories": "Material categories",
     "materials_comparison_region": "Materials comparison",
     "menu": "Menu",
-    "mission_region": "Our mission",
     "promo_inline_link_region": "Promotion",
-    "responsibility_region": "Our responsibility",
     "reviews_slider_custom_categories": "Review categories",
     "reviews_slider_custom_region": "Customer reviews",
-    "story_slider_region": "Our story",
-    "why_titanium_region": "Why titanium",
     "header_navigation_label": "Primary",
     "nested_product": "{{ product_title }} for {{ parent_title }}",
     "new_window": "Opens in a new window.",
@@ -77,7 +68,6 @@
     "slideshow_pause": "Pause slideshow",
     "slideshow_play": "Play slideshow",
     "slideshow_previous": "Previous slide",
-    "sticky_scroll_story_region": "Story",
     "unit_price": "Unit price",
     "find_country": "Find country",
     "view_disclosure_information_for_product": "View disclosure information for {{ product_title }}",
@@ -129,12 +119,9 @@
   },
   "blocks": {
     "contact_form": {
-      "first_name": "First name",
-      "last_name": "Last name",
+      "name": "Name",
       "email": "Email",
-      "state": "State",
-      "state_placeholder": "Please select",
-      "phone": "Phone Number",
+      "phone": "Phone",
       "comment": "Comment",
       "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
       "error_heading": "Please adjust the following:"
@@ -371,8 +358,7 @@
       "quantity_maximum": "Maximum of {{ maximum }}",
       "in_cart": "in cart",
       "default_title": "Default Title",
-      "sticky_add_to_cart": "Quick add to cart bar",
-      "save_percentage": "Save {{ percentage }}%"
+      "sticky_add_to_cart": "Quick add to cart bar"
     }
   },
   "pagefly": {

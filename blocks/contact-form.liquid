@@ -35,7 +35,6 @@
 
     {%- if form.errors and form_matches -%}
       <div
-        id="ContactForm-email-error"
         class="contact-form__error"
         tabindex="-1"
         autofocus
@@ -58,47 +57,25 @@
       </div>
     {%- endif -%}
 
-    <div class="contact-form__row">
-      <div class="contact-form__field">
-        <label
-          class="contact-form__label"
-          for="ContactForm-first-name"
-        >
-          {{- 'blocks.contact_form.first_name' | t -}}
-        </label>
-        <input
-          type="text"
-          id="ContactForm-first-name"
-          class="contact-form__input"
-          autocomplete="given-name"
-          name="contact[first_name]"
-          value="{% if customer %}{{ customer.first_name }}{% endif %}"
-          placeholder="{{ 'blocks.contact_form.first_name' | t }}"
-        >
-      </div>
-
-      <div class="contact-form__field">
-        <label
-          class="contact-form__label"
-          for="ContactForm-last-name"
-        >
-          {{- 'blocks.contact_form.last_name' | t -}}
-        </label>
-        <input
-          type="text"
-          id="ContactForm-last-name"
-          class="contact-form__input"
-          autocomplete="family-name"
-          name="contact[last_name]"
-          value="{% if customer %}{{ customer.last_name }}{% endif %}"
-          placeholder="{{ 'blocks.contact_form.last_name' | t }}"
-        >
-      </div>
-    </div>
-
-    <div class="contact-form__field">
+    <div class="contact-form__form-row">
       <label
-        class="contact-form__label"
+        class="visually-hidden"
+        for="ContactForm-name"
+      >
+        {{- 'blocks.contact_form.name' | t -}}
+      </label>
+      <input
+        type="text"
+        id="ContactForm-name"
+        class="contact-form__input"
+        autocomplete="name"
+        name="contact[name]"
+        value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+        placeholder="{{ 'blocks.contact_form.name' | t }}"
+      >
+
+      <label
+        class="visually-hidden"
         for="ContactForm-email"
       >
         {{- 'blocks.contact_form.email' | t -}}
@@ -122,70 +99,38 @@
       >
     </div>
 
-    <div class="contact-form__row">
-      <div class="contact-form__field">
-        <label
-          class="contact-form__label"
-          for="ContactForm-state"
-        >
-          {{- 'blocks.contact_form.state' | t -}}
-        </label>
-        <select
-          id="ContactForm-state"
-          class="contact-form__input contact-form__select"
-          name="contact[state]"
-        >
-          <option
-            value=""
-            selected
-            disabled
-          >
-            {{- 'blocks.contact_form.state_placeholder' | t -}}
-          </option>
-          {%- assign us_states = 'Alabama,Alaska,Arizona,Arkansas,California,Colorado,Connecticut,Delaware,Florida,Georgia,Hawaii,Idaho,Illinois,Indiana,Iowa,Kansas,Kentucky,Louisiana,Maine,Maryland,Massachusetts,Michigan,Minnesota,Mississippi,Missouri,Montana,Nebraska,Nevada,New Hampshire,New Jersey,New Mexico,New York,North Carolina,North Dakota,Ohio,Oklahoma,Oregon,Pennsylvania,Rhode Island,South Carolina,South Dakota,Tennessee,Texas,Utah,Vermont,Virginia,Washington,West Virginia,Wisconsin,Wyoming' | split: ',' -%}
-          {%- for state in us_states -%}
-            <option value="{{ state }}">{{ state }}</option>
-          {%- endfor -%}
-        </select>
-      </div>
+    <label
+      class="visually-hidden"
+      for="ContactForm-phone"
+    >
+      {{- 'blocks.contact_form.phone' | t -}}
+    </label>
+    <input
+      type="tel"
+      id="ContactForm-phone"
+      class="contact-form__input"
+      autocomplete="tel"
+      name="contact[phone]"
+      pattern="[0-9\-]*"
+      value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+      placeholder="{{ 'blocks.contact_form.phone' | t }}"
+    >
 
-      <div class="contact-form__field">
-        <label
-          class="contact-form__label"
-          for="ContactForm-phone"
-        >
-          {{- 'blocks.contact_form.phone' | t -}}
-        </label>
-        <input
-          type="tel"
-          id="ContactForm-phone"
-          class="contact-form__input"
-          autocomplete="tel"
-          name="contact[phone]"
-          pattern="[0-9\-]*"
-          value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-          placeholder="{{ 'blocks.contact_form.phone' | t }}"
-        >
-      </div>
-    </div>
-
-    <div class="contact-form__field">
-      <label
-        class="contact-form__label"
-        for="ContactForm-body"
-      >
-        {{- 'blocks.contact_form.comment' | t -}}
-      </label>
-      <textarea
-        rows="6"
-        id="ContactForm-body"
-        class="contact-form__input contact-form__input--textarea"
-        name="contact[body]"
-        placeholder="{{ 'blocks.contact_form.comment' | t }}"
-      >
-        {{- form.body -}}
-      </textarea>
-    </div>
+    <label
+      class="visually-hidden"
+      for="ContactForm-body"
+    >
+      {{- 'blocks.contact_form.comment' | t -}}
+    </label>
+    <textarea
+      rows="10"
+      id="ContactForm-body"
+      class="contact-form__input contact-form__input--textarea"
+      name="contact[body]"
+      placeholder="{{ 'blocks.contact_form.comment' | t }}"
+    >
+      {{- form.body -}}
+    </textarea>
 
     {{ submit_button }}
   {%- endform -%}
@@ -198,26 +143,15 @@
     gap: var(--gap-md);
   }
 
-  .contact-form__row {
+  .contact-form__form-row {
     display: flex;
     flex-direction: column;
     gap: var(--gap-md);
 
     @media screen and (min-width: 750px) {
       flex-direction: row;
+      align-items: center;
     }
-  }
-
-  .contact-form__field {
-    display: flex;
-    flex: 1 1 0%;
-    flex-direction: column;
-    gap: var(--gap-xs);
-    min-width: 0;
-  }
-
-  .contact-form__label {
-    font-size: var(--font-size--sm);
   }
 
   .contact-form__input {
@@ -230,10 +164,6 @@
     border-radius: var(--style-border-radius-inputs);
     border: var(--style-border-width-inputs) solid var(--color-input-border);
     -webkit-font-smoothing: antialiased;
-  }
-
-  .contact-form__select {
-    appearance: auto;
   }
 
   .contact-form__input--textarea {
