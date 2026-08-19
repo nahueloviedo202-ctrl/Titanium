@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('{{ 'cormorant-garamond-400.woff2' | asset_url }}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.frequently-bought-together {
+  --fbt-height: 300px;
+  --fbt-title-size: 24px;
+  --fbt-title-tracking: -0.4px;
+  --fbt-title-width: 108px;
+  --fbt-title-col-width: 108px;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: var(--fbt-height);
+  background: #050505;
+  overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .frequently-bought-together {
+    --fbt-height: 340px;
+    --fbt-title-size: 28px;
+    --fbt-title-tracking: -0.6px;
+    --fbt-title-width: 132px;
+    --fbt-title-col-width: 132px;
+  }
+}
+
+@media (min-width: 700px) {
+  .frequently-bought-together {
+    --fbt-height: 380px;
+    --fbt-title-size: 32px;
+    --fbt-title-tracking: -0.8px;
+    --fbt-title-width: 156px;
+    --fbt-title-col-width: 156px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .frequently-bought-together {
+    --fbt-height: 400px;
+    --fbt-title-size: 36px;
+    --fbt-title-tracking: -1px;
+    --fbt-title-width: 176px;
+    /* Figma: title column is one of 5 equal-width columns (323px each) */
+    --fbt-title-col-width: 323px;
+  }
+}
+
+.frequently-bought-together__title {
+  flex: 0 0 var(--fbt-title-col-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 56px;
+  background: #050505;
+}
+
+.frequently-bought-together__title h2 {
+  margin: 0;
+  max-width: var(--fbt-title-width);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--fbt-title-size);
+  line-height: 1.1;
+  letter-spacing: var(--fbt-title-tracking);
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  width: 176px;
+}
+
+.frequently-bought-together__carousel {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+}
+
+.frequently-bought-together__slider {
+  height: 100%;
+}
+
+.frequently-bought-together__grid {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 0;
+}
+
+.frequently-bought-together__item {
+  position: relative;
+  flex: 0 0 68%;
+  max-width: 300px;
+  height: 100%;
+}
+
+@media (min-width: 480px) {
+  .frequently-bought-together__item {
+    flex-basis: 55%;
+  }
+}
+
+@media (min-width: 700px) {
+  .frequently-bought-together__item {
+    flex-basis: 42%;
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .frequently-bought-together__slider.slider {
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .frequently-bought-together__item {
+    flex: 1 1 0;
+    max-width: 323px;
+  }
+}
+
+@media (max-width: 768px) {
+  .frequently-bought-together__title {
+    padding: 20px;
+  }
+  .frequently-bought-together__title h2 {
+    font-size: 20px;
+    width: 120px;
+  }
+}
+
+.frequently-bought-together__card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.frequently-bought-together__image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.frequently-bought-together__image .theme-img,
+.frequently-bought-together__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.frequently-bought-together__card:hover .theme-img,
+.frequently-bought-together__card:hover img {
+  transform: scale(1.04);
+}
+
+.frequently-bought-together__image .placeholder-image {
+  height: 100%;
+}
+
+.frequently-bought-together__image .placeholder-image svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frequently-bought-together__card::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 36%;
+  background: linear-gradient(to bottom, rgba(5, 5, 5, 0) 0%, #050505 100%);
+  pointer-events: none;
+}
+
+.frequently-bought-together__info {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+}
+
+@media (min-width: 1000px) {
+  .frequently-bought-together__info {
+    left: 20px;
+    right: auto;
+    width: 166px;
+    bottom: 22px;
+  }
+}
+
+.frequently-bought-together__product-title {
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.frequently-bought-together__product-price {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.frequently-bought-together .slider--no-scrollbar {
+  padding-bottom: 0;
+}

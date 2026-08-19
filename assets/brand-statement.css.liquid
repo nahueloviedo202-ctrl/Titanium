@@ -1,0 +1,72 @@
+/*
+ * Media frame is Fixed 1440x720 in Figma (node 454:4423, "brand-statement") —
+ * a 2:1 full-bleed banner. Reproduced with aspect-ratio so it scales exactly
+ * from the reference width instead of a hardcoded height. The name/role
+ * caption in the source photo is baked into the image bytes (no separate
+ * Figma text node exists for it), so it's rebuilt here as real, editable
+ * markup positioned in the same bottom-right corner rather than copied as
+ * pixels — the padding values below are therefore a design decision, not
+ * measured Figma tokens.
+ */
+
+.brand-statement {
+  position: relative;
+  margin: 0;
+}
+
+.brand-statement__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1440 / 720;
+}
+
+/* Only when a dedicated mobile image is uploaded do we switch to a fixed-height
+   crop box on mobile (height_mobile setting) instead of keeping the desktop's
+   horizontal 2:1 format. */
+.brand-statement__media--has-mobile-image {
+  aspect-ratio: auto;
+  height: var(--bs-mobile-image-height, 420px);
+}
+
+@media (min-width: 768px) {
+  .brand-statement__media--has-mobile-image {
+    height: auto;
+    aspect-ratio: 1440 / 720;
+  }
+}
+
+.brand-statement__caption {
+  position: absolute;
+  right: var(--container-pad-x);
+  bottom: 24px;
+  max-width: calc(100% - (2 * var(--container-pad-x)));
+  color: #fff;
+  text-align: right;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.brand-statement__name {
+  margin: 0;
+  color: currentColor;
+  font-family: var(--base-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-statement__role {
+  margin: 4px 0 0;
+  color: currentColor;
+}
+
+@media (min-width: 768px) {
+  .brand-statement__caption {
+    bottom: 40px;
+  }
+  .brand-statement__name {
+    font-size: 16px;
+  }
+}

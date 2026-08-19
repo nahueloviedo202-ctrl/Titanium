@@ -1,0 +1,176 @@
+/*
+ * Container math (desktop reference frame, 1450px+ breakpoint, Figma node 454:4429):
+ * panel: 76px + 460px (content, Hug) + 85px = 621px
+ * media: fills remaining space (flex: 1 1 auto) = 1440 - 621 = 819px
+ * This math only holds if the row itself is capped at 1440px (see
+ * .collection-story__row max-width below) — without a cap, "fills remaining
+ * space" grows unbounded on wide viewports, over-stretching and
+ * over-cropping the image far past what the Figma frame shows.
+ */
+
+.collection-story-section {
+  padding-top: var(--cs-pad-top-mobile, 0px);
+  padding-bottom: var(--cs-pad-bottom-mobile, 0px);
+  padding-left: var(--cs-pad-x-mobile, 0px);
+  padding-right: var(--cs-pad-x-mobile, 0px);
+}
+
+.collection-story__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-story__panel {
+  position: relative;
+}
+
+.collection-story__content {
+  /* Figma's 460px is the content column's own width, with padding added
+     outside it — restore content-box here so max-width isn't eaten by the
+     theme's global border-box reset (see panel math above). */
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 460px;
+  padding: 48px var(--container-pad-x);
+}
+
+.collection-story__heading {
+  margin: 0;
+  color: rgb(var(--heading-color));
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  font-size: 28px;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  text-transform: none;
+}
+
+.collection-story__text {
+  margin: 0;
+  color: #464646;
+  font-family: var(--base-font-family);
+  font-variation-settings: 'opsz' 14;
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.collection-story__text p {
+  margin: 0;
+}
+.collection-story__text p + p {
+  margin-top: 1em;
+}
+
+/* #464646 is the Figma design token for this copy (text-80), tuned against
+   a white panel. On the dark color schemes it has no usable contrast, so
+   fall back to the scheme's own text color there. */
+.collection-story__panel.use-color-scheme--1 .collection-story__text,
+.collection-story__panel.use-color-scheme--2 .collection-story__text {
+  color: rgb(var(--text-color));
+}
+
+.collection-story__cta {
+  margin-top: 8px;
+}
+.collection-story__cta .small-feature-link {
+  color: rgb(var(--heading-color));
+  text-decoration-color: rgb(var(--heading-color-solid) / 0.4);
+}
+.collection-story__cta .small-feature-link:hover {
+  text-decoration-color: rgb(var(--heading-color-solid));
+}
+
+.collection-story__media {
+  position: relative;
+}
+.collection-story__media-link {
+  display: block;
+}
+
+/* Mobile shows the full image at its natural aspect ratio — no fixed-height
+   box, so no cropping and no letterboxing. Overrides main.css's
+   .height__image absolute-fill pattern, which assumes a pre-sized crop box. */
+.collection-story__media .height__image,
+.collection-story__media .height__image img {
+  position: static;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .collection-story__heading {
+    font-size: 30px;
+  }
+}
+
+/* 1000px/1300px padding below is interpolated (not in the Figma file, which
+   only specifies the 1450px+ frame) to match the step cadence already used
+   by collection-picks/-highlight/-spotlight. Only the 1450px+ values are
+   exact Figma numbers. */
+@media (min-width: 1000px) {
+  .collection-story-section {
+    padding-top: var(--cs-pad-top-desktop, 0px);
+    padding-bottom: var(--cs-pad-bottom-desktop, 0px);
+    padding-left: var(--cs-pad-x-desktop, 0px);
+    padding-right: var(--cs-pad-x-desktop, 0px);
+  }
+  .collection-story__row {
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .collection-story--image-left .collection-story__row {
+    flex-direction: row-reverse;
+  }
+  .collection-story__panel {
+    flex: 0 1 auto;
+  }
+  .collection-story__content {
+    padding: 56px 48px;
+  }
+  .collection-story__media {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .collection-story__media-link {
+    display: block;
+    height: 100%;
+  }
+  .collection-story__media .height__image,
+  .collection-story__media .height__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .collection-story__media .height__image img {
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 1300px) {
+  .collection-story__content {
+    padding: 72px 85px 72px 76px;
+  }
+  .collection-story__heading {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1450px) {
+  /* Exact Figma values (node 454:4429): 76px + 460px content + 85px = 621px panel. */
+  .collection-story__content {
+    padding: 85px 85px 85px 76px;
+  }
+  .collection-story__heading {
+    font-size: 36px;
+  }
+}

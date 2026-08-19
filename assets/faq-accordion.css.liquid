@@ -1,0 +1,137 @@
+/*
+ * Measurements (Figma node 412:199, "Question container", 1440 frame):
+ * - Content column: Fixed 853px, centered on the page (1440 frame: 293.5px side padding)
+ * - Row content: 833px text + 20px icon column = 853px total, contiguous (no gap)
+ * - Vertical gap between blocks (links panel / category groups): 24px
+ *   (verified against sibling y-offsets: 194+24=218, 336+24=360, 568+24=592)
+ * - Inside a group: 16px gap between title and rows, and between each row
+ * - Inside an open question: 8px gap between the question and its inline answer
+ * - Group bottom spacing: 20px padding + 1px border (#D5DEE5, border-on-blue)
+ * - Section: 60px bottom padding (desktop), no top padding in the reference frame
+ * - Title: DM Sans Medium 14.5px / 1.5, color #121212 (dark-100)
+ * - Links/questions/answers: DM Sans Light 14.5px / 1.5, color #464646 (text-80)
+ */
+
+.faq-accordion {
+  --faq-title-color: #121212;
+  --faq-text-color: #464646;
+  --faq-border-color: #D5DEE5;
+  padding-top: var(--faq-pad-top-mobile, 0px);
+  padding-bottom: var(--faq-pad-bottom-mobile, 40px);
+  background: #FFFFFF;
+}
+
+.faq-accordion.use-color-scheme {
+  background: rgb(var(--bg-color));
+}
+
+.container-faq-accordion {
+  max-width: var(--page-container-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-pad-x);
+  padding-left: var(--container-pad-x);
+}
+
+.faq-accordion__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 853px;
+  margin: 0 auto;
+}
+
+.faq-accordion__group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--faq-border-color);
+}
+
+.faq-accordion__title {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+  font-weight: 500;
+  font-size: 14.5px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--faq-title-color);
+}
+
+/* "Most popular" links block */
+.faq-accordion__links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-accordion__links-link {
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+  font-weight: 300;
+  font-size: 14.5px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--faq-text-color);
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+
+.faq-accordion__empty-state {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+  font-weight: 300;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--faq-text-color);
+}
+
+/* Category question/answer accordion - reuses the theme's .disclosure component,
+   overriding its default spacing/border so the group above supplies the rhythm
+   (16px between rows, one shared border under the whole group) instead */
+.faq-accordion .disclosure {
+  margin: 0;
+  border: 0;
+}
+
+.faq-accordion .disclosure__title {
+  padding: 0 20px 0 0;
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+  font-weight: 300;
+  font-size: 14.5px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--faq-text-color);
+}
+
+.faq-accordion .disclosure__title::before,
+.faq-accordion .disclosure__title::after {
+  right: 4.5px;
+}
+
+.faq-accordion .disclosure__content {
+  padding-top: 8px;
+  padding-bottom: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+  font-weight: 300;
+  font-size: 14.5px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--faq-text-color);
+}
+
+@media (min-width: 1000px) {
+  .faq-accordion {
+    padding-top: var(--faq-pad-top-desktop, 0px);
+    padding-bottom: var(--faq-pad-bottom-desktop, 60px);
+  }
+}

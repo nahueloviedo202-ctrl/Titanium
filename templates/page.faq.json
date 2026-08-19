@@ -9,7 +9,7 @@
  */
 {
   "sections": {
-    "breadcrumbs_cwwTDR": {
+    "breadcrumbs_ddAmbP": {
       "type": "breadcrumbs",
       "name": "Breadcrumbs",
       "settings": {
@@ -24,109 +24,73 @@
         "padding_right_mobile": 30
       }
     },
-    "main": {
-      "type": "main-contact",
+    "faq-content-1": {
+      "type": "collapsible-tabs",
       "blocks": {
-        "name": {
-          "type": "name_input",
-          "settings": {}
-        },
-        "email": {
-          "type": "email_input",
+        "question-1": {
+          "type": "question",
           "settings": {
-            "half_width": false
+            "title": "What size should I buy?",
+            "answer": "<p>If you’re not quite sure which size is right for you, refer to our size guides. They’re located underneath the available sizes for each of our products.</p>"
           }
         },
-        "phone": {
-          "type": "phone_input",
+        "question-2": {
+          "type": "question",
           "settings": {
-            "required": true,
-            "half_width": false
-          }
-        },
-        "message": {
-          "type": "message_input",
-          "settings": {
-            "character_limit": 1500,
-            "half_width": false
+            "title": "Can I cancel my order?",
+            "answer": "<p>We completely get it, we change our minds too! While we wish could, once an order is placed, we are unable to alter or cancel it at this time. We hope to have a cancellation window one day in the future.</p><p>Should the item(s) not work out, make sure to exchange for a preferred style or return for a refund. As a reminder, domestic return shipping is free.</p>"
           }
         }
       },
       "block_order": [
-        "name",
-        "email",
-        "phone",
-        "message"
+        "question-1",
+        "question-2"
       ],
       "settings": {
-        "contact_title": "Contact us",
-        "contact_text": "<p>Our Client Services team strives to respond to all enquiries promptly during business hours.</p>",
-        "image": "shopify://shop_images/new-contact.png",
-        "show_page_title": false,
-        "column_gap_desktop": 60,
-        "padding_top_desktop": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_desktop": 75,
-        "padding_bottom_mobile": 48,
-        "side_padding_desktop": 75,
-        "side_padding_mobile": 30,
-        "color_scheme": "default"
+        "title": "Ordering",
+        "open_tab": false,
+        "enable_faq_schema": false
       }
     },
-    "newsletter_R7zWLX": {
-      "type": "newsletter",
-      "name": "Newsletter",
-      "settings": {
-        "image": "shopify://shop_images/newsletter_1.webp",
-        "overlay_color": "#000000",
-        "overlay_opacity": 65,
-        "height_desktop": 450,
-        "height_mobile": 380,
-        "title": "Subscribe to Our Newsletter",
-        "subheading": "<p>Private releases, one-of-one pieces, and first access to new collections.</p>",
-        "button_label": "Join",
-        "color_scheme": "default"
-      }
-    },
-    "instagram_gallery_KAj8HC": {
+    "instagram_gallery_p7KMKL": {
       "type": "instagram-gallery",
       "blocks": {
-        "image_r7iUKG": {
+        "image_mKzd4T": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ig-1.webp",
             "link": ""
           }
         },
-        "image_3DX8U9": {
+        "image_bNBHnG": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ig-2.webp",
             "link": ""
           }
         },
-        "image_jq7FXL": {
+        "image_WB8n6R": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ig-3.webp",
             "link": ""
           }
         },
-        "image_VNBmWV": {
+        "image_tUdRK8": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ig-4.webp",
             "link": ""
           }
         },
-        "image_CicNnp": {
+        "image_jXpgCb": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ig-5.webp",
             "link": ""
           }
         },
-        "image_TqW7fN": {
+        "image_XDPHkx": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ig-6.webp",
@@ -135,12 +99,12 @@
         }
       },
       "block_order": [
-        "image_r7iUKG",
-        "image_3DX8U9",
-        "image_jq7FXL",
-        "image_VNBmWV",
-        "image_CicNnp",
-        "image_TqW7fN"
+        "image_mKzd4T",
+        "image_bNBHnG",
+        "image_WB8n6R",
+        "image_tUdRK8",
+        "image_jXpgCb",
+        "image_XDPHkx"
       ],
       "name": "Instagram gallery",
       "settings": {
@@ -163,9 +127,8 @@
     }
   },
   "order": [
-    "breadcrumbs_cwwTDR",
-    "main",
-    "newsletter_R7zWLX",
-    "instagram_gallery_KAj8HC"
+    "breadcrumbs_ddAmbP",
+    "faq-content-1",
+    "instagram_gallery_p7KMKL"
   ]
 }

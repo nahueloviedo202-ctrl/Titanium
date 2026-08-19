@@ -1,0 +1,203 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": true,
+        "full_width": false
+      }
+    },
+    "breadcrumbs_7ymTFF": {
+      "type": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "settings": {
+        "show_next_prev": true,
+        "padding_top_desktop": 16,
+        "padding_top_mobile": 16,
+        "padding_bottom_desktop": 24,
+        "padding_bottom_mobile": 16,
+        "padding_left_desktop": 75,
+        "padding_left_mobile": 30,
+        "padding_right_desktop": 75,
+        "padding_right_mobile": 30
+      }
+    },
+    "brand_story_4KGJY3": {
+      "type": "brand-story",
+      "blocks": {
+        "heading_JAXWYj": {
+          "type": "heading",
+          "settings": {
+            "title": "Our Story",
+            "use_h1": false,
+            "text_align": "center"
+          }
+        },
+        "text_mG6xFB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The name THIRTY1 is a tribute to the year 1931, the year my grandfather was born—a man whose legacy is the cornerstone of this brand.</p><p>Raised by my grandparents in Chios, Greece from a very young age, they shaped my understanding of strength and individuality early on.</p><p>THIRTY1 jewelry embodies a unique duality: the toughness and resilience that my grandfather displayed throughout his life, coupled with an undeniable elegance that defined his love and devotion to those who mattered most. My grandfather was a man who didn’t care what others thought—he lived by his own rules, unapologetically. This same spirit is reflected in THIRTY1 jewelry, which challenges traditional norms and empowers you to wear what makes you feel authentic and strong.</p>",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JAXWYj",
+        "text_mG6xFB"
+      ],
+      "name": "Brand story",
+      "settings": {
+        "color_scheme": "default"
+      }
+    },
+    "brand_statement_7Wjg4t": {
+      "type": "brand-statement",
+      "name": "Brand statement",
+      "settings": {
+        "image": "shopify://shop_images/brand-statement.png",
+        "name": "",
+        "role": "",
+        "use_h1": false,
+        "full_width": true,
+        "height_mobile": 420
+      }
+    },
+    "brand_story_dLMywC": {
+      "type": "brand-story",
+      "blocks": {
+        "heading_JxHRm6": {
+          "type": "heading",
+          "settings": {
+            "title": "Grandfather & Brand Story",
+            "use_h1": false,
+            "text_align": "center"
+          }
+        },
+        "text_GdqmhN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The name THIRTY1 is a tribute to the year 1931, the year my grandfather was born—a man whose legacy is the cornerstone of this brand.</p><p>Raised by my grandparents in Chios, Greece from a very young age, they shaped my understanding of strength and individuality early on.</p><p>THIRTY1 jewelry embodies a unique duality: the toughness and resilience that my grandfather displayed throughout his life, coupled with an undeniable elegance that defined his love and devotion to those who mattered most. My grandfather was a man who didn’t care what others thought—he lived by his own rules, unapologetically. This same spirit is reflected in THIRTY1 jewelry, which challenges traditional norms and empowers you to wear what makes you feel authentic and strong.</p>",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JxHRm6",
+        "text_GdqmhN"
+      ],
+      "name": "Brand story",
+      "settings": {
+        "color_scheme": "default"
+      }
+    },
+    "collection_story_TXrXhE": {
+      "type": "collection-story",
+      "name": "Collection story",
+      "settings": {
+        "image": "shopify://shop_images/IMG_4179_2.png",
+        "image_link": "",
+        "heading": "Behind the Design",
+        "use_h1": false,
+        "text": "<p>In my journey through the world of jewelry and design, I've come to understand that true luxury lies in the freedom to script your own story. THIRTY1 isn't just about showcasing my designs; it's about inspiring you to curate a narrative that extends from your finger-stacked rings to your wrist-adorned arm stacks. This brand is designed to evoke a sense of empowerment and confidence, allowing you to feel good in every piece you choose.<br/><br/>Rings have always been my forte, my second skin, almost like a personal armor. Having grown up in my father's jewelry store, experimenting with various combinations and designs has been a lifelong passion. My style, like my stacks of “armor,\" has evolved over the years, encompassing not only my designs but also a mix of vintage, one-of-a-kind pieces, and watches sourced from around the globe.Jewelry is meant to be fun, a form of self-expression that defies boundaries. I'm not here to dictate the perfect combination of pieces; I'm here to share the feeling of liberation, chaos, and creativity that designing and curating these pieces has given me.<br/><br/>This is more than a brand; it's an invitation to dive headfirst into your individuality, amplify your style of self-expression, and deck yourself out in some badass shit. Welcome to the unapologetic life of THIRTY1. Luxury for the nonconformist.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "link",
+        "image_position": "right",
+        "full_width": true,
+        "color_scheme": "default"
+      }
+    },
+    "instagram_gallery_Gn3yjb": {
+      "type": "instagram-gallery",
+      "blocks": {
+        "image_eAQn79": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.webp",
+            "link": ""
+          }
+        },
+        "image_Gydcgm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.webp",
+            "link": ""
+          }
+        },
+        "image_pkwrrk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-3.webp",
+            "link": ""
+          }
+        },
+        "image_7f3MdN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-4.webp",
+            "link": ""
+          }
+        },
+        "image_YfkXr3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-5.webp",
+            "link": ""
+          }
+        },
+        "image_AimGWK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-6.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_eAQn79",
+        "image_Gydcgm",
+        "image_pkwrrk",
+        "image_7f3MdN",
+        "image_YfkXr3",
+        "image_AimGWK"
+      ],
+      "name": "Instagram gallery",
+      "settings": {
+        "title": "Inside THIRTY1",
+        "button_label": "Follow @thirty1",
+        "button_link": "https://www.instagram.com/thirty1jewelry/",
+        "padding_top_desktop": 60,
+        "padding_top_mobile": 32,
+        "title_gap_desktop": 28,
+        "title_gap_mobile": 20,
+        "button_gap_desktop": 40,
+        "button_gap_mobile": 24,
+        "padding_bottom_desktop": 60,
+        "padding_bottom_mobile": 32,
+        "item_gap": 10,
+        "side_padding_desktop": 40,
+        "side_padding_mobile": 16,
+        "color_scheme": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "breadcrumbs_7ymTFF",
+    "brand_story_4KGJY3",
+    "brand_statement_7Wjg4t",
+    "brand_story_dLMywC",
+    "collection_story_TXrXhE",
+    "instagram_gallery_Gn3yjb"
+  ]
+}

@@ -1,0 +1,275 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_ddAmbP": {
+      "type": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "settings": {
+        "show_next_prev": true,
+        "padding_top_desktop": 16,
+        "padding_top_mobile": 16,
+        "padding_bottom_desktop": 24,
+        "padding_bottom_mobile": 16,
+        "padding_left_desktop": 75,
+        "padding_left_mobile": 30,
+        "padding_right_desktop": 75,
+        "padding_right_mobile": 30
+      }
+    },
+    "brand_story_iwTJqk": {
+      "type": "brand-story",
+      "blocks": {
+        "heading_YmTabe": {
+          "type": "heading",
+          "settings": {
+            "title": "Frequently Asked Questions",
+            "use_h1": false,
+            "text_align": "center",
+            "heading_color": "",
+            "max_width": 668
+          }
+        },
+        "text_EMjfQV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Find answers to our most commonly asked questions about custom jewelry, orders, shipping, sizing, and care.<br/><br/>If you need additional assistance, our team is here to help. Whether you're starting a custom design, checking the status of your order, or have questions about one of our pieces, we're happy to assist.<br/><br/>For personalized support, please contact us through our Contact page or email us at <a href=\"mailto:hello@thirty1jewelry.com\" title=\"mailto:hello@thirty1jewelry.com\"><strong>hello@thirty1jewelry.com</strong></a>.<br/>Looking for a one-of-a-kind piece? Visit our Custom Design page to begin creating jewelry that's uniquely yours.    </p>",
+            "text_align": "center",
+            "max_width": 824
+          }
+        }
+      },
+      "block_order": [
+        "heading_YmTabe",
+        "text_EMjfQV"
+      ],
+      "name": "Brand story",
+      "settings": {
+        "color_scheme": "default"
+      }
+    },
+    "faq_accordion_y8aW9J": {
+      "type": "faq-accordion",
+      "blocks": {
+        "faq_accordion_links_CbYEJe": {
+          "type": "faq-accordion-links",
+          "settings": {
+            "title": "MOST POPULAR",
+            "menu": "faq-page-links"
+          },
+          "blocks": {}
+        },
+        "faq_accordion_category_QjdkjM": {
+          "type": "faq-accordion-category",
+          "settings": {
+            "title": "ORDERS & SHIPPING"
+          },
+          "blocks": {
+            "faq_accordion_question_Fw4Pbk": {
+              "type": "faq-accordion-question",
+              "settings": {
+                "question": "CAN I CANCEL MY ORDER?",
+                "answer": "<p>Contact us as soon as possible and we will do our best to accommodate your request before the order ships.</p>",
+                "open": false
+              },
+              "blocks": {}
+            },
+            "faq_accordion_question_GHPPMV": {
+              "type": "faq-accordion-question",
+              "settings": {
+                "question": "CAN I RETURN OR EXCHANGE MY ORDER?",
+                "answer": "<p>Yes, unworn items can be returned or exchanged within our return window. See our return policy for full details.</p>",
+                "open": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "faq_accordion_question_Fw4Pbk",
+            "faq_accordion_question_GHPPMV"
+          ]
+        },
+        "faq_accordion_category_8ii3Wg": {
+          "type": "faq-accordion-category",
+          "settings": {
+            "title": "RETURNS & CANCELLATIONS"
+          },
+          "blocks": {
+            "faq_accordion_question_NX4MH9": {
+              "type": "faq-accordion-question",
+              "settings": {
+                "question": "WHERE DOES THIRTY1 SHIP?",
+                "answer": "<p>We ship THIRTY1 jewelry worldwide. Shipping times and costs may vary depending on your location and will be calculated during checkout.</p>",
+                "open": true
+              },
+              "blocks": {}
+            },
+            "faq_accordion_question_LfTxDd": {
+              "type": "faq-accordion-question",
+              "settings": {
+                "question": "HOW CAN I TRACK MY ORDER?",
+                "answer": "<p>You will receive a shipping confirmation email with tracking information as soon as your order ships.</p>",
+                "open": false
+              },
+              "blocks": {}
+            },
+            "faq_accordion_question_BWHWwN": {
+              "type": "faq-accordion-question",
+              "settings": {
+                "question": "HOW LONG WILL MY ORDER TAKE?",
+                "answer": "<p>Delivery times vary by destination and are calculated at checkout based on your shipping address.</p>",
+                "open": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "faq_accordion_question_NX4MH9",
+            "faq_accordion_question_LfTxDd",
+            "faq_accordion_question_BWHWwN"
+          ]
+        },
+        "faq_accordion_category_jK9GyU": {
+          "type": "faq-accordion-category",
+          "settings": {
+            "title": "REPAIRS & WARRANTY"
+          },
+          "blocks": {
+            "faq_accordion_question_Nhf8Cf": {
+              "type": "faq-accordion-question",
+              "settings": {
+                "question": "DOES THIRTY1 OFFER REPAIRS?",
+                "answer": "<p>Yes, contact our team with your order details and a description of the issue to start a repair request.</p>",
+                "open": false
+              },
+              "blocks": {}
+            },
+            "faq_accordion_question_PUjnmw": {
+              "type": "faq-accordion-question",
+              "settings": {
+                "question": "IS MY JEWELRY COVERED BY A WARRANTY?",
+                "answer": "<p>All THIRTY1 pieces include a limited warranty against manufacturing defects.</p>",
+                "open": false
+              },
+              "blocks": {}
+            },
+            "faq_accordion_question_WpWgAb": {
+              "type": "faq-accordion-question",
+              "settings": {
+                "question": "WHAT IS NOT COVERED BY THE WARRANTY?",
+                "answer": "<p>General wear and tear, damage from misuse, and loss are not covered by the warranty.</p>",
+                "open": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "faq_accordion_question_Nhf8Cf",
+            "faq_accordion_question_PUjnmw",
+            "faq_accordion_question_WpWgAb"
+          ]
+        }
+      },
+      "block_order": [
+        "faq_accordion_links_CbYEJe",
+        "faq_accordion_category_QjdkjM",
+        "faq_accordion_category_8ii3Wg",
+        "faq_accordion_category_jK9GyU"
+      ],
+      "name": "FAQ accordion",
+      "settings": {
+        "color_scheme": "default",
+        "padding_top_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_desktop": 60,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "instagram_gallery_p7KMKL": {
+      "type": "instagram-gallery",
+      "blocks": {
+        "image_mKzd4T": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.webp",
+            "link": ""
+          }
+        },
+        "image_bNBHnG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.webp",
+            "link": ""
+          }
+        },
+        "image_WB8n6R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-3.webp",
+            "link": ""
+          }
+        },
+        "image_tUdRK8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-4.webp",
+            "link": ""
+          }
+        },
+        "image_jXpgCb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-5.webp",
+            "link": ""
+          }
+        },
+        "image_XDPHkx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-6.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mKzd4T",
+        "image_bNBHnG",
+        "image_WB8n6R",
+        "image_tUdRK8",
+        "image_jXpgCb",
+        "image_XDPHkx"
+      ],
+      "name": "Instagram gallery",
+      "settings": {
+        "title": "Inside THIRTY1",
+        "button_label": "Follow @thirty1",
+        "button_link": "https://www.instagram.com/thirty1jewelry/",
+        "padding_top_desktop": 60,
+        "padding_top_mobile": 32,
+        "title_gap_desktop": 28,
+        "title_gap_mobile": 20,
+        "button_gap_desktop": 40,
+        "button_gap_mobile": 24,
+        "padding_bottom_desktop": 60,
+        "padding_bottom_mobile": 32,
+        "item_gap": 10,
+        "side_padding_desktop": 40,
+        "side_padding_mobile": 16,
+        "color_scheme": "default"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_ddAmbP",
+    "brand_story_iwTJqk",
+    "faq_accordion_y8aW9J",
+    "instagram_gallery_p7KMKL"
+  ]
+}

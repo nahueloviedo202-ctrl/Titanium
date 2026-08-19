@@ -1,0 +1,246 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('{{ 'cormorant-garamond-400.woff2' | asset_url }}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.collection-picks__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-picks__panel {
+  position: relative;
+}
+
+.collection-picks__panel-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  height: 100%;
+  padding: 48px var(--container-pad-x);
+  text-align: center;
+}
+
+.collection-picks__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.collection-picks__heading {
+  margin: 0;
+  width: 100%;
+  color: rgb(var(--heading-color));
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+/* Figma sets the "1" in the heading at 14/9 the size of the surrounding
+   text (56px vs 36px on desktop) with a tighter line-height (13/14) — em
+   and unitless values keep that ratio at every breakpoint. */
+.collection-picks__heading-digit {
+  font-weight: 300;
+  font-size: 1.5556em;
+  line-height: 0.9286;
+}
+
+.collection-picks__text {
+  max-width: 390px;
+  width: 100%;
+  margin: 0;
+  /* Figma's text-80 token (#464646) — lighter than this scheme's default
+     body text color (font_col_base), so it's hardcoded to match. */
+  color: #464646;
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.collection-picks__text p {
+  margin: 0;
+}
+.collection-picks__text p + p {
+  margin-top: 1em;
+}
+
+.collection-picks__products {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.collection-picks__card {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 190px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collection-picks__card-link {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.collection-picks__card-media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(180deg, rgb(233, 232, 228) 0%, rgb(247, 245, 241) 34.135%, rgb(252, 250, 246) 49.519%, rgb(247, 245, 241) 63.942%, rgb(233, 232, 228) 100%);
+}
+
+.collection-picks__card-media .placeholder-image {
+  width: 60%;
+  height: auto;
+  padding-top: 60%;
+  background: transparent;
+}
+
+.collection-picks__card-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.collection-picks__card-details {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.collection-picks__card-title {
+  margin: 0;
+  /* Figma's dark-100 token (#030303), one shade darker than this scheme's
+     heading color (#050505) — hardcoded to match. */
+  color: #030303;
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.collection-picks__card-price,
+.collection-picks__card-price .price,
+.collection-picks__card-price .price__default,
+.collection-picks__card-price .price__current,
+.collection-picks__card-price .price__from {
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.5;
+  /* Figma's text-80 token (#464646), same as .collection-picks__text. */
+  color: #464646;
+}
+
+.collection-picks__cta {
+  display: flex;
+  justify-content: center;
+}
+
+/* Figma specs this CTA in the panel's heading tone (text-100), not the
+   theme's generic (muted) link color. Letter-spacing/line-height are
+   pinned to Figma's values rather than the theme's global button tokens,
+   which only coincidentally match today because "Button style" is set to
+   "caps". */
+.collection-picks__cta .small-feature-link {
+  color: rgb(var(--heading-color));
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  text-decoration-color: rgb(var(--heading-color-solid) / 0.4);
+}
+.collection-picks__cta .small-feature-link:hover {
+  text-decoration-color: rgb(var(--heading-color-solid));
+}
+
+.collection-picks__media {
+  position: relative;
+  overflow: hidden;
+  height: var(--cp-mobile-image-height, 480px);
+}
+
+.collection-picks__media-square {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.collection-picks__media-link {
+  display: block;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .collection-picks__panel-inner {
+    padding: 56px var(--container-pad-x);
+  }
+  .collection-picks__heading {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .collection-picks__row {
+    flex-direction: row;
+    align-items: stretch;
+    max-width: calc(1365px + (var(--container-pad-x) * 2));
+    margin-inline: auto;
+    padding-inline: var(--container-pad-x);
+  }
+  .collection-picks--image-left .collection-picks__row {
+    flex-direction: row-reverse;
+  }
+  .collection-picks__panel {
+    flex: 0 0 540px;
+    width: 540px;
+  }
+  .collection-picks__panel-inner {
+    padding: 48px 75px;
+  }
+  .collection-picks__heading {
+    font-size: 36px;
+  }
+  .collection-picks__media {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  .collection-picks__media-square {
+    width: 100%;
+    max-width: 825px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+}

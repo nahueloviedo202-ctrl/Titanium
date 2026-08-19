@@ -1,0 +1,145 @@
+/*
+ * Heading and text blocks each carry their own max-width (block setting,
+ * default 668px matching the original Figma reference frame). They're
+ * always full-width up to that cap, centered by the flex parent's
+ * align-items: center — so each block can be sized independently.
+ */
+
+{%- comment -%}
+  Figma spec (node 415:64) sets this heading in 'EB Garamond' — distinct
+  from the 'Cormorant Garamond' cut the theme's global heading-font
+  override uses everywhere else. Self-hosted here (not via
+  doc-head/custom-fonts.liquid) so it stays scoped to this heading only.
+{%- endcomment -%}
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('{{ 'eb-garamond-400.woff2' | asset_url }}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+{%- comment -%}
+  Self-hosted here rather than relying on doc-head/custom-fonts.liquid,
+  which only emits this face when the theme's global heading-font
+  override setting is 'cormorant_garamond' — the FAQ page title below
+  needs it regardless of that toggle.
+{%- endcomment -%}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('{{ 'cormorant-garamond-400.woff2' | asset_url }}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+.brand-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-inline: auto;
+  padding-block: 48px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .brand-story {
+    padding-block: 60px;
+  }
+}
+
+.brand-story__heading {
+  width: 100%;
+  margin: 0;
+  color: rgb(var(--heading-color));
+  font-family: 'EB Garamond', serif;
+  font-size: 26px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+.brand-story__heading--left {
+  text-align: left;
+}
+.brand-story__heading--center {
+  text-align: center;
+}
+.brand-story__heading--right {
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .brand-story__heading {
+    font-size: 32px;
+  }
+}
+
+.brand-story__text {
+  width: 100%;
+  margin: 0;
+  color: #737373;
+  font-family: var(--btn-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.brand-story__text--left {
+  text-align: left;
+}
+.brand-story__text--center {
+  text-align: center;
+}
+.brand-story__text--right {
+  text-align: right;
+}
+.use-color-scheme .brand-story__text {
+  color: rgb(var(--text-color));
+}
+.brand-story__text p {
+  margin: 0;
+}
+.brand-story__text p + p {
+  margin-top: 1em;
+}
+.brand-story__text strong,
+.brand-story__text b {
+  font-weight: 500;
+}
+{%- comment -%}
+  Figma (node 412:193) shows the mailto link as plain text — same grey,
+  no underline — differentiated only by weight. Override the theme's
+  global link color/underline so it matches instead of rendering black
+  and underlined via the default `a` styles.
+{%- endcomment -%}
+.brand-story__text a {
+  color: inherit;
+  text-decoration: none;
+}
+.brand-story__text a:hover {
+  text-decoration: underline;
+}
+
+.template-suffix-frequently-asked-question .brand-story__heading {
+  color: #050505;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+@media (min-width: 768px) {
+  .template-suffix-our-story .brand-story__heading {
+    color: #050505;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+}

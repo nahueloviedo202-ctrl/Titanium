@@ -6,140 +6,203 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
-    "main": {
-      "type": "main-collection",
+    "breadcrumbs_4cMMMc": {
+      "type": "breadcrumbs",
+      "settings": {
+        "show_next_prev": true,
+        "padding_top_desktop": 16,
+        "padding_top_mobile": 16,
+        "padding_bottom_desktop": 16,
+        "padding_bottom_mobile": 16,
+        "padding_left_desktop": 75,
+        "padding_left_mobile": 10,
+        "padding_right_desktop": 75,
+        "padding_right_mobile": 10
+      }
+    },
+    "category_cards_1": {
+      "type": "category-cards",
       "blocks": {
-        "filters": {
-          "type": "filters",
-          "static": true,
+        "category_1": {
+          "type": "category",
           "settings": {
-            "enable_filtering": true,
-            "filter_style": "horizontal",
-            "filter_width": "centered",
-            "text_label_case": "default",
-            "show_swatch_label": false,
-            "show_filter_label": false,
-            "enable_sorting": true,
-            "enable_grid_density": true,
-            "padding-block-start": 8,
-            "padding-block-end": 8,
-            "padding-inline-start": 72,
-            "padding-inline-end": 72,
-            "facets_margin_bottom": 8,
-            "facets_margin_right": 20
-          },
-          "blocks": {}
+            "image": "shopify://shop_images/Container.png",
+            "title": "THIRTY1 OG'S",
+            "link": "shopify://collections/thirty1-originals"
+          }
         },
-        "product-card": {
-          "type": "_product-card",
-          "static": true,
+        "category_2": {
+          "type": "category",
           "settings": {
-            "product_card_gap": 4,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "card-gallery": {
-              "type": "_product-card-gallery",
-              "settings": {
-                "image_ratio": "adapt",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_title_4nY4eT": {
-              "type": "product-title",
-              "name": "t:names.product_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 4,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "price_EzJzMm": {
-              "type": "price",
-              "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h6",
-                "width": "100%",
-                "alignment": "left",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "card-gallery",
-            "product_title_4nY4eT",
-            "price_EzJzMm"
-          ]
+            "image": "shopify://shop_images/Container_1.png",
+            "title": "THIRTY1 1 OF 1",
+            "link": "shopify://collections/thirty1-1-of-1"
+          }
+        },
+        "category_3": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Container_2.png",
+            "title": "BASICS",
+            "link": "shopify://collections/basics"
+          }
+        },
+        "category_4": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Container_3.png",
+            "title": "WATCHES",
+            "link": "shopify://collections/watches"
+          }
         }
       },
+      "block_order": [
+        "category_1",
+        "category_2",
+        "category_3",
+        "category_4"
+      ],
+      "name": "Category cards",
       "settings": {
-        "layout_type": "grid",
-        "product_card_size": "medium",
-        "mobile_product_card_size": "small",
-        "enable_sidebar": true,
-        "sidebar_border_color": "#454545",
-        "sidebar_text_color": "#888888",
-        "sidebar_active_text_color": "#FFFFFF",
-        "enable_banner": true,
-        "banner_background_color": "#181818",
-        "banner_title_color": "#BCA588",
-        "banner_description_color": "#B0B0B0",
-        "product_grid_width": "centered",
-        "full_width_on_mobile": true,
-        "columns_gap_horizontal": 22,
-        "columns_gap_vertical": 22,
-        "padding-inline-start": 72,
-        "padding-inline-end": 72,
-        "background_color": "#181818",
-        "padding-block-start": 43,
-        "padding-block-end": 72
+        "color_scheme": "default",
+        "padding_top_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_desktop": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_title": true,
+        "show_image_behind_heading": true,
+        "heading_image_height": "medium",
+        "overlay_style": "shadow",
+        "coll_desc_pos": "above",
+        "coll_num_per_page_int": 24,
+        "grid": 4,
+        "show_vendor": false,
+        "show_total": false,
+        "enable_filtering": true,
+        "collapse_filters_method": "over-12",
+        "show_filter_counts": false,
+        "filter_two_columns": false,
+        "button_grid_filter_name": "Size,Taille,Größe",
+        "auto_apply_hide_unavailable": false,
+        "show_sort": true,
+        "sort_show_featured": false,
+        "sort_show_best": true,
+        "sort_show_alpha": true,
+        "sort_show_price": true,
+        "sort_show_date": true,
+        "related_collections": [],
+        "related_collections_style": "buttons",
+        "rel_coll_gall_aspect_ratio": "1",
+        "image_position": "center center",
+        "rel_coll_gall_enable_margin": true,
+        "rel_coll_gall_full_width": false,
+        "rel_coll_gall_overlay_style": "shadow",
+        "rel_coll_gall_text_alignment": "center center",
+        "rel_coll_grid_mobile": "2"
+      }
+    },
+    "newsletter_VYYPeH": {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "settings": {
+        "image": "shopify://shop_images/newsletter_1.webp",
+        "overlay_color": "#000000",
+        "overlay_opacity": 65,
+        "height_desktop": 450,
+        "height_mobile": 380,
+        "title": "Subscribe to Our Newsletter",
+        "subheading": "<p>Exclusive access to unreleased designs, one-of-one pieces, and first access to new releases.</p>",
+        "button_label": "Join",
+        "color_scheme": "default"
+      }
+    },
+    "instagram_gallery_Nentaa": {
+      "type": "instagram-gallery",
+      "blocks": {
+        "image_CU7AYP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.webp",
+            "link": ""
+          }
+        },
+        "image_kbNJ6Q": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.webp",
+            "link": ""
+          }
+        },
+        "image_FArBKG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-3.webp",
+            "link": ""
+          }
+        },
+        "image_bR6KeT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-4.webp",
+            "link": ""
+          }
+        },
+        "image_fYHLM9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-5.webp",
+            "link": ""
+          }
+        },
+        "image_hbh8WT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ig-6.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_CU7AYP",
+        "image_kbNJ6Q",
+        "image_FArBKG",
+        "image_bR6KeT",
+        "image_fYHLM9",
+        "image_hbh8WT"
+      ],
+      "name": "Instagram gallery",
+      "settings": {
+        "title": "Inside THIRTY1",
+        "button_label": "Follow @thirty1",
+        "button_link": "https://www.instagram.com/thirty1jewelry/",
+        "padding_top_desktop": 60,
+        "padding_top_mobile": 32,
+        "title_gap_desktop": 28,
+        "title_gap_mobile": 20,
+        "button_gap_desktop": 40,
+        "button_gap_mobile": 24,
+        "padding_bottom_desktop": 60,
+        "padding_bottom_mobile": 32,
+        "item_gap": 10,
+        "side_padding_desktop": 40,
+        "side_padding_mobile": 16,
+        "color_scheme": "default"
       }
     }
   },
   "order": [
-    "main"
+    "breadcrumbs_4cMMMc",
+    "category_cards_1",
+    "main",
+    "newsletter_VYYPeH",
+    "instagram_gallery_Nentaa"
   ]
 }
