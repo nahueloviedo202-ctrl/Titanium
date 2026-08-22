@@ -1590,7 +1590,7 @@
         "heading_color_2": "",
         "subheading": "<p>550,000+ Health-Conscious People Are Already Using Taima In Their Kitchens, Will You Be Next?</p>",
         "text_color": "{{ settings.color_palette.background }}",
-        "button_label": "Cuidar Mi Salud",
+        "button_label": "Protect your health",
         "button_link": "shopify://collections/all",
         "open_in_new_tab": false,
         "style_class": "button-custom",
