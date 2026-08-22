@@ -17,10 +17,10 @@
         "custom_mobile_media": false,
         "media_type_mobile": "video",
         "kicker": "",
-        "heading": "Cocina Segura,",
-        "heading_color": "#bca588",
-        "heading_line_2": "Sin Compromisos",
-        "heading_color_2": "#ffffff",
+        "heading": "Cocina Segura, Sin Compromisos",
+        "heading_color": "",
+        "heading_line_2": "",
+        "heading_color_2": "",
         "subheading": "",
         "text_color": "{{ settings.color_palette.background }}",
         "button_label": "",
@@ -67,7 +67,7 @@
           "settings": {
             "text": "<p>We believe the tools you cook with should never harm you or ones you love. For too long, cookware companies have put profit before people - filling kitchens with toxins & materials that quietly poison food & body.</p>",
             "width": "100%",
-            "max_width": "narrow",
+            "max_width": "normal",
             "alignment": "center",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
@@ -195,6 +195,8 @@
         "arrow_background_color": "#121212",
         "arrow_border_color": "#454545",
         "arrow_icon_color": "#ffffff",
+        "progress_fill_color": "#a3835f",
+        "progress_track_color": "#252525",
         "background_color": "#121212",
         "padding-block-start": 96,
         "padding-block-end": 96,
@@ -204,26 +206,6 @@
     },
     "behind_the_scenes": {
       "type": "behind-the-scenes",
-      "blocks": {
-        "quote": {
-          "type": "_behind-the-scenes-quote",
-          "settings": {
-            "quote": "<p>Creemos que cuidar tu salud empieza por elegir bien lo que usás en tu cocina.</p>",
-            "quote_color": "{{ settings.color_palette.background }}",
-            "quote_size": 24,
-            "quote_size_mobile": 16,
-            "founder_name": "Equipo Fundador",
-            "founder_color": "{{ settings.color_palette.background }}",
-            "founder_size": 20,
-            "signature_width": 120,
-            "signature_height": 80
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "quote"
-      ],
       "disabled": true,
       "settings": {
         "video_poster": "shopify://shop_images/Background-3_2000x_3f0183e7-4cf1-4657-9fac-f274781a59dd.webp",
@@ -1447,6 +1429,9 @@
         "media_type_mobile": "video",
         "kicker": "Limited Time Offer",
         "heading": "Vive La Diferencia Hoy",
+        "heading_color": "",
+        "heading_line_2": "",
+        "heading_color_2": "",
         "subheading": "<p>Miles de personas ya eligieron una cocina más consciente. Sumate vos también.</p>",
         "text_color": "",
         "button_label": "Cuidar Mi Salud",
