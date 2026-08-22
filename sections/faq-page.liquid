@@ -4,8 +4,6 @@
   if section.settings.background_color != blank or section.settings.text_color != blank
     render 'contrast-override', background_color: section.settings.background_color, text_color: section.settings.text_color, section_id: section.id
   endif
-
-  assign category_blocks = section.blocks | where: 'type', '_faq-category'
 %}
 
 <div
@@ -22,29 +20,17 @@
     style="{% render 'spacing-style', settings: section.settings %}"
   >
     <div class="faq-page__layout">
-      {% if category_blocks.size > 0 %}
         <nav
           class="faq-page__nav"
           aria-label="{{ 'accessibility.faq_page_navigation' | t }}"
+          data-faq-nav
         >
           <ul
             class="faq-page__nav-list"
             role="list"
-          >
-            {% for category in category_blocks %}
-              <li class="faq-page__nav-item">
-                <a
-                  href="#faq-category-{{ category.id }}"
-                  class="faq-page__nav-link"
-                  data-faq-nav-link
-                >
-                  {{- category.settings.heading -}}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
+            data-faq-nav-list
+          ></ul>
         </nav>
-      {% endif %}
 
       <div class="faq-page__content">
         {% content_for 'blocks' %}
@@ -159,9 +145,34 @@
 
 {% javascript %}
   document.querySelectorAll('.faq-page').forEach((root) => {
-    const links = root.querySelectorAll('[data-faq-nav-link]');
+    const nav = root.querySelector('[data-faq-nav]');
+    const navList = root.querySelector('[data-faq-nav-list]');
     const categories = root.querySelectorAll('.faq-category[id]');
-    if (!links.length || !categories.length || !('IntersectionObserver' in window)) return;
+
+    if (!nav || !navList || !categories.length) {
+      if (nav) nav.hidden = true;
+      return;
+    }
+
+    categories.forEach((category) => {
+      const headingEl = category.querySelector('.faq-category__heading');
+      if (!headingEl) return;
+
+      const item = document.createElement('li');
+      item.className = 'faq-page__nav-item';
+
+      const link = document.createElement('a');
+      link.className = 'faq-page__nav-link';
+      link.href = `#${category.id}`;
+      link.textContent = headingEl.textContent.trim();
+      link.setAttribute('data-faq-nav-link', '');
+
+      item.appendChild(link);
+      navList.appendChild(item);
+    });
+
+    const links = navList.querySelectorAll('[data-faq-nav-link]');
+    if (!links.length || !('IntersectionObserver' in window)) return;
 
     const setActive = (id) => {
       links.forEach((link) => {
