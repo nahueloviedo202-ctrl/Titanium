@@ -244,10 +244,10 @@
         "heading": {
           "type": "text",
           "settings": {
-            "text": "<h2>Nuestros Valores</h2>",
+            "text": "<p>Core Values</p>",
             "width": "100%",
             "max_width": "normal",
-            "alignment": "center",
+            "alignment": "left",
             "type_preset": "h2",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
@@ -370,7 +370,7 @@
                 "title": {
                   "type": "text",
                   "settings": {
-                    "text": "<h4>Sin Tóxicos</h4>",
+                    "text": "<p>Kitchenware Without the Chemicals</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -395,7 +395,7 @@
                 "desc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Materiales seguros que no liberan sustancias nocivas en tus alimentos.</p>",
+                    "text": "<p>Toxins don’t belong in your food or your body. Period. That’s why we built Taima® around one uncompromising principle: every product must be 100% free from coatings, plastics, or chemicals. No shortcuts. No fine print. Just kitchenware you can trust every single day.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -489,7 +489,7 @@
                 "title": {
                   "type": "text",
                   "settings": {
-                    "text": "<h4>Fácil De Mantener</h4>",
+                    "text": "<p>Convenience Without Compromise</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -514,7 +514,7 @@
                 "desc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Superficies simples de limpiar, sin necesidad de cuidados especiales.</p>",
+                    "text": "<p>Healthy shouldn’t mean high-maintenance. We engineered titanium to be as effortless as it is safe: naturally non-stick, easy to clean, and designed for everyday cooking. You get peace of mind and practicality, without sacrificing one for the other.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -608,7 +608,7 @@
                 "title": {
                   "type": "text",
                   "settings": {
-                    "text": "<h4>Hecho Para Durar</h4>",
+                    "text": "<p>Longevity First</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -633,7 +633,7 @@
                 "desc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Productos resistentes, pensados para acompañarte durante años.</p>",
+                    "text": "<p>Most cookware is disposable by design. At Zentitanium, we build with the Japanese principle of monozukuri: create once, create perfectly. Every piece we make is designed to outlast you, becoming part of your family’s story.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -727,7 +727,7 @@
                 "title": {
                   "type": "text",
                   "settings": {
-                    "text": "<h4>Salud Que Se Siente</h4>",
+                    "text": "<p>Health That Lasts Beyond Today</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -752,7 +752,7 @@
                 "desc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Cocinar sin preocupaciones, sabiendo que cuidás a los tuyos.</p>",
+                    "text": "<p>We don’t just think about your next meal, we think about your next decade. Every choice we make is to protect your body, your hormones, your gut, and your longevity. Because every plate of food should add years to your life, not take them away.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
