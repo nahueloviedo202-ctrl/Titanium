@@ -943,7 +943,32 @@
                 "text": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Producción responsable, con menor impacto ambiental.</p>",
+                    "text": "<p>Eco-Friendly Manufacturing</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1.125rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.background }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_g8JNjA": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium production avoids the toxic chemical emissions of non-stick coatings that poison the planet.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -968,7 +993,8 @@
               },
               "block_order": [
                 "icon",
-                "text"
+                "text",
+                "text_g8JNjA"
               ]
             },
             "item_2": {
@@ -1021,10 +1047,35 @@
                   },
                   "blocks": {}
                 },
+                "text_WB9P6U": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ethically Made</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1.125rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.background }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "text": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Cuidado real por la salud de quienes usan nuestros productos.</p>",
+                    "text": "<p>Our partners follow strict standards for fair wages, safe conditions, and responsible practices.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1049,6 +1100,7 @@
               },
               "block_order": [
                 "icon",
+                "text_WB9P6U",
                 "text"
               ]
             },
