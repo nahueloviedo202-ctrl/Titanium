@@ -62,7 +62,7 @@
     "faq_page_4rgigc": {
       "type": "faq-page",
       "blocks": {
-        "faq_category_xcyNmG": {
+        "faq_category_kg4ruq": {
           "type": "_faq-category",
           "settings": {
             "heading": "About Us",
@@ -72,19 +72,19 @@
             "type_preset": "h6"
           },
           "blocks": {
-            "accordion_row_bKJ8HK": {
+            "accordion_row_gJDOR9": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "When will I get my order?",
+                "heading": "What Makes Titanium Products Different?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_QJDNMk": {
+                "text_spWPG3": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "text": "<p>We don't sell traditional cookware. Every piece we make is crafted from certified pure titanium — the same material trusted in surgery, aerospace and dentistry — instead of coatings, plastics or alloys that wear out or leach into food.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -108,17 +108,3767 @@
                 }
               },
               "block_order": [
-                "text_QJDNMk"
+                "text_spWPG3"
+              ]
+            },
+            "accordion_row_00bR0C": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Where Does The Titanium Name Come From?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_v7xHUo": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our name is a direct nod to the material at the heart of everything we make. We chose titanium because it's the safest, most durable metal available for kitchenware, and we wanted our name to say exactly what's inside every product.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_v7xHUo"
+              ]
+            },
+            "accordion_row_DQfvQg": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Where Are Titanium Products Made?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_Ajior0": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our products are manufactured in specialized facilities that work exclusively with pure titanium, under strict quality control at every stage — from raw material sourcing to final polishing.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Ajior0"
+              ]
+            },
+            "accordion_row_yOza4I": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do Titanium Products Come With A Warranty?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_0RBeBJ": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Every item comes with a warranty against manufacturing defects. If something isn't right, our support team will make it right.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_0RBeBJ"
+              ]
+            },
+            "accordion_row_6OUmtk": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why Do Customers Love Titanium?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_ylmFQE": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Customers switch to titanium once and rarely go back — it's non-toxic, virtually indestructible, and performs better than the pans, boards and bottles it replaces.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_ylmFQE"
+              ]
+            },
+            "accordion_row_38OyNa": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is All Titanium The Same?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_EBJWh9": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No. Titanium comes in different grades and purities, and some \"titanium\" products on the market are only coated or plated. We use certified pure, food-grade titanium in every product, not a thin surface layer.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_EBJWh9"
+              ]
+            },
+            "accordion_row_aXWnZB": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What Impact Does My Purchase Have?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_uazKqg": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Choosing pure titanium means fewer disposable, coated or plastic products ending up in landfill — titanium kitchenware is built to last a lifetime, not to be replaced every year.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_uazKqg"
               ]
             }
           },
           "block_order": [
-            "accordion_row_bKJ8HK"
+            "accordion_row_gJDOR9",
+            "accordion_row_00bR0C",
+            "accordion_row_DQfvQg",
+            "accordion_row_yOza4I",
+            "accordion_row_6OUmtk",
+            "accordion_row_38OyNa",
+            "accordion_row_aXWnZB"
+          ]
+        },
+        "faq_category_vmeZOA": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "About Pure Titanium",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_UhR9zk": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What Is Titanium & Why Does It Matter For My Safety?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_G7kkHF": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium is a naturally occurring metal known for being completely biocompatible — meaning your body doesn't react to it. It's the same material used in surgical implants, which is why it's considered one of the safest materials to cook and eat from.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_G7kkHF"
+              ]
+            },
+            "accordion_row_zpcwn1": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why Titanium Instead Of Wood, Plastic Or Non-Stick?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_UHcE4V": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Wood and plastic absorb bacteria and odors over time, and non-stick coatings can degrade and release particles when scratched or overheated. Titanium does none of that — it's non-porous, scratch-resistant and stable at high heat.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_UHcE4V"
+              ]
+            },
+            "accordion_row_rfEFhb": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is Titanium Safe For Food Contact?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_6B66lm": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Pure titanium is inert, meaning it doesn't react with food, acids or heat. It won't leach metals or chemicals into what you cook or store.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_6B66lm"
+              ]
+            },
+            "accordion_row_gcgONF": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is Titanium Completely Toxin-Free?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_U9nOrR": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium doesn't contain PFAS, PTFE, lead, cadmium or the coatings found in traditional non-stick and plastic products, making it one of the few truly toxin-free materials for the kitchen.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_U9nOrR"
+              ]
+            },
+            "accordion_row_r2PDhv": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Titanium Antibacterial Properties Explained",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_nOv6KB": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium's non-porous surface gives bacteria nowhere to embed and grow, unlike wood or plastic, which develop microscopic grooves over time that trap moisture and bacteria.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_nOv6KB"
+              ]
+            },
+            "accordion_row_PLbOvQ": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What Does \"Biocompatible\" Mean?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_DMVCyA": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Biocompatible means a material can be in direct, prolonged contact with the human body without causing a reaction. It's the standard used for surgical implants — and it's why titanium is considered so safe in the kitchen.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_DMVCyA"
+              ]
+            },
+            "accordion_row_2ErMwT": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does It Have Heavy Metals? Does It Corrode?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_Xiaqsp": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pure titanium contains no lead, cadmium or other heavy metals, and it forms a natural oxide layer that makes it highly resistant to corrosion and rust, even after years of daily use.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Xiaqsp"
+              ]
+            },
+            "accordion_row_ZTlx4Y": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Long Do Pure Titanium Products Last?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_DE3ij3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>With proper care, pure titanium products can last a lifetime. Titanium doesn't rust, warp, corrode or degrade the way most kitchen materials eventually do.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_DE3ij3"
+              ]
+            },
+            "accordion_row_zz1DYY": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are Titanium Products Dishwasher Safe?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_Cdqm0p": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium's non-porous surface holds up well to dishwasher detergents and heat, though hand washing will keep the finish looking newer for longer.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Cdqm0p"
+              ]
+            },
+            "accordion_row_pByjTK": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Will Titanium Damage My Knives Or Cooking Tools?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_KBLrEK": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No. Titanium is a hard but smooth material, and our cutting boards and cookware are finished to be gentle on knife edges and metal utensils alike.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_KBLrEK"
+              ]
+            },
+            "accordion_row_qIKAJ0": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are There Any Downsides To Pure Titanium Kitchenware?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_uVXqXm": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium products typically cost more upfront than plastic, wood or coated alternatives. That cost reflects the material and manufacturing — and it's offset by a product that doesn't need replacing.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_uVXqXm"
+              ]
+            },
+            "accordion_row_zpZACC": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is Titanium Environmentally Friendly?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_VgLuqY": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium is fully recyclable and, because it lasts a lifetime, it reduces the cycle of replacing worn-out coated pans, cracked boards and single-use plastics.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_VgLuqY"
+              ]
+            },
+            "accordion_row_FRasKn": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does Titanium Meet FDA Food-Contact Safety Standards?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_0b2HrG": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. The pure titanium used in our products meets food-contact safety standards, confirming it's safe for direct and repeated contact with food.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_0b2HrG"
+              ]
+            },
+            "accordion_row_8guSjr": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is Titanium Hypoallergenic?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_7EEhSV": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium is one of the most hypoallergenic metals available, which is why it's used in medical implants and jewelry for people with sensitive skin or metal allergies.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_7EEhSV"
+              ]
+            },
+            "accordion_row_MmKQja": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is Titanium Magnetic?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_OccGot": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No, titanium is non-magnetic. That means it won't work on strictly magnetic induction cooktops unless the piece includes an induction-compatible base — check each product page for compatibility.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_OccGot"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_UhR9zk",
+            "accordion_row_zpcwn1",
+            "accordion_row_rfEFhb",
+            "accordion_row_gcgONF",
+            "accordion_row_r2PDhv",
+            "accordion_row_PLbOvQ",
+            "accordion_row_2ErMwT",
+            "accordion_row_ZTlx4Y",
+            "accordion_row_zz1DYY",
+            "accordion_row_pByjTK",
+            "accordion_row_qIKAJ0",
+            "accordion_row_zpZACC",
+            "accordion_row_FRasKn",
+            "accordion_row_8guSjr",
+            "accordion_row_MmKQja"
+          ]
+        },
+        "faq_category_yD11to": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Orders & Shipping",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_YG4m8P": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Where Do You Ship From?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_oa6zmD": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Orders are shipped from our fulfillment center and processed as quickly as possible once payment is confirmed.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_oa6zmD"
+              ]
+            },
+            "accordion_row_n8CJnF": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Where Do You Ship To?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_5Qphpi": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We currently ship to the destinations listed at checkout. If you don't see your country available, reach out and we'll let you know if we can accommodate it.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_5Qphpi"
+              ]
+            },
+            "accordion_row_MLnkmu": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Long Does It Take To Process An Order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_s47I5L": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Orders are typically processed within 1–3 business days before they're handed off to the carrier.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_s47I5L"
+              ]
+            },
+            "accordion_row_8I1YPB": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "When Will I Receive My Order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_Sh5UVT": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Delivery times vary depending on your location and shipping method, and full estimates are shown at checkout before you complete your order.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Sh5UVT"
+              ]
+            },
+            "accordion_row_ZTDZQt": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Will I Receive Tracking Details?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_v4MSRP": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. As soon as your order ships, you'll receive an email with a tracking number so you can follow it every step of the way.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_v4MSRP"
+              ]
+            },
+            "accordion_row_0LP7PY": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What If My Order Is Delayed Or Lost?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_1nWk7P": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>If your order hasn't arrived within the expected window, contact our support team with your order number and we'll investigate with the carrier right away.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_1nWk7P"
+              ]
+            },
+            "accordion_row_pIvjBy": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Can I Contact You About My Order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_GLy2F8": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>You can reach our support team through the contact form on our site, and we'll get back to you as soon as possible.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_GLy2F8"
+              ]
+            },
+            "accordion_row_VolVWc": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "The Product I Want Is Out Of Stock. What Now?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_H5yCjT": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>You can sign up for a restock notification on the product page and we'll email you the moment it's back in stock.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_H5yCjT"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_YG4m8P",
+            "accordion_row_n8CJnF",
+            "accordion_row_MLnkmu",
+            "accordion_row_8I1YPB",
+            "accordion_row_ZTDZQt",
+            "accordion_row_0LP7PY",
+            "accordion_row_pIvjBy",
+            "accordion_row_VolVWc"
+          ]
+        },
+        "faq_category_MuUnu1": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Regular Cookware",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_n48e2J": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Non-Stick Coated Pans",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_CTTYEv": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Coated pans lose their non-stick surface over time, and scratches or overheating can cause the coating to flake or release particles into food.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_CTTYEv"
+              ]
+            },
+            "accordion_row_d11w2A": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Stainless Steel Pans",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_U6wR2d": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Stainless steel is durable but food sticks easily without enough oil, and it can react with acidic foods over long cooking times.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_U6wR2d"
+              ]
+            },
+            "accordion_row_cZAnsY": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Ceramic Pans",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_qv1HZj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ceramic coatings look great new but tend to lose their non-stick performance after just a few months of regular use.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_qv1HZj"
+              ]
+            },
+            "accordion_row_2SF57z": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Cast Iron Pans",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_pFWT45": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Cast iron is heavy, requires ongoing seasoning to stay non-stick, and can rust if not dried and cared for properly.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_pFWT45"
+              ]
+            },
+            "accordion_row_7qUPVG": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Does Titanium Compare To Regular Cookware?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_lt9YD3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium cookware combines the durability of stainless steel with a naturally smooth cooking surface, without coatings that wear off or metals that react with food.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_lt9YD3"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_n48e2J",
+            "accordion_row_d11w2A",
+            "accordion_row_cZAnsY",
+            "accordion_row_2SF57z",
+            "accordion_row_7qUPVG"
+          ]
+        },
+        "faq_category_xT90ja": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Pure Titanium Cookware",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_fLK7Sa": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Does The Titanium Non-Stick Surface Work?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_R66rma": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Rather than relying on a chemical coating, our cookware uses titanium's naturally smooth, non-porous surface, which resists sticking without needing PTFE or similar coatings.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_R66rma"
+              ]
+            },
+            "accordion_row_g0WMcE": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Does Titanium Cookware Help Food Retain More Nutrients?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_caJLWS": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium heats evenly and doesn't react with food, which allows for gentler, more controlled cooking that can help preserve more of food's natural nutrients compared to prolonged high-heat cooking in reactive pans.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_caJLWS"
+              ]
+            },
+            "accordion_row_OFL0AN": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What Studies Show That Pure Titanium Cookware Retains More Nutrients?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_5azbuu": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Nutrient retention during cooking is influenced primarily by cooking temperature, time and the presence of reactive metals — titanium's inert, even-heating surface supports gentler cooking conditions that are generally associated with better nutrient preservation.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_5azbuu"
+              ]
+            },
+            "accordion_row_Q4zuhn": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why Should I Switch From My Existing Pan?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_g2u0zR": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>If your current pan is coated, it will eventually wear out. Titanium cookware is built to perform the same on day one and after ten years of daily cooking.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_g2u0zR"
+              ]
+            },
+            "accordion_row_LQK55K": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is Titanium Safe For Food Contact?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_hBcMq0": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium is inert and won't leach metals or chemicals into your food, even during acidic or high-heat cooking.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_hBcMq0"
+              ]
+            },
+            "accordion_row_vrCKE4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why Do Acidic Foods Cause Problems In Other Pans?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_uX51jV": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Acidic ingredients like tomatoes or citrus can react with reactive metals, altering flavor and, in coated pans, accelerating coating breakdown. Titanium doesn't react with acidic foods.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_uX51jV"
+              ]
+            },
+            "accordion_row_3A1uvy": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is It Safe To Use On All Stovetops And Ovens?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_gdlrou": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium cookware works on gas, electric and most ceramic stovetops, and can go into the oven at high temperatures without damage. Check the specific product page for induction compatibility.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_gdlrou"
+              ]
+            },
+            "accordion_row_7vx4zL": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Can I Cook At Very High Temperatures With Titanium?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_nW7i9F": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium has a very high heat tolerance and remains stable well beyond the temperatures most home cooking requires.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_nW7i9F"
+              ]
+            },
+            "accordion_row_V6UnBM": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does Titanium Discolor With Heat?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_0Z7mNb": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium is highly heat-stable and resistant to discoloration, holding its finish far better than aluminum or stainless steel under high heat.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_0Z7mNb"
+              ]
+            },
+            "accordion_row_PewIaN": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do I Need To Hand Wash Or Can I Use The Dishwasher?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_Jzml2h": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium cookware is dishwasher safe, though hand washing with mild soap will help maintain the surface finish over time.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Jzml2h"
+              ]
+            },
+            "accordion_row_3GJquu": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Hot Do My Pans Need To Be To Start Cooking?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_ifjkxV": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Preheat on medium heat for a couple of minutes before adding food — titanium's even heat distribution means you rarely need high heat to cook effectively.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_ifjkxV"
+              ]
+            },
+            "accordion_row_msaWRu": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do I Need Butter, Oil, Or Cooking Spray When Cooking?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_dRNdFc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A small amount of oil or butter is recommended for flavor and best results, though titanium's naturally smooth surface requires far less than traditional pans.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_dRNdFc"
+              ]
+            },
+            "accordion_row_GLs4c6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What Is Multi-Ply Titanium Construction?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_AwiRZw": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Multi-ply construction bonds layers of titanium and other metals together for optimal heat distribution and structural strength, combining performance with titanium's safety benefits.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_AwiRZw"
+              ]
+            },
+            "accordion_row_Uf4Yfq": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What Can I Cook With It?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_ktgLJ9": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium cookware handles everything from delicate eggs and fish to searing meat and simmering sauces, on the stovetop or in the oven.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_ktgLJ9"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_fLK7Sa",
+            "accordion_row_g0WMcE",
+            "accordion_row_OFL0AN",
+            "accordion_row_Q4zuhn",
+            "accordion_row_LQK55K",
+            "accordion_row_vrCKE4",
+            "accordion_row_3A1uvy",
+            "accordion_row_7vx4zL",
+            "accordion_row_V6UnBM",
+            "accordion_row_PewIaN",
+            "accordion_row_3GJquu",
+            "accordion_row_msaWRu",
+            "accordion_row_GLs4c6",
+            "accordion_row_Uf4Yfq"
+          ]
+        },
+        "faq_category_IrcypD": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Regular Cutting Boards",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_WHhg3c": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Plastic Cutting Boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_QgBoxO": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Plastic boards develop deep knife grooves that trap bacteria over time and can shed microplastic particles into food.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_QgBoxO"
+              ]
+            },
+            "accordion_row_zNy4RQ": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Wooden Cutting Boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_q7ECqC": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Wood is porous, absorbs moisture and odors, and requires regular oiling and careful drying to avoid warping or harboring bacteria.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_q7ECqC"
+              ]
+            },
+            "accordion_row_DnBBiT": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Endgrain Wood Cutting Boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_Hd9tcz": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Endgrain boards are gentler on knives but still porous, heavy, and need consistent maintenance to stay sanitary and crack-free.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Hd9tcz"
+              ]
+            },
+            "accordion_row_xdPueH": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Bamboo Cutting Boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_8LHFlc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Bamboo is harder than wood, which can dull knives faster, and it's still porous enough to absorb liquids and odors over time.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_8LHFlc"
+              ]
+            },
+            "accordion_row_O0Uh34": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Glass Cutting Boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_8IsRbB": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Glass boards are extremely hard on knife edges and can crack or shatter if dropped.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_8IsRbB"
+              ]
+            },
+            "accordion_row_se4vQk": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Stone Cutting Boards",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_b5cGYM": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Stone boards are heavy, can be porous depending on the material, and are just as hard on knife edges as glass.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_b5cGYM"
+              ]
+            },
+            "accordion_row_48V7d2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Does Titanium Compare To Regular Boards?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_KV7LWG": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A titanium board combines a non-porous, antibacterial surface with a finish designed to be knife-friendly — solving the durability, hygiene and maintenance issues of wood, plastic, glass and stone.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_KV7LWG"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_WHhg3c",
+            "accordion_row_zNy4RQ",
+            "accordion_row_DnBBiT",
+            "accordion_row_xdPueH",
+            "accordion_row_O0Uh34",
+            "accordion_row_se4vQk",
+            "accordion_row_48V7d2"
+          ]
+        },
+        "faq_category_vemsIu": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Pure Titanium Cutting Board",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_2KEGZg": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Do I Know This Is Real Titanium And Not A Fake?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_jvU4DN": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Genuine titanium has a distinct weight, a matte metallic finish, and doesn't rust or corrode. Look for products that specify certified pure titanium rather than a titanium-plated or coated surface.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_jvU4DN"
+              ]
+            },
+            "accordion_row_EfXmAb": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why Is Titanium The Safest Food Preparation Material?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_ASYvU1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium is non-porous and inert, so it doesn't absorb bacteria, moisture or odors the way wood and plastic do, and it won't shed microplastics like plastic boards.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_ASYvU1"
+              ]
+            },
+            "accordion_row_ftUHxM": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Will Titanium Dull My Knives?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_ZWBEe9": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our titanium boards are finished to be gentle on blade edges — comparable to a quality wood or endgrain board, and noticeably softer on knives than glass or stone.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_ZWBEe9"
+              ]
+            },
+            "accordion_row_EEF3wt": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do I Need To Sterilize It Like A Wooden Board?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_YqzJuy": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No. Because the surface is non-porous, a simple wash with soap and water is enough to fully sanitize it — no oiling or special sterilizing routine required.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_YqzJuy"
+              ]
+            },
+            "accordion_row_J1Drx4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is The Titanium Board Easy To Clean?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_SxvZ75": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. It wipes clean easily and is dishwasher safe, with no risk of warping, cracking or absorbing stains and odors.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_SxvZ75"
+              ]
+            },
+            "accordion_row_oejYnl": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is The Titanium Board Third-Party Certified?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_yRG0RK": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our titanium is tested and certified for purity and food-contact safety, so you can confirm it's the real material and not a coated imitation.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_yRG0RK"
+              ]
+            },
+            "accordion_row_Og1rfL": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What's It Like To Cut On This Titanium Board?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_AaxG4H": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>The surface offers a firm, stable cutting feel with a slight give that's kinder to your knife edge than glass or stone, while staying far more durable than wood or plastic.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_AaxG4H"
+              ]
+            },
+            "accordion_row_MoaBY8": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is A Titanium Cutting Board Really Antibacterial?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_BtFV5v": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium's non-porous surface gives bacteria no grooves or pores to grow in, which is why it's naturally more hygienic than wood or plastic over repeated use.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_BtFV5v"
+              ]
+            },
+            "accordion_row_i4eCdv": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does It Eliminate Cross-Contamination Risk?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_w7l78G": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Because nothing can embed in the surface, thorough washing between uses fully removes residue — significantly reducing cross-contamination risk compared to grooved wood or plastic boards.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_w7l78G"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_2KEGZg",
+            "accordion_row_EfXmAb",
+            "accordion_row_ftUHxM",
+            "accordion_row_EEF3wt",
+            "accordion_row_J1Drx4",
+            "accordion_row_oejYnl",
+            "accordion_row_Og1rfL",
+            "accordion_row_MoaBY8",
+            "accordion_row_i4eCdv"
+          ]
+        },
+        "faq_category_wT67XR": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Regular Utensils",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_Bvl6Ea": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Plastic Utensils",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_Ke24y2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Plastic utensils can melt or warp near high heat and may leach chemicals into hot food over time.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Ke24y2"
+              ]
+            },
+            "accordion_row_ikL36z": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Silicone Utensils",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_i6zp9v": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Silicone is heat-resistant but can retain odors, stain over time, and lower-quality silicone may contain fillers.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_i6zp9v"
+              ]
+            },
+            "accordion_row_ExfGV2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Wooden Utensils",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_psaOR4": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Wood absorbs moisture and odors, can splinter with age, and requires regular oiling to avoid cracking.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_psaOR4"
+              ]
+            },
+            "accordion_row_nLvMCS": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Steel Utensils",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_NQYIAR": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Standard steel utensils can scratch non-stick surfaces and, if not properly treated, may be prone to corrosion over time.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_NQYIAR"
+              ]
+            },
+            "accordion_row_i2BIHH": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Carbon Steel Utensils",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_gQaMP8": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Carbon steel is strong but can rust if not dried immediately and thoroughly after washing.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_gQaMP8"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_Bvl6Ea",
+            "accordion_row_ikL36z",
+            "accordion_row_ExfGV2",
+            "accordion_row_nLvMCS",
+            "accordion_row_i2BIHH"
+          ]
+        },
+        "faq_category_eWIDMJ": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Pure Titanium Utensils",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_FcJ6Hl": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why Switch From Wood, Plastic, Or Silicone Utensils?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_ESPSUC": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium utensils won't absorb odors, melt, splinter or degrade — they offer the durability of metal with a surface gentle enough for non-stick cookware.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_ESPSUC"
+              ]
+            },
+            "accordion_row_onNT2i": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Can I Leave Titanium Utensils In The Pan Or Pot While Cooking?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_JZCnF0": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium conducts heat slowly, so the handle stays cool enough to leave resting in the pan or pot while you cook.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_JZCnF0"
+              ]
+            },
+            "accordion_row_9SuFx1": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are Titanium Utensils Completely Toxin-Free?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_GgFeyN": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium doesn't contain PFAS, BPA or the chemical fillers found in some plastic and silicone utensils.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_GgFeyN"
+              ]
+            },
+            "accordion_row_Bv44TK": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Heavy Are They Compared To Steel Utensils?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_NMMFwd": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium is significantly lighter than stainless steel while still being just as strong, so it feels comfortable during extended use.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_NMMFwd"
+              ]
+            },
+            "accordion_row_LsW7I7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are Titanium Utensils Dishwasher Safe?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_j3QVzM": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. They're fully dishwasher safe and won't corrode, discolor or degrade from repeated washing.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_j3QVzM"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_FcJ6Hl",
+            "accordion_row_onNT2i",
+            "accordion_row_9SuFx1",
+            "accordion_row_Bv44TK",
+            "accordion_row_LsW7I7"
+          ]
+        },
+        "faq_category_1vRWug": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Regular Drinkware",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_E7vCIj": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Plastic Water Bottles",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_DEbDRj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Plastic bottles can leach microplastics and chemicals, especially when exposed to heat or sunlight, and tend to retain odors and flavors.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_DEbDRj"
+              ]
+            },
+            "accordion_row_xbkQkS": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Steel Water Bottles",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_aegQNf": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Standard steel bottles can develop a metallic taste over time and are prone to denting.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_aegQNf"
+              ]
+            },
+            "accordion_row_9mRkkK": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Aluminum Water Bottles",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_CtMRhE": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Aluminum is lightweight but reactive, so bottles typically require an internal liner that can wear down and expose the metal underneath.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_CtMRhE"
+              ]
+            },
+            "accordion_row_6NWl8u": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Glass Water Bottles",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_s1AIFo": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Glass doesn't affect taste but is heavy and breaks easily if dropped.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_s1AIFo"
+              ]
+            },
+            "accordion_row_FWI9Et": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Plastic Ice Cubes",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_nlrsmT": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Reusable plastic ice cubes can absorb odors and, over time, may leach microplastics into your drink.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_nlrsmT"
+              ]
+            },
+            "accordion_row_cGhDXM": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Steel Ice Cubes",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_KkH04d": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Steel ice cubes are durable but conduct heat quickly, so they warm up and stop chilling drinks faster than denser materials.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_KkH04d"
+              ]
+            },
+            "accordion_row_9ebx8l": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Regular Ice Cubes",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_yOVZEu": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Regular ice melts quickly, dilutes your drink, and can carry impurities depending on your water source.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_yOVZEu"
+              ]
+            },
+            "accordion_row_JnnhWw": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Downsides Of Stone & Granite Ice Cubes",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_IwcPTZ": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Stone and granite cubes don't dilute drinks but are porous, hard to clean thoroughly, and can chip over time.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_IwcPTZ"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_E7vCIj",
+            "accordion_row_xbkQkS",
+            "accordion_row_9mRkkK",
+            "accordion_row_6NWl8u",
+            "accordion_row_FWI9Et",
+            "accordion_row_cGhDXM",
+            "accordion_row_9ebx8l",
+            "accordion_row_JnnhWw"
+          ]
+        },
+        "faq_category_uaaiwD": {
+          "type": "_faq-category",
+          "settings": {
+            "heading": "Pure Titanium Drinkware",
+            "heading_color": "#BCA588",
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "accordion_row_6kbO3I": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Why Is A Titanium Water Bottle Better Than Any Other?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_nzJemp": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium won't leach chemicals or metallic taste into your water, resists denting far better than steel, and is significantly lighter to carry.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_nzJemp"
+              ]
+            },
+            "accordion_row_BMVsGw": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is It Safe For Both Hot And Cold Drinks?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_wfxcqa": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium performs reliably across temperatures, from ice-cold water to hot coffee or tea, without affecting taste or safety.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_wfxcqa"
+              ]
+            },
+            "accordion_row_CR3Uyw": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Heavy Is It Compared To Steel Bottles?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_iEXoIM": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium bottles are noticeably lighter than stainless steel bottles of the same size, while matching their strength and durability.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_iEXoIM"
+              ]
+            },
+            "accordion_row_wBcmMr": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Is It Really 100% Toxin-Free?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_HOfhB4": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium contains no BPA, lead or the liners and coatings used in some metal and plastic bottles.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_HOfhB4"
+              ]
+            },
+            "accordion_row_asRyRT": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Does The Bottle Retain Heat Or Cold Well?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_gxV6OM": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Insulated titanium bottles keep drinks cold or hot for extended periods, performing comparably to premium double-wall steel bottles.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_gxV6OM"
+              ]
+            },
+            "accordion_row_pEWTXu": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What Are Titanium Ice Cubes Made Of?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_qEvy8K": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>They're solid pure titanium, shaped and polished to chill drinks without ever melting, diluting or affecting flavor.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_qEvy8K"
+              ]
+            },
+            "accordion_row_Zu9p1n": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are Titanium Ice Cubes Corrosion Resistant?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_NEcXBI": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Titanium's natural oxide layer makes it fully resistant to corrosion, even with repeated freezing and washing.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_NEcXBI"
+              ]
+            },
+            "accordion_row_kVDoTP": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How Long Do Titanium Ice Cubes Keep Drinks Cold?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_7OJerb": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Once frozen, titanium ice cubes hold their cold temperature efficiently thanks to the metal's density, keeping drinks chilled without watering them down.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_7OJerb"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_6kbO3I",
+            "accordion_row_BMVsGw",
+            "accordion_row_CR3Uyw",
+            "accordion_row_wBcmMr",
+            "accordion_row_asRyRT",
+            "accordion_row_pEWTXu",
+            "accordion_row_Zu9p1n",
+            "accordion_row_kVDoTP"
           ]
         }
       },
       "block_order": [
-        "faq_category_xcyNmG"
+        "faq_category_kg4ruq",
+        "faq_category_vmeZOA",
+        "faq_category_yD11to",
+        "faq_category_MuUnu1",
+        "faq_category_xT90ja",
+        "faq_category_IrcypD",
+        "faq_category_vemsIu",
+        "faq_category_wT67XR",
+        "faq_category_eWIDMJ",
+        "faq_category_1vRWug",
+        "faq_category_uaaiwD"
       ],
       "name": "t:names.faq_page",
       "settings": {
