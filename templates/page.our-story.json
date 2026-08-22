@@ -1157,7 +1157,32 @@
                 "text": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Materiales pensados para durar, sin desperdicio innecesario.</p>",
+                    "text": "<p>Sustainable Packaging</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.background }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_6wGtbz": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>100% recycled, plastic-free packaging.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1182,7 +1207,8 @@
               },
               "block_order": [
                 "icon",
-                "text"
+                "text",
+                "text_6wGtbz"
               ]
             },
             "item_4": {
@@ -1238,7 +1264,32 @@
                 "text": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Packaging consciente, con la menor cantidad de plástico posible.</p>",
+                    "text": "<p>Energy Efficiency</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.background }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_9haKBf": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our titanium processing requires more expertise, but we’ve invested in cleaner, more efficient methods that minimize CO₂ compared to mass-market cookware factories.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1263,7 +1314,8 @@
               },
               "block_order": [
                 "icon",
-                "text"
+                "text",
+                "text_9haKBf"
               ]
             },
             "item_5": {
@@ -1319,7 +1371,32 @@
                 "text": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Menos residuos frente a las alternativas descartables del mercado.</p>",
+                    "text": "<p>100% Recyclable</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.background }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_rQwiPL": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Titanium is infinitely recyclable without losing quality. Every piece of Taima® kitchenware can be repurposed into something new - unlike other cookware and alloys that end up as toxic waste.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1344,7 +1421,8 @@
               },
               "block_order": [
                 "icon",
-                "text"
+                "text",
+                "text_rQwiPL"
               ]
             },
             "item_6": {
@@ -1400,7 +1478,32 @@
                 "text": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Calidad duradera, diseñada para no terminar en la basura al poco tiempo.</p>",
+                    "text": "<p>Lifetime Sustainability</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.background }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_BpApfa": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Most cookware today is designed to be replaced every few years. That waste piles up in landfills and pollutes the planet. Taima® is designed to last a lifetime - one purchase, for life. That’s better for you, your wallet, and the world.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1425,7 +1528,8 @@
               },
               "block_order": [
                 "icon",
-                "text"
+                "text",
+                "text_BpApfa"
               ]
             }
           },
