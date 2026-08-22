@@ -42,6 +42,8 @@
   style="
     --hero-video-logos-min-height: {% if section.settings.section_height == 'custom' %}{{ section.settings.section_height_custom }}svh{% elsif section.settings.section_height == 'full-screen' %}100svh{% else %}var(--section-height-{{ section.settings.section_height }}){% endif %};
     {% if section.settings.text_color != blank %}--hero-video-logos-text-color: {{ section.settings.text_color }};{% endif %}
+    {% if section.settings.heading_color != blank %}--hero-video-logos-heading-color-1: {{ section.settings.heading_color }};{% endif %}
+    {% if section.settings.heading_color_2 != blank %}--hero-video-logos-heading-color-2: {{ section.settings.heading_color_2 }};{% endif %}
     --hero-video-logos-logo-height: {{ section.settings.logo_height }}px;
     --hero-video-logos-logo-gap: {{ section.settings.logo_gap }}px;
     --hero-video-logos-logo-opacity: {{ section.settings.logo_opacity | divided_by: 100.0 }};
@@ -117,7 +119,12 @@
       {%- endif -%}
 
       {%- if section.settings.heading != blank -%}
-        <h1 class="hero-video-logos__heading">{{ section.settings.heading }}</h1>
+        <h1 class="hero-video-logos__heading">
+          <span class="hero-video-logos__heading-line hero-video-logos__heading-line--1">{{ section.settings.heading }}</span>
+          {%- if section.settings.heading_line_2 != blank -%}
+            <span class="hero-video-logos__heading-line hero-video-logos__heading-line--2">{{ section.settings.heading_line_2 }}</span>
+          {%- endif -%}
+        </h1>
       {%- endif -%}
 
       {%- if section.settings.subheading != blank -%}
@@ -311,6 +318,18 @@
     line-height: 1.3;
     letter-spacing: 0.04em;
     text-transform: capitalize;
+  }
+
+  .hero-video-logos__heading-line {
+    display: block;
+  }
+
+  .hero-video-logos__heading-line--1 {
+    color: var(--hero-video-logos-heading-color-1, inherit);
+  }
+
+  .hero-video-logos__heading-line--2 {
+    color: var(--hero-video-logos-heading-color-2, inherit);
   }
 
   @media screen and (min-width: 750px) {
@@ -535,6 +554,24 @@
       "id": "heading",
       "label": "t:settings.heading",
       "default": "t:text_defaults.hero_video_logos_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_2",
+      "label": "t:settings.heading_line_2"
+    },
+    {
+      "type": "color",
+      "id": "heading_color_2",
+      "label": "t:settings.highlighted_text_color",
+      "placeholder": "t:settings.default",
+      "visible_if": "{{ section.settings.heading_line_2 != blank }}"
     },
     {
       "type": "richtext",
@@ -953,6 +990,11 @@
     {
       "name": "t:names.hero_video_logos",
       "category": "t:categories.banners",
+      "settings": {
+        "heading_color": "#BCA588",
+        "heading_line_2": "t:text_defaults.hero_video_logos_heading_line_2",
+        "heading_color_2": "#FFFFFF"
+      },
       "blocks": {
         "logo_1": { "type": "_logo-item" },
         "logo_2": { "type": "_logo-item" },
