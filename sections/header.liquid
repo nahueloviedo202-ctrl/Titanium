@@ -471,9 +471,11 @@
 
   {% liquid
     assign category_nav_block = section.blocks | where: 'type', '_header-category-nav' | first
-    assign all_block_types = section.blocks | map: 'type' | join: '|'
   %}
-  <!-- DEBUG category_nav_block={{ category_nav_block | json | escape }} all_block_types={{ all_block_types }} block_order={{ section.block_order | join: ',' }} settings_blocks_count={{ section.settings.category_nav_test | default: 'n/a' }} -->
+  <!-- DEBUG2 section.id={{ section.id }} section.type={{ section.type }} blocks.size={{ section.blocks.size }} -->
+  {% for b in section.blocks %}
+    <!-- DEBUG2 block[{{ forloop.index0 }}] id={{ b.id }} type={{ b.type }} -->
+  {% endfor %}
   {% if category_nav_block %}
     <div
       class="header__row header__category-nav-row section section--full-width-margin section--{{ section.settings.section_width }}"
