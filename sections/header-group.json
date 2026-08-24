@@ -156,33 +156,13 @@
                     "price": "$899"
                   },
                   "blocks": {}
-                },
-                "tab_best_sellers_product_5": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "product": "",
-                    "title": "Complete Classic Titanium Cookware Set (14 Piece)",
-                    "link": "/products/complete-classic-titanium-cookware-set-14-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "",
-                    "save_badge_text": "-55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(1329)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "bullet_2_label": "",
-                    "compare_price": "$1999",
-                    "price": "$899"
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
                 "tab_best_sellers_product_1",
                 "tab_best_sellers_product_2",
                 "tab_best_sellers_product_3",
-                "tab_best_sellers_product_4",
-                "tab_best_sellers_product_5"
+                "tab_best_sellers_product_4"
               ]
             },
             "tab_bundle_save": {
