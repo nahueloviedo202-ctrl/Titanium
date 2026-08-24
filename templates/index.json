@@ -1433,8 +1433,8 @@
         "padding_block_end": 0,
         "padding_inline_start": 160,
         "padding_inline_end": 160,
-        "padding_block_start_mobile": 56,
-        "padding_block_end_mobile": 0,
+        "padding_block_start_mobile": 30,
+        "padding_block_end_mobile": 30,
         "padding_inline_start_mobile": 0,
         "padding_inline_end_mobile": 0
       }
