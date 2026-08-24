@@ -731,132 +731,6 @@
         "padding_inline_end_mobile": 16
       }
     },
-    "ti_benefits_science": {
-      "type": "ti-benefits",
-      "blocks": {
-        "benefit_1": {
-          "type": "_ti-benefit-card",
-          "settings": {
-            "icon": "leaf",
-            "title": "Completely Toxin-Free (By Design).",
-            "text": "Pure titanium is chemically stable in cooking and prep conditions. It forms a stable TiO₂ passivation layer that prevents metal ions from migrating into food. There are no PFAS/PTFE coatings, no BPA/BPS or plasticizers, no nickel or chromium (like in stainless), and no aluminum cores to expose. Nothing to off-gas, flake, or leach - at any kitchen temperature."
-          },
-          "blocks": {}
-        },
-        "benefit_2": {
-          "type": "_ti-benefit-card",
-          "settings": {
-            "icon": "heart",
-            "title": "It's The Most Biocompatible Metal For The Human Body.",
-            "text": "That's why surgeons trust it in the body. It doesn't break down, flake, or leach toxins. It's as food-safe as it gets."
-          },
-          "blocks": {}
-        },
-        "benefit_3": {
-          "type": "_ti-benefit-card",
-          "settings": {
-            "icon": "check_box",
-            "title": "It Naturally Kills Bacteria (Extremely Hygienic).",
-            "text": "Titanium's dense, non-porous surface leaves nowhere for bacteria to hide. Just a quick clean, and it's like new again."
-          },
-          "blocks": {}
-        },
-        "benefit_4": {
-          "type": "_ti-benefit-card",
-          "settings": {
-            "icon": "lock",
-            "title": "It Never Rusts Or Degrades.",
-            "text": "Steel corrodes because oxygen turns it into rust. Titanium reacts differently: it forms titanium dioxide, an ultra-stable layer that works like permanent armor - it actually strengthens over time."
-          },
-          "blocks": {}
-        },
-        "benefit_5": {
-          "type": "_ti-benefit-card",
-          "settings": {
-            "icon": "star",
-            "title": "It's Completely Non-Reactive & Acid-Resistant.",
-            "text": "Tomatoes, citrus, vinegar, oils - all harmless against titanium. While other metals leach nickel, chromium, or aluminum into your food, titanium stays calm and unreactive."
-          },
-          "blocks": {}
-        },
-        "benefit_6": {
-          "type": "_ti-benefit-card",
-          "settings": {
-            "icon": "lightning_bolt",
-            "title": "It Withstands Extreme Heat Day After Day.",
-            "text": "Titanium doesn't warp, crack, or fatigue under extreme temperature changes. Where wood splits and plastics degrade, titanium remains solid."
-          },
-          "blocks": {}
-        },
-        "benefit_7": {
-          "type": "_ti-benefit-card",
-          "settings": {
-            "icon": "plant",
-            "title": "It Preserves Nutrients.",
-            "text": "Reactive metals can strip vitamins like Vitamin C from food through oxidation. Titanium protects nutrients intact, so your meals deliver what nature intended."
-          },
-          "blocks": {}
-        },
-        "benefit_8": {
-          "type": "_ti-benefit-card",
-          "settings": {
-            "icon": "box",
-            "title": "It Endures Stress.",
-            "text": "Thanks to its unique crystal structure, titanium becomes more resistant with every cut, impact, or use. Instead of weakening, it hardens."
-          },
-          "blocks": {}
-        },
-        "benefit_9": {
-          "type": "_ti-benefit-card",
-          "settings": {
-            "icon": "clipboard",
-            "title": "It Outlasts Generations.",
-            "text": "One titanium board or pan replaces dozens of wood, plastic, or coated alternatives. It's not just long-lasting, it's heirloom quality."
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "benefit_1",
-        "benefit_2",
-        "benefit_3",
-        "benefit_4",
-        "benefit_5",
-        "benefit_6",
-        "benefit_7",
-        "benefit_8",
-        "benefit_9"
-      ],
-      "settings": {
-        "heading": "<p>Real Pure Titanium.</p><p>Real Benefits.</p>",
-        "heading_color": "#bca588",
-        "heading_font_size": 48,
-        "heading_font_size_mobile": 32,
-        "subheading": "<p>Not all titanium is created equal. Most cut costs by using titanium coatings, blends, or lower grades that compromise purity and safety.</p><p>At Taima®, we only use <strong>Grade 1 Certified Medical Titanium</strong> - the purest form possible. The same titanium trusted inside the human body for decades. No mixing. No coating. Just uncompromising purity engineered for your kitchen and ultimate safety.</p><h6>And because it's pure, you get every one of titanium's unique benefits in your hands:</h6>",
-        "subheading_color": "#b0b0b0",
-        "highlighted_text_color": "#ffffff",
-        "certification_image": "shopify://shop_images/pure-titanium.jpg",
-        "background_color": "#121212",
-        "card_border_color": "#333333",
-        "card_title_color": "#ffffff",
-        "card_text_color": "#b0b0b0",
-        "card_icon_color": "#bca588",
-        "content_max_width": 1920,
-        "aside_max_width": 500,
-        "column_gap": 120,
-        "columns_desktop": 2,
-        "cards_gap": 24,
-        "cards_gap_mobile": 12,
-        "padding_block_start": 152,
-        "padding_block_end": 152,
-        "padding_inline_start": 120,
-        "padding_inline_end": 120,
-        "padding_block_start_mobile": 64,
-        "padding_block_end_mobile": 64,
-        "padding_inline_start_mobile": 16,
-        "padding_inline_end_mobile": 16
-      }
-    },
     "materials_comparison_science": {
       "type": "materials-comparison",
       "blocks": {
@@ -1129,6 +1003,132 @@
         "padding_inline_end_mobile": 16
       }
     },
+    "ti_benefits_science": {
+      "type": "ti-benefits",
+      "blocks": {
+        "benefit_1": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "leaf",
+            "title": "Completely Toxin-Free (By Design).",
+            "text": "Pure titanium is chemically stable in cooking and prep conditions. It forms a stable TiO₂ passivation layer that prevents metal ions from migrating into food. There are no PFAS/PTFE coatings, no BPA/BPS or plasticizers, no nickel or chromium (like in stainless), and no aluminum cores to expose. Nothing to off-gas, flake, or leach - at any kitchen temperature."
+          },
+          "blocks": {}
+        },
+        "benefit_2": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "heart",
+            "title": "It's The Most Biocompatible Metal For The Human Body.",
+            "text": "That's why surgeons trust it in the body. It doesn't break down, flake, or leach toxins. It's as food-safe as it gets."
+          },
+          "blocks": {}
+        },
+        "benefit_3": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "check_box",
+            "title": "It Naturally Kills Bacteria (Extremely Hygienic).",
+            "text": "Titanium's dense, non-porous surface leaves nowhere for bacteria to hide. Just a quick clean, and it's like new again."
+          },
+          "blocks": {}
+        },
+        "benefit_4": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "lock",
+            "title": "It Never Rusts Or Degrades.",
+            "text": "Steel corrodes because oxygen turns it into rust. Titanium reacts differently: it forms titanium dioxide, an ultra-stable layer that works like permanent armor - it actually strengthens over time."
+          },
+          "blocks": {}
+        },
+        "benefit_5": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "star",
+            "title": "It's Completely Non-Reactive & Acid-Resistant.",
+            "text": "Tomatoes, citrus, vinegar, oils - all harmless against titanium. While other metals leach nickel, chromium, or aluminum into your food, titanium stays calm and unreactive."
+          },
+          "blocks": {}
+        },
+        "benefit_6": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "lightning_bolt",
+            "title": "It Withstands Extreme Heat Day After Day.",
+            "text": "Titanium doesn't warp, crack, or fatigue under extreme temperature changes. Where wood splits and plastics degrade, titanium remains solid."
+          },
+          "blocks": {}
+        },
+        "benefit_7": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "plant",
+            "title": "It Preserves Nutrients.",
+            "text": "Reactive metals can strip vitamins like Vitamin C from food through oxidation. Titanium protects nutrients intact, so your meals deliver what nature intended."
+          },
+          "blocks": {}
+        },
+        "benefit_8": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "box",
+            "title": "It Endures Stress.",
+            "text": "Thanks to its unique crystal structure, titanium becomes more resistant with every cut, impact, or use. Instead of weakening, it hardens."
+          },
+          "blocks": {}
+        },
+        "benefit_9": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "clipboard",
+            "title": "It Outlasts Generations.",
+            "text": "One titanium board or pan replaces dozens of wood, plastic, or coated alternatives. It's not just long-lasting, it's heirloom quality."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "benefit_4",
+        "benefit_5",
+        "benefit_6",
+        "benefit_7",
+        "benefit_8",
+        "benefit_9"
+      ],
+      "settings": {
+        "heading": "<p>Real Pure Titanium.</p><p>Real Benefits.</p>",
+        "heading_color": "#bca588",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 32,
+        "subheading": "<p>Not all titanium is created equal. Most cut costs by using titanium coatings, blends, or lower grades that compromise purity and safety.</p><p>At Taima®, we only use <strong>Grade 1 Certified Medical Titanium</strong> - the purest form possible. The same titanium trusted inside the human body for decades. No mixing. No coating. Just uncompromising purity engineered for your kitchen and ultimate safety.</p><h6>And because it's pure, you get every one of titanium's unique benefits in your hands:</h6>",
+        "subheading_color": "#b0b0b0",
+        "highlighted_text_color": "#ffffff",
+        "certification_image": "shopify://shop_images/pure-titanium.jpg",
+        "background_color": "#121212",
+        "card_border_color": "#333333",
+        "card_title_color": "#ffffff",
+        "card_text_color": "#b0b0b0",
+        "card_icon_color": "#bca588",
+        "content_max_width": 1920,
+        "aside_max_width": 500,
+        "column_gap": 120,
+        "columns_desktop": 2,
+        "cards_gap": 24,
+        "cards_gap_mobile": 12,
+        "padding_block_start": 152,
+        "padding_block_end": 152,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 64,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    },
     "secret_advantage": {
       "type": "secret-adv",
       "blocks": {
@@ -1195,6 +1195,55 @@
         "padding_inline_end": 120,
         "padding_block_start_mobile": 80,
         "padding_block_end_mobile": 80,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    },
+    "sticky_scroll_story_FwgXwQ": {
+      "type": "sticky-scroll-story",
+      "blocks": {
+        "sticky_scroll_line_EAVCtG": {
+          "type": "_sticky-scroll-line",
+          "settings": {
+            "kicker": "",
+            "heading": "So Why Titanium Kitchenware?",
+            "heading_size": "xl",
+            "heading_color": "#bca588",
+            "body": "<p>What’s The Real Benefit?</p>",
+            "body_size": "large"
+          },
+          "blocks": {}
+        },
+        "sticky_scroll_line_xdganP": {
+          "type": "_sticky-scroll-line",
+          "settings": {
+            "kicker": "",
+            "heading": "",
+            "heading_size": "large",
+            "heading_color": "",
+            "body": "<p>To understand the value of titanium, you first need to look at the alternatives.<br/>For decades, cookware companies have cut corners - using cheap materials, chemical coatings, and short-term fixes. Convenience came first. Safety never did.<br/>The result? A kitchen full of tools that look fine on the surface, but quietly expose you to toxins, heavy metals, and bacteria with every meal.<br/>That’s exactly why we built it on titanium. It’s the only material that gives you absolute safety, durability, and purity, and thanks to our patented engineering, it’s just as convenient to use every day. Now, let’s take a closer look at how every other material falls short.</p>",
+            "body_size": "medium"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "sticky_scroll_line_EAVCtG",
+        "sticky_scroll_line_xdganP"
+      ],
+      "settings": {
+        "media_type": "image",
+        "image": "shopify://shop_images/why_titnaium_kitchenware-min_1200x_7c49bd01-cf67-43d5-978b-a9ca602afde3.webp",
+        "media_width": 760,
+        "media_position": "left",
+        "background_color": "{{ settings.color_palette.foreground }}",
+        "content_max_width": 1600,
+        "padding_block_start": 64,
+        "padding_block_end": 64,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 40,
+        "padding_block_end_mobile": 40,
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
       }
@@ -1326,9 +1375,10 @@
     "sticky_scroll_hero",
     "section_trusted_failure",
     "sticky_scroll_benefit",
-    "ti_benefits_science",
     "materials_comparison_science",
+    "ti_benefits_science",
     "secret_advantage",
+    "sticky_scroll_story_FwgXwQ",
     "trust_band_tiles_GF7TU4"
   ]
 }
