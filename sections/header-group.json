@@ -361,7 +361,7 @@
                 "tab_cutting_boards_product_1": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "certified-pure-titanium-cutting-board",
                     "title": "Certified Pure Titanium Cutting Board V2",
                     "link": "/products/certified-taima%E2%84%A2-pure-titanium-cutting-board-v2-updated-design",
                     "open_in_new_tab": false,
@@ -380,7 +380,7 @@
                 "tab_cutting_boards_product_2": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "certified-pure-titanium-cutting-board-set-s-m-l",
                     "title": "Must-Have Non-Slip Mat For Titanium Board",
                     "link": "/products/taima%E2%84%A2-silicone-mat-for-board-non-slip",
                     "open_in_new_tab": false,
@@ -399,7 +399,7 @@
                 "tab_cutting_boards_product_3": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "non-slip-mat-for-board-premium-silicone",
                     "title": "Pure Titanium Cutting Board Set",
                     "link": "/products/pure-titanium-cutting-board-set-3-piece",
                     "open_in_new_tab": false,
@@ -483,6 +483,7 @@
             },
             "tab_drinkware": {
               "type": "_header-category-nav-tab",
+              "disabled": true,
               "settings": {
                 "collection": "titanium-drinkware",
                 "label": "Titanium Drinkware",
