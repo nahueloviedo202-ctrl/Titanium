@@ -1135,6 +1135,7 @@
           "type": "_advantage-card",
           "settings": {
             "icon": "none",
+            "image": "shopify://shop_images/secret-1.svg",
             "title": "Stress Doesn't Concentrate, It Disperses.",
             "text": "When your knife hits titanium, the force doesn't crack or splinter like wood. Instead, it spreads evenly across thousands of tightly packed crystal boundaries. The result? Small, shallow surface marks that wipe clean - not deep bacteria-trapping grooves."
           },
@@ -1144,6 +1145,7 @@
           "type": "_advantage-card",
           "settings": {
             "icon": "none",
+            "image": "shopify://shop_images/secret-2.svg",
             "title": "It Gets Tougher The More You Use It.",
             "text": "Titanium has a rare property called work-hardening. Every time pressure is applied (like your knife edge striking the board), the atoms actually shift and rearrange to make that exact spot more resistant next time. Most materials degrade under stress. Titanium improves."
           },
@@ -1153,6 +1155,7 @@
           "type": "_advantage-card",
           "settings": {
             "icon": "none",
+            "image": "shopify://shop_images/secret-3.svg",
             "title": "Durability Without Compromise.",
             "text": "This unique structure explains why titanium doesn't fatigue, doesn't corrode, and doesn't fracture the way other kitchen materials do. It simply endures - getting stronger, cleaner, and safer with every cut."
           },
