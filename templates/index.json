@@ -1680,8 +1680,8 @@
             "placeholder": "",
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-start": 24,
+            "padding-inline-end": 24
           },
           "blocks": {
             "heading": {
@@ -1732,7 +1732,7 @@
                     "alignment": "center",
                     "type_preset": "custom",
                     "font": "var(--font-body--family)",
-                    "font_size": "3rem",
+                    "font_size": "2.25rem",
                     "line_height": "tight",
                     "letter_spacing": "loose",
                     "case": "none",
@@ -1757,7 +1757,7 @@
                     "alignment": "center",
                     "type_preset": "custom",
                     "font": "var(--font-body--family)",
-                    "font_size": "3rem",
+                    "font_size": "2.25rem",
                     "line_height": "tight",
                     "letter_spacing": "loose",
                     "case": "none",

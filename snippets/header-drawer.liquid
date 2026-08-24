@@ -6,6 +6,8 @@
   @param {string} [data_header_drawer_type] - The type of header drawer to render
   @param {object} [block] - The block that can be used to provide settings
   @param {object} [section] - The section that can be used to provide settings
+  @param {string} [background_color] - Explicit drawer background color. Falls back to block.settings.background_color when blank.
+  @param {string} [text_color] - Explicit drawer text color. Falls back to block.settings.text_color when blank.
 
   @example
   {% render 'header-drawer', linklist: section.settings.menu, class: 'header-drawer--mobile' %}
@@ -15,6 +17,9 @@
   assign block_settings = block.settings
   assign max_featured_items = 4
   assign image_border_radius = block_settings.image_border_radius
+  assign drawer_background_color = background_color | default: block_settings.background_color
+  assign drawer_text_color = text_color | default: block_settings.text_color
+  assign drawer_color_id = block.id | append: '-drawer'
 
   if block_settings.menu_style == 'featured_collections'
     assign ratio = block_settings.featured_collections_aspect_ratio
@@ -36,8 +41,8 @@
     assign eager_loading = true
   endif
 
-  if block_settings.background_color != blank or block_settings.text_color != blank
-    render 'contrast-override', background_color: block_settings.background_color, text_color: block_settings.text_color, section_id: block.id
+  if drawer_background_color != blank or drawer_text_color != blank
+    render 'contrast-override', background_color: drawer_background_color, text_color: drawer_text_color, section_id: drawer_color_id
   endif
 %}
 
@@ -74,8 +79,8 @@
       ref="menuDrawer"
       class="
         menu-drawer
-        {% if block_settings.background_color != blank or block_settings.text_color != blank %}
-          color-custom-{{ block.id }}
+        {% if drawer_background_color != blank or drawer_text_color != blank %}
+          color-custom-{{ drawer_color_id }}
         {% endif %}
       "
     >
@@ -596,7 +601,7 @@
         %}
         {% if data_header_drawer_type == 'mobile-drawer' and show_country or show_language %}
           {% liquid
-            assign background_brightness = block_settings.background_color | color_brightness
+            assign background_brightness = drawer_background_color | color_brightness
             if background_brightness < 64
               assign flag_shadow_size = 4
             else

@@ -3,13 +3,21 @@
 {% assign block_settings = block.settings %}
 {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
 
-{% if block_settings.icon_color != blank %}
-  {% style %}
-    .icon-block-{{ block.id }} {
+{% style %}
+  .icon-block-{{ block.id }} {
+    {% if block_settings.icon_color != blank %}
       color: {{ block_settings.icon_color }};
+    {% endif %}
+  }
+
+  {% if block_settings.custom_mobile_size %}
+    @media screen and (max-width: 749px) {
+      .icon-block-{{ block.id }} {
+        width: {{ block_settings.width_mobile }}px !important;
+      }
     }
-  {% endstyle %}
-{% endif %}
+  {% endif %}
+{% endstyle %}
 
 {% capture icon %}
   {% render 'icon-or-image',
@@ -309,6 +317,28 @@
       "step": 2,
       "unit": "px",
       "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_mobile_size",
+      "label": "t:settings.custom_mobile_size",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:content.mobile_size",
+      "visible_if": "{{ block.settings.custom_mobile_size == true }}"
+    },
+    {
+      "type": "range",
+      "id": "width_mobile",
+      "label": "t:settings.width_mobile",
+      "min": 12,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ block.settings.custom_mobile_size == true }}"
     },
     {
       "type": "url",

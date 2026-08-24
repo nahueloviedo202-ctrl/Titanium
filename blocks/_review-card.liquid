@@ -49,6 +49,18 @@
           video_autoplay: false,
           video_class: 'review-card__video'
         %}
+      {%- elsif video_poster != blank -%}
+        {{
+          video_poster
+          | image_url: width: 900
+          | image_tag: widths: '352, 832, 900', sizes: '(min-width: 750px) 25vw, 45vw', loading: 'lazy', class: 'review-card__image'
+        }}
+      {%- elsif block.settings.image != blank -%}
+        {{
+          block.settings.image
+          | image_url: width: 900
+          | image_tag: widths: '352, 832, 900', sizes: '(min-width: 750px) 25vw, 45vw', loading: 'lazy', class: 'review-card__image'
+        }}
       {%- else -%}
         {{ 'product-apparel-2' | placeholder_svg_tag: 'review-card__image' }}
       {%- endif -%}

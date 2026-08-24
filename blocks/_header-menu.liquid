@@ -23,7 +23,9 @@
         linklist: block_settings.menu,
         data_header_drawer_type: 'mobile-drawer',
         block: block,
-        section: section
+        section: section,
+        background_color: block_settings.drawer_background_color,
+        text_color: block_settings.drawer_text_color
       %}
     </div>
 
@@ -916,6 +918,18 @@
     {
       "type": "header",
       "content": "t:content.mobile_layout"
+    },
+    {
+      "type": "color",
+      "id": "drawer_background_color",
+      "label": "t:settings.drawer_background_color",
+      "default": "{{ settings.color_palette.foreground }}"
+    },
+    {
+      "type": "color",
+      "id": "drawer_text_color",
+      "label": "t:settings.drawer_text_color",
+      "default": "{{ settings.color_palette.background }}"
     },
     {
       "type": "checkbox",
