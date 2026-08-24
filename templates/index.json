@@ -125,7 +125,7 @@
         "logo_height": 24,
         "logo_gap": 64,
         "logo_opacity": 100,
-        "section_height": "large",
+        "section_height": "full-screen",
         "section_height_custom": 90,
         "padding-block-start": 100,
         "padding-block-end": 96
