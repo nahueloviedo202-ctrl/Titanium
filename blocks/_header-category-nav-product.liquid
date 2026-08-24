@@ -9,38 +9,41 @@
     assign card_image = product.featured_image
   endif
 
-  assign card_title_text = card.title
-  if card_title_text == blank and product != blank
-    assign card_title_text = product.title
-  endif
-  if card_title_text != blank
-    assign card_title = card_title_text
-  else
-    assign card_title = 'placeholders.product_title' | t
-  endif
-
-  assign card_link = card.link
-  if card_link == blank and product != blank
+  # Once a real product is linked, its title/link/price/discount always win
+  # over the manual text fields, so the card stays in sync with the product.
+  if product != blank
+    assign card_title = product.title
     assign card_link = product.url
-  endif
 
-  assign product_on_sale = false
-  if product != blank and product.compare_at_price > product.price
-    assign product_on_sale = true
-  endif
+    assign product_on_sale = false
+    if product.compare_at_price > product.price
+      assign product_on_sale = true
+    endif
 
-  assign card_compare_price = card.compare_price
-  if card_compare_price == blank and product_on_sale
-    capture card_compare_price
-      render 'format-price', price: product.compare_at_price
-    endcapture
-  endif
-
-  assign card_price = card.price
-  if card_price == blank and product != blank
     capture card_price
       render 'format-price', price: product.price
     endcapture
+
+    if product_on_sale
+      capture card_compare_price
+        render 'format-price', price: product.compare_at_price
+      endcapture
+      assign discount_percentage = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round
+      assign card_save_badge_text = 'products.product.save_percentage' | t: percentage: discount_percentage
+    else
+      assign card_compare_price = blank
+      assign card_save_badge_text = blank
+    endif
+  else
+    if card.title != blank
+      assign card_title = card.title
+    else
+      assign card_title = 'placeholders.product_title' | t
+    endif
+    assign card_link = card.link
+    assign card_price = card.price
+    assign card_compare_price = card.compare_price
+    assign card_save_badge_text = card.save_badge_text
   endif
 
   assign rating_value = card.rating_value | at_most: 5 | at_least: 0
@@ -55,13 +58,9 @@
   show_rating: card.show_rating,
   rating_value: rating_value,
   review_count: card.review_count,
-  bullet_1_icon: card.bullet_1_icon,
-  bullet_1_label: card.bullet_1_label,
-  bullet_2_icon: card.bullet_2_icon,
-  bullet_2_label: card.bullet_2_label,
   compare_price: card_compare_price,
   price: card_price,
-  save_badge_text: card.save_badge_text,
+  save_badge_text: card_save_badge_text,
   block: block
 %}
 
@@ -143,31 +142,6 @@
       "label": "t:settings.review_count",
       "default": "t:text_defaults.header_category_nav_review_count",
       "visible_if": "{{ block.settings.show_rating }}"
-    },
-    {
-      "type": "header",
-      "content": "t:content.icons"
-    },
-    {
-      "type": "image_picker",
-      "id": "bullet_1_icon",
-      "label": "t:settings.image_icon"
-    },
-    {
-      "type": "text",
-      "id": "bullet_1_label",
-      "label": "t:settings.label",
-      "default": "t:text_defaults.header_category_nav_bullet_1"
-    },
-    {
-      "type": "image_picker",
-      "id": "bullet_2_icon",
-      "label": "t:settings.image_icon"
-    },
-    {
-      "type": "text",
-      "id": "bullet_2_label",
-      "label": "t:settings.label"
     },
     {
       "type": "header",
