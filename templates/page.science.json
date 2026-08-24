@@ -1201,6 +1201,7 @@
         "trust_tile_LBigWz": {
           "type": "_trust-tile",
           "settings": {
+            "image": "shopify://shop_images/chef-1.webp",
             "alt": "",
             "hide_on_desktop": false
           },
@@ -1209,6 +1210,7 @@
         "trust_tile_FVE6ki": {
           "type": "_trust-tile",
           "settings": {
+            "image": "shopify://shop_images/chef-2.webp",
             "alt": "",
             "hide_on_desktop": false
           },
@@ -1217,6 +1219,7 @@
         "trust_tile_dCf4YH": {
           "type": "_trust-tile",
           "settings": {
+            "image": "shopify://shop_images/chef-3.webp",
             "alt": "",
             "hide_on_desktop": false
           },
@@ -1225,6 +1228,7 @@
         "trust_tile_AdGLfA": {
           "type": "_trust-tile",
           "settings": {
+            "image": "shopify://shop_images/chef-5.webp",
             "alt": "",
             "hide_on_desktop": false
           },
@@ -1233,6 +1237,7 @@
         "trust_tile_6EyRme": {
           "type": "_trust-tile",
           "settings": {
+            "image": "shopify://shop_images/chef-6.webp",
             "alt": "",
             "hide_on_desktop": false
           },
@@ -1241,6 +1246,7 @@
         "trust_tile_p7fFqE": {
           "type": "_trust-tile",
           "settings": {
+            "image": "shopify://shop_images/chef-7.webp",
             "alt": "",
             "hide_on_desktop": false
           },
@@ -1249,6 +1255,7 @@
         "trust_tile_gBXzFP": {
           "type": "_trust-tile",
           "settings": {
+            "image": "shopify://shop_images/chef-8.webp",
             "alt": "",
             "hide_on_desktop": false
           },
