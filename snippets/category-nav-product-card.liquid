@@ -14,10 +14,6 @@
   @param {boolean} [show_rating] - Whether to render the star rating row
   @param {number} [rating_value] - Rating out of 5
   @param {string} [review_count] - Review count text, e.g. "(1,234)"
-  @param {image} [bullet_1_icon]
-  @param {string} [bullet_1_label]
-  @param {image} [bullet_2_icon]
-  @param {string} [bullet_2_label]
   @param {string} [compare_price] - Formatted compare-at price
   @param {string} [price] - Formatted price
   @param {string} [save_badge_text] - Small badge shown next to the price, e.g. "Save 50%"
@@ -147,35 +143,6 @@
       </a>
     {%- else -%}
       <span class="category-nav__product-title">{{ title }}</span>
-    {%- endif -%}
-
-    {%- if bullet_1_label != blank or bullet_2_label != blank -%}
-      <ul class="category-nav__product-bullets">
-        {%- if bullet_1_label != blank -%}
-          <li class="category-nav__product-bullet">
-            {%- if bullet_1_icon != blank -%}
-              {{
-                bullet_1_icon
-                | image_url: width: 28
-                | image_tag: widths: '14, 28', loading: 'lazy', alt: '', class: 'category-nav__product-bullet-icon'
-              }}
-            {%- endif -%}
-            {{- bullet_1_label -}}
-          </li>
-        {%- endif -%}
-        {%- if bullet_2_label != blank -%}
-          <li class="category-nav__product-bullet">
-            {%- if bullet_2_icon != blank -%}
-              {{
-                bullet_2_icon
-                | image_url: width: 28
-                | image_tag: widths: '14, 28', loading: 'lazy', alt: '', class: 'category-nav__product-bullet-icon'
-              }}
-            {%- endif -%}
-            {{- bullet_2_label -}}
-          </li>
-        {%- endif -%}
-      </ul>
     {%- endif -%}
 
     {%- if compare_price != blank or price != blank -%}
