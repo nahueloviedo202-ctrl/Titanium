@@ -89,6 +89,9 @@
         "media_type_mobile": "video",
         "kicker": "Limited Time Offer",
         "heading": "Upgrade Your Kitchen With Toxin-Free Titanium Cookware",
+        "heading_color": "",
+        "heading_line_2": "",
+        "heading_color_2": "",
         "subheading": "<p>Thoughtfully designed products built for everyday life. <strong>Save up to 50% for a limited time.</strong></p>",
         "text_color": "{{ settings.color_palette.background }}",
         "button_label": "Shop now",
@@ -122,10 +125,10 @@
         "logo_height": 24,
         "logo_gap": 64,
         "logo_opacity": 100,
-        "section_height": "full-screen",
+        "section_height": "large",
         "section_height_custom": 90,
-        "padding-block-start": 140,
-        "padding-block-end": 120
+        "padding-block-start": 100,
+        "padding-block-end": 96
       }
     },
     "promo_inline_link_pR8fXq": {
@@ -644,6 +647,7 @@
             "image_label": "Titanium Series",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/1-min.webp",
             "title": "No Compromise",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>Most pans force you to choose - performance, durability, or convenience. This gives you all 3, without chemicals.</p>",
@@ -660,6 +664,7 @@
             "image_label": "Titanium Board",
             "badge_color": "",
             "badge_text_color": "",
+            "video_poster": "shopify://shop_images/2-min.webp",
             "title": "I'm Obsessed!",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>It doesn't shed toxins, bacteria can't grow on it, and it's ridiculously easy to clean.</p>",
@@ -676,6 +681,7 @@
             "image_label": "Titanium Pan",
             "badge_color": "",
             "badge_text_color": "",
+            "video_poster": "shopify://shop_images/3-min.webp",
             "title": "Non-Stick Without Chemicals",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>When I cook at home for my family I choose only non-toxic cookware, so I don't have to worry about chemicals.</p>",
@@ -693,6 +699,7 @@
             "image_label": "TITANIUM PAN",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/4-min.webp",
             "title": "It Looks Fantastic!",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>Taima pan heats up very quickly and evenly, the sear you can achieve with this is amazing.</p>",
@@ -710,6 +717,7 @@
             "image_label": "TITANIUM BORAD",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/5-min.webp",
             "title": "Naturally Antibacterial & Sterile",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>\"It's increidibly easy to clean, no smell, no mess just a quick rinse & it's ready to go again\"</p>",
@@ -727,6 +735,7 @@
             "image_label": "TITANIUM PAN",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/6-min.webp",
             "title": "Once You Go Titanium, You Won't Go Back",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>\"The special surface pattern also helps food naturally stick less, so you don't have to worry about chemicals getting into your food\"</p>",
@@ -744,6 +753,7 @@
             "image_label": "TITANIUM PAN",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/7-min.webp",
             "title": "Perfect For Health Conscious People",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>\"I love it. I love it. I love it\"</p>",
@@ -761,6 +771,7 @@
             "image_label": "TITANIUM PAN",
             "badge_color": "",
             "badge_text_color": "",
+            "video_poster": "shopify://shop_images/8-min.webp",
             "title": "Best Non-Toxic Coockware On The Planet",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>\"With taima its easy to make our favorite comfort meals because i can prepare them with complete peace of mind that no toxins are near\"</p>",
@@ -818,27 +829,6 @@
     },
     "behind_the_scenes_9DxQ97": {
       "type": "behind-the-scenes",
-      "blocks": {
-        "behind_the_scenes_quote_mRRgKW": {
-          "type": "_behind-the-scenes-quote",
-          "settings": {
-            "quote": "<p>“Health Is The Most Valuable Thing We Have. I Created Taima To Protect It”</p>",
-            "quote_color": "#d4c7b4",
-            "quote_size": 24,
-            "quote_size_mobile": 16,
-            "founder_name": "Paul S., Founder",
-            "founder_color": "#d4c7b4",
-            "founder_size": 20,
-            "signature": "shopify://shop_images/Signature_founder_1_1.webp",
-            "signature_width": 120,
-            "signature_height": 80
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "behind_the_scenes_quote_mRRgKW"
-      ],
       "disabled": true,
       "name": "t:names.behind_the_scenes",
       "settings": {
