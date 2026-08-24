@@ -78,9 +78,9 @@
           "type": "text",
           "settings": {
             "text": "<h2>Trusted Where Failure Isn't An Option</h2>",
-            "width": "fit-content",
+            "width": "100%",
             "max_width": "normal",
-            "alignment": "center",
+            "alignment": "left",
             "type_preset": "h2",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
@@ -104,8 +104,8 @@
           "settings": {
             "text": "<p>Because of its extreme durability, resistance to corrosion, and complete biocompatibility, titanium is the material of choice in the fields where failure is not an option.</p>",
             "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
+            "max_width": "none",
+            "alignment": "left",
             "type_preset": "rte",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
