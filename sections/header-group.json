@@ -183,7 +183,7 @@
                 "tab_bundle_save_product_1": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "spring-sale-exclusive-complete-classic-titanium-cookware-set-20-piece",
                     "title": "Pure Titanium Signature Pan Complete Set (8 Piece)",
                     "link": "/products/pure-titanium-signature-pan-complete-set-8-piece",
                     "open_in_new_tab": false,
@@ -202,7 +202,7 @@
                 "tab_bundle_save_product_2": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "certified-pure-titanium-cutting-board",
                     "title": "Pure Titanium Cutting Board Set (3 Piece)",
                     "link": "/products/pure-titanium-cutting-board-set-3-piece",
                     "open_in_new_tab": false,
@@ -221,7 +221,7 @@
                 "tab_bundle_save_product_3": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "spring-sale-exclusive-pure-titanium-pan-everyday-duo-set-10-piece",
                     "title": "Pure Titanium Pan Everyday Duo Set (6 Piece)",
                     "link": "/products/pure-titanium-pan-everyday-duo-set-6-piece",
                     "open_in_new_tab": false,
@@ -236,52 +236,12 @@
                     "price": "$399"
                   },
                   "blocks": {}
-                },
-                "tab_bundle_save_product_4": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "product": "",
-                    "title": "Complete Classic Titanium Cookware Set (14 Piece)",
-                    "link": "/products/complete-classic-titanium-cookware-set-14-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "Ultimate Savings!",
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(1329)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "bullet_2_label": "",
-                    "compare_price": "$1999",
-                    "price": "$899"
-                  },
-                  "blocks": {}
-                },
-                "tab_bundle_save_product_5": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "product": "",
-                    "title": "Complete Signature Titanium Cookware Set (14 Piece)",
-                    "link": "/products/complete-signature-titanium-cookware-set-14-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "Ultimate Savings!",
-                    "save_badge_text": "SAVE 55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(2189)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "bullet_2_label": "",
-                    "compare_price": "$1999",
-                    "price": "$899"
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
                 "tab_bundle_save_product_1",
                 "tab_bundle_save_product_2",
-                "tab_bundle_save_product_3",
-                "tab_bundle_save_product_4",
-                "tab_bundle_save_product_5"
+                "tab_bundle_save_product_3"
               ]
             },
             "tab_cookware": {
