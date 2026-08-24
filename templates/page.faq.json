@@ -66,7 +66,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "About Us",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -360,7 +360,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "About Pure Titanium",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -974,7 +974,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "Orders & Shipping",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -1308,7 +1308,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "Regular Cookware",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -1522,7 +1522,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "Pure Titanium Cookware",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -2096,7 +2096,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "Regular Cutting Boards",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -2390,7 +2390,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "Pure Titanium Cutting Board",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -2764,7 +2764,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "Regular Utensils",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -2978,7 +2978,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "Pure Titanium Utensils",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -3192,7 +3192,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "Regular Drinkware",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -3526,7 +3526,7 @@
           "type": "_faq-category",
           "settings": {
             "heading": "Pure Titanium Drinkware",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "icon": "plus",
             "dividers": true,
             "type_preset": "h6"
@@ -3873,8 +3873,8 @@
       "name": "t:names.faq_page",
       "settings": {
         "background_color": "#121212",
-        "text_color": "",
-        "padding-block-start": 96,
+        "text_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 16,
         "padding-block-end": 96,
         "padding-inline-start": 0,
         "padding-inline-end": 0
