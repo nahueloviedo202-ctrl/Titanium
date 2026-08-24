@@ -1,0 +1,155 @@
+
+
+<article
+  class="ti-benefit-card"
+  {{ block.shopify_attributes }}
+>
+  <div class="ti-benefit-card__head">
+    <span class="ti-benefit-card__icon" aria-hidden="true">
+      {% render 'icon-or-image',
+        icon: block.settings.icon,
+        image_upload: block.settings.image,
+        width: 32,
+        class_name: 'ti-benefit-card__icon-media'
+      %}
+    </span>
+    {%- if block.settings.title != blank -%}
+      <h3 class="ti-benefit-card__title">{{ block.settings.title }}</h3>
+    {%- endif -%}
+  </div>
+  {%- if block.settings.text != blank -%}
+    <p class="ti-benefit-card__text">{{ block.settings.text }}</p>
+  {%- endif -%}
+</article>
+
+{% stylesheet %}
+  .ti-benefit-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: calc(20px * var(--tib-scale, 1));
+    border: calc(1px * var(--tib-scale, 1)) solid var(--tib-card-border-color, #333333);
+    border-radius: calc(16px * var(--tib-scale, 1));
+  }
+
+  .ti-benefit-card__head {
+    display: flex;
+    align-items: center;
+    gap: calc(12px * var(--tib-scale, 1));
+    margin-bottom: calc(16px * var(--tib-scale, 1));
+  }
+
+  .ti-benefit-card__icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: calc(32px * var(--tib-scale, 1));
+    height: calc(32px * var(--tib-scale, 1));
+    color: var(--tib-icon-color, #bca588);
+  }
+
+  .ti-benefit-card__icon-media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ti-benefit-card__title {
+    margin: 0;
+    color: var(--tib-card-title-color, #ffffff);
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    font-size: calc(20px * var(--tib-scale, 1));
+  }
+
+  .ti-benefit-card__text {
+    margin: 0;
+    color: var(--tib-card-text-color, #b0b0b0);
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-size: calc(16px * var(--tib-scale, 1));
+  }
+
+  @media screen and (max-width: 749px) {
+    .ti-benefit-card {
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    .ti-benefit-card__head {
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .ti-benefit-card__icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .ti-benefit-card__title {
+      font-size: 16px;
+    }
+
+    .ti-benefit-card__text {
+      font-size: 14px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.ti_benefit_card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "t:settings.icon",
+      "options": [
+        { "value": "none", "label": "t:options.none" },
+        { "value": "leaf", "label": "t:options.leaf" },
+        { "value": "heart", "label": "t:options.heart" },
+        { "value": "check_box", "label": "t:options.check_box" },
+        { "value": "lock", "label": "t:options.lock" },
+        { "value": "star", "label": "t:options.star" },
+        { "value": "lightning_bolt", "label": "t:options.lightning_bolt" },
+        { "value": "plant", "label": "t:options.plant" },
+        { "value": "box", "label": "t:options.box" },
+        { "value": "clipboard", "label": "t:options.clipboard" },
+        { "value": "recycle", "label": "t:options.recycle" }
+      ],
+      "default": "star"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image_icon"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:settings.title",
+      "default": "t:text_defaults.ti_benefit_card_title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:settings.text",
+      "default": "t:text_defaults.ti_benefit_card_text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.ti_benefit_card",
+      "category": "t:categories.text"
+    }
+  ]
+}
+{% endschema %}

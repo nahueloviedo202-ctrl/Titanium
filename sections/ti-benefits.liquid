@@ -1,0 +1,615 @@
+
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+
+  assign cert_image = section.settings.certification_image
+  assign cert_render_width = 750
+  assign cert_render_height = 750
+  if cert_image.aspect_ratio
+    assign cert_render_height = cert_render_width | divided_by: cert_image.aspect_ratio | round
+  endif
+%}
+
+<section
+  id="TiBenefits-{{ section.id }}"
+  class="ti-benefits{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="region"
+  aria-label="{% if section.settings.heading != blank %}{{ section.settings.heading | strip_html }}{% else %}{{ 'accessibility.ti_benefits_region' | t }}{% endif %}"
+>
+  <div
+    class="ti-benefits__inner"
+    style="
+      --tib-max-width: {{ section.settings.content_max_width }}px;
+      --tib-padding-block-start: {{ section.settings.padding_block_start }}px;
+      --tib-padding-block-end: {{ section.settings.padding_block_end }}px;
+      --tib-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+      --tib-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+      --tib-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+      --tib-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+      --tib-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+      --tib-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+    "
+  >
+    <div
+      class="ti-benefits__grid"
+      style="
+        --tib-aside-width: {{ section.settings.aside_max_width }}px;
+        --tib-grid-gap: {{ section.settings.column_gap }}px;
+      "
+    >
+      {%- if section.blocks.size > 0 -%}
+        <div
+          class="ti-benefits__cards"
+          style="
+            --tib-cards-columns: {{ section.settings.columns_desktop }};
+            --tib-cards-gap: {{ section.settings.cards_gap }}px;
+            --tib-cards-gap-mobile: {{ section.settings.cards_gap_mobile }}px;
+            --tib-card-border-color: {{ section.settings.card_border_color }};
+            --tib-card-title-color: {{ section.settings.card_title_color }};
+            --tib-card-text-color: {{ section.settings.card_text_color }};
+            --tib-icon-color: {{ section.settings.card_icon_color }};
+          "
+        >
+          {% content_for 'blocks' %}
+        </div>
+      {%- endif -%}
+
+      <aside class="ti-benefits__aside">
+        {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+          <div class="ti-benefits__heading-wrapper">
+            {%- if section.settings.heading != blank -%}
+              <h2
+                class="ti-benefits__heading"
+                style="
+                  color: {{ section.settings.heading_color }};
+                  --tib-heading-size: {{ section.settings.heading_font_size }}px;
+                  --tib-heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+                "
+              >
+                {{ section.settings.heading }}
+              </h2>
+            {%- endif -%}
+
+            {%- if section.settings.subheading != blank -%}
+              <div
+                class="ti-benefits__subcopy rte"
+                style="
+                  color: {{ section.settings.subheading_color }};
+                  --tib-highlight-color: {{ section.settings.highlighted_text_color }};
+                "
+              >
+                {{ section.settings.subheading }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {%- if cert_image != blank -%}
+          <div class="ti-benefits__media">
+            <img
+              src="{{ cert_image | image_url: width: 750 }}"
+              srcset="
+                {{- cert_image | image_url: width: 375 }} 375w,
+                {{ cert_image | image_url: width: 750 }} 750w,
+                {{ cert_image | image_url: width: 1000 }} 1000w
+              "
+              sizes="(min-width: 750px) 375px, 220px"
+              width="{{ cert_render_width }}"
+              height="{{ cert_render_height }}"
+              alt="{{ cert_image.alt | default: section.settings.heading | strip_html | escape }}"
+              loading="lazy"
+            >
+          </div>
+        {%- endif -%}
+      </aside>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .ti-benefits {
+    --tib-scale: 1;
+    position: relative;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .ti-benefits__inner {
+    position: relative;
+    max-width: calc(var(--tib-max-width, 1920px) * var(--tib-scale, 1));
+    margin-inline: auto;
+    padding-block: calc(var(--tib-padding-block-start, 0px) * var(--tib-scale, 1)) calc(var(--tib-padding-block-end, 0px) * var(--tib-scale, 1));
+    padding-inline: calc(var(--tib-padding-inline-start, 0px) * var(--tib-scale, 1)) calc(var(--tib-padding-inline-end, 0px) * var(--tib-scale, 1));
+  }
+
+  .ti-benefits__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) calc(var(--tib-aside-width, 500px) * var(--tib-scale, 1));
+    align-items: start;
+    gap: calc(var(--tib-grid-gap, 120px) * var(--tib-scale, 1));
+  }
+
+  .ti-benefits__cards {
+    display: grid;
+    grid-template-columns: repeat(var(--tib-cards-columns, 2), minmax(0, 1fr));
+    gap: calc(var(--tib-cards-gap, 24px) * var(--tib-scale, 1));
+    align-content: start;
+  }
+
+  .ti-benefits__aside {
+    display: flex;
+    flex-direction: column;
+    gap: calc(48px * var(--tib-scale, 1));
+  }
+
+  .ti-benefits__heading {
+    margin: 0 0 calc(24px * var(--tib-scale, 1));
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-size: calc(var(--tib-heading-size, 48px) * var(--tib-scale, 1));
+  }
+
+  .ti-benefits__heading p {
+    margin: 0;
+  }
+
+  .ti-benefits__subcopy {
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-size: calc(16px * var(--tib-scale, 1));
+  }
+
+  .ti-benefits__subcopy p {
+    margin: 0 0 1em;
+  }
+
+  .ti-benefits__subcopy p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ti-benefits__subcopy strong {
+    color: var(--tib-highlight-color, #ffffff);
+    font-weight: 500;
+  }
+
+  .ti-benefits__subcopy h6 {
+    margin: calc(32px * var(--tib-scale, 1)) 0 0;
+    color: var(--tib-highlight-color, #e7e7e7);
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    font-size: calc(20px * var(--tib-scale, 1));
+  }
+
+  .ti-benefits__media {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ti-benefits__media img {
+    display: block;
+    width: 100%;
+    max-width: calc(375px * var(--tib-scale, 1));
+    height: auto;
+    margin-inline: auto;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ti-benefits__inner {
+      padding-block: var(--tib-padding-block-start-mobile, 0) var(--tib-padding-block-end-mobile, 0);
+      padding-inline: var(--tib-padding-inline-start-mobile, 0) var(--tib-padding-inline-end-mobile, 0);
+    }
+
+    .ti-benefits__grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .ti-benefits__cards {
+      grid-template-columns: 1fr;
+      gap: var(--tib-cards-gap-mobile, 12px);
+    }
+
+    .ti-benefits__aside {
+      order: -1;
+      gap: 24px;
+    }
+
+    .ti-benefits__heading {
+      margin-bottom: 16px;
+      font-size: var(--tib-heading-size-mobile, 32px);
+    }
+
+    .ti-benefits__subcopy {
+      font-size: 14px;
+    }
+
+    .ti-benefits__subcopy h6 {
+      margin-top: 24px;
+      font-size: 16px;
+    }
+
+    .ti-benefits__media img {
+      max-width: 220px;
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1799px) {
+    .ti-benefits {
+      --tib-scale: 0.9;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .ti-benefits {
+      --tib-scale: 1.3;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.ti_benefits",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_ti-benefit-card"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:html_defaults.ti_benefits_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 56,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:settings.subheading",
+      "default": "t:html_defaults.ti_benefits_subheading"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "color",
+      "id": "highlighted_text_color",
+      "label": "t:settings.highlighted_text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:content.media"
+    },
+    {
+      "type": "image_picker",
+      "id": "certification_image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "t:settings.border_color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "t:settings.card_title_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "color",
+      "id": "card_icon_color",
+      "label": "t:settings.icon_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "t:settings.width",
+      "min": 1200,
+      "max": 2800,
+      "step": 20,
+      "unit": "px",
+      "default": 1920
+    },
+    {
+      "type": "range",
+      "id": "aside_max_width",
+      "label": "t:settings.width",
+      "min": 360,
+      "max": 720,
+      "step": 10,
+      "unit": "px",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "t:settings.gap",
+      "min": 40,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "t:settings.columns",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "cards_gap",
+      "label": "t:settings.gap",
+      "min": 8,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "cards_gap_mobile",
+      "label": "t:settings.gap",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 152
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 152
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.ti_benefits",
+      "category": "t:categories.storytelling",
+      "blocks": {
+        "benefit_1": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "leaf",
+            "title": "Completely Toxin-Free (By Design).",
+            "text": "Pure titanium is chemically stable in cooking and prep conditions. It forms a stable TiO₂ passivation layer that prevents metal ions from migrating into food. There are no PFAS/PTFE coatings, no BPA/BPS or plasticizers, no nickel or chromium (like in stainless), and no aluminum cores to expose. Nothing to off-gas, flake, or leach - at any kitchen temperature."
+          }
+        },
+        "benefit_2": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "heart",
+            "title": "It's The Most Biocompatible Metal For The Human Body.",
+            "text": "That's why surgeons trust it in the body. It doesn't break down, flake, or leach toxins. It's as food-safe as it gets."
+          }
+        },
+        "benefit_3": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "check_box",
+            "title": "It Naturally Kills Bacteria (Extremely Hygienic).",
+            "text": "Titanium's dense, non-porous surface leaves nowhere for bacteria to hide. Just a quick clean, and it's like new again."
+          }
+        },
+        "benefit_4": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "lock",
+            "title": "It Never Rusts Or Degrades.",
+            "text": "Steel corrodes because oxygen turns it into rust. Titanium reacts differently: it forms titanium dioxide, an ultra-stable layer that works like permanent armor - it actually strengthens over time."
+          }
+        },
+        "benefit_5": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "star",
+            "title": "It's Completely Non-Reactive & Acid-Resistant.",
+            "text": "Tomatoes, citrus, vinegar, oils - all harmless against titanium. While other metals leach nickel, chromium, or aluminum into your food, titanium stays calm and unreactive."
+          }
+        },
+        "benefit_6": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "lightning_bolt",
+            "title": "It Withstands Extreme Heat Day After Day.",
+            "text": "Titanium doesn't warp, crack, or fatigue under extreme temperature changes. Where wood splits and plastics degrade, titanium remains solid."
+          }
+        },
+        "benefit_7": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "plant",
+            "title": "It Preserves Nutrients.",
+            "text": "Reactive metals can strip vitamins like Vitamin C from food through oxidation. Titanium protects nutrients intact, so your meals deliver what nature intended."
+          }
+        },
+        "benefit_8": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "box",
+            "title": "It Endures Stress.",
+            "text": "Thanks to its unique crystal structure, titanium becomes more resistant with every cut, impact, or use. Instead of weakening, it hardens."
+          }
+        },
+        "benefit_9": {
+          "type": "_ti-benefit-card",
+          "settings": {
+            "icon": "clipboard",
+            "title": "It Outlasts Generations.",
+            "text": "One titanium board or pan replaces dozens of wood, plastic, or coated alternatives. It's not just long-lasting, it's heirloom quality."
+          }
+        }
+      },
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "benefit_4",
+        "benefit_5",
+        "benefit_6",
+        "benefit_7",
+        "benefit_8",
+        "benefit_9"
+      ]
+    }
+  ]
+}
+{% endschema %}
