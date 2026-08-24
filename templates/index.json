@@ -983,8 +983,8 @@
         "padding_block_end": 240,
         "padding_inline_start": 16,
         "padding_inline_end": 16,
-        "padding_block_start_mobile": 148,
-        "padding_block_end_mobile": 148,
+        "padding_block_start_mobile": 32,
+        "padding_block_end_mobile": 32,
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
       }
