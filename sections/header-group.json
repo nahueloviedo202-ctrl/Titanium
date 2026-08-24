@@ -262,7 +262,7 @@
                 "tab_cookware_product_1": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "1x-zentitanium-titanium-nutri-pan-pro",
                     "title": "Pure Titanium Classic Pan Pro",
                     "link": "/products/taima-titanium-nutri-pan-pro-2-0",
                     "open_in_new_tab": false,
@@ -281,7 +281,7 @@
                 "tab_cookware_product_2": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "2x-zentitanium-titanium-nutri-pan-pro",
                     "title": "Pure Titanium Wok Pan Pro",
                     "link": "/products/taima-certified-pure-titanium-wok-pan-pro",
                     "open_in_new_tab": false,
@@ -300,7 +300,7 @@
                 "tab_cookware_product_3": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "zentitanium-pure-titanium-wok-pan-pro",
                     "title": "Pure Titanium Deep Pan Pro",
                     "link": "/products/pure-titanium-deep-pan-pro",
                     "open_in_new_tab": false,
@@ -319,7 +319,7 @@
                 "tab_cookware_product_4": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "zentitanium-titanium-pan",
                     "title": "Pure Titanium Signature Pan Set (6 piece)",
                     "link": "/products/pure-titanium-signature-pan-set-6-piece",
                     "open_in_new_tab": false,
@@ -334,33 +334,13 @@
                     "price": "$549"
                   },
                   "blocks": {}
-                },
-                "tab_cookware_product_5": {
-                  "type": "_header-category-nav-product",
-                  "settings": {
-                    "product": "",
-                    "title": "Complete Signature Titanium Cookware Set (14 Piece)",
-                    "link": "/products/complete-signature-titanium-cookware-set-14-piece",
-                    "open_in_new_tab": false,
-                    "sale_badge_text": "Limited-4th-of-July-Sale-Bundle!",
-                    "save_badge_text": "-55%",
-                    "show_rating": true,
-                    "rating_value": 5,
-                    "review_count": "(2189)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "bullet_2_label": "",
-                    "compare_price": "$1999",
-                    "price": "$899"
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
                 "tab_cookware_product_1",
                 "tab_cookware_product_2",
                 "tab_cookware_product_3",
-                "tab_cookware_product_4",
-                "tab_cookware_product_5"
+                "tab_cookware_product_4"
               ]
             },
             "tab_cutting_boards": {
