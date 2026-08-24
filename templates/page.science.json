@@ -835,6 +835,7 @@
         "subheading": "<p>Not all titanium is created equal. Most cut costs by using titanium coatings, blends, or lower grades that compromise purity and safety.</p><p>At Taima®, we only use <strong>Grade 1 Certified Medical Titanium</strong> - the purest form possible. The same titanium trusted inside the human body for decades. No mixing. No coating. Just uncompromising purity engineered for your kitchen and ultimate safety.</p><h6>And because it's pure, you get every one of titanium's unique benefits in your hands:</h6>",
         "subheading_color": "#b0b0b0",
         "highlighted_text_color": "#ffffff",
+        "certification_image": "shopify://shop_images/pure-titanium.jpg",
         "background_color": "#121212",
         "card_border_color": "#333333",
         "card_title_color": "#ffffff",
