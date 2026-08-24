@@ -1199,55 +1199,6 @@
         "padding_inline_end_mobile": 16
       }
     },
-    "sticky_scroll_story_FwgXwQ": {
-      "type": "sticky-scroll-story",
-      "blocks": {
-        "sticky_scroll_line_EAVCtG": {
-          "type": "_sticky-scroll-line",
-          "settings": {
-            "kicker": "",
-            "heading": "So Why Titanium Kitchenware?",
-            "heading_size": "xl",
-            "heading_color": "#bca588",
-            "body": "<p>What’s The Real Benefit?</p>",
-            "body_size": "large"
-          },
-          "blocks": {}
-        },
-        "sticky_scroll_line_xdganP": {
-          "type": "_sticky-scroll-line",
-          "settings": {
-            "kicker": "",
-            "heading": "",
-            "heading_size": "large",
-            "heading_color": "",
-            "body": "<p>To understand the value of titanium, you first need to look at the alternatives.<br/>For decades, cookware companies have cut corners - using cheap materials, chemical coatings, and short-term fixes. Convenience came first. Safety never did.<br/>The result? A kitchen full of tools that look fine on the surface, but quietly expose you to toxins, heavy metals, and bacteria with every meal.<br/>That’s exactly why we built it on titanium. It’s the only material that gives you absolute safety, durability, and purity, and thanks to our patented engineering, it’s just as convenient to use every day. Now, let’s take a closer look at how every other material falls short.</p>",
-            "body_size": "medium"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "sticky_scroll_line_EAVCtG",
-        "sticky_scroll_line_xdganP"
-      ],
-      "settings": {
-        "media_type": "image",
-        "image": "shopify://shop_images/why_titnaium_kitchenware-min_1200x_7c49bd01-cf67-43d5-978b-a9ca602afde3.webp",
-        "media_width": 760,
-        "media_position": "left",
-        "background_color": "{{ settings.color_palette.foreground }}",
-        "content_max_width": 1600,
-        "padding_block_start": 64,
-        "padding_block_end": 64,
-        "padding_inline_start": 120,
-        "padding_inline_end": 120,
-        "padding_block_start_mobile": 40,
-        "padding_block_end_mobile": 40,
-        "padding_inline_start_mobile": 16,
-        "padding_inline_end_mobile": 16
-      }
-    },
     "trust_band_tiles_GF7TU4": {
       "type": "trust-band-tiles",
       "blocks": {
@@ -1378,7 +1329,6 @@
     "materials_comparison_science",
     "ti_benefits_science",
     "secret_advantage",
-    "sticky_scroll_story_FwgXwQ",
     "trust_band_tiles_GF7TU4"
   ]
 }
