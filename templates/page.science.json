@@ -691,7 +691,7 @@
             "kicker": "",
             "heading": "So Why Titanium Kitchenware?",
             "heading_size": "xl",
-            "heading_color": "#BCA588",
+            "heading_color": "#bca588",
             "body": "<p>What’s The Real Benefit?</p>",
             "body_size": "large"
           },
@@ -719,7 +719,7 @@
         "image": "shopify://shop_images/why_titnaium_kitchenware-min_1200x_7c49bd01-cf67-43d5-978b-a9ca602afde3.webp",
         "media_width": 760,
         "media_position": "left",
-        "background_color": "#0E2E24",
+        "background_color": "#0e2e24",
         "content_max_width": 1600,
         "padding_block_start": 64,
         "padding_block_end": 64,
@@ -740,7 +740,8 @@
             "icon": "leaf",
             "title": "Completely Toxin-Free (By Design).",
             "text": "Pure titanium is chemically stable in cooking and prep conditions. It forms a stable TiO₂ passivation layer that prevents metal ions from migrating into food. There are no PFAS/PTFE coatings, no BPA/BPS or plasticizers, no nickel or chromium (like in stainless), and no aluminum cores to expose. Nothing to off-gas, flake, or leach - at any kitchen temperature."
-          }
+          },
+          "blocks": {}
         },
         "benefit_2": {
           "type": "_ti-benefit-card",
@@ -748,7 +749,8 @@
             "icon": "heart",
             "title": "It's The Most Biocompatible Metal For The Human Body.",
             "text": "That's why surgeons trust it in the body. It doesn't break down, flake, or leach toxins. It's as food-safe as it gets."
-          }
+          },
+          "blocks": {}
         },
         "benefit_3": {
           "type": "_ti-benefit-card",
@@ -756,7 +758,8 @@
             "icon": "check_box",
             "title": "It Naturally Kills Bacteria (Extremely Hygienic).",
             "text": "Titanium's dense, non-porous surface leaves nowhere for bacteria to hide. Just a quick clean, and it's like new again."
-          }
+          },
+          "blocks": {}
         },
         "benefit_4": {
           "type": "_ti-benefit-card",
@@ -764,7 +767,8 @@
             "icon": "lock",
             "title": "It Never Rusts Or Degrades.",
             "text": "Steel corrodes because oxygen turns it into rust. Titanium reacts differently: it forms titanium dioxide, an ultra-stable layer that works like permanent armor - it actually strengthens over time."
-          }
+          },
+          "blocks": {}
         },
         "benefit_5": {
           "type": "_ti-benefit-card",
@@ -772,7 +776,8 @@
             "icon": "star",
             "title": "It's Completely Non-Reactive & Acid-Resistant.",
             "text": "Tomatoes, citrus, vinegar, oils - all harmless against titanium. While other metals leach nickel, chromium, or aluminum into your food, titanium stays calm and unreactive."
-          }
+          },
+          "blocks": {}
         },
         "benefit_6": {
           "type": "_ti-benefit-card",
@@ -780,7 +785,8 @@
             "icon": "lightning_bolt",
             "title": "It Withstands Extreme Heat Day After Day.",
             "text": "Titanium doesn't warp, crack, or fatigue under extreme temperature changes. Where wood splits and plastics degrade, titanium remains solid."
-          }
+          },
+          "blocks": {}
         },
         "benefit_7": {
           "type": "_ti-benefit-card",
@@ -788,7 +794,8 @@
             "icon": "plant",
             "title": "It Preserves Nutrients.",
             "text": "Reactive metals can strip vitamins like Vitamin C from food through oxidation. Titanium protects nutrients intact, so your meals deliver what nature intended."
-          }
+          },
+          "blocks": {}
         },
         "benefit_8": {
           "type": "_ti-benefit-card",
@@ -796,7 +803,8 @@
             "icon": "box",
             "title": "It Endures Stress.",
             "text": "Thanks to its unique crystal structure, titanium becomes more resistant with every cut, impact, or use. Instead of weakening, it hardens."
-          }
+          },
+          "blocks": {}
         },
         "benefit_9": {
           "type": "_ti-benefit-card",
@@ -804,7 +812,8 @@
             "icon": "clipboard",
             "title": "It Outlasts Generations.",
             "text": "One titanium board or pan replaces dozens of wood, plastic, or coated alternatives. It's not just long-lasting, it's heirloom quality."
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -820,17 +829,17 @@
       ],
       "settings": {
         "heading": "<p>Real Pure Titanium.</p><p>Real Benefits.</p>",
-        "heading_color": "#BCA588",
+        "heading_color": "#bca588",
         "heading_font_size": 48,
         "heading_font_size_mobile": 32,
         "subheading": "<p>Not all titanium is created equal. Most cut costs by using titanium coatings, blends, or lower grades that compromise purity and safety.</p><p>At Taima®, we only use <strong>Grade 1 Certified Medical Titanium</strong> - the purest form possible. The same titanium trusted inside the human body for decades. No mixing. No coating. Just uncompromising purity engineered for your kitchen and ultimate safety.</p><h6>And because it's pure, you get every one of titanium's unique benefits in your hands:</h6>",
-        "subheading_color": "#B0B0B0",
-        "highlighted_text_color": "#FFFFFF",
+        "subheading_color": "#b0b0b0",
+        "highlighted_text_color": "#ffffff",
         "background_color": "#121212",
         "card_border_color": "#333333",
-        "card_title_color": "#FFFFFF",
-        "card_text_color": "#B0B0B0",
-        "card_icon_color": "#BCA588",
+        "card_title_color": "#ffffff",
+        "card_text_color": "#b0b0b0",
+        "card_icon_color": "#bca588",
         "content_max_width": 1920,
         "aside_max_width": 500,
         "column_gap": 120,
@@ -1128,7 +1137,8 @@
             "icon": "none",
             "title": "Stress Doesn't Concentrate, It Disperses.",
             "text": "When your knife hits titanium, the force doesn't crack or splinter like wood. Instead, it spreads evenly across thousands of tightly packed crystal boundaries. The result? Small, shallow surface marks that wipe clean - not deep bacteria-trapping grooves."
-          }
+          },
+          "blocks": {}
         },
         "card_2": {
           "type": "_advantage-card",
@@ -1136,7 +1146,8 @@
             "icon": "none",
             "title": "It Gets Tougher The More You Use It.",
             "text": "Titanium has a rare property called work-hardening. Every time pressure is applied (like your knife edge striking the board), the atoms actually shift and rearrange to make that exact spot more resistant next time. Most materials degrade under stress. Titanium improves."
-          }
+          },
+          "blocks": {}
         },
         "card_3": {
           "type": "_advantage-card",
@@ -1144,27 +1155,32 @@
             "icon": "none",
             "title": "Durability Without Compromise.",
             "text": "This unique structure explains why titanium doesn't fatigue, doesn't corrode, and doesn't fracture the way other kitchen materials do. It simply endures - getting stronger, cleaner, and safer with every cut."
-          }
+          },
+          "blocks": {}
         }
       },
-      "block_order": ["card_1", "card_2", "card_3"],
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
       "settings": {
         "heading": "Titanium's Secret Advantage:",
-        "heading_color": "#BCA588",
+        "heading_color": "#bca588",
         "heading_font_size": 48,
         "heading_font_size_mobile": 24,
         "subheading": "A Molecular Structure Unlike Any Other",
-        "subheading_color": "#FFFFFF",
+        "subheading_color": "#ffffff",
         "subheading_font_size": 24,
         "subheading_font_size_mobile": 20,
         "copy": "<p>Every material breaks down in its own way - wood absorbs and cracks, plastic shaves into microplastics, and steel corrodes under heat and acids - but titanium's crystal structure resists all of it.</p><p>Its atoms arrange in what's called a Hexagonal Close-Packed (HCP) crystal structure - think of it like an interlocking 3D puzzle where every piece supports the others. There are no weak links.</p>",
-        "copy_color": "#B0B0B0",
+        "copy_color": "#b0b0b0",
         "matters_heading": "Here's Why That Matters In Your Kitchen:",
-        "matters_heading_color": "#FFFFFF",
-        "background_color": "#03231A",
-        "icon_color": "#C9A371",
-        "card_title_color": "#FFFFFF",
-        "card_text_color": "#B0B0B0",
+        "matters_heading_color": "#ffffff",
+        "background_color": "#03231a",
+        "icon_color": "#c9a371",
+        "card_title_color": "#ffffff",
+        "card_text_color": "#b0b0b0",
         "left_column_width": 498,
         "column_gap": 120,
         "cards_gap": 64,
@@ -1178,6 +1194,120 @@
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
       }
+    },
+    "trust_band_tiles_GF7TU4": {
+      "type": "trust-band-tiles",
+      "blocks": {
+        "trust_tile_LBigWz": {
+          "type": "_trust-tile",
+          "settings": {
+            "alt": "",
+            "hide_on_desktop": false
+          },
+          "blocks": {}
+        },
+        "trust_tile_FVE6ki": {
+          "type": "_trust-tile",
+          "settings": {
+            "alt": "",
+            "hide_on_desktop": false
+          },
+          "blocks": {}
+        },
+        "trust_tile_dCf4YH": {
+          "type": "_trust-tile",
+          "settings": {
+            "alt": "",
+            "hide_on_desktop": false
+          },
+          "blocks": {}
+        },
+        "trust_tile_AdGLfA": {
+          "type": "_trust-tile",
+          "settings": {
+            "alt": "",
+            "hide_on_desktop": false
+          },
+          "blocks": {}
+        },
+        "trust_tile_6EyRme": {
+          "type": "_trust-tile",
+          "settings": {
+            "alt": "",
+            "hide_on_desktop": false
+          },
+          "blocks": {}
+        },
+        "trust_tile_p7fFqE": {
+          "type": "_trust-tile",
+          "settings": {
+            "alt": "",
+            "hide_on_desktop": false
+          },
+          "blocks": {}
+        },
+        "trust_tile_gBXzFP": {
+          "type": "_trust-tile",
+          "settings": {
+            "alt": "",
+            "hide_on_desktop": false
+          },
+          "blocks": {}
+        },
+        "trust_tile_BVqgN6": {
+          "type": "_trust-tile",
+          "settings": {
+            "alt": "",
+            "hide_on_desktop": false
+          },
+          "blocks": {}
+        },
+        "trust_tile_bpyccn": {
+          "type": "_trust-tile",
+          "settings": {
+            "alt": "",
+            "hide_on_desktop": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "trust_tile_LBigWz",
+        "trust_tile_FVE6ki",
+        "trust_tile_dCf4YH",
+        "trust_tile_AdGLfA",
+        "trust_tile_6EyRme",
+        "trust_tile_p7fFqE",
+        "trust_tile_gBXzFP",
+        "trust_tile_BVqgN6",
+        "trust_tile_bpyccn"
+      ],
+      "name": "t:names.trust_band_tiles",
+      "settings": {
+        "show_rating": true,
+        "rating_value": 5,
+        "star_color": "#B57C46",
+        "rating_icon_size": 24,
+        "rating_icon_size_mobile": 24,
+        "heading": "<p>Trusted By <strong>500,000+</strong> Kitchens Worldwide</p>",
+        "heading_color": "#FFFFFF",
+        "highlighted_text_color": "#BCA588",
+        "heading_size": 48,
+        "heading_size_mobile": 32,
+        "background_color": "#03231A",
+        "content_max_width": 1200,
+        "columns_desktop": 8,
+        "columns_mobile": 3,
+        "tile_gap": 0,
+        "padding_block_start": 120,
+        "padding_block_end": 120,
+        "padding_inline_start": 0,
+        "padding_inline_end": 0,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 64,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
     }
   },
   "order": [
@@ -1186,6 +1316,7 @@
     "sticky_scroll_benefit",
     "ti_benefits_science",
     "materials_comparison_science",
-    "secret_advantage"
+    "secret_advantage",
+    "trust_band_tiles_GF7TU4"
   ]
 }
