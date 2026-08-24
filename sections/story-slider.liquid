@@ -124,6 +124,15 @@
     min-width: 0;
   }
 
+  /* The base slideshow component collapses inactive slides (content-visibility: hidden)
+     to save render cost, so the scroller's stretched height is driven by the active
+     slide alone. Since each slide's body copy is a different length, that made the
+     whole section resize (and shove the nav/arrows down) on every slide change.
+     Keeping all slides rendered makes the section height stable at the tallest slide. */
+  .story-slider slideshow-slide {
+    content-visibility: visible !important;
+  }
+
   .story-slider__nav {
     display: flex;
     align-items: center;

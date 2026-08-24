@@ -262,6 +262,15 @@
     --slideshow-gap: var(--reviews-hero-gap, 2rem);
   }
 
+  /* The base slideshow component collapses inactive slides (content-visibility: hidden)
+     to save render cost, so the scroller's stretched height is driven only by the
+     visible slide(s). Since each review's quote is a different length, that made the
+     whole section resize (and shove the nav/arrows down) on every slide change.
+     Keeping all slides rendered makes the section height stable at the tallest slide. */
+  .reviews-hero-slider slideshow-slide {
+    content-visibility: visible !important;
+  }
+
   /* Cards are sized off the slideshow-container's own inline size (not the
      viewport), so exactly --reviews-hero-columns cards always fit, matching
      the reference site's fixed slides-per-view carousel at any page width. */
