@@ -469,15 +469,20 @@
     </div>
   {% endif %}
 
+  {% comment %}
+    Shopify exposes this block's `.type` as the literal string "@theme" (not
+    "_header-category-nav") since it's a private theme block declared directly
+    on a section, so filtering by type never matches; grab it positionally instead.
+  {% endcomment %}
   {% liquid
-    assign category_nav_block = section.blocks | where: 'type', '_header-category-nav' | first
+    assign category_nav_block = section.blocks | first
   %}
   {% if category_nav_block %}
     <div
       class="header__row header__category-nav-row section section--full-width-margin section--{{ section.settings.section_width }}"
       style="--color-background-category-nav: {{ category_nav_block.settings.background_color }};"
     >
-      {% content_for 'blocks' %}
+      {% render category_nav_block %}
     </div>
   {% endif %}
 </header-component>

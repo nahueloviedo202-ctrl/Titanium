@@ -13,7 +13,11 @@
   if card_title_text == blank and product != blank
     assign card_title_text = product.title
   endif
-  assign card_title = card_title_text | default: 'placeholders.product_title' | t
+  if card_title_text != blank
+    assign card_title = card_title_text
+  else
+    assign card_title = 'placeholders.product_title' | t
+  endif
 
   assign card_link = card.link
   if card_link == blank and product != blank
