@@ -682,48 +682,6 @@
         "padding-block-end": 96
       }
     },
-    "best_sellers_slider_science": {
-      "type": "best-sellers-slider",
-      "settings": {
-        "collection": "",
-        "max_products": 8,
-        "heading": "So Why Titanium Kitchenware?",
-        "heading_color": "#bca588",
-        "heading_font_size": 48,
-        "heading_font_size_mobile": 24,
-        "section_width": "full-width",
-        "slides_per_view": 5,
-        "mobile_card_width": 250,
-        "gap": 16,
-        "image_ratio": "square",
-        "background_color": "#121212",
-        "card_border_color": "#333333",
-        "card_border_width": 2,
-        "card_corner_radius": 24,
-        "card_shadow": true,
-        "badge_background_color": "#bf092f",
-        "badge_text_color": "#ffffff",
-        "title_color": "#f6f4f0",
-        "title_font_size": 16,
-        "subtitle_color": "#d4c7b4",
-        "subtitle_font_size": 14,
-        "price_color": "#f6f4f0",
-        "compare_price_color": "#bca588",
-        "price_font_size": 20,
-        "icons_style": "arrow",
-        "icons_shape": "square",
-        "arrow_background_color": "#a3835f",
-        "arrow_icon_color": "#121212",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "padding-block-start": 80,
-        "padding-block-end": 80,
-        "padding-inline-start": 120,
-        "padding-inline-end": 120,
-        "padding_inline_start_mobile": 16,
-        "padding_inline_end_mobile": 16
-      }
-    },
     "sticky_scroll_benefit": {
       "type": "sticky-scroll-story",
       "blocks": {
@@ -731,10 +689,10 @@
           "type": "_sticky-scroll-line",
           "settings": {
             "kicker": "",
-            "heading": "What's The Real Benefit?",
+            "heading": "So Why Titanium Kitchenware?",
             "heading_size": "xl",
-            "heading_color": "",
-            "body": "<p>To understand the value of titanium, you first need to look at the alternatives.</p>",
+            "heading_color": "#BCA588",
+            "body": "<p>What’s The Real Benefit?</p>",
             "body_size": "large"
           },
           "blocks": {}
@@ -746,31 +704,7 @@
             "heading": "",
             "heading_size": "large",
             "heading_color": "",
-            "body": "<p>For decades, cookware companies have cut corners - using cheap materials, chemical coatings, and short-term fixes. Convenience came first. Safety never did.</p>",
-            "body_size": "medium"
-          },
-          "blocks": {}
-        },
-        "line_3": {
-          "type": "_sticky-scroll-line",
-          "settings": {
-            "kicker": "",
-            "heading": "",
-            "heading_size": "large",
-            "heading_color": "",
-            "body": "<p>The result? A kitchen full of tools that look fine on the surface, but quietly expose you to toxins, heavy metals, and bacteria with every meal.</p>",
-            "body_size": "medium"
-          },
-          "blocks": {}
-        },
-        "line_4": {
-          "type": "_sticky-scroll-line",
-          "settings": {
-            "kicker": "",
-            "heading": "",
-            "heading_size": "large",
-            "heading_color": "",
-            "body": "<p>That's exactly why we built Taima® on titanium. It's the only material that gives you absolute safety, durability, and purity, and thanks to our patented engineering, it's just as convenient to use every day. Now, let's take a closer look at how every other material falls short.</p>",
+            "body": "<p>To understand the value of titanium, you first need to look at the alternatives.<br/>For decades, cookware companies have cut corners - using cheap materials, chemical coatings, and short-term fixes. Convenience came first. Safety never did.<br/>The result? A kitchen full of tools that look fine on the surface, but quietly expose you to toxins, heavy metals, and bacteria with every meal.<br/>That’s exactly why we built it on titanium. It’s the only material that gives you absolute safety, durability, and purity, and thanks to our patented engineering, it’s just as convenient to use every day. Now, let’s take a closer look at how every other material falls short.</p>",
             "body_size": "medium"
           },
           "blocks": {}
@@ -778,15 +712,14 @@
       },
       "block_order": [
         "line_1",
-        "line_2",
-        "line_3",
-        "line_4"
+        "line_2"
       ],
       "settings": {
         "media_type": "image",
+        "image": "shopify://shop_images/why_titnaium_kitchenware-min_1200x_7c49bd01-cf67-43d5-978b-a9ca602afde3.webp",
         "media_width": 760,
         "media_position": "left",
-        "background_color": "#121212",
+        "background_color": "#0E2E24",
         "content_max_width": 1600,
         "padding_block_start": 64,
         "padding_block_end": 64,
@@ -2027,7 +1960,6 @@
   "order": [
     "sticky_scroll_hero",
     "section_trusted_failure",
-    "best_sellers_slider_science",
     "sticky_scroll_benefit",
     "materials_comparison_science",
     "section_molecular",
