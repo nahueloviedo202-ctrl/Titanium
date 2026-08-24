@@ -440,7 +440,7 @@
                 "tab_utensils_product_1": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "100-pure-titanium-spatula-utensils",
                     "title": "Pure Titanium Utensils",
                     "link": "/products/taima%E2%84%A2-100-pure-titanium-spatula",
                     "open_in_new_tab": false,
@@ -459,7 +459,7 @@
                 "tab_utensils_product_2": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "certified-pure-titanium-utensil-set",
                     "title": "Pure Titanium Utensils Set",
                     "link": "/products/pure-titanium-utensils-set-4-piece",
                     "open_in_new_tab": false,
