@@ -471,7 +471,9 @@
 
   {% liquid
     assign category_nav_block = section.blocks | where: 'type', '_header-category-nav' | first
+    assign all_block_types = section.blocks | map: 'type' | join: '|'
   %}
+  <!-- DEBUG category_nav_block={{ category_nav_block | json | escape }} all_block_types={{ all_block_types }} block_order={{ section.block_order | join: ',' }} settings_blocks_count={{ section.settings.category_nav_test | default: 'n/a' }} -->
   {% if category_nav_block %}
     <div
       class="header__row header__category-nav-row section section--full-width-margin section--{{ section.settings.section_width }}"
