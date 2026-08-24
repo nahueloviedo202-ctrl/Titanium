@@ -1264,6 +1264,7 @@
         "trust_tile_BVqgN6": {
           "type": "_trust-tile",
           "settings": {
+            "image": "shopify://shop_images/chef-9.webp",
             "alt": "",
             "hide_on_desktop": false
           },
