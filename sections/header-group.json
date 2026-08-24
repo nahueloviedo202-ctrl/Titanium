@@ -84,7 +84,7 @@
                 "tab_best_sellers_product_1": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "certified-pure-titanium-cutting-board",
                     "title": "Certified Pure Titanium Cutting Board V2",
                     "link": "/products/certified-taima%E2%84%A2-pure-titanium-cutting-board-v2-updated-design",
                     "open_in_new_tab": false,
@@ -103,7 +103,7 @@
                 "tab_best_sellers_product_2": {
                   "type": "_header-category-nav-product",
                   "settings": {
-                    "product": "",
+                    "product": "zentitanium-titanium-pan",
                     "title": "Certified Pure Titanium Classic Pan Pro",
                     "link": "/products/taima-titanium-nutri-pan-pro-2-0",
                     "open_in_new_tab": false,
@@ -655,6 +655,8 @@
             "featured_products_aspect_ratio": "4 / 5",
             "featured_collections_aspect_ratio": "16 / 9",
             "image_border_radius": 0,
+            "drawer_background_color": "{{ settings.color_palette.foreground }}",
+            "drawer_text_color": "{{ settings.color_palette.background }}",
             "navigation_bar": false,
             "background_color_navigation_bar": "{{ settings.color_palette.background }}",
             "text_color_navigation_bar": "",
