@@ -14,82 +14,89 @@
 
 <section
   id="StickyScrollStory-{{ section.id }}"
-  class="sticky-scroll-story{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}{% if section.settings.media_position == 'right' %} sticky-scroll-story--media-right{% endif %}"
+  class="sticky-scroll-story{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
   role="region"
   aria-label="{% if section.settings.heading != blank %}{{ section.settings.heading | escape }}{% else %}{{ 'accessibility.sticky_scroll_story_region' | t }}{% endif %}"
-  style="
-    max-width: {{ section.settings.content_max_width }}px;
-    --sticky-scroll-story-padding-block-start: {{ section.settings.padding_block_start }}px;
-    --sticky-scroll-story-padding-block-end: {{ section.settings.padding_block_end }}px;
-    --sticky-scroll-story-padding-inline-start: {{ section.settings.padding_inline_start }}px;
-    --sticky-scroll-story-padding-inline-end: {{ section.settings.padding_inline_end }}px;
-    --sticky-scroll-story-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
-    --sticky-scroll-story-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
-    --sticky-scroll-story-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
-    --sticky-scroll-story-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
-    --sticky-scroll-story-media-width: {{ section.settings.media_width }}px;
-  "
 >
-  <div class="sticky-scroll-story__media">
-    {%- if show_video -%}
-      {{
-        section.settings.video
-        | video_tag:
-          poster: nil,
-          autoplay: true,
-          loop: true,
-          controls: false,
-          muted: true,
-          image_size: '1600x',
-          class: 'sticky-scroll-story__image',
-          style: video_style
-      }}
-    {%- elsif section.settings.image != blank -%}
-      <img
-        class="sticky-scroll-story__image"
-        src="{{ section.settings.image | image_url: width: 1600 }}"
-        srcset="
-          {{- section.settings.image | image_url: width: 700 }} 700w,
-          {{ section.settings.image | image_url: width: 1200 }} 1200w,
-          {{ section.settings.image | image_url: width: 1600 }} 1600w
-        "
-        sizes="(min-width: 750px) 45vw, 90vw"
-        alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}"
-        width="{{ section.settings.image.width }}"
-        height="{{ section.settings.image.height }}"
-        loading="lazy"
-      >
-    {%- else -%}
-      {{ 'hero-apparel-1' | placeholder_svg_tag: 'sticky-scroll-story__image' }}
+  <div
+    class="sticky-scroll-story__wrap{% if section.settings.media_position == 'right' %} sticky-scroll-story--media-right{% endif %}"
+    style="
+      max-width: {{ section.settings.content_max_width }}px;
+      --sticky-scroll-story-padding-block-start: {{ section.settings.padding_block_start }}px;
+      --sticky-scroll-story-padding-block-end: {{ section.settings.padding_block_end }}px;
+      --sticky-scroll-story-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+      --sticky-scroll-story-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+      --sticky-scroll-story-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+      --sticky-scroll-story-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+      --sticky-scroll-story-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+      --sticky-scroll-story-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+      --sticky-scroll-story-media-width: {{ section.settings.media_width }}px;
+    "
+  >
+    <div class="sticky-scroll-story__media">
+      {%- if show_video -%}
+        {{
+          section.settings.video
+          | video_tag:
+            poster: nil,
+            autoplay: true,
+            loop: true,
+            controls: false,
+            muted: true,
+            image_size: '1600x',
+            class: 'sticky-scroll-story__image',
+            style: video_style
+        }}
+      {%- elsif section.settings.image != blank -%}
+        <img
+          class="sticky-scroll-story__image"
+          src="{{ section.settings.image | image_url: width: 1600 }}"
+          srcset="
+            {{- section.settings.image | image_url: width: 700 }} 700w,
+            {{ section.settings.image | image_url: width: 1200 }} 1200w,
+            {{ section.settings.image | image_url: width: 1600 }} 1600w
+          "
+          sizes="(min-width: 750px) 45vw, 90vw"
+          alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          loading="lazy"
+        >
+      {%- else -%}
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'sticky-scroll-story__image' }}
+      {%- endif -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <script
+        src="{{ 'sticky-scroll-story.js' | asset_url }}"
+        type="module"
+        fetchpriority="low"
+      ></script>
+      <sticky-scroll-story-component class="sticky-scroll-story__content">
+        {% content_for 'blocks' %}
+      </sticky-scroll-story-component>
     {%- endif -%}
   </div>
-
-  {%- if section.blocks.size > 0 -%}
-    <script
-      src="{{ 'sticky-scroll-story.js' | asset_url }}"
-      type="module"
-      fetchpriority="low"
-    ></script>
-    <sticky-scroll-story-component class="sticky-scroll-story__content">
-      {% content_for 'blocks' %}
-    </sticky-scroll-story-component>
-  {%- endif -%}
 </section>
 
 {% stylesheet %}
   .sticky-scroll-story {
     position: relative;
-    display: grid;
-    margin-inline: auto;
     color: var(--color-foreground);
     background-color: var(--color-background);
+  }
+
+  .sticky-scroll-story__wrap {
+    display: grid;
+    margin-inline: auto;
     grid-template-columns: 1fr;
     padding-block: var(--sticky-scroll-story-padding-block-start-mobile, 0) var(--sticky-scroll-story-padding-block-end-mobile, 0);
     padding-inline: var(--sticky-scroll-story-padding-inline-start-mobile, 0) var(--sticky-scroll-story-padding-inline-end-mobile, 0);
   }
 
   @media screen and (min-width: 750px) {
-    .sticky-scroll-story {
+    .sticky-scroll-story__wrap {
       grid-template-columns: minmax(0, 1fr) minmax(0, min(var(--sticky-scroll-story-media-width, 760px), 45%));
       align-items: start;
       gap: 4rem;
