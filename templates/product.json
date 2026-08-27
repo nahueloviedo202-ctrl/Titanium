@@ -521,11 +521,139 @@
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
       }
+    },
+    "scroll_text_fade_DigM7x": {
+      "type": "scroll-text-fade",
+      "blocks": {
+        "scroll_fade_line_tLww4j": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "At Koretitanium®, Non-Toxic Isn’t A Feature.",
+            "font_size": 64,
+            "font_size_mobile": 32,
+            "opacity": 40,
+            "text_color": "#bca588",
+            "hide_on_desktop": false,
+            "hide_on_mobile": true
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_TjJLKy": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "At Zentitanium®",
+            "font_size": 64,
+            "font_size_mobile": 32,
+            "opacity": 40,
+            "text_color": "#bca588",
+            "hide_on_desktop": true,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_4HH6nR": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "Non-Toxic",
+            "font_size": 64,
+            "font_size_mobile": 30,
+            "opacity": 40,
+            "text_color": "#bca588",
+            "hide_on_desktop": true,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_ykFafA": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "Isn’t A Feature.",
+            "font_size": 64,
+            "font_size_mobile": 28,
+            "opacity": 40,
+            "text_color": "#bca588",
+            "hide_on_desktop": true,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_3DTXJn": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "It’s The Foundation.",
+            "font_size": 48,
+            "font_size_mobile": 24,
+            "opacity": 30,
+            "text_color": "#bca588",
+            "hide_on_desktop": false,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_EVgEnP": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "Perfection Isn't a Goal.",
+            "font_size": 48,
+            "font_size_mobile": 24,
+            "opacity": 20,
+            "text_color": "#bca588",
+            "hide_on_desktop": false,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_qAWKJT": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "It's Where We Begin.",
+            "font_size": 32,
+            "font_size_mobile": 16,
+            "opacity": 10,
+            "text_color": "#bca588",
+            "hide_on_desktop": false,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "scroll_fade_line_tLww4j",
+        "scroll_fade_line_TjJLKy",
+        "scroll_fade_line_4HH6nR",
+        "scroll_fade_line_ykFafA",
+        "scroll_fade_line_3DTXJn",
+        "scroll_fade_line_EVgEnP",
+        "scroll_fade_line_qAWKJT"
+      ],
+      "name": "t:names.scroll_text_fade",
+      "settings": {
+        "background_color": "#00221c",
+        "text_color": "#bca588",
+        "font": "var(--font-body--family)",
+        "line_height": "loose",
+        "letter_spacing": "normal",
+        "case": "capitalize",
+        "alignment": "center",
+        "focused_font_size": 64,
+        "focused_font_size_mobile": 32,
+        "transition_speed": 400,
+        "line_gap": 24,
+        "padding_block_start": 240,
+        "padding_block_end": 240,
+        "padding_inline_start": 16,
+        "padding_inline_end": 16,
+        "padding_block_start_mobile": 32,
+        "padding_block_end_mobile": 32,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
     }
   },
   "order": [
     "main",
     "pagefly-product-section",
-    "reviews_hero_slider_CQ8hX6"
+    "reviews_hero_slider_CQ8hX6",
+    "scroll_text_fade_DigM7x"
   ]
 }
