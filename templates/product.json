@@ -315,7 +315,6 @@
       "block_order": [
         "disclosures_g9mWze"
       ],
-      "disabled": true,
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
@@ -330,11 +329,203 @@
     },
     "pagefly-product-section": {
       "type": "pagefly-product-section",
+      "disabled": true,
       "settings": {}
+    },
+    "reviews_hero_slider_CQ8hX6": {
+      "type": "reviews-hero-slider",
+      "blocks": {
+        "review_card_phQxEi": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/fixed_yellow_2-min_471af5f2-a950-418a-b66a-d33e445051e1.jpg",
+            "image_label": "Titanium Series",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/1-min.webp",
+            "title": "No Compromise",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>Most pans force you to choose - performance, durability, or convenience. This gives you all 3, without chemicals.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Antonio C., Chef",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_zKgDp3": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/board_cold-min.webp",
+            "image_label": "Titanium Board",
+            "badge_color": "",
+            "badge_text_color": "",
+            "video_poster": "shopify://shop_images/2-min.webp",
+            "title": "I'm Obsessed!",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>It doesn't shed toxins, bacteria can't grow on it, and it's ridiculously easy to clean.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Amanda R.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_ijiFj6": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/pan-min.webp",
+            "image_label": "Titanium Pan",
+            "badge_color": "",
+            "badge_text_color": "",
+            "video_poster": "shopify://shop_images/3-min.webp",
+            "title": "Non-Stick Without Chemicals",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>When I cook at home for my family I choose only non-toxic cookware, so I don't have to worry about chemicals.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Alice B., Chef",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_gheLB4": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/steak-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/4-min.webp",
+            "title": "It Looks Fantastic!",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>Taima pan heats up very quickly and evenly, the sear you can achieve with this is amazing.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "RIVERA GOURMET",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_LqycP9": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/steak_2-min.webp",
+            "image_label": "TITANIUM BORAD",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/5-min.webp",
+            "title": "Naturally Antibacterial & Sterile",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"It's increidibly easy to clean, no smell, no mess just a quick rinse & it's ready to go again\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "JAMIOE C.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_cjHax7": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/macaron_2-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/6-min.webp",
+            "title": "Once You Go Titanium, You Won't Go Back",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"The special surface pattern also helps food naturally stick less, so you don't have to worry about chemicals getting into your food\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Happy Customer",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_aq7Dqe": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/salmon-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/7-min.webp",
+            "title": "Perfect For Health Conscious People",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"I love it. I love it. I love it\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Lisa A.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_K76Kxx": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/macaron-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "",
+            "video_poster": "shopify://shop_images/8-min.webp",
+            "title": "Best Non-Toxic Coockware On The Planet",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"With taima its easy to make our favorite comfort meals because i can prepare them with complete peace of mind that no toxins are near\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Mateo P.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "review_card_phQxEi",
+        "review_card_zKgDp3",
+        "review_card_ijiFj6",
+        "review_card_gheLB4",
+        "review_card_LqycP9",
+        "review_card_cjHax7",
+        "review_card_aq7Dqe",
+        "review_card_K76Kxx"
+      ],
+      "name": "t:names.reviews_hero_slider",
+      "settings": {
+        "show_rating": true,
+        "rating_value": 5,
+        "star_color": "#b57c46",
+        "rating_icon": "shopify://shop_images/star.svg",
+        "rating_icon_size": 24,
+        "rating_icon_size_mobile": 18,
+        "heading": "<p>Trusted By<strong> 600,000+</strong>Kitchens Worldwide</p>",
+        "heading_color": "{{ settings.color_palette.background }}",
+        "highlighted_text_color": "#bca588",
+        "heading_size": 48,
+        "heading_size_mobile": 32,
+        "slides_per_view": 3,
+        "mobile_card_width": 300,
+        "gap": 32,
+        "card_radius": 18,
+        "badge_color": "#108474",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrow_background_color": "#108474",
+        "arrow_icon_color": "#121212",
+        "arrow_border_color": "{{ settings.color_palette.background }}",
+        "background_color": "#121212",
+        "text_color": "{{ settings.color_palette.background }}",
+        "padding_block_start": 80,
+        "padding_block_end": 80,
+        "padding_inline_start": 80,
+        "padding_inline_end": 60,
+        "padding_block_start_mobile": 48,
+        "padding_block_end_mobile": 48,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
     }
   },
   "order": [
     "main",
-    "pagefly-product-section"
+    "pagefly-product-section",
+    "reviews_hero_slider_CQ8hX6"
   ]
 }
