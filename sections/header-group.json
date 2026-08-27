@@ -24,7 +24,7 @@
             "weight": "",
             "letter_spacing": "loose",
             "case": "uppercase",
-            "text_color": ""
+            "text_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
         }
@@ -36,7 +36,7 @@
         "speed": 5,
         "show_arrows": false,
         "section_width": "page-width",
-        "background_color": "#bf092f",
+        "background_color": "#108474",
         "divider_width": 0,
         "divider_color": "",
         "padding-block-start": 10,
@@ -93,8 +93,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(3481)",
-                    "bullet_1_label": "100% Toxin-Free",
-                    "bullet_2_label": "Antibacterial",
                     "compare_price": "$199",
                     "price": "$99"
                   },
@@ -112,8 +110,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(2967)",
-                    "bullet_1_label": "Non-Stick",
-                    "bullet_2_label": "Chemical-Free",
                     "compare_price": "$349",
                     "price": "$174"
                   },
@@ -131,8 +127,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(2315)",
-                    "bullet_1_label": "3 Style Pans + 3 lids + 2 Utensils (8 Piece)",
-                    "bullet_2_label": "",
                     "compare_price": "$1299",
                     "price": "$599"
                   },
@@ -150,8 +144,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(2189)",
-                    "bullet_1_label": "The ultimate toxin-free collection for limitless cooking",
-                    "bullet_2_label": "",
                     "compare_price": "$1999",
                     "price": "$899"
                   },
@@ -192,8 +184,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(2315)",
-                    "bullet_1_label": "3 Style Pans + 3 lids + 2 Utensils (8 Piece)",
-                    "bullet_2_label": "",
                     "compare_price": "$1299",
                     "price": "$599"
                   },
@@ -211,8 +201,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(952)",
-                    "bullet_1_label": "S+M+L for every kitchen task",
-                    "bullet_2_label": "",
                     "compare_price": "$699",
                     "price": "$299"
                   },
@@ -230,8 +218,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(857)",
-                    "bullet_1_label": "Two sizes, endless possibilities.",
-                    "bullet_2_label": "",
                     "compare_price": "$899",
                     "price": "$399"
                   },
@@ -271,8 +257,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(2967)",
-                    "bullet_1_label": "The gold standard for everyday cooking",
-                    "bullet_2_label": "",
                     "compare_price": "$349",
                     "price": "$174"
                   },
@@ -290,8 +274,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(1905)",
-                    "bullet_1_label": "High-heat cooking with room to toss, sear & fry",
-                    "bullet_2_label": "",
                     "compare_price": "$399",
                     "price": "$199"
                   },
@@ -309,8 +291,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(1760)",
-                    "bullet_1_label": "Extra depth for hearty stews & saucy pastas",
-                    "bullet_2_label": "",
                     "compare_price": "$399",
                     "price": "$199"
                   },
@@ -328,8 +308,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(1283)",
-                    "bullet_1_label": "Three pan styles for every cooking style",
-                    "bullet_2_label": "",
                     "compare_price": "$1199",
                     "price": "$549"
                   },
@@ -370,8 +348,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(3481)",
-                    "bullet_1_label": "The First & Only Certified purity. 100% toxin-free",
-                    "bullet_2_label": "",
                     "compare_price": "$199",
                     "price": "$99"
                   },
@@ -389,8 +365,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(463)",
-                    "bullet_1_label": "Keeps board stable & protects countertop",
-                    "bullet_2_label": "",
                     "compare_price": "$59",
                     "price": "$29"
                   },
@@ -408,8 +382,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(952)",
-                    "bullet_1_label": "S+M+L for every kitchen task",
-                    "bullet_2_label": "",
                     "compare_price": "$699",
                     "price": "$299"
                   },
@@ -449,8 +421,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(711)",
-                    "bullet_1_label": "Heat-Safe, Toxin-Free, Antibacterial.",
-                    "bullet_2_label": "",
                     "compare_price": "$89",
                     "price": "$49"
                   },
@@ -468,8 +438,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(734)",
-                    "bullet_1_label": "Every tool you need for any dish",
-                    "bullet_2_label": "",
                     "compare_price": "$299",
                     "price": "$149"
                   },
@@ -509,8 +477,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(584)",
-                    "bullet_1_label": "Bacteria resistant. BPA & toxin-free.",
-                    "bullet_2_label": "",
                     "compare_price": "$179",
                     "price": "$99"
                   },
@@ -528,8 +494,6 @@
                     "show_rating": true,
                     "rating_value": 5,
                     "review_count": "(409)",
-                    "bullet_1_label": "Reusable for life. BPA & toxin-free.",
-                    "bullet_2_label": "",
                     "compare_price": "$119",
                     "price": "$69"
                   },
