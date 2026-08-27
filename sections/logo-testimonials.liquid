@@ -1,0 +1,244 @@
+{% liquid
+  if section.settings.background_color != blank or section.settings.text_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, text_color: section.settings.text_color, section_id: section.id
+  endif
+%}
+
+{%- if section.blocks.size > 0 -%}
+  <script
+    src="{{ 'logo-testimonials.js' | asset_url }}"
+    type="module"
+    fetchpriority="low"
+  ></script>
+{%- endif -%}
+
+<section
+  id="LogoTestimonials-{{ section.id }}"
+  class="
+    logo-testimonials
+    spacing-style
+    {% if section.settings.background_color != blank or section.settings.text_color != blank %}
+      color-custom-{{ section.id }}
+    {% endif %}
+  "
+  style="
+    {% render 'spacing-style', settings: section.settings %}
+    --logo-testimonials-logo-height: {{ section.settings.logo_height }}px;
+  "
+>
+  {%- if section.blocks.size > 0 -%}
+    <logo-testimonials-component
+      class="logo-testimonials__inner gap-style"
+      style="{% render 'gap-style', value: section.settings.content_gap %}"
+    >
+      <div
+        class="logo-testimonials__logos gap-style"
+        style="{% render 'gap-style', value: section.settings.logos_gap, name: 'logos-gap' %}"
+        role="group"
+        aria-label="Press mentions"
+      >
+        {% content_for 'blocks' %}
+      </div>
+
+      <div
+        class="logo-testimonials__quote-panel"
+        ref="quotePanel"
+        aria-live="polite"
+      ></div>
+    </logo-testimonials-component>
+  {%- endif -%}
+</section>
+
+{% stylesheet %}
+  .logo-testimonials {
+    background-color: var(--color-background, transparent);
+    color: var(--color-foreground, inherit);
+  }
+
+  .logo-testimonials__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap, 80px);
+  }
+
+  .logo-testimonials__logos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--logos-gap, 50px) 2rem;
+    flex: 1 1 18rem;
+    min-width: 0;
+  }
+
+  .logo-testimonials__quote-panel {
+    flex: 1 1 18rem;
+    min-width: 0;
+    max-width: 45.6875rem;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .logo-testimonials__inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .logo-testimonials__logos {
+      justify-content: center;
+    }
+
+    .logo-testimonials__quote-panel {
+      max-width: 100%;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.logo_testimonials",
+  "tag": "section",
+  "class": "logo-testimonials-wrapper section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_logo-quote-item"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#03231A"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#D4C7B4"
+    },
+    {
+      "type": "header",
+      "content": "t:content.logos"
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "label": "t:settings.height",
+      "min": 24,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "logos_gap",
+      "label": "t:settings.gap",
+      "min": 16,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "label": "t:settings.gap",
+      "min": 20,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "default": 120
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.logo_testimonials",
+      "category": "t:categories.decorative",
+      "blocks": {
+        "logo_1": {
+          "type": "_logo-quote-item",
+          "settings": {
+            "quote": "t:html_defaults.logo_testimonials_quote_1"
+          }
+        },
+        "logo_2": {
+          "type": "_logo-quote-item",
+          "settings": {
+            "quote": "t:html_defaults.logo_testimonials_quote_2"
+          }
+        },
+        "logo_3": {
+          "type": "_logo-quote-item",
+          "settings": {
+            "quote": "t:html_defaults.logo_testimonials_quote_3"
+          }
+        },
+        "logo_4": {
+          "type": "_logo-quote-item",
+          "settings": {
+            "quote": "t:html_defaults.logo_testimonials_quote_4"
+          }
+        }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4"]
+    }
+  ]
+}
+{% endschema %}

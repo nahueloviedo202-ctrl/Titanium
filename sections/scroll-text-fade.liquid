@@ -18,8 +18,8 @@
       type="module"
       fetchpriority="low"
     ></script>
-    <scroll-text-fade-component
-      class="scroll-text-fade__inner"
+    <div
+      class="scroll-text-fade__layout{% if section.settings.image != blank %} scroll-text-fade__layout--with-media{% endif %}"
       style="
         --scroll-text-fade-padding-block-start: {{ section.settings.padding_block_start }}px;
         --scroll-text-fade-padding-block-end: {{ section.settings.padding_block_end }}px;
@@ -29,19 +29,45 @@
         --scroll-text-fade-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
         --scroll-text-fade-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
         --scroll-text-fade-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
-        --scroll-text-fade-gap: {{ section.settings.line_gap }}px;
-        --scroll-text-fade-font: {{ section.settings.font }};
-        --scroll-text-fade-line-height: var(--line-height--display-{{ section.settings.line_height }});
-        --scroll-text-fade-letter-spacing: var(--letter-spacing--display-{{ section.settings.letter_spacing }});
-        --scroll-text-fade-case: {{ section.settings.case }};
-        --scroll-text-fade-align: {{ section.settings.alignment }};
-        --scroll-text-fade-focused-size: {{ section.settings.focused_font_size }}px;
-        --scroll-text-fade-focused-size-mobile: {{ section.settings.focused_font_size_mobile }}px;
-        --scroll-text-fade-transition-speed: {{ section.settings.transition_speed }}ms;
+        {% if section.settings.image != blank %}--scroll-text-fade-media-width: {{ section.settings.media_width }}px;{% endif %}
       "
     >
-      {% content_for 'blocks' %}
-    </scroll-text-fade-component>
+      {%- if section.settings.image != blank -%}
+        <div class="scroll-text-fade__media">
+          <img
+            class="scroll-text-fade__image"
+            src="{{ section.settings.image | image_url: width: 1600 }}"
+            srcset="
+              {{- section.settings.image | image_url: width: 700 }} 700w,
+              {{ section.settings.image | image_url: width: 1200 }} 1200w,
+              {{ section.settings.image | image_url: width: 1600 }} 1600w
+            "
+            sizes="(min-width: 750px) {{ section.settings.media_width }}px, 90vw"
+            alt="{{ section.settings.image.alt | escape }}"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            loading="lazy"
+          >
+        </div>
+      {%- endif -%}
+
+      <scroll-text-fade-component
+        class="scroll-text-fade__inner"
+        style="
+          --scroll-text-fade-gap: {{ section.settings.line_gap }}px;
+          --scroll-text-fade-font: {{ section.settings.font }};
+          --scroll-text-fade-line-height: var(--line-height--display-{{ section.settings.line_height }});
+          --scroll-text-fade-letter-spacing: var(--letter-spacing--display-{{ section.settings.letter_spacing }});
+          --scroll-text-fade-case: {{ section.settings.case }};
+          --scroll-text-fade-align: {{ section.settings.alignment }};
+          --scroll-text-fade-focused-size: {{ section.settings.focused_font_size }}px;
+          --scroll-text-fade-focused-size-mobile: {{ section.settings.focused_font_size_mobile }}px;
+          --scroll-text-fade-transition-speed: {{ section.settings.transition_speed }}ms;
+        "
+      >
+        {% content_for 'blocks' %}
+      </scroll-text-fade-component>
+    </div>
   {%- endif -%}
 </section>
 
@@ -52,11 +78,55 @@
     background-color: var(--color-background);
   }
 
-  .scroll-text-fade__inner {
+  .scroll-text-fade__layout {
     display: block;
     padding-block: var(--scroll-text-fade-padding-block-start, 0) var(--scroll-text-fade-padding-block-end, 0);
     padding-inline: var(--scroll-text-fade-padding-inline-start, 0) var(--scroll-text-fade-padding-inline-end, 0);
+  }
+
+  .scroll-text-fade__layout--with-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .scroll-text-fade__media {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: var(--scroll-text-fade-media-width, 480px);
+  }
+
+  .scroll-text-fade__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .scroll-text-fade__inner {
+    display: block;
+    min-width: 0;
     text-align: var(--scroll-text-fade-align, center);
+  }
+
+  .scroll-text-fade__layout--with-media .scroll-text-fade__inner {
+    flex: 1;
+  }
+
+  .scroll-text-fade__inner > .button,
+  .scroll-text-fade__inner > .button-secondary,
+  .scroll-text-fade__inner > .button-unstyled,
+  .scroll-text-fade__inner > .button-custom {
+    display: inline-block;
+    margin-top: var(--scroll-text-fade-gap, 24px);
+  }
+
+  @media screen and (min-width: 750px) {
+    .scroll-text-fade__layout--with-media {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   .scroll-text-fade__line {
@@ -95,7 +165,7 @@
   }
 
   @media screen and (max-width: 749px) {
-    .scroll-text-fade__inner {
+    .scroll-text-fade__layout {
       padding-block: var(--scroll-text-fade-padding-block-start-mobile, 0) var(--scroll-text-fade-padding-block-end-mobile, 0);
       padding-inline: var(--scroll-text-fade-padding-inline-start-mobile, 0) var(--scroll-text-fade-padding-inline-end-mobile, 0);
     }
@@ -125,9 +195,32 @@
   "blocks": [
     {
       "type": "_scroll-fade-line"
+    },
+    {
+      "type": "button"
     }
   ],
   "settings": [
+    {
+      "type": "header",
+      "content": "t:content.media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "range",
+      "id": "media_width",
+      "label": "t:settings.media_width",
+      "min": 300,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "default": 480,
+      "visible_if": "{{ section.settings.image != blank }}"
+    },
     {
       "type": "header",
       "content": "t:content.colors"

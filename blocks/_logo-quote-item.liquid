@@ -1,0 +1,141 @@
+{% liquid
+  assign alt = block.settings.label | default: block.settings.image.alt
+  assign is_first = false
+  if section.blocks.first.id == block.id
+    assign is_first = true
+  endif
+%}
+
+<div
+  class="logo-testimonials__item"
+  {{ block.shopify_attributes }}
+>
+  <button
+    type="button"
+    class="logo-testimonials__logo-button{% if is_first %} is-active{% endif %}"
+    aria-pressed="{{ is_first }}"
+    aria-label="{{ alt | escape }}"
+    ref="logoButtons[]"
+  >
+    {%- if block.settings.image -%}
+      {{
+        block.settings.image
+        | image_url: width: 400
+        | image_tag:
+          widths: '100, 150, 200, 300, 400',
+          alt: alt,
+          loading: 'lazy',
+          class: 'logo-testimonials__logo-image'
+      }}
+    {%- else -%}
+      {{ 'image' | placeholder_svg_tag: 'logo-testimonials__logo-image logo-testimonials__logo-image--placeholder' }}
+    {%- endif -%}
+  </button>
+
+  <blockquote
+    class="logo-testimonials__quote{% if is_first %} is-active{% endif %}"
+    {% unless is_first %}
+      hidden
+    {% endunless %}
+    ref="quotes[]"
+  >
+    {{ block.settings.quote }}
+  </blockquote>
+</div>
+
+{% stylesheet %}
+  .logo-testimonials__item {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .logo-testimonials__logo-button {
+    display: inline-flex;
+    align-items: center;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    opacity: var(--logo-testimonials-faded-opacity, 0.2);
+    transition: opacity 0.3s ease;
+  }
+
+  .logo-testimonials__logo-button.is-active,
+  .logo-testimonials__logo-button:hover,
+  .logo-testimonials__logo-button:focus-visible {
+    opacity: 1;
+  }
+
+  .logo-testimonials__logo-image,
+  .logo-testimonials__logo-image--placeholder {
+    display: block;
+    width: auto;
+    height: var(--logo-testimonials-logo-height, 56px);
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 749px) {
+    .logo-testimonials__logo-image,
+    .logo-testimonials__logo-image--placeholder {
+      height: min(2.25rem, var(--logo-testimonials-logo-height, 56px));
+    }
+  }
+
+  .logo-testimonials__quote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: var(--font-heading--family);
+    font-weight: var(--font-heading--weight, 400);
+    font-size: clamp(1.25rem, 1.05rem + 0.85vw, 2rem);
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    quotes: '\201C' '\201D';
+  }
+
+  .logo-testimonials__quote::before {
+    content: open-quote;
+  }
+
+  .logo-testimonials__quote::after {
+    content: close-quote;
+  }
+
+  .logo-testimonials__quote p {
+    margin: 0;
+    display: inline;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.logo_quote_item",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "t:settings.label"
+    },
+    {
+      "type": "richtext",
+      "id": "quote",
+      "label": "t:settings.quote",
+      "default": "t:html_defaults.logo_testimonials_quote_1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.logo_quote_item",
+      "category": "t:categories.decorative"
+    }
+  ]
+}
+{% endschema %}

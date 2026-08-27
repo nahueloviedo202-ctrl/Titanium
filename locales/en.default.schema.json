@@ -180,6 +180,10 @@
     "navigation": "Navigation"
   },
   "html_defaults": {
+    "logo_testimonials_quote_1": "<p>The go-to standard for toxin-free cookware</p>",
+    "logo_testimonials_quote_2": "<p>Built with materials that put safety first</p>",
+    "logo_testimonials_quote_3": "<p>A trusted upgrade for the modern kitchen</p>",
+    "logo_testimonials_quote_4": "<p>Where craftsmanship meets everyday cooking</p>",
     "join_our_email_list": "<h2>Join our email list</h2>",
     "get_exclusive_deals_and_early_access_to_new_products": "<p>Get exclusive deals and early access to new products.</p>",
     "artistry_in_action": "<p>Artistry in action </p>",
@@ -404,6 +408,8 @@
     "layered_slideshow": "Layered slideshow",
     "logo": "Logo",
     "logo_and_favicon": "Logo and favicon",
+    "logo_quote_item": "Logo & quote",
+    "logo_testimonials": "Logo testimonials",
     // Scrolling text/content component with horizontal animation
     "marquee": "Marquee",
     "marquee_section": "Marquee",
