@@ -315,7 +315,6 @@
       "block_order": [
         "disclosures_g9mWze"
       ],
-      "disabled": true,
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
@@ -330,11 +329,604 @@
     },
     "pagefly-product-section": {
       "type": "pagefly-product-section",
+      "disabled": true,
       "settings": {}
+    },
+    "reviews_hero_slider_CQ8hX6": {
+      "type": "reviews-hero-slider",
+      "blocks": {
+        "review_card_phQxEi": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/fixed_yellow_2-min_471af5f2-a950-418a-b66a-d33e445051e1.jpg",
+            "image_label": "Titanium Series",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/1-min.webp",
+            "title": "No Compromise",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>Most pans force you to choose - performance, durability, or convenience. This gives you all 3, without chemicals.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Antonio C., Chef",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_zKgDp3": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/board_cold-min.webp",
+            "image_label": "Titanium Board",
+            "badge_color": "",
+            "badge_text_color": "",
+            "video_poster": "shopify://shop_images/2-min.webp",
+            "title": "I'm Obsessed!",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>It doesn't shed toxins, bacteria can't grow on it, and it's ridiculously easy to clean.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Amanda R.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_ijiFj6": {
+          "type": "_review-card",
+          "settings": {
+            "image": "shopify://shop_images/pan-min.webp",
+            "image_label": "Titanium Pan",
+            "badge_color": "",
+            "badge_text_color": "",
+            "video_poster": "shopify://shop_images/3-min.webp",
+            "title": "Non-Stick Without Chemicals",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>When I cook at home for my family I choose only non-toxic cookware, so I don't have to worry about chemicals.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Alice B., Chef",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_gheLB4": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/steak-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/4-min.webp",
+            "title": "It Looks Fantastic!",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>Taima pan heats up very quickly and evenly, the sear you can achieve with this is amazing.</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "RIVERA GOURMET",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_LqycP9": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/steak_2-min.webp",
+            "image_label": "TITANIUM BORAD",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/5-min.webp",
+            "title": "Naturally Antibacterial & Sterile",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"It's increidibly easy to clean, no smell, no mess just a quick rinse & it's ready to go again\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "JAMIOE C.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_cjHax7": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/macaron_2-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/6-min.webp",
+            "title": "Once You Go Titanium, You Won't Go Back",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"The special surface pattern also helps food naturally stick less, so you don't have to worry about chemicals getting into your food\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Happy Customer",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_aq7Dqe": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/salmon-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "{{ settings.color_palette.background }}",
+            "video_poster": "shopify://shop_images/7-min.webp",
+            "title": "Perfect For Health Conscious People",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"I love it. I love it. I love it\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Lisa A.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        },
+        "review_card_K76Kxx": {
+          "type": "_review-card",
+          "name": "t:names.review_card",
+          "settings": {
+            "image": "shopify://shop_images/macaron-min.webp",
+            "image_label": "TITANIUM PAN",
+            "badge_color": "",
+            "badge_text_color": "",
+            "video_poster": "shopify://shop_images/8-min.webp",
+            "title": "Best Non-Toxic Coockware On The Planet",
+            "title_color": "{{ settings.color_palette.background }}",
+            "quote": "<p>\"With taima its easy to make our favorite comfort meals because i can prepare them with complete peace of mind that no toxins are near\"</p>",
+            "quote_color": "{{ settings.color_palette.color2 }}",
+            "author": "Mateo P.",
+            "author_color": "{{ settings.color_palette.background }}"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "review_card_phQxEi",
+        "review_card_zKgDp3",
+        "review_card_ijiFj6",
+        "review_card_gheLB4",
+        "review_card_LqycP9",
+        "review_card_cjHax7",
+        "review_card_aq7Dqe",
+        "review_card_K76Kxx"
+      ],
+      "name": "t:names.reviews_hero_slider",
+      "settings": {
+        "show_rating": true,
+        "rating_value": 5,
+        "star_color": "#b57c46",
+        "rating_icon": "shopify://shop_images/star.svg",
+        "rating_icon_size": 24,
+        "rating_icon_size_mobile": 18,
+        "heading": "<p>Trusted By<strong> 600,000+</strong>Kitchens Worldwide</p>",
+        "heading_color": "{{ settings.color_palette.background }}",
+        "highlighted_text_color": "#bca588",
+        "heading_size": 48,
+        "heading_size_mobile": 32,
+        "slides_per_view": 3,
+        "mobile_card_width": 300,
+        "gap": 32,
+        "card_radius": 18,
+        "badge_color": "#108474",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrow_background_color": "#108474",
+        "arrow_icon_color": "#121212",
+        "arrow_border_color": "{{ settings.color_palette.background }}",
+        "background_color": "#121212",
+        "text_color": "{{ settings.color_palette.background }}",
+        "padding_block_start": 80,
+        "padding_block_end": 80,
+        "padding_inline_start": 80,
+        "padding_inline_end": 60,
+        "padding_block_start_mobile": 48,
+        "padding_block_end_mobile": 48,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    },
+    "scroll_text_fade_DigM7x": {
+      "type": "scroll-text-fade",
+      "blocks": {
+        "scroll_fade_line_tLww4j": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "At Koretitanium®, Non-Toxic Isn’t A Feature.",
+            "font_size": 64,
+            "font_size_mobile": 32,
+            "opacity": 40,
+            "text_color": "#bca588",
+            "hide_on_desktop": false,
+            "hide_on_mobile": true
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_TjJLKy": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "At Zentitanium®",
+            "font_size": 64,
+            "font_size_mobile": 32,
+            "opacity": 40,
+            "text_color": "#bca588",
+            "hide_on_desktop": true,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_4HH6nR": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "Non-Toxic",
+            "font_size": 64,
+            "font_size_mobile": 30,
+            "opacity": 40,
+            "text_color": "#bca588",
+            "hide_on_desktop": true,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_ykFafA": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "Isn’t A Feature.",
+            "font_size": 64,
+            "font_size_mobile": 28,
+            "opacity": 40,
+            "text_color": "#bca588",
+            "hide_on_desktop": true,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_3DTXJn": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "It’s The Foundation.",
+            "font_size": 48,
+            "font_size_mobile": 24,
+            "opacity": 30,
+            "text_color": "#bca588",
+            "hide_on_desktop": false,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_EVgEnP": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "Perfection Isn't a Goal.",
+            "font_size": 48,
+            "font_size_mobile": 24,
+            "opacity": 20,
+            "text_color": "#bca588",
+            "hide_on_desktop": false,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "scroll_fade_line_qAWKJT": {
+          "type": "_scroll-fade-line",
+          "settings": {
+            "text": "It's Where We Begin.",
+            "font_size": 32,
+            "font_size_mobile": 16,
+            "opacity": 10,
+            "text_color": "#bca588",
+            "hide_on_desktop": false,
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "scroll_fade_line_tLww4j",
+        "scroll_fade_line_TjJLKy",
+        "scroll_fade_line_4HH6nR",
+        "scroll_fade_line_ykFafA",
+        "scroll_fade_line_3DTXJn",
+        "scroll_fade_line_EVgEnP",
+        "scroll_fade_line_qAWKJT"
+      ],
+      "name": "t:names.scroll_text_fade",
+      "settings": {
+        "background_color": "#00221c",
+        "text_color": "#bca588",
+        "font": "var(--font-body--family)",
+        "line_height": "loose",
+        "letter_spacing": "normal",
+        "case": "capitalize",
+        "alignment": "center",
+        "focused_font_size": 64,
+        "focused_font_size_mobile": 32,
+        "transition_speed": 400,
+        "line_gap": 24,
+        "padding_block_start": 240,
+        "padding_block_end": 240,
+        "padding_inline_start": 16,
+        "padding_inline_end": 16,
+        "padding_block_start_mobile": 32,
+        "padding_block_end_mobile": 32,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    },
+    "materials_comparison_zptje3": {
+      "type": "materials-comparison",
+      "blocks": {
+        "material_category_mEHPx8": {
+          "type": "_material-category",
+          "settings": {
+            "label": "Pans"
+          },
+          "blocks": {
+            "material_card_eNKrNg": {
+              "type": "_material-card",
+              "settings": {
+                "image": "shopify://shop_images/non_stick-min_374f3d34-196a-4768-a3e3-47e6f117a97b.jpg",
+                "badge_text": "FOREVER CHEMICALS",
+                "title": "Non-Stick Coated / Teflon",
+                "text": "Worst type of pan surface there is. Teflon / majority of non-stick pans release toxic PFAS chemicals, known as \"forever chemicals\" which have been linked to cancer and liver damage. The coating easily shaves off over time and can't handle the heat exposing your food to toxins."
+              },
+              "blocks": {}
+            },
+            "material_card_TPGUj7": {
+              "type": "_material-card",
+              "settings": {
+                "image": "shopify://shop_images/steel-min_ffa0915f-a72e-44ed-84d6-12d76921a216.webp",
+                "badge_text": "HEAVY METALS",
+                "title": "Stainless Steel",
+                "text": "Requires lots of oil to prevent sticking, and reacts with acidic foods - altering taste and potentially leaching metals in lower-quality pans. Tougher to clean, high effort to maintain."
+              },
+              "blocks": {}
+            },
+            "material_card_zj9fmP": {
+              "type": "_material-card",
+              "settings": {
+                "image": "shopify://shop_images/ceramic-min_c6855de1-b4bc-4ad4-8545-880b3ec41164.webp",
+                "badge_text": "ALUMINUM BASE",
+                "title": "Ceramic",
+                "text": "Ceramic coatings are very fragile, once chipped, they expose toxic aluminum base. Most only last 1-2 years before losing their non-stick. Expensive to replace, unreliable long-term."
+              },
+              "blocks": {}
+            },
+            "material_card_U7Ank4": {
+              "type": "_material-card",
+              "settings": {
+                "image": "shopify://shop_images/cast_iron-min_ccb7b927-75cd-4303-89d7-fe8a2dde8ff3.webp",
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Cast Iron",
+                "text": "Incredibly heavy and high-maintenance - cast iron rusts easily without regular seasoning and struggles with acidic foods, which can degrade the surface and alter flavor."
+              },
+              "blocks": {}
+            },
+            "material_card_n4398Y": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Carbon Steel",
+                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "material_card_eNKrNg",
+            "material_card_TPGUj7",
+            "material_card_zj9fmP",
+            "material_card_U7Ank4",
+            "material_card_n4398Y"
+          ]
+        },
+        "material_category_pc93gc": {
+          "type": "_material-category",
+          "settings": {
+            "label": "Cutting Boards"
+          },
+          "blocks": {
+            "material_card_RjqGeH": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "MICROPLASTICS",
+                "title": "Plastic",
+                "text": "Contains BPA's or other harmful chemicals that shave off into food during cutting, posing a risk to hormone, gut & brain health."
+              },
+              "blocks": {}
+            },
+            "material_card_RBYDea": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | MOLD",
+                "title": "Solid Wood",
+                "text": "Not hygienic. Wood is porous, it absorbs raw food juices & moisture. Cut grooves trap bacteria, making it nearly impossible to sterilize. Mold and contamination are almost guaranteed over time. They also absorb odors, stain easily."
+              },
+              "blocks": {}
+            },
+            "material_card_GiwTU9": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "FORMALDEHYDE",
+                "title": "Bamboo & End-Grain",
+                "text": "Same risks as solid wood, plus they're pieced together from small blocks using industrial glue that contains carcinogenic formaldehyde chemicals. Not just unhygienic - unsafe."
+              },
+              "blocks": {}
+            },
+            "material_card_XPMyAJ": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "INCONVENIENT",
+                "title": "Glass / Stone / Steel",
+                "text": "These materials are very hard & dull knives quickly. Very heavy as well."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "material_card_RjqGeH",
+            "material_card_RBYDea",
+            "material_card_GiwTU9",
+            "material_card_XPMyAJ"
+          ]
+        },
+        "material_category_qLk9c4": {
+          "type": "_material-category",
+          "settings": {
+            "label": "Utensils"
+          },
+          "blocks": {
+            "material_card_4WRfHb": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Plastic",
+                "text": "Plastic spatulas have a very low melting temperature, releasing toxic chemicals each time they're used, causing serious health risks like gut, hormone disruption & cancer."
+              },
+              "blocks": {}
+            },
+            "material_card_zVYhbe": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Silicone",
+                "text": "While high-end silicone spatulas are heat-resistant, most found on Amazon or in regular stores degrade over time and release toxic chemicals. Cheaper silicone spatulas often contain dangerous fillers like BPA and phthalates, becoming toxic when heated."
+              },
+              "blocks": {}
+            },
+            "material_card_jrwJFG": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | MOLD",
+                "title": "Wood",
+                "text": "Not hygienic. It lets bacteria grow in grooves and cracks, even if invisible, which can contaminate your food over time. They also absorb odors, stain easily."
+              },
+              "blocks": {}
+            },
+            "material_card_yWD9mk": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Steel",
+                "text": "Most are made from low-grade alloys that release heavy metals like chromium and nickel into your food when heated. They're also heavy, destroying your cookware's surface."
+              },
+              "blocks": {}
+            },
+            "material_card_hRJrCt": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Carbon Steel",
+                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "material_card_4WRfHb",
+            "material_card_zVYhbe",
+            "material_card_jrwJFG",
+            "material_card_yWD9mk",
+            "material_card_hRJrCt"
+          ]
+        },
+        "material_category_eyT7rr": {
+          "type": "_material-category",
+          "settings": {
+            "label": "Water Bottles"
+          },
+          "blocks": {
+            "material_card_dXVp3X": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Plastic",
+                "text": "Worst type of water bottle. Even BPA-free plastic bottles leach hormone-disrupting chemicals, especially when exposed to heat. The moist environment around the mouthpiece quickly breeds bacteria and mold."
+              },
+              "blocks": {}
+            },
+            "material_card_afzAFM": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Steel",
+                "text": "Though durable, stainless steel isn't antibacterial like titanium, allowing bacteria from your mouth to thrive inside. Frequent cleaning is essential, as studies show 87% of these bottles contain harmful bacteria like E. coli."
+              },
+              "blocks": {}
+            },
+            "material_card_rLkjbg": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "CHEMICALS",
+                "title": "Aluminum",
+                "text": "Aluminum bottles are often lined with synthetic coatings to prevent the metal from reacting with liquids, but these coatings can break down and leach chemicals into your water. Like other bottles, bacteria and fungi easily grow in aluminum bottles, making them unsanitary."
+              },
+              "blocks": {}
+            },
+            "material_card_Yn6Fxj": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | FRAGILE",
+                "title": "Glass",
+                "text": "While glass doesn't leach chemicals, it offers no antibacterial protection. Bacteria from your mouth still multiply in the bottle. Additionally, glass is fragile, making it more prone to breakage and less practical for daily use."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "material_card_dXVp3X",
+            "material_card_afzAFM",
+            "material_card_rLkjbg",
+            "material_card_Yn6Fxj"
+          ]
+        }
+      },
+      "block_order": [
+        "material_category_mEHPx8",
+        "material_category_pc93gc",
+        "material_category_qLk9c4",
+        "material_category_eyT7rr"
+      ],
+      "settings": {
+        "heading": "Titanium Isn't Competing. It's Replacing.",
+        "heading_color": "#bca588",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
+        "subheading": "From toxin & bacteria risks to high maintenance, these \"outdated\" kitchenware materials just don't measure up.",
+        "subheading_color": "#b0b0b0",
+        "subheading_font_size": 16,
+        "subheading_font_size_mobile": 14,
+        "tab_text_color": "#b0b0b0",
+        "tab_border_color": "#454545",
+        "tab_active_background_color": "#108474",
+        "tab_active_text_color": "#121212",
+        "card_border_color": "#333333",
+        "card_corner_radius": 24,
+        "card_title_color": "#ffffff",
+        "card_text_color": "{{ settings.color_palette.color2 }}",
+        "badge_background_color": "#108474",
+        "badge_text_color": "{{ settings.color_palette.background }}",
+        "columns": 4,
+        "mobile_card_width": 240,
+        "gap": 16,
+        "icons_style": "none",
+        "icons_shape": "circle",
+        "arrow_background_color": "#a3835f",
+        "arrow_icon_color": "#121212",
+        "background_color": "{{ settings.color_palette.foreground }}",
+        "content_max_width": 1920,
+        "padding_block_start": 120,
+        "padding_block_end": 120,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 64,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
     }
   },
   "order": [
     "main",
-    "pagefly-product-section"
+    "pagefly-product-section",
+    "reviews_hero_slider_CQ8hX6",
+    "scroll_text_fade_DigM7x",
+    "materials_comparison_zptje3"
   ]
 }
