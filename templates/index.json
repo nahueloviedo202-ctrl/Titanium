@@ -543,7 +543,7 @@
         "price_font_size": 20,
         "icons_style": "arrow",
         "icons_shape": "square",
-        "arrow_background_color": "#a3835f",
+        "arrow_background_color": "#108474",
         "arrow_icon_color": "#121212",
         "autoplay": false,
         "autoplay_speed": 5,
