@@ -6,15 +6,33 @@
   endif
 %}
 
-{%- capture active_material -%}
-  {%- render 'material-group-active-key',
-    groups: section.blocks,
-    target_product: product,
-    fallback: section.settings.fallback_material
-  -%}
+{%- capture material_needle -%}
+  {%- render 'material-metafield-key', target_product: product -%}
 {%- endcapture -%}
-{%- assign active_material = active_material | strip -%}
 
+{%- liquid
+  assign material_needle = material_needle | strip
+  assign known_materials = 'pans,cuttingboards,utensils,waterbottles' | split: ','
+  assign material_matched = false
+
+  if material_needle != blank
+    for key in known_materials
+      if material_needle contains key
+        assign material_matched = true
+        break
+      endif
+    endfor
+  endif
+
+  assign show_setup_notice = false
+  if request.design_mode
+    if material_needle == blank and section.settings.fallback_material == 'none'
+      assign show_setup_notice = true
+    elsif material_needle != blank and material_matched == false
+      assign show_setup_notice = true
+    endif
+  endif
+-%}
 <section
   id="ProductMaterials-{{ section.id }}"
   class="product-materials{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
@@ -84,7 +102,7 @@
         {% content_for 'blocks' %}
       </div>
 
-      {%- if active_material == blank and request.design_mode -%}
+      {%- if show_setup_notice -%}
         <p class="product-materials__notice">
           {{ 'content.product_materials_no_match' | t }}
         </p>
@@ -213,6 +231,7 @@
       "type": "select",
       "id": "fallback_material",
       "label": "t:settings.fallback_material",
+      "info": "t:info.fallback_material",
       "options": [
         {
           "value": "none",

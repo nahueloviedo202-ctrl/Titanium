@@ -1,0 +1,26 @@
+{%- doc -%}
+  Outputs the product `custom.material_comparision` metafield as a compact
+  lowercase token (spaces, dashes and underscores stripped), so each material
+  group can match it against its own material key.
+
+  Returns an empty string when the metafield is unset or the product is nil.
+
+  @param {object} [target_product] - The product whose metafield is read.
+
+  @example
+  {% capture material_needle %}{% render 'material-metafield-key', target_product: product %}{% endcapture %}
+{%- enddoc -%}
+
+{%- liquid
+  assign metafield = target_product.metafields.custom.material_comparision
+
+  capture raw_value
+    echo metafield.value
+    echo ' '
+    echo metafield.value.handle
+    echo ' '
+    echo metafield.value.title
+  endcapture
+
+  echo raw_value | downcase | replace: ' ', '' | replace: '-', '' | replace: '_', ''
+-%}

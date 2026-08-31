@@ -268,6 +268,7 @@
   },
   "info": {
     "product_material_metafield": "Cards are picked automatically from the product `custom.material_comparision` metafield. [Manage metafields](/admin/settings/custom_data/product/metafields)",
+    "fallback_material": "Shown only when the product metafield is empty.",
     "material_metafield_values": "Comma-separated metafield values that should also show this group, for example: skillet, frying pan",
     "actions_display_style": "Icons are always used on mobile",
     "applies_on_image_only": "Applies to images only",
@@ -308,7 +309,7 @@
     "collection_banner_fallback": "Used when the collection has no `custom.collection_banner` metafield image"
   },
   "names": {
-    "product_materials_comparison": "Materials comparison (product)",
+    "product_materials_comparison": "Product materials",
     "product_material_group": "Material group",
     "column": "Column",
     "product_title": "Product title",

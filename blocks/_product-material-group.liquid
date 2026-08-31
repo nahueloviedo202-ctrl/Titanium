@@ -1,22 +1,38 @@
 
 
+{%- capture material_needle -%}
+  {%- render 'material-metafield-key', target_product: product -%}
+{%- endcapture -%}
+
 {%- liquid
+  assign material_needle = material_needle | strip
+  assign show_group = false
+
+  assign tokens = block.settings.material_key
+  if block.settings.metafield_values != blank
+    assign tokens = tokens | append: ',' | append: block.settings.metafield_values
+  endif
+  assign tokens = tokens | split: ','
+
+  if material_needle != blank
+    for token in tokens
+      assign candidate = token | downcase | replace: ' ', '' | replace: '-', '' | replace: '_', '' | strip
+      if candidate != blank and material_needle contains candidate
+        assign show_group = true
+        break
+      endif
+    endfor
+  elsif section.settings.fallback_material == block.settings.material_key
+    assign show_group = true
+  endif
+
   assign show_arrows = true
   if section.settings.icons_style == 'none'
     assign show_arrows = false
   endif
 -%}
 
-{%- capture active_material -%}
-  {%- render 'material-group-active-key',
-    groups: section.blocks,
-    target_product: product,
-    fallback: section.settings.fallback_material
-  -%}
-{%- endcapture -%}
-{%- assign active_material = active_material | strip -%}
-
-{%- if active_material == block.settings.material_key and block.blocks.size > 0 -%}
+{%- if show_group and block.blocks.size > 0 -%}
   {% capture cards %}
     {% content_for 'blocks' %}
   {% endcapture %}
