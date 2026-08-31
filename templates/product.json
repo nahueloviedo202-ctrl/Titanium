@@ -327,64 +327,6 @@
         "padding-block-end": 0
       }
     },
-    "benefits_marquee_Xr8Fqm": {
-      "type": "benefits-marquee",
-      "blocks": {
-        "benefit_chip_Hn4Ztq": {
-          "type": "_benefit-chip",
-          "settings": {
-            "label": "Anti Bacterial",
-            "text_color": "#e8e8e1"
-          },
-          "blocks": {}
-        },
-        "benefit_chip_Pm9Rvc": {
-          "type": "_benefit-chip",
-          "settings": {
-            "label": "Certified",
-            "text_color": "#e8e8e1"
-          },
-          "blocks": {}
-        },
-        "benefit_chip_Ws3Kbn": {
-          "type": "_benefit-chip",
-          "settings": {
-            "label": "Non PFAS",
-            "text_color": "#e8e8e1"
-          },
-          "blocks": {}
-        },
-        "benefit_chip_Ye6Ldp": {
-          "type": "_benefit-chip",
-          "settings": {
-            "label": "Money Back Promise",
-            "text_color": "#e8e8e1"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "benefit_chip_Hn4Ztq",
-        "benefit_chip_Pm9Rvc",
-        "benefit_chip_Ws3Kbn",
-        "benefit_chip_Ye6Ldp"
-      ],
-      "name": "t:names.benefits_marquee",
-      "settings": {
-        "autoplay": true,
-        "direction": "normal",
-        "speed": 20,
-        "gap": 40,
-        "icon_height": 24,
-        "text_size": 18,
-        "background_color": "#1f1f1f",
-        "text_color": "#e8e8e1",
-        "padding-block-start": 32,
-        "padding-block-end": 32,
-        "padding-inline-start": 0,
-        "padding-inline-end": 0
-      }
-    },
     "pagefly-product-section": {
       "type": "pagefly-product-section",
       "disabled": true,
@@ -708,6 +650,64 @@
         "padding_inline_end_mobile": 16
       }
     },
+    "benefits_marquee_Xr8Fqm": {
+      "type": "benefits-marquee",
+      "blocks": {
+        "benefit_chip_Hn4Ztq": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Anti Bacterial",
+            "text_color": "#e8e8e1"
+          },
+          "blocks": {}
+        },
+        "benefit_chip_Pm9Rvc": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Certified",
+            "text_color": "#e8e8e1"
+          },
+          "blocks": {}
+        },
+        "benefit_chip_Ws3Kbn": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Non PFAS",
+            "text_color": "#e8e8e1"
+          },
+          "blocks": {}
+        },
+        "benefit_chip_Ye6Ldp": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Money Back Promise",
+            "text_color": "#e8e8e1"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_chip_Hn4Ztq",
+        "benefit_chip_Pm9Rvc",
+        "benefit_chip_Ws3Kbn",
+        "benefit_chip_Ye6Ldp"
+      ],
+      "name": "t:names.benefits_marquee",
+      "settings": {
+        "autoplay": true,
+        "direction": "normal",
+        "speed": 20,
+        "gap": 40,
+        "icon_height": 24,
+        "text_size": 18,
+        "background_color": "#108474",
+        "text_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 32,
+        "padding-block-end": 32,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
+    },
     "product_feature_showcase_tqM8Ft": {
       "type": "product-feature-showcase",
       "blocks": {
@@ -761,92 +761,21 @@
             "product_feature_item_x8XEyC",
             "product_feature_item_XXeM7j"
           ]
-        },
-        "feature-annotations": {
-          "type": "_product-feature-annotations",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "product_feature_annotation_dU3aMx": {
-              "type": "_product-feature-annotation",
-              "settings": {
-                "icon": "check_box",
-                "title": "High-quality stainless steel",
-                "text": "Won't rust, won't corrode, and is extremely durable.",
-                "label_position": "top_left",
-                "label_x": 4,
-                "label_y": 8,
-                "dot_x": 34,
-                "dot_y": 32
-              },
-              "blocks": {}
-            },
-            "product_feature_annotation_yfqm3p": {
-              "type": "_product-feature-annotation",
-              "settings": {
-                "icon": "lock",
-                "title": "Ergonomic handle",
-                "text": "Designed for a comfortable, secure grip.",
-                "label_position": "top_right",
-                "label_x": 96,
-                "label_y": 8,
-                "dot_x": 76,
-                "dot_y": 24
-              },
-              "blocks": {}
-            },
-            "product_feature_annotation_pttHRK": {
-              "type": "_product-feature-annotation",
-              "settings": {
-                "icon": "fire",
-                "title": "Triple-layer encapsulated base",
-                "text": "Distributes heat evenly for perfect cooking results.",
-                "label_position": "bottom_left",
-                "label_x": 4,
-                "label_y": 92,
-                "dot_x": 40,
-                "dot_y": 76
-              },
-              "blocks": {}
-            },
-            "product_feature_annotation_pghLmz": {
-              "type": "_product-feature-annotation",
-              "settings": {
-                "icon": "lightning_bolt",
-                "title": "Works on every cooktop",
-                "text": "Compatible with induction, gas, electric, ceramic, and halogen stovetops.",
-                "label_position": "bottom_right",
-                "label_x": 96,
-                "label_y": 92,
-                "dot_x": 66,
-                "dot_y": 66
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_feature_annotation_dU3aMx",
-            "product_feature_annotation_yfqm3p",
-            "product_feature_annotation_pttHRK",
-            "product_feature_annotation_pghLmz"
-          ]
         }
       },
       "name": "t:names.product_feature_showcase",
       "settings": {
         "heading": "<p>No coating to break down,<br/><strong>built to last.</strong></p>",
-        "heading_color": "#FFFFFF",
+        "heading_color": "#ffffff",
         "heading_font_size": 36,
         "heading_font_size_mobile": 24,
         "subheading": "<p>Our stainless steel pan is designed for exceptional performance and healthier cooking, day after day.</p>",
-        "gradient_start_color": "#04120D",
-        "gradient_end_color": "#0F3D2E",
-        "accent_color": "#35E1B8",
-        "card_title_color": "#FFFFFF",
-        "subdued_text_color": "#A9C4BC",
-        "card_background_color": "#FFFFFF0D",
-        "content_max_width": 1400,
-        "column_gap": 64,
+        "highlighted_text_color": "#bca588",
+        "background_color": "#121212",
+        "text_color": "#b0b0b0",
+        "card_title_color": "#ffffff",
+        "card_border_color": "#333333",
+        "accent_color": "#35e1b8",
         "card_corner_radius": 16,
         "padding_block_start": 80,
         "padding_block_end": 80,
