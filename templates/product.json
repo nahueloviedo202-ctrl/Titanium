@@ -686,6 +686,7 @@
       ],
       "name": "t:names.scroll_text_fade",
       "settings": {
+        "media_width": 480,
         "background_color": "#00221c",
         "text_color": "#bca588",
         "font": "var(--font-body--family)",
@@ -978,6 +979,156 @@
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
       }
+    },
+    "product_feature_showcase_tqM8Ft": {
+      "type": "product-feature-showcase",
+      "blocks": {
+        "feature-list": {
+          "type": "_product-feature-list",
+          "static": true,
+          "settings": {
+            "cards_gap": 16
+          },
+          "blocks": {
+            "product_feature_item_q78QaU": {
+              "type": "_product-feature-item",
+              "settings": {
+                "icon": "leaf",
+                "title": "No chemicals, no coatings",
+                "text": "Cook without worry — there's no coating to break down or leach harmful substances into your food."
+              },
+              "blocks": {}
+            },
+            "product_feature_item_jTH6M8": {
+              "type": "_product-feature-item",
+              "settings": {
+                "icon": "star",
+                "title": "Strong and long-lasting",
+                "text": "Made from high-quality stainless steel, built to withstand daily use and last for years."
+              },
+              "blocks": {}
+            },
+            "product_feature_item_x8XEyC": {
+              "type": "_product-feature-item",
+              "settings": {
+                "icon": "heart",
+                "title": "Healthier cooking",
+                "text": "A natural surface that won't react with food or alter its flavor."
+              },
+              "blocks": {}
+            },
+            "product_feature_item_XXeM7j": {
+              "type": "_product-feature-item",
+              "settings": {
+                "icon": "fire",
+                "title": "Even heat distribution",
+                "text": "An encapsulated base that ensures even cooking and perfect results every time."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_feature_item_q78QaU",
+            "product_feature_item_jTH6M8",
+            "product_feature_item_x8XEyC",
+            "product_feature_item_XXeM7j"
+          ]
+        },
+        "feature-annotations": {
+          "type": "_product-feature-annotations",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "product_feature_annotation_dU3aMx": {
+              "type": "_product-feature-annotation",
+              "settings": {
+                "icon": "check_box",
+                "title": "High-quality stainless steel",
+                "text": "Won't rust, won't corrode, and is extremely durable.",
+                "label_position": "top_left",
+                "label_x": 4,
+                "label_y": 8,
+                "dot_x": 34,
+                "dot_y": 32
+              },
+              "blocks": {}
+            },
+            "product_feature_annotation_yfqm3p": {
+              "type": "_product-feature-annotation",
+              "settings": {
+                "icon": "lock",
+                "title": "Ergonomic handle",
+                "text": "Designed for a comfortable, secure grip.",
+                "label_position": "top_right",
+                "label_x": 96,
+                "label_y": 8,
+                "dot_x": 76,
+                "dot_y": 24
+              },
+              "blocks": {}
+            },
+            "product_feature_annotation_pttHRK": {
+              "type": "_product-feature-annotation",
+              "settings": {
+                "icon": "fire",
+                "title": "Triple-layer encapsulated base",
+                "text": "Distributes heat evenly for perfect cooking results.",
+                "label_position": "bottom_left",
+                "label_x": 4,
+                "label_y": 92,
+                "dot_x": 40,
+                "dot_y": 76
+              },
+              "blocks": {}
+            },
+            "product_feature_annotation_pghLmz": {
+              "type": "_product-feature-annotation",
+              "settings": {
+                "icon": "lightning_bolt",
+                "title": "Works on every cooktop",
+                "text": "Compatible with induction, gas, electric, ceramic, and halogen stovetops.",
+                "label_position": "bottom_right",
+                "label_x": 96,
+                "label_y": 92,
+                "dot_x": 66,
+                "dot_y": 66
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_feature_annotation_dU3aMx",
+            "product_feature_annotation_yfqm3p",
+            "product_feature_annotation_pttHRK",
+            "product_feature_annotation_pghLmz"
+          ]
+        }
+      },
+      "name": "t:names.product_feature_showcase",
+      "settings": {
+        "heading": "<p>No coating to break down,<br><strong>built to last.</strong></p>",
+        "heading_color": "#FFFFFF",
+        "heading_font_size": 36,
+        "heading_font_size_mobile": 24,
+        "subheading": "<p>Our stainless steel pan is designed for exceptional performance and healthier cooking, day after day.</p>",
+        "gradient_start_color": "#04120D",
+        "gradient_end_color": "#0F3D2E",
+        "accent_color": "#35E1B8",
+        "card_title_color": "#FFFFFF",
+        "subdued_text_color": "#A9C4BC",
+        "card_background_color": "#FFFFFF0D",
+        "content_max_width": 1400,
+        "column_gap": 64,
+        "card_corner_radius": 16,
+        "padding_block_start": 80,
+        "padding_block_end": 80,
+        "padding_inline_start": 24,
+        "padding_inline_end": 24,
+        "padding_block_start_mobile": 48,
+        "padding_block_end_mobile": 48,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
     }
   },
   "order": [
@@ -986,6 +1137,7 @@
     "pagefly-product-section",
     "reviews_hero_slider_CQ8hX6",
     "scroll_text_fade_DigM7x",
-    "materials_comparison_zptje3"
+    "materials_comparison_zptje3",
+    "product_feature_showcase_tqM8Ft"
   ]
 }
