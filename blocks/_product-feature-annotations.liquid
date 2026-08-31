@@ -1,0 +1,42 @@
+
+
+<div
+  class="product-feature-showcase__annotations"
+  {{ block.shopify_attributes }}
+>
+  {% content_for 'blocks' %}
+</div>
+
+{% stylesheet %}
+  .product-feature-showcase__annotations {
+    position: absolute;
+    inset: 0;
+  }
+
+  @media screen and (max-width: 989px) {
+    .product-feature-showcase__annotations {
+      position: static;
+      display: grid;
+      gap: 12px;
+      margin-block-start: 20px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.product_feature_annotations",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_product-feature-annotation"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.product_feature_annotations",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}

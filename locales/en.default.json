@@ -20,6 +20,7 @@
     "trust_band_tiles_region": "Trust band",
     "core_values_grid_region": "Core values grid",
     "ti_benefits_region": "Titanium benefits",
+    "product_feature_showcase_region": "Product features",
     "country_region": "Country/Region",
     "country_results_count": "{{ count }} results",
     "product_details": "Product details",

@@ -1,0 +1,50 @@
+
+
+<ul
+  class="product-feature-showcase__list"
+  style="--pfs-cards-gap: {{ block.settings.cards_gap }}px;"
+  {{ block.shopify_attributes }}
+>
+  {% content_for 'blocks' %}
+</ul>
+
+{% stylesheet %}
+  .product-feature-showcase__list {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--pfs-cards-gap, 16px) * var(--pfs-scale, 1));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.product_feature_list",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_product-feature-item"
+    }
+  ],
+  "settings": [
+    {
+      "type": "range",
+      "id": "cards_gap",
+      "label": "t:settings.gap",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.product_feature_list",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}

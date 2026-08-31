@@ -1,0 +1,566 @@
+
+
+{% liquid
+  assign image = section.settings.image
+  assign image_render_width = 1200
+  assign image_render_height = 1200
+  if image.aspect_ratio
+    assign image_render_height = image_render_width | divided_by: image.aspect_ratio | round
+  endif
+  assign media_ratio = image.aspect_ratio | default: 1.05
+%}
+
+<section
+  id="ProductFeatureShowcase-{{ section.id }}"
+  class="product-feature-showcase"
+  role="region"
+  aria-label="{% if section.settings.heading != blank %}{{ section.settings.heading | strip_html }}{% else %}{{ 'accessibility.product_feature_showcase_region' | t }}{% endif %}"
+>
+  <div
+    class="product-feature-showcase__inner"
+    style="
+      --pfs-max-width: {{ section.settings.content_max_width }}px;
+      --pfs-column-gap: {{ section.settings.column_gap }}px;
+      --pfs-card-radius: {{ section.settings.card_corner_radius }}px;
+      --pfs-gradient-start: {{ section.settings.gradient_start_color }};
+      --pfs-gradient-end: {{ section.settings.gradient_end_color }};
+      --pfs-accent-color: {{ section.settings.accent_color }};
+      --pfs-accent-rgb: {{ section.settings.accent_color.rgb }};
+      --pfs-title-color: {{ section.settings.card_title_color }};
+      --pfs-text-color: {{ section.settings.subdued_text_color }};
+      --pfs-card-background: {{ section.settings.card_background_color }};
+      --pfs-padding-block-start: {{ section.settings.padding_block_start }}px;
+      --pfs-padding-block-end: {{ section.settings.padding_block_end }}px;
+      --pfs-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+      --pfs-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+      --pfs-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+      --pfs-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+      --pfs-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+      --pfs-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+    "
+  >
+    <div class="product-feature-showcase__grid">
+      <div class="product-feature-showcase__content">
+        {%- if section.settings.heading != blank -%}
+          <h2
+            class="product-feature-showcase__heading"
+            style="
+              color: {{ section.settings.heading_color }};
+              --pfs-heading-size: {{ section.settings.heading_font_size }}px;
+              --pfs-heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+            "
+          >
+            {{ section.settings.heading }}
+          </h2>
+        {%- endif -%}
+
+        {%- if section.settings.subheading != blank -%}
+          <div class="product-feature-showcase__subheading">
+            {{ section.settings.subheading }}
+          </div>
+        {%- endif -%}
+
+        {% content_for 'block', type: '_product-feature-list', id: 'feature-list' %}
+      </div>
+
+      <div class="product-feature-showcase__media">
+        <div
+          class="product-feature-showcase__media-inner"
+          style="--pfs-media-ratio: {{ media_ratio }};"
+        >
+          {%- if image != blank -%}
+            <img
+              class="product-feature-showcase__image"
+              src="{{ image | image_url: width: image_render_width }}"
+              srcset="
+                {{- image | image_url: width: 600 }} 600w,
+                {{ image | image_url: width: 900 }} 900w,
+                {{ image | image_url: width: image_render_width }} {{ image_render_width }}w
+              "
+              sizes="(min-width: 990px) 45vw, 90vw"
+              width="{{ image_render_width }}"
+              height="{{ image_render_height }}"
+              alt="{{ image.alt | default: section.settings.heading | strip_html | escape }}"
+              loading="lazy"
+            >
+          {%- else -%}
+            {{ 'product-apparel-1' | placeholder_svg_tag: 'product-feature-showcase__image placeholder-svg' }}
+          {%- endif -%}
+
+          {% content_for 'block', type: '_product-feature-annotations', id: 'feature-annotations' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .product-feature-showcase {
+    --pfs-scale: 1;
+    position: relative;
+  }
+
+  .product-feature-showcase__inner {
+    position: relative;
+    max-width: var(--pfs-max-width, 1400px);
+    margin-inline: auto;
+    padding-block: var(--pfs-padding-block-start, 80px) var(--pfs-padding-block-end, 80px);
+    padding-inline: var(--pfs-padding-inline-start, 24px) var(--pfs-padding-inline-end, 24px);
+  }
+
+  .product-feature-showcase__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: calc(var(--pfs-column-gap, 64px) * var(--pfs-scale, 1));
+    padding: calc(56px * var(--pfs-scale, 1)) calc(48px * var(--pfs-scale, 1));
+    border-radius: calc(28px * var(--pfs-scale, 1));
+    background: linear-gradient(135deg, var(--pfs-gradient-start, #04120d) 0%, var(--pfs-gradient-end, #0f3d2e) 100%);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .product-feature-showcase__grid::after {
+    content: '';
+    position: absolute;
+    inset-inline: 10%;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgb(var(--pfs-accent-rgb, 53 225 184) / 0.6), transparent);
+    box-shadow: 0 0 calc(24px * var(--pfs-scale, 1)) rgb(var(--pfs-accent-rgb, 53 225 184) / 0.5);
+  }
+
+  .product-feature-showcase__content {
+    display: flex;
+    flex-direction: column;
+    gap: calc(24px * var(--pfs-scale, 1));
+  }
+
+  .product-feature-showcase__heading {
+    margin: 0;
+    font-family: var(--font-body--family);
+    font-weight: 600;
+    line-height: 1.25;
+    font-size: calc(var(--pfs-heading-size, 36px) * var(--pfs-scale, 1));
+  }
+
+  .product-feature-showcase__heading p {
+    margin: 0;
+  }
+
+  .product-feature-showcase__heading strong {
+    color: var(--pfs-accent-color, #35e1b8);
+    font-weight: 700;
+  }
+
+  .product-feature-showcase__subheading {
+    margin-top: calc(-12px * var(--pfs-scale, 1));
+    color: var(--pfs-text-color, #a9c4bc);
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: calc(15px * var(--pfs-scale, 1));
+  }
+
+  .product-feature-showcase__subheading p {
+    margin: 0 0 1em;
+  }
+
+  .product-feature-showcase__subheading p:last-child {
+    margin-bottom: 0;
+  }
+
+  .product-feature-showcase__media {
+    position: relative;
+  }
+
+  .product-feature-showcase__media-inner {
+    position: relative;
+    aspect-ratio: var(--pfs-media-ratio, 1.05);
+    padding: calc(72px * var(--pfs-scale, 1));
+  }
+
+  .product-feature-showcase__image,
+  .product-feature-showcase__media-inner .placeholder-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 989px) {
+    .product-feature-showcase__grid {
+      grid-template-columns: 1fr;
+      padding: 32px 20px;
+      border-radius: 20px;
+    }
+
+    .product-feature-showcase__inner {
+      padding-block: var(--pfs-padding-block-start-mobile, 0) var(--pfs-padding-block-end-mobile, 0);
+      padding-inline: var(--pfs-padding-inline-start-mobile, 0) var(--pfs-padding-inline-end-mobile, 0);
+    }
+
+    .product-feature-showcase__media {
+      order: -1;
+    }
+
+    .product-feature-showcase__media-inner {
+      padding: 16px;
+    }
+
+    .product-feature-showcase__heading {
+      font-size: var(--pfs-heading-size-mobile, 24px);
+    }
+
+    .product-feature-showcase__subheading {
+      margin-top: -4px;
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (min-width: 990px) and (max-width: 1799px) {
+    .product-feature-showcase {
+      --pfs-scale: 0.9;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .product-feature-showcase {
+      --pfs-scale: 1.3;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.product_feature_showcase",
+  "tag": "section",
+  "class": "section-wrapper",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:html_defaults.product_feature_showcase_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:settings.subheading",
+      "default": "t:html_defaults.product_feature_showcase_subheading"
+    },
+    {
+      "type": "header",
+      "content": "t:content.media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "gradient_start_color",
+      "label": "t:settings.gradient_start_color",
+      "default": "#04120D"
+    },
+    {
+      "type": "color",
+      "id": "gradient_end_color",
+      "label": "t:settings.gradient_end_color",
+      "default": "#0F3D2E"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "t:settings.accent_color",
+      "default": "#35E1B8"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "t:settings.card_title_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "subdued_text_color",
+      "label": "t:settings.text_color",
+      "default": "#A9C4BC"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "t:settings.background_color",
+      "alpha": true,
+      "default": "#FFFFFF0D"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "t:settings.width",
+      "min": 960,
+      "max": 1800,
+      "step": 20,
+      "unit": "px",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "t:settings.gap",
+      "min": 24,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "card_corner_radius",
+      "label": "t:settings.card_corner_radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.product_feature_showcase",
+      "category": "t:categories.product",
+      "blocks": {
+        "feature-list": {
+          "type": "_product-feature-list",
+          "static": true,
+          "blocks": {
+            "item_1": {
+              "type": "_product-feature-item",
+              "settings": {
+                "icon": "leaf",
+                "title": "No chemicals, no coatings",
+                "text": "Cook without worry — there's no coating to break down or leach harmful substances into your food."
+              }
+            },
+            "item_2": {
+              "type": "_product-feature-item",
+              "settings": {
+                "icon": "star",
+                "title": "Strong and long-lasting",
+                "text": "Made from high-quality stainless steel, built to withstand daily use and last for years."
+              }
+            },
+            "item_3": {
+              "type": "_product-feature-item",
+              "settings": {
+                "icon": "heart",
+                "title": "Healthier cooking",
+                "text": "A natural surface that won't react with food or alter its flavor."
+              }
+            },
+            "item_4": {
+              "type": "_product-feature-item",
+              "settings": {
+                "icon": "fire",
+                "title": "Even heat distribution",
+                "text": "An encapsulated base that ensures even cooking and perfect results every time."
+              }
+            }
+          },
+          "block_order": ["item_1", "item_2", "item_3", "item_4"]
+        },
+        "feature-annotations": {
+          "type": "_product-feature-annotations",
+          "static": true,
+          "blocks": {
+            "annotation_1": {
+              "type": "_product-feature-annotation",
+              "settings": {
+                "icon": "check_box",
+                "title": "High-quality stainless steel",
+                "text": "Won't rust, won't corrode, and is extremely durable.",
+                "label_position": "top_left",
+                "label_x": 4,
+                "label_y": 8,
+                "dot_x": 34,
+                "dot_y": 32
+              }
+            },
+            "annotation_2": {
+              "type": "_product-feature-annotation",
+              "settings": {
+                "icon": "lock",
+                "title": "Ergonomic handle",
+                "text": "Designed for a comfortable, secure grip.",
+                "label_position": "top_right",
+                "label_x": 96,
+                "label_y": 8,
+                "dot_x": 76,
+                "dot_y": 24
+              }
+            },
+            "annotation_3": {
+              "type": "_product-feature-annotation",
+              "settings": {
+                "icon": "fire",
+                "title": "Triple-layer encapsulated base",
+                "text": "Distributes heat evenly for perfect cooking results.",
+                "label_position": "bottom_left",
+                "label_x": 4,
+                "label_y": 92,
+                "dot_x": 40,
+                "dot_y": 76
+              }
+            },
+            "annotation_4": {
+              "type": "_product-feature-annotation",
+              "settings": {
+                "icon": "lightning_bolt",
+                "title": "Works on every cooktop",
+                "text": "Compatible with induction, gas, electric, ceramic, and halogen stovetops.",
+                "label_position": "bottom_right",
+                "label_x": 96,
+                "label_y": 92,
+                "dot_x": 66,
+                "dot_y": 66
+              }
+            }
+          },
+          "block_order": ["annotation_1", "annotation_2", "annotation_3", "annotation_4"]
+        }
+      }
+    }
+  ]
+}
+{% endschema %}
