@@ -771,6 +771,7 @@
         "heading_font_size_mobile": 24,
         "subheading": "<p>Our stainless steel pan is designed for exceptional performance and healthier cooking, day after day.</p>",
         "highlighted_text_color": "#bca588",
+        "image": "{{ product.metafields.custom.image_section.value }}",
         "background_color": "#121212",
         "text_color": "#b0b0b0",
         "card_title_color": "#ffffff",
