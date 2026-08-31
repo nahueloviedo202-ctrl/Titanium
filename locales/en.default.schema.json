@@ -33,6 +33,7 @@
     "text": "Text"
   },
   "content": {
+    "material_source": "Material",
     "visible_if_collection_has_more_products": "Visible if collection has more products than shown",
     "collection": "Collection",
     "category_nav_metafield_help": "The description can pull automatically from the collection's `custom.menu_description` metafield. [Manage metafields](/admin/settings/custom_data/collection/metafields)",
@@ -96,8 +97,6 @@
     "images": "Images",
     "input": "Input",
     "inverse_logo_info": "Used when transparent header background is set to Inverse",
-    "label_position": "Label position",
-    "point_position": "Point position",
     "layout": "Layout",
     "link": "Link",
     "links": "Links",
@@ -268,6 +267,8 @@
     "trust_band_tiles_heading": "<p>Trusted By <strong>500,000+</strong> Kitchens Worldwide</p>"
   },
   "info": {
+    "product_material_metafield": "Cards are picked automatically from the product `custom.material_comparision` metafield. [Manage metafields](/admin/settings/custom_data/product/metafields)",
+    "material_metafield_values": "Comma-separated metafield values that should also show this group, for example: skillet, frying pan",
     "actions_display_style": "Icons are always used on mobile",
     "applies_on_image_only": "Applies to images only",
     "aspect_ratio_adjusted": "Adjusted in some layouts",
@@ -307,6 +308,8 @@
     "collection_banner_fallback": "Used when the collection has no `custom.collection_banner` metafield image"
   },
   "names": {
+    "product_materials_comparison": "Materials comparison (product)",
+    "product_material_group": "Material group",
     "column": "Column",
     "product_title": "Product title",
     "custom_liquid": "Custom Liquid",
@@ -458,8 +461,6 @@
     "product_feature_showcase": "Product feature showcase",
     "product_feature_list": "Feature list",
     "product_feature_item": "Feature item",
-    "product_feature_annotations": "Feature annotations",
-    "product_feature_annotation": "Feature annotation",
     "product_image": "Product image",
     "product_information": "Product information",
     "product_list": "Featured collection",
@@ -530,6 +531,10 @@
     "comparison_slider": "Comparison slider"
   },
   "options": {
+    "pans": "Pans",
+    "cutting_boards": "Cutting boards",
+    "utensils": "Utensils",
+    "water_bottles": "Water bottles",
     "above_carousel": "Above carousel",
     "accent": "Accent",
     "all": "All",
@@ -843,6 +848,9 @@
     "below_media": "Below media"
   },
   "settings": {
+    "fallback_material": "Fallback material",
+    "material_type": "Material",
+    "material_metafield_values": "Extra metafield values",
     "accordion": "Accordion",
     "account": "Account",
     "accent_color": "Accent color",
@@ -870,8 +878,6 @@
     "autoplay": "Autoplay",
     "background": "Background",
     "background_color": "Background color",
-    "gradient_start_color": "Gradient start color",
-    "gradient_end_color": "Gradient end color",
     "background_overlay": "Background overlay",
     "badge_corner_radius": "Corner radius",
     "background_media": "Background media",
@@ -1421,8 +1427,6 @@
     "ti_benefit_card_text": "Describe this titanium benefit in a sentence or two.",
     "product_feature_item_title": "Feature title",
     "product_feature_item_text": "Describe this product feature in a sentence or two.",
-    "product_feature_annotation_title": "Annotation title",
-    "product_feature_annotation_text": "Describe this product detail in a sentence or two.",
     "health_feature_text": "Feature name",
     "health_features_heading": "The Kitchenware Your Body Deserves",
     "heading": "Heading",

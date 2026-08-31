@@ -177,6 +177,7 @@
     }
   },
   "content": {
+    "product_materials_no_match": "No material group matches this product's custom.material_comparision metafield. Set the metafield, or choose a fallback material in the section settings.",
     "cancel": "Cancel",
     "discount": "Discount",
     "account_title": "Account",

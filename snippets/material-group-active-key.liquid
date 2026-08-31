@@ -1,0 +1,66 @@
+{%- doc -%}
+  Resolves which material group of a product materials comparison section should
+  render, by matching the product's `custom.material_comparision` metafield
+  against each group's material key (and any extra metafield values it accepts).
+
+  Outputs the matching group's `material_key`, or the fallback key when nothing
+  matches. Capture the render to use the result.
+
+  @param {object[]} groups - The section blocks holding each material group.
+  @param {object} [target_product] - The product whose metafield decides the group.
+  @param {string} [fallback] - Material key used when the metafield matches nothing.
+
+  @example
+  {% capture active_material %}
+    {% render 'material-group-active-key', groups: section.blocks, target_product: product, fallback: section.settings.fallback_material %}
+  {% endcapture %}
+{%- enddoc -%}
+
+{%- liquid
+  assign metafield = target_product.metafields.custom.material_comparision
+
+  capture raw_value
+    echo metafield.value
+    echo ' '
+    echo metafield.value.handle
+    echo ' '
+    echo metafield.value.title
+  endcapture
+
+  assign needle = raw_value | downcase | replace: ' ', '' | replace: '-', '' | replace: '_', ''
+  assign active = ''
+
+  if needle != blank
+    for group in groups
+      assign key = group.settings.material_key
+
+      if key == blank
+        continue
+      endif
+
+      assign candidates = key
+      if group.settings.metafield_values != blank
+        assign candidates = candidates | append: ',' | append: group.settings.metafield_values
+      endif
+      assign candidates = candidates | split: ','
+
+      for candidate in candidates
+        assign token = candidate | downcase | replace: ' ', '' | replace: '-', '' | replace: '_', '' | strip
+        if token != blank and needle contains token
+          assign active = key
+          break
+        endif
+      endfor
+
+      if active != blank
+        break
+      endif
+    endfor
+  endif
+
+  if active == blank and fallback != 'none'
+    assign active = fallback
+  endif
+
+  echo active
+-%}

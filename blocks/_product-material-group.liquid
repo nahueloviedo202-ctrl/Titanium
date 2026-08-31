@@ -1,0 +1,90 @@
+
+
+{%- liquid
+  assign show_arrows = true
+  if section.settings.icons_style == 'none'
+    assign show_arrows = false
+  endif
+-%}
+
+{%- capture active_material -%}
+  {%- render 'material-group-active-key',
+    groups: section.blocks,
+    target_product: product,
+    fallback: section.settings.fallback_material
+  -%}
+{%- endcapture -%}
+{%- assign active_material = active_material | strip -%}
+
+{%- if active_material == block.settings.material_key and block.blocks.size > 0 -%}
+  {% capture cards %}
+    {% content_for 'blocks' %}
+  {% endcapture %}
+
+  <div
+    class="product-materials__group"
+    data-material-key="{{ block.settings.material_key | escape }}"
+    {{ block.shopify_attributes }}
+  >
+    {% render 'slideshow',
+      class: 'product-materials__slideshow',
+      slides: cards,
+      show_arrows: show_arrows,
+      icon_style: section.settings.icons_style,
+      icon_shape: section.settings.icons_shape,
+      infinite: false,
+      slide_count: block.blocks.size,
+      style: '--slideshow-gap: var(--materials-comparison-gap);'
+    %}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:names.product_material_group",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_material-card"
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "material_key",
+      "label": "t:settings.material_type",
+      "options": [
+        {
+          "value": "pans",
+          "label": "t:options.pans"
+        },
+        {
+          "value": "cutting_boards",
+          "label": "t:options.cutting_boards"
+        },
+        {
+          "value": "utensils",
+          "label": "t:options.utensils"
+        },
+        {
+          "value": "water_bottles",
+          "label": "t:options.water_bottles"
+        }
+      ],
+      "default": "pans"
+    },
+    {
+      "type": "text",
+      "id": "metafield_values",
+      "label": "t:settings.material_metafield_values",
+      "info": "t:info.material_metafield_values"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.product_material_group",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}

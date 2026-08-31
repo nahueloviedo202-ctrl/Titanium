@@ -1,0 +1,751 @@
+
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id, skip_contrast: true
+  endif
+%}
+
+{%- capture active_material -%}
+  {%- render 'material-group-active-key',
+    groups: section.blocks,
+    target_product: product,
+    fallback: section.settings.fallback_material
+  -%}
+{%- endcapture -%}
+{%- assign active_material = active_material | strip -%}
+
+<section
+  id="ProductMaterials-{{ section.id }}"
+  class="product-materials{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  role="region"
+  aria-label="{{ 'accessibility.materials_comparison_region' | t }}"
+>
+  <div
+    class="product-materials__inner"
+    style="
+      max-width: {{ section.settings.content_max_width }}px;
+      --product-materials-padding-block-start: {{ section.settings.padding_block_start }}px;
+      --product-materials-padding-block-end: {{ section.settings.padding_block_end }}px;
+      --product-materials-padding-inline-start: {{ section.settings.padding_inline_start }}px;
+      --product-materials-padding-inline-end: {{ section.settings.padding_inline_end }}px;
+      --product-materials-padding-block-start-mobile: {{ section.settings.padding_block_start_mobile }}px;
+      --product-materials-padding-block-end-mobile: {{ section.settings.padding_block_end_mobile }}px;
+      --product-materials-padding-inline-start-mobile: {{ section.settings.padding_inline_start_mobile }}px;
+      --product-materials-padding-inline-end-mobile: {{ section.settings.padding_inline_end_mobile }}px;
+    "
+  >
+    {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+      <header class="product-materials__header">
+        {%- if section.settings.heading != blank -%}
+          <h2
+            class="product-materials__heading"
+            style="
+              color: {{ section.settings.heading_color }};
+              --product-materials-heading-size: {{ section.settings.heading_font_size }}px;
+              --product-materials-heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+            "
+          >
+            {{ section.settings.heading }}
+          </h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <p
+            class="product-materials__subheading"
+            style="
+              color: {{ section.settings.subheading_color }};
+              --product-materials-subheading-size: {{ section.settings.subheading_font_size }}px;
+              --product-materials-subheading-size-mobile: {{ section.settings.subheading_font_size_mobile }}px;
+            "
+          >
+            {{ section.settings.subheading }}
+          </p>
+        {%- endif -%}
+      </header>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div
+        class="product-materials__groups"
+        style="
+          --materials-comparison-card-border-color: {{ section.settings.card_border_color }};
+          --materials-comparison-card-radius: {{ section.settings.card_corner_radius }}px;
+          --materials-comparison-card-title-color: {{ section.settings.card_title_color }};
+          --materials-comparison-card-text-color: {{ section.settings.card_text_color }};
+          --materials-comparison-badge-bg: {{ section.settings.badge_background_color }};
+          --materials-comparison-badge-color: {{ section.settings.badge_text_color }};
+          --materials-comparison-columns: {{ section.settings.columns }};
+          --materials-comparison-mobile-card-width: {{ section.settings.mobile_card_width }}px;
+          --materials-comparison-gap: {{ section.settings.gap }}px;
+          --product-materials-arrow-bg: {{ section.settings.arrow_background_color }};
+          --product-materials-arrow-color: {{ section.settings.arrow_icon_color }};
+        "
+      >
+        {% content_for 'blocks' %}
+      </div>
+
+      {%- if active_material == blank and request.design_mode -%}
+        <p class="product-materials__notice">
+          {{ 'content.product_materials_no_match' | t }}
+        </p>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .product-materials {
+    position: relative;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .product-materials__inner {
+    margin-inline: auto;
+    padding-block: var(--product-materials-padding-block-start, 0) var(--product-materials-padding-block-end, 0);
+    padding-inline: var(--product-materials-padding-inline-start, 0) var(--product-materials-padding-inline-end, 0);
+  }
+
+  .product-materials__header {
+    margin-block-end: 3rem;
+  }
+
+  .product-materials__heading {
+    margin: 0 0 1rem;
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: var(--line-height--display-loose);
+    letter-spacing: var(--letter-spacing--display-loose);
+    text-transform: capitalize;
+    font-size: var(--product-materials-heading-size, 48px);
+  }
+
+  .product-materials__subheading {
+    margin: 0;
+    max-width: 40rem;
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: var(--letter-spacing--body-loose);
+    font-size: var(--product-materials-subheading-size, 16px);
+  }
+
+  .product-materials__groups {
+    display: block;
+  }
+
+  .product-materials__group {
+    min-width: 0;
+  }
+
+  .product-materials__notice {
+    margin: 0;
+    font-family: var(--font-body--family);
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  .product-materials__slideshow .slideshow-control[disabled] {
+    display: none;
+  }
+
+  .product-materials__slideshow .slideshow-control--shape-circle,
+  .product-materials__slideshow .slideshow-control--shape-square {
+    background-color: var(--product-materials-arrow-bg);
+    color: var(--product-materials-arrow-color);
+  }
+
+  @media screen and (max-width: 749px) {
+    .product-materials__inner {
+      padding-block: var(--product-materials-padding-block-start-mobile, 0) var(--product-materials-padding-block-end-mobile, 0);
+      padding-inline: var(--product-materials-padding-inline-start-mobile, 0) var(--product-materials-padding-inline-end-mobile, 0);
+    }
+
+    .product-materials__heading {
+      font-size: var(--product-materials-heading-size-mobile, 24px);
+    }
+
+    .product-materials__subheading {
+      max-width: 22.4rem;
+      font-size: var(--product-materials-subheading-size-mobile, 14px);
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1799px) {
+    .product-materials__inner {
+      padding-block: calc(var(--product-materials-padding-block-start, 0) * 0.9) calc(var(--product-materials-padding-block-end, 0) * 0.9);
+      padding-inline: calc(var(--product-materials-padding-inline-start, 0) * 0.9) calc(var(--product-materials-padding-inline-end, 0) * 0.9);
+    }
+
+    .product-materials__heading {
+      font-size: calc(var(--product-materials-heading-size, 48px) * 0.9);
+    }
+
+    .product-materials__subheading {
+      font-size: calc(var(--product-materials-subheading-size, 16px) * 0.9);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.product_materials_comparison",
+  "tag": "section",
+  "class": "section-wrapper",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "blocks": [
+    {
+      "type": "_product-material-group"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.material_source"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:info.product_material_metafield"
+    },
+    {
+      "type": "select",
+      "id": "fallback_material",
+      "label": "t:settings.fallback_material",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "pans",
+          "label": "t:options.pans"
+        },
+        {
+          "value": "cutting_boards",
+          "label": "t:options.cutting_boards"
+        },
+        {
+          "value": "utensils",
+          "label": "t:options.utensils"
+        },
+        {
+          "value": "water_bottles",
+          "label": "t:options.water_bottles"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "header",
+      "content": "t:content.heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "t:text_defaults.materials_comparison_heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color",
+      "default": "#BCA588"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:settings.heading_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "t:settings.subheading",
+      "default": "t:text_defaults.materials_comparison_subheading"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size",
+      "label": "t:settings.size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "t:settings.border_color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "card_corner_radius",
+      "label": "t:settings.border_radius",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "t:settings.card_title_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "t:settings.text_color",
+      "default": "#B0B0B0"
+    },
+    {
+      "type": "color",
+      "id": "badge_background_color",
+      "label": "t:settings.background_color",
+      "default": "#C20C25"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "t:settings.text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:content.carousel_navigation"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:settings.items_to_show",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_width",
+      "label": "t:settings.mobile_card_width",
+      "min": 160,
+      "max": 320,
+      "step": 10,
+      "unit": "px",
+      "default": 240
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "icons_style",
+      "label": "t:settings.icon",
+      "options": [
+        {
+          "value": "arrow",
+          "label": "t:options.arrows"
+        },
+        {
+          "value": "chevron",
+          "label": "t:options.chevrons"
+        },
+        {
+          "value": "arrows_large",
+          "label": "t:options.arrows_large"
+        },
+        {
+          "value": "chevron_large",
+          "label": "t:options.chevron_large"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "icons_shape",
+      "label": "t:settings.icon_background",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "circle",
+          "label": "t:options.circle"
+        },
+        {
+          "value": "square",
+          "label": "t:options.square"
+        }
+      ],
+      "default": "circle",
+      "visible_if": "{{ section.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_background_color",
+      "label": "t:settings.arrow_background_color",
+      "default": "#A3835F",
+      "visible_if": "{{ section.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_icon_color",
+      "label": "t:settings.arrow_icon_color",
+      "default": "#121212",
+      "visible_if": "{{ section.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "t:settings.width",
+      "min": 1200,
+      "max": 2400,
+      "step": 20,
+      "unit": "px",
+      "default": 1920
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start_mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end_mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start_mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end_mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.product_materials_comparison",
+      "category": "t:categories.product",
+      "blocks": {
+        "grp_pans": {
+          "type": "_product-material-group",
+          "settings": {
+            "material_key": "pans"
+          },
+          "blocks": {
+            "pans_1": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "FOREVER CHEMICALS",
+                "title": "Non-Stick Coated / Teflon",
+                "text": "Worst type of pan surface there is. Teflon / majority of non-stick pans release toxic PFAS chemicals, known as \"forever chemicals\" which have been linked to cancer and liver damage. The coating easily shaves off over time and can't handle the heat exposing your food to toxins."
+              }
+            },
+            "pans_2": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Stainless Steel",
+                "text": "Requires lots of oil to prevent sticking, and reacts with acidic foods - altering taste and potentially leaching metals in lower-quality pans. Tougher to clean, high effort to maintain."
+              }
+            },
+            "pans_3": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "ALUMINUM BASE",
+                "title": "Ceramic",
+                "text": "Ceramic coatings are very fragile, once chipped, they expose toxic aluminum base. Most only last 1-2 years before losing their non-stick. Expensive to replace, unreliable long-term."
+              }
+            },
+            "pans_4": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Cast Iron",
+                "text": "Incredibly heavy and high-maintenance - cast iron rusts easily without regular seasoning and struggles with acidic foods, which can degrade the surface and alter flavor."
+              }
+            },
+            "pans_5": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Carbon Steel",
+                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
+              }
+            }
+          },
+          "block_order": ["pans_1", "pans_2", "pans_3", "pans_4", "pans_5"]
+        },
+        "grp_cutting_boards": {
+          "type": "_product-material-group",
+          "settings": {
+            "material_key": "cutting_boards"
+          },
+          "blocks": {
+            "cb_1": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "MICROPLASTICS",
+                "title": "Plastic",
+                "text": "Contains BPA's or other harmful chemicals that shave off into food during cutting, posing a risk to hormone, gut & brain health."
+              }
+            },
+            "cb_2": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | MOLD",
+                "title": "Solid Wood",
+                "text": "Not hygienic. Wood is porous, it absorbs raw food juices & moisture. Cut grooves trap bacteria, making it nearly impossible to sterilize. Mold and contamination are almost guaranteed over time. They also absorb odors, stain easily."
+              }
+            },
+            "cb_3": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "FORMALDEHYDE",
+                "title": "Bamboo & End-Grain",
+                "text": "Same risks as solid wood, plus they're pieced together from small blocks using industrial glue that contains carcinogenic formaldehyde chemicals. Not just unhygienic - unsafe."
+              }
+            },
+            "cb_4": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "INCONVENIENT",
+                "title": "Glass / Stone / Steel",
+                "text": "These materials are very hard & dull knives quickly. Very heavy as well."
+              }
+            }
+          },
+          "block_order": ["cb_1", "cb_2", "cb_3", "cb_4"]
+        },
+        "grp_utensils": {
+          "type": "_product-material-group",
+          "settings": {
+            "material_key": "utensils"
+          },
+          "blocks": {
+            "ut_1": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Plastic",
+                "text": "Plastic spatulas have a very low melting temperature, releasing toxic chemicals each time they're used, causing serious health risks like gut, hormone disruption & cancer."
+              }
+            },
+            "ut_2": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Silicone",
+                "text": "While high-end silicone spatulas are heat-resistant, most found on Amazon or in regular stores degrade over time and release toxic chemicals. Cheaper silicone spatulas often contain dangerous fillers like BPA and phthalates, becoming toxic when heated."
+              }
+            },
+            "ut_3": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | MOLD",
+                "title": "Wood",
+                "text": "Not hygienic. It lets bacteria grow in grooves and cracks, even if invisible, which can contaminate your food over time. They also absorb odors, stain easily."
+              }
+            },
+            "ut_4": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Steel",
+                "text": "Most are made from low-grade alloys that release heavy metals like chromium and nickel into your food when heated. They're also heavy, destroying your cookware's surface."
+              }
+            },
+            "ut_5": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "RUST | HEAVY METALS",
+                "title": "Carbon Steel",
+                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
+              }
+            }
+          },
+          "block_order": ["ut_1", "ut_2", "ut_3", "ut_4", "ut_5"]
+        },
+        "grp_water_bottles": {
+          "type": "_product-material-group",
+          "settings": {
+            "material_key": "water_bottles"
+          },
+          "blocks": {
+            "wb_1": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BPA | PHTHALATES",
+                "title": "Plastic",
+                "text": "Worst type of water bottle. Even BPA-free plastic bottles leach hormone-disrupting chemicals, especially when exposed to heat. The moist environment around the mouthpiece quickly breeds bacteria and mold."
+              }
+            },
+            "wb_2": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "HEAVY METALS",
+                "title": "Steel",
+                "text": "Though durable, stainless steel isn't antibacterial like titanium, allowing bacteria from your mouth to thrive inside. Frequent cleaning is essential, as studies show 87% of these bottles contain harmful bacteria like E. coli."
+              }
+            },
+            "wb_3": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "CHEMICALS",
+                "title": "Aluminum",
+                "text": "Aluminum bottles are often lined with synthetic coatings to prevent the metal from reacting with liquids, but these coatings can break down and leach chemicals into your water. Like other bottles, bacteria and fungi easily grow in aluminum bottles, making them unsanitary."
+              }
+            },
+            "wb_4": {
+              "type": "_material-card",
+              "settings": {
+                "badge_text": "BACTERIA | FRAGILE",
+                "title": "Glass",
+                "text": "While glass doesn't leach chemicals, it offers no antibacterial protection. Bacteria from your mouth still multiply in the bottle. Additionally, glass is fragile, making it more prone to breakage and less practical for daily use."
+              }
+            }
+          },
+          "block_order": ["wb_1", "wb_2", "wb_3", "wb_4"]
+        }
+      },
+      "block_order": ["grp_pans", "grp_cutting_boards", "grp_utensils", "grp_water_bottles"]
+    }
+  ]
+}
+{% endschema %}
