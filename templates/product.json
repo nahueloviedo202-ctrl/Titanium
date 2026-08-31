@@ -522,6 +522,64 @@
         "padding_inline_end_mobile": 16
       }
     },
+    "benefits_marquee_Xr8Fqm": {
+      "type": "benefits-marquee",
+      "blocks": {
+        "benefit_chip_Hn4Ztq": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Anti Bacterial",
+            "text_color": "#e8e8e1"
+          },
+          "blocks": {}
+        },
+        "benefit_chip_Pm9Rvc": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Certified",
+            "text_color": "#e8e8e1"
+          },
+          "blocks": {}
+        },
+        "benefit_chip_Ws3Kbn": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Non PFAS",
+            "text_color": "#e8e8e1"
+          },
+          "blocks": {}
+        },
+        "benefit_chip_Ye6Ldp": {
+          "type": "_benefit-chip",
+          "settings": {
+            "label": "Money Back Promise",
+            "text_color": "#e8e8e1"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_chip_Hn4Ztq",
+        "benefit_chip_Pm9Rvc",
+        "benefit_chip_Ws3Kbn",
+        "benefit_chip_Ye6Ldp"
+      ],
+      "name": "t:names.benefits_marquee",
+      "settings": {
+        "autoplay": true,
+        "direction": "normal",
+        "speed": 20,
+        "gap": 40,
+        "icon_height": 24,
+        "text_size": 18,
+        "background_color": "#108474",
+        "text_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 32,
+        "padding-block-end": 32,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
+    },
     "scroll_text_fade_DigM7x": {
       "type": "scroll-text-fade",
       "blocks": {
@@ -648,64 +706,6 @@
         "padding_block_end_mobile": 32,
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
-      }
-    },
-    "benefits_marquee_Xr8Fqm": {
-      "type": "benefits-marquee",
-      "blocks": {
-        "benefit_chip_Hn4Ztq": {
-          "type": "_benefit-chip",
-          "settings": {
-            "label": "Anti Bacterial",
-            "text_color": "#e8e8e1"
-          },
-          "blocks": {}
-        },
-        "benefit_chip_Pm9Rvc": {
-          "type": "_benefit-chip",
-          "settings": {
-            "label": "Certified",
-            "text_color": "#e8e8e1"
-          },
-          "blocks": {}
-        },
-        "benefit_chip_Ws3Kbn": {
-          "type": "_benefit-chip",
-          "settings": {
-            "label": "Non PFAS",
-            "text_color": "#e8e8e1"
-          },
-          "blocks": {}
-        },
-        "benefit_chip_Ye6Ldp": {
-          "type": "_benefit-chip",
-          "settings": {
-            "label": "Money Back Promise",
-            "text_color": "#e8e8e1"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "benefit_chip_Hn4Ztq",
-        "benefit_chip_Pm9Rvc",
-        "benefit_chip_Ws3Kbn",
-        "benefit_chip_Ye6Ldp"
-      ],
-      "name": "t:names.benefits_marquee",
-      "settings": {
-        "autoplay": true,
-        "direction": "normal",
-        "speed": 20,
-        "gap": 40,
-        "icon_height": 24,
-        "text_size": 18,
-        "background_color": "#108474",
-        "text_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 32,
-        "padding-block-end": 32,
-        "padding-inline-start": 0,
-        "padding-inline-end": 0
       }
     },
     "product_feature_showcase_tqM8Ft": {
@@ -1366,8 +1366,8 @@
     "main",
     "pagefly-product-section",
     "reviews_hero_slider_CQ8hX6",
-    "scroll_text_fade_DigM7x",
     "benefits_marquee_Xr8Fqm",
+    "scroll_text_fade_DigM7x",
     "product_feature_showcase_tqM8Ft",
     "materials_comparison_zptje3",
     "section_RCeHcG"
