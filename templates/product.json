@@ -12,54 +12,6 @@
     "main": {
       "type": "product-information",
       "blocks": {
-        "trust_badges_93Wt3G": {
-          "type": "trust-badges",
-          "name": "t:names.trust_badges",
-          "settings": {
-            "alignment": "left",
-            "gap": 16,
-            "icon_size": 16,
-            "show_separator": true,
-            "text_color": "",
-            "icon_color": "",
-            "separator_color": "",
-            "padding-block-start": 0,
-            "padding-block-end": 16,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "trust_badge_item_m7jJVL": {
-              "type": "_trust-badge-item",
-              "settings": {
-                "icon": "truck",
-                "label": "Free Shipping"
-              },
-              "blocks": {}
-            },
-            "trust_badge_item_MyGNtF": {
-              "type": "_trust-badge-item",
-              "settings": {
-                "icon": "return",
-                "label": "30-Day Returns"
-              },
-              "blocks": {}
-            },
-            "trust_badge_item_zTWwHq": {
-              "type": "_trust-badge-item",
-              "settings": {
-                "icon": "lock",
-                "label": "Lifetime Warranty"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "trust_badge_item_m7jJVL",
-            "trust_badge_item_MyGNtF",
-            "trust_badge_item_zTWwHq"
-          ]
-        },
         "disclosures_g9mWze": {
           "type": "disclosures",
           "name": "t:names.disclosures",
@@ -360,18 +312,66 @@
                 }
               },
               "block_order": []
+            },
+            "trust_badges_fwTtfp": {
+              "type": "trust-badges",
+              "name": "t:names.trust_badges",
+              "settings": {
+                "alignment": "left",
+                "gap": 10,
+                "icon_size": 16,
+                "show_separator": true,
+                "text_color": "",
+                "icon_color": "",
+                "separator_color": "",
+                "padding-block-start": 0,
+                "padding-block-end": 16,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "trust_badge_item_m7jJVL": {
+                  "type": "_trust-badge-item",
+                  "settings": {
+                    "icon": "truck",
+                    "label": "Free Shipping"
+                  },
+                  "blocks": {}
+                },
+                "trust_badge_item_MyGNtF": {
+                  "type": "_trust-badge-item",
+                  "settings": {
+                    "icon": "return",
+                    "label": "30-Day Returns"
+                  },
+                  "blocks": {}
+                },
+                "trust_badge_item_zTWwHq": {
+                  "type": "_trust-badge-item",
+                  "settings": {
+                    "icon": "lock",
+                    "label": "Lifetime Warranty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "trust_badge_item_m7jJVL",
+                "trust_badge_item_MyGNtF",
+                "trust_badge_item_zTWwHq"
+              ]
             }
           },
           "block_order": [
             "group_icgrde",
             "text_aEtTtq",
             "variant_picker_R3rGDr",
-            "buy_buttons_eYQEYi"
+            "buy_buttons_eYQEYi",
+            "trust_badges_fwTtfp"
           ]
         }
       },
       "block_order": [
-        "trust_badges_93Wt3G",
         "disclosures_g9mWze"
       ],
       "settings": {
