@@ -319,7 +319,7 @@
               "settings": {
                 "alignment": "left",
                 "gap": 10,
-                "icon_size": 16,
+                "icon_size": 14,
                 "show_separator": true,
                 "text_color": "",
                 "icon_color": "",
