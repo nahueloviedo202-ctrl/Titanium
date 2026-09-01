@@ -68,7 +68,7 @@
               {{ image | image_url: width: 846 }} 2x
             "
             width="423"
-            height="247"
+            height="423"
             alt="{{ image.alt | default: section.settings.heading | strip_html | escape }}"
             loading="lazy"
           >
@@ -154,7 +154,7 @@
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 423 / 247;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: var(--pfs-card-radius, 12px);
   }
