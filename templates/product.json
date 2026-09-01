@@ -175,6 +175,23 @@
                 "padding-inline-end": 0
               },
               "blocks": {
+                "badge_DCBTxA": {
+                  "type": "badge",
+                  "name": "Badge",
+                  "settings": {
+                    "text": "Completely Toxin-Free, Built to Last a Lifetime.",
+                    "alignment": "left",
+                    "font_size": 11,
+                    "background_color": "#171717",
+                    "text_color": "#FFFFFF",
+                    "border_color": "#FFFFFF33",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "judge_me_reviews_preview_badge_BKi4fz": {
                   "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
                   "settings": {}
@@ -230,6 +247,7 @@
                 }
               },
               "block_order": [
+                "badge_DCBTxA",
                 "judge_me_reviews_preview_badge_BKi4fz",
                 "text_xrnftG",
                 "price_tVjtKg"
