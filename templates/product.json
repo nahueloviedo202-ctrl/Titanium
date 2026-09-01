@@ -801,6 +801,7 @@
             "material_card_AwkVmw": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/non_stick-min_374f3d34-196a-4768-a3e3-47e6f117a97b.jpg",
                 "badge_text": "FOREVER CHEMICALS",
                 "title": "Non-Stick Coated / Teflon",
                 "text": "Worst type of pan surface there is. Teflon / majority of non-stick pans release toxic PFAS chemicals, known as \"forever chemicals\" which have been linked to cancer and liver damage. The coating easily shaves off over time and can't handle the heat exposing your food to toxins."
@@ -810,6 +811,7 @@
             "material_card_xf68JK": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/steel-min_ffa0915f-a72e-44ed-84d6-12d76921a216.webp",
                 "badge_text": "HEAVY METALS",
                 "title": "Stainless Steel",
                 "text": "Requires lots of oil to prevent sticking, and reacts with acidic foods - altering taste and potentially leaching metals in lower-quality pans. Tougher to clean, high effort to maintain."
@@ -819,6 +821,7 @@
             "material_card_FtXWBR": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/ceramic-min_c6855de1-b4bc-4ad4-8545-880b3ec41164.webp",
                 "badge_text": "ALUMINUM BASE",
                 "title": "Ceramic",
                 "text": "Ceramic coatings are very fragile, once chipped, they expose toxic aluminum base. Most only last 1-2 years before losing their non-stick. Expensive to replace, unreliable long-term."
@@ -828,18 +831,10 @@
             "material_card_WghT83": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/cast_iron-min_ccb7b927-75cd-4303-89d7-fe8a2dde8ff3.webp",
                 "badge_text": "RUST | HEAVY METALS",
                 "title": "Cast Iron",
                 "text": "Incredibly heavy and high-maintenance - cast iron rusts easily without regular seasoning and struggles with acidic foods, which can degrade the surface and alter flavor."
-              },
-              "blocks": {}
-            },
-            "material_card_KC3qLp": {
-              "type": "_material-card",
-              "settings": {
-                "badge_text": "RUST | HEAVY METALS",
-                "title": "Carbon Steel",
-                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
               },
               "blocks": {}
             }
@@ -848,8 +843,7 @@
             "material_card_AwkVmw",
             "material_card_xf68JK",
             "material_card_FtXWBR",
-            "material_card_WghT83",
-            "material_card_KC3qLp"
+            "material_card_WghT83"
           ]
         },
         "product_material_group_6hGMHL": {
@@ -862,6 +856,7 @@
             "material_card_GpFgwq": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/plastic-min.webp",
                 "badge_text": "MICROPLASTICS",
                 "title": "Plastic",
                 "text": "Contains BPA's or other harmful chemicals that shave off into food during cutting, posing a risk to hormone, gut & brain health."
@@ -871,6 +866,7 @@
             "material_card_xe7fEe": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/bamboo-min_9053d49f-31da-4716-af16-266b7ee79bd5.webp",
                 "badge_text": "BACTERIA | MOLD",
                 "title": "Solid Wood",
                 "text": "Not hygienic. Wood is porous, it absorbs raw food juices & moisture. Cut grooves trap bacteria, making it nearly impossible to sterilize. Mold and contamination are almost guaranteed over time. They also absorb odors, stain easily."
@@ -880,6 +876,7 @@
             "material_card_4btYMU": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/wood-min_c8f7d3ec-f847-4104-9887-52404e5ca6df.webp",
                 "badge_text": "FORMALDEHYDE",
                 "title": "Bamboo & End-Grain",
                 "text": "Same risks as solid wood, plus they're pieced together from small blocks using industrial glue that contains carcinogenic formaldehyde chemicals. Not just unhygienic - unsafe."
@@ -889,6 +886,7 @@
             "material_card_g7jHeL": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/steel_glass-min.webp",
                 "badge_text": "INCONVENIENT",
                 "title": "Glass / Stone / Steel",
                 "text": "These materials are very hard & dull knives quickly. Very heavy as well."
