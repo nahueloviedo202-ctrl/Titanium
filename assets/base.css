@@ -1364,8 +1364,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) .volume-pricing-note {
   padding: 0.25em 0.8em;
   background-color: var(--ctm-price-save-bg);
   color: #fff;
-  font-family: var(--font-body--family);
-  font-size: var(--font-size--xs);
+  font-size: inherit;
   font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.4;
