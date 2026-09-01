@@ -966,6 +966,7 @@
             "material_card_cfMHjK": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/plastric_bottle-min.webp",
                 "badge_text": "BPA | PHTHALATES",
                 "title": "Plastic",
                 "text": "Worst type of water bottle. Even BPA-free plastic bottles leach hormone-disrupting chemicals, especially when exposed to heat. The moist environment around the mouthpiece quickly breeds bacteria and mold."
@@ -975,6 +976,7 @@
             "material_card_nCEbKE": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/steel_bottle-min.webp",
                 "badge_text": "HEAVY METALS",
                 "title": "Steel",
                 "text": "Though durable, stainless steel isn't antibacterial like titanium, allowing bacteria from your mouth to thrive inside. Frequent cleaning is essential, as studies show 87% of these bottles contain harmful bacteria like E. coli."
@@ -984,6 +986,7 @@
             "material_card_W9AWrh": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/aluminum_bottle-min.webp",
                 "badge_text": "CHEMICALS",
                 "title": "Aluminum",
                 "text": "Aluminum bottles are often lined with synthetic coatings to prevent the metal from reacting with liquids, but these coatings can break down and leach chemicals into your water. Like other bottles, bacteria and fungi easily grow in aluminum bottles, making them unsanitary."
@@ -993,6 +996,7 @@
             "material_card_7AYxjP": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/glass_bottle-min.webp",
                 "badge_text": "BACTERIA | FRAGILE",
                 "title": "Glass",
                 "text": "While glass doesn't leach chemicals, it offers no antibacterial protection. Bacteria from your mouth still multiply in the bottle. Additionally, glass is fragile, making it more prone to breakage and less practical for daily use."
