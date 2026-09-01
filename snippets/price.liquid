@@ -5,11 +5,13 @@
   @param {product} product_resource - The product to render
   @param {boolean} [show_unit_price] - Whether to show the unit price
   @param {boolean} [show_sale_price_first] - Whether to show the sale price first
+  @param {boolean} [show_savings_badge] - Whether to show a dynamically calculated "Save $X" badge
 {%- enddoc -%}
 
 {%- liquid
   assign show_unit_price = show_unit_price | default: false
   assign show_sale_price_first = show_sale_price_first | default: false
+  assign show_savings_badge = show_savings_badge | default: false
   assign selected_variant = product_resource.selected_or_first_available_variant
   assign price = selected_variant.price
   assign compare_at_price = selected_variant.compare_at_price
@@ -17,6 +19,11 @@
   assign show_compare_price = false
   if compare_at_price > price
     assign show_compare_price = true
+  endif
+
+  assign savings_amount = 0
+  if show_compare_price
+    assign savings_amount = compare_at_price | minus: price
   endif
 
   if product_resource == blank
@@ -64,11 +71,13 @@
     assign compare_at_price = compare_at_price | money_with_currency
     assign price_min = price_min | money_with_currency
     assign price_max = price_max | money_with_currency
+    assign savings_amount = savings_amount | money_with_currency
   else
     assign price = price | money
     assign compare_at_price = compare_at_price | money
     assign price_min = price_min | money
     assign price_max = price_max | money
+    assign savings_amount = savings_amount | money
   endif
 -%}
 
@@ -88,6 +97,9 @@
   {% else %}
     {% comment %} Standard pricing display: render only the active branch (regular or sale) {% endcomment %}
     {% if show_compare_price %}
+      {% if show_savings_badge %}
+        <div class="ctm-price__row">
+      {% endif %}
       {% if show_sale_price_first %}
         <span class="price-item__group price">
           <span class="visually-hidden">{{ 'content.price_sale' | t }}&nbsp;</span>
@@ -106,6 +118,10 @@
           <span class="visually-hidden">{{ 'content.price_sale' | t }}&nbsp;</span>
           {{ price | default: '&nbsp;' }}
         </span>
+      {% endif %}
+      {% if show_savings_badge %}
+        <span class="ctm-price__save">{{ 'content.price_save_amount' | t: amount: savings_amount }}</span>
+        </div>
       {% endif %}
     {% else %}
       <span class="price">{{ price | default: '&nbsp;' }}</span>

@@ -1,0 +1,213 @@
+
+
+{% liquid
+  assign justify = 'flex-start'
+  if block.settings.alignment == 'center'
+    assign justify = 'center'
+  elsif block.settings.alignment == 'right'
+    assign justify = 'flex-end'
+  endif
+%}
+
+<div
+  class="trust-badges spacing-style"
+  style="
+    {% render 'spacing-padding', settings: block.settings %}
+    --trust-badges-justify: {{ justify }};
+    --trust-badges-gap: {{ block.settings.gap }}px;
+    --trust-badges-icon-size: {{ block.settings.icon_size }}px;
+    {% if block.settings.text_color != blank %}
+      --trust-badges-text-color: {{ block.settings.text_color }};
+    {% endif %}
+    {% if block.settings.icon_color != blank %}
+      --trust-badges-icon-color: {{ block.settings.icon_color }};
+    {% endif %}
+    {% if block.settings.separator_color != blank %}
+      --trust-badges-separator-color: {{ block.settings.separator_color }};
+    {% endif %}
+  "
+  {{ block.shopify_attributes }}
+>
+  <ul
+    class="trust-badges__list{% unless block.settings.show_separator %} trust-badges__list--no-separator{% endunless %}"
+    role="list"
+  >
+    {% content_for 'blocks' %}
+  </ul>
+</div>
+
+{% stylesheet %}
+  .trust-badges {
+    width: 100%;
+    padding-block: var(--padding-block-start, 0) var(--padding-block-end, 0);
+    padding-inline: var(--padding-inline-start, 0) var(--padding-inline-end, 0);
+  }
+
+  .trust-badges__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: var(--trust-badges-justify, flex-start);
+    gap: var(--trust-badges-gap, 16px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.trust_badges",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_trust-badge-item"
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 4,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "t:settings.size",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "show_separator",
+      "label": "t:settings.show_separator",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "t:settings.icon_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "t:settings.separator_color",
+      "placeholder": "t:settings.default",
+      "visible_if": "{{ block.settings.show_separator }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.trust_badges",
+      "category": "t:categories.product",
+      "blocks": {
+        "badge_1": {
+          "type": "_trust-badge-item",
+          "settings": {
+            "icon": "truck",
+            "label": "t:text_defaults.trust_badge_shipping"
+          }
+        },
+        "badge_2": {
+          "type": "_trust-badge-item",
+          "settings": {
+            "icon": "return",
+            "label": "t:text_defaults.trust_badge_returns"
+          }
+        },
+        "badge_3": {
+          "type": "_trust-badge-item",
+          "settings": {
+            "icon": "lock",
+            "label": "t:text_defaults.trust_badge_warranty"
+          }
+        }
+      },
+      "block_order": ["badge_1", "badge_2", "badge_3"]
+    }
+  ]
+}
+{% endschema %}

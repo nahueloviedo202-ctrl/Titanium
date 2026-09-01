@@ -1,0 +1,183 @@
+
+
+{% liquid
+  assign justify = 'flex-start'
+  if block.settings.alignment == 'center'
+    assign justify = 'center'
+  elsif block.settings.alignment == 'right'
+    assign justify = 'flex-end'
+  endif
+%}
+
+<div
+  class="badge-pill-wrapper"
+  style="
+    --badge-pill-justify: {{ justify }};
+    {% render 'spacing-padding', settings: block.settings %}
+  "
+  {{ block.shopify_attributes }}
+>
+  {%- if block.settings.text != blank -%}
+    <span
+      class="badge-pill"
+      style="
+        {% if block.settings.background_color != blank %}--badge-pill-bg: {{ block.settings.background_color }};{% endif %}
+        {% if block.settings.text_color != blank %}--badge-pill-text: {{ block.settings.text_color }};{% endif %}
+        {% if block.settings.border_color != blank %}--badge-pill-border: {{ block.settings.border_color }};{% endif %}
+        --badge-pill-font-size: {{ block.settings.font_size }}px;
+      "
+    >
+      {{ block.settings.text | escape }}
+    </span>
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+  .badge-pill-wrapper {
+    display: flex;
+    justify-content: var(--badge-pill-justify, flex-start);
+    width: 100%;
+    padding-block: var(--padding-block-start, 0) var(--padding-block-end, 0);
+    padding-inline: var(--padding-inline-start, 0) var(--padding-inline-end, 0);
+  }
+
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    padding-block: 0.7rem;
+    padding-inline: 1.6rem;
+    background-color: var(--badge-pill-bg, #171717);
+    border: var(--style-border-width, 1px) solid var(--badge-pill-border, rgb(255 255 255 / 0.18));
+    border-radius: var(--style-border-radius-pills, 999px);
+    color: var(--badge-pill-text, #ffffff);
+    font-family: var(--font-accent--family, inherit);
+    font-size: var(--badge-pill-font-size, 13px);
+    font-weight: var(--font-weight-bold, 700);
+    letter-spacing: var(--letter-spacing-sm, 0.06em);
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Badge",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Badge text",
+      "default": "Completely Toxin-Free, Built to Last a Lifetime."
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "t:settings.size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#171717"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "t:settings.border_color",
+      "alpha": true,
+      "default": "#FFFFFF33"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Badge",
+      "category": "t:categories.text"
+    }
+  ]
+}
+{% endschema %}
