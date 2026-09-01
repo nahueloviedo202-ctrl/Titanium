@@ -927,6 +927,7 @@
         "benefit_chip_Hn4Ztq": {
           "type": "_benefit-chip",
           "settings": {
+            "icon": "shopify://shop_images/pdp-icon-5.svg",
             "label": "Anti Bacterial",
             "text_color": "#e8e8e1"
           },
@@ -935,6 +936,7 @@
         "benefit_chip_Pm9Rvc": {
           "type": "_benefit-chip",
           "settings": {
+            "icon": "shopify://shop_images/pdp-icon-10.svg",
             "label": "Certified",
             "text_color": "#e8e8e1"
           },
@@ -943,6 +945,7 @@
         "benefit_chip_Ws3Kbn": {
           "type": "_benefit-chip",
           "settings": {
+            "icon": "shopify://shop_images/pdp-icon-7.svg",
             "label": "Non PFAS",
             "text_color": "#e8e8e1"
           },
@@ -951,7 +954,8 @@
         "benefit_chip_Ye6Ldp": {
           "type": "_benefit-chip",
           "settings": {
-            "label": "Money Back Promise",
+            "icon": "shopify://shop_images/pdp-icon-8.svg",
+            "label": "Lasts a lifetime",
             "text_color": "#e8e8e1"
           },
           "blocks": {}
