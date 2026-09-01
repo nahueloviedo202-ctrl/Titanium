@@ -205,6 +205,28 @@
                 "price_tVjtKg"
               ]
             },
+            "product_details_care_use_Dj4Nht": {
+              "type": "product-details-care-use",
+              "name": "t:names.product_details_care_use",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "text_aEtTtq": {
               "type": "text",
               "name": "t:names.product_description",
@@ -557,6 +579,7 @@
           },
           "block_order": [
             "group_icgrde",
+            "product_details_care_use_Dj4Nht",
             "text_aEtTtq",
             "variant_picker_R3rGDr",
             "group_wCJ9D3",
