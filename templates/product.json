@@ -253,6 +253,22 @@
               },
               "blocks": {}
             },
+            "pdp_badges_FnWbEB": {
+              "type": "pdp-badges",
+              "name": "t:names.pdp_badges",
+              "settings": {
+                "columns_desktop": 2,
+                "columns_mobile": 2,
+                "column_gap": 8,
+                "row_gap": 8,
+                "icon_size": 24,
+                "icon_gap": 8,
+                "font_size": 16,
+                "font_size_mobile": 14,
+                "text_color": ""
+              },
+              "blocks": {}
+            },
             "variant_picker_R3rGDr": {
               "type": "variant-picker",
               "settings": {
@@ -710,6 +726,7 @@
             "group_icgrde",
             "product_details_care_use_Dj4Nht",
             "text_aEtTtq",
+            "pdp_badges_FnWbEB",
             "variant_picker_R3rGDr",
             "group_wCJ9D3",
             "impact_note_9fQ2mK",
