@@ -12,6 +12,54 @@
     "main": {
       "type": "product-information",
       "blocks": {
+        "trust_badges_93Wt3G": {
+          "type": "trust-badges",
+          "name": "t:names.trust_badges",
+          "settings": {
+            "alignment": "left",
+            "gap": 16,
+            "icon_size": 16,
+            "show_separator": true,
+            "text_color": "",
+            "icon_color": "",
+            "separator_color": "",
+            "padding-block-start": 0,
+            "padding-block-end": 16,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "trust_badge_item_m7jJVL": {
+              "type": "_trust-badge-item",
+              "settings": {
+                "icon": "truck",
+                "label": "Free Shipping"
+              },
+              "blocks": {}
+            },
+            "trust_badge_item_MyGNtF": {
+              "type": "_trust-badge-item",
+              "settings": {
+                "icon": "return",
+                "label": "30-Day Returns"
+              },
+              "blocks": {}
+            },
+            "trust_badge_item_zTWwHq": {
+              "type": "_trust-badge-item",
+              "settings": {
+                "icon": "lock",
+                "label": "Lifetime Warranty"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "trust_badge_item_m7jJVL",
+            "trust_badge_item_MyGNtF",
+            "trust_badge_item_zTWwHq"
+          ]
+        },
         "disclosures_g9mWze": {
           "type": "disclosures",
           "name": "t:names.disclosures",
@@ -187,6 +235,32 @@
                 "price_tVjtKg"
               ]
             },
+            "text_aEtTtq": {
+              "type": "text",
+              "name": "t:names.product_description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "variant_picker_R3rGDr": {
               "type": "variant-picker",
               "settings": {
@@ -268,43 +342,18 @@
                 }
               },
               "block_order": []
-            },
-            "text_aEtTtq": {
-              "type": "text",
-              "name": "t:names.product_description",
-              "settings": {
-                "text": "{{ closest.product.description }}",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "group_icgrde",
+            "text_aEtTtq",
             "variant_picker_R3rGDr",
-            "buy_buttons_eYQEYi",
-            "text_aEtTtq"
+            "buy_buttons_eYQEYi"
           ]
         }
       },
       "block_order": [
+        "trust_badges_93Wt3G",
         "disclosures_g9mWze"
       ],
       "settings": {
