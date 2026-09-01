@@ -1026,25 +1026,25 @@
       "settings": {
         "fallback_material": "none",
         "heading": "Titanium Isn't Competing. It's Replacing.",
-        "heading_color": "#BCA588",
+        "heading_color": "#bca588",
         "heading_font_size": 48,
         "heading_font_size_mobile": 24,
         "subheading": "From toxin & bacteria risks to high maintenance, these \"outdated\" kitchenware materials just don't measure up.",
-        "subheading_color": "#B0B0B0",
+        "subheading_color": "#b0b0b0",
         "subheading_font_size": 16,
         "subheading_font_size_mobile": 14,
         "card_border_color": "#333333",
         "card_corner_radius": 24,
-        "card_title_color": "#FFFFFF",
-        "card_text_color": "#B0B0B0",
-        "badge_background_color": "#C20C25",
-        "badge_text_color": "#FFFFFF",
+        "card_title_color": "#ffffff",
+        "card_text_color": "#b0b0b0",
+        "badge_background_color": "#c20c25",
+        "badge_text_color": "#ffffff",
         "columns": 4,
         "mobile_card_width": 240,
         "gap": 16,
         "icons_style": "none",
         "icons_shape": "circle",
-        "arrow_background_color": "#A3835F",
+        "arrow_background_color": "#a3835f",
         "arrow_icon_color": "#121212",
         "background_color": "#121212",
         "content_max_width": 1920,
@@ -1359,6 +1359,51 @@
         "padding-block-start": 96,
         "padding-block-end": 96
       }
+    },
+    "178822778588bb29a1": {
+      "type": "_blocks",
+      "blocks": {
+        "judge_me_reviews_review_widget_CpBkyg": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_CpBkyg"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
@@ -1369,6 +1414,7 @@
     "scroll_text_fade_DigM7x",
     "product_feature_showcase_tqM8Ft",
     "product_materials_comparison_NtU8EU",
-    "section_RCeHcG"
+    "section_RCeHcG",
+    "178822778588bb29a1"
   ]
 }
