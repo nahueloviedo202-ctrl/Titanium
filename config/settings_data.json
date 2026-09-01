@@ -11,8 +11,6 @@
   "current": {
     "logo_height": 36,
     "logo_height_mobile": 28,
-    "page_background_color": "{{ settings.color_palette.background }}",
-    "page_width": "narrow",
     "page_text_color": "{{ settings.color_palette.foreground }}",
     "type_body_font": "inter_n4",
     "type_subheading_font": "poppins_n4",
@@ -44,6 +42,8 @@
     "type_font_h6": "subheading",
     "type_size_h6": "12",
     "type_line_height_h6": "display-loose",
+    "page_background_color": "{{ settings.color_palette.background }}",
+    "page_width": "narrow",
     "page_transition_enabled": false,
     "transition_to_main_product": false,
     "card_hover_effect": "none",
@@ -102,18 +102,42 @@
     "variant_button_border_width": 1,
     "variant_button_radius": 14,
     "variant_button_width": "equal-width-buttons",
+    "content_for_index": [],
+    "blocks": {
+      "6810535121229352664": {
+        "type": "shopify://apps/monster-cart-upsell-free-gifts/blocks/app-embed/a1b8e58a-bf1d-4e0f-8768-a387c3f643c0",
+        "disabled": false,
+        "settings": {
+          "markets_rounding": false,
+          "send_gtag_atc": false,
+          "disable_tiktok_tracking": false,
+          "disable_klaviyo_tracking": false,
+          "stop_cart_page": false,
+          "apply_discount_before_checkout": false,
+          "bag_selector": "",
+          "hide_when_opened": "",
+          "show_item_properties": false,
+          "stop_shopify_rate": true,
+          "dev_mode": false,
+          "force_v1_scripts": false,
+          "beta_version": false,
+          "collection_load_all_products": false,
+          "homepage_collections": "",
+          "custom_page_products": "",
+          "custom_code": "<script>\n    // custom code here\n</script>"
+        }
+      },
+      "pagefly-page-builder": {
+        "type": "shopify://apps/pagefly-ai-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": true,
+        "settings": {}
+      }
+    },
     "color_palette": {
       "background": "#ffffff",
       "foreground": "#000000",
       "color1": "#333333",
       "color2": "#DFDFDF"
-    },
-    "blocks": {
-      "pagefly-page-builder": {
-        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
-        "disabled": false,
-        "settings": {}
-      }
     }
   },
   "presets": {
