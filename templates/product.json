@@ -205,28 +205,6 @@
                 "price_tVjtKg"
               ]
             },
-            "product_details_care_use_Dj4Nht": {
-              "type": "product-details-care-use",
-              "name": "t:names.product_details_care_use",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "custom",
-                "font": "var(--font-body--family)",
-                "font_size": "1.125rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "text_aEtTtq": {
               "type": "text",
               "name": "t:names.product_description",
@@ -646,7 +624,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Titanium cookware is 100% non-toxic and free from PFAS, PTFE, and other harmful coatings. It won't leach chemicals into your food, even at high heat, and it's built to outlast any non-stick pan on the market.</p>",
+                        "text": "<p>Each Koretitanium pan is hand made to ensure life-long longevity & quality.</p><p>Please allow <strong>1–4 Business Days</strong> for order processing and dispatch (up to 2 days longer during the holiday season).</p><p>Standard delivery time: <strong>7–12 Business Days</strong> for orders shipped to USA, UK, Canada, Australia, New Zealand, and the EU.</p><p>We offer a <strong>30-Day Return Policy</strong>, giving you 30 days from the date of delivery to request a return.</p><p>Taima Titanium products are built for durability and long-lasting performance.</p><p>Our warranty covers manufacturer’s defects and damages upon arrival.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -724,7 +702,6 @@
           },
           "block_order": [
             "group_icgrde",
-            "product_details_care_use_Dj4Nht",
             "text_aEtTtq",
             "pdp_badges_FnWbEB",
             "variant_picker_R3rGDr",
