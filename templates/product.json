@@ -911,6 +911,7 @@
             "material_card_4NYyk4": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/plastic_spatula-min.webp",
                 "badge_text": "BPA | PHTHALATES",
                 "title": "Plastic",
                 "text": "Plastic spatulas have a very low melting temperature, releasing toxic chemicals each time they're used, causing serious health risks like gut, hormone disruption & cancer."
@@ -920,6 +921,7 @@
             "material_card_XqdPBm": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/silicone_spatula-min.webp",
                 "badge_text": "BPA | PHTHALATES",
                 "title": "Silicone",
                 "text": "While high-end silicone spatulas are heat-resistant, most found on Amazon or in regular stores degrade over time and release toxic chemicals. Cheaper silicone spatulas often contain dangerous fillers like BPA and phthalates, becoming toxic when heated."
@@ -929,6 +931,7 @@
             "material_card_Wk9Vt8": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/wooden_spatula-min.webp",
                 "badge_text": "BACTERIA | MOLD",
                 "title": "Wood",
                 "text": "Not hygienic. It lets bacteria grow in grooves and cracks, even if invisible, which can contaminate your food over time. They also absorb odors, stain easily."
@@ -938,18 +941,10 @@
             "material_card_jq48Aq": {
               "type": "_material-card",
               "settings": {
+                "image": "shopify://shop_images/steel_spatula-min.webp",
                 "badge_text": "HEAVY METALS",
                 "title": "Steel",
                 "text": "Most are made from low-grade alloys that release heavy metals like chromium and nickel into your food when heated. They're also heavy, destroying your cookware's surface."
-              },
-              "blocks": {}
-            },
-            "material_card_eNBgkD": {
-              "type": "_material-card",
-              "settings": {
-                "badge_text": "RUST | HEAVY METALS",
-                "title": "Carbon Steel",
-                "text": "Rusts easily, requires constant seasoning, and reacts with acidic foods like tomatoes, pepper or lemon - damaging the surface and altering taste. Not non-stick, not low-maintenance, and definitely not worth the trouble for most home kitchens."
               },
               "blocks": {}
             }
@@ -958,8 +953,7 @@
             "material_card_4NYyk4",
             "material_card_XqdPBm",
             "material_card_Wk9Vt8",
-            "material_card_jq48Aq",
-            "material_card_eNBgkD"
+            "material_card_jq48Aq"
           ]
         },
         "product_material_group_x3nBMn": {
