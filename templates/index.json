@@ -643,7 +643,7 @@
         "review_card_qjknjG": {
           "type": "_review-card",
           "settings": {
-            "image": "shopify://shop_images/pr21.webp",
+            "image": "shopify://shop_images/pr31.webp",
             "image_label": "Titanium Series",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
