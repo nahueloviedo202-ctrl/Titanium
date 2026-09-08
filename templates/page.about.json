@@ -60,18 +60,6 @@
         "color_scheme": "default"
       }
     },
-    "brand_statement_7Wjg4t": {
-      "type": "brand-statement",
-      "name": "Brand statement",
-      "settings": {
-        "image": "shopify://shop_images/brand-statement.png",
-        "name": "",
-        "role": "",
-        "use_h1": false,
-        "full_width": true,
-        "height_mobile": 420
-      }
-    },
     "brand_story_dLMywC": {
       "type": "brand-story",
       "blocks": {
@@ -105,7 +93,6 @@
     "main",
     "breadcrumbs_7ymTFF",
     "brand_story_4KGJY3",
-    "brand_statement_7Wjg4t",
     "brand_story_dLMywC"
   ]
 }

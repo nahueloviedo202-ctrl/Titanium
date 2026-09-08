@@ -23,57 +23,6 @@
         "padding_right_mobile": 10
       }
     },
-    "category_cards_1": {
-      "type": "category-cards",
-      "blocks": {
-        "category_1": {
-          "type": "category",
-          "settings": {
-            "image": "shopify://shop_images/Container.png",
-            "title": "THIRTY1 OG'S",
-            "link": "shopify://collections/thirty1-originals"
-          }
-        },
-        "category_2": {
-          "type": "category",
-          "settings": {
-            "image": "shopify://shop_images/Container_1.png",
-            "title": "THIRTY1 1 OF 1",
-            "link": "shopify://collections/thirty1-1-of-1"
-          }
-        },
-        "category_3": {
-          "type": "category",
-          "settings": {
-            "image": "shopify://shop_images/Container_2.png",
-            "title": "BASICS",
-            "link": "shopify://collections/basics"
-          }
-        },
-        "category_4": {
-          "type": "category",
-          "settings": {
-            "image": "shopify://shop_images/Container_3.png",
-            "title": "WATCHES",
-            "link": "shopify://collections/watches"
-          }
-        }
-      },
-      "block_order": [
-        "category_1",
-        "category_2",
-        "category_3",
-        "category_4"
-      ],
-      "name": "Category cards",
-      "settings": {
-        "color_scheme": "default",
-        "padding_top_desktop": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_desktop": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -112,7 +61,6 @@
   },
   "order": [
     "breadcrumbs_4cMMMc",
-    "category_cards_1",
     "main"
   ]
 }

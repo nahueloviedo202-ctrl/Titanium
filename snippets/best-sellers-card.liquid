@@ -17,7 +17,10 @@
     assign onboarding = true
   endif
 
-  assign card_title = product.title | default: 'placeholders.product_title' | t
+  assign card_title = product.title
+  if card_title == blank
+    assign card_title = 'placeholders.product_title' | t
+  endif
 
   assign product_on_sale = false
   if product != blank and product.compare_at_price > product.price

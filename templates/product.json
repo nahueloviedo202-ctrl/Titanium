@@ -353,10 +353,10 @@
                       "type": "add-to-cart",
                       "static": true,
                       "settings": {
-                        "style_class": "button",
-                        "custom_button_background": "{{ settings.color_palette.foreground }}",
-                        "custom_button_text": "{{ settings.color_palette.background }}",
-                        "custom_button_border": "{{ settings.color_palette.background }}"
+                        "style_class": "button-custom",
+                        "custom_button_background": "#d3ae7f",
+                        "custom_button_text": "#121212",
+                        "custom_button_border": "#d3ae7f"
                       },
                       "blocks": {}
                     },
@@ -416,11 +416,34 @@
                     "trust_badge_item_MyGNtF",
                     "trust_badge_item_zTWwHq"
                   ]
+                },
+                "pay_badges_Qx4wRt": {
+                  "type": "pay-badges",
+                  "name": "t:names.pay_badges",
+                  "settings": {
+                    "alignment": "center",
+                    "gap": 16,
+                    "icon_gap": 10,
+                    "show_note": true,
+                    "note_text": "Guaranteed Safe & Secure Checkout",
+                    "icon": "lock",
+                    "note_icon_size": 16,
+                    "font_size": 14,
+                    "font_size_mobile": 13,
+                    "text_color": "",
+                    "icon_color": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "buy_buttons_EJWGkk",
-                "trust_badges_bABKQ4"
+                "trust_badges_bABKQ4",
+                "pay_badges_Qx4wRt"
               ]
             },
             "impact_note_9fQ2mK": {

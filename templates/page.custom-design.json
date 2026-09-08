@@ -202,81 +202,11 @@
         "recipient_email": "gonzalezvzoe@gmail.com",
         "submit_label": "Submit Design Request"
       }
-    },
-    "as_seen_LCfR6U": {
-      "type": "as-seen",
-      "blocks": {
-        "look_Yx6y9p": {
-          "type": "look",
-          "settings": {
-            "image": "shopify://shop_images/Container_4.png",
-            "name": "CIGARETTES AFTER SEX",
-            "product": "The Pavé Riot Ring",
-            "link": "shopify://products/pave-riot-ring"
-          }
-        },
-        "look_hjhQf6": {
-          "type": "look",
-          "settings": {
-            "image": "shopify://shop_images/Container_5.png",
-            "name": "JAXON ROSE",
-            "product": "The Alice Ring",
-            "link": "shopify://products/alice-ring"
-          }
-        },
-        "look_HjNLmk": {
-          "type": "look",
-          "settings": {
-            "image": "shopify://shop_images/Container_6.png",
-            "name": "STANLEY TUCCI IN THE DEVIL WEARS PRADA",
-            "product": "Custom THIRTY1 Ring",
-            "link": "shopify://pages/custom-design"
-          }
-        },
-        "look_APDitX": {
-          "type": "look",
-          "settings": {
-            "image": "shopify://shop_images/Container_7.png",
-            "name": "WILLY CARTER",
-            "product": "The Whiskey Earrings + The Riot Ring",
-            "link": "shopify://products/the-whiskey-earrings"
-          }
-        },
-        "look_PfiH9f": {
-          "type": "look",
-          "settings": {
-            "image": "shopify://shop_images/tyrone-dylan.png",
-            "name": "TYRONE DYLAN",
-            "product": "The Lapis Lazuli Tommy Ring",
-            "link": "shopify://products/lapis-lazuli-tommy-ring"
-          }
-        }
-      },
-      "block_order": [
-        "look_Yx6y9p",
-        "look_hjhQf6",
-        "look_HjNLmk",
-        "look_APDitX",
-        "look_PfiH9f"
-      ],
-      "name": "As seen",
-      "settings": {
-        "title": "As Seen",
-        "wearing_label": "Wearing:",
-        "color_scheme": "default",
-        "padding_top_desktop": 80,
-        "padding_top_mobile": 60,
-        "padding_bottom_desktop": 75,
-        "padding_bottom_mobile": 60,
-        "header_gap_desktop": 28,
-        "header_gap_mobile": 24
-      }
     }
   },
   "order": [
     "main",
     "slideshow_AF7hNY",
-    "design_request_form_NadPL9",
-    "as_seen_LCfR6U"
+    "design_request_form_NadPL9"
   ]
 }

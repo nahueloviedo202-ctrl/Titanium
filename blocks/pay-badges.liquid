@@ -1,0 +1,314 @@
+
+
+{%- liquid
+  assign block_settings = block.settings
+  assign justify = 'center'
+  if block_settings.alignment == 'left'
+    assign justify = 'flex-start'
+  elsif block_settings.alignment == 'right'
+    assign justify = 'flex-end'
+  endif
+-%}
+
+<div
+  class="pay-badges-block spacing-style"
+  style="
+    {% render 'spacing-padding', settings: block_settings %}
+    --pay-badges-alignment: {{ justify }};
+    --pay-badges-gap: {{ block_settings.gap }}px;
+    --pay-badges-icon-gap: {{ block_settings.icon_gap }}px;
+    --pay-badges-note-icon-size: {{ block_settings.note_icon_size }}px;
+    --pay-badges-font-size: {{ block_settings.font_size }}px;
+    --pay-badges-font-size-mobile: {{ block_settings.font_size_mobile }}px;
+    {% if block_settings.text_color != blank %}
+      --pay-badges-text-color: {{ block_settings.text_color }};
+    {% endif %}
+    {% if block_settings.icon_color != blank %}
+      --pay-badges-icon-color: {{ block_settings.icon_color }};
+    {% endif %}
+  "
+  {{ block.shopify_attributes }}
+>
+  {%- if block_settings.show_note and block_settings.note_text != blank -%}
+    <p class="pay-badges__note">
+      <span class="pay-badges__note-icon" aria-hidden="true">
+        {% render 'icon-or-image',
+          icon: block_settings.icon,
+          image_upload: block_settings.icon_image,
+          width: block_settings.note_icon_size,
+          class_name: 'pay-badges__note-icon-media'
+        %}
+      </span>
+      <span class="pay-badges__note-text">{{ block_settings.note_text | escape }}</span>
+    </p>
+  {%- endif -%}
+
+  <ul
+    class="pay-badges"
+    role="list"
+  >
+    {%- for type in shop.enabled_payment_types -%}
+      <li class="pay-badges__item">
+        {{ type | payment_type_svg_tag: class: 'pay-badges__icon-svg' }}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% stylesheet %}
+  .pay-badges-block {
+    display: flex;
+    flex-direction: column;
+    align-items: var(--pay-badges-alignment, center);
+    gap: var(--pay-badges-gap, 16px);
+    width: 100%;
+  }
+
+  .pay-badges__note {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-2xs, 5px);
+    margin: 0;
+  }
+
+  .pay-badges__note-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: var(--pay-badges-note-icon-size, 16px);
+    height: var(--pay-badges-note-icon-size, 16px);
+    color: var(--pay-badges-icon-color, rgb(var(--color-foreground-rgb) / var(--opacity-muted-text)));
+  }
+
+  .pay-badges__note-icon-media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .pay-badges__note-text {
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: var(--font-paragraph--line-height);
+    letter-spacing: var(--letter-spacing--body-loose, 0.03em);
+    font-size: var(--pay-badges-font-size, 14px);
+    color: var(--pay-badges-text-color, rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text)));
+  }
+
+  @media screen and (max-width: 749px) {
+    .pay-badges__note-text {
+      font-size: var(--pay-badges-font-size-mobile, 13px);
+    }
+  }
+
+  .pay-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: var(--pay-badges-alignment, center);
+    gap: var(--pay-badges-icon-gap, 10px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pay-badges__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .pay-badges__icon-svg {
+    display: block;
+    height: 20px;
+    width: auto;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.pay_badges",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "icon_gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "t:content.text"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_note",
+      "label": "t:settings.show_secure_checkout_note",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "note_text",
+      "label": "t:settings.label",
+      "default": "t:text_defaults.secure_checkout_note"
+    },
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "t:settings.icon",
+      "options": [
+        { "value": "none", "label": "t:options.none" },
+        { "value": "lock", "label": "t:options.lock" },
+        { "value": "check_box", "label": "t:options.check_box" },
+        { "value": "truck", "label": "t:options.truck" },
+        { "value": "return", "label": "t:options.return" },
+        { "value": "stopwatch", "label": "t:options.stopwatch" },
+        { "value": "star", "label": "t:options.star" },
+        { "value": "heart", "label": "t:options.heart" },
+        { "value": "price_tag", "label": "t:options.price_tag" }
+      ],
+      "default": "lock"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "t:settings.image_icon"
+    },
+    {
+      "type": "range",
+      "id": "note_icon_size",
+      "label": "t:settings.size",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "t:settings.size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "label": "t:settings.size_mobile",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "t:settings.icon_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.pay_badges",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}

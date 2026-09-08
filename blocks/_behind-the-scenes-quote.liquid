@@ -10,13 +10,14 @@
 
   <div class="behind-the-scenes__quote-footer">
     {%- if block.settings.signature != blank -%}
+      {%- assign signature_alt = block.settings.founder_name | escape -%}
       {{
         block.settings.signature
         | image_url: width: block.settings.signature_width
         | image_tag:
           loading: 'lazy',
           class: 'behind-the-scenes__quote-signature',
-          alt: block.settings.founder_name | escape,
+          alt: signature_alt,
           width: block.settings.signature_width,
           height: block.settings.signature_height
       }}

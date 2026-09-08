@@ -25,57 +25,178 @@
       }
     },
     "main": {
-      "type": "main-contact",
+      "type": "main-page",
       "blocks": {
-        "name": {
-          "type": "name_input",
-          "settings": {}
-        },
-        "email": {
-          "type": "email_input",
+        "title": {
+          "type": "text",
+          "name": "t:names.title",
           "settings": {
-            "half_width": false
-          }
+            "text": "<h1>Contact Us</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "2rem",
+            "line_height": "tight",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#ffffff",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
-        "phone": {
-          "type": "phone_input",
+        "content": {
+          "type": "text",
+          "name": "t:names.content",
           "settings": {
-            "required": true,
-            "half_width": false
-          }
-        },
-        "message": {
-          "type": "message_input",
-          "settings": {
-            "character_limit": 1500,
-            "half_width": false
-          }
+            "text": "{{ closest.page.content }}",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "2rem",
+            "line_height": "tight",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#ffffff",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "name",
-        "email",
-        "phone",
-        "message"
+        "title",
+        "content"
       ],
       "settings": {
-        "contact_title": "Contact us",
-        "contact_text": "<p>Our Client Services team strives to respond to all enquiries promptly during business hours.</p>",
-        "image": "shopify://shop_images/new-contact.png",
-        "show_page_title": false,
-        "column_gap_desktop": 60,
-        "padding_top_desktop": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_desktop": 75,
-        "padding_bottom_mobile": 48,
-        "side_padding_desktop": 75,
-        "side_padding_mobile": 30,
-        "color_scheme": "default"
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "#121212",
+        "padding-block-start": 64,
+        "padding-block-end": 0
+      }
+    },
+    "form": {
+      "type": "section",
+      "blocks": {
+        "contact_image": {
+          "type": "image",
+          "name": "t:names.image",
+          "settings": {
+            "image": "shopify://shop_images/contact-us_1.webp",
+            "link": "",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 16,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "contact_form_UwiCkQ": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "background_color": "",
+            "input_style": "custom",
+            "input_background_color": "#121212",
+            "input_text_color": "#ffffff",
+            "input_border_color": "#e0e0e0",
+            "border_width": 1,
+            "border_radius": 12,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button-custom",
+                "custom_button_background": "#f2f2f2",
+                "custom_button_text": "#000000",
+                "custom_button_border": "#f2f2f2",
+                "width": "custom",
+                "custom_width": 100,
+                "width_mobile": "custom",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_image",
+        "contact_form_UwiCkQ"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "flex-start",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#121212",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 48,
+        "padding-block-end": 84
       }
     }
   },
   "order": [
     "breadcrumbs_cwwTDR",
-    "main"
+    "main",
+    "form"
   ]
 }

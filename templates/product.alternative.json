@@ -151,19 +151,11 @@
         "full_width": true,
         "overlay_style": "shadow"
       }
-    },
-    "recommendations": {
-      "type": "related-products",
-      "settings": {
-        "show_vendor": true,
-        "grid": 4
-      }
     }
   },
   "order": [
     "breadcrumbs",
     "main",
-    "background_video",
-    "recommendations"
+    "background_video"
   ]
 }
