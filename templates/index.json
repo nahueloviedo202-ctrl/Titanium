@@ -695,11 +695,11 @@
           "type": "_review-card",
           "name": "t:names.review_card",
           "settings": {
-            "image": "shopify://shop_images/steak-min.webp",
+            "image": "shopify://shop_images/pr28.webp",
             "image_label": "TITANIUM PAN",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
-            "video_poster": "shopify://shop_images/4-min.webp",
+            "video_poster": "shopify://shop_images/pr27.webp",
             "title": "It Looks Fantastic!",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>Taima pan heats up very quickly and evenly, the sear you can achieve with this is amazing.</p>",
