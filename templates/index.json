@@ -230,7 +230,7 @@
             "background_media": "image",
             "background_color": "",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/best_selllers_500x500_1f6a54d7-a1d2-45d5-87fb-9ffc102fb3fa_-min.jpg",
+            "background_image": "shopify://shop_images/pr20.webp",
             "background_image_position": "cover",
             "aspect_ratio": "square",
             "toggle_overlay": true,
@@ -315,7 +315,7 @@
             "background_media": "image",
             "background_color": "",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/pans_500x500_00ab0dae-9d97-4c67-b819-49975c954557_-min.webp",
+            "background_image": "shopify://shop_images/pr21.webp",
             "background_image_position": "cover",
             "aspect_ratio": "square",
             "toggle_overlay": true,
@@ -400,7 +400,7 @@
             "background_media": "image",
             "background_color": "",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/cutting_board_14cce477-e3c3-4ffe-9c5e-5746942718a9-min.webp",
+            "background_image": "shopify://shop_images/pr22.webp",
             "background_image_position": "cover",
             "aspect_ratio": "square",
             "toggle_overlay": true,
@@ -643,7 +643,7 @@
         "review_card_qjknjG": {
           "type": "_review-card",
           "settings": {
-            "image": "shopify://shop_images/fixed_yellow_2-min_471af5f2-a950-418a-b66a-d33e445051e1.jpg",
+            "image": "shopify://shop_images/pr21.webp",
             "image_label": "Titanium Series",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
@@ -677,7 +677,7 @@
         "review_card_EXwLKV": {
           "type": "_review-card",
           "settings": {
-            "image": "shopify://shop_images/pan-min.webp",
+            "image": "shopify://shop_images/pr9.webp",
             "image_label": "Titanium Pan",
             "badge_color": "",
             "badge_text_color": "",
