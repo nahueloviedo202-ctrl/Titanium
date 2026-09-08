@@ -735,7 +735,7 @@
             "image_label": "TITANIUM PAN",
             "badge_color": "",
             "badge_text_color": "{{ settings.color_palette.background }}",
-            "video_poster": "shopify://shop_images/6-min.webp",
+            "video_poster": "shopify://shop_images/pr30.webp",
             "title": "Once You Go Titanium, You Won't Go Back",
             "title_color": "{{ settings.color_palette.background }}",
             "quote": "<p>\"The special surface pattern also helps food naturally stick less, so you don't have to worry about chemicals getting into your food\"</p>",
