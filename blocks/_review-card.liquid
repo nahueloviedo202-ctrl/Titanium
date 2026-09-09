@@ -86,6 +86,18 @@
       </div>
     {%- endif -%}
 
+    <div
+      class="review-card__stars"
+      aria-hidden="true"
+      style="--review-card-star-color: {{ section.settings.star_color }};"
+    >
+      {%- for i in (1..5) -%}
+        <span class="review-card__star review-card__star--filled">
+          {% render 'icon-or-image', icon: 'star-filled', width: 16, class_name: 'review-card__star-icon' %}
+        </span>
+      {%- endfor -%}
+    </div>
+
     {%- if block.settings.author != blank -%}
       <div
         class="review-card__author"
@@ -174,8 +186,22 @@
   .review-card__quote {
     color: var(--color-foreground-muted);
     font-size: 1.1375rem;
+    font-style: italic;
+    font-weight: 700;
     line-height: 1.5;
     margin-bottom: 0.75rem;
+  }
+
+  .review-card__stars {
+    display: flex;
+    gap: 0.325rem;
+    margin-bottom: 0.75rem;
+    color: var(--review-card-star-color, #b57c46);
+  }
+
+  .review-card__star-icon {
+    width: 1rem;
+    height: 1rem;
   }
 
   .review-card__author {

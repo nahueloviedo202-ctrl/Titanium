@@ -105,7 +105,11 @@
               aria-label="{{ 'accessibility.rating' | t: rating: endorse_rating }}"
             >
               {%- for i in (1..5) -%}
-                <span class="category-nav__star{% if i <= endorse_rating %} category-nav__star--filled{% endif %}">
+                {%- assign star_is_filled = false -%}
+                {%- if i <= endorse_rating -%}
+                  {%- assign star_is_filled = true -%}
+                {%- endif -%}
+                <span class="category-nav__star{% if star_is_filled %} category-nav__star--filled{% endif %}">
                   <svg
                     class="icon-default"
                     aria-hidden="true"
@@ -113,7 +117,11 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                   >
-                    {%- render 'icon', icon: 'star' -%}
+                    {%- if star_is_filled -%}
+                      {%- render 'icon', icon: 'star-filled' -%}
+                    {%- else -%}
+                      {%- render 'icon', icon: 'star' -%}
+                    {%- endif -%}
                   </svg>
                 </span>
               {%- endfor -%}

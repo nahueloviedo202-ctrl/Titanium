@@ -50,13 +50,13 @@
   {%- assign effective_hover_text = hover_parts[1] -%}
   {%- assign effective_hover_border = hover_parts[2] -%}
   {% style %}
-    .button-custom--{{ block_id }} {
+    .button-custom.button-custom--{{ block_id }} {
       --button-background-color: rgb({{ effective_background_color.rgba }});
       --button-color: rgb({{ effective_text_color.rgba }});
       --button-border-color: rgb({{ effective_border_color.rgba }});
       --button-focus-outline-color: rgb({{ effective_focus_outline_color.rgb }});
     }
-    .button-custom--{{ block_id }}:hover {
+    .button-custom.button-custom--{{ block_id }}:hover {
       --button-background-color: {{ effective_hover_bg }};
       --button-color: {{ effective_hover_text }};
       --button-border-color: {{ effective_hover_border }};

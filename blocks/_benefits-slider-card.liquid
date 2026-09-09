@@ -1,0 +1,200 @@
+
+
+{% liquid
+  assign block_index = section.blocks | find_index: 'id', block.id
+  assign image_position = block.settings.image_position | default: 'top'
+  assign desktop_sizes_vw = 100.0 | divided_by: section.settings.slides_per_view
+  assign card_sizes = '(max-width: 749px) ' | append: section.settings.mobile_card_width | append: 'px, ' | append: desktop_sizes_vw | append: 'vw'
+  assign card_image_alt = block.settings.image.alt | default: block.settings.title | strip_html | escape
+%}
+
+{% capture media %}
+  <div class="benefits-slider-card__media">
+    {%- if block.settings.image != blank -%}
+      {{
+        block.settings.image
+        | image_url: width: 900
+        | image_tag:
+          widths: '310, 450, 620, 900',
+          sizes: card_sizes,
+          loading: 'lazy',
+          alt: card_image_alt,
+          class: 'benefits-slider-card__image'
+      }}
+    {%- else -%}
+      {{ 'product-apparel-1' | placeholder_svg_tag: 'benefits-slider-card__image' }}
+    {%- endif -%}
+  </div>
+{% endcapture %}
+
+<slideshow-slide
+  ref="slides[]"
+  aria-hidden="{% if block_index == 0 %}false{% else %}true{% endif %}"
+  style="--slideshow-timeline: --slide-{{ block_index }};"
+  class="benefits-slider-card__slide"
+  {{ block.shopify_attributes }}
+>
+  <article
+    class="benefits-slider-card"
+    style="
+      --bsc-border-color: {{ section.settings.card_border_color }};
+      --bsc-radius: {{ section.settings.card_corner_radius }}px;
+      --bsc-title-color: {{ section.settings.card_title_color }};
+      --bsc-text-color: {{ section.settings.card_text_color }};
+    "
+  >
+    {%- if image_position == 'top' -%}{{ media }}{%- endif -%}
+
+    {%- if block.settings.title != blank or block.settings.text != blank -%}
+      <div class="benefits-slider-card__content">
+        {%- if block.settings.title != blank -%}
+          <h3 class="benefits-slider-card__title">{{ block.settings.title }}</h3>
+        {%- endif -%}
+        {%- if block.settings.text != blank -%}
+          <p class="benefits-slider-card__text">{{ block.settings.text }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if image_position == 'bottom' -%}{{ media }}{%- endif -%}
+  </article>
+</slideshow-slide>
+
+{% stylesheet %}
+  .benefits-slider-card__slide {
+    /* Width comes from --slide-width, set by the section's container queries
+       so exactly N cards fit at any page width (see sections/benefits-slider-section.liquid). */
+    flex: 0 0 auto;
+    overflow: visible;
+    scroll-snap-align: start;
+  }
+
+  .benefits-slider-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1.5px solid var(--bsc-border-color, #333333);
+    border-radius: var(--bsc-radius, 24px);
+    background-color: var(--color-background);
+  }
+
+  .benefits-slider-card__media {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .benefits-slider-card__image {
+    display: block;
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+  }
+
+  .benefits-slider-card__content {
+    padding: 24px;
+  }
+
+  .benefits-slider-card__title {
+    margin: 0 0 16px;
+    color: var(--bsc-title-color, #ffffff);
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    font-size: 24px;
+  }
+
+  .benefits-slider-card__text {
+    margin: 0;
+    color: var(--bsc-text-color, #b0b0b0);
+    font-family: var(--font-body--family);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .benefits-slider-card__image {
+      height: 240px;
+    }
+
+    .benefits-slider-card__content {
+      padding: 16px;
+    }
+
+    .benefits-slider-card__title {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .benefits-slider-card__text {
+      font-size: 12px;
+    }
+  }
+
+  @container benefits-slider (min-width: 750px) {
+    .benefits-slider-card__slide {
+      --slide-width: calc(
+        (100% - (var(--bs-gap, 32px) * (var(--bs-columns, 5) - 1))) / var(--bs-columns, 5)
+      );
+    }
+  }
+
+  @container benefits-slider (max-width: 749px) {
+    .benefits-slider-card__slide {
+      --slide-width: var(--bs-mobile-width, 240px);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.benefits_slider_card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "t:settings.image_position",
+      "options": [
+        {
+          "value": "top",
+          "label": "t:options.top"
+        },
+        {
+          "value": "bottom",
+          "label": "t:options.bottom"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:settings.title",
+      "default": "t:text_defaults.benefits_slider_card_title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:settings.text",
+      "default": "t:text_defaults.benefits_slider_card_text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.benefits_slider_card",
+      "category": "t:categories.storytelling"
+    }
+  ]
+}
+{% endschema %}

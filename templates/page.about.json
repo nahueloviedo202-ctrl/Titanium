@@ -16,83 +16,9 @@
         "show_page_title": true,
         "full_width": false
       }
-    },
-    "breadcrumbs_7ymTFF": {
-      "type": "breadcrumbs",
-      "name": "Breadcrumbs",
-      "settings": {
-        "show_next_prev": true,
-        "padding_top_desktop": 16,
-        "padding_top_mobile": 16,
-        "padding_bottom_desktop": 24,
-        "padding_bottom_mobile": 16,
-        "padding_left_desktop": 75,
-        "padding_left_mobile": 30,
-        "padding_right_desktop": 75,
-        "padding_right_mobile": 30
-      }
-    },
-    "brand_story_4KGJY3": {
-      "type": "brand-story",
-      "blocks": {
-        "heading_JAXWYj": {
-          "type": "heading",
-          "settings": {
-            "title": "Our Story",
-            "use_h1": false,
-            "text_align": "center"
-          }
-        },
-        "text_mG6xFB": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The name THIRTY1 is a tribute to the year 1931, the year my grandfather was born—a man whose legacy is the cornerstone of this brand.</p><p>Raised by my grandparents in Chios, Greece from a very young age, they shaped my understanding of strength and individuality early on.</p><p>THIRTY1 jewelry embodies a unique duality: the toughness and resilience that my grandfather displayed throughout his life, coupled with an undeniable elegance that defined his love and devotion to those who mattered most. My grandfather was a man who didn’t care what others thought—he lived by his own rules, unapologetically. This same spirit is reflected in THIRTY1 jewelry, which challenges traditional norms and empowers you to wear what makes you feel authentic and strong.</p>",
-            "text_align": "left"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JAXWYj",
-        "text_mG6xFB"
-      ],
-      "name": "Brand story",
-      "settings": {
-        "color_scheme": "default"
-      }
-    },
-    "brand_story_dLMywC": {
-      "type": "brand-story",
-      "blocks": {
-        "heading_JxHRm6": {
-          "type": "heading",
-          "settings": {
-            "title": "Grandfather & Brand Story",
-            "use_h1": false,
-            "text_align": "center"
-          }
-        },
-        "text_GdqmhN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The name THIRTY1 is a tribute to the year 1931, the year my grandfather was born—a man whose legacy is the cornerstone of this brand.</p><p>Raised by my grandparents in Chios, Greece from a very young age, they shaped my understanding of strength and individuality early on.</p><p>THIRTY1 jewelry embodies a unique duality: the toughness and resilience that my grandfather displayed throughout his life, coupled with an undeniable elegance that defined his love and devotion to those who mattered most. My grandfather was a man who didn’t care what others thought—he lived by his own rules, unapologetically. This same spirit is reflected in THIRTY1 jewelry, which challenges traditional norms and empowers you to wear what makes you feel authentic and strong.</p>",
-            "text_align": "left"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JxHRm6",
-        "text_GdqmhN"
-      ],
-      "name": "Brand story",
-      "settings": {
-        "color_scheme": "default"
-      }
     }
   },
   "order": [
-    "main",
-    "breadcrumbs_7ymTFF",
-    "brand_story_4KGJY3",
-    "brand_story_dLMywC"
+    "main"
   ]
 }

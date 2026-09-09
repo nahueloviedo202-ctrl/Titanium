@@ -1,6 +1,21 @@
 
 
 {% liquid
+  assign faq_page_visible = true
+  if product
+    assign faq_page_visible = false
+    assign faq_page_allowed_collections = 'pure-titanium-cutting-boards,pure-titanium-certified-pans,titanium-cutting-boards' | split: ','
+    for faq_page_collection in product.collections
+      if faq_page_allowed_collections contains faq_page_collection.handle
+        assign faq_page_visible = true
+        break
+      endif
+    endfor
+  endif
+%}
+
+{% if faq_page_visible %}
+{% liquid
   if section.settings.background_color != blank or section.settings.text_color != blank
     render 'contrast-override', background_color: section.settings.background_color, text_color: section.settings.text_color, section_id: section.id
   endif
@@ -35,6 +50,7 @@
     </div>
   </div>
 </section>
+{% endif %}
 
 {% stylesheet %}
   .faq-page {

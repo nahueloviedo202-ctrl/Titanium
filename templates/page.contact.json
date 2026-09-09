@@ -9,21 +9,6 @@
  */
 {
   "sections": {
-    "breadcrumbs_cwwTDR": {
-      "type": "breadcrumbs",
-      "name": "Breadcrumbs",
-      "settings": {
-        "show_next_prev": true,
-        "padding_top_desktop": 16,
-        "padding_top_mobile": 16,
-        "padding_bottom_desktop": 24,
-        "padding_bottom_mobile": 16,
-        "padding_left_desktop": 75,
-        "padding_left_mobile": 30,
-        "padding_right_desktop": 75,
-        "padding_right_mobile": 30
-      }
-    },
     "main": {
       "type": "main-page",
       "blocks": {
@@ -195,7 +180,6 @@
     }
   },
   "order": [
-    "breadcrumbs_cwwTDR",
     "main",
     "form"
   ]

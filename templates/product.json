@@ -269,6 +269,21 @@
               },
               "blocks": {}
             },
+            "size_guide_link_pTa1Mn": {
+              "type": "size-guide",
+              "name": "Size Guide",
+              "settings": {
+                "link_text": "Size Guide",
+                "type_preset": "paragraph",
+                "alignment": "right",
+                "popup_heading": "Size Guide",
+                "padding-block-start": 0,
+                "padding-block-end": 8,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "group_wCJ9D3": {
               "type": "group",
               "name": "t:names.group",
@@ -544,35 +559,195 @@
                     "icon_impact_note"
                   ]
                 },
-                "text_impact_note": {
-                  "type": "text",
+                "text_stars_wrap_impact_note": {
+                  "type": "group",
+                  "name": "Text & Rating",
                   "settings": {
-                    "text": "<p>Built for everyday cooking — quality cookware and kitchen essentials designed to make cooking easier, more enjoyable, and more effortless.</p>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1.25rem",
-                    "line_height": "loose",
-                    "letter_spacing": "loose",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#bca588",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 24,
-                    "padding-block-end": 24,
-                    "padding-inline-start": 24,
-                    "padding-inline-end": 24
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 0,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "background_media": "none",
+                    "background_color": "",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "text_impact_note": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Built for everyday cooking — quality cookware and kitchen essentials designed to make cooking easier, more enjoyable, and more effortless.</p>",
+                        "width": "100%",
+                        "max_width": "none",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1.25rem",
+                        "line_height": "loose",
+                        "letter_spacing": "loose",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "#bca588",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 24,
+                        "padding-block-end": 24,
+                        "padding-inline-start": 24,
+                        "padding-inline-end": 24
+                      },
+                      "blocks": {}
+                    },
+                    "stars_impact_note": {
+                      "type": "group",
+                      "name": "Stars",
+                      "settings": {
+                        "content_direction": "row",
+                        "vertical_on_mobile": false,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "center",
+                        "align_baseline": false,
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "center",
+                        "gap": 4,
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "custom_height": 100,
+                        "background_media": "none",
+                        "background_color": "",
+                        "video_position": "cover",
+                        "background_image_position": "cover",
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_color": "",
+                        "border_radius": 0,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "placeholder": "",
+                        "padding-block-start": 0,
+                        "padding-block-end": 16,
+                        "padding-inline-start": 24,
+                        "padding-inline-end": 24
+                      },
+                      "blocks": {
+                        "star_1": {
+                          "type": "icon",
+                          "settings": {
+                            "icon": "star-filled",
+                            "width": 20,
+                            "custom_mobile_size": false,
+                            "width_mobile": 20,
+                            "link": "",
+                            "open_in_new_tab": false,
+                            "icon_color": "#bca588"
+                          },
+                          "blocks": {}
+                        },
+                        "star_2": {
+                          "type": "icon",
+                          "settings": {
+                            "icon": "star-filled",
+                            "width": 20,
+                            "custom_mobile_size": false,
+                            "width_mobile": 20,
+                            "link": "",
+                            "open_in_new_tab": false,
+                            "icon_color": "#bca588"
+                          },
+                          "blocks": {}
+                        },
+                        "star_3": {
+                          "type": "icon",
+                          "settings": {
+                            "icon": "star-filled",
+                            "width": 20,
+                            "custom_mobile_size": false,
+                            "width_mobile": 20,
+                            "link": "",
+                            "open_in_new_tab": false,
+                            "icon_color": "#bca588"
+                          },
+                          "blocks": {}
+                        },
+                        "star_4": {
+                          "type": "icon",
+                          "settings": {
+                            "icon": "star-filled",
+                            "width": 20,
+                            "custom_mobile_size": false,
+                            "width_mobile": 20,
+                            "link": "",
+                            "open_in_new_tab": false,
+                            "icon_color": "#bca588"
+                          },
+                          "blocks": {}
+                        },
+                        "star_5": {
+                          "type": "icon",
+                          "settings": {
+                            "icon": "star-filled",
+                            "width": 20,
+                            "custom_mobile_size": false,
+                            "width_mobile": 20,
+                            "link": "",
+                            "open_in_new_tab": false,
+                            "icon_color": "#bca588"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "star_1",
+                        "star_2",
+                        "star_3",
+                        "star_4",
+                        "star_5"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "text_impact_note",
+                    "stars_impact_note"
+                  ]
                 }
               },
               "block_order": [
                 "group_impact_icon_wrap",
-                "text_impact_note"
+                "text_stars_wrap_impact_note"
               ]
             },
             "accordion_product_info": {
@@ -728,6 +903,7 @@
             "text_aEtTtq",
             "pdp_badges_FnWbEB",
             "variant_picker_R3rGDr",
+            "size_guide_link_pTa1Mn",
             "group_wCJ9D3",
             "impact_note_9fQ2mK",
             "accordion_product_info"
@@ -1630,6 +1806,20 @@
         "padding_inline_end_mobile": 16
       }
     },
+    "faq_page_Zt3Qk9": {
+      "type": "faq-page",
+      "blocks": {},
+      "block_order": [],
+      "name": "t:names.faq_page",
+      "settings": {
+        "background_color": "#121212",
+        "text_color": "",
+        "padding-block-start": 96,
+        "padding-block-end": 96,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
+    },
     "section_RCeHcG": {
       "type": "section",
       "blocks": {
@@ -1987,6 +2177,7 @@
     "product_feature_showcase_tqM8Ft",
     "product_materials_comparison_NtU8EU",
     "reviews_slider_custom_RMfDpy",
+    "faq_page_Zt3Qk9",
     "section_RCeHcG",
     "178822778588bb29a1"
   ]
