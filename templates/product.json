@@ -1480,6 +1480,156 @@
         "padding_inline_end_mobile": 16
       }
     },
+    "reviews_slider_custom_RMfDpy": {
+      "type": "reviews-slider-custom",
+      "blocks": {
+        "review_slider_category_NKjGaV": {
+          "type": "_review-slider-category",
+          "settings": {
+            "label": "Boards"
+          },
+          "blocks": {
+            "review_slider_card_qw3hYb": {
+              "type": "_review-slider-card",
+              "settings": {
+                "image": "shopify://shop_images/review1.webp",
+                "author": "Dominique, Dec 2024",
+                "rating": 5,
+                "quote": "In my kitchen, hygiene and precision are everything. This board is not just functional, it's flawless. No bacteria, no toxins, no hassle. I recommend it to every chef I train."
+              },
+              "blocks": {}
+            },
+            "review_slider_card_EDpbL9": {
+              "type": "_review-slider-card",
+              "settings": {
+                "image": "shopify://shop_images/review2.webp",
+                "author": "Sabrina, Mar 2024",
+                "rating": 5,
+                "quote": "You spend so much on organic produce… why put it on a surface that leaches toxins? Taima completes the loop."
+              },
+              "blocks": {}
+            },
+            "review_slider_card_9iVp8Q": {
+              "type": "_review-slider-card",
+              "settings": {
+                "image": "shopify://shop_images/review3.webp",
+                "author": "Tyler, Jan 2025",
+                "rating": 5,
+                "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This board was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
+              },
+              "blocks": {}
+            },
+            "review_slider_card_AbpB98": {
+              "type": "_review-slider-card",
+              "settings": {
+                "image": "shopify://shop_images/review4.avif",
+                "author": "Jenna, Jul 2025",
+                "rating": 5,
+                "quote": "I make everything from baby food to dinner on this board. It's reassuring to know my kids aren't getting microplastic flakes with their meals."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "review_slider_card_qw3hYb",
+            "review_slider_card_EDpbL9",
+            "review_slider_card_9iVp8Q",
+            "review_slider_card_AbpB98"
+          ]
+        },
+        "review_slider_category_EnBt9h": {
+          "type": "_review-slider-category",
+          "settings": {
+            "label": "Pans"
+          },
+          "blocks": {
+            "review_slider_card_EfDmdG": {
+              "type": "_review-slider-card",
+              "settings": {
+                "image": "shopify://shop_images/review6.webp",
+                "author": "Jen, Apr 2025",
+                "rating": 5,
+                "quote": "The older I get, the more I value what touches my food. Since cutting out all plastic containers, boards, bottles I feel less bloated and clear minded. Taima products just makes sense."
+              },
+              "blocks": {}
+            },
+            "review_slider_card_i8cqFz": {
+              "type": "_review-slider-card",
+              "settings": {
+                "image": "shopify://shop_images/review7.webp",
+                "author": "Jason, Jun 2025",
+                "rating": 5,
+                "quote": "Crusty steaks, perfect eggs. No hot spots, no sticking. My new go-to."
+              },
+              "blocks": {}
+            },
+            "review_slider_card_mhMWVE": {
+              "type": "_review-slider-card",
+              "settings": {
+                "image": "shopify://shop_images/review8.webp",
+                "author": "Charlotte, Jan 2025",
+                "rating": 5,
+                "quote": "Safety is my priority so I care about what goes in and around my family. Taima’s pan is beautiful, but more importantly, it’s non-toxic. I am relieved knowing every meal I make won’t come with risks."
+              },
+              "blocks": {}
+            },
+            "review_slider_card_TQEhBC": {
+              "type": "_review-slider-card",
+              "settings": {
+                "image": "shopify://shop_images/review9.avif",
+                "author": "Tyler, Jan 2025",
+                "rating": 5,
+                "quote": "I've eliminated plastics, Teflon, and every source of hidden toxins. This pan was the missing piece. Titanium is unmatched, I know exactly what touches my food now, and it shows in my energy and recovery."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "review_slider_card_EfDmdG",
+            "review_slider_card_i8cqFz",
+            "review_slider_card_mhMWVE",
+            "review_slider_card_TQEhBC"
+          ]
+        }
+      },
+      "block_order": [
+        "review_slider_category_NKjGaV",
+        "review_slider_category_EnBt9h"
+      ],
+      "name": "t:names.reviews_slider_custom",
+      "settings": {
+        "heading": "5,000+ 5-Star Reviews",
+        "heading_color": "#bca588",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
+        "tab_text_color": "#b0b0b0",
+        "tab_border_color": "#454545",
+        "tab_active_background_color": "#108474",
+        "tab_active_text_color": "#121212",
+        "card_background_color": "#f6f4f0",
+        "name_color": "#2c1f1c",
+        "quote_color": "#252525",
+        "star_color": "#b57c46",
+        "card_width": 324,
+        "mobile_card_width": 240,
+        "gap": 16,
+        "icons_style": "chevron_large",
+        "icons_shape": "square",
+        "arrow_background_color": "#108474",
+        "arrow_icon_color": "#121212",
+        "arrow_border_color": "#454545",
+        "background_color": "#121212",
+        "content_max_width": 1680,
+        "padding_block_start": 120,
+        "padding_block_end": 120,
+        "padding_inline_start": 120,
+        "padding_inline_end": 16,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 16,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    },
     "section_RCeHcG": {
       "type": "section",
       "blocks": {
@@ -1836,6 +1986,7 @@
     "scroll_text_fade_DigM7x",
     "product_feature_showcase_tqM8Ft",
     "product_materials_comparison_NtU8EU",
+    "reviews_slider_custom_RMfDpy",
     "section_RCeHcG",
     "178822778588bb29a1"
   ]
