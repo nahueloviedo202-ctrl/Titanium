@@ -545,7 +545,8 @@
                     "icon_impact_note": {
                       "type": "icon",
                       "settings": {
-                        "icon": "serving_dish",
+                        "icon": "none",
+                        "image_upload": "shopify://shop_images/review2_cd0c69c5-8f26-4a57-a6ed-5c4f85573f32.webp",
                         "width": 64,
                         "custom_mobile_size": true,
                         "width_mobile": 40,
