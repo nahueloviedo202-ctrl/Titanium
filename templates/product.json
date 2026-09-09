@@ -1815,45 +1815,50 @@
         "benefits_slider_card_xpHAMP": {
           "type": "_benefits-slider-card",
           "settings": {
+            "image": "shopify://shop_images/1.jpg",
             "image_position": "top",
-            "title": "Naturally Toxin-Free",
-            "text": "No coatings, no leaching metals, no hidden chemicals - just pure titanium your body can trust."
+            "title": "Cook With Confidence",
+            "text": "Premium cookware designed to deliver reliable performance for every meal you make."
           },
           "blocks": {}
         },
         "benefits_slider_card_MDjLeF": {
           "type": "_benefits-slider-card",
           "settings": {
+            "image": "shopify://shop_images/4.jpg",
             "image_position": "bottom",
-            "title": "Built To Last A Lifetime",
-            "text": "Titanium resists corrosion and wear, so it keeps performing long after other materials give out."
+            "title": "Made For Everyday Moments",
+            "text": "Create more than meals. Make every moment in the kitchen one worth sharing."
           },
           "blocks": {}
         },
         "benefits_slider_card_4NQVbD": {
           "type": "_benefits-slider-card",
           "settings": {
+            "image": "shopify://shop_images/5.jpg",
             "image_position": "top",
-            "title": "Naturally Hygienic",
-            "text": "A dense, non-porous surface gives bacteria nowhere to hide, making cleanup quick and simple."
+            "title": "Everything Within Reach",
+            "text": "From prep to the final dish, thoughtfully designed essentials for every step of cooking."
           },
           "blocks": {}
         },
         "benefits_slider_card_QUNfxw": {
           "type": "_benefits-slider-card",
           "settings": {
+            "image": "shopify://shop_images/2.jpg",
             "image_position": "bottom",
-            "title": "Certified & Trusted",
-            "text": "Every piece is tested and certified, so you can feel confident in what touches your food."
+            "title": "Made To Make Life Easier",
+            "text": "Smart, reliable kitchen tools that make cooking, serving, and cleanup feel effortless."
           },
           "blocks": {}
         },
         "benefits_slider_card_gi4wCp": {
           "type": "_benefits-slider-card",
           "settings": {
+            "image": "shopify://shop_images/6.jpg",
             "image_position": "top",
-            "title": "Safe For The Whole Family",
-            "text": "From kids to grandparents, everyone can enjoy meals prepared on a surface that's genuinely safe."
+            "title": "Chef-Approved Performance",
+            "text": "Built for serious cooking and everyday kitchens that demand exceptional quality."
           },
           "blocks": {}
         }
