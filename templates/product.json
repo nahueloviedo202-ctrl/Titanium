@@ -1191,8 +1191,8 @@
           "type": "_scroll-fade-line",
           "settings": {
             "text": "At Koretitanium®, Non-Toxic Isn’t A Feature.",
-            "font_size": 64,
-            "font_size_mobile": 32,
+            "font_size": 32,
+            "font_size_mobile": 24,
             "opacity": 40,
             "text_color": "#bca588",
             "hide_on_desktop": false,
@@ -1243,7 +1243,7 @@
           "type": "_scroll-fade-line",
           "settings": {
             "text": "It’s The Foundation.",
-            "font_size": 48,
+            "font_size": 32,
             "font_size_mobile": 24,
             "opacity": 30,
             "text_color": "#bca588",
@@ -1256,7 +1256,7 @@
           "type": "_scroll-fade-line",
           "settings": {
             "text": "Perfection Isn't a Goal.",
-            "font_size": 48,
+            "font_size": 32,
             "font_size_mobile": 24,
             "opacity": 20,
             "text_color": "#bca588",
@@ -1291,7 +1291,7 @@
       "name": "t:names.scroll_text_fade",
       "settings": {
         "image": "shopify://shop_images/people.jpg",
-        "media_width": 480,
+        "media_width": 520,
         "background_color": "#00221c",
         "text_color": "#bca588",
         "font": "var(--font-body--family)",
@@ -1302,7 +1302,7 @@
         "focused_font_size": 64,
         "focused_font_size_mobile": 32,
         "transition_speed": 400,
-        "line_gap": 24,
+        "line_gap": 0,
         "padding_block_start": 240,
         "padding_block_end": 240,
         "padding_inline_start": 16,
