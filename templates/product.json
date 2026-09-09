@@ -1808,6 +1808,90 @@
         "padding_inline_end_mobile": 16
       }
     },
+    "benefits_slider_section_VzYyfG": {
+      "type": "benefits-slider-section",
+      "blocks": {
+        "benefits_slider_card_xpHAMP": {
+          "type": "_benefits-slider-card",
+          "settings": {
+            "image_position": "top",
+            "title": "Naturally Toxin-Free",
+            "text": "No coatings, no leaching metals, no hidden chemicals - just pure titanium your body can trust."
+          },
+          "blocks": {}
+        },
+        "benefits_slider_card_MDjLeF": {
+          "type": "_benefits-slider-card",
+          "settings": {
+            "image_position": "bottom",
+            "title": "Built To Last A Lifetime",
+            "text": "Titanium resists corrosion and wear, so it keeps performing long after other materials give out."
+          },
+          "blocks": {}
+        },
+        "benefits_slider_card_4NQVbD": {
+          "type": "_benefits-slider-card",
+          "settings": {
+            "image_position": "top",
+            "title": "Naturally Hygienic",
+            "text": "A dense, non-porous surface gives bacteria nowhere to hide, making cleanup quick and simple."
+          },
+          "blocks": {}
+        },
+        "benefits_slider_card_QUNfxw": {
+          "type": "_benefits-slider-card",
+          "settings": {
+            "image_position": "bottom",
+            "title": "Certified & Trusted",
+            "text": "Every piece is tested and certified, so you can feel confident in what touches your food."
+          },
+          "blocks": {}
+        },
+        "benefits_slider_card_gi4wCp": {
+          "type": "_benefits-slider-card",
+          "settings": {
+            "image_position": "top",
+            "title": "Safe For The Whole Family",
+            "text": "From kids to grandparents, everyone can enjoy meals prepared on a surface that's genuinely safe."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefits_slider_card_xpHAMP",
+        "benefits_slider_card_MDjLeF",
+        "benefits_slider_card_4NQVbD",
+        "benefits_slider_card_QUNfxw",
+        "benefits_slider_card_gi4wCp"
+      ],
+      "name": "t:names.benefits_slider_section",
+      "settings": {
+        "heading": "Benefits",
+        "heading_color": "#D4C7B4",
+        "heading_font_size": 48,
+        "heading_font_size_mobile": 24,
+        "content_max_width": 1800,
+        "slides_per_view": 5,
+        "mobile_card_width": 240,
+        "gap": 32,
+        "gap_mobile": 16,
+        "background_color": "#121212",
+        "card_border_color": "#333333",
+        "card_title_color": "#FFFFFF",
+        "card_text_color": "#B0B0B0",
+        "card_corner_radius": 24,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "padding_block_start": 80,
+        "padding_block_end": 80,
+        "padding_inline_start": 120,
+        "padding_inline_end": 120,
+        "padding_block_start_mobile": 64,
+        "padding_block_end_mobile": 64,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 0
+      }
+    },
     "faq_page_Zt3Qk9": {
       "type": "faq-page",
       "name": "t:names.faq_page",
@@ -2177,6 +2261,7 @@
     "product_feature_showcase_tqM8Ft",
     "product_materials_comparison_NtU8EU",
     "reviews_slider_custom_RMfDpy",
+    "benefits_slider_section_VzYyfG",
     "faq_page_Zt3Qk9",
     "section_RCeHcG",
     "178822778588bb29a1"
