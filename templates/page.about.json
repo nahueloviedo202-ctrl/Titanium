@@ -12,10 +12,7 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-        "show_page_title": true,
-        "full_width": false
-      }
+      "settings": {}
     }
   },
   "order": [

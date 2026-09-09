@@ -277,6 +277,7 @@
                 "type_preset": "paragraph",
                 "alignment": "right",
                 "popup_heading": "Size Guide",
+                "popup_subheading": "",
                 "padding-block-start": 0,
                 "padding-block-end": 8,
                 "padding-inline-start": 0,
@@ -602,7 +603,7 @@
                     "text_impact_note": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Built for everyday cooking — quality cookware and kitchen essentials designed to make cooking easier, more enjoyable, and more effortless.</p>",
+                        "text": "<p>As a professional chef, KoreTitanium has been a game changer in my kitchen. The quality and performance make every meal easier to prepare.</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
@@ -1808,8 +1809,6 @@
     },
     "faq_page_Zt3Qk9": {
       "type": "faq-page",
-      "blocks": {},
-      "block_order": [],
       "name": "t:names.faq_page",
       "settings": {
         "background_color": "#121212",
