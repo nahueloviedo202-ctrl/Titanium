@@ -370,9 +370,9 @@
                       "static": true,
                       "settings": {
                         "style_class": "button-custom",
-                        "custom_button_background": "#d3ae7f",
+                        "custom_button_background": "#D3A364",
                         "custom_button_text": "#121212",
-                        "custom_button_border": "#d3ae7f"
+                        "custom_button_border": "#D3A364"
                       },
                       "blocks": {}
                     },
@@ -1867,7 +1867,7 @@
       "name": "t:names.benefits_slider_section",
       "settings": {
         "heading": "Benefits",
-        "heading_color": "#D4C7B4",
+        "heading_color": "#d4c7b4",
         "heading_font_size": 48,
         "heading_font_size_mobile": 24,
         "content_max_width": 1800,
@@ -1877,8 +1877,8 @@
         "gap_mobile": 16,
         "background_color": "#121212",
         "card_border_color": "#333333",
-        "card_title_color": "#FFFFFF",
-        "card_text_color": "#B0B0B0",
+        "card_title_color": "#ffffff",
+        "card_text_color": "#b0b0b0",
         "card_corner_radius": 24,
         "autoplay": false,
         "autoplay_speed": 5,
