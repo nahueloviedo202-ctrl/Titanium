@@ -1291,7 +1291,7 @@
       "name": "t:names.scroll_text_fade",
       "settings": {
         "image": "shopify://shop_images/people.jpg",
-        "media_width": 520,
+        "media_width": 600,
         "background_color": "#00221c",
         "text_color": "#bca588",
         "font": "var(--font-body--family)",
