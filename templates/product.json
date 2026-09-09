@@ -1999,7 +1999,7 @@
                   "type": "_accordion-row",
                   "name": "t:names.accordion_row",
                   "settings": {
-                    "heading": "Do I need to be a certified Zumba instructor to use them?",
+                    "heading": "Is it really non-stick?",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -2009,7 +2009,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>No certification is required. These choreographies are designed to be enjoyed by anyone, instructors and dance lovers alike.</p>",
+                        "text": "<p>Yes! The textured titanium cooking surface releases food easily, without using any of the toxic \"forever\" chemicals that traditional non-stick pans rely on.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2040,7 +2040,7 @@
                   "type": "_accordion-row",
                   "name": "t:names.accordion_row",
                   "settings": {
-                    "heading": "Can I modify the choreographies?",
+                    "heading": "Why choose titanium instead of stainless steel or cast iron?",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -2050,7 +2050,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Absolutely. Feel free to adapt each choreography to fit your class, your students, or your own personal style.</p>",
+                        "text": "<p>Titanium and steel may look similar, but in the kitchen they're nothing alike. Titanium is naturally non-stick without coatings, while stainless steel is notorious for food clinging to it. Titanium won't rust or corrode, even with acidic foods, while cast iron can rust and needs constant seasoning. Titanium is also far lighter than cast iron, yet still incredibly strong and warp-proof.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2081,7 +2081,7 @@
                   "type": "_accordion-row",
                   "name": "t:names.accordion_row",
                   "settings": {
-                    "heading": "What level are the choreographies?",
+                    "heading": "Can it go in the dishwasher?",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -2091,7 +2091,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>The choreographies range from beginner to intermediate, with clear cues so dancers of every level can follow along.</p>",
+                        "text": "<p>100%. Top rack, bottom rack, any temperature, no problem. Titanium won't warp, wear down, rust, or degrade in the dishwasher, or anywhere else, for that matter.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2122,7 +2122,7 @@
                   "type": "_accordion-row",
                   "name": "t:names.accordion_row",
                   "settings": {
-                    "heading": "Are the song MP3s included?",
+                    "heading": "Can I use it in the oven?",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -2132,7 +2132,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Yes, every choreography package includes the MP3 files for the songs used.</p>",
+                        "text": "<p>Yes, the KoreTitanium pan is oven-safe up to 1150°F, so you can sear on the stove and finish in the oven without switching pans.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2158,13 +2158,97 @@
                   "block_order": [
                     "text_N6d6BC"
                   ]
+                },
+                "accordion_row_kt5FpQ": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "heading": "How heavy is it?",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_kt5FpQ": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "settings": {
+                        "text": "<p>Titanium is surprisingly light for how strong it is. At just 2.3 lbs, the 12\" pan is easy to lift, handle, and pour from, even when full.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_kt5FpQ"
+                  ]
+                },
+                "accordion_row_kt6RvW": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "heading": "What if I don't like it?",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_kt6RvW": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "settings": {
+                        "text": "<p>You have 90 days to try it risk-free. If you're not completely satisfied, contact us for a full refund, no questions asked.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_kt6RvW"
+                  ]
                 }
               },
               "block_order": [
                 "accordion_row_cRNrx7",
                 "accordion_row_JUK8bU",
                 "accordion_row_qKwjHM",
-                "accordion_row_4y47NF"
+                "accordion_row_4y47NF",
+                "accordion_row_kt5FpQ",
+                "accordion_row_kt6RvW"
               ]
             }
           },
