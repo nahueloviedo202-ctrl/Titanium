@@ -370,9 +370,9 @@
                       "static": true,
                       "settings": {
                         "style_class": "button-custom",
-                        "custom_button_background": "#D3A364",
+                        "custom_button_background": "#d3a364",
                         "custom_button_text": "#121212",
-                        "custom_button_border": "#D3A364"
+                        "custom_button_border": "#d3a364"
                       },
                       "blocks": {}
                     },
@@ -1290,6 +1290,7 @@
       ],
       "name": "t:names.scroll_text_fade",
       "settings": {
+        "image": "shopify://shop_images/people.jpg",
         "media_width": 480,
         "background_color": "#00221c",
         "text_color": "#bca588",
