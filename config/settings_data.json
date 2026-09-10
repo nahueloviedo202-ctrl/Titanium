@@ -9,8 +9,10 @@
  */
 {
   "current": {
+    "logo": "shopify://shop_images/magnific_eres-un-disenador-grafico_s76DSCUl8e-Photoroom.png",
     "logo_height": 36,
-    "logo_height_mobile": 28,
+    "logo_height_mobile": 38,
+    "favicon": "shopify://shop_images/magnific_eres-un-disenador-grafico_s76DSCUl8e-Photoroom.png",
     "page_text_color": "{{ settings.color_palette.foreground }}",
     "type_body_font": "inter_n4",
     "type_subheading_font": "poppins_n4",
