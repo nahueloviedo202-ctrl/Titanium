@@ -209,7 +209,7 @@
               "type": "text",
               "name": "t:names.product_description",
               "settings": {
-                "text": "{{ closest.product.description }}",
+                "text": "<p>Naturally non-stick, 100% pure titanium. No coatings. No PFAS. Lab tested. Built for life.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -372,8 +372,8 @@
                       "settings": {
                         "style_class": "button-custom",
                         "custom_button_background": "#e32b28",
-                        "custom_button_text": "#FFFFFF",
-                        "custom_button_border": "#E32B28"
+                        "custom_button_text": "#ffffff",
+                        "custom_button_border": "#e32b28"
                       },
                       "blocks": {}
                     },
