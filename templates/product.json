@@ -1310,7 +1310,7 @@
         "padding_inline_start": 16,
         "padding_inline_end": 16,
         "padding_block_start_mobile": 32,
-        "padding_block_end_mobile": 32,
+        "padding_block_end_mobile": 0,
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
       }
@@ -1907,7 +1907,7 @@
         "heading": "The Science Behind It",
         "kicker": "Why We Chose This Approach",
         "intro": "<p>Unlike any other “titanium” competitor trying to copy us, using cheap, toxic mixed alloys, at <strong>Koretitanium®</strong>, we use only the purest for your safety. Every pan is made from <strong>Grade 1 lab-graded Titanium</strong> - the absolute purest form available, also known as <strong>medical-grade titanium</strong>. Tested by Light Labs for quality & safety.</p><p><strong>With Koretitanium® You're Guaranteed Safety.</strong></p>",
-        "media_type": "image",
+        "media_type": "video",
         "image": "shopify://shop_images/196d990d6f8be6f2ec6104391ecc9709_1789061055.png",
         "video": "shopify://files/videos/Titanium Frying Pan - Pure Taima Titanium Nutri Pan Pro 2.0.mp4",
         "background_color": "#121212",
