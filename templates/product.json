@@ -372,7 +372,7 @@
                       "settings": {
                         "style_class": "button-custom",
                         "custom_button_background": "#E32B28",
-                        "custom_button_text": "#121212",
+                        "custom_button_text": "#000000",
                         "custom_button_border": "#d3a364"
                       },
                       "blocks": {}
