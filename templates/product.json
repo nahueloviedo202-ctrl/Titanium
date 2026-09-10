@@ -354,6 +354,7 @@
                   "blocks": {
                     "quantity": {
                       "type": "quantity",
+                      "disabled": true,
                       "static": true,
                       "settings": {
                         "input_style": "custom",
@@ -370,7 +371,7 @@
                       "static": true,
                       "settings": {
                         "style_class": "button-custom",
-                        "custom_button_background": "#d3a364",
+                        "custom_button_background": "#E32B28",
                         "custom_button_text": "#121212",
                         "custom_button_border": "#d3a364"
                       },
@@ -378,6 +379,7 @@
                     },
                     "accelerated-checkout": {
                       "type": "accelerated-checkout",
+                      "disabled": true,
                       "static": true,
                       "settings": {},
                       "blocks": {}
@@ -1908,10 +1910,10 @@
         "media_type": "video",
         "video": "shopify://files/videos/Titanium Frying Pan - Pure Taima Titanium Nutri Pan Pro 2.0.mp4",
         "background_color": "#000000",
-        "heading_color": "#FFFFFF",
-        "body_color": "#B0B0B0",
-        "emphasis_color": "#E7E7E7",
-        "accent_color": "#BCA588",
+        "heading_color": "#ffffff",
+        "body_color": "#b0b0b0",
+        "emphasis_color": "#e7e7e7",
+        "accent_color": "#bca588",
         "media_position": "right",
         "media_width": 890,
         "media_height_mobile": 320,
@@ -1937,6 +1939,7 @@
           "settings": {
             "source": "uploaded",
             "video": "shopify://files/videos/Titanium Frying Pan - Pure Taima Titanium Nutri Pan Pro 2.0.mp4",
+            "video_url": "",
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
