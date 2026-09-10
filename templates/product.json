@@ -1898,6 +1898,36 @@
         "padding_inline_end_mobile": 0
       }
     },
+    "science_sticky_video_gPEqTH": {
+      "type": "science-sticky-video",
+      "name": "t:names.science_sticky_video",
+      "settings": {
+        "heading": "The Science Behind It",
+        "kicker": "Why We Chose This Approach",
+        "intro": "<p>Unlike any other “titanium” competitor trying to copy us, using cheap, toxic mixed alloys, at <strong>Koretitanium®</strong>, we use only the purest for your safety. Every pan is made from <strong>Grade 1 lab-graded Titanium</strong> - the absolute purest form available, also known as <strong>medical-grade titanium</strong>. Tested by Light Labs for quality & safety.</p><p><strong>With Koretitanium® You're Guaranteed Safety.</strong></p>",
+        "media_type": "video",
+        "video": "shopify://files/videos/Titanium Frying Pan - Pure Taima Titanium Nutri Pan Pro 2.0.mp4",
+        "background_color": "#000000",
+        "heading_color": "#FFFFFF",
+        "body_color": "#B0B0B0",
+        "emphasis_color": "#E7E7E7",
+        "accent_color": "#BCA588",
+        "media_position": "right",
+        "media_width": 890,
+        "media_height_mobile": 320,
+        "content_max_width": 700,
+        "block_spacing": 332,
+        "content_bottom_spacing": 300,
+        "padding_block_start": 0,
+        "padding_block_end": 0,
+        "padding_inline_start": 120,
+        "padding_inline_end": 80,
+        "padding_block_start_mobile": 32,
+        "padding_block_end_mobile": 64,
+        "padding_inline_start_mobile": 16,
+        "padding_inline_end_mobile": 16
+      }
+    },
     "section_AEVQQT": {
       "type": "section",
       "blocks": {
@@ -2021,6 +2051,7 @@
         "video_ABgpJp",
         "group_bKC8XY"
       ],
+      "disabled": true,
       "name": "t:names.video_section",
       "settings": {
         "content_direction": "column",
@@ -2506,6 +2537,7 @@
     "product_materials_comparison_NtU8EU",
     "reviews_slider_custom_RMfDpy",
     "benefits_slider_section_VzYyfG",
+    "science_sticky_video_gPEqTH",
     "section_AEVQQT",
     "faq_page_Zt3Qk9",
     "section_RCeHcG",
