@@ -1926,7 +1926,7 @@
         "padding_inline_start": 120,
         "padding_inline_end": 80,
         "padding_block_start_mobile": 0,
-        "padding_block_end_mobile": 64,
+        "padding_block_end_mobile": 0,
         "padding_inline_start_mobile": 16,
         "padding_inline_end_mobile": 16
       }
@@ -2056,7 +2056,7 @@
                 "style_class": "button-custom",
                 "custom_button_background": "#1FB43A",
                 "custom_button_text": "{{ settings.color_palette.background }}",
-                "custom_button_border": "{{ settings.color_palette.background }}",
+                "custom_button_border": "#1FB43A",
                 "link_text_color": "",
                 "width": "fit-content",
                 "custom_width": 100,
