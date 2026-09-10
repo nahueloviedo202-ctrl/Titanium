@@ -2000,7 +2000,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Our signature product</h2>",
+                "text": "<p>Engineered From The Inside Out For Unmatched Cooking Experience</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -2025,7 +2025,7 @@
             "text_wKTkhL": {
               "type": "text",
               "settings": {
-                "text": "<p>Made with care and unconditionally loved by our customers, this signature bestseller exceeds all expectations.</p>",
+                "text": "",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -2050,11 +2050,11 @@
             "button_rTj4qk": {
               "type": "button",
               "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
+                "label": "Upgrade your heath today",
+                "link": "shopify://products/1x-zentitanium-titanium-nutri-pan-pro",
                 "open_in_new_tab": false,
-                "style_class": "button",
-                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "style_class": "button-custom",
+                "custom_button_background": "#1FB43A",
                 "custom_button_text": "{{ settings.color_palette.background }}",
                 "custom_button_border": "{{ settings.color_palette.background }}",
                 "link_text_color": "",
