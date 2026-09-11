@@ -12,10 +12,19 @@
   assign scoped_class = block.settings.style_class | append: '--' | append: block.id
   assign class = 'add-to-cart-button ' | append: block.settings.style_class | append: ' ' | append: scoped_class
   assign id = 'BuyButtons-ProductSubmitButton-' | append: block.id
+  assign button_size_scale = block.settings.button_size | divided_by: 100.0
 %}
 {% render 'button-custom-styles', block_settings: block.settings, block_id: block.id %}
 {% render 'add-to-cart-button-styles' %}
 {% render 'fly-to-cart-styles' %}
+
+{% style %}
+  .add-to-cart-button.{{ scoped_class }} {
+    font-size: calc(var(--font-paragraph--size) * {{ button_size_scale }});
+    padding-block: calc(var(--button-padding-block) * {{ button_size_scale }});
+    padding-inline: calc(var(--button-padding-inline) * {{ button_size_scale }});
+  }
+{% endstyle %}
 
 <span
   {{ block.shopify_attributes }}
@@ -56,6 +65,16 @@
       ],
       "default": "button-secondary",
       "info": "t:info.edit_button_style_in_theme_settings"
+    },
+    {
+      "type": "range",
+      "id": "button_size",
+      "label": "t:settings.size",
+      "min": 80,
+      "max": 160,
+      "step": 5,
+      "unit": "%",
+      "default": 115
     },
     {
       "type": "header",
