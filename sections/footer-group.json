@@ -37,7 +37,7 @@
         "products": {
           "type": "menu",
           "settings": {
-            "menu": "main-menu",
+            "menu": "products",
             "heading": "Products",
             "menu_spacing": 12,
             "show_as_accordion": true,
