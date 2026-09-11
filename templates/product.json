@@ -371,6 +371,7 @@
                       "static": true,
                       "settings": {
                         "style_class": "button-custom",
+                        "button_size": 120,
                         "custom_button_background": "#e32b28",
                         "custom_button_text": "#ffffff",
                         "custom_button_border": "#e32b28"
