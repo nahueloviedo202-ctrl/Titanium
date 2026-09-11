@@ -83,7 +83,7 @@
       "name": "t:names.footer_advanced",
       "settings": {
         "show_marquee": true,
-        "marquee_text": "Titanium® is the original brand of certified pure titanium kitchenware.",
+        "marquee_text": "Koretitanium® is the original brand of certified pure titanium kitchenware.",
         "marquee_text_size": 50,
         "marquee_autoplay": true,
         "marquee_direction": "normal",
