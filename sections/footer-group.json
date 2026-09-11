@@ -17,7 +17,7 @@
         "policies": {
           "type": "menu",
           "settings": {
-            "menu": "main-menu",
+            "menu": "footer",
             "heading": "Policies",
             "menu_spacing": 12,
             "show_as_accordion": true,
