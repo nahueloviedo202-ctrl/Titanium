@@ -19,7 +19,7 @@
       fetchpriority="low"
     ></script>
     <div
-      class="scroll-text-fade__layout{% if section.settings.image != blank or section.settings.mobile_image != blank %} scroll-text-fade__layout--with-media{% endif %}"
+      class="scroll-text-fade__layout{% if section.settings.image != blank or section.settings.mobile_bottom_image != blank %} scroll-text-fade__layout--with-media{% endif %}"
       style="
         --scroll-text-fade-padding-block-start: {{ section.settings.padding_block_start }}px;
         --scroll-text-fade-padding-block-end: {{ section.settings.padding_block_end }}px;
@@ -33,7 +33,7 @@
       "
     >
       {%- if section.settings.image != blank -%}
-        <div class="scroll-text-fade__media{% if section.settings.mobile_image != blank %} scroll-text-fade__media--desktop-only{% endif %}">
+        <div class="scroll-text-fade__media">
           <img
             class="scroll-text-fade__image"
             src="{{ section.settings.image | image_url: width: 1600 }}"
@@ -46,25 +46,6 @@
             alt="{{ section.settings.image.alt | escape }}"
             width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}"
-            loading="lazy"
-          >
-        </div>
-      {%- endif -%}
-
-      {%- if section.settings.mobile_image != blank -%}
-        <div class="scroll-text-fade__media scroll-text-fade__media--mobile-only">
-          <img
-            class="scroll-text-fade__image"
-            src="{{ section.settings.mobile_image | image_url: width: 900 }}"
-            srcset="
-              {{- section.settings.mobile_image | image_url: width: 500 }} 500w,
-              {{ section.settings.mobile_image | image_url: width: 700 }} 700w,
-              {{ section.settings.mobile_image | image_url: width: 900 }} 900w
-            "
-            sizes="90vw"
-            alt="{{ section.settings.mobile_image.alt | escape }}"
-            width="{{ section.settings.mobile_image.width }}"
-            height="{{ section.settings.mobile_image.height }}"
             loading="lazy"
           >
         </div>
@@ -86,6 +67,25 @@
       >
         {% content_for 'blocks' %}
       </scroll-text-fade-component>
+
+      {%- if section.settings.mobile_bottom_image != blank -%}
+        <div class="scroll-text-fade__media scroll-text-fade__media--mobile-only">
+          <img
+            class="scroll-text-fade__image"
+            src="{{ section.settings.mobile_bottom_image | image_url: width: 900 }}"
+            srcset="
+              {{- section.settings.mobile_bottom_image | image_url: width: 500 }} 500w,
+              {{ section.settings.mobile_bottom_image | image_url: width: 700 }} 700w,
+              {{ section.settings.mobile_bottom_image | image_url: width: 900 }} 900w
+            "
+            sizes="90vw"
+            alt="{{ section.settings.mobile_bottom_image.alt | escape }}"
+            width="{{ section.settings.mobile_bottom_image.width }}"
+            height="{{ section.settings.mobile_bottom_image.height }}"
+            loading="lazy"
+          >
+        </div>
+      {%- endif -%}
     </div>
   {%- endif -%}
 </section>
@@ -197,10 +197,6 @@
       display: none;
     }
 
-    .scroll-text-fade__media--desktop-only {
-      display: none;
-    }
-
     .scroll-text-fade__media--mobile-only {
       display: block;
     }
@@ -254,8 +250,8 @@
     },
     {
       "type": "image_picker",
-      "id": "mobile_image",
-      "label": "t:settings.mobile_image"
+      "id": "mobile_bottom_image",
+      "label": "t:settings.mobile_bottom_image"
     },
     {
       "type": "header",
