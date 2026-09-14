@@ -901,6 +901,10 @@
                 "accordion_row_key_concerns",
                 "accordion_row_shipping"
               ]
+            },
+            "k_cross_sell_related_products_kaktus_widget_R9kTPq": {
+              "type": "shopify://apps/k-cross-sell-related-products/blocks/kaktus-widget/51712c89-314f-4c37-bf48-256845cc949d",
+              "settings": {}
             }
           },
           "block_order": [
@@ -911,7 +915,8 @@
             "size_guide_link_pTa1Mn",
             "group_wCJ9D3",
             "impact_note_9fQ2mK",
-            "accordion_product_info"
+            "accordion_product_info",
+            "k_cross_sell_related_products_kaktus_widget_R9kTPq"
           ]
         }
       },
