@@ -148,6 +148,13 @@
           "custom_page_products": "",
           "custom_code": "<script>\n    // custom code here\n</script>"
         }
+      },
+      "9658382757468664484": {
+        "type": "shopify://apps/aftership-email-marketing-sms/blocks/aftership_popup/2db13273-f8db-4274-be89-c86a3352fb70",
+        "disabled": false,
+        "settings": {
+          "show_aftership_popup_description": ""
+        }
       }
     },
     "color_palette": {
