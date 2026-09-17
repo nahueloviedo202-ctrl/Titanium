@@ -755,6 +755,30 @@
                 "text_stars_wrap_impact_note"
               ]
             },
+            "image_6UUVwA": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/789b36da2972e6ceb26185bfd03bbb52_1_1789674465_5823.png",
+                "link": "",
+                "image_ratio": "adapt",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 22,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "accordion_product_info": {
               "type": "accordion",
               "name": "t:names.accordion",
@@ -916,6 +940,7 @@
             "size_guide_link_pTa1Mn",
             "group_wCJ9D3",
             "impact_note_9fQ2mK",
+            "image_6UUVwA",
             "accordion_product_info",
             "k_cross_sell_related_products_kaktus_widget_R9kTPq"
           ]
