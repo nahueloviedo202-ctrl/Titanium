@@ -904,6 +904,7 @@
             },
             "k_cross_sell_related_products_kaktus_widget_R9kTPq": {
               "type": "shopify://apps/k-cross-sell-related-products/blocks/kaktus-widget/51712c89-314f-4c37-bf48-256845cc949d",
+              "disabled": true,
               "settings": {}
             }
           },
